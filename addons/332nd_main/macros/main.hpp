@@ -1,0 +1,160 @@
+// --- Configuration ---
+
+#define MACRO_AUTHOR "HTM"
+#define MACRO_AUTHOR_PPL "Namenai"
+#define MODNAME 332nd_aux
+
+#define MACRO_HELMET_TEXTURES_PATH \332nd_helmets\_textures
+#define MACRO_UNIFORM_TEXTURES_PATH \332nd_units\_textures
+#define MACRO_VEST_TEXTURES_PATH \332nd_units\_textures
+#define MACRO_BACKPACK_TEXTURES_PATH \332nd_backpacks\_textures
+// --- Macro Functions ---
+
+#define MACRO_UNDERSCORE_CONCAT(var1,var2) ##var1##_##var2
+
+// 
+#define MACRO_ADD_PREFIX(NAME) MACRO_UNDERSCORE_CONCAT(MODNAME,NAME)
+
+//
+#define MACRO_PATCH_NAME(component) MODNAME##_patch_##component
+
+//classnames for stuff
+#define MACRO_NEW_HELMET(group,name) MODNAME##_##group##_helmet_##name
+#define MACRO_NEW_UNIT(group,name) MODNAME##_##group##_unit_##name
+#define MACRO_NEW_UNIFORM(group,name) MODNAME##_##group##_uniform_##name
+#define MACRO_NEW_VEST(group,name) MODNAME##_##group##_vest_##name
+#define MACRO_NEW_BACKPACK(side,name) MODNAME##_##side##_backpack_##name##
+
+//displayname
+#define MACRO_ITEM_DISPLAYNAME(type,name) [332nd] type ('##name##');
+// --- Macro Predefined Classes Function
+
+// ---- Helmets ---- 
+#define MACRO_NEW_INF_HELMET_ITEM(classname,displayname,texture)\
+	class MACRO_NEW_HELMET(infantry,classname): MACRO_NEW_HELMET(infantry,base)\
+	{\
+		scope = 2;\
+		scopeArsenal = 2;\
+		displayName = [332nd] Infantry Helmet ('##displayname##');\
+		hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\infantry\##texture};\
+	};
+
+#define MACRO_NEW_AB_HELMET_ITEM(classname,displayname,texture)\
+	class MACRO_NEW_HELMET(airborne,classname): MACRO_NEW_HELMET(airborne,base)\
+	{\
+		scope = 2;\
+		scopeArsenal = 2;\
+		displayName = [332nd] Airborne Helmet ('##displayname##');\
+		hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\airborne\##texture};\
+	};
+#define MACRO_NEW_AVIATION_HELMET_ITEM(classname,displayname,texture)\
+	class MACRO_NEW_HELMET(aviation,classname): MACRO_NEW_HELMET(aviation,base)\
+	{\
+		scope = 2;\
+		scopeArsenal = 2;\
+		displayName = [332nd] Pilot Helmet ('##displayname##');\
+		hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\##texture};\
+	};
+#define MACRO_NEW_WARDEN_HELMET_ITEM(classname,displayname,texture)\
+	class MACRO_NEW_HELMET(warden,classname): MACRO_NEW_HELMET(warden,base)\
+	{\
+		scope = 2;\
+		scopeArsenal = 2;\
+		displayName = [332nd] Warden Helmet ('##displayname##');\
+		hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\warden\##texture};\
+	};
+
+// ---- Uniforms ---- 
+#define MACRO_NEW_INF_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(infantry,classname): MACRO_NEW_UNIFORM(infantry,base)\
+	{\
+		displayName = [332nd] Infantry Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo: ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(infantry,uniformClassname);\
+		};\
+	};
+#define MACRO_NEW_AVI_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(aviation,classname): MACRO_NEW_UNIFORM(aviation,base)\
+	{\
+		displayName = [332nd] Aviation Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo: ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(aviation,uniformClassname);\
+		};\
+	};
+
+#define MACRO_NEW_CWO_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(cwo,classname): MACRO_NEW_UNIFORM(cwo,base)\
+	{\
+		displayName = [332nd] Warrant Officer Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo: ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(cwo,uniformClassname);\
+		};\
+	};
+
+//units for uniforms
+#define MACRO_NEW_INF_UNIT(classname,displayname,uniformClassname,upper,lower)\
+	class MACRO_NEW_UNIT(infantry,classname): MACRO_NEW_UNIT(infantry,base)\
+    {\
+        author = MACRO_AUTHOR;\
+        scope = 2;\
+        displayName = [332nd] displayname;\
+        uniformClass = MACRO_NEW_UNIFORM(infantry,uniformClassname);\
+        hiddenSelections[] = {"camo1","camo2","insignia"};\
+        hiddenSelectionsTextures[] = {\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##upper,\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##lower\
+        };\
+    }
+
+#define MACRO_NEW_CWO_UNIT(classname,displayname,uniformClassname,upper,lower)\
+	class MACRO_NEW_UNIT(cwo,classname): MACRO_NEW_UNIT(cwo,base)\
+    {\
+        author = MACRO_AUTHOR;\
+        scope = 2;\
+        displayName = [332nd] displayname;\
+        uniformClass = MACRO_NEW_UNIFORM(cwo,uniformClassname);\
+        hiddenSelections[] = {"camo1","camo2","insignia"};\
+        hiddenSelectionsTextures[] = {\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\warrant_officer\##upper,\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\warrant_officer\##lower\
+        };\
+    }
+
+#define MACRO_NEW_AVI_UNIT(classname,displayname,uniformClassname,upper,lower)\
+	class MACRO_NEW_UNIT(aviation,classname): MACRO_NEW_UNIT(aviation,base)\
+    {\
+        author = MACRO_AUTHOR;\
+        scope = 2;\
+        displayName = [332nd] displayname;\
+        uniformClass = MACRO_NEW_UNIFORM(aviation,uniformClassname);\
+        hiddenSelections[] = {"camo1","camo2","insignia"};\
+        hiddenSelectionsTextures[] = {\
+            MACRO_UNIFORM_TEXTURES_PATH\aviation\uniforms\##upper,\
+            MACRO_UNIFORM_TEXTURES_PATH\aviation\uniforms\##lower\
+        };\
+    }
+
+
+// ---- Vests ---- 
+#define MACRO_NEW_INF_KAMA_ITEM(classname,displayname,texture)\
+	class MACRO_NEW_VEST(infantry,classname): MACRO_NEW_VEST(infantry,base)\
+	{\
+		scope = 2;\
+		scopeArsenal = 2;\
+		displayName = [332nd] Infantry Kama ('##displayname##');\
+		hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
+	};
+#define MACRO_NEW_ARC_VEST_ITEM(classname,displayname,texture)\
+	class MACRO_NEW_VEST(arc,classname): MACRO_NEW_VEST(arc,base)\
+	{\
+		scope = 2;\
+		scopeArsenal = 2;\
+		displayName = [332nd] Arc Vest ('##displayname##');\
+		hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\arc\vests\##texture};\
+	};

@@ -1,0 +1,12 @@
+name = "332nd Auxiliary Mod";
+tooltipOwned="332nd Aux";
+picture = "332nd_main\logo.paa";
+logoSmall = "332nd_main\logo.paa";
+logo = "332nd_main\logo.paa";
+logoOver = "332nd_main\logo.paa";
+hideName = 0;
+hidePicture = 0;
+actionName = "Website";
+action = "https://www.youtube.com/watch?v=oHg5SJYRHA0";
+description = "Wowe";
+overview = "Wowe";
