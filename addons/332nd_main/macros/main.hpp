@@ -1,7 +1,7 @@
 // --- Configuration ---
 
-#define MACRO_AUTHOR "HTM"
-#define MACRO_AUTHOR_PPL "Namenai"
+#define MACRO_AUTHOR "332nd Aux Team"
+#define MACRO_AUTHOR_PPL "Namenai, Poseidon"
 #define MODNAME 332nd_aux
 
 #define MACRO_HELMET_TEXTURES_PATH \332nd_helmets\_textures
@@ -87,6 +87,17 @@
 		};\
 	};
 
+#define MACRO_NEW_MEDIC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(medic,classname): MACRO_NEW_UNIFORM(medic,base)\
+	{\
+		displayName = [332nd] Medic Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo: ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(medic,uniformClassname);\
+		};\
+	};
+
 #define MACRO_NEW_AVI_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(aviation,classname): MACRO_NEW_UNIFORM(aviation,base)\
 	{\
@@ -135,6 +146,20 @@
         hiddenSelectionsTextures[] = {\
             MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\rto\##upper,\
             MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\rto\##lower\
+        };\
+    }
+
+#define MACRO_NEW_MEDIC_UNIT(classname,displayname,uniformClassname,upper,lower)\
+	class MACRO_NEW_UNIT(medic,classname): MACRO_NEW_UNIT(medic,base)\
+    {\
+        author = MACRO_AUTHOR;\
+        scope = 2;\
+        displayName = [332nd] displayname;\
+        uniformClass = MACRO_NEW_UNIFORM(medic,uniformClassname);\
+        hiddenSelections[] = {"camo1","camo2","insignia"};\
+        hiddenSelectionsTextures[] = {\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\medic\##upper,\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\medic\##lower\
         };\
     }
 

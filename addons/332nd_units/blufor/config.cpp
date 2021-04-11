@@ -22,6 +22,8 @@ class CfgPatches
 
             MACRO_NEW_UNIT(rto,332nd_rto_cadet),
 
+            MACRO_NEW_UNIT(medic,332nd_medic_cadet),
+
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_1),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_2),
@@ -46,6 +48,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,332nd_officer),
 
             MACRO_NEW_UNIFORM(rto,332nd_rto_cadet),
+
+            MACRO_NEW_UNIFORM(medic,332nd_medic_cadet),
 
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_1),
@@ -87,6 +91,11 @@ class CfgWeapons
         class ItemInfo;
     };
 
+    class MACRO_NEW_UNIFORM(medic,base): JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
     //Infantry
  	MACRO_NEW_INF_UNIFORM_ITEM(332nd_cadet,Cadet,332nd_cadet)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_trooper,Trooper,332nd_trooper)
@@ -98,6 +107,9 @@ class CfgWeapons
 
     //RTO
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_cadet,Cadet,332nd_rto_cadet)
+
+    //Medic
+    MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_cadet,Cadet,332nd_medic_cadet)
 
 
     //Warrant Officer
@@ -123,6 +135,7 @@ class CfgVehicles
     class MACRO_NEW_UNIT(aviation,base);
     class MACRO_NEW_UNIT(cwo,base);
     class MACRO_NEW_UNIT(rto,base);
+    class MACRO_NEW_UNIT(medic,base);
 
     //Infantry
     MACRO_NEW_INF_UNIT(332nd_cadet,Clone Cadet,332nd_cadet,cadet\Cadet_Upper.paa,cadet\Cadet_Lower.paa)
@@ -135,6 +148,9 @@ class CfgVehicles
 
     //RTO
     MACRO_NEW_RTO_UNIT(332nd_rto_cadet,RTO Cadet,332nd_rto_cadet,cadet\rto_cadet_upper.paa,cadet\rto_cadet_lower.paa)
+
+    //Medic
+    MACRO_NEW_MEDIC_UNIT(332nd_medic_cadet,Medic Cadet,332nd_medic_cadet,cadet\Cadet_Medic_Upper.paa,cadet\Cadet_Medic_Lower.paa)
 
     //Warrant Officer
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer,CWO,332nd_warrant_officer,warrant_officer\cwo_top.paa,warrant_officer\cwo_bottom.paa)
