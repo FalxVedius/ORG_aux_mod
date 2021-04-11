@@ -75,6 +75,18 @@
 			uniformClass = MACRO_NEW_UNIT(infantry,uniformClassname);\
 		};\
 	};
+
+#define MACRO_NEW_RTO_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rto,classname): MACRO_NEW_UNIFORM(rto,base)\
+	{\
+		displayName = [332nd] RTO Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo: ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rto,uniformClassname);\
+		};\
+	};
+
 #define MACRO_NEW_AVI_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(aviation,classname): MACRO_NEW_UNIFORM(aviation,base)\
 	{\
@@ -109,6 +121,20 @@
         hiddenSelectionsTextures[] = {\
             MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##upper,\
             MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##lower\
+        };\
+    }
+
+#define MACRO_NEW_RTO_UNIT(classname,displayname,uniformClassname,upper,lower)\
+	class MACRO_NEW_UNIT(rto,classname): MACRO_NEW_UNIT(rto,base)\
+    {\
+        author = MACRO_AUTHOR;\
+        scope = 2;\
+        displayName = [332nd] displayname;\
+        uniformClass = MACRO_NEW_UNIFORM(rto,uniformClassname);\
+        hiddenSelections[] = {"camo1","camo2","insignia"};\
+        hiddenSelectionsTextures[] = {\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\rto\##upper,\
+            MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\rto\##lower\
         };\
     }
 

@@ -42,6 +42,17 @@ class CfgWeapons
 		};
 	};
 
+	//RTO
+    class MACRO_NEW_UNIFORM(rto,base): JLTS_CloneArmor
+	{
+		displayName = "[332nd] RTO Uniform ('base')";
+        scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo: ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rto,base);
+		};
+	};
+
 	class MACRO_NEW_UNIFORM(aviation,base): JLTS_CloneArmor
 	{
 		displayName = "[332nd] Aviation Uniform ('base')";
@@ -100,6 +111,17 @@ class CfgVehicles
         // armor, items, unit name
 
     };
+
+	class MACRO_NEW_UNIT(rto,base): MACRO_NEW_UNIT(infantry,base)
+	{
+		displayName = "[332nd] Clone RTO Base";
+
+        uniformClass = MACRO_NEW_UNIFORM(rto,base);
+        hiddenSelections[] = {"camo1","camo2","insignia"};
+       
+        linkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
+		respawnLinkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
+	}
 
 	class MACRO_NEW_UNIT(aviation,base): JLTS_Clone_P2_DC15A
     {

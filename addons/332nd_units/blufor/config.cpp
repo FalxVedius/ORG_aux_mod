@@ -20,6 +20,8 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,332nd_sergeant),
             MACRO_NEW_UNIT(infantry,332nd_officer),
 
+            MACRO_NEW_UNIT(rto,332nd_rto_cadet),
+
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_1),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_2),
@@ -42,6 +44,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,332nd_corporal),
             MACRO_NEW_UNIFORM(infantry,332nd_sergeant),
             MACRO_NEW_UNIFORM(infantry,332nd_officer),
+
+            MACRO_NEW_UNIFORM(rto,332nd_rto_cadet),
 
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_1),
@@ -78,6 +82,11 @@ class CfgWeapons
         class ItemInfo;
     };
     
+    class MACRO_NEW_UNIFORM(rto,base): JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
     //Infantry
  	MACRO_NEW_INF_UNIFORM_ITEM(332nd_cadet,Cadet,332nd_cadet)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_trooper,Trooper,332nd_trooper)
@@ -86,6 +95,10 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_corporal,Corporal,332nd_corporal)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_sergeant,Sergeant,332nd_sergeant)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_officer,Officer,332nd_officer)
+
+    //RTO
+    MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_cadet,Cadet,332nd_rto_cadet)
+
 
     //Warrant Officer
     MACRO_NEW_CWO_UNIFORM_ITEM(332nd_warrant_officer,CWO,332nd_warrant_officer)
@@ -109,6 +122,7 @@ class CfgVehicles
     class MACRO_NEW_UNIT(infantry,base);
     class MACRO_NEW_UNIT(aviation,base);
     class MACRO_NEW_UNIT(cwo,base);
+    class MACRO_NEW_UNIT(rto,base);
 
     //Infantry
     MACRO_NEW_INF_UNIT(332nd_cadet,Clone Cadet,332nd_cadet,cadet\Cadet_Upper.paa,cadet\Cadet_Lower.paa)
@@ -118,7 +132,10 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(332nd_corporal,Clone Corporal,332nd_corporal,corporal\Corporal_Upper.paa,corporal\Corporal_Lower.paa)
     MACRO_NEW_INF_UNIT(332nd_sergeant,Clone Sergeant,332nd_sergeant,sergeant\Sergeant_Upper.paa,sergeant\Sergeant_Lower.paa)
     MACRO_NEW_INF_UNIT(332nd_officer,Clone Officer,332nd_officer,officer\Officer_Upper.paa,officer\Officer_Lower.paa)
-    
+
+    //RTO
+    MACRO_NEW_RTO_UNIT(332nd_rto_cadet,RTO Cadet,332nd_rto_cadet,cadet\rto_cadet_upper.paa,cadet\rto_cadet_lower.paa)
+
     //Warrant Officer
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer,CWO,332nd_warrant_officer,warrant_officer\cwo_top.paa,warrant_officer\cwo_bottom.paa)
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer_1,CWO 1,332nd_warrant_officer_1,warrant_officer_1\cwo1_top.paa,warrant_officer_1\cwo1_bottom.paa)
