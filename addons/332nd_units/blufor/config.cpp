@@ -21,8 +21,16 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,332nd_officer),
 
             MACRO_NEW_UNIT(rto,332nd_rto_cadet),
+            MACRO_NEW_UNIT(rto,332nd_rto_trooper),
+            MACRO_NEW_UNIT(rto,332nd_rto_senior_trooper),
+            MACRO_NEW_UNIT(rto,332nd_rto_veteran_trooper),
+            MACRO_NEW_UNIT(rto,332nd_rto_corporal),
 
             MACRO_NEW_UNIT(medic,332nd_medic_cadet),
+            MACRO_NEW_UNIT(medic,332nd_medic_trooper),
+            MACRO_NEW_UNIT(medic,332nd_medic_senior_trooper),
+            MACRO_NEW_UNIT(medic,332nd_medic_veteran_trooper),
+            MACRO_NEW_UNIT(medic,332nd_medic_corporal),
 
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_1),
@@ -48,8 +56,16 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,332nd_officer),
 
             MACRO_NEW_UNIFORM(rto,332nd_rto_cadet),
+            MACRO_NEW_UNIFORM(rto,332nd_rto_trooper),
+            MACRO_NEW_UNIFORM(rto,332nd_rto_senior_trooper),
+            MACRO_NEW_UNIFORM(rto,332nd_rto_veteran_trooper),
+            MACRO_NEW_UNIFORM(rto,332nd_rto_corporal),
 
             MACRO_NEW_UNIFORM(medic,332nd_medic_cadet),
+            MACRO_NEW_UNIFORM(medic,332nd_medic_trooper),
+            MACRO_NEW_UNIFORM(medic,332nd_medic_senior_trooper),
+            MACRO_NEW_UNIFORM(medic,332nd_medic_veteran_trooper),
+            MACRO_NEW_UNIFORM(medic,332nd_medic_corporal),
 
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_1),
@@ -107,10 +123,17 @@ class CfgWeapons
 
     //RTO
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_cadet,Cadet,332nd_rto_cadet)
+    MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_trooper,Trooper,332nd_rto_trooper)
+    MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_senior_trooper,Senior Trooper,332nd_rto_senior_trooper)
+    MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_veteran_trooper,Veteran Trooper,332nd_rto_veteran_trooper)
+    MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_corporal,Corporal,332nd_rto_corporal)
 
     //Medic
     MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_cadet,Cadet,332nd_medic_cadet)
-
+    MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_trooper,Trooper,332nd_medic_trooper)
+    MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_senior_trooper,Senior Trooper,332nd_medic_senior_trooper)
+    MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_veteran_trooper,Veteran Trooper,332nd_medic_veteran_trooper)
+    MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_corporal,Corporal,332nd_medic_corporal)
 
     //Warrant Officer
     MACRO_NEW_CWO_UNIFORM_ITEM(332nd_warrant_officer,CWO,332nd_warrant_officer)
@@ -148,9 +171,18 @@ class CfgVehicles
 
     //RTO
     MACRO_NEW_RTO_UNIT(332nd_rto_cadet,RTO Cadet,332nd_rto_cadet,cadet\rto_cadet_upper.paa,cadet\rto_cadet_lower.paa)
+    MACRO_NEW_RTO_UNIT(332nd_rto_trooper,RTO Trooper,332nd_rto_trooper,trooper\rto_trooper_upper.paa,trooper\rto_trooper_lower.paa)
+    MACRO_NEW_RTO_UNIT(332nd_rto_senior_trooper,RTO Senior Trooper,332nd_rto_senior_trooper,senior_trooper\rto_senior_trooper_upper.paa,senior_trooper\rto_senior_trooper_lower.paa)
+    MACRO_NEW_RTO_UNIT(332nd_rto_veteran_trooper,RTO Veteran Trooper,332nd_rto_veteran_trooper,veteran_trooper\rto_veteran_trooper_upper.paa,veteran_trooper\rto_veteran_trooper_lower.paa)
+    MACRO_NEW_RTO_UNIT(332nd_rto_corporal,RTO Corporal,332nd_rto_corporal,corporal\rto_corporal_upper.paa,corporal\rto_corporal_lower.paa)
+
 
     //Medic
     MACRO_NEW_MEDIC_UNIT(332nd_medic_cadet,Medic Cadet,332nd_medic_cadet,cadet\Cadet_Medic_Upper.paa,cadet\Cadet_Medic_Lower.paa)
+    MACRO_NEW_MEDIC_UNIT(332nd_medic_trooper,Medic Trooper,332nd_medic_trooper,trooper\medic_trooper_upper.paa,trooper\medic_trooper_lower.paa)
+    MACRO_NEW_MEDIC_UNIT(332nd_medic_senior_trooper,Medic Senior Trooper,332nd_medic_senior_trooper,senior_trooper\medic_senior_trooper_upper.paa,senior_trooper\medic_senior_trooper_lower.paa)
+    MACRO_NEW_MEDIC_UNIT(332nd_medic_veteran_trooper,Medic Veteran Trooper,332nd_medic_veteran_trooper,veteran_trooper\medic_veteran_trooper_upper.paa,veteran_trooper\medic_veteran_trooper_lower.paa)
+    MACRO_NEW_MEDIC_UNIT(332nd_medic_corporal,Medic Corporal,332nd_medic_corporal,corporal\medic_corporal_upper.paa,corporal\medic_corporal_lower.paa)
 
     //Warrant Officer
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer,CWO,332nd_warrant_officer,warrant_officer\cwo_top.paa,warrant_officer\cwo_bottom.paa)
