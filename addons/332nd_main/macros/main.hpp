@@ -1,4 +1,4 @@
-// --- Configuration ---
+// ============================================================================== Configuration
 
 #define MACRO_AUTHOR "332nd Aux Team"
 #define MACRO_AUTHOR_PPL "Namenai, Poseidon"
@@ -8,7 +8,8 @@
 #define MACRO_UNIFORM_TEXTURES_PATH \332nd_units\_textures
 #define MACRO_VEST_TEXTURES_PATH \332nd_units\_textures
 #define MACRO_BACKPACK_TEXTURES_PATH \332nd_backpacks\_textures
-// --- Macro Functions ---
+#define MACRO_VEHICLE_TEXTURES_PATH \332nd_vehicles\_textures
+// ============================================================================== Macro Functions
 
 #define MACRO_UNDERSCORE_CONCAT(var1,var2) ##var1##_##var2
 
@@ -24,10 +25,11 @@
 #define MACRO_NEW_UNIFORM(group,name) MODNAME##_##group##_uniform_##name
 #define MACRO_NEW_VEST(group,name) MODNAME##_##group##_vest_##name
 #define MACRO_NEW_BACKPACK(side,name) MODNAME##_##side##_backpack_##name##
+#define MACRO_NEW_VEHICLE(mode,family,variant) MODNAME##_vehicle_##mode##_##family##_##variant
 
 //displayname
 #define MACRO_ITEM_DISPLAYNAME(type,name) [332nd] type ('##name##');
-// --- Macro Predefined Classes Function
+// ============================================================================== Macro Predefined Classes Function
 
 // ---- Helmets ---- 
 #define MACRO_NEW_INF_HELMET_ITEM(classname,displayname,texture)\
@@ -209,3 +211,8 @@
 		displayName = [332nd] Arc Vest ('##displayname##');\
 		hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\arc\vests\##texture};\
 	};
+
+// ============================================================================== Macro Predefined Equipments
+
+#define MACRO_AIR_COMMON_WEAPS "Laserdesignator_pilotCamera","CMFlareLauncher"
+#define MACRO_AIR_COMMON_MAGS "Laserbatteries","300Rnd_CMFlare_Chaff_Magazine","300Rnd_CMFlare_Chaff_Magazine"
