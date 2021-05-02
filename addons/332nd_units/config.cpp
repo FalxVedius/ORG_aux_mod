@@ -154,8 +154,8 @@ class CfgVehicles
         uniformClass = MACRO_NEW_UNIFORM(aviation,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-        linkedItems[] = {MACRO_NEW_HELMET(aviation,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-		respawnLinkedItems[] = {MACRO_NEW_HELMET(aviation,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
+        linkedItems[] = {MACRO_NEW_HELMET(aviation,332nd_pilot),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
+		respawnLinkedItems[] = {MACRO_NEW_HELMET(aviation,332nd_pilot),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
 		weapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
 		respawnWeapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
 		nakedUniform = "JLTS_CloneNaked_uniform";

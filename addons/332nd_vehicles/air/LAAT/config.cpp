@@ -12,7 +12,13 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_A),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_B),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_C),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_D),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_E)
             // MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_lights_base),
             // MACRO_NEW_VEHICLE(air,LAAT,mk2_332nd_base),
             // MACRO_NEW_VEHICLE(air,LAAT,mk2_332nd_lights_base)
@@ -27,19 +33,17 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base):ls_laat
     {
-        displayName = "[332nd] LAAT Mk1";
+        displayName = "[332nd] LAAT Mk1 Base";
+        scope = 0;
 
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
-            "3as_LAAT_Missile_AGM",
-            "3as_LAAT_Missile_AA",
-            "ParticleBeamCannon_F"
+            "ls_laat_gun","ls_laat_gun_2","missiles_DAR"
         };
 		magazines[] = {
             MACRO_AIR_COMMON_MAGS,
-            "3as_PylonMissile_LAAT_8Rnd_Missile_AA",
-            "3as_LAAT_8Rnd_Missile_AGM",
-            "Laser_Battery_F","Laser_Battery_F","Laser_Battery_F"
+            "200rnd_laat_he_mag","200rnd_laat_he_mag","200rnd_laat_apfsds_mag","200rnd_laat_apfsds_mag",
+            "12rnd_missiles","12rnd_missiles","12rnd_missiles"
         };
 
         hiddenselections[] = {
@@ -60,21 +64,44 @@ class CfgVehicles
             MACRO_LAAT_TEXTURES\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
         };
 
+        crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
+        typicalcargo[] = {MACRO_NEW_UNIT(aviation,332nd_flight_cadet)};
+        
         class TextureSources
         {
-            class base
+            // class base
+			// {
+			// 	displayName = "Transport Gunship";
+			// 	author = MACRO_AUTHOR;
+            //     textures[] = {
+            //         MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
+            //         MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+            //         MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+            //         "swlb_a_vehicle\laat\data\missiles_co.paa",
+            //         MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+            //     };
+            //     factions[] = {"SWLB_GAR"};
+			// };
+
+            class Ahegao//: base
 			{
-				displayName = "Transport Gunship";
-				author = MACRO_AUTHOR;
+				displayName = "Transport Gunship (Ahegao)";
+                author = MACRO_AUTHOR;
+                factions[] = {"SWLB_GAR"};
                 textures[] = {
-                    MACRO_LAAT_TEXTURES\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-                    MACRO_LAAT_TEXTURES\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-                    MACRO_LAAT_TEXTURES\Wings\wings_co.paa,
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
                     "swlb_a_vehicle\laat\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
                 };
 			};
         }
+
+        // textureList[] = {
+        //     "base",1,
+        //     "Ahegao",1
+        // };
 
         class Turrets: Turrets
         {
@@ -126,5 +153,79 @@ class CfgVehicles
 
 		#include "../../_common/universal_mfd.hpp"
 
+        #include "_lights.hpp"
+
     }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd):MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        scope = 2;
+        forceInGarage = 1;
+        displayName = "[332nd] LAAT Mk1";
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
+    {
+        displayName = "[332nd] LAAT Mk1 (Ahegao Squadron)";
+        forceInGarage = 0;
+
+        hiddenselections[] = {
+            "body","body_2",
+            "door_1","door_2","door_3",
+            "wings",
+            "missiles",
+            "cockpits","glass",
+            "clan",
+            "zasleh_l","zasleh_r","zasleh_b"
+        };
+
+        hiddenselectionstextures[] = {
+            MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
+            MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
+            MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
+            "swlb_a_vehicle\laat\data\missiles_co.paa",
+            MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+        };
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_A): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        #include "_armorA.hpp"
+        displayName = "[332nd] LAAT Mk1 Armor (3)";
+        scope = 2;
+
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_B): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        #include "_armorB.hpp"
+        displayName = "[332nd] LAAT Mk1 Armor (2)";
+        scope = 2;
+
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_C): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        #include "_armorC.hpp"
+        displayName = "[332nd] LAAT Mk1 Armor (4)";
+        scope = 2;
+
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_D): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        #include "_armorD.hpp"
+        displayName = "[332nd] LAAT Mk1 Armor (5)";
+        scope = 2;
+
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_E): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        #include "_armorE.hpp"
+        displayName = "[332nd] LAAT Mk1 Armor (1)";
+        scope = 2;
+
+    }
+    
 }
