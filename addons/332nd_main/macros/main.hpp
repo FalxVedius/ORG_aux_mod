@@ -33,9 +33,13 @@
 	#define MACRO_NEW_VEST(group,name) MACRO_MODNAME##_##group##_vest_##name
 	#define MACRO_NEW_BACKPACK(side,name) MACRO_MODNAME##_##side##_backpack_##name##
 	#define MACRO_NEW_VEHICLE(mode,family,variant) MACRO_MODNAME##_vehicle_##mode##_##family##_##variant
+	#define MACRO_NEW_WEAPON(name) MACRO_MODNAME##_weapon_##name
+	#define MACRO_NEW_MAG(name,count) MACRO_MODNAME##_magazine_##name##_x##count
+	#define MACRO_NEW_AMMO(name) MACRO_MODNAME##_ammo_##name
 
 	//displayname
 	#define MACRO_ITEM_DISPLAYNAME(type,name) [332nd] type ('##name##');
+	#define MACRO_WEAPON_DISPLAYNAME(name) [332nd] name;
 // ============================================================================== Macro Predefined Classes Function
 
 	// ---- Helmets ---- 

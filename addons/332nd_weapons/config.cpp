@@ -2,12 +2,12 @@
 
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(vehicle_weapons)
+	class MACRO_PATCH_NAME(weapons)
 	{
 		author = "Namenai";
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(main)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
