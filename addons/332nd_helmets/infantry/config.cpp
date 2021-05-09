@@ -16,7 +16,7 @@ class CfgPatches
             MACRO_NEW_HELMET(infantry,332nd_trooper),
 			MACRO_NEW_HELMET(infantry,poseidon),
 			MACRO_NEW_HELMET(infantry,332nd_veteran_trooper),
-			MACRO_NEW_HELMET(infantry,332nd_Sergeant)
+			MACRO_NEW_HELMET(infantry,332nd_Sergeant),
 			MACRO_NEW_HELMET(infantry,george),
         };
 		weapons[] = {};
