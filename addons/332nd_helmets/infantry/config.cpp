@@ -18,6 +18,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,332nd_veteran_trooper),
 			MACRO_NEW_HELMET(infantry,332nd_Sergeant),
 			MACRO_NEW_HELMET(infantry,george),
+                       MACRO_NEW_HELMET(infantry,Halligan),
         };
 		weapons[] = {};
 	};
@@ -34,4 +35,5 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(332nd_sergeant,332nd Sergeant,332nd Sergeant Helmet.paa)
 	MACRO_NEW_INF_HELMET_ITEM(poseidon,Poseidon,Poseidon.paa)
 	MACRO_NEW_INF_HELMET_ITEM(george,George,George.paa)
+       MACRO_NEW_INF_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 }
