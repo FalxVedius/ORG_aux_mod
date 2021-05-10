@@ -41,6 +41,52 @@ class cfgWeapons
 
 		class Single:Single
         {
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
+				};
+			};
+			
             reloadTime=0.75;
 			dispersion=0.0;
 			initSpeed=940; // put in mag

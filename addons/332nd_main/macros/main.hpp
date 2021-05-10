@@ -1,7 +1,7 @@
 // ============================================================================== Configuration
 
 	#define MACRO_AUTHOR "332nd Aux Team"
-	#define MACRO_AUTHOR_PPL "Namenai, Poseidon"
+	#define MACRO_AUTHOR_PPL "Halligan, Poseidon, Namenai"
 	#define MACRO_MODNAME 332nd_aux
 	#define MACRO_MODNAME_SCRIPT aux_332nd
 

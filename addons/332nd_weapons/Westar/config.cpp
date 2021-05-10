@@ -1,10 +1,10 @@
-#include "../../../332nd_main/macros/main.hpp" // my config macro lib
+#include "../../332nd_main/macros/main.hpp" // my config macro lib
 
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(DC_15l)
+	class MACRO_PATCH_NAME(Westar_Series)
 	{
-		author = "Namenai";
+		author = MACRO_AUTHOR_PPL;
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -13,37 +13,36 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {};
 		weapons[] = {
-			MACRO_NEW_WEAPON(DC_15l)
+			MACRO_NEW_WEAPON(Westar35SA_mod)
 		};
 	};
 };
 
 class cfgWeapons
 {
-	class 3AS_DC15L_Base_F;
-	class 3AS_DC15L_F:3AS_DC15L_Base_F
+	class Pistol_Base_F;
+	class SWLW_Westar35SA: Pistol_Base_F
 	{
-		class WeaponSlotsInfo;
-		class FullAuto;
+		class Mode_FullAuto;
 	}
-	class MACRO_NEW_WEAPON(DC_15l):3AS_DC15L_F
+    
+	class MACRO_NEW_WEAPON(Westar35SA_mod): SWLW_Westar35SA
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L)
-
-		reloadTime=0.1;
-		ACE_Overheating_mrbs=300000;
+		displayName = MACRO_WEAPON_DISPLAYNAME(Wester-35SA Mod)
+		baseweapon="";
+        ACE_Overheating_mrbs=300000;
+		recoil="recoil_spar";
+		recoilprone="recoil_spar";
 		canShootInWater=1;
-		recoil="recoil_rpk12";
-		pronerecoil="recoil_prone_rpk12";
-		modelOptics = "\A3\Weapons_f\acc\reticle_tws_mg";
-		//magazines
+        modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
+        linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+        compatibleItems[]=
+        {
+            "acc_flashlight",
+            "acc_pointer_IR"
+        };
 
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=30;
-		}
-		
-		class OpticsModes
+        class OpticsModes
         {
             class sight
             {
@@ -56,8 +55,8 @@ class cfgWeapons
                 };
                 opticsDisablePeripherialVision=0.67000002;
                 opticsZoomMin=0.375;
-                opticsZoomMax=1.1;
-                opticsZoomInit=0.75;
+                opticsZoomMax=0.9; //1.1
+                opticsZoomInit=0.600;
                 discreteInitIndex=0;
                 distanceZoomMin=100;
                 distanceZoomMax=700;
@@ -77,32 +76,26 @@ class cfgWeapons
                     "OpticsCHAbera2",
                     "OpticsBlur3"
                 };
-                opticsZoomMin=0.0250;
+                opticsZoomMin=0.0300;
                 opticsZoomMax=0.125;
                 opticsZoomInit=0.125;
                 memoryPointCamera="optic_view";
                 opticsFlare=1;
                 opticsDisablePeripherialVision=1;
-                visionMode[]=
-				{
-					"Normal",
-					"NVG",
-					"Ti"
-				};
-				thermalMode[] = {0, 1};
-                discretefov[] = {0.125,0.0625,0.0310, 0.0250};
+                visionMode[] = {"Normal", "NVG"};
+                discretefov[] = {0.125};
                 discreteInitIndex = 0;
                 discreteDistanceInitIndex = 0;
-                discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000,1100,1200,1300,1400,1500,1600,1700,1800};
+                discreteDistance[] = {100,200,300,400,500};
                 distanceZoomMin=100;
-                distanceZoomMax=1800;
-               
+                distanceZoomMax=500;
+                modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
             };
         };
-		
-		class FullAuto: FullAuto
+
+       class FullAuto: Mode_FullAuto
 		{
-            sounds[]=
+			sounds[]=
 			{
 				"StandardSound"
 			};
@@ -118,22 +111,45 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"MRC\JLTS\weapons\DC15X\sounds\dc15x_fire",
-					2.5,
+					"\SWLW_clones_spec\sounds\DC17M_blaster_fire.wss",
+					1,
+					1,
+					1800
+				};
+				begin2[]=
+				{
+					"\SWLW_clones_spec\sounds\DC17M_blaster_fire.wss",
+					1,
+					1,
+					1800
+				};
+				begin3[]=
+				{
+					"\SWLW_clones_spec\sounds\DC17M_blaster_fire.wss",
+					1,
 					1,
 					1800
 				};
 				soundBegin[]=
 				{
 					"begin1",
-					1
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
 				};
 			};
-            
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
-			dispersion=0.00000000005;
-			reloadTime=0.125;
-		}
-	}
+			reloadTime=0.15;
+			dispersion=0.0008;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=25;
+		};
+	};
 }
