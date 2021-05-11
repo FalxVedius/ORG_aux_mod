@@ -45,7 +45,11 @@ class cfgWeapons
 			dispersion=0.00009;
 		}
 
-		 class OpticsModes
+        magazines[] = {
+			MACRO_NEW_MAG(DC_15s,60)
+		};
+        
+		class OpticsModes
         {
             class sight
             {

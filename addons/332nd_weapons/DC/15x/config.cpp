@@ -13,7 +13,8 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {};
 		weapons[] = {
-			MACRO_NEW_WEAPON(DC_15x)
+			MACRO_NEW_WEAPON(DC_15x),
+			MACRO_NEW_WEAPON(DC_15x_Scoped)
 		};
 	};
 };
@@ -38,6 +39,11 @@ class cfgWeapons
         modelOptics="\A3\Weapons_f\acc\reticle_tws";
         baseWeapon=MACRO_NEW_WEAPON(DC_15x);
         weaponInfoType = "RscOptics_tws";
+		
+		magazines[] = {
+			MACRO_NEW_MAG(DC_15x,2),
+			MACRO_NEW_MAG(DC_15x,10)
+		};
 
 		class Single:Single
         {
@@ -134,4 +140,21 @@ class cfgWeapons
         };
 	
 	}
+
+	class MACRO_NEW_WEAPON(DC_15x_Scoped): MACRO_NEW_WEAPON(DC_15x)
+	{
+		scope = 2;
+		scopeArsenal = 2;
+
+		baseweapon= MACRO_NEW_WEAPON(DC_15x_Scoped);
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15x (Scoped))
+		class LinkedItems
+		{
+			class LinkedItemsOptic
+			{
+				slot = "CowsSlot";
+				item = "JLTS_DC15X_scope";
+			};
+		};
+	};
 }

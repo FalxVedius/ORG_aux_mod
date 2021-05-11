@@ -85,11 +85,11 @@ class cfgWeapons
 				cameraDir="";
 			};
 		};
-		// magazines[]=
-		// {
-		// 	"Ahs332nd_ConcMedium_25rnd",
-		// 	"Ahs332nd_HighHv_5rnd"
-		// };
+		magazines[]=
+		{
+			MACRO_NEW_MAG(DW32_Med,20),
+			MACRO_NEW_MAG(DW32_High,5)
+		};
 		
 		class Single: Mode_SemiAuto
 		{
@@ -246,4 +246,41 @@ class cfgWeapons
 			};
 		};
 	};
+}
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+
+	class MACRO_NEW_MAG(DW32_Med,20): 30rnd_762x39_AK12_Mag_F //DW-32S
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=20;
+		mass=30;
+		initspeed=1900;
+		displayName=MACRO_AMMO_DISPLAYNAME(Conc-Med,20)
+		displayNameShort="Conc-Med Power 20rnd";
+		descriptionShort="332nd Concentrated-Medium Power Round";
+		ammo="ls_ammo_338_blue";
+		tracersEvery=1;
+	};
+	class MACRO_NEW_MAG(DW32_High,5): 30rnd_762x39_AK12_Mag_F //DW-32S
+	{
+	    modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=5;
+		mass=40
+		initspeed=2100;
+		displayName="332nd HighHv 5rnd";
+		displayName=MACRO_AMMO_DISPLAYNAME(High Power,5)
+		descriptionShort="332nd High Power-High Velocity Round";
+		ammo="ls_ammo_127x108_green";
+		tracersEvery=1;
+	};
+	
 }

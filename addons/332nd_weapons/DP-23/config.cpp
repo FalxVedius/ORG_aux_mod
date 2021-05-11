@@ -53,7 +53,11 @@ class cfgWeapons
 		};
 		
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-        
+
+		magazines[] = {
+			MACRO_NEW_MAG(DP23,8)
+		};
+	
         class OpticsModes
         {
             class sight
@@ -183,4 +187,68 @@ class cfgWeapons
 		};
 				
 	};
+}
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+
+	
+	class MACRO_NEW_MAG(DP23,8): 30rnd_762x39_AK12_Mag_F //DP-23
+	{
+		scope=2;
+		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge,8)
+		ammo=MACRO_NEW_AMMO(DP23_Shell);
+		count=8;
+		mass=18
+		initspeed=1300;
+	};
+	
+	
+}
+
+class CfgAmmo
+{
+	//ls_ammo_shotgun_blue
+	class B_12Gauge_Pellets_Submunition;
+	class B_12Gauge_Pellets_Submunition_Deploy;
+
+	//Have fun reading :)
+	//https://community.bistudio.com/wiki/Arma_3:_Weapon_Config_Guidelines#Ammo_changes_on_fly_and_on_hit
+	class MACRO_NEW_AMMO(DP23_Shell): B_12Gauge_Pellets_Submunition
+	{
+		submunitionAmmo = MACRO_NEW_AMMO(DP23_Pellet);
+		submunitionConeAngle = 0.8;
+		submunitionConeType[] = {"poissondisc",9};
+
+		model = "ls_weapons_core\Effects\laser_blue.p3d";
+		effectfly = "ls_plasma_blue";
+		ExplosionEffects = "ls_plasma_impact";
+
+		indirectHit = 0;
+		indirectHitRange = 0;
+
+		explosive = 0;
+		fuseDistance = 0;
+		grenadeBurningSound[] = {};
+		grenadeFireSound[] = {};
+		hit = 20;
+		caliber = 0.525;
+
+		thrust = 210;
+		thrustTime = 1.5;
+		timeToLive = 6;
+
+		typicalSpeed = 900;
+	}
+
+	class MACRO_NEW_AMMO(DP23_Pellet): B_12Gauge_Pellets_Submunition_Deploy
+	{
+		hit = 2.55;
+		caliber = 0.525;
+		typicalSpeed = 360;
+		effectfly = "ls_plasma_blue";
+		ExplosionEffects = "ls_plasma_impact";
+		model = "ls_weapons_core\Effects\laser_blue.p3d";
+	}
 }

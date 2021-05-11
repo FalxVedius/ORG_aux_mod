@@ -36,7 +36,10 @@ class cfgWeapons
 		recoil="recoil_rpk12";
 		pronerecoil="recoil_prone_rpk12";
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws_mg";
-		//magazines
+
+		magazines[] = {
+			MACRO_NEW_MAG(DC_15L,125)
+		};
 
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{

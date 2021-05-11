@@ -36,7 +36,9 @@ class cfgWeapons
 		canShootInWaterMACRO_NEW_WEAPON=1;
         baseweapon= (DC_17)
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
+	
 
+		magazines[] = {MACRO_NEW_MAG(DC_17,15)};
         linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
         compatibleItems[]=
         {

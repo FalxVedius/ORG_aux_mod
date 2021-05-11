@@ -105,10 +105,10 @@ class cfgWeapons
             };
         };
 		
-		// magazines[]=
-		// {
-		// 	"Ahs332nd_Medium_250rnd"
-		// };
+		magazines[]=
+		{
+			MACRO_NEW_MAG(Z6,200)
+		};
 		
 		class FullAuto: Mode_FullAuto
 		{
@@ -194,4 +194,24 @@ class cfgWeapons
 			};
 		};
 	}
+}
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(Z6,200): 30rnd_762x39_AK12_Mag_F //Z6 Box magazine
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=200;
+		mass=50;
+		initspeed=1200;
+		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Medium,200)
+		displayNameShort="Med Power 200rnd";
+		descriptionShort="332nd Medium Power Round";
+		ammo="ls_ammo_762_blue";
+		tracersEvery=1;
+	};
 }

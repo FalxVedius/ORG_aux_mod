@@ -42,6 +42,11 @@ class cfgWeapons
             "acc_pointer_IR"
         };
 
+		magazines[]=
+		{
+			MACRO_NEW_MAG(35sa_low,30)
+		};
+
         class OpticsModes
         {
             class sight
@@ -151,5 +156,30 @@ class cfgWeapons
 			aiRateOfFire=2;
 			aiRateOfFireDistance=25;
 		};
+	};
+}
+
+	
+	
+
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+
+	class MACRO_NEW_MAG(35sa_low,30): 30rnd_762x39_AK12_Mag_F //Westar35-Mod
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=30;
+		mass=10;
+		initspeed=1550;
+		displayName=MACRO_AMMO_DISPLAYNAME(35SA Low,35)
+		displayNameShort="low Power 35rnd";
+		descriptionShort="332nd Low Power Round";
+		ammo="ls_ammo_65_blue";
+		tracersEvery=1;
 	};
 }
