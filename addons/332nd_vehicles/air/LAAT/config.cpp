@@ -57,11 +57,11 @@ class CfgVehicles
         };
 
 		hiddenselectionstextures[] = {
-            MACRO_LAAT_TEXTURES\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-            MACRO_LAAT_TEXTURES\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-            MACRO_LAAT_TEXTURES\Wings\wings_co.paa,
+            MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
             "swlb_a_vehicle\laat\data\missiles_co.paa",
-            MACRO_LAAT_TEXTURES\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+            MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
         };
 
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
