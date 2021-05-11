@@ -56,47 +56,16 @@ class cfgWeapons
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
 
-		//magazines[] = {}; med, low, high
+		magazines[] = {
+			MACRO_NEW_MAG(DC_15a_Medium,30),
+			MACRO_NEW_MAG(DC_15a_Low,60),
+			MACRO_NEW_MAG(DC_15a_High,10)
+		};
+
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Single","FullAuto"};
 
-		class Single: Single
-		{
-			reloadTime=0.25;
-			dispersion=0.00000009;
-		}
-
-		class FullAuto: FullAuto
-		{
-			reloadtime=0.25;
-			dispersion=0.00000009;
-			showToPlayer=1;
-
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=75;
-			midRangeProbab=0.69999999;
-			maxRange=150;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=200;
-		}
-
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=30;
-
-			class PointerSlot:PointerSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				displayName="Pointer Slot";
-				compatibleItems[]=
-				{
-					"acc_flashlight",
-					"acc_pointer_IR"
-				};
-			};
-		}
+		
 
 		class OpticsModes
         {
@@ -157,47 +126,13 @@ class cfgWeapons
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
 
-		//magazines[] = {}; med, low, high
+		magazines[] = {
+			MACRO_NEW_MAG(DC_15a_Medium,30),
+			MACRO_NEW_MAG(DC_15a_Low,60)
+		};
+
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Single","FullAuto"};
-
-		class Single: Single
-		{
-			reloadTime=0.25;
-			dispersion=0.00000009;
-		}
-
-		class FullAuto: FullAuto
-		{
-			reloadtime=0.25;
-			dispersion=0.00000009;
-			showToPlayer=1;
-
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=75;
-			midRangeProbab=0.69999999;
-			maxRange=150;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=200;
-		}
-
-		class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			mass=30;
-
-			class PointerSlot:PointerSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				displayName="Pointer Slot";
-				compatibleItems[]=
-				{
-					"acc_flashlight",
-					"acc_pointer_IR"
-				};
-			};
-		}
 
 		class OpticsModes
         {
@@ -278,7 +213,9 @@ class cfgWeapons
 				"SWLW_DC15A_UGL_smoke_red_Mag",
 				"SWLW_DC15A_UGL_smoke_purple_Mag",
 				"SWLW_DC15A_UGL_smoke_blue_Mag",
-				"SWLW_DC15A_UGL_smoke_green_Mag"
+				"SWLW_DC15A_UGL_smoke_green_Mag",
+                MACRO_NEW_MAG(DC_15_UGL_AP,2),
+                MACRO_NEW_MAG(DC_15_UGL_HE,4)
 			};
 		};
 	}

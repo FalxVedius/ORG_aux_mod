@@ -40,6 +40,7 @@
 	//displayname
 	#define MACRO_ITEM_DISPLAYNAME(type,name) [332nd] type ('##name##');
 	#define MACRO_WEAPON_DISPLAYNAME(name) [332nd] name;
+	#define MACRO_AMMO_DISPLAYNAME(name,count) [332nd] name mag, count##rnd;
 // ============================================================================== Macro Predefined Classes Function
 
 	// ---- Helmets ---- 
