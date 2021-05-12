@@ -14,7 +14,8 @@ class CfgPatches
 			cba_patches ,//cba stuff
             MARCO_JLTS_PATCHES,
 			MARCO_3AS_PATCHES,
-			"ls_laat_2"
+			"ls_laat_2",
+			"SWLW_merc_mando_pistols_Westar35SA"
 		};
 		requiredVersion = 0.1;
 		units[] = {};

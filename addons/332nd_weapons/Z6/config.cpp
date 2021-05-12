@@ -124,7 +124,7 @@ class cfgWeapons
 					"SWLW_clones\machineguns\z6\sounds\Z6_1.wss",
 					1,
 					1,
-					500
+					200
 				};
 				soundBegin[]=
 				{
@@ -133,8 +133,8 @@ class cfgWeapons
 				};
 			};
 			displayname="FullAuto";
-			reloadTime=0.060;
-			dispersion=0.0005;
+			reloadTime=0.11;
+			dispersion=0.003;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -165,7 +165,7 @@ class cfgWeapons
 				};
 			};
 			displayname="Supercharge";
-			reloadTime=0.030;
+			reloadTime=0.05;
 			dispersion=0.01;
 			minRange=0;
 			minRangeProbab=0.89999998;

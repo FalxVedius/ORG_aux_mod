@@ -28,7 +28,7 @@ class cfgWeapons
 		class WeaponSlotsInfo;
 	}
 
-	class JLTS_DC15A_plastic:JLTS_DC15A
+	class JLTS_DC15A_plastic: JLTS_DC15A
 	{
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -39,7 +39,7 @@ class cfgWeapons
 		class FullAuto;
 	}
 
-	class JLTS_DC15A_ugl: JLTS_DC15A
+	class JLTS_DC15A_ugl : JLTS_DC15A
 	{
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -64,6 +64,89 @@ class cfgWeapons
 
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Single","FullAuto"};
+		class Single: Single
+		{
+			sounds[]=
+			{
+				"StandardSound";
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.20;
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
+			dispersion=0.00000009;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.30000001;
+		};
+		class FullAuto: FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			showtoplayer=1;
+			displayname="Full Auto";
+			reloadtime=0.20;
+			dispersion=0.0000009;
+			aiBurstTerminable=1;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=75;
+			midRangeProbab=0.69999999;
+			maxRange=150;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=200;
+		};
 
 		
 
@@ -130,9 +213,92 @@ class cfgWeapons
 			MACRO_NEW_MAG(DC_15a_Medium,30),
 			MACRO_NEW_MAG(DC_15a_Low,60)
 		};
-
+        
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Single","FullAuto"};
+		class Single: Single
+		{
+			sounds[]=
+			{
+				"StandardSound";
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.20;
+			recoil="recoil_single_mx";
+			recoilProne="recoil_single_prone_mx";
+			dispersion=0.00000009;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.30000001;
+		};
+		class FullAuto: FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			showtoplayer=1;
+			displayname="Full Auto";
+			reloadtime=0.20;
+			dispersion=0.0000009;
+			aiBurstTerminable=1;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=75;
+			midRangeProbab=0.69999999;
+			maxRange=150;
+			maxRangeProbab=0.050000001;
+			aiRateOfFire=2;
+			aiRateOfFireDistance=200;
+		};
 
 		class OpticsModes
         {
@@ -191,11 +357,12 @@ class cfgWeapons
 			descriptionShort="$STR_JLTS_names_UGL";
 			useModelOptics=0;
 			useExternalOptic=0;
-			reloadTime=0.5;
+			reloadTime=1;
 			showtoplayer=1;
 			cameraDir="OP_look";
-			discreteDistance[]={25,50,75,100,150,200,250,300,350,400,450,500};
+			discreteDistance[]={25,100,200,300,400};
 			discreteDistanceCameraPoint[]= {
+				"GL_eye",
 				"OP_eye",
 				"OP_eye2",
 				"OP_eye3",

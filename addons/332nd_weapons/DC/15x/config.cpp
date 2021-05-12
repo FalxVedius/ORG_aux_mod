@@ -95,7 +95,6 @@ class cfgWeapons
 			
             reloadTime=0.75;
 			dispersion=0.0;
-			initSpeed=940; // put in mag
         }
 
         class OpticsModes

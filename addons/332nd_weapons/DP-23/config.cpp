@@ -55,7 +55,7 @@ class cfgWeapons
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 
 		magazines[] = {
-			MACRO_NEW_MAG(DP23,8)
+			MACRO_NEW_MAG(DP23,12)
 		};
 	
         class OpticsModes
@@ -194,13 +194,13 @@ class CfgMagazines
 	class 30rnd_762x39_AK12_Mag_F;
 
 	
-	class MACRO_NEW_MAG(DP23,8): 30rnd_762x39_AK12_Mag_F //DP-23
+	class MACRO_NEW_MAG(DP23,12): 30rnd_762x39_AK12_Mag_F //DP-23
 	{
 		scope=2;
 		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge,8)
 		ammo=MACRO_NEW_AMMO(DP23_Shell);
-		count=8;
-		mass=18
+		count=12;
+		mass=20
 		initspeed=1300;
 	};
 	

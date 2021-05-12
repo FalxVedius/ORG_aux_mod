@@ -31,18 +31,92 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15s)
 
 		canShootInWater=1;
-		recoil="recoil_smg_02";
-		recoilprone="recoil_smg_02";
+		recoil="recoil_spar";
+		recoilprone="recoil_spar";
+		modes[]=  {
+		 "FullAuto",
+		 "Single"
+		};
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		class FullAuto: FullAuto
 		{
-			reloadTime=0.095;
-			dispersion=0.0008;
-		}
-		class Single: Single
+			sounds[]=
+			{
+				"StandardSound";
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			displayname="FullAuto";
+			reloadTime=0.09;
+			dispersion=0.0075;
+			minRange=0;
+			minRangeProbab=0.89999998;
+			midRange=15;
+			midRangeProbab=0.69999999;
+			maxRange=30;
+			maxRangeProbab=0.1;
+			textureType="fastAuto";
+		};
+		class Single: FullAuto
 		{
+			sounds[]=
+			{
+				"StandardSound";
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					1,
+					1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
 			reloadTime=0.20;
-			dispersion=0.00009;
+			displayname="SlowAuto";
+			dispersion=0.001;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.30000001;
+		    textureType = "semi";
 		}
 
         magazines[] = {

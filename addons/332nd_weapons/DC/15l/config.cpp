@@ -25,16 +25,17 @@ class cfgWeapons
 	{
 		class WeaponSlotsInfo;
 		class FullAuto;
+		class CowsSlot;
 	}
 	class MACRO_NEW_WEAPON(DC_15l):3AS_DC15L_F
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L)
 
-		reloadTime=0.1;
+		reloadTime=0.16;
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
-		recoil="recoil_rpk12";
-		pronerecoil="recoil_prone_rpk12";
+		recoil = "recoil_sw";
+		recoilProne = "assaultRifleBase";
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws_mg";
 
 		magazines[] = {
@@ -105,9 +106,9 @@ class cfgWeapons
 		
 		class FullAuto: FullAuto
 		{
-            sounds[]=
+           sounds[]=
 			{
-				"StandardSound"
+				"StandardSound" 
 			};
 			class BaseSoundModeType
 			{
@@ -132,11 +133,23 @@ class cfgWeapons
 					1
 				};
 			};
-            
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
-			dispersion=0.00000000005;
-			reloadTime=0.125;
+			reloadTime=0.16;
+			dispersion=0.0016;
+			minRange=2;
+			minRangeProbab=0.5;
+			midRange=250;
+			midRangeProbab=0.69999999;
+			maxRange=450;
+			maxRangeProbab=0.30000001;
+		};
+			
+			class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=30;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			}
 		}
 	}
 }

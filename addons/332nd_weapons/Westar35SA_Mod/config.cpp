@@ -36,6 +36,9 @@ class cfgWeapons
 		canShootInWater=1;
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
         linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+		modes[]=  {
+		 "FullAuto"
+		};
         compatibleItems[]=
         {
             "acc_flashlight",
@@ -176,8 +179,8 @@ class CfgMagazines
 		count=30;
 		mass=10;
 		initspeed=1550;
-		displayName=MACRO_AMMO_DISPLAYNAME(35SA Low,35)
-		displayNameShort="low Power 35rnd";
+		displayName=MACRO_AMMO_DISPLAYNAME(35SA Low,30)
+		displayNameShort="low Power 30rnd";
 		descriptionShort="332nd Low Power Round";
 		ammo="ls_ammo_65_blue";
 		tracersEvery=1;

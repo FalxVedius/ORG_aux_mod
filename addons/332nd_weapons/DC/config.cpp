@@ -140,7 +140,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(AP Plasma Cell ,2)
 		ammo="SWLW_ammo_40mm_at";
 		count=2;
-		mass=60
+		mass=55
 		initspeed=80;
 	};
 	class MACRO_NEW_MAG(DC_15_UGL_HE,4): SWLW_mag_40mm_1rnd //15A UGL - 40mm

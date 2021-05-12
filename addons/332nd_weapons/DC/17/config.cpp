@@ -31,8 +31,6 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17)
 
         ACE_Overheating_mrbs=300000;
-		recoil="recoil_pistol_4five";
-		recoilprone="recoil_pistol_4five";
 		canShootInWaterMACRO_NEW_WEAPON=1;
         baseweapon= (DC_17)
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
@@ -126,7 +124,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.095;
+			reloadTime=0.10;
 			displayname="SemiAuto";
 			dispersion=0.000009;
 			minRange=2;
