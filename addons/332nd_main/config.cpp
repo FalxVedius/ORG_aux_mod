@@ -13,7 +13,8 @@ class CfgPatches
 			"A3_Data_F_Enoch_Loadorder",//Load all of arma first
 			cba_patches ,//cba stuff
             MARCO_JLTS_PATCHES,
-			MARCO_3AS_PATCHES
+			MARCO_3AS_PATCHES,
+			"ls_laat_2"
 		};
 		requiredVersion = 0.1;
 		units[] = {};
