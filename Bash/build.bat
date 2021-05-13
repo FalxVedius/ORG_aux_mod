@@ -32,7 +32,7 @@ set "x=0"
 if defined Arr[%x%] (
    
     call ECHO %sourceFolder%\%%Arr[%x%]%%
-    call AddonBuilder.exe %sourceFolder%\%%Arr[%x%]%% %outputFolder% -temp=%tempFolder% -include=%includeFile%
+    call AddonBuilder.exe -clear %sourceFolder%\%%Arr[%x%]%% %outputFolder% -temp=%tempFolder% -include=%includeFile%
     set /a "x+=1"
     GOTO :SymLoop
 )
