@@ -4,6 +4,7 @@
 	#define MACRO_AUTHOR_PPL "Halligan, Poseidon, Namenai"
 	#define MACRO_MODNAME 332nd_aux
 	#define MACRO_MODNAME_SCRIPT aux_332nd
+	#define MACRO_MOD_VERSION 5.13.21a
 
 	#define MACRO_HELMET_TEXTURES_PATH \332nd_helmets\_textures
 	#define MACRO_UNIFORM_TEXTURES_PATH \332nd_units\_textures
@@ -233,3 +234,6 @@
 	//---XEH prep---
 	#define MACRO_PREP_XEH(Script,name)\
 	[MACRO_QUOTE(MACRO_SCRIPT_PATH\Script),MACRO_QUOTE(MACRO_FNC_NAME(name))] call CBA_fnc_compileFunction;
+	
+	#define MACRO_PREP(Script,Name)\
+	MACRO_FNC_NAME(Name) = compile preprocessFileLineNumbers MACRO_QUOTE(MACRO_SCRIPT_PATH\Script)

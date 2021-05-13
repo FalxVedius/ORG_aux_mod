@@ -1,4 +1,9 @@
-// #include "macros\main.hpp"
+#include "..\macros\main.hpp"
+
+
+// MACRO_FNC_NAME(Name) = compile preprocessFileLineNumbers MACRO_QUOTE(MACRO_SCRIPT_PATH\Script)
+// aux_332nd_fnc_version = compile preprocessFileLineNumbers "332nd_main\functions\version.sqf"
+MACRO_PREP(version.sqf,version)
 
 // // =============== Ace Interactions
 

@@ -49,13 +49,13 @@ class cfgFunctions
 //Run once at a point in time before all the mission units and vehicles have their own init event handlers processed
 // Stuff like keybinds would go here
 // Non scheduled environments
-// class Extended_PreInit_EventHandlers
-// {
-// 	class 332nd_aux_PREINIT
-// 	{
-// 		init="call compile preprocessFileLineNumbers '332nd_main\XEH_preinit.sqf'";
-// 	};
-// };
+class Extended_PreInit_EventHandlers
+{
+	class 332nd_aux_PREINIT
+	{
+		init="call compile preprocessFileLineNumbers '332nd_main\functions\XEH_preinit.sqf'";
+	};
+};
 
 //run once and after all the units and vehicles have had both their init event handlers and the code in the mission editor "init" lines processed
 // stuff like Scheduled environments
