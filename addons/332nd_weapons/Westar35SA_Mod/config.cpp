@@ -23,7 +23,7 @@ class cfgWeapons
 	class Pistol_Base_F;
 	class SWLW_Westar35SA: Pistol_Base_F
 	{
-		class Mode_FullAuto;
+		class Single;
 	}
     
 	class MACRO_NEW_WEAPON(Westar35SA_mod): SWLW_Westar35SA
@@ -36,9 +36,9 @@ class cfgWeapons
 		canShootInWater=1;
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
         linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-		modes[]=  {
-		 "FullAuto"
-		};
+
+		modes[] = {"FullAuto","close","short","medium"};
+
         compatibleItems[]=
         {
             "acc_flashlight",
@@ -101,7 +101,8 @@ class cfgWeapons
             };
         };
 
-       class FullAuto: Mode_FullAuto
+		
+        class FullAuto: Single
 		{
 			sounds[]=
 			{
@@ -148,6 +149,10 @@ class cfgWeapons
 					0.33000001
 				};
 			};
+
+			textureType = "fullAuto";
+			autoFire = 1;
+			displayName = "Full Auto";
 			reloadTime=0.15;
 			dispersion=0.0008;
 			minRange=5;
