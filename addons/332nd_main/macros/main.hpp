@@ -12,6 +12,7 @@
 	#define MACRO_BACKPACK_TEXTURES_PATH \332nd_backpacks\_textures
 	#define MACRO_VEHICLE_TEXTURES_PATH \332nd_vehicles\_textures
 	#define MACRO_HUD_CHANGER_ICONS 332nd_main\textures\interaction_Icons
+	#define MACRO_WEAPON_TEXTURES_PATH \332nd_weapons\_textures
 
 	#define MACRO_SCRIPT_PATH 332nd_main\functions
 // ============================================================================== Macro Functions

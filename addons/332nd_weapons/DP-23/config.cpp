@@ -28,7 +28,7 @@ class cfgWeapons
     {
         class WeaponSlotsInfo;
     }
-    class JLTS_DP23:arifle_MX_Base_F
+    class JLTS_DP23: arifle_MX_Base_F
     {
         class WeaponSlotsInfo: WeaponSlotsInfo
         {
@@ -197,7 +197,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(DP23,12): 30rnd_762x39_AK12_Mag_F //DP-23
 	{
 		scope=2;
-		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge,8)
+		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge,12)
 		ammo=MACRO_NEW_AMMO(DP23_Shell);
 		count=12;
 		mass=20

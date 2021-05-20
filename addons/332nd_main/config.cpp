@@ -15,7 +15,8 @@ class CfgPatches
             MARCO_JLTS_PATCHES,
 			MARCO_3AS_PATCHES,
 			"ls_laat_2",
-			"SWLW_merc_mando_pistols_Westar35SA"
+			"SWLW_merc_mando_pistols_Westar35SA",
+			"SWLW_clones_launchers_RPS6"
 		};
 		requiredVersion = 0.1;
 		units[] = {};
