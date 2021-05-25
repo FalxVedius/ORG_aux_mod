@@ -1,4 +1,4 @@
-class RD501_HUD_Changer
+class 332nd_aux_HUD_Changer
 {
     displayName = "Change HUD Color :)";
     exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -6,7 +6,7 @@ class RD501_HUD_Changer
     showDisabled = 0;
     priority = 2.5;
     icon = MACRO_HUD_CHANGER_ICONS\colorWheel.paa;
-    class RD501_Red_HUD
+    class 332nd_aux_Red_HUD
     {
         displayName = "Red HUD Color";
         exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -18,7 +18,7 @@ class RD501_HUD_Changer
         icon = MACRO_HUD_CHANGER_ICONS\red.paa;
     };
 
-    class RD501_Orange_HUD:RD501_Red_HUD
+    class 332nd_aux_Orange_HUD:332nd_aux_Red_HUD
     {
         displayName = "Orange HUD Color";
         statement = [1,.05,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -26,7 +26,7 @@ class RD501_HUD_Changer
         
     };
 
-    class RD501_Yellow_HUD:RD501_Red_HUD
+    class 332nd_aux_Yellow_HUD:332nd_aux_Red_HUD
     {
         displayName = "Yellow HUD Color";
         statement = [1,1,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -34,7 +34,7 @@ class RD501_HUD_Changer
         
     };
 
-    class RD501_Green_HUD:RD501_Red_HUD
+    class 332nd_aux_Green_HUD:332nd_aux_Red_HUD
     {
         displayName = "Green HUD Color";
         //condition = "true";
@@ -44,7 +44,7 @@ class RD501_HUD_Changer
         // priority = 2.5;
     };
 
-    class RD501_Cyan_HUD:RD501_Red_HUD
+    class 332nd_aux_Cyan_HUD:332nd_aux_Red_HUD
     {
         displayName = "Cyan HUD Color";
         statement = [0,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -52,7 +52,7 @@ class RD501_HUD_Changer
         
     };
 
-    class RD501_Blue_HUD:RD501_Red_HUD
+    class 332nd_aux_Blue_HUD:332nd_aux_Red_HUD
     {
         displayName = "Blue HUD Color";
         statement = [0,0,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -60,7 +60,7 @@ class RD501_HUD_Changer
         
     };
 
-    class RD501_Purple_HUD:RD501_Red_HUD
+    class 332nd_aux_Purple_HUD:332nd_aux_Red_HUD
     {
         displayName = "Purple HUD Color";
         statement = [.5,0,.5,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -68,7 +68,7 @@ class RD501_HUD_Changer
         
     };
     
-    class RD501_White_HUD:RD501_Red_HUD
+    class 332nd_aux_White_HUD:332nd_aux_Red_HUD
     {
         displayName = "White HUD Color";
         statement = [1,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -76,7 +76,7 @@ class RD501_HUD_Changer
         
     };
 
-    class RD501_Black_HUD:RD501_Red_HUD
+    class 332nd_aux_Black_HUD:332nd_aux_Red_HUD
     {
         displayName = "Black HUD Color";
         statement = [0,0,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -84,7 +84,7 @@ class RD501_HUD_Changer
         
     };
 
-    class RD501_Clear_HUD:RD501_Red_HUD
+    class 332nd_aux_Clear_HUD:332nd_aux_Red_HUD
     {
         displayName = "No HUD Color";
         statement = [1,1,1,0,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);

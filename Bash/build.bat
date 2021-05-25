@@ -27,7 +27,7 @@ REM ---DO NOT EDIT BELOW THIS LINE---
 REM ---DO NOT EDIT BELOW THIS LINE---
 
 set "x=0"
-
+(
 :SymLoop
 if defined Arr[%x%] (
    
@@ -36,6 +36,6 @@ if defined Arr[%x%] (
     set /a "x+=1"
     GOTO :SymLoop
 )
-
+) > output.txt
 pause
 REM -sign=%keyFile%
