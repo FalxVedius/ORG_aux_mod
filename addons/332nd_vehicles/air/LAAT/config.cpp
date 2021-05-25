@@ -18,7 +18,9 @@ class CfgPatches
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_B),
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_C),
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_D),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_E)
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_E),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_F),
+            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_G)
             // MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_lights_base),
             // MACRO_NEW_VEHICLE(air,LAAT,mk2_332nd_base),
             // MACRO_NEW_VEHICLE(air,LAAT,mk2_332nd_lights_base)
@@ -190,7 +192,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_A): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
     {
-        #include "_armorA.hpp"
+        armor = 100*2;
         displayName = "[332nd] LAAT Mk1 Armor (3)";
         scope = 2;
 
@@ -198,7 +200,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_B): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
     {
-        #include "_armorB.hpp"
+        armor = 100*5;
         displayName = "[332nd] LAAT Mk1 Armor (2)";
         scope = 2;
 
@@ -206,7 +208,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_C): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
     {
-        #include "_armorC.hpp"
+        armor = 100*3;
         displayName = "[332nd] LAAT Mk1 Armor (4)";
         scope = 2;
 
@@ -214,7 +216,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_D): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
     {
-        #include "_armorD.hpp"
+        armor = 100*4;
         displayName = "[332nd] LAAT Mk1 Armor (5)";
         scope = 2;
 
@@ -222,8 +224,24 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_E): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
     {
-        #include "_armorE.hpp"
+        armor = 100*0.5;
         displayName = "[332nd] LAAT Mk1 Armor (1)";
+        scope = 2;
+
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_F): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        armor = 100*10;
+        displayName = "[332nd] LAAT Mk1 Armor (7)";
+        scope = 2;
+
+    }
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_G): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    {
+        armor = 100*7;
+        displayName = "[332nd] LAAT Mk1 Armor (6)";
         scope = 2;
 
     }

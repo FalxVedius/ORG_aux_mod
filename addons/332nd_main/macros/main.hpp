@@ -38,6 +38,8 @@
 	#define MACRO_NEW_WEAPON(name) MACRO_MODNAME##_weapon_##name
 	#define MACRO_NEW_MAG(name,count) MACRO_MODNAME##_magazine_##name##_x##count
 	#define MACRO_NEW_AMMO(name) MACRO_MODNAME##_ammo_##name
+	#define MACRO_NEW_NVG(name) MACRO_MODNAME##_nvg_##name
+	#define MACRO_NEW_BINO(name) MACRO_MODNAME##_bino_##name
 
 	//displayname
 	#define MACRO_ITEM_DISPLAYNAME(type,name) [332nd] type ('##name##');
