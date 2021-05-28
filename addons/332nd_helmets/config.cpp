@@ -21,14 +21,32 @@ class CfgWeapons
 
     class JLTS_CloneHelmetP2;
 
+	class CloneHelmetP2_Base : JLTS_CloneHelmetP2
+	{
+		class ItemInfo;
+	};
+
 	//Base infantry helmet
-    class MACRO_NEW_HELMET(infantry,base): JLTS_CloneHelmetP2
+    class MACRO_NEW_HELMET(infantry,base): CloneHelmetP2_Base
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
         displayName = "[332nd] Infantry Helmet ('base')";
         subItems[] = {"G_B_Diving"};
+
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
     }
 
 	class JLTS_CloneHelmetAB;

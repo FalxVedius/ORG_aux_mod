@@ -48,6 +48,15 @@
 // ============================================================================== Macro Predefined Classes Function
 
 	// ---- Helmets ---- 
+	#define MACRO_NEW_INF_HELMET_ITEM_RECRUIT(classname,displayname)\
+		class MACRO_NEW_HELMET(infantry,classname): MACRO_NEW_HELMET(infantry,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Helmet ('##displayname##');\
+		};
+
+
 	#define MACRO_NEW_INF_HELMET_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_HELMET(infantry,classname): MACRO_NEW_HELMET(infantry,base)\
 		{\
