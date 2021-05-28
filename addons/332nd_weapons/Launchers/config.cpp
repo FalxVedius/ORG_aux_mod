@@ -179,7 +179,7 @@ class CfgAmmo
 	};
 	class MACRO_NEW_AMMO(PLX1_AA): M_Titan_AA
 	{
-		cmImmunity=0.5;
+		cmImmunity=1.0;
 		hit=900;
 		manueuvrability = 30;
 		soundFly[]=
