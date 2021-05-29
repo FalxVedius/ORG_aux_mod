@@ -39,6 +39,7 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(infantry,base);
+			containerClass = "Supply140";
 		};
 	};
 
@@ -50,6 +51,7 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(rto,base);
+			containerClass = "Supply140";
 		};
 	};
 
@@ -61,6 +63,7 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(medic,base);
+			containerClass = "Supply140";
 		};
 	};
 
@@ -71,6 +74,7 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(aviation,base);
+			containerClass = "Supply140";
 		};
 	};
 
@@ -81,6 +85,7 @@ class CfgWeapons
 		class ItemInfo: ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(cwo,base);
+			containerClass = "Supply140";
 		};
 	};
 
@@ -90,6 +95,16 @@ class CfgWeapons
 
 class CfgVehicles
 {  
+	// ---- Supply Containers for Unif ----
+
+	class ContainerSupply;
+	class SupplyXX : ContainerSupply
+	{
+		maximumLoad = XX;
+	};
+
+	// ---- End Supply Containers for Armor ----
+
 	// ---- Units for Uniforms ----
 
 	class B_Soldier_f;
@@ -122,7 +137,7 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "face_hub";
 				passThrough = 0.80000001;
@@ -132,7 +147,7 @@ class CfgVehicles
 			};
 			class HitNeck : HitFace
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "neck";
 				passThrough = 0.80000001;
@@ -142,7 +157,7 @@ class CfgVehicles
 			};
 			class HitHead : HitNeck
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "head";
 				passThrough = 0.80000001;
@@ -153,7 +168,7 @@ class CfgVehicles
 			};
 			class HitPelvis : HitHead
 			{
-				armor = 8;
+				armor = 16;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.80000001;
@@ -165,7 +180,7 @@ class CfgVehicles
 			};
 			class HitAbdomen : HitPelvis
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "spine1";
 				passThrough = 0.80000001;
@@ -176,7 +191,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm : HitAbdomen
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "spine2";
 				passThrough = 0.33000001;
@@ -187,7 +202,7 @@ class CfgVehicles
 			};
 			class HitChest : HitDiaphragm
 			{
-				armor = 8;
+				armor = 16;
 				material = -1;
 				name = "spine3";
 				passThrough = 0.33000001;
@@ -198,7 +213,7 @@ class CfgVehicles
 			};
 			class HitBody : HitChest
 			{
-				armor = 1000;
+				armor = 2000;
 				material = -1;
 				name = "body";
 				passThrough = 1;
@@ -210,7 +225,7 @@ class CfgVehicles
 			};
 			class HitArms : HitBody
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "arms";
 				passThrough = 1;
@@ -222,7 +237,7 @@ class CfgVehicles
 			};
 			class HitHands : HitArms
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "hands";
 				passThrough = 1;
@@ -234,7 +249,7 @@ class CfgVehicles
 			};
 			class HitLegs : HitHands
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "legs";
 				passThrough = 1;
@@ -246,7 +261,7 @@ class CfgVehicles
 			};
 			class Incapacitated : HitLegs
 			{
-				armor = 1000;
+				armor = 2000;
 				material = -1;
 				name = "body";
 				passThrough = 1;
@@ -258,7 +273,7 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "hand_l";
 				passThrough = 1;
@@ -273,7 +288,7 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "leg_l";
 				passThrough = 1;
@@ -338,7 +353,7 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "face_hub";
 				passThrough = 0.80000001;
@@ -348,7 +363,7 @@ class CfgVehicles
 			};
 			class HitNeck : HitFace
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "neck";
 				passThrough = 0.80000001;
@@ -358,7 +373,7 @@ class CfgVehicles
 			};
 			class HitHead : HitNeck
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "head";
 				passThrough = 0.80000001;
@@ -369,7 +384,7 @@ class CfgVehicles
 			};
 			class HitPelvis : HitHead
 			{
-				armor = 8;
+				armor = 16;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.80000001;
@@ -381,7 +396,7 @@ class CfgVehicles
 			};
 			class HitAbdomen : HitPelvis
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "spine1";
 				passThrough = 0.80000001;
@@ -392,7 +407,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm : HitAbdomen
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "spine2";
 				passThrough = 0.33000001;
@@ -403,7 +418,7 @@ class CfgVehicles
 			};
 			class HitChest : HitDiaphragm
 			{
-				armor = 8;
+				armor = 16;
 				material = -1;
 				name = "spine3";
 				passThrough = 0.33000001;
@@ -414,7 +429,7 @@ class CfgVehicles
 			};
 			class HitBody : HitChest
 			{
-				armor = 1000;
+				armor = 2000;
 				material = -1;
 				name = "body";
 				passThrough = 1;
@@ -426,7 +441,7 @@ class CfgVehicles
 			};
 			class HitArms : HitBody
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "arms";
 				passThrough = 1;
@@ -438,7 +453,7 @@ class CfgVehicles
 			};
 			class HitHands : HitArms
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "hands";
 				passThrough = 1;
@@ -450,7 +465,7 @@ class CfgVehicles
 			};
 			class HitLegs : HitHands
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "legs";
 				passThrough = 1;
@@ -462,7 +477,7 @@ class CfgVehicles
 			};
 			class Incapacitated : HitLegs
 			{
-				armor = 1000;
+				armor = 2000;
 				material = -1;
 				name = "body";
 				passThrough = 1;
@@ -474,7 +489,7 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "hand_l";
 				passThrough = 1;
@@ -489,7 +504,7 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "leg_l";
 				passThrough = 1;
@@ -532,7 +547,7 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "face_hub";
 				passThrough = 0.80000001;
@@ -542,7 +557,7 @@ class CfgVehicles
 			};
 			class HitNeck : HitFace
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "neck";
 				passThrough = 0.80000001;
@@ -552,7 +567,7 @@ class CfgVehicles
 			};
 			class HitHead : HitNeck
 			{
-				armor = 1;
+				armor = 2;
 				material = -1;
 				name = "head";
 				passThrough = 0.80000001;
@@ -563,7 +578,7 @@ class CfgVehicles
 			};
 			class HitPelvis : HitHead
 			{
-				armor = 8;
+				armor = 16;
 				material = -1;
 				name = "pelvis";
 				passThrough = 0.80000001;
@@ -575,7 +590,7 @@ class CfgVehicles
 			};
 			class HitAbdomen : HitPelvis
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "spine1";
 				passThrough = 0.80000001;
@@ -586,7 +601,7 @@ class CfgVehicles
 			};
 			class HitDiaphragm : HitAbdomen
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "spine2";
 				passThrough = 0.33000001;
@@ -597,7 +612,7 @@ class CfgVehicles
 			};
 			class HitChest : HitDiaphragm
 			{
-				armor = 8;
+				armor = 16;
 				material = -1;
 				name = "spine3";
 				passThrough = 0.33000001;
@@ -608,7 +623,7 @@ class CfgVehicles
 			};
 			class HitBody : HitChest
 			{
-				armor = 1000;
+				armor = 2000;
 				material = -1;
 				name = "body";
 				passThrough = 1;
@@ -620,7 +635,7 @@ class CfgVehicles
 			};
 			class HitArms : HitBody
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "arms";
 				passThrough = 1;
@@ -632,7 +647,7 @@ class CfgVehicles
 			};
 			class HitHands : HitArms
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "hands";
 				passThrough = 1;
@@ -644,7 +659,7 @@ class CfgVehicles
 			};
 			class HitLegs : HitHands
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "legs";
 				passThrough = 1;
@@ -656,7 +671,7 @@ class CfgVehicles
 			};
 			class Incapacitated : HitLegs
 			{
-				armor = 1000;
+				armor = 2000;
 				material = -1;
 				name = "body";
 				passThrough = 1;
@@ -668,7 +683,7 @@ class CfgVehicles
 			};
 			class HitLeftArm
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "hand_l";
 				passThrough = 1;
@@ -683,7 +698,7 @@ class CfgVehicles
 			};
 			class HitLeftLeg
 			{
-				armor = 6;
+				armor = 12;
 				material = -1;
 				name = "leg_l";
 				passThrough = 1;

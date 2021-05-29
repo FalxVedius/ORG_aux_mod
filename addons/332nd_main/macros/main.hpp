@@ -220,6 +220,14 @@
 
 
 	// ---- Vests ---- 
+
+	#define MACRO_NEW_TROOPER_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trooper,classname): MACRO_NEW_VEST(trooper,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Trooper Belt ('##displayname##');\
+		};
 	#define MACRO_NEW_INF_KAMA_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(infantry,classname): MACRO_NEW_VEST(infantry,base)\
 		{\
