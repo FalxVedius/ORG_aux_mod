@@ -228,6 +228,97 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Trooper Belt ('##displayname##');\
 		};
+	#define MACRO_NEW_TROOPERHOLSTER_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trooperholster,classname): MACRO_NEW_VEST(trooperholster,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Trooper Holster ('##displayname##');\
+		};
+	#define MACRO_NEW_VET_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(vettrooper,classname): MACRO_NEW_VEST(vettrooper,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_VET_VEST_ALT_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(vettrooperalt,classname): MACRO_NEW_VEST(vettrooperalt,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_CSP1_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(csp1,classname): MACRO_NEW_VEST(csp1,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_CSP2_CSP3_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(csp2csp3,classname): MACRO_NEW_VEST(csp2csp3,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_CSP4_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(csp4,classname): MACRO_NEW_VEST(csp4,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_CORP_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(corp,classname): MACRO_NEW_VEST(corp,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_CORP_ALT_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(corpalt,classname): MACRO_NEW_VEST(corpalt,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_SERG_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(serg,classname): MACRO_NEW_VEST(serg,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_SERG_MAJ_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(sergmaj,classname): MACRO_NEW_VEST(sergmaj,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_FLIGHT_SENIOR_ENSIGN_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(seniorensign,classname): MACRO_NEW_VEST(seniorensign,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Flight Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_FLIGHT_OFFICER_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(flightofficer,classname): MACRO_NEW_VEST(flightofficer,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Flight Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(flightjrlt,classname): MACRO_NEW_VEST(flightjrlt,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Flight Vest ('##displayname##');\
+		};
 	#define MACRO_NEW_INF_KAMA_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(infantry,classname): MACRO_NEW_VEST(infantry,base)\
 		{\
