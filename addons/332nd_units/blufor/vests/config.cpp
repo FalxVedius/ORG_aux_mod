@@ -29,6 +29,10 @@ class CfgWeapons
     {
         class ItemInfo;
     };
+    class JLTS_CloneVestOfficer2 : JLTS_CloneVestOfficer
+    {
+        class ItemInfo;
+    };
     class JLTS_CloneVestHolster : V_PlateCarrier1_rgr
     {
         class ItemInfo;
@@ -661,5 +665,41 @@ class CfgWeapons
         };
     }
     MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(332nd_FlightJrLT_Vest,Flight Jr Lieutenant)
+
+    class MACRO_NEW_VEST(reserveofficer,base) : JLTS_CloneVestOfficer2
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Reserve Officer Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(332nd_ReserveOfficer_Vest,Reserve Officer)
     /// ---- End
 }

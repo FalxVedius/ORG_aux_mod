@@ -12,6 +12,8 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
+            MACRO_NEW_UNIT(recruit,332nd_recruit),
+
 			MACRO_NEW_UNIT(infantry,332nd_cadet),
             MACRO_NEW_UNIT(infantry,332nd_trooper),
             MACRO_NEW_UNIT(infantry,332nd_senior_trooper),
@@ -59,6 +61,8 @@ class CfgPatches
             MACRO_NEW_UNIT(aviation,332nd_flight_captain),
 		};
 		weapons[] = {
+            MACRO_NEW_UNIFORM(recruit,332nd_recruit),
+
 		 	MACRO_NEW_UNIFORM(infantry,332nd_cadet),
             MACRO_NEW_UNIFORM(infantry,332nd_trooper),
             MACRO_NEW_UNIFORM(infantry,332nd_senior_trooper),
@@ -117,6 +121,10 @@ class CfgPatches
 class CfgWeapons
 {
     class JLTS_CloneArmor;
+    class MACRO_NEW_UNIFORM(recruit,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
     class MACRO_NEW_UNIFORM(infantry,base): JLTS_CloneArmor
     {
         class ItemInfo;
@@ -141,6 +149,9 @@ class CfgWeapons
     {
         class ItemInfo;
     };
+
+    //Recruit
+    MACRO_NEW_RECRUIT_UNIFORM_ITEM(332nd_recruit,Recruit,332nd_recruit)
 
     //Infantry
  	MACRO_NEW_INF_UNIFORM_ITEM(332nd_cadet,Cadet,332nd_cadet)
@@ -199,11 +210,15 @@ class CfgWeapons
 
 class CfgVehicles
 {
+    class MACRO_NEW_UNIT(recruit,base);
     class MACRO_NEW_UNIT(infantry,base);
     class MACRO_NEW_UNIT(aviation,base);
     class MACRO_NEW_UNIT(cwo,base);
     class MACRO_NEW_UNIT(rto,base);
     class MACRO_NEW_UNIT(medic,base);
+
+    //Recruit
+    MACRO_NEW_RECRUIT_UNIT(332nd_recruit,Clone Recruit,332nd_recruit)
 
     //Infantry
     MACRO_NEW_INF_UNIT(332nd_cadet,Clone Cadet,332nd_cadet,cadet\Cadet_Upper.paa,cadet\Cadet_Lower.paa)

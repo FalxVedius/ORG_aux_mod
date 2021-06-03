@@ -92,6 +92,17 @@
 		};
 
 	// ---- Uniforms ---- 
+	#define MACRO_NEW_RECRUIT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(recruit,classname): MACRO_NEW_UNIFORM(recruit,base)\
+		{\
+			displayName = [332nd] Recruit Uniform ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(recruit,uniformClassname);\
+			};\
+		};
+
 	#define MACRO_NEW_INF_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(infantry,classname): MACRO_NEW_UNIFORM(infantry,base)\
 		{\
@@ -148,6 +159,15 @@
 		};
 
 	//units for uniforms
+	#define MACRO_NEW_RECRUIT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(recruit,classname): MACRO_NEW_UNIT(recruit,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = [332nd] displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(recruit,uniformClassname);\
+		}
+
 	#define MACRO_NEW_INF_UNIT(classname,displayname,uniformClassname,upper,lower)\
 		class MACRO_NEW_UNIT(infantry,classname): MACRO_NEW_UNIT(infantry,base)\
 		{\
@@ -318,6 +338,13 @@
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Flight Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(reserveofficer,classname): MACRO_NEW_VEST(reserveofficer,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Reserve Officer Vest ('##displayname##');\
 		};
 	#define MACRO_NEW_INF_KAMA_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(infantry,classname): MACRO_NEW_VEST(infantry,base)\
