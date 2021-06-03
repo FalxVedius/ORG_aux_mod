@@ -12,7 +12,11 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
 			MACRO_NEW_UNIT(infantry,base),
-			MACRO_NEW_UNIT(aviation,base)
+			MACRO_NEW_UNIT(aviation,base),
+			"EmptyBox_332nd",
+			"MedicalBox_332nd",
+			"AmmoBox_332nd"
+
 		};
 		weapons[] = {
 		 	MACRO_NEW_UNIFORM(infantry,base),
@@ -115,9 +119,15 @@ class CfgVehicles
 		author = MACRO_AUTHOR;
 		scope = 2;
 		scopeArsenal = 2;
+		scopeCurator = 2;
 		vehicleClass = "Ammo";
 		displayName = "[332nd] Empty Ammo Box";
 		maximumLoad = 5000;
+
+		class TransportWeapons
+		{
+
+		};
 	};
 
 	class MedicalBox_332nd : JLTS_Ammobox_support_GAR
@@ -125,71 +135,81 @@ class CfgVehicles
 		author = MACRO_AUTHOR;
 		scope = 2;
 		scopeArsenal = 2;
+		scopeCurator = 2;
 		vehicleClass = "Ammo";
 		displayName = "[332nd] Medical Resupply Box";
 		maximumLoad = 5000;
 
-		class TransportMagazines
+		class TransportItems
 		{
 			class Elastics_332nd
 			{
-				magazine = "ACE_elasticBandage";
+				name = "ACE_elasticBandage";
 				count = 300;
 			};
 
 			class Packing_332nd
 			{
-				magazine = "ACE_packingBandage";
+				name = "ACE_packingBandage";
 				count = 300;
 			};
 
 			class Quickclot_332nd
 			{
-				magazine = "ACE_quikclot";
+				name = "ACE_quikclot";
 				count = 300;
 			};
 
 			class Painkillers_332nd
 			{
-				magazine = "ACE_morphine";
+				name = "ACE_morphine";
 				count = 40;
 			};
 
 			class Epinephrine_332nd
 			{
-				magazine = "ACE_epinephrine";
+				name = "ACE_epinephrine";
 				count = 40;
 			};
 
 			class Plasma1k_332nd
 			{
-				magazine = "ACE_plasmaIV";
+				name = "ACE_plasmaIV";
 				count = 25;
 			};
 
 			class Plasma500_332nd
 			{
-				magazine = "ACE_plasmaIV_500";
+				name = "ACE_plasmaIV_500";
 				count = 50;
 			};
 
 			class Plasma250_332nd
 			{
-				magazine = "ACE_plasmaIV_250";
+				name = "ACE_plasmaIV_250";
 				count = 50;
 			};
 
 			class Tournys_332nd
 			{
-				magazine = "ACE_tourniquet";
+				name = "ACE_tourniquet";
 				count = 30;
 			};
 
 			class PAK_332nd
 			{
-				magazine = "ACE_personalAidKit";
+				name = "ACE_personalAidKit";
 				count = 5;
 			};
+		};
+
+		class TransportWeapons
+		{
+
+		};
+
+		class TransportMagazines {
+
 		};
 	};
 
@@ -198,6 +218,7 @@ class CfgVehicles
 		author = MACRO_AUTHOR;
 		scope = 2;
 		scopeArsenal = 2;
+		scopeCurator = 2;
 		vehicleClass = "Ammo";
 		displayName = "[332nd] Ammo Resupply Box";
 		maximumLoad = 5000;
@@ -319,6 +340,42 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_Z6_x200";
 				count = 200;
+			};
+
+			class Z6_ALT_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x125";
+				count = 200;
+			};
+
+			class Flash_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FLASH_x1";
+				count = 30;
+			};
+
+			class ATCharge_332nd
+			{
+				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
+				count = 30;
+			};
+
+			class HEDPImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_HEDP_x1";
+				count = 30;
+			};
+
+			class SquadShield_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SquadShield_x1";
+				count = 5;
+			};
+
+			class ThermalDet_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 30;
 			};
 		};
 	};
