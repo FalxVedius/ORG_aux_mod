@@ -259,7 +259,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=20;
-		mass=30;
+		mass=15;
 		initspeed=1900;
 		displayName=MACRO_AMMO_DISPLAYNAME(Conc-Med,20)
 		displayNameShort="Conc-Med Power 20rnd";
@@ -274,7 +274,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=5;
-		mass=40
+		mass=15
 		initspeed=2100;
 		displayName="332nd HighHv 5rnd";
 		displayName=MACRO_AMMO_DISPLAYNAME(High Power,5)

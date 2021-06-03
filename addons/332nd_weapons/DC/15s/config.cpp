@@ -107,7 +107,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.20;
+			reloadTime=0.15;
 			displayname="SlowAuto";
 			dispersion=0.001;
 			minRange=2;
@@ -139,9 +139,9 @@ class cfgWeapons
                 opticsZoomMax=0.9; //1.1
                 opticsZoomInit=0.600;
                 discreteInitIndex=0;
-                distanceZoomMin=100;
+                distanceZoomMin=25;
                 distanceZoomMax=700;
-                discreteDistance[]={100,200,300,400,500,600,700};
+                discreteDistance[]={25,100,200,300,400,500,600,700};
                 discreteDistanceInitIndex=0;
                 memoryPointCamera="eye";
                 visionMode[]={};
@@ -167,8 +167,8 @@ class cfgWeapons
                 discretefov[] = {0.125,0.0625};
                 discreteInitIndex = 0;
                 discreteDistanceInitIndex = 0;
-                discreteDistance[] = {100,200,300,400,500,600,700,800};
-                distanceZoomMin=100;
+                discreteDistance[] = {25,100,200,300,400,500,600,700,800};
+                distanceZoomMin=25;
                 distanceZoomMax=1000;
                 modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
             };

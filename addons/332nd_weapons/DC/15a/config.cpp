@@ -135,7 +135,7 @@ class cfgWeapons
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
-			reloadtime=0.20;
+			reloadtime=0.18;
 			dispersion=0.0000009;
 			aiBurstTerminable=1;
 			minRange=2;
@@ -211,7 +211,8 @@ class cfgWeapons
 
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15a_Medium,30),
-			MACRO_NEW_MAG(DC_15a_Low,60)
+			MACRO_NEW_MAG(DC_15a_Low,60),
+		    MACRO_NEW_MAG(DC_15a_High,10)
 		};
         
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
@@ -316,9 +317,9 @@ class cfgWeapons
                 opticsZoomMax=1.1;
                 opticsZoomInit=0.75;
                 discreteInitIndex=0;
-                distanceZoomMin=100;
+                distanceZoomMin=25;
                 distanceZoomMax=700;
-                discreteDistance[]={100,200,300,400,500,600,700};
+                discreteDistance[]={25,100,200,300,400,500,600,700};
                 discreteDistanceInitIndex=0;
                 memoryPointCamera="eye";
                 visionMode[]={};
@@ -369,18 +370,11 @@ class cfgWeapons
 				"OP_eye4"
 			};
 			discreteDistanceInitIndex=0;
+			magazineWell[]={};
 			magazines[]= {
-				"332_mag_40mm_3rnd",
-				"332_mag_30mm_3rnd",
-				"SWLW_DC15A_UGL_huntir_Mag",
-				"SWLW_DC15A_UGL_flare_white_Mag",
-				"SWLW_DC15A_UGL_flare_red_Mag",
-				"SWLW_DC15A_UGL_flare_gree_Mag",
-				"SWLW_DC15A_UGL_smoke_white_Mag",
-				"SWLW_DC15A_UGL_smoke_red_Mag",
-				"SWLW_DC15A_UGL_smoke_purple_Mag",
-				"SWLW_DC15A_UGL_smoke_blue_Mag",
-				"SWLW_DC15A_UGL_smoke_green_Mag",
+				"3Rnd_Smoke_Grenade_shell",
+				"3Rnd_UGL_FlareWhite_F",
+				"ACE_HuntIR_M203",
                 MACRO_NEW_MAG(DC_15_UGL_AP,2),
                 MACRO_NEW_MAG(DC_15_UGL_HE,4)
 			};

@@ -48,7 +48,7 @@ class cfgWeapons
         {
             class sight
             {
-                opticsID=2;
+               opticsID=2;
                 useModelOptics=0;
                 opticsPPEffects[]=
                 {

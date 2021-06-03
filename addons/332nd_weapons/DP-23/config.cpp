@@ -200,7 +200,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge,12)
 		ammo=MACRO_NEW_AMMO(DP23_Shell);
 		count=12;
-		mass=20
+		mass=10;
 		initspeed=1300;
 	};
 	
