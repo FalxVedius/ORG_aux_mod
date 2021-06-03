@@ -105,6 +105,226 @@ class CfgVehicles
 
 	// ---- End Supply Containers for Armor ----
 
+	// ---- Supply Crates ----
+
+	class JLTS_Ammobox_support_GAR;
+	class JLTS_Ammobox_weapons_GAR;
+
+	class EmptyBox_332nd : JLTS_Ammobox_weapons_GAR
+	{
+		author = MACRO_AUTHOR;
+		scope = 2;
+		scopeArsenal = 2;
+		vehicleClass = "Ammo";
+		displayName = "[332nd] Empty Ammo Box";
+		maximumLoad = 5000;
+	};
+
+	class MedicalBox_332nd : JLTS_Ammobox_support_GAR
+	{
+		author = MACRO_AUTHOR;
+		scope = 2;
+		scopeArsenal = 2;
+		vehicleClass = "Ammo";
+		displayName = "[332nd] Medical Resupply Box";
+		maximumLoad = 5000;
+
+		class TransportMagazines
+		{
+			class Elastics_332nd
+			{
+				magazine = "ACE_elasticBandage";
+				count = 300;
+			};
+
+			class Packing_332nd
+			{
+				magazine = "ACE_packingBandage";
+				count = 300;
+			};
+
+			class Quickclot_332nd
+			{
+				magazine = "ACE_quikclot";
+				count = 300;
+			};
+
+			class Painkillers_332nd
+			{
+				magazine = "ACE_morphine";
+				count = 40;
+			};
+
+			class Epinephrine_332nd
+			{
+				magazine = "ACE_epinephrine";
+				count = 40;
+			};
+
+			class Plasma1k_332nd
+			{
+				magazine = "ACE_plasmaIV";
+				count = 25;
+			};
+
+			class Plasma500_332nd
+			{
+				magazine = "ACE_plasmaIV_500";
+				count = 50;
+			};
+
+			class Plasma250_332nd
+			{
+				magazine = "ACE_plasmaIV_250";
+				count = 50;
+			};
+
+			class Tournys_332nd
+			{
+				magazine = "ACE_tourniquet";
+				count = 30;
+			};
+
+			class PAK_332nd
+			{
+				magazine = "ACE_personalAidKit";
+				count = 5;
+			};
+		};
+	};
+
+	class AmmoBox_332nd : JLTS_Ammobox_weapons_GAR
+	{
+		author = MACRO_AUTHOR;
+		scope = 2;
+		scopeArsenal = 2;
+		vehicleClass = "Ammo";
+		displayName = "[332nd] Ammo Resupply Box";
+		maximumLoad = 5000;
+
+		class TransportWeapons
+		{
+			class DC15A_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15a";
+				count = 10;
+			};
+
+			class DC15S_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15s";
+				count = 10;
+			};
+		};
+
+		class TransportMagazines
+		{
+			class DC15A_low_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
+				count = 300;
+			};
+
+			class DC15A_medium_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
+				count = 300;
+			};
+
+			class DC15A_High_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_High_x10";
+				count = 50;
+			};
+
+			class DC15A_StunLong_332nd
+			{
+				magazine = "JLTS_stun_mag_long";
+				count = 40;
+			};
+
+			class DC15A_StunShort_332nd
+			{
+				magazine = "JLTS_stun_mag_short";
+				count = 40;
+			};
+
+			class DC15A_UGLAP_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
+				count = 50;
+			};
+
+			class DC15A_UGLHE_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
+				count = 50;
+			};
+
+			class DC15s_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15s_x60";
+				count = 300;
+			};
+
+			class DC17_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17_x15";
+				count = 50;
+			};
+
+			class SA35_332nd
+			{
+				magazine = "332nd_aux_magazine_35sa_low_x30";
+				count = 50;
+			};
+
+			class DC15L_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_x125";
+				count = 100;
+			};
+
+			class DC15X_HIGH_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x10";
+				count = 50;
+			};
+
+			class DC15X_LOW_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x2";
+				count = 25;
+			};
+
+			class DP_23_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12";
+				count = 100;
+			};
+
+			class DW_32_HIGH_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_x5";
+				count = 50;
+			};
+
+			class DW_32_CONCMED_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				count = 100;
+			};
+
+			class Z6_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x200";
+				count = 200;
+			};
+		};
+	};
+
+	// ---- End Supply Crates ----
+
 	// ---- Units for Uniforms ----
 
 	class B_Soldier_f;
