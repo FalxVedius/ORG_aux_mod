@@ -182,7 +182,7 @@ class CfgMagazines
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=30;
-		mass=10;
+		mass=1;
 		initspeed=1550;
 		displayName=MACRO_AMMO_DISPLAYNAME(35SA Low,30)
 		displayNameShort="low Power 30rnd";

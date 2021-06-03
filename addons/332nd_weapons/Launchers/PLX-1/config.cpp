@@ -32,6 +32,9 @@ class CfgWeapons
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal=2;
+		canLock = 2;
+		weaponLockDelay = 1.5;
+		weaponLockSystem = 12;
 		ace_overpressure_angle=45;
 		ace_overpressure_damage=0;
 		ace_overpresssure_priority=1;

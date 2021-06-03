@@ -35,6 +35,8 @@ class CfgWeapons
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
 		baseweapon="";
+		weaponLockDelay = 1.5;
+		weaponLockSystem = 12;
 		handling="4";
 		recoil="";
 		modes[]=  {

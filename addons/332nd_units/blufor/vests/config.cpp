@@ -79,7 +79,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -117,7 +117,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -190,7 +190,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -227,7 +227,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -264,7 +264,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -301,7 +301,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -338,7 +338,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -376,7 +376,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -413,7 +413,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -450,7 +450,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -487,7 +487,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -524,7 +524,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -561,7 +561,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -598,7 +598,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
@@ -635,7 +635,7 @@ class CfgWeapons
 
         class ItemInfo : ItemInfo
         {
-            containerClass = "Supply200";
+            containerClass = "Supply210";
 
             class HitpointsProtectionInfo
             {
