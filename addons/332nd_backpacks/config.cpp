@@ -76,7 +76,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_co.paa
 		};
-		displayName = "[332nd] Medic Backpack";
+		displayName = "[332nd] Clonetrooper Medic Backpack";
 		tf_dialog="JLTS_clone_rto_radio_dialog";
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
         tf_encryptionCode="tf_west_radio_code";

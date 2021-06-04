@@ -41,7 +41,7 @@ class CfgMagazines
 	{
 		count=60;
 		mass=10;
-		initspeed=1350;
+		initspeed=1400;
 		displayName=MACRO_AMMO_DISPLAYNAME(15a Low,60)
 		displayNameShort="Low Power 60rnd";
 		descriptionShort="332nd Low Power Round";
@@ -67,7 +67,7 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=60;
 		mass=15;
-		initspeed=1200;
+		initspeed=1400;
 		displayName=MACRO_AMMO_DISPLAYNAME(15s,60)
 		displayNameShort="Med Power 60rnd";
 		descriptionShort="332nd Medium Power Round";
