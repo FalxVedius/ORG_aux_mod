@@ -109,6 +109,20 @@ class CfgWeapons
 	// ---- End Uniforms ----
 }
 
+class CfgFunctions
+{
+	class Resupply
+	{
+		class myCategory
+		{
+			class SetCratesToCarryable
+			{
+				file = "332nd_units\fnc_carryResupplyCrates.sqf";
+			};
+		};
+	};
+};
+
 class CfgVehicles
 {  
 	// ---- Supply Containers for Unif ----
@@ -223,6 +237,11 @@ class CfgVehicles
 		class TransportMagazines {
 
 		};
+
+		class EventHandlers
+		{
+			init = "[_this] spawn Resupply_fnc_SetCratesToCarryable;";
+		};
 	};
 
 	class AmmoBox_332nd : JLTS_Ammobox_weapons_GAR
@@ -234,6 +253,7 @@ class CfgVehicles
 		vehicleClass = "Ammo";
 		displayName = "[332nd] Ammo Resupply Box";
 		maximumLoad = 5000;
+
 
 		class TransportWeapons
 		{
@@ -247,6 +267,12 @@ class CfgVehicles
 			{
 				weapon = "332nd_aux_weapon_DC_15s";
 				count = 10;
+			};
+
+			class RPS1_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_RPS_1_Loaded";
+				count = 5;
 			};
 		};
 
@@ -389,6 +415,53 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_332_FRAG_x1";
 				count = 30;
 			};
+
+			class PLXAA_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
+				count = 10;
+			};
+
+			class PLXAT_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
+				count = 10;
+			};
+
+			class PLXHE_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
+				count = 10;
+			};
+
+			class RPS6AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				count = 20;
+			};
+
+			class RPS6AA_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
+				count = 20;
+			};
+
+			class RPS4AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_AT_x1";
+				count = 20;
+			};
+
+			class RPS4HE_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				count = 20;
+			};
+		};
+
+		class EventHandlers
+		{
+			init = "[_this] spawn Resupply_fnc_SetCratesToCarryable;";
 		};
 	};
 

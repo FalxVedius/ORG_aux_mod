@@ -29,6 +29,20 @@ class CfgPatches
 	};
 };
 
+class CfgFunctions
+{
+    class ResupplyAir
+    {
+        class myCategory
+        {
+            class AddCratesToInventory
+            {
+                file = "332nd_vehicles\air\LAAT\fnc_spawnResupplyCrates.sqf";
+            };
+        };
+    };
+};
+
 class CfgVehicles
 {   
     #include "_inheritance.hpp"
@@ -68,6 +82,11 @@ class CfgVehicles
 
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = {MACRO_NEW_UNIT(aviation,332nd_flight_cadet)};
+
+        class EventHandlers
+        {
+            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
+        };
         
         class TextureSources
         {
@@ -156,7 +175,6 @@ class CfgVehicles
 		#include "../../_common/universal_mfd.hpp"
 
         #include "_lights.hpp"
-
     }
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd):MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
