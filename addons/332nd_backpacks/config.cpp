@@ -31,7 +31,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_base_co.paa
 		};
-		displayName = "[332nd] Ammo Bearer Backpack (base)";
+		displayName = "[332nd] Ammo Bearer Pack (base)";
 		maximumLoad = 450;
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd): JLTS_Clone_backpack
@@ -40,7 +40,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_co.paa
 		};
-		displayName = "[332nd] Ammo Bearer Backpack";
+		displayName = "[332nd] Ammo Bearer Pack";
 		maximumLoad = 450;
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_support): JLTS_Clone_backpack
@@ -49,7 +49,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_co.paa
 		};
-		displayName = "[332nd] Support Backpack";
+		displayName = "[332nd] Support Pack";
 		maximumLoad = 265;
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_support_base): JLTS_Clone_backpack
@@ -58,7 +58,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_base_co.paa
 		};
-		displayName = "[332nd] Support Backpack (Base)";
+		displayName = "[332nd] Support Pack (Base)";
 		maximumLoad = 265;
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_funops): JLTS_Clone_backpack
@@ -67,7 +67,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Funops_332_co.paa
 		};
-		displayName = "[332nd] Fun Ops Backpack";
+		displayName = "[332nd] Fun Ops Pack";
 		maximumLoad = 675;
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_medic): JLTS_Clone_backpack
@@ -76,7 +76,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_co.paa
 		};
-		displayName = "[332nd] Medic Backpack";
+		displayName = "[332nd] Medic Pack";
 		tf_dialog="JLTS_clone_rto_radio_dialog";
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
         tf_encryptionCode="tf_west_radio_code";
@@ -97,13 +97,13 @@ class CfgVehicles
         tf_hasLRradio=1;
         tf_range=25000;
         tf_subtype="digital_lr";
-		displayName = "[332nd] Medic Backpack (base)";
+		displayName = "[332nd] Medic Pack (base)";
 		maximumLoad = 393;
 	}
 	class JLTS_Clone_backpack_RTO;
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_base): JLTS_Clone_backpack_RTO
 	{
-		displayName = "[332nd] RTO Backpack";
+		displayName = "[332nd] RTO Pack";
 		maximumLoad = 248;
 	}
 	class JLTS_Clone_belt_bag;
@@ -115,7 +115,7 @@ class CfgVehicles
 	class JLTS_Clone_LR_attachment;
 	class MACRO_NEW_BACKPACK(blufor,332nd_Leadership): JLTS_Clone_LR_attachment
 	{
-		displayName = "[332nd] Lead Attachment";
+		displayName = "[332nd] Lead Pack";
 		maximumLoad = 271;
 	}	
 	class JLTS_Clone_RTO_pack;
@@ -127,19 +127,19 @@ class CfgVehicles
 	class JLTS_Clone_backpack_eod;
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack): JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] Demolition Backpack";
+		displayName = "[332nd] Demolition Pack";
 		maximumLoad = 400;
 	}	
 	class ls_gar_rocket_backpack;
 	class MACRO_NEW_BACKPACK(blufor,332nd_AT): ls_gar_rocket_backpack
 	{
-		displayName = "[332nd] AT Backpack";
+		displayName = "[332nd] AT Pack";
 		maximumLoad = 375;
 	}
 	class SWLB_clone_bag_leg;
 	class MACRO_NEW_BACKPACK(blufor,332nd_rifleman_pack): SWLB_clone_bag_leg
 	{
-		displayName = "[332nd] Rifleman pack";
+		displayName = "[332nd] Rifleman Pack";
 		maximumLoad = 32;
 	}	
 }
