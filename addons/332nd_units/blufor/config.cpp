@@ -110,7 +110,15 @@ class CfgPatches
             MACRO_NEW_UNIFORM(aviation,332nd_flight_captain),
 
             // ----- nvgs -----
-            MACRO_NEW_NVG(basic),
+             MACRO_NEW_NVG(Specialist_Visor),
+			 MACRO_NEW_NVG(Specialist_Visor_black),
+			 MACRO_NEW_NVG(Commander_visor_NVG),
+			 MACRO_NEW_NVG(Trooper_NVG),
+			 MACRO_NEW_NVG(Specialist_Visor_332),
+			 MACRO_NEW_NVG(Leadership_Visor_332),
+			 MACRO_NEW_NVG(Leadership_Visor_black),
+			 MACRO_NEW_NVG(Leadership_Visor),
+			 
 
             // ---- bino -----
             MACRO_NEW_BINO(basic),

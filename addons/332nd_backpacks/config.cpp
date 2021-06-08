@@ -115,7 +115,7 @@ class CfgVehicles
 	class JLTS_Clone_LR_attachment;
 	class MACRO_NEW_BACKPACK(blufor,332nd_Leadership): JLTS_Clone_LR_attachment
 	{
-		displayName = "[332nd] Lead Pack";
+		displayName = "[332nd] Leadership Pack";
 		maximumLoad = 271;
 	}	
 	class JLTS_Clone_RTO_pack;

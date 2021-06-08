@@ -133,32 +133,14 @@ class cfgWeapons
 				begin1[]=
 				{
 					"\SWLW_merc_trando\scatterguns\acpa\sounds\acpa",
-					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"\SWLW_merc_trando\scatterguns\acpa\sounds\acpa",
-					1,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"\SWLW_merc_trando\scatterguns\acpa\sounds\acpa",
-					1,
-					1,
+					2,
+					0.9,
 					1800
 				};
 				soundBegin[]=
 				{
 					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
+					1,
 				};
 			};
 			reloadTime=0.35;
@@ -232,8 +214,8 @@ class CfgAmmo
 		fuseDistance = 0;
 		grenadeBurningSound[] = {};
 		grenadeFireSound[] = {};
-		hit = 20;
-		caliber = 0.525;
+		hit = 30;
+		caliber = 1;
 
 		thrust = 210;
 		thrustTime = 1.5;
@@ -244,8 +226,8 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(DP23_Pellet): B_12Gauge_Pellets_Submunition_Deploy
 	{
-		hit = 2.55;
-		caliber = 0.525;
+		hit = 8;
+		caliber = 1;
 		typicalSpeed = 360;
 		effectfly = "ls_plasma_blue";
 		ExplosionEffects = "ls_plasma_impact";

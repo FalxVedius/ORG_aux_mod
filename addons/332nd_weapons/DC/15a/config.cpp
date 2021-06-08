@@ -83,8 +83,8 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
+					2,
+					0.95,
 					1800
 				};
 				soundBegin[]=
@@ -93,7 +93,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.20;
+			reloadTime=0.17;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
@@ -123,8 +123,8 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
+					2,
+					0.95,
 					1800
 				};
 				soundBegin[]=
@@ -135,7 +135,7 @@ class cfgWeapons
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
-			reloadtime=0.18;
+			reloadtime=0.17;
 			dispersion=0.0000009;
 			aiBurstTerminable=1;
 			minRange=2;
@@ -236,8 +236,8 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
+					2,
+					0.95,
 					1800
 				};
 				soundBegin[]=
@@ -246,7 +246,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.20;
+			reloadTime=0.17;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
@@ -276,8 +276,8 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
+					2,
+					0.95,
 					1800
 				};
 				soundBegin[]=
@@ -288,7 +288,7 @@ class cfgWeapons
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
-			reloadtime=0.20;
+			reloadtime=0.17;
 			dispersion=0.0000009;
 			aiBurstTerminable=1;
 			minRange=2;

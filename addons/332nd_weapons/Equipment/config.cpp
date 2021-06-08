@@ -31,6 +31,7 @@ class CfgAmmo
 		hit = 250;
 		indirectHit = 250;
 		indirectHitRange = 1;
+		explosionTime = 2;
 		ace_frag_enabled = 0;
 	};
 	class 442_thermal_det;
@@ -45,7 +46,7 @@ class CfgAmmo
 		hit = 5000;
 		caliber=10;
 		deflection=0;
-		explosionTime = 6;
+		explosionTime = 5;
 		deflectionSlowDown = 0.1;
 		model = "\MRC\JLTS\weapons\Explosives\explosive.p3d";
 		indirectHit = 5000;
@@ -54,8 +55,9 @@ class CfgAmmo
 	class 3AS_SonicDetonator;
 	class MACRO_NEW_AMMO(332_FLASH): 3AS_SonicDetonator
 	{
+		explosionTime = 2;
 		ace_grenades_flashbangBangs=4;
-		ace_grenades_flashbangInterval=0.5;
+		ace_grenades_flashbangInterval=0.2;
 		ace_grenades_flashbangIntervalMaxDeviation=0;
 	};
 };
@@ -102,7 +104,7 @@ class CfgMagazines
 		displayName="[332nd] AT Charge";
 		mass=16;
 		displayNameShort="AT Charge";
-		initspeed=6;
+		initspeed=12;
 		picture = "\87th_weapons\data\textures\ammo\ExpCha.paa";
 		ammo=MACRO_NEW_AMMO(332_AT_Grenade)
     };

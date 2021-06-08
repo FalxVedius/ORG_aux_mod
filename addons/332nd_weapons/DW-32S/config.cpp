@@ -110,41 +110,14 @@ class cfgWeapons
 				begin1[]=
 				{
 					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
-					1800
-				};
-				begin4[]=
-				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
+					3,
+					0.9,
 					1800
 				};
 				soundBegin[]=
 				{
 					"begin1",
-					0.25,
-					"begin2",
-					0.25,
-					"begin3",
-					0.25,
-					"begin4",
-					0.25
+					1,
 				};
 				closure1[]={};
 				closure2[]={};
@@ -181,41 +154,16 @@ class cfgWeapons
 				begin1[]=
 				{
 					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
+					3,
+					0.9,
 					1800
 				};
-				begin2[]=
-				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
-					1800
-				};
-				begin4[]=
-				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					1,
-					1,
-					1800
-				};
+				
 				soundBegin[]=
 				{
 					"begin1",
-					0.25,
-					"begin2",
-					0.25,
-					"begin3",
-					0.25,
-					"begin4",
-					0.25
+					0.1,
+					
 				};
 				closure1[]={};
 				closure2[]={};

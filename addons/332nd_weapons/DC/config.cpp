@@ -161,8 +161,8 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(40mm_HE): SWLW_ammo_40mm_green
 	{
 		hit=25;
-		indirecthit=25;
-		indirectHitRange=10;
+		indirecthit=20;
+		indirectHitRange=6;
 		 effectsMissile = "332nd_aux_effects_RPS4_green";
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",3,1,500};
 	};

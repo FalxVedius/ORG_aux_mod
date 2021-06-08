@@ -57,8 +57,8 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
+					3,
+					1.4,
 					1800
 				};
 				soundBegin[]=
@@ -97,7 +97,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
+					2,
 					1,
 					1800
 				};
