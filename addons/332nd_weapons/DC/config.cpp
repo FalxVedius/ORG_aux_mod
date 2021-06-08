@@ -85,9 +85,9 @@ class CfgMagazines
 		mass=75;
 		initspeed=1500;
 		displayName=MACRO_AMMO_DISPLAYNAME(15L,125)
-		displayNameShort="Conc-Med Power 125rnd";
-		descriptionShort="332nd Concentrated-Medium Power Round";
-		ammo="ls_ammo_338_blue";
+		displayNameShort="High Power 125rnd";
+		descriptionShort="332nd High Power Round";
+		ammo="ls_ammo_127x108_blue";
 		tracersEvery=1;
 	};
 
