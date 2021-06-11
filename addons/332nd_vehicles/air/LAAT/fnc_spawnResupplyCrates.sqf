@@ -7,3 +7,5 @@ _medicalcrate = _this select 2;
 
 [_ammocrate, _laat] call ace_cargo_fnc_addCargoItem;
 [_medicalcrate, _laat] call ace_cargo_fnc_addCargoItem;
+[_ammocrate, _laat] call ace_cargo_fnc_addCargoItem;
+[_medicalcrate, _laat] call ace_cargo_fnc_addCargoItem;

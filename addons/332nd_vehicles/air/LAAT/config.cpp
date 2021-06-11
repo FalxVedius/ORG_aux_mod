@@ -52,6 +52,9 @@ class CfgVehicles
         displayName = "[332nd] LAAT Mk1 Base";
         scope = 0;
 
+        faction = "EdCat_332nd";
+        editorSubcategory = "EdSubcat_332nd_HELI";
+
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
             "ls_laat_gun","ls_laat_gun_2","missiles_DAR"

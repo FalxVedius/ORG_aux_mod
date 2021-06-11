@@ -25,6 +25,104 @@ class CfgPatches
 	};
 };
 
+class CfgFactionClasses
+{
+	class EdCat_332nd
+	{
+		displayName = "332nd Legion";
+		side = 1;
+		priority = 2;
+	};
+};
+
+class CfgEditorCategories
+{
+	class EdCat_332nd_Props
+	{
+		displayName = "332nd Legion";
+		priority = 2;
+	};
+};
+
+class CfgEditorSubcategories
+{
+	class EdSubcat_332nd_AA
+	{
+		displayName = "Anti-Air";
+		priority = 1;
+	};
+	class EdSubcat_332nd_APCS
+	{
+		displayName = "APCs";
+		priority = 2;
+	};
+	class EdSubcat_332nd_ART
+	{
+		displayName = "Artillery";
+		priority = 3;
+	};
+	class EdSubcat_332nd_PACKS
+	{
+		displayName = "Backpacks";
+		priority = 4;
+	};
+	class EdSubcat_332nd_BOAT
+	{
+		displayName = "Boats";
+		priority = 4;
+	};
+	class EdSubcat_332nd_CAR
+	{
+		displayName = "Cars";
+		priority = 5;
+	};
+	class EdSubcat_332nd_DRONE
+	{
+		displayName = "Drones";
+		priority = 6;
+	};
+	class EdSubcat_332nd_HELI
+	{
+		displayName = "Helicopters";
+		priority = 7;
+	};
+	class EdSubcat_332nd_MEN
+	{
+		displayName = "Men";
+		priority = 8;
+	};
+	class EdSubcat_332nd_IFV
+	{
+		displayName = "IFVs";
+		priority = 9;
+	};
+	class EdSubcat_332nd_PLANE
+	{
+		displayName = "Planes";
+		priority = 10;
+	};
+	class EdSubcat_332nd_RESUPPLY
+	{
+		displayName = "Resupply";
+		priority = 11;
+	};
+	class EdSubcat_332nd_TANK
+	{
+		displayName = "Tanks";
+		priority = 12;
+	};
+	class EdSubcat_332nd_TRUCK
+	{
+		displayName = "Trucks";
+		priority = 13;
+	};
+	class EdSubcat_332nd_TURR
+	{
+		displayName = "Turrets";
+		priority = 14;
+	};
+};
+
 class CfgWeapons
 {
  	// ---- Uniforms ----
@@ -150,6 +248,9 @@ class CfgVehicles
 		displayName = "[332nd] Empty Ammo Box";
 		maximumLoad = 5000;
 
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
+
 		class TransportWeapons
 		{
 
@@ -165,6 +266,9 @@ class CfgVehicles
 		vehicleClass = "Ammo";
 		displayName = "[332nd] Medical Resupply Box";
 		maximumLoad = 5000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
 
 		class TransportItems
 		{
@@ -253,6 +357,9 @@ class CfgVehicles
 		vehicleClass = "Ammo";
 		displayName = "[332nd] Ammo Resupply Box";
 		maximumLoad = 5000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
 
 
 		class TransportWeapons
@@ -485,6 +592,9 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(recruit,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+
 		linkedItems[] = { MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG" };
 		respawnLinkedItems[] = { MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG" };
 		weapons[] = { "JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put" };
@@ -676,6 +786,9 @@ class CfgVehicles
         author = MACRO_AUTHOR;
         scope = 0;
         displayName = "[332nd] Clone Base";
+
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_MEN";
 
         uniformClass = MACRO_NEW_UNIFORM(infantry,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
@@ -893,6 +1006,9 @@ class CfgVehicles
         scope = 0;
         displayName = "[332nd] Clone Aviation Base";
 
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+
         uniformClass = MACRO_NEW_UNIFORM(aviation,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
@@ -1086,6 +1202,9 @@ class CfgVehicles
         author = MACRO_AUTHOR;
         scope = 0;
         displayName = "[332nd] Clone Warrant Officer Base";
+
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_MEN";
 
         uniformClass = MACRO_NEW_UNIFORM(cwo,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
