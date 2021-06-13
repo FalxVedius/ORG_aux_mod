@@ -123,6 +123,18 @@ class CfgEditorSubcategories
 	};
 };
 
+class CfgMarkers
+{
+	class mil_dot;
+	class Marker_332nd : mil_dot {
+		name = "332nd";
+		icon = "332nd_units\images\332nd_Logo.paa";
+		shadow = false;
+		scope = 2;
+		color[] = { 1, 1, 1, 1 };
+	};
+};
+
 class CfgWeapons
 {
  	// ---- Uniforms ----
