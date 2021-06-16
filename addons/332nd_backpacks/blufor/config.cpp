@@ -35,27 +35,43 @@ class CfgVehicles
 
     class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_1) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
     {
-        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,1)
+        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,60-Fuel)
         scope = 2;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
         NSM_jumppack_spam_delay = 1;
-        NSM_jumppack_energy_capacity = 50;
+        NSM_jumppack_energy_capacity = 60;
         NSM_jumppack_recharge = 2;
 
         //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_spam_delay = 1;
-        RD501_jumppack_energy_capacity = 50;
+        RD501_jumppack_spam_delay = 0;
+        RD501_jumppack_energy_capacity = 60;
         RD501_jumppack_recharge = 2;
     }
 
     class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_2) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
     {
-        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,2)
+        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,80-Fuel)
         scope = 2;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
         NSM_jumppack_spam_delay = 1;
+        NSM_jumppack_energy_capacity = 80;
+        NSM_jumppack_recharge = 2;
+
+        //Code to be deleted once we remove 501st dependencies
+        RD501_jumppack_spam_delay = 0;
+        RD501_jumppack_energy_capacity = 80;
+        RD501_jumppack_recharge = 2;
+    }
+
+    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_3) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
+    {
+        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,100-Fuel)
+        scope = 2;
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+
+        NSM_jumppack_spam_delay = 0;
         NSM_jumppack_energy_capacity = 100;
         NSM_jumppack_recharge = 2;
 
@@ -63,21 +79,5 @@ class CfgVehicles
         RD501_jumppack_spam_delay = 1;
         RD501_jumppack_energy_capacity = 100;
         RD501_jumppack_recharge = 2;
-    }
-
-    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_3) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
-    {
-        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,3)
-        scope = 2;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
-
-        NSM_jumppack_spam_delay = 1;
-        NSM_jumppack_energy_capacity = 100;
-        NSM_jumppack_recharge = 4;
-
-        //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_spam_delay = 1;
-        RD501_jumppack_energy_capacity = 100;
-        RD501_jumppack_recharge = 4;
     }
 }

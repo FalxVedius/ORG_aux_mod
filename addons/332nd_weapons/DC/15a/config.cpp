@@ -83,7 +83,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					2,
+					1.2,
 					0.95,
 					1800
 				};
@@ -123,7 +123,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					2,
+					1.2,
 					0.95,
 					1800
 				};
@@ -236,7 +236,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					2,
+					1.2,
 					0.95,
 					1800
 				};
@@ -276,7 +276,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					2,
+					1.2,
 					0.95,
 					1800
 				};
@@ -368,6 +368,51 @@ class cfgWeapons
 				"OP_eye2",
 				"OP_eye3",
 				"OP_eye4"
+			};
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"SWLW_clones\rifles\gl\sounds\gl",
+					1.5,
+					2,
+					1500
+				};
+				begin2[]=
+				{
+					"SWLW_clones\rifles\gl\sounds\gl",
+					1.5,
+					2,
+					2500
+				};
+				begin3[]=
+				{
+					"SWLW_clones\rifles\gl\sounds\gl",
+					1.5,
+					2,
+					3500
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.33000001
+				};
 			};
 			discreteDistanceInitIndex=0;
 			magazineWell[]={};

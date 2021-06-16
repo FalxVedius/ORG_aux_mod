@@ -133,7 +133,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"\SWLW_merc_trando\scatterguns\acpa\sounds\acpa",
-					2,
+					1.5,
 					0.9,
 					1800
 				};

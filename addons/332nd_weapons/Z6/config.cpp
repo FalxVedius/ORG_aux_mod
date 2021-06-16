@@ -123,7 +123,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"SWLW_clones\machineguns\z6\sounds\Z6_1.wss",
-					3,
+					1.2,
 					0.98,
 					2000
 				};
@@ -155,7 +155,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"SWLW_clones\machineguns\z6\sounds\Z6_1.wss",
-					3,
+					1.2,
 					1.2,
 					2000
 				};

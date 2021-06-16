@@ -64,21 +64,21 @@ class cfgWeapons
 				begin1[]=
 				{
 					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
-					1,
+					1.5,
 					1,
 					1800
 				};
 				begin2[]=
 				{
 					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
-					1,
+					1.5,
 					1,
 					1800
 				};
 				begin3[]=
 				{
 					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
-					1,
+					1.5,
 					1,
 					1800
 				};

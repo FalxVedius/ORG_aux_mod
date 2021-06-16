@@ -123,8 +123,8 @@ class cfgWeapons
 				begin1[]=
 				{
 					"MRC\JLTS\weapons\DC15X\sounds\dc15x_fire",
-					2.5,
-					1,
+					4,
+					0.98,
 					1800
 				};
 				soundBegin[]=

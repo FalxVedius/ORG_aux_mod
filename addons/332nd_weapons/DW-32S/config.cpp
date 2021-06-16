@@ -110,7 +110,7 @@ class cfgWeapons
 				begin1[]=
 				{
 					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					3,
+					1,
 					0.9,
 					1800
 				};

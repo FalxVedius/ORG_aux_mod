@@ -122,21 +122,21 @@ class cfgWeapons
 				{
 					"\SWLW_clones_spec\sounds\DC17M_blaster_fire.wss",
 					1,
-					1,
+					1.2,
 					1800
 				};
 				begin2[]=
 				{
 					"\SWLW_clones_spec\sounds\DC17M_blaster_fire.wss",
 					1,
-					1,
+					1.2,
 					1800
 				};
 				begin3[]=
 				{
 					"\SWLW_clones_spec\sounds\DC17M_blaster_fire.wss",
 					1,
-					1,
+					1.2,
 					1800
 				};
 				soundBegin[]=
