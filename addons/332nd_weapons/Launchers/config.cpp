@@ -150,12 +150,12 @@ class CfgAmmo
 		maxSpeed = 100;
 		effectsMissile = "332nd_aux_effects_missile_plx_blue";
 		manueuvrability = 30;
-		thrust = 100;
+		thrust = 80;
 		thrustTime = 20;
 		timeToLive = 20;
 		fuseDistance = 2;
 		initTime = 0;
-		typicalSpeed = 150;
+		typicalSpeed = 100;
 		missileKeepLockedCone = 360;
 		soundFly[]=
 		{
