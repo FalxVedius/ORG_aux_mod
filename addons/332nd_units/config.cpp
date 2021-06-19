@@ -1,5 +1,13 @@
 #include "../332nd_main/macros/main.hpp" // my config macro lib
 
+#define mag_2(a) a, a
+#define mag_3(a) a, a, a
+#define mag_4(a) a, a, a, a
+#define mag_5(a) a, a, a, a, a
+#define mag_8(a) a, a, a, a, a, a, a, a
+#define mag_10(a) a, a, a, a, a, a, a, a, a, a
+#define mag_15(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
+
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(units)
@@ -607,15 +615,56 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_MEN";
 
-		linkedItems[] = { MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG" };
-		respawnLinkedItems[] = { MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG" };
-		weapons[] = { "JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put" };
-		respawnWeapons[] = { "JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put" };
+		linkedItems[] = {"332nd_aux_infantry_helmet_332nd_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
+		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_332nd_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "JLTS_CloneNaked_uniform";
-		magazines[] = { "JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade" };
-		respawnMagazines[] = { "JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade" };
-		items[] = { "FirstAidKit" };
-		respawnItems[] = { "FirstAidKit" };
+		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		magazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		respawnMagazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
 
 		class HitPoints : HitPoints
 		{
@@ -805,15 +854,56 @@ class CfgVehicles
         uniformClass = MACRO_NEW_UNIFORM(infantry,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-        linkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-		respawnLinkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-		weapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
-		respawnWeapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
+        linkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
+		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
+		weapons[] = {"332nd_aux_weapon_DC_15a","Throw","Put"};
+		respawnWeapons[] = {"332nd_aux_weapon_DC_15a","Throw","Put"};
 		nakedUniform = "JLTS_CloneNaked_uniform";
-		magazines[] = {"JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade"};
-		respawnMagazines[] = {"JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade"};
-		items[] = {"FirstAidKit"};
-		respawnItems[] = {"FirstAidKit"};
+		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		magazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		respawnMagazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
 
 		class HitPoints : HitPoints
 		{
@@ -990,27 +1080,25 @@ class CfgVehicles
 
     };
 
-	class MACRO_NEW_UNIT(rto,base): MACRO_NEW_UNIT(infantry,base)
+	class MACRO_NEW_UNIT(rto,base) : MACRO_NEW_UNIT(infantry,base)
 	{
 		displayName = "[332nd] Clone RTO Base";
 
-        uniformClass = MACRO_NEW_UNIFORM(rto,base);
-        hiddenSelections[] = {"camo1","camo2","insignia"};
-       
-        linkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-		respawnLinkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-	}
+		uniformClass = MACRO_NEW_UNIFORM(rto, base);
+		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-	class MACRO_NEW_UNIT(medic,base): MACRO_NEW_UNIT(infantry,base)
+		backpack = "332nd_aux_blufor_backpack_332nd_RTO_base";
+	};
+
+	class MACRO_NEW_UNIT(medic,base) : MACRO_NEW_UNIT(infantry,base)
 	{
 		displayName = "[332nd] Clone Medic Base";
 
-        uniformClass = MACRO_NEW_UNIFORM(medic,base);
-        hiddenSelections[] = {"camo1","camo2","insignia"};
-       
-        linkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-		respawnLinkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-	}
+		uniformClass = MACRO_NEW_UNIFORM(medic, base);
+		hiddenSelections[] = { "camo1","camo2","insignia" };
+
+		backpack = "332nd_aux_blufor_backpack_332nd_medic";
+	};
 
 	class MACRO_NEW_UNIT(aviation,base): JLTS_Clone_P2_DC15A
     {
@@ -1024,15 +1112,52 @@ class CfgVehicles
         uniformClass = MACRO_NEW_UNIFORM(aviation,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-        linkedItems[] = {MACRO_NEW_HELMET(aviation,332nd_pilot),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = {MACRO_NEW_HELMET(aviation,332nd_pilot),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
-		weapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
-		respawnWeapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
+		linkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_seniorensign_vest_332nd_FlightSeniorEnsign_Vest","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_seniorensign_vest_332nd_FlightSeniorEnsign_Vest","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
 		nakedUniform = "JLTS_CloneNaked_uniform";
-		magazines[] = {"JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade"};
-		respawnMagazines[] = {"JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade"};
-		items[] = {"FirstAidKit"};
-		respawnItems[] = {"FirstAidKit"};
+		backpack = "332nd_aux_blufor_backpack_332nd_Pilot_Pack";
+		magazines[] =
+		{
+			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		respawnMagazines[] =
+		{
+			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
 
 		class HitPoints : HitPoints
 		{
@@ -1221,15 +1346,52 @@ class CfgVehicles
         uniformClass = MACRO_NEW_UNIFORM(cwo,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-        linkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-		respawnLinkedItems[] = {MACRO_NEW_HELMET(infantry,332nd_trooper),"ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","JLTS_CloneNVG"};
-		weapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
-		respawnWeapons[] = {"JLTS_DC15A_plastic","JLTS_DC17SA","Throw","Put"};
+		linkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_infantry_vest_332nd_officer","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_infantry_vest_332nd_officer","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
 		nakedUniform = "JLTS_CloneNaked_uniform";
-		magazines[] = {"JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade"};
-		respawnMagazines[] = {"JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC15A_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","JLTS_DC17SA_mag","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green","JLTS_stun_mag_long","JLTS_stun_mag_long","HandGrenade","HandGrenade"};
-		items[] = {"FirstAidKit"};
-		respawnItems[] = {"FirstAidKit"};
+		backpack = "332nd_aux_blufor_backpack_332nd_Leadership";
+		magazines[] =
+		{
+			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		respawnMagazines[] =
+		{
+			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
 
 		class HitPoints : HitPoints
 		{
