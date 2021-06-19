@@ -296,12 +296,12 @@ class CfgWeapons
     MACRO_NEW_VET_VEST_ALT_ITEM(332nd_Veteran_Suspenders,Veteran alt.)
 
 
-    class MACRO_NEW_VEST(csp1,base) : JLTS_CloneVestKama
+    class MACRO_NEW_VEST(csp,base) : JLTS_CloneVestAirborneNCO
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[332nd] Infantry Vest ('base')";
+        displayName = "[332nd] Specialist Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -330,82 +330,9 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_CSP1_VEST_ITEM(332nd_CSP1_Vest,Specialist One)
-
-
-    class MACRO_NEW_VEST(csp2csp3,base) : JLTS_CloneVestAirborne
-    {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[332nd] Infantry Vest ('base')";
-
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply210";
-
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_CSP2_CSP3_VEST_ITEM(332nd_CSP2_Vest,Specialist Two)
-    MACRO_NEW_CSP2_CSP3_VEST_ITEM(332nd_CSP3_Vest,Specialist Three)
-
-
-    class MACRO_NEW_VEST(csp4,base) : JLTS_CloneVestAirborneNCO
-    {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[332nd] Infantry Vest ('base')";
-
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply210";
-
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_CSP4_VEST_ITEM(332nd_CSP4_Vest,Specialist Four)
+    MACRO_NEW_CSP_VEST_ITEM(332nd_CSP_Vest,Specialist,csp\SpecialistBase_ca.paa)
+    MACRO_NEW_CSP_VEST_ITEM(332nd_CSPRTO_Vest,RTO Specialist,csp\SpecialistRTO_ca.paa)
+    MACRO_NEW_CSP_VEST_ITEM(332nd_CSPMEDIC_Vest,Medic Specialist,csp\SpecialistMedic_ca.paa)
 
 
     class MACRO_NEW_VEST(corp,base) : JLTS_CloneVestKama
@@ -442,7 +369,7 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_CORP_VEST_ITEM(332nd_CORP_VEST,Corporal)
+    MACRO_NEW_CORP_VEST_ITEM(332nd_CORP_VEST,Corporal,corp\LeadershipKama_ca.paa)
 
 
     class MACRO_NEW_VEST(corpalt,base) : JLTS_CloneVestReconNCO
@@ -516,7 +443,7 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_SERG_VEST_ITEM(332nd_Serg_Vest,Sergeant)
+    MACRO_NEW_SERG_VEST_ITEM(332nd_Serg_Vest,Sergeant,sgt\LeadershipKama_ca.paa)
 
 
     class MACRO_NEW_VEST(sergmaj,base) : JLTS_CloneVestOfficer
@@ -553,7 +480,7 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_SERG_MAJ_VEST_ITEM(332nd_SergMaj_Vest,Sergeant Major)
+    MACRO_NEW_SERG_MAJ_VEST_ITEM(332nd_SergMaj_Vest,Sergeant Major,sgtmaj\LeadershipKama_ca.paa)
 
 
     class MACRO_NEW_VEST(seniorensign,base) : JLTS_CloneVestSuspender
@@ -627,7 +554,7 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_FLIGHT_OFFICER_VEST_ITEM(332nd_FlightOfficer_Vest,Flight Officer)
+    MACRO_NEW_FLIGHT_OFFICER_VEST_ITEM(332nd_FlightOfficer_Vest,Flight Officer,flightOfficer\LeadershipKama_ca.paa)
 
 
     class MACRO_NEW_VEST(flightjrlt,base) : JLTS_CloneVestReconOfficer
@@ -664,7 +591,7 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(332nd_FlightJrLT_Vest,Flight Jr Lieutenant)
+    MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(332nd_FlightJrLT_Vest,Flight Jr Lieutenant,flightJrLt\LeadershipKama_ca.paa)
 
     class MACRO_NEW_VEST(reserveofficer,base) : JLTS_CloneVestOfficer2
     {
@@ -700,6 +627,119 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(332nd_ReserveOfficer_Vest,Reserve Officer)
+    MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(332nd_ReserveOfficer_Vest,Reserve Officer,reserveOfficer\LeadershipKama_ca.paa)
+
+
+    class MACRO_NEW_VEST(airborne,base) : JLTS_CloneVestAirborne
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Airborne Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_AIRBORNE_VEST_ITEM(332nd_Airborne_Vest,Trooper,airborne\NonLeadershipKama_ca.paa)
+
+
+    class MACRO_NEW_VEST(airbornenco,base) : JLTS_CloneVestAirborneNCO
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Airborne Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_AIRBORNE_NCO_VEST_ITEM(332nd_Airborne_NCO_Vest,NCO,airborne\LeadershipKama_ca.paa)
+
+
+    class MACRO_NEW_VEST(airbornecsp,base) : JLTS_CloneVestAirborneNCO
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Airborne Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSP_Vest,Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistBase_ca.paa)
+    MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSPRTO_Vest,RTO Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistRTO_ca.paa)
+    MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSPMEDIC_Vest,Medic Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistMedic_ca.paa)
     /// ---- End
 }

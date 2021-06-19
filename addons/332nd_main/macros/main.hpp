@@ -269,33 +269,21 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Infantry Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_CSP1_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(csp1,classname): MACRO_NEW_VEST(csp1,base)\
+	#define MACRO_NEW_CSP_VEST_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_VEST(csp,classname): MACRO_NEW_VEST(csp,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [332nd] Infantry Vest ('##displayname##');\
+			displayName = [332nd] Specialist Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {"",MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
 		};
-	#define MACRO_NEW_CSP2_CSP3_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(csp2csp3,classname): MACRO_NEW_VEST(csp2csp3,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [332nd] Infantry Vest ('##displayname##');\
-		};
-	#define MACRO_NEW_CSP4_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(csp4,classname): MACRO_NEW_VEST(csp4,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [332nd] Infantry Vest ('##displayname##');\
-		};
-	#define MACRO_NEW_CORP_VEST_ITEM(classname,displayname)\
+	#define MACRO_NEW_CORP_VEST_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(corp,classname): MACRO_NEW_VEST(corp,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Infantry Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
 		};
 	#define MACRO_NEW_CORP_ALT_VEST_ITEM(classname,displayname)\
 		class MACRO_NEW_VEST(corpalt,classname): MACRO_NEW_VEST(corpalt,base)\
@@ -304,19 +292,21 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Infantry Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_SERG_VEST_ITEM(classname,displayname)\
+	#define MACRO_NEW_SERG_VEST_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(serg,classname): MACRO_NEW_VEST(serg,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Infantry Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
 		};
-	#define MACRO_NEW_SERG_MAJ_VEST_ITEM(classname,displayname)\
+	#define MACRO_NEW_SERG_MAJ_VEST_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(sergmaj,classname): MACRO_NEW_VEST(sergmaj,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Infantry Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
 		};
 	#define MACRO_NEW_FLIGHT_SENIOR_ENSIGN_VEST_ITEM(classname,displayname)\
 		class MACRO_NEW_VEST(seniorensign,classname): MACRO_NEW_VEST(seniorensign,base)\
@@ -325,26 +315,29 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Flight Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_FLIGHT_OFFICER_VEST_ITEM(classname,displayname)\
+	#define MACRO_NEW_FLIGHT_OFFICER_VEST_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(flightofficer,classname): MACRO_NEW_VEST(flightofficer,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Flight Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
 		};
-	#define MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(classname,displayname)\
+	#define MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(flightjrlt,classname): MACRO_NEW_VEST(flightjrlt,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Flight Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
 		};
-	#define MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(classname,displayname)\
+	#define MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(reserveofficer,classname): MACRO_NEW_VEST(reserveofficer,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Reserve Officer Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
 		};
 	#define MACRO_NEW_INF_KAMA_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_VEST(infantry,classname): MACRO_NEW_VEST(infantry,base)\
@@ -361,6 +354,30 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Arc Vest ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\arc\vests\##texture};\
+		};
+	#define MACRO_NEW_AIRBORNE_VEST_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_VEST(airborne,classname): MACRO_NEW_VEST(airborne,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Airborne Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
+		};
+	#define MACRO_NEW_AIRBORNE_NCO_VEST_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_VEST(airbornenco,classname): MACRO_NEW_VEST(airbornenco,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Airborne Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
+		};
+	#define MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(classname,displayname,texture,texture2)\
+		class MACRO_NEW_VEST(airbornecsp,classname): MACRO_NEW_VEST(airbornecsp,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Airborne Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture2};\
 		};
 
 // ============================================================================== Macro Predefined Equipments
