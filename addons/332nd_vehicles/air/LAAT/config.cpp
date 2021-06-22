@@ -185,6 +185,7 @@ class CfgVehicles
         scope = 2;
         forceInGarage = 1;
         displayName = "[332nd] LAAT Mk1";
+        armor = 100 * 0.5;
     }
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
@@ -210,61 +211,4 @@ class CfgVehicles
             MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
         };
     }
-
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_A): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-    {
-        armor = 100*2;
-        displayName = "[332nd] LAAT Mk1 Armor (3)";
-        scope = 2;
-
-    }
-
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_B): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-    {
-        armor = 100*5;
-        displayName = "[332nd] LAAT Mk1 Armor (2)";
-        scope = 2;
-
-    }
-
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_C): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-    {
-        armor = 100*3;
-        displayName = "[332nd] LAAT Mk1 Armor (4)";
-        scope = 2;
-
-    }
-
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_D): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-    {
-        armor = 100*4;
-        displayName = "[332nd] LAAT Mk1 Armor (5)";
-        scope = 2;
-
-    }
-
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_E): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-    {
-        armor = 100*0.5;
-        displayName = "[332nd] LAAT Mk1 Armor (1)";
-        scope = 2;
-
-    }
-
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_F): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-    {
-        armor = 100*10;
-        displayName = "[332nd] LAAT Mk1 Armor (7)";
-        scope = 2;
-
-    }
-
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_G): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-    {
-        armor = 100*7;
-        displayName = "[332nd] LAAT Mk1 Armor (6)";
-        scope = 2;
-
-    }
-    
 }

@@ -158,6 +158,19 @@
 			};\
 		};
 
+	// --- Opfor Uniforms ---
+	#define MACRO_NEW_CISB1_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb1,classname): MACRO_NEW_UNIFORM(cisb1,base)\
+		{\
+			displayName = [332nd] Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb1,uniformClassname);\
+			};\
+		};
+	// --- End Opfor Uniforms ---
+
 	//units for uniforms
 	#define MACRO_NEW_RECRUIT_UNIT(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIT(recruit,classname): MACRO_NEW_UNIT(recruit,base)\
@@ -236,6 +249,16 @@
 				MACRO_UNIFORM_TEXTURES_PATH\aviation\uniforms\##upper,\
 				MACRO_UNIFORM_TEXTURES_PATH\aviation\uniforms\##lower\
 			};\
+		}
+
+	// ----Opfor Units ----
+	#define MACRO_NEW_CISB1_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1,classname): MACRO_NEW_UNIT(cisb1,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = [332nd] displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
 		}
 
 
