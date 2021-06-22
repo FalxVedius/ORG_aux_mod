@@ -14,16 +14,7 @@ class CfgPatches
 		units[] = {
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd),
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_A),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_B),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_C),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_D),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_E),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_F),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Armor_G)
-            // MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_lights_base),
-            // MACRO_NEW_VEHICLE(air,LAAT,mk2_332nd_base),
-            // MACRO_NEW_VEHICLE(air,LAAT,mk2_332nd_lights_base)
+            MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd),
         };
 		weapons[] = {};
 	};
@@ -93,21 +84,7 @@ class CfgVehicles
         
         class TextureSources
         {
-            // class base
-			// {
-			// 	displayName = "Transport Gunship";
-			// 	author = MACRO_AUTHOR;
-            //     textures[] = {
-            //         MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-            //         MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-            //         MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-            //         "swlb_a_vehicle\laat\data\missiles_co.paa",
-            //         MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-            //     };
-            //     factions[] = {"SWLB_GAR"};
-			// };
-
-            class Ahegao//: base
+            class Ahegao
 			{
 				displayName = "Transport Gunship (Ahegao)";
                 author = MACRO_AUTHOR;
@@ -121,11 +98,6 @@ class CfgVehicles
                 };
 			};
         }
-
-        // textureList[] = {
-        //     "base",1,
-        //     "Ahegao",1
-        // };
 
         class Turrets: Turrets
         {
@@ -141,28 +113,6 @@ class CfgVehicles
                     "Laser_Battery_F","Laser_Battery_F"
                 };
             }
-            // class LeftDoorgun: LeftDoorgun
-            // {
-            //    weapons[] = {
-            //         MACRO_AIR_COMMON_WEAPS,
-            //         "ParticleBeamCannon"
-            //     };
-            //     magazines[] = {
-            //         MACRO_AIR_COMMON_MAGS,
-            //         "Laser_Battery_F","Laser_Battery_F"
-            //     };
-            // }
-            // class RightDoorGun: RightDoorGun
-            // {
-            //     weapons[] = {
-            //         MACRO_AIR_COMMON_WEAPS,
-            //         "ParticleBeamCannon_R"
-            //     };
-            //     magazines[] = {
-            //         MACRO_AIR_COMMON_MAGS,
-            //         "Laser_Battery_F","Laser_Battery_F"
-            //     };
-            // }
         }
 
         class UserActions
@@ -178,6 +128,25 @@ class CfgVehicles
 		#include "../../_common/universal_mfd.hpp"
 
         #include "_lights.hpp"
+    }
+
+    class ls_heli_laatle;
+    class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd) :ls_heli_laatle
+    {
+        displayName = "[332nd] LAAT/le Gunship";
+        scope = 2;
+        forceInGarage = 1;
+
+        faction = "EdCat_332nd";
+        editorSubcategory = "EdSubcat_332nd_HELI";
+
+        crew = MACRO_NEW_UNIT(aviation, 332nd_flight_cadet);
+        typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
+
+        class EventHandlers
+        {
+            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
+        };
     }
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd):MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
