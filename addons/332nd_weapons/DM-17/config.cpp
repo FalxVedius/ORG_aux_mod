@@ -81,6 +81,7 @@ class cfgWeapons
 
 
 		magazines[] = { MACRO_NEW_MAG(DM_17,4) };
+		magazineWell[] = {};
 		linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 
 		class Single : Single
