@@ -254,6 +254,16 @@ class CfgWeapons
 
 	// ---- End opfor Uniforms ----
 }
+class CfgSounds
+{
+	sounds[] = {};
+	class B1_Death1
+	{
+		name = "B1_Death1";
+		sound[] = {"\opfor\DeathSounds\B1_Death1.ogg", 5, 1.0};
+	};
+};
+
 
 class CfgFunctions
 {
@@ -264,6 +274,17 @@ class CfgFunctions
 			class SetCratesToCarryable
 			{
 				file = "332nd_units\fnc_carryResupplyCrates.sqf";
+			};
+		};
+	};
+
+	class Aux332nd
+	{
+		class DeathSounds
+		{
+			file = "\332nd_units\opfor";
+			class Killed
+			{
 			};
 		};
 	};
@@ -1784,4 +1805,12 @@ class CfgVehicles
 	};
 
 	// ---- End Opfor Units for Uniforms ----
-}
+};
+
+class Extended_Killed_EventHandlers
+{
+	class MACRO_NEW_UNIT(cisb1,base)
+	{
+		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+	};
+};
