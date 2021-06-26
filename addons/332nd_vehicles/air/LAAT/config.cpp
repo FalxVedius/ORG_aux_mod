@@ -40,7 +40,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base):ls_laat
     {
-        displayName = "[332nd] LAAT Mk1 Base";
+        displayName = "LAAT Mk1 Base";
         scope = 0;
 
         faction = "EdCat_332nd";
@@ -133,7 +133,7 @@ class CfgVehicles
     class ls_heli_laatle;
     class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd) :ls_heli_laatle
     {
-        displayName = "[332nd] LAAT/le Gunship";
+        displayName = "LAAT/le Gunship";
         scope = 2;
         forceInGarage = 1;
 
@@ -153,13 +153,13 @@ class CfgVehicles
     {
         scope = 2;
         forceInGarage = 1;
-        displayName = "[332nd] LAAT Mk1";
+        displayName = "LAAT Mk1";
         armor = 100 * 0.5;
     }
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
     {
-        displayName = "[332nd] LAAT Mk1 (Ahegao Squadron)";
+        displayName = "LAAT Mk1 (Ahegao Squadron)";
         forceInGarage = 0;
 
         hiddenselections[] = {

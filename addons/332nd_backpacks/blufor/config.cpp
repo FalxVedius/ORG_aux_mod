@@ -43,10 +43,10 @@ class CfgVehicles
         NSM_jumppack_energy_capacity = 60;
         NSM_jumppack_recharge = 2;
 
+        JLTS_isJumppack = 0;
+
         //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_spam_delay = 0;
-        RD501_jumppack_energy_capacity = 60;
-        RD501_jumppack_recharge = 2;
+        RD501_jumppack_is_jumppack = 0;
     }
 
     class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_2) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
@@ -59,10 +59,10 @@ class CfgVehicles
         NSM_jumppack_energy_capacity = 80;
         NSM_jumppack_recharge = 2;
 
+        JLTS_isJumppack = 0;
+
         //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_spam_delay = 0;
-        RD501_jumppack_energy_capacity = 80;
-        RD501_jumppack_recharge = 2;
+        RD501_jumppack_is_jumppack = 0;
     }
 
     class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_3) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
@@ -75,9 +75,9 @@ class CfgVehicles
         NSM_jumppack_energy_capacity = 100;
         NSM_jumppack_recharge = 2;
 
+        JLTS_isJumppack = 0;
+
         //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_spam_delay = 1;
-        RD501_jumppack_energy_capacity = 100;
-        RD501_jumppack_recharge = 2;
+        RD501_jumppack_is_jumppack = 0;
     }
 }

@@ -239,6 +239,10 @@ class CfgWeapons
 	{
 		class ItemInfo;
 	};
+	class JLTS_DroidB1_Rocket : JLTS_DroidB1
+	{
+		class ItemInfo;
+	};
 
 	//CIS B-1
 	class MACRO_NEW_UNIFORM(cisb1,base) : JLTS_DroidB1
@@ -251,19 +255,133 @@ class CfgWeapons
 			containerClass = "Supply140";
 		};
 	};
-
+	class MACRO_NEW_UNIFORM(cisb1jumppack,base) : JLTS_DroidB1_Rocket
+	{
+		displayName = "[332nd] Jumppack Battle droid uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(cisb1jumppack,base);
+			containerClass = "Supply140";
+		};
+	};
 	// ---- End opfor Uniforms ----
 }
+
 class CfgSounds
 {
 	sounds[] = {};
-	class B1_Death1
+	class B1_Death_Sound_1
 	{
-		name = "B1_Death1";
-		sound[] = {"\opfor\DeathSounds\B1_Death1.ogg", 5, 1.0};
+		name = "B1-Death-Sound-1";
+		sound[] = {"\opfor\DeathSounds\B1-Death-Sound-1.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_2
+	{
+		name = "B1-Death-Sound-2";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-2.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_3
+	{
+		name = "B1-Death-Sound-3";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-3.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_4
+	{
+		name = "B1-Death-Sound-4";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-4.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_5
+	{
+		name = "B1-Death-Sound-5";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-5.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_6
+	{
+		name = "B1-Death-Sound-6";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-6.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_7
+	{
+		name = "B1-Death-Sound-7";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-7.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_8
+	{
+		name = "B1-Death-Sound-8";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-8.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_9
+	{
+		name = "B1-Death-Sound-9";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-9.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_10
+	{
+		name = "B1-Death-Sound-10";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-10.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_11
+	{
+		name = "B1-Death-Sound-11";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-11.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_12
+	{
+		name = "B1-Death-Sound-12";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-12.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_13
+	{
+		name = "B1-Death-Sound-13";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-13.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_14
+	{
+		name = "B1-Death-Sound-14";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-14.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_15
+	{
+		name = "B1-Death-Sound-15";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-15.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_16
+	{
+		name = "B1-Death-Sound-16";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-16.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_17
+	{
+		name = "B1-Death-Sound-17";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-17.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_18
+	{
+		name = "B1-Death-Sound-18";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-18.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_19
+	{
+		name = "B1-Death-Sound-19";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-19.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_20
+	{
+		name = "B1-Death-Sound-21";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-21.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_22
+	{
+		name = "B1-Death-Sound-22";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-22.ogg", db + 250, 1.0, 125 };
+	};
+	class B1_Death_Sound_23
+	{
+		name = "B1-Death-Sound-23";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
 	};
 };
-
 
 class CfgFunctions
 {
@@ -285,6 +403,14 @@ class CfgFunctions
 			file = "\332nd_units\opfor";
 			class Killed
 			{
+			};
+		};
+
+		class Jumppack
+		{
+			class Jumppack
+			{
+				file = "\332nd_units\opfor\fn_Jumppack.sqf";
 			};
 		};
 	};
@@ -1621,6 +1747,22 @@ class CfgVehicles
 	{
 		class HitPoints;
 	};
+	class JLTS_Droid_B1_Rocket :JLTS_Droid_B1_E5
+	{
+		class HitPoints;
+	};
+	class JLTS_Droid_B1_SBB3 :JLTS_Droid_B1_E5
+	{
+		class HitPoints;
+	};
+	class JLTS_Droid_B1_AR :JLTS_Droid_B1_E5
+	{
+		class HitPoints;
+	};
+	class JLTS_Droid_B1_AT :JLTS_Droid_B1_E5
+	{
+		class HitPoints;
+	};
 
 	class MACRO_NEW_UNIT(cisb1,base) : JLTS_Droid_B1_E5
 	{
@@ -1804,12 +1946,765 @@ class CfgVehicles
 
 	};
 
+	class MACRO_NEW_UNIT(cisb1jumppack,base) : JLTS_Droid_B1_Rocket
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] B1 Jumppack Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+		uniformClass = MACRO_NEW_UNIFORM(cisb1jumppack,base);
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 1;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 8;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 6;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 6;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 8;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 6;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 6;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 6;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 6;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 6;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+		class Eventhandlers
+		{
+			init = "[_this] spawn Aux332nd_fnc_Jumppack";
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(cisb1breach,base) : JLTS_Droid_B1_SBB3
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] B1 Breacher Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 1;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 8;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 6;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 6;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 8;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 6;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 6;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 6;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 6;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 6;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(cisb1ar,base) : JLTS_Droid_B1_AR
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] B1 Support Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 1;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 8;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 6;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 6;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 8;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 6;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 6;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 6;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 6;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 6;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(cisb1at,base) : JLTS_Droid_B1_AT
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] B1 Anti-Tank Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 1;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 8;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 6;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 6;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 8;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 6;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 6;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 6;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 6;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 6;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
 	// ---- End Opfor Units for Uniforms ----
 };
 
 class Extended_Killed_EventHandlers
 {
 	class MACRO_NEW_UNIT(cisb1,base)
+	{
+		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+	};
+
+	class MACRO_NEW_UNIT(cisb1jumppack,base)
+	{
+		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+	};
+
+	class MACRO_NEW_UNIT(cisb1breach,base)
+	{
+		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+	};
+
+	class MACRO_NEW_UNIT(cisb1ar,base)
+	{
+		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+	};
+
+	class MACRO_NEW_UNIT(cisb1at,base)
 	{
 		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
 	};

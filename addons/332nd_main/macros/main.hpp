@@ -169,6 +169,16 @@
 				uniformClass = MACRO_NEW_UNIT(cisb1,uniformClassname);\
 			};\
 		};
+	#define MACRO_NEW_CISB1JUMPPACK_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb1jumppack,classname): MACRO_NEW_UNIFORM(cisb1jumppack,base)\
+		{\
+			displayName = [332nd] Juumppack Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb1jumppack,uniformClassname);\
+			};\
+		};
 	// --- End Opfor Uniforms ---
 
 	//units for uniforms
@@ -177,7 +187,7 @@
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\
-			displayName = [332nd] displayname;\
+			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(recruit,uniformClassname);\
 		}
 
@@ -186,7 +196,7 @@
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\
-			displayName = [332nd] displayname;\
+			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(infantry,uniformClassname);\
 			hiddenSelections[] = {"camo1","camo2","insignia"};\
 			hiddenSelectionsTextures[] = {\
@@ -200,7 +210,7 @@
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\
-			displayName = [332nd] displayname;\
+			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(rto,uniformClassname);\
 			hiddenSelections[] = {"camo1","camo2","insignia"};\
 			hiddenSelectionsTextures[] = {\
@@ -214,7 +224,7 @@
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\
-			displayName = [332nd] displayname;\
+			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(medic,uniformClassname);\
 			hiddenSelections[] = {"camo1","camo2","insignia"};\
 			hiddenSelectionsTextures[] = {\
@@ -228,7 +238,7 @@
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\
-			displayName = [332nd] displayname;\
+			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cwo,uniformClassname);\
 			hiddenSelections[] = {"camo1","camo2","insignia"};\
 			hiddenSelectionsTextures[] = {\
@@ -242,7 +252,7 @@
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\
-			displayName = [332nd] displayname;\
+			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(aviation,uniformClassname);\
 			hiddenSelections[] = {"camo1","camo2","insignia"};\
 			hiddenSelectionsTextures[] = {\
@@ -257,10 +267,41 @@
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\
-			displayName = [332nd] displayname;\
+			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
 		}
-
+	#define MACRO_NEW_CISB1JUMPPACK_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1jumppack,classname): MACRO_NEW_UNIT(cisb1jumppack,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1jumppack,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1BREACHER_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1breach,classname): MACRO_NEW_UNIT(cisb1breach,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1SUPPORT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1ar,classname): MACRO_NEW_UNIT(cisb1ar,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1AT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1at,classname): MACRO_NEW_UNIT(cisb1at,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
+		}
 
 	// ---- Vests ---- 
 
