@@ -60,6 +60,41 @@ class CfgAmmo
 		ace_grenades_flashbangInterval=0.2;
 		ace_grenades_flashbangIntervalMaxDeviation=0;
 	};
+	class 3AS_SmokeShellBase;
+	class MACRO_NEW_AMMO(332_Impact_white): 3AS_SmokeShellBase
+	{
+		explosionTime = -1;
+	};
+	class 3AS_SmokeShellBlue;
+	class MACRO_NEW_AMMO(332_Impact_blue): 3AS_SmokeShellBlue
+	{
+		explosionTime = -1;
+	};
+	class 3AS_SmokeShellGreen;
+	class MACRO_NEW_AMMO(332_Impact_green): 3AS_SmokeShellGreen
+	{
+		explosionTime = -1;
+	};
+	class 3AS_SmokeShellRed;
+	class MACRO_NEW_AMMO(332_Impact_red): 3AS_SmokeShellRed
+	{
+		explosionTime = -1;
+	};
+	class 3AS_SmokeShellPurple;
+	class MACRO_NEW_AMMO(332_Impact_purple): 3AS_SmokeShellPurple
+	{
+		explosionTime = -1;
+	};
+	class 3AS_SmokeShellYellow;
+	class MACRO_NEW_AMMO(332_Impact_yellow): 3AS_SmokeShellYellow
+	{
+		explosionTime = -1;
+	};
+	class 3AS_SmokeShellOrange;
+	class MACRO_NEW_AMMO(332_Impact_orange): 3AS_SmokeShellOrange
+	{
+		explosionTime = -1;
+	};
 };
 
 class CfgMagazines
@@ -117,7 +152,62 @@ class CfgMagazines
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_FLASH)
     };
-	
+	class 3AS_Smoke_Base;
+	class MACRO_NEW_MAG(332_SMOKE_IMPACT_WHITE,1): 3AS_Smoke_Base
+	{
+		displayName="[332nd] Impact Smk White";
+		displayNameShort="Impact Smoke Grenade (white)";
+		mass=4;
+		ammo=MACRO_NEW_AMMO(332_Impact_white)
+    };
+	class 3AS_SmokeBlue;
+	class MACRO_NEW_MAG(332_SMOKE_IMPACT_BLUE,1): 3AS_SmokeBlue
+	{
+		displayName="[332nd] Impact Smk Blue";
+		displayNameShort="Impact Smoke Grenade (blue)";
+		mass=4;
+		ammo= MACRO_NEW_AMMO(332_Impact_blue)
+    };
+	class 3AS_SmokeGreen;
+	class MACRO_NEW_MAG(332_SMOKE_IMPACT_GREEN,1): 3AS_SmokeGreen
+	{
+		displayName="[332nd] Impact Smk Green";
+		displayNameShort="Impact Smoke Grenade (green)";
+		mass=4;
+		ammo=MACRO_NEW_AMMO(332_Impact_green)
+    };
+	class 3AS_SmokeRed;
+	class MACRO_NEW_MAG(332_SMOKE_IMPACT_RED,1): 3AS_SmokeRed
+	{
+		displayName="[332nd] Impact Smk Red";
+		displayNameShort="Impact Smoke Grenade (red)";
+		mass=4;
+		ammo=MACRO_NEW_AMMO(332_Impact_red)
+    };
+	class 3AS_SmokePurple;
+	class MACRO_NEW_MAG(332_SMOKE_IMPACT_PURPLE,1): 3AS_SmokePurple
+	{
+		displayName="[332nd] Impact Smk Purple";
+		displayNameShort="Impact Smoke Grenade (purple)";
+		mass=4;
+		ammo=MACRO_NEW_AMMO(332_Impact_purple)
+    };
+	class 3AS_SmokeYellow;
+	class MACRO_NEW_MAG(332_SMOKE_IMPACT_YELLOW,1): 3AS_SmokeYellow
+	{
+		displayName="[332nd] Impact Smk Yellow";
+		displayNameShort="Impact Smoke Grenade (Yellow)";
+		mass=4;
+		ammo=MACRO_NEW_AMMO(332_Impact_yellow)
+    };
+	class 3AS_SmokeOrange;
+	class MACRO_NEW_MAG(332_SMOKE_IMPACT_ORANGE,1): 3AS_SmokeOrange
+	{
+		displayName="[332nd] Impact Smk Orange";
+		displayNameShort="Impact Smoke Grenade (Orange)";
+		mass=4;
+		ammo=MACRO_NEW_AMMO(332_Impact_orange)
+    };
 };
 
 class CfgWeapons
@@ -132,7 +222,14 @@ class CfgWeapons
 			"332nd_HEDP_Muzzle",
 			"332nd_FRAG_Muzzle",
 			"332nd_INCENDIARY_Muzzle",
-			"332_FLASH_Muzzle"
+			"332_FLASH_Muzzle",
+			"332_Impact_white_Muzzle",
+			"332_Impact_blue_Muzzle",
+			"332_Impact_green_Muzzle",
+			"332_Impact_red_Muzzle",
+			"332_Impact_purple_Muzzle",
+			"332_Impact_yellow_Muzzle",
+			"332_Impact_orange_Muzzle",
 		};
 		class ThrowMuzzle;
 		class 332nd_SquadShield_Muzzle: ThrowMuzzle
@@ -168,6 +265,55 @@ class CfgWeapons
 			magazines[]=
 			{
 				MACRO_NEW_MAG(332_FLASH,1)
+			};
+		};
+		class 332_Impact_white_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				MACRO_NEW_MAG(332_SMOKE_IMPACT_WHITE,1)
+			};
+		};
+		class 332_Impact_blue_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				 MACRO_NEW_MAG(332_SMOKE_IMPACT_BLUE,1)
+			};
+		};
+		class 332_Impact_green_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				MACRO_NEW_MAG(332_SMOKE_IMPACT_GREEN,1)
+			};
+		};
+		class 332_Impact_red_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				MACRO_NEW_MAG(332_SMOKE_IMPACT_RED,1)
+			};
+		};
+		class 332_Impact_purple_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				MACRO_NEW_MAG(332_SMOKE_IMPACT_PURPLE,1)
+			};
+		};
+		class 332_Impact_yellow_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+			    MACRO_NEW_MAG(332_SMOKE_IMPACT_YELLOW,1)
+			};
+		};
+		class 332_Impact_orange_Muzzle: ThrowMuzzle
+		{
+			magazines[]=
+			{
+				MACRO_NEW_MAG(332_SMOKE_IMPACT_ORANGE,1)
 			};
 		};
 
