@@ -169,6 +169,7 @@ class CfgWeapons
 		{
 			uniformClass = MACRO_NEW_UNIT(recruit,base);
 			containerClass = "Supply140";
+			uniformType = "Neopren";
 		};
 	};
 
@@ -181,6 +182,7 @@ class CfgWeapons
 		{
 			uniformClass = MACRO_NEW_UNIT(infantry,base);
 			containerClass = "Supply140";
+			uniformType = "Neopren";
 		};
 	};
 
@@ -193,6 +195,7 @@ class CfgWeapons
 		{
 			uniformClass = MACRO_NEW_UNIT(rto,base);
 			containerClass = "Supply140";
+			uniformType = "Neopren";
 		};
 	};
 
@@ -205,6 +208,7 @@ class CfgWeapons
 		{
 			uniformClass = MACRO_NEW_UNIT(medic,base);
 			containerClass = "Supply140";
+			uniformType = "Neopren";
 		};
 	};
 
@@ -216,6 +220,7 @@ class CfgWeapons
 		{
 			uniformClass = MACRO_NEW_UNIT(aviation,base);
 			containerClass = "Supply140";
+			uniformType = "Neopren";
 		};
 	};
 
@@ -227,6 +232,7 @@ class CfgWeapons
 		{
 			uniformClass = MACRO_NEW_UNIT(cwo,base);
 			containerClass = "Supply140";
+			uniformType = "Neopren";
 		};
 	};
 
