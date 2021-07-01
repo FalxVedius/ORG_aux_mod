@@ -33,6 +33,7 @@ class CfgPatches
 			MACRO_NEW_UNIT(cisbxmeleerush,332nd_CIS_BX_MeleeRush),
 			MACRO_NEW_UNIT(cisbxar,332nd_CIS_BX_Support),
 			MACRO_NEW_UNIT(cisbxat,332nd_CIS_BX_AT),
+			MACRO_NEW_UNIT(cisbxbreach,332nd_CIS_BX_BREACHER),
         };
         weapons[] = {
             MACRO_NEW_UNIFORM(cisb1,332nd_CIS_B1),
@@ -153,6 +154,7 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(cisbxmeleerush,base);
 	class MACRO_NEW_UNIT(cisbxar,base);
 	class MACRO_NEW_UNIT(cisbxat,base);
+	class MACRO_NEW_UNIT(cisbxbreach,base);
 
     //B1
     MACRO_NEW_CISB1_UNIT(332nd_CIS_B1,B1 Battle Droid,332nd_CIS_B1)
@@ -177,6 +179,7 @@ class CfgVehicles
 	MACRO_NEW_CISBXMELEERUSH_UNIT(332nd_CIS_BX_MeleeRush,BX Melee Rush Battle Droid,332nd_CIS_BX)
 	MACRO_NEW_CISBXSUPPORT_UNIT(332nd_CIS_BX_Support,BX Support Battle Droid,332nd_CIS_BX)
 	MACRO_NEW_CISBXAT_UNIT(332nd_CIS_BX_AT,BX Anti-Tank Battle Droid,332nd_CIS_BX)
+	MACRO_NEW_CISBXBREACH_UNIT(332nd_CIS_BX_Breacher,BX Breacher Battle Droid,332nd_CIS_BX)
 };
 
 class CfgGroups
@@ -892,138 +895,6 @@ class CfgGroups
 				};
 			};
 
-			class B1Infantry
-			{
-				name = "B1 - Specialized Teams";
-				class CIS_332nd_B1InfCommand
-				{
-					name = "Command Team";
-					side = 0;
-					faction = "EdCat_332ndCIS";
-					class Unit0
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1comm_unit_332nd_CIS_B1_Commander";
-						rank = "CORPORAL";
-						position[] = { 0,0,0 };
-					};
-					class Unit1
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
-						rank = "PRIVATE";
-						position[] = { 0,1,0 };
-					};
-					class Unit2
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
-						rank = "PRIVATE";
-						position[] = { 1,0,0 };
-					};
-					class Unit3
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
-						rank = "PRIVATE";
-						position[] = { 0,-1,0 };
-					};
-				};
-				class CIS_332nd_B1InfSentry
-				{
-					name = "Sentry Team";
-					side = 0;
-					faction = "EdCat_332ndCIS";
-					class Unit0
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
-						rank = "CORPORAL";
-						position[] = { 0,0,0 };
-					};
-					class Unit1
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
-						rank = "PRIVATE";
-						position[] = { 0,1,0 };
-					};
-				};
-				class CIS_332nd_B1InfSnipers
-				{
-					name = "Sniper Team";
-					side = 0;
-					faction = "EdCat_332ndCIS";
-					class Unit0
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper";
-						rank = "CORPORAL";
-						position[] = { 0,0,0 };
-					};
-					class Unit1
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper";
-						rank = "PRIVATE";
-						position[] = { 0,1,0 };
-					};
-				};
-				class CIS_332nd_B1InfPilotCrew
-				{
-					name = "Pilot Crew";
-					side = 0;
-					faction = "EdCat_332ndCIS";
-					class Unit0
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
-						rank = "CORPORAL";
-						position[] = { 0,0,0 };
-					};
-					class Unit1
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
-						rank = "PRIVATE";
-						position[] = { 0,1,0 };
-					};
-				};
-				class CIS_332nd_B1InfVehicleCrew
-				{
-					name = "Vehicle Crew";
-					side = 0;
-					faction = "EdCat_332ndCIS";
-					class Unit0
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-						rank = "CORPORAL";
-						position[] = { 0,0,0 };
-					};
-					class Unit1
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-						rank = "PRIVATE";
-						position[] = { 0,1,0 };
-					};
-					class Unit2
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-						rank = "PRIVATE";
-						position[] = { 1,0,0 };
-					};
-					class Unit3
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-						rank = "PRIVATE";
-						position[] = { 0,-1,0 };
-					};
-				};
-			};
 
 			class BXInfantry
 			{
@@ -1036,28 +907,28 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1comm_unit_332nd_CIS_B1_Commander";
+						vehicle = "332nd_aux_cisbxcapt_unit_332nd_CIS_BX_Captain";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
@@ -1070,14 +941,14 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
@@ -1090,88 +961,122 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper";
+						vehicle = "332nd_aux_cisbxassassin_unit_332nd_CIS_BX_Assassin";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper";
+						vehicle = "332nd_aux_cisbxassassin_unit_332nd_CIS_BX_Assassin";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
 				class CIS_332nd_BXInfMelee
 				{
-					name = "Pilot Crew";
+					name = "Melee Team";
 					side = 0;
 					faction = "EdCat_332ndCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+						vehicle = "332nd_aux_cisbxmelee_unit_332nd_CIS_BX_Melee";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+						vehicle = "332nd_aux_cisbxmelee_unit_332nd_CIS_BX_Melee";
+						rank = "PRIVATE";
+						position[] = { 0,1,0 };
+					};
+				};
+				class CIS_332nd_BXInfMeleeRUSH
+				{
+					name = "Rush Melee Team";
+					side = 0;
+					faction = "EdCat_332ndCIS";
+					class Unit0
+					{
+						side = 0;
+						vehicle = "332nd_aux_cisbxmeleerush_unit_332nd_CIS_BX_MeleeRush";
+						rank = "CORPORAL";
+						position[] = { 0,0,0 };
+					};
+					class Unit1
+					{
+						side = 0;
+						vehicle = "332nd_aux_cisbxmeleerush_unit_332nd_CIS_BX_MeleeRush";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
 				class CIS_332nd_BXInfDiplomats
 				{
-					name = "Pilot Crew";
+					name = "Diplomat Team";
 					side = 0;
 					faction = "EdCat_332ndCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+						vehicle = "332nd_aux_cisbxcapt_unit_332nd_CIS_BX_Captain";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
-						rank = "PRIVATE";
-						position[] = { 0,1,0 };
-					};
-				};
-				class CIS_332nd_BXInfSecurity
-				{
-					name = "Vehicle Crew";
-					side = 0;
-					faction = "EdCat_332ndCIS";
-					class Unit0
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-						rank = "CORPORAL";
-						position[] = { 0,0,0 };
-					};
-					class Unit1
-					{
-						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+						vehicle = "332nd_aux_cisbxdiplo_unit_332nd_CIS_BX_Diplomat";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+						vehicle = "332nd_aux_cisbxdiplo_unit_332nd_CIS_BX_Diplomat";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+						vehicle = "332nd_aux_cisbxdiplo_unit_332nd_CIS_BX_Diplomat";
+						rank = "PRIVATE";
+						position[] = { 0,-1,0 };
+					};
+				};
+				class CIS_332nd_BXInfSecurity
+				{
+					name = "Security Team";
+					side = 0;
+					faction = "EdCat_332ndCIS";
+					class Unit0
+					{
+						side = 0;
+						vehicle = "332nd_aux_cisbxcapt_unit_332nd_CIS_BX_Captain";
+						rank = "CORPORAL";
+						position[] = { 0,0,0 };
+					};
+					class Unit1
+					{
+						side = 0;
+						vehicle = "332nd_aux_cisbxsec_unit_332nd_CIS_BX_Security";
+						rank = "PRIVATE";
+						position[] = { 0,1,0 };
+					};
+					class Unit2
+					{
+						side = 0;
+						vehicle = "332nd_aux_cisbxsec_unit_332nd_CIS_BX_Security";
+						rank = "PRIVATE";
+						position[] = { 1,0,0 };
+					};
+					class Unit3
+					{
+						side = 0;
+						vehicle = "332nd_aux_cisbxsec_unit_332nd_CIS_BX_Security";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
@@ -1189,28 +1094,28 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
@@ -1223,28 +1128,28 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "SERGEANT";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
 						rank = "SERGEANT";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
@@ -1257,28 +1162,28 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "SERGEANT";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "SERGEANT";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
 						rank = "SERGEANT";
 						position[] = { 0,-1,0 };
 					};
@@ -1296,56 +1201,56 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
@@ -1358,56 +1263,56 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
@@ -1420,56 +1325,56 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
@@ -1487,84 +1392,84 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
@@ -1577,84 +1482,84 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
@@ -1667,84 +1572,84 @@ class CfgGroups
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};

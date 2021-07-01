@@ -512,6 +512,14 @@
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
 		}
+	#define MACRO_NEW_CISBXBREACH_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxbreach,classname): MACRO_NEW_UNIT(cisbxbreach,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
 
 	// ---- Vests ---- 
 
