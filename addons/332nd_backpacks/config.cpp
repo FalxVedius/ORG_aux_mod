@@ -147,6 +147,7 @@ class CfgVehicles
 	{
 		displayName = "[332nd] Leadership Pack";
 		maximumLoad = 271;
+		tf_range = 15000;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";

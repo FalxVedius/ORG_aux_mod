@@ -179,6 +179,96 @@
 				uniformClass = MACRO_NEW_UNIT(cisb1jumppack,uniformClassname);\
 			};\
 		};
+	#define MACRO_NEW_CISB1CREW_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb1crew,classname): MACRO_NEW_UNIFORM(cisb1crew,base)\
+		{\
+			displayName = [332nd] Crew Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb1crew,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISB1COMM_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb1comm,classname): MACRO_NEW_UNIFORM(cisb1comm,base)\
+		{\
+			displayName = [332nd] Commander Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb1comm,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISB1MARINE_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb1marine,classname): MACRO_NEW_UNIFORM(cisb1marine,base)\
+		{\
+			displayName = [332nd] Marine Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb1marine,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISB1SEC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb1sec,classname): MACRO_NEW_UNIFORM(cisb1sec,base)\
+		{\
+			displayName = [332nd] Security Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb1sec,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISB1PILOT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb1pilot,classname): MACRO_NEW_UNIFORM(cisb1pilot,base)\
+		{\
+			displayName = [332nd] Pilot Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb1pilot,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISBX_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisbx,classname): MACRO_NEW_UNIFORM(cisbx,base)\
+		{\
+			displayName = [332nd] BX Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisbx,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISBXCAPT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisbxcapt,classname): MACRO_NEW_UNIFORM(cisbxcapt,base)\
+		{\
+			displayName = [332nd] BX Captain Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisbxcapt,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISBXSEC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisbxsec,classname): MACRO_NEW_UNIFORM(cisbxsec,base)\
+		{\
+			displayName = [332nd] BX Security Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisbxsec,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_CISBXDIPLO_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisbxdiplo,classname): MACRO_NEW_UNIFORM(cisbxdiplo,base)\
+		{\
+			displayName = [332nd] BX Diplomat Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisbxdiplo,uniformClassname);\
+			};\
+		};
 	// --- End Opfor Uniforms ---
 
 	//units for uniforms
@@ -301,6 +391,126 @@
 			scope = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1SNIPER_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1sniper,classname): MACRO_NEW_UNIT(cisb1sniper,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1CREW_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1crew,classname): MACRO_NEW_UNIT(cisb1crew,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1crew,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1COMM_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1comm,classname): MACRO_NEW_UNIT(cisb1comm,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1comm,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1MARINE_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1marine,classname): MACRO_NEW_UNIT(cisb1marine,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1marine,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1SEC_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1sec,classname): MACRO_NEW_UNIT(cisb1sec,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1sec,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB1PILOT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1pilot,classname): MACRO_NEW_UNIT(cisb1pilot,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1pilot,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBX_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbx,classname): MACRO_NEW_UNIT(cisbx,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXCAPT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxcapt,classname): MACRO_NEW_UNIT(cisbxcapt,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXASSASSIN_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxassassin,classname): MACRO_NEW_UNIT(cisbxassassin,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXSEC_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxsec,classname): MACRO_NEW_UNIT(cisbxsec,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbxsec,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXDIPLO_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxdiplo,classname): MACRO_NEW_UNIT(cisbxdiplo,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbxdiplo,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXMELEE_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxmelee,classname): MACRO_NEW_UNIT(cisbxmelee,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXMELEERUSH_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxmeleerush,classname): MACRO_NEW_UNIT(cisbxmeleerush,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXAT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxat,classname): MACRO_NEW_UNIT(cisbxat,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXSUPPORT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxar,classname): MACRO_NEW_UNIT(cisbxar,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
 		}
 
 	// ---- Vests ---- 
