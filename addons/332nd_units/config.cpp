@@ -1969,11 +1969,11 @@ class CfgVehicles
 	{
 		class HitPoints;
 	};
-	class O_Solider_Melee : O_Soldier_base_F
+	class O_soldier_Melee : O_Soldier_base_F
 	{
 		class HitPoints;
 	};
-	class O_Solider_Melee_RUSH : O_Soldier_base_F
+	class O_soldier_Melee_RUSH : O_Soldier_base_F
 	{
 		class HitPoints;
 	};
@@ -5541,7 +5541,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(cisbxmelee,base) : O_Solider_Melee
+	class MACRO_NEW_UNIT(cisbxmelee,base) : O_soldier_Melee
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -5729,7 +5729,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(cisbxmeleerush,base) : O_Solider_Melee_RUSH
+	class MACRO_NEW_UNIT(cisbxmeleerush,base) : O_soldier_Melee_RUSH
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
