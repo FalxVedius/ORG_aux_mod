@@ -68,8 +68,8 @@ class cfgWeapons
 				};
 			};
 			displayname="FullAuto";
-			reloadTime=0.09;
-			dispersion=0.0075;
+			reloadTime=0.08;
+			dispersion=0.004;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -107,7 +107,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.15;
+			reloadTime=0.14;
 			displayname="SlowAuto";
 			dispersion=0.001;
 			minRange=2;

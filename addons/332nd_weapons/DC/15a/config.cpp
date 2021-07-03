@@ -93,7 +93,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.17;
+			reloadTime=0.14;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
@@ -135,7 +135,7 @@ class cfgWeapons
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
-			reloadtime=0.17;
+			reloadtime=0.14;
 			dispersion=0.0000009;
 			aiBurstTerminable=1;
 			minRange=2;
@@ -246,7 +246,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.17;
+			reloadTime=0.14;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
@@ -288,7 +288,7 @@ class cfgWeapons
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
-			reloadtime=0.17;
+			reloadtime=0.14;
 			dispersion=0.0000009;
 			aiBurstTerminable=1;
 			minRange=2;

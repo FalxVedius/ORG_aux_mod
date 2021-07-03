@@ -30,6 +30,7 @@ class CfgVehicles
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Basic)
         scope = 2;
+        maximumLoad = 300;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
     }
 

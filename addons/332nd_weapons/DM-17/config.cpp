@@ -49,13 +49,13 @@ class CfgAmmo
 class CfgMagazines
 {
 	class 30rnd_762x39_AK12_Mag_F;
-	class MACRO_NEW_MAG(DM_17,4) : 30rnd_762x39_AK12_Mag_F
+	class MACRO_NEW_MAG(DM_17,1) : 30rnd_762x39_AK12_Mag_F
 	{
 		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		count = 4;
-		mass = 1;
+		count = 1;
+		mass = 5;
 		initspeed = 1400;
-		displayName = MACRO_AMMO_DISPLAYNAME(M17 HeartStarter,4)
+		displayName = MACRO_AMMO_DISPLAYNAME(M17 HeartStarter,1)
 		displayNameShort = "Heart Starter rnd";
 		descriptionShort = "332nd Heart Starter Round";
 		ammo = "HeartStarter_Round";
@@ -73,14 +73,14 @@ class cfgWeapons
 
 	class MACRO_NEW_WEAPON(DM_17) : optre_hgun_sas10_F
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DM 17)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DM 17 *WIP*)
 
 		ACE_Overheating_mrbs = 300000;
-		canShootInWaterMACRO_NEW_WEAPON = 1;
+		canShootInWater=1;
 		baseweapon = (DM_17)
 
 
-		magazines[] = { MACRO_NEW_MAG(DM_17,4) };
+		magazines[] = { MACRO_NEW_MAG(DM_17,1) };
 		magazineWell[] = {};
 		linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 
@@ -102,9 +102,9 @@ class cfgWeapons
 				weaponSoundEffect = "";
 				begin1[] =
 				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
+					"SWLW_clones\rifles\gl\sounds\gl",
 					1,
-					1.1,
+					3,
 					1800
 				};
 				soundBegin[] =
