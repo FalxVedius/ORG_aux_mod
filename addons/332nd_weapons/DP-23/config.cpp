@@ -41,21 +41,24 @@ class cfgWeapons
     {
 		scope=2;
 	    displayName=MACRO_WEAPON_DISPLAYNAME(DP-23 Shotgun)
-		reloadTime=0.1;
+		reloadTime=0.20;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_smg_03";
 		recoilprone="recoil_smg_03";
+		cursor="DOT_Test";
+        cursoraim="Shotgun_Test";
 		canShootInWater=1;
 		baseweapon="";
 		handling="2";
 		modes[]=  {
-		    "Single"
+		    "Single","FullAuto"
 		};
 		
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 
 		magazines[] = {
-			MACRO_NEW_MAG(DP23,12)
+			MACRO_NEW_MAG(DP23,12),
+			MACRO_NEW_MAG(DP23,12Wide)
 		};
 	
         class OpticsModes
@@ -143,8 +146,49 @@ class cfgWeapons
 					1,
 				};
 			};
-			reloadTime=0.35;
+			reloadTime=0.20;
 			dispersion=0.00000000000000000000045;
+			minRange=5;
+			minRangeProbab=0.30000001;
+			midRange=25;
+			midRangeProbab=0.60000002;
+			maxRange=50;
+			maxRangeProbab=0.1;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=25;
+		};
+
+		class FullAuto: Mode_FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				begin1[]=
+				{
+					"\SWLW_merc_trando\scatterguns\acpa\sounds\acpa",
+					1.5,
+					1.1,
+					1800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1,
+				};
+			};
+			reloadTime=0.20;
+			dispersion=0.002;
 			minRange=5;
 			minRangeProbab=0.30000001;
 			midRange=25;
@@ -179,14 +223,22 @@ class CfgMagazines
 	class MACRO_NEW_MAG(DP23,12): 30rnd_762x39_AK12_Mag_F //DP-23
 	{
 		scope=2;
-		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge,12)
+		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge Tight Spread,15)
 		ammo=MACRO_NEW_AMMO(DP23_Shell);
-		count=12;
+		count=15;
 		mass=10;
 		initspeed=1300;
 	};
-	
-	
+
+	class MACRO_NEW_MAG(DP23,12Wide): 30rnd_762x39_AK12_Mag_F //DP-23
+	{
+		scope=2;
+		displayName=MACRO_AMMO_DISPLAYNAME(DP23 Charge Wide Spread,15)
+		ammo=MACRO_NEW_AMMO(DP23_Shell_Wide);
+		count=15;
+		mass=10;
+		initspeed=1300;
+	};
 }
 
 class CfgAmmo
@@ -200,8 +252,8 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(DP23_Shell): B_12Gauge_Pellets_Submunition
 	{
 		submunitionAmmo = MACRO_NEW_AMMO(DP23_Pellet);
-		submunitionConeAngle = 0.8;
-		submunitionConeType[] = {"poissondisc",9};
+		submunitionConeAngle = 0.3;
+		submunitionConeType[] = {"poissondisc",12};
 
 		model = "ls_weapons_core\Effects\laser_blue.p3d";
 		effectfly = "ls_plasma_blue";
@@ -224,9 +276,17 @@ class CfgAmmo
 		typicalSpeed = 900;
 	}
 
+	class MACRO_NEW_AMMO(DP23_Shell_Wide): B_12Gauge_Pellets_Submunition
+	{
+		submunitionAmmo = MACRO_NEW_AMMO(DP23_Pellet);
+		submunitionConeAngle = 3;
+		submunitionConeAngleHorizontal=40;
+		submunitionConeType[] = {"poissondisc",12};
+	}
+
 	class MACRO_NEW_AMMO(DP23_Pellet): B_12Gauge_Pellets_Submunition_Deploy
 	{
-		hit = 8;
+		hit = 10;
 		caliber = 1;
 		typicalSpeed = 360;
 		effectfly = "ls_plasma_blue";

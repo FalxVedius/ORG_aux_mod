@@ -780,6 +780,12 @@ class CfgVehicles
 				count = 300;
 			};
 
+			class DC15c_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15c_x45";
+				count = 300;
+			};
+
 			class DC17_332nd
 			{
 				magazine = "332nd_aux_magazine_DC_17_x15";
@@ -815,6 +821,13 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_DP23_x12";
 				count = 100;
 			};
+
+			class DP_23Wide_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12Wide";
+				count = 100;
+			};
+			
 
 			class DW_32_HIGH_332nd
 			{

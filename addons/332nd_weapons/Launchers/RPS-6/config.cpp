@@ -42,7 +42,7 @@ class CfgWeapons
 		modes[]=  {
 		    "Single"
 		};
-		
+        cursor="RocketLauncher_Test";
 
 		magazines[] = {
 			MACRO_NEW_MAG(RPS6_ATMag,1),

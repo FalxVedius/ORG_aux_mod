@@ -37,6 +37,7 @@ class cfgWeapons
 		class EGLM;
 		class Single;
 		class FullAuto;
+		class Stun;
 	}
 
 	class JLTS_DC15A_ugl : JLTS_DC15A
@@ -48,6 +49,7 @@ class cfgWeapons
 		class EGLM;
 		class Single;
 		class FullAuto;
+		class Stun;
 	}
 
 	class MACRO_NEW_WEAPON(DC_15a): JLTS_DC15A_plastic
@@ -55,7 +57,8 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15a)
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
-
+		cursor="DOT_Test";
+        cursoraim="DC15A_Test";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15a_Medium,30),
 			MACRO_NEW_MAG(DC_15a_Low,60),
@@ -93,7 +96,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.17;
+			reloadTime=0.14;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
@@ -135,7 +138,7 @@ class cfgWeapons
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
-			reloadtime=0.17;
+			reloadtime=0.14;
 			dispersion=0.0000009;
 			aiBurstTerminable=1;
 			minRange=2;
@@ -200,7 +203,14 @@ class cfgWeapons
                 modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
             };
         };
-	}
+
+		class stun: stun
+		{
+		cursoraim="Stun_Test";
+		cursor="DOT_Test"
+		};
+	};
+
 
 
 	class MACRO_NEW_WEAPON(DC_15a_ugl): JLTS_DC15A_ugl
@@ -214,7 +224,8 @@ class cfgWeapons
 			MACRO_NEW_MAG(DC_15a_Low,60),
 		    MACRO_NEW_MAG(DC_15a_High,10)
 		};
-        
+		cursor="DOT_Test";
+        cursoraim="DC15A_Test";
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Single","FullAuto"};
 		class Single: Single
@@ -246,7 +257,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.17;
+			reloadTime=0.14;
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
@@ -288,7 +299,7 @@ class cfgWeapons
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
-			reloadtime=0.17;
+			reloadtime=0.14;
 			dispersion=0.0000009;
 			aiBurstTerminable=1;
 			minRange=2;
@@ -360,6 +371,8 @@ class cfgWeapons
 			useExternalOptic=0;
 			reloadTime=1;
 			showtoplayer=1;
+			cursor="DOT_Test";
+			cursorAim="UGL_Test";
 			cameraDir="OP_look";
 			discreteDistance[]={25,100,200,300,400};
 			discreteDistanceCameraPoint[]= {

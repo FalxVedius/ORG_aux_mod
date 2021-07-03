@@ -42,6 +42,7 @@ class CfgWeapons
 	    model = "\MRC\JLTS\weapons\PLX1\PLX1.p3d";
 		ace_reloadlaunchers_enabled=1;
 		canLock=2;
+        cursor="RocketLauncher_Test";
 		magazines[]=
 		{
 			MACRO_NEW_MAG(PLX1_ATMag,2),

@@ -29,7 +29,7 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=30;
 		mass=10;
-		initspeed=1400;
+		initspeed=1800;
 		displayName=MACRO_AMMO_DISPLAYNAME(15a Medium,30)
 		displayNameShort="Med Power rnd";
 		descriptionShort="332nd Medium Power Round";
@@ -41,7 +41,7 @@ class CfgMagazines
 	{
 		count=60;
 		mass=10;
-		initspeed=1400;
+		initspeed=1800;
 		displayName=MACRO_AMMO_DISPLAYNAME(15a Low,60)
 		displayNameShort="Low Power 60rnd";
 		descriptionShort="332nd Low Power Round";
@@ -152,8 +152,23 @@ class CfgMagazines
 		mass=12
 		initspeed=80;
 	};
-	
+	class MACRO_NEW_MAG(DC_15c_Medium,45): 30rnd_762x39_AK12_Mag_F //Medium Mag for DC15A/UGL
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=45;
+		mass=10;
+		initspeed=1600;
+		displayName=MACRO_AMMO_DISPLAYNAME(15C Medium,45)
+		displayNameShort="Med Power rnd";
+		descriptionShort="332nd Medium Power Round";
+		ammo="ls_ammo_762_blue";
+		tracersEvery=1;
+	};
 };
+	
 
 class CfgAmmo
 {
@@ -162,14 +177,16 @@ class CfgAmmo
 	{
 		hit=25;
 		indirecthit=20;
+		fuseDistance=15;
 		indirectHitRange=6;
-		 effectsMissile = "332nd_aux_effects_RPS4_green";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",3,1,500};
+		//effectfly="332nd_aux_effects_RPS4_green";
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
 	};
 	class SWLW_ammo_40mm_at;
 	class MACRO_NEW_AMMO(40mm_AP): SWLW_ammo_40mm_at
 	{
-		 effectsMissile = "332nd_aux_effects_RPS4_blue";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",3,1,500};
+		 //effectfly="332nd_aux_effects_RPS4_blue";
+		 fuseDistance=15;
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
 	};
 }

@@ -47,8 +47,7 @@ class CfgWeapons
 		modes[]=  {
 		    "Single"
 		};
-		
-
+        cursor="RocketLauncher_Test";
 		magazines[] = {"CBA_FakeLauncherMagazine"};
 		magazineWell[]={""};
 		ace_overpressure_angle=45;

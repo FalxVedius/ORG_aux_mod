@@ -47,7 +47,8 @@ class cfgWeapons
 		recoilprone="recoil_mx";
 		canShootInWater=1;
 		baseweapon="";
-		
+		cursor="DOT_Test";
+		cursoraim="Z6_Test";
 		modes[]=  {
 			"FullAuto",
 			"Supercharge"

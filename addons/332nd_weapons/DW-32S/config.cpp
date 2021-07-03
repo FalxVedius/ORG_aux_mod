@@ -30,6 +30,8 @@ class cfgWeapons
 	}
 	class JLTS_DW32S: arifle_MX_Base_F
 	{
+	class Stun;
+	 
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class PointerSlot;
@@ -46,9 +48,11 @@ class cfgWeapons
 		canShootInWater=1;
 		baseweapon="";
 		handling="2.6";
+		cursor="DOT_Test";
+        cursoraim="DMR_Test";
 		modes[]=  {
-			"FullAuto",
-			"Single"
+			"Single",
+			"Stun"
 		};
         weaponInfoType = "RscOptics_tws";
 		modelOptics="\A3\Weapons_f\acc\reticle_tws";
@@ -85,6 +89,13 @@ class cfgWeapons
 				cameraDir="";
 			};
 		};
+
+		class stun: stun
+		{
+		cursor="DOT_Test";
+        cursoraim="Stun_Test";
+		};
+
 		magazines[]=
 		{
 			MACRO_NEW_MAG(DW32_Med,20),
@@ -208,7 +219,7 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count=20;
 		mass=15;
-		initspeed=1900;
+		initspeed=2000;
 		displayName=MACRO_AMMO_DISPLAYNAME(Conc-Med,20)
 		displayNameShort="Conc-Med Power 20rnd";
 		descriptionShort="332nd Concentrated-Medium Power Round";

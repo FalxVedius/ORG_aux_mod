@@ -25,6 +25,7 @@ class cfgWeapons
 	{
 		class FullAuto;
 		class Single;
+		class Stun;
 	}
 	class MACRO_NEW_WEAPON(DC_15s):JLTS_DC15S
 	{
@@ -33,6 +34,8 @@ class cfgWeapons
 		canShootInWater=1;
 		recoil="recoil_spar";
 		recoilprone="recoil_spar";
+		cursor="DOT_Test";
+        cursoraim="DC15S_Test";
 		modes[]=  {
 		 "FullAuto",
 		 "Single"
@@ -68,8 +71,8 @@ class cfgWeapons
 				};
 			};
 			displayname="FullAuto";
-			reloadTime=0.09;
-			dispersion=0.0075;
+			reloadTime=0.08;
+			dispersion=0.004;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -78,6 +81,13 @@ class cfgWeapons
 			maxRangeProbab=0.1;
 			textureType="fastAuto";
 		};
+
+		class stun: stun
+		{
+		cursoraim="Stun_Test";
+		cursor="DOT_Test"
+		};
+
 		class Single: FullAuto
 		{
 			sounds[]=
@@ -107,7 +117,7 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.15;
+			reloadTime=0.14;
 			displayname="SlowAuto";
 			dispersion=0.001;
 			minRange=2;

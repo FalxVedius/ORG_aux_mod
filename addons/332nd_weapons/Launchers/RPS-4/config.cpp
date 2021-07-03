@@ -40,6 +40,7 @@ class CfgWeapons
 		modes[]=  {
 		    "Single"
 		};
+        cursor="RPS4_Test";
 		hiddenSelectionsTextures[]=
 		{
 			MACRO_WEAPON_TEXTURES_PATH\RPS4_01.paa,
