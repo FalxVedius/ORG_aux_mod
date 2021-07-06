@@ -45,6 +45,7 @@ class CfgVehicles
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Radio Pack)
         scope = 2;
+        maximumLoad = 300;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";
