@@ -13,9 +13,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
             MACRO_NEW_BACKPACK(blufor,332nd_jt_12),
-            MACRO_NEW_BACKPACK(blufor,332nd_jt_12_1),
-            MACRO_NEW_BACKPACK(blufor,332nd_jt_12_2),
-            MACRO_NEW_BACKPACK(blufor,332nd_jt_12_3),
+            MACRO_NEW_BACKPACK(blufor,332nd_jt_12_LR),
             };
 		weapons[] = {};
 	};
@@ -28,53 +26,14 @@ class CfgVehicles
     
 	class MACRO_NEW_BACKPACK(blufor,332nd_jt_12): MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
     {
-        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Basic)
+        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Trooper)
         scope = 2;
         maximumLoad = 300;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
-    }
-
-    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_1) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
-    {
-        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,60-Fuel)
-        scope = 2;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
-
-        NSM_jumppack_spam_delay = 1;
-        NSM_jumppack_energy_capacity = 60;
-        NSM_jumppack_recharge = 2;
-
-        JLTS_isJumppack = 0;
-
-        //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_is_jumppack = 0;
-    }
-
-    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_2) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
-    {
-        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,80-Fuel)
-        scope = 2;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
         NSM_jumppack_spam_delay = 1;
         NSM_jumppack_energy_capacity = 80;
-        NSM_jumppack_recharge = 2;
-
-        JLTS_isJumppack = 0;
-
-        //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_is_jumppack = 0;
-    }
-
-    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_3) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
-    {
-        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,100-Fuel)
-        scope = 2;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
-
-        NSM_jumppack_spam_delay = 0;
-        NSM_jumppack_energy_capacity = 100;
-        NSM_jumppack_recharge = 2;
+        NSM_jumppack_recharge = 4;
 
         JLTS_isJumppack = 0;
 
@@ -86,6 +45,7 @@ class CfgVehicles
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Radio Pack)
         scope = 2;
+        maximumLoad = 300;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";
@@ -97,7 +57,7 @@ class CfgVehicles
 
         NSM_jumppack_spam_delay = 0;
         NSM_jumppack_energy_capacity = 80;
-        NSM_jumppack_recharge = 2;
+        NSM_jumppack_recharge = 4;
 
         JLTS_isJumppack = 0;
 
