@@ -1,7 +1,7 @@
 // ============================================================================== Configuration
 
 	#define MACRO_AUTHOR "332nd Aux Team"
-	#define MACRO_AUTHOR_PPL "Halligan, Poseidon, Namenai"
+	#define MACRO_AUTHOR_PPL "Halligan, Falx, Poseidon, Namenai"
 	#define MACRO_MODNAME 332nd_aux
 	#define MACRO_MODNAME_SCRIPT aux_332nd
 	#define MACRO_MOD_VERSION 5.13.21a
@@ -40,8 +40,10 @@
 	#define MACRO_NEW_AMMO(name) MACRO_MODNAME##_ammo_##name
 	#define MACRO_NEW_NVG(name) MACRO_MODNAME##_nvg_##name
 	#define MACRO_NEW_BINO(name) MACRO_MODNAME##_bino_##name
+	#define MACRO_NEW_MEDICAL_ITEM(name) MACRO_MODNAME##_medical_##name
 
 	//displayname
+	#define MACRO_MEDICAL_ITEM_DISPLAYNAME(name) [332nd] name;
 	#define MACRO_ITEM_DISPLAYNAME(type,name) [332nd] type ('##name##');
 	#define MACRO_WEAPON_DISPLAYNAME(name) [332nd] name;
 	#define MACRO_AMMO_DISPLAYNAME(name,count) [332nd] name mag, count##rnd;
