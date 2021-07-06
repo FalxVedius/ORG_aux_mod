@@ -155,12 +155,100 @@ class CfgVehicles
         forceInGarage = 1;
         displayName = "LAAT Mk1";
         armor = 100 * 0.5;
+
+
+        class HitPoints : HitPoints
+        {
+            class HitHull : HitHull
+            {
+                armor = 999;
+                convexComponent = "hull_hit";
+                depends = "Total";
+                explosionShielding = 1;
+                material = 51;
+                name = "hull_hit";
+                passThrough = 1;
+                visual = "zbytek";
+                radius = 0.01;
+            };
+            class HitFuel : HitFuel
+            {
+                convexcomponent = "fuel_hit";
+                hitpoint = "fuel_hit";
+                name = "fuel_hit";
+                explosionShielding = 2;
+                radius = 0.1;
+                visual = "";
+                passthrough = 0.1;
+                minimalhit = 0.1;
+                material = -1;
+                armor = 0.6 * 5;
+            };
+            class HitEngine : HitEngine
+            {
+                armor = 0.5;
+                convexComponent = "engine_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "engine_hit";
+                hitpoint = "engine_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.2 * 5;
+            };
+            class HitEngine_1 : HitEngine_1
+            {
+                convexComponent = "engine_hit_1";
+                name = "engine_hit_1";
+                hitpoint = "engine_hit_1";
+            };
+            class HitEngine_2 : HitEngine_2
+            {
+                convexComponent = "engine_hit_2";
+                name = "engine_hit_2";
+                hitpoint = "engine_hit_2";
+            };
+            class HitHRotor : HitHRotor
+            {
+                armor = 3 * 5;
+                convexComponent = "main_rotor_hit";
+                explosionShielding = 2.5;
+                material = 51;
+                name = "main_rotor_hit";
+                passThrough = 0.1;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitVRotor : HitVRotor
+            {
+                armor = 3 * 5;
+                convexComponent = "tail_rotor_hit";
+                explosionShielding = 6;
+                material = 51;
+                name = "tail_rotor_hit";
+                passThrough = 0.3;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitAvionics : HitAvionics
+            {
+                armor = 1 * 5;
+                convexComponent = "avionics_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "avionics_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.5;
+            };
+        };
     }
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
     {
         displayName = "LAAT Mk1 (Ahegao Squadron)";
         forceInGarage = 0;
+        armor = 100 * 0.5;
 
         hiddenselections[] = {
             "body","body_2",
@@ -178,6 +266,93 @@ class CfgVehicles
             MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
             "swlb_a_vehicle\laat\data\missiles_co.paa",
             MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+        };
+
+
+        class HitPoints : HitPoints
+        {
+            class HitHull : HitHull
+            {
+                armor = 999;
+                convexComponent = "hull_hit";
+                depends = "Total";
+                explosionShielding = 1;
+                material = 51;
+                name = "hull_hit";
+                passThrough = 1;
+                visual = "zbytek";
+                radius = 0.01;
+            };
+            class HitFuel : HitFuel
+            {
+                convexcomponent = "fuel_hit";
+                hitpoint = "fuel_hit";
+                name = "fuel_hit";
+                explosionShielding = 2;
+                radius = 0.1;
+                visual = "";
+                passthrough = 0.1;
+                minimalhit = 0.1;
+                material = -1;
+                armor = 0.6 * 5;
+            };
+            class HitEngine : HitEngine
+            {
+                armor = 0.5;
+                convexComponent = "engine_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "engine_hit";
+                hitpoint = "engine_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.2 * 5;
+            };
+            class HitEngine_1 : HitEngine_1
+            {
+                convexComponent = "engine_hit_1";
+                name = "engine_hit_1";
+                hitpoint = "engine_hit_1";
+            };
+            class HitEngine_2 : HitEngine_2
+            {
+                convexComponent = "engine_hit_2";
+                name = "engine_hit_2";
+                hitpoint = "engine_hit_2";
+            };
+            class HitHRotor : HitHRotor
+            {
+                armor = 3 * 5;
+                convexComponent = "main_rotor_hit";
+                explosionShielding = 2.5;
+                material = 51;
+                name = "main_rotor_hit";
+                passThrough = 0.1;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitVRotor : HitVRotor
+            {
+                armor = 3 * 5;
+                convexComponent = "tail_rotor_hit";
+                explosionShielding = 6;
+                material = 51;
+                name = "tail_rotor_hit";
+                passThrough = 0.3;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitAvionics : HitAvionics
+            {
+                armor = 1 * 5;
+                convexComponent = "avionics_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "avionics_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.5;
+            };
         };
     }
 }
