@@ -28,7 +28,7 @@ class CfgVehicles
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Trooper)
         scope = 2;
-        maximumLoad = 300;
+        maximumLoad = 260;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
         NSM_jumppack_spam_delay = 1;
@@ -45,7 +45,7 @@ class CfgVehicles
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Radio Pack)
         scope = 2;
-        maximumLoad = 300;
+        maximumLoad = 260;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";
