@@ -198,12 +198,14 @@ class CfgVehicles
             };
             class HitEngine_1 : HitEngine_1
             {
+                armor = 0.5;
                 convexComponent = "engine_hit_1";
                 name = "engine_hit_1";
                 hitpoint = "engine_hit_1";
             };
             class HitEngine_2 : HitEngine_2
             {
+                armor = 0.5;
                 convexComponent = "engine_hit_2";
                 name = "engine_hit_2";
                 hitpoint = "engine_hit_2";
@@ -310,12 +312,14 @@ class CfgVehicles
             };
             class HitEngine_1 : HitEngine_1
             {
+                armor = 0.5;
                 convexComponent = "engine_hit_1";
                 name = "engine_hit_1";
                 hitpoint = "engine_hit_1";
             };
             class HitEngine_2 : HitEngine_2
             {
+                armor = 0.5;
                 convexComponent = "engine_hit_2";
                 name = "engine_hit_2";
                 hitpoint = "engine_hit_2";

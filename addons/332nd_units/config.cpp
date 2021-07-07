@@ -725,7 +725,7 @@ class CfgVehicles
 
 			class RPS1_Weps_332nd
 			{
-				weapon = "332nd_aux_weapon_RPS_1_Loaded";
+				weapon = "332nd_aux_weapon_RPS_1";
 				count = 5;
 			};
 		};
@@ -782,7 +782,7 @@ class CfgVehicles
 
 			class DC15c_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_15c_x45";
+				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
 				count = 300;
 			};
 
