@@ -64,6 +64,6 @@ class CfgWeaponCursors
 	};
 	class DOT_Test: throw
 	{
-		texture="332nd_weapons\Reticules\DOT.paa";
+		texture="332nd_weapons\Reticules\DOT.paa"; //Need to add 15L possibly more variation to snipers?
 	};
 }
