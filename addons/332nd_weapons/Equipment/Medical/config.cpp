@@ -171,8 +171,6 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Bacta Tank";
 		displayNameProgress = "Transfusing Bacta...";
-
-		litter[] = { {}, { "332nd_aux_medical_Blood_Litter"} };
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Blood) : BloodIV
 	{
@@ -180,8 +178,6 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Blood Tank";
 		displayNameProgress = "Transfusing Blood...";
-
-		litter[] = { {}, { "332nd_aux_medical_Blood_Litter"} };
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Kolto) : BloodIV
 	{
@@ -189,8 +185,6 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Kolto Tank";
 		displayNameProgress = "Transfusing Kolto...";
-
-		litter[] = { {}, { "332nd_aux_medical_Kolto_Litter"} };
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Adrenaline) : Epinephrine
 	{
@@ -198,8 +192,6 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Adrenaline Injector";
 		displayNameProgress = "Injecting Adrenaline...";
-
-		litter[] = { {}, { "332nd_aux_medical_Adrenaline_Litter"} };
 	};
 	class MACRO_NEW_MEDICAL_ITEM(PainKiller) : Morphine
 	{
@@ -207,8 +199,6 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Pain Killer Stimulant";
 		displayNameProgress = "Injecting Stimulant...";
-
-		litter[] = { {}, { "332nd_aux_medical_PainKiller_Litter"} };
 	};
 	class MACRO_NEW_MEDICAL_ITEM(PainKillerBottle) : Morphine
 	{
