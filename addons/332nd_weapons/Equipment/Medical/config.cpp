@@ -16,6 +16,21 @@ class CfgPatches
 	};
 };
 
+class ace_medical_replacementItems
+{
+	MACRO_NEW_MEDICAL_ITEM(BactaSpray_x25)[] = { {"332nd_aux_medical_BactaSpray",25} };
+	MACRO_NEW_MEDICAL_ITEM(BactaSpray_x10)[] = { {"332nd_aux_medical_BactaSpray",10} };
+	MACRO_NEW_MEDICAL_ITEM(BactaSpray_x5)[] = { {"332nd_aux_medical_BactaSpray",5} };
+
+	MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x25)[] = { {"332nd_aux_medical_PlastiBandage",25} };
+	MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x10)[] = { {"332nd_aux_medical_PlastiBandage",10} };
+	MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x5)[] = { {"332nd_aux_medical_PlastiBandage",5} };
+
+	MACRO_NEW_MEDICAL_ITEM(MedPatch_x25)[] = { {"332nd_aux_medical_MedPatch",25} };
+	MACRO_NEW_MEDICAL_ITEM(MedPatch_x10)[] = { {"332nd_aux_medical_MedPatch",10} };
+	MACRO_NEW_MEDICAL_ITEM(MedPatch_x5)[] = { {"332nd_aux_medical_MedPatch",5} };
+};
+
 class ACE_Medical_Treatment
 {
 	class Bandaging
@@ -604,6 +619,150 @@ class CfgWeapons
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 1;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(BactaSpray_x25) : ACE_elasticBandage
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(25 x Bacta Spray Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\medikit_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\medikit.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 25;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(BactaSpray_x10) : ACE_elasticBandage
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(10 x Bacta Spray Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\medikit_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\medikit.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 10;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(BactaSpray_x5) : ACE_elasticBandage
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(5 x Bacta Spray Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\medikit_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\medikit.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 5;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x25) : ACE_packingBandage
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(25 x Plasti Bandage Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\electrolit_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\electrolit.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 25;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x10) : ACE_packingBandage
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(10 x Plasti Bandage Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\electrolit_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\electrolit.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 10;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x5) : ACE_packingBandage
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(5 x Plasti Bandage Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\electrolit_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\electrolit.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 5;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(MedPatch_x25) : ACE_quikclot
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(25 x Med - Patch Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\deathstick_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\deathstick.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 25;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(MedPatch_x10) : ACE_quikclot
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(10 x Med - Patch Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\deathstick_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\deathstick.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 10;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(MedPatch_x5) : ACE_quikclot
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(5 x Med - Patch Pack)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\deathstick_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\deathstick.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 5;
 		};
 	};
 };
