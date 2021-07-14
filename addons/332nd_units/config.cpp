@@ -4027,30 +4027,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -4221,30 +4221,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -4416,30 +4416,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -4610,30 +4610,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -4804,30 +4804,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -4998,30 +4998,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -5192,30 +5192,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -5386,30 +5386,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -5574,30 +5574,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
@@ -5762,30 +5762,30 @@ class CfgVehicles
 		{
 			class HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "face_hub";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.079999998;
 				explosionShielding = 0.1;
 				minimalHit = 0.0099999998;
 			};
 			class HitNeck : HitFace
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "neck";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.1;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;
 			};
 			class HitHead : HitNeck
 			{
-				armor = 2;
+				armor = 1;
 				material = -1;
 				name = "head";
-				passThrough = 0.80000001;
+				passThrough = 0.90000001;
 				radius = 0.2;
 				explosionShielding = 0.5;
 				minimalHit = 0.0099999998;

@@ -27,12 +27,23 @@ class CfgFunctions
 			{
 
 			};
-
 			class RestartHeartLocal
 			{
 
 			};
+			class MedicalInit
+			{
+
+			};
 		};
+	};
+};
+
+class Extended_PostInit_EventHandlers 
+{
+	class MACRO_PATCH_NAME(medical_postInit) 
+	{
+		init = "nul = [] spawn Aux332nd_fnc_MedicalInit";
 	};
 };
 
