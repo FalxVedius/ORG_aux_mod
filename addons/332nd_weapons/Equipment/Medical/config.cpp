@@ -16,6 +16,26 @@ class CfgPatches
 	};
 };
 
+class CfgFunctions
+{
+	class Aux332nd
+	{
+		class Medical
+		{
+			file = "\332nd_weapons\Equipment\Medical";
+			class RestartHeart
+			{
+
+			};
+
+			class RestartHeartLocal
+			{
+
+			};
+		};
+	};
+};
+
 class ace_medical_replacementItems
 {
 	MACRO_NEW_MEDICAL_ITEM(BactaSpray_x25)[] = { {"332nd_aux_medical_BactaSpray",25} };
@@ -132,17 +152,37 @@ class ACE_Medical_Treatment
 			timeTillMaxEffect = 30;
 			viscosityChange = -1;
 		};
-		class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : Epinephrine
+		/*class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : Epinephrine
 		{
 
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Kolto_Inj) : Epinephrine
 		{
 
-		};
+		};*/
 		class MACRO_NEW_MEDICAL_ITEM(Combat) : Epinephrine
 		{
-
+			hrIncreaseHigh[] =
+			{
+				-10,
+				-30
+			};
+			hrIncreaseLow[] =
+			{
+				-10,
+				-20
+			};
+			hrIncreaseNormal[] =
+			{
+				-10,
+				-30
+			};
+			incompatibleMedication[] = {};
+			maxDose = 4;
+			painReduce = 0;
+			timeInSystem = 60;
+			timeTillMaxEffect = 30;
+			viscosityChange = -10;
 		};
 	};
 };
@@ -158,6 +198,7 @@ class ACE_Medical_Treatment_Actions
 	class SurgicalKit;
 	class ApplyTourniquet;
 	class RemoveTourniquet;
+	class CPR;
 
 	class MACRO_NEW_MEDICAL_ITEM(BactaSpray) : ElasticBandage
 	{
@@ -277,6 +318,24 @@ class ACE_Medical_Treatment_Actions
 		displayName = "Combat Stimulant";
 		displayNameProgress = "Injecting Stimulant...";
 	};
+	class MACRO_NEW_MEDICAL_ITEM(AdhesiveDefibStrip) : CPR
+	{
+		items[] = { "332nd_aux_medical_AdhesiveDefibStrip" };
+
+		displayName = "Adhesive Defib Strip";
+		displayNameProgress = "Applying Defib Strip...";
+
+		consumeItem = 1;
+		medicRequired = 1;
+		callbackSuccess = "Aux332nd_fnc_RestartHeart";
+	};
+	class MACRO_NEW_MEDICAL_ITEM(PFG) : Epinephrine
+	{
+		items[] = { "332nd_aux_medical_PFG" };
+
+		displayName = "PFG Injector";
+		displayNameProgress = "Injecting PFG...";
+	};
 };
 
 class CfgWeapons
@@ -299,8 +358,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\medikit_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\medikit.p3d";
+		picture = "\z\ace\addons\tagging\UI\items\itemSpraypaintBlack.paa";
+		model = "\z\ace\addons\tagging\data\SprayCan.p3d";
 		
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -629,8 +688,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\medikit_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\medikit.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -645,8 +704,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\medikit_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\medikit.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -661,8 +720,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\medikit_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\medikit.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -677,8 +736,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\electrolit_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\electrolit.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -693,8 +752,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\electrolit_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\electrolit.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -709,8 +768,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\electrolit_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\electrolit.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -725,8 +784,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\deathstick_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\deathstick.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -741,8 +800,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\deathstick_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\deathstick.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
@@ -757,12 +816,55 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\deathstick_ui_ca.paa";
-		model = "\MRC\JLTS\contraband\Drugs\deathstick.p3d";
+		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 5;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(AdhesiveDefibStrip) : ACE_elasticBandage
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Adhesive Defib Strip)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Intel\data\ui\datapad_civ_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Intel\datapad_civ.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 1;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(PFG) : ACE_epinephrine
+	{
+		scope = 2;
+		scopeArsenal = 0;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(PFG)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\stimulant_echani_battle_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\stimulant.p3d";
+
+		hiddenSelections[] =
+		{
+			"camo1"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"\MRC\JLTS\contraband\Drugs\data\stimulant_echani_battle_co.paa"
+		};
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 1;
 		};
 	};
 };
