@@ -7,9 +7,6 @@ params ["_medic", "_patient"];
 
 if (true) then {
     //TRACE_1("CPR random success",GVAR(cprSuccessChance));
-	systemChat "Calling Local event for CPR succeeded";
-	
-	systemChat format["Local Patient:%1", _pa];
 	
     ["ace_medical_CPRSucceeded", _patient] call CBA_fnc_localEvent;
 	//_patient setVariable ["ace_medical_heartRate",50, true];
