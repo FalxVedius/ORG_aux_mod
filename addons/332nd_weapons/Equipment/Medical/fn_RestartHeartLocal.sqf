@@ -13,6 +13,7 @@ if (true) then {
 	systemChat "Local Patient:"
 	systemChat _pa;
     ["ace_medical_CPRSucceeded", _patient] call CBA_fnc_localEvent;
+	_patient setVariable ["ace_medical_heartRate",50, true];
 } else {
     //TRACE_1("CPR random fail",GVAR(cprSuccessChance));
 };
