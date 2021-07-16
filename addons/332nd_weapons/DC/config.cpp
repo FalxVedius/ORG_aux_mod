@@ -194,6 +194,22 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(556_Red);
 		tracersEvery=1;
 	};
+
+	class MACRO_NEW_MAG(Valken38x,15): 30rnd_762x39_AK12_Mag_F //Medium Mag for DC15A/UGL
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=15;
+		mass=15;
+		initspeed=2000;
+		displayName=MACRO_AMMO_DISPLAYNAME(Valken 38x Ref Med,15)
+		displayNameShort="Med Power rnd";
+		descriptionShort="332nd Medium Power Round";
+		ammo=MACRO_NEW_AMMO(408_Blue);
+		tracersEvery=1;
+	};
 };
 	
 
@@ -257,6 +273,11 @@ class CfgAmmo
 	class ls_ammo_65_red;
 	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
 	{
-		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,4,100};
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
+	};
+	class ls_ammo_408_blue;
+	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue
+	{
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200};
 	};
 }
