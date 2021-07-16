@@ -2002,6 +2002,26 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+
 		class HitPoints : HitPoints
 		{
 			class HitFace
@@ -2183,6 +2203,26 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1jumppack,base);
+
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
 
 		class HitPoints : HitPoints
 		{
@@ -2735,6 +2775,26 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+
 		class HitPoints : HitPoints
 		{
 			class HitFace
@@ -3099,6 +3159,26 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1crew,base);
 
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+
 		class HitPoints : HitPoints
 		{
 			class HitFace
@@ -3280,6 +3360,26 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1comm,base);
+
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
 
 		class HitPoints : HitPoints
 		{
@@ -3463,6 +3563,26 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1marine,base);
 
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+
 		class HitPoints : HitPoints
 		{
 			class HitFace
@@ -3645,6 +3765,26 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1sec,base);
 
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+
 		class HitPoints : HitPoints
 		{
 			class HitFace
@@ -3826,6 +3966,26 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1pilot,base);
+
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
 
 		class HitPoints : HitPoints
 		{

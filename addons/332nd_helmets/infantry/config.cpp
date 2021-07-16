@@ -20,6 +20,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,george),
             MACRO_NEW_HELMET(infantry,Halligan),
 			MACRO_NEW_HELMET(infantry,Riddle),
+			MACRO_NEW_HELMET(infantry,Hoggy),
 			MACRO_NEW_HELMET(infantry,332nd_recruit),
         };
 		weapons[] = {};
@@ -40,4 +41,5 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(george,George,George.paa)
     MACRO_NEW_INF_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Riddle,Riddle,Riddle.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Hoggy,Hoggy,Hoggy.paa)
 }

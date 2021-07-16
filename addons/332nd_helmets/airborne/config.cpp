@@ -14,6 +14,8 @@ class CfgPatches
 		units[] = {
             // helmets
             MACRO_NEW_HELMET(ab,332nd_airborne),
+			MACRO_NEW_HELMET(ab,332nd_airborne_veteran),
+			MACRO_NEW_HELMET(ab,Chronic),
         };
 		weapons[] = {};
 	};
@@ -26,4 +28,6 @@ class CfgWeapons
     class MACRO_NEW_HELMET(airborne,base);
 
     MACRO_NEW_AB_HELMET_ITEM(332nd_airborne,332nd Airborne,AB.paa)
+	MACRO_NEW_AB_HELMET_ITEM(332nd_airborne_veteran,332nd Airborne Veteran,AB_Vet_Helmet.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Chronic,Chronic,Chronic.paa)
 }

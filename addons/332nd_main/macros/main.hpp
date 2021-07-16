@@ -164,7 +164,7 @@
 	#define MACRO_NEW_CISB1_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisb1,classname): MACRO_NEW_UNIFORM(cisb1,base)\
 		{\
-			displayName = [332nd] Battle droid ('##displayname##');\
+			displayName = [332nd] CIS Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -174,7 +174,7 @@
 	#define MACRO_NEW_CISB1JUMPPACK_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisb1jumppack,classname): MACRO_NEW_UNIFORM(cisb1jumppack,base)\
 		{\
-			displayName = [332nd] Juumppack Battle droid ('##displayname##');\
+			displayName = [332nd] CIS Juumppack Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -184,7 +184,7 @@
 	#define MACRO_NEW_CISB1CREW_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisb1crew,classname): MACRO_NEW_UNIFORM(cisb1crew,base)\
 		{\
-			displayName = [332nd] Crew Battle droid ('##displayname##');\
+			displayName = [332nd] CIS Crew Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -194,7 +194,7 @@
 	#define MACRO_NEW_CISB1COMM_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisb1comm,classname): MACRO_NEW_UNIFORM(cisb1comm,base)\
 		{\
-			displayName = [332nd] Commander Battle droid ('##displayname##');\
+			displayName = [332nd] CIS Commander Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -204,7 +204,7 @@
 	#define MACRO_NEW_CISB1MARINE_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisb1marine,classname): MACRO_NEW_UNIFORM(cisb1marine,base)\
 		{\
-			displayName = [332nd] Marine Battle droid ('##displayname##');\
+			displayName = [332nd] CIS Marine Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -214,7 +214,7 @@
 	#define MACRO_NEW_CISB1SEC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisb1sec,classname): MACRO_NEW_UNIFORM(cisb1sec,base)\
 		{\
-			displayName = [332nd] Security Battle droid ('##displayname##');\
+			displayName = [332nd] CIS Security Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -224,7 +224,7 @@
 	#define MACRO_NEW_CISB1PILOT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisb1pilot,classname): MACRO_NEW_UNIFORM(cisb1pilot,base)\
 		{\
-			displayName = [332nd] Pilot Battle droid ('##displayname##');\
+			displayName = [332nd] CIS Pilot Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -234,7 +234,7 @@
 	#define MACRO_NEW_CISBX_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisbx,classname): MACRO_NEW_UNIFORM(cisbx,base)\
 		{\
-			displayName = [332nd] BX Battle droid ('##displayname##');\
+			displayName = [332nd] CIS BX Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -244,7 +244,7 @@
 	#define MACRO_NEW_CISBXCAPT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisbxcapt,classname): MACRO_NEW_UNIFORM(cisbxcapt,base)\
 		{\
-			displayName = [332nd] BX Captain Battle droid ('##displayname##');\
+			displayName = [332nd] CIS BX Captain Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -254,7 +254,7 @@
 	#define MACRO_NEW_CISBXSEC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisbxsec,classname): MACRO_NEW_UNIFORM(cisbxsec,base)\
 		{\
-			displayName = [332nd] BX Security Battle droid ('##displayname##');\
+			displayName = [332nd] CIS BX Security Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
@@ -264,7 +264,7 @@
 	#define MACRO_NEW_CISBXDIPLO_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(cisbxdiplo,classname): MACRO_NEW_UNIFORM(cisbxdiplo,base)\
 		{\
-			displayName = [332nd] BX Diplomat Battle droid ('##displayname##');\
+			displayName = [332nd] CIS BX Diplomat Battle droid ('##displayname##');\
 			scope = 2;\
 			class ItemInfo: ItemInfo\
 			{\
