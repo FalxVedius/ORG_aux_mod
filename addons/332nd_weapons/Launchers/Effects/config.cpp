@@ -114,6 +114,25 @@ class CfgCloudlets
 		weight = 1;
 		emissiveColor[] = {{1,0.8,0.8,1}};
 	};
+
+    class ArtilleryShell1;
+    class 332nd_aux_effects_smoke_tracerblue: ArtilleryShell1
+	{
+		color[] = {{0.2,0,0.8,0.20},{0.1,0.1,0.85,0.10},{0.15,0.15,0.9,0.02},{0.2,0.2,0.95,0.006},{0.25,0.25,1,0.001}};
+		colorVar[] = {0,0,0,0};
+		colorCoef[] = {1,1,1,1};
+		volume = 20;	
+        lifetime = 0.6;
+        size[] = {0.6,1.8,2.5};
+        interval = 0.005;
+        weight=4;
+        emissiveColor[] = {{0.5,0.5,0.8,0.14},{0.8,0.8,0.8,0.5}};
+	};
+    class 332nd_aux_effects_smoke_tracergreen: 332nd_aux_effects_smoke_tracerblue
+    {
+    color[] = {{0.2,0.8,0,0.20},{0.1,0.85,0.1,0.10},{0.15,0.9,0.15,0.02},{0.2,0.95,0.2,0.006},{0.25,1,0.25,0.001}};
+    emissiveColor[] = {{0.5,0.8,0.5,0.14},{0.8,0.8,0.8,0.5}};
+    };
 };
 
 class 332nd_aux_effects_missile_blue
@@ -269,6 +288,24 @@ class 332nd_aux_effects_missile_plx_red
     class MissileEffect2 : MissileEffect1
     {
         type = "332nd_aux_effects_sparks_red";
+    };
+};
+
+class 332nd_aux_effects_blue_bullet
+{
+    class MissileEffect1
+    {
+        simulation = "particles";
+        type = "332nd_aux_effects_smoke_tracerblue"; 
+    };
+};
+
+class 332nd_aux_effects_green_bullet
+{
+    class MissileEffect1
+    {
+        simulation = "particles";
+        type = "332nd_aux_effects_smoke_tracergreen"; 
     };
 };
 	

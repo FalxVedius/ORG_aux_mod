@@ -34,8 +34,8 @@ class cfgWeapons
 		recoil="recoil_spar";
 		recoilprone="recoil_spar";
 		canShootInWater=1;
-		cursoraim="DC15S_Test";
-		cursor="DOT_Test";
+		cursoraim="332_DC15S";
+		cursor="332_DOT";
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
         linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
 

@@ -30,7 +30,8 @@ class cfgWeapons
 	class MACRO_NEW_WEAPON(DC_15l):3AS_DC15L_F
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L)
-
+		cursor="332_DOT";
+        cursoraim="332_Chevron";
 		reloadTime=0.16;
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
@@ -39,7 +40,8 @@ class cfgWeapons
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws_mg";
 
 		magazines[] = {
-			MACRO_NEW_MAG(DC_15L,125)
+			MACRO_NEW_MAG(DC_15L,125),
+			MACRO_NEW_MAG(DC_15L,125_T)
 		};
 
 		class WeaponSlotsInfo: WeaponSlotsInfo

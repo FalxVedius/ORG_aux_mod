@@ -8,7 +8,8 @@ class CfgPatches
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -48,8 +49,8 @@ class cfgWeapons
 		canShootInWater=1;
 		baseweapon="";
 		handling="2.6";
-		cursor="DOT_Test";
-        cursoraim="DMR_Test";
+		cursor="332_DOT";
+        cursoraim="332_DMR";
 		modes[]=  {
 			"Single",
 			"Stun"
@@ -92,14 +93,16 @@ class cfgWeapons
 
 		class stun: stun
 		{
-		cursor="DOT_Test";
-        cursoraim="Stun_Test";
+		cursor="332_DOT";
+        cursoraim="332_Stun";
 		};
 
 		magazines[]=
 		{
 			MACRO_NEW_MAG(DW32_Med,20),
-			MACRO_NEW_MAG(DW32_High,5)
+			MACRO_NEW_MAG(DW32_Med_T,20),
+			MACRO_NEW_MAG(DW32_High,5),
+			MACRO_NEW_MAG(DW32_High_T,5)
 		};
 		
 		class Single: Mode_SemiAuto
@@ -144,54 +147,7 @@ class cfgWeapons
 			maxRangeProbab=0.1;
 			aiRateOfFire=2;
 			aiRateOfFireDistance=25;
-		};
-		
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
-					3,
-					0.9,
-					1800
-				};
-				
-				soundBegin[]=
-				{
-					"begin1",
-					0.1,
-					
-				};
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			reloadTime=0.2;
-			dispersion=0.000000000005;
-			minRange=5;
-			minRangeProbab=0.30000001;
-			midRange=25;
-			midRangeProbab=0.60000002;
-			maxRange=50;
-			maxRangeProbab=0.1;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=25;
-		};
-			
+		};		
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
 			class PointerSlot: PointerSlot
@@ -223,9 +179,26 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(Conc-Med,20)
 		displayNameShort="Conc-Med Power 20rnd";
 		descriptionShort="332nd Concentrated-Medium Power Round";
-		ammo="ls_ammo_338_blue";
+		ammo=MACRO_NEW_AMMO(338_Blue);
 		tracersEvery=1;
 	};
+
+	class MACRO_NEW_MAG(DW32_Med_T,20): 30rnd_762x39_AK12_Mag_F //DW-32S
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=20;
+		mass=15;
+		initspeed=2000;
+		displayName=MACRO_AMMO_DISPLAYNAME(Conc-Med Tracer,20)
+		displayNameShort="Conc-Med Power Tracer 20rnd";
+		descriptionShort="332nd Concentrated-Medium Power Tracer Round";
+		ammo=MACRO_NEW_AMMO(338_Blue_T);
+		tracersEvery=1;
+	};
+
 	class MACRO_NEW_MAG(DW32_High,5): 30rnd_762x39_AK12_Mag_F //DW-32S
 	{
 	    modelSpecial="";
@@ -241,5 +214,20 @@ class CfgMagazines
 		ammo="ls_ammo_127x108_green";
 		tracersEvery=1;
 	};
-	
+
+	class MACRO_NEW_MAG(DW32_High_T,5): 30rnd_762x39_AK12_Mag_F //DW-32S
+	{
+	    modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=5;
+		mass=15
+		initspeed=2100;
+		displayName="332nd HighHv Tracer 5rnd";
+		displayName=MACRO_AMMO_DISPLAYNAME(High Power Tracer,5)
+		descriptionShort="332nd High Power-High Velocity Tracer Round";
+		ammo=MACRO_NEW_AMMO(127x108_green_T);
+		tracersEvery=1;
+	};
 }

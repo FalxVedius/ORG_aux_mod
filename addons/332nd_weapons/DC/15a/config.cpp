@@ -57,8 +57,8 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15a)
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
-		cursor="DOT_Test";
-        cursoraim="DC15A_Test";
+		cursor="332_DOT";
+        cursoraim="332_DC15A";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15a_Medium,30),
 			MACRO_NEW_MAG(DC_15a_Low,60),
@@ -206,8 +206,8 @@ class cfgWeapons
 
 		class stun: stun
 		{
-		cursoraim="Stun_Test";
-		cursor="DOT_Test"
+		cursoraim="332_Stun";
+		cursor="332_DOT"
 		};
 	};
 
@@ -224,8 +224,8 @@ class cfgWeapons
 			MACRO_NEW_MAG(DC_15a_Low,60),
 		    MACRO_NEW_MAG(DC_15a_High,10)
 		};
-		cursor="DOT_Test";
-        cursoraim="DC15A_Test";
+		cursor="332_DOT";
+        cursoraim="332_DC15A";
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Single","FullAuto"};
 		class Single: Single
@@ -371,8 +371,8 @@ class cfgWeapons
 			useExternalOptic=0;
 			reloadTime=1;
 			showtoplayer=1;
-			cursor="DOT_Test";
-			cursorAim="UGL_Test";
+			cursor="332_DOT";
+			cursorAim="332_UGL";
 			cameraDir="OP_look";
 			discreteDistance[]={25,100,200,300,400};
 			discreteDistanceCameraPoint[]= {

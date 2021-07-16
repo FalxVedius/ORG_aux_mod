@@ -8,7 +8,8 @@ class CfgPatches
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -91,6 +92,17 @@ class CfgMagazines
 		tracersEvery=1;
 	};
 
+	class MACRO_NEW_MAG(DC_15L,125_T): MACRO_NEW_MAG(DC_15L,125) //DC-15L
+	{
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		displayName=MACRO_AMMO_DISPLAYNAME(15L,125 Tracer)
+		displayNameShort="High Power Tracer 125rnd";
+		descriptionShort="332nd High Power Round Tracer";
+		ammo=MACRO_NEW_AMMO(127x108_Blue_T);
+		tracersEvery=1;
+	};
+	
 	class MACRO_NEW_MAG(DC_15x,2): 30rnd_762x39_AK12_Mag_F //15X
 	{
 	    modelSpecial="";
@@ -167,6 +179,21 @@ class CfgMagazines
 		ammo="ls_ammo_762_blue";
 		tracersEvery=1;
 	};
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(E5Low,50): 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\E5\data\ui\E5_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\E5\E5_mag.p3d";
+		count=50;
+		mass=10;
+		displayName="E5 50rnd Low";
+		descriptionShort="50rnd Magazine for the E-5";
+		displayNameShort="E5 50rnd Low ";
+		ammo=MACRO_NEW_AMMO(556_Red);
+		tracersEvery=1;
+	};
 };
 	
 
@@ -188,5 +215,48 @@ class CfgAmmo
 		 //effectfly="332nd_aux_effects_RPS4_blue";
 		 fuseDistance=15;
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
+	};
+	class ls_ammo_338_blue;
+	class MACRO_NEW_AMMO(338_Blue_T): ls_ammo_338_blue
+	{
+	     hit = 20;
+		 effectfly="332nd_aux_effects_blue_bullet";
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+	};
+	class ls_ammo_127x108_blue;
+	class MACRO_NEW_AMMO(127x108_Blue_T): ls_ammo_127x108_blue
+	{
+		 effectfly="332nd_aux_effects_blue_bullet";
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+	};
+	class ls_ammo_338_green;
+	class MACRO_NEW_AMMO(338_Green_T):  ls_ammo_338_green
+	{
+	    hit = 20;
+	    effectfly="332nd_aux_effects_green_bullet";
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+	}
+
+	class MACRO_NEW_AMMO(338_Green):  ls_ammo_338_green
+	{
+	    hit = 20;
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+	}
+
+	class MACRO_NEW_AMMO(338_Blue): ls_ammo_338_blue
+	{
+	     hit = 20;
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+	};
+	class ls_ammo_127x108_green;
+    class MACRO_NEW_AMMO(127x108_green_T): ls_ammo_127x108_green
+	{
+		 effectfly="332nd_aux_effects_green_bullet";
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+	};
+	class ls_ammo_65_red;
+	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
+	{
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,4,100};
 	};
 }

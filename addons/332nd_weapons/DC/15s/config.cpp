@@ -34,8 +34,8 @@ class cfgWeapons
 		canShootInWater=1;
 		recoil="recoil_spar";
 		recoilprone="recoil_spar";
-		cursor="DOT_Test";
-        cursoraim="DC15S_Test";
+		cursor="332_DOT";
+        cursoraim="332_DC15S";
 		modes[]=  {
 		 "FullAuto",
 		 "Single"
@@ -84,8 +84,8 @@ class cfgWeapons
 
 		class stun: stun
 		{
-		cursoraim="Stun_Test";
-		cursor="DOT_Test"
+		cursoraim="332_Stun";
+		cursor="332_DOT"
 		};
 
 		class Single: FullAuto

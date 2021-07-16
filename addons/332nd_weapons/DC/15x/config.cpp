@@ -39,7 +39,8 @@ class cfgWeapons
         modelOptics="\A3\Weapons_f\acc\reticle_tws";
         baseWeapon=MACRO_NEW_WEAPON(DC_15x);
         weaponInfoType = "RscOptics_tws";
-		
+		cursor="332_DOT";
+        cursoraim="332_Chevron";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15x,2),
 			MACRO_NEW_MAG(DC_15x,10)

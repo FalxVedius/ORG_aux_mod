@@ -48,8 +48,8 @@ class cfgWeapons
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_15c";
 		recoilProne="recoil_15c";
-		cursor="DOT_Test";
-        cursoraim="DC15C_Test";
+		cursor="332_DOT";
+        cursoraim="332_DC15C";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15c_Medium,45)
 		};

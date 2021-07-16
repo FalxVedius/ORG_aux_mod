@@ -45,8 +45,8 @@ class cfgWeapons
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_smg_03";
 		recoilprone="recoil_smg_03";
-		cursor="DOT_Test";
-        cursoraim="Shotgun_Test";
+		cursor="332_DOT";
+        cursoraim="332_Shotgun";
 		canShootInWater=1;
 		baseweapon="";
 		handling="2";

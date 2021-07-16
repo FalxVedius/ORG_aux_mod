@@ -35,8 +35,8 @@ class cfgWeapons
 		canShootInWaterMACRO_NEW_WEAPON=1;
         baseweapon= (DC_17)
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-		cursor="DOT_Test";
-        cursoraim="DC17_Test";
+		cursor="332_DOT";
+        cursoraim="332_DC17";
 		magazines[] = {MACRO_NEW_MAG(DC_17,15)};
         linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
         compatibleItems[]=
@@ -97,8 +97,8 @@ class cfgWeapons
         };
 		class stun: stun
 		{
-		cursor="DOT_Test";
-        cursoraim="Stun_Test";
+		cursor="332_DOT";
+        cursoraim="332_Stun";
 		};
 
         class Single: Single
