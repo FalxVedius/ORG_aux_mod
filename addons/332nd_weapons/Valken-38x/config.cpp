@@ -34,7 +34,7 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	class MACRO_NEW_WEAPON(Valken38x): 3AS_Valken38X_F
+	class MACRO_NEW_WEAPON(Valken38x) : 3AS_Valken38X_F
 	{
 		recoil="recoil_dmr_05";
 		recoilprone="recoil_prone_dmr_05";
@@ -113,7 +113,7 @@ class CfgWeapons
 			aiRateOfFireDistance=25;
 		};		
 		scope=2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(Valken 38x);
+		displayName = MACRO_WEAPON_DISPLAYNAME(Valken 38x)
 		weaponInfoType="RscWeaponZeroing";
 		magazines[]=
 		{
@@ -148,14 +148,14 @@ class CfgWeapons
 
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
-	class 332nd_Optic_VK38X: ItemCore
+	class 332nd_Optic_VK38X : ItemCore
 	{
 		scope=2;
 		displayName="332nd VK-38X Optic";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
 		model="3AS\3AS_Weapons\Valken38X\3AS_VK38X_Scope_f.p3d";
 		weaponInfoType="RscWeaponZeroing";
-		class ItemInfo: InventoryOpticsItem_Base_F
+		class ItemInfo : InventoryOpticsItem_Base_F
 		{
 			mass=7;
 			modelOptics = "\A3\Weapons_F\acc\reticle_LRPS_F";
@@ -192,7 +192,7 @@ class CfgWeapons
 					opticsDisablePeripherialVision=1;
 					cameraDir="";
 				};
-				class IronOnTopOfMyOptics: 332nd_Optic_VK38X
+				class IronOnTopOfMyOptics : 332_VK38X_Optic
 				{
 					opticsID=2;
 					useModelOptics=0;
