@@ -835,9 +835,33 @@ class CfgVehicles
 				count = 50;
 			};
 
+			class DW_32_HIGH_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_T_x5";
+				count = 50;
+			};
+			
 			class DW_32_CONCMED_332nd
 			{
 				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				count = 100;
+			};
+
+			class DW_32_CONCMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
+				count = 100;
+			};
+
+			class Valken_38x_REFMED_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_x15";
+				count = 100;
+			};
+
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
 				count = 100;
 			};
 

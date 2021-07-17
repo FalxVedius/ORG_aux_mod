@@ -39,7 +39,6 @@ class cfgWeapons
 	{
 		class Single;
 		class WeaponSlotsInfo;
-		class Stun;
 	};
 	class MACRO_NEW_WEAPON(DC_15c): 3AS_DC15C_F
 	{
@@ -54,7 +53,7 @@ class cfgWeapons
 			MACRO_NEW_MAG(DC_15c_Medium,45)
 		};
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-		modes[] = {"Burst","Stun"};
+		modes[] = {"Burst"};
 		class Burst: Single
 		{
 		    burst=3;
@@ -116,11 +115,6 @@ class cfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=450;
 			maxRangeProbab=0.30000001;
-		};
-
-		class stun: stun
-		{
-		cursor="Stun_Test";
 		};
 
 		class OpticsModes

@@ -256,7 +256,7 @@ class CfgMagazines
 	{
 		ammo=MACRO_NEW_AMMO(RPS6_AARocket);
 		displayName=MACRO_AMMO_DISPLAYNAME(RPS6-AA,1)
-		mass=62;
+		mass=31;
 	};
 	
 	class MACRO_NEW_MAG(RPS1_ATMag,1): SWLW_plx1_at_mag

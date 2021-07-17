@@ -295,6 +295,7 @@ class 332nd_aux_effects_blue_bullet
 {
     class MissileEffect1
     {
+        qualityLevel = 2;
         simulation = "particles";
         type = "332nd_aux_effects_smoke_tracerblue"; 
     };
@@ -304,6 +305,7 @@ class 332nd_aux_effects_green_bullet
 {
     class MissileEffect1
     {
+        qualityLevel = 2;
         simulation = "particles";
         type = "332nd_aux_effects_smoke_tracergreen"; 
     };

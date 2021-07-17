@@ -87,7 +87,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"332nd_aux_mod\addons\332nd_weapons\Valken-38x\sounds\ValkenSniper",
+					"332nd_weapons\Valken_38x\sounds\ValkenSniper.wss",
 					1,
 					1,
 					2200
@@ -101,7 +101,7 @@ class CfgWeapons
 				closure2[]={};
 				soundClosure[]={};
 			};
-			reloadTime=0.6;
+			reloadTime=0.7;
 			dispersion=0.000000000005;
 			minRange=5;
 			minRangeProbab=0.30000001;
@@ -117,7 +117,8 @@ class CfgWeapons
 		weaponInfoType="RscWeaponZeroing";
 		magazines[]=
 		{
-			MACRO_NEW_MAG(Valken38x,15)
+			MACRO_NEW_MAG(Valken38x,15),
+			MACRO_NEW_MAG(Valken38x_T,15)
 		};
 		modelOptics="3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d";
 		class OpticsModes

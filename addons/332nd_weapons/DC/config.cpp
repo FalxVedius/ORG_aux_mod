@@ -188,6 +188,7 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\E5\E5_mag.p3d";
 		count=50;
 		mass=10;
+		initspeed=900;
 		displayName="E5 50rnd Low";
 		descriptionShort="50rnd Magazine for the E-5";
 		displayNameShort="E5 50rnd Low ";
@@ -195,7 +196,7 @@ class CfgMagazines
 		tracersEvery=1;
 	};
 
-	class MACRO_NEW_MAG(Valken38x,15): 30rnd_762x39_AK12_Mag_F //Medium Mag for DC15A/UGL
+	class MACRO_NEW_MAG(Valken38x,15): 30rnd_762x39_AK12_Mag_F
 	{
 		modelSpecial="";
 		modelSpecialIsProxy=0;
@@ -204,10 +205,19 @@ class CfgMagazines
 		count=15;
 		mass=15;
 		initspeed=2000;
-		displayName=MACRO_AMMO_DISPLAYNAME(Valken 38x Ref Med,15)
-		displayNameShort="Med Power rnd";
-		descriptionShort="332nd Medium Power Round";
+		displayName=MACRO_AMMO_DISPLAYNAME(Valken-38x Refined Medium Magazine,15)
+		displayNameShort="Refined Medium Magazine x15";
+		descriptionShort="Refined Medium Magazine x15";
 		ammo=MACRO_NEW_AMMO(408_Blue);
+		tracersEvery=1;
+	};
+
+	class MACRO_NEW_MAG(Valken38x_T,15): MACRO_NEW_MAG(Valken38x,15) 
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(Valken-38x Refined Medium Tracer Magazine ,15)
+		displayNameShort="Refined Medium Tracer Magazine x15";
+		descriptionShort="Refined Medium Tracer Magazine x15";
+		ammo=MACRO_NEW_AMMO(408_Blue_T);
 		tracersEvery=1;
 	};
 };
@@ -278,6 +288,11 @@ class CfgAmmo
 	class ls_ammo_408_blue;
 	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue
 	{
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200};
+	};
+	class  MACRO_NEW_AMMO(408_Blue_T): ls_ammo_408_blue
+	{
+	    effectfly="332nd_aux_effects_blue_bullet";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200};
 	};
 }
