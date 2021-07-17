@@ -723,6 +723,36 @@ class CfgVehicles
 				count = 10;
 			};
 
+			class DC15C_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15c";
+				count = 10;
+			};
+
+			class DP23_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DP_23";
+				count = 10;
+			};
+
+			class DW32S_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DW_32S";
+				count = 10;
+			};
+
+			class Valken38x_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_Valken38x";
+				count = 10;
+			};
+
+			class Z6_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_Z6";
+				count = 10;
+			};
+
 			class RPS1_Weps_332nd
 			{
 				weapon = "332nd_aux_weapon_RPS_1";
@@ -804,6 +834,12 @@ class CfgVehicles
 				count = 100;
 			};
 
+			class DC15L_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_T_x125";
+				count = 100;
+			};
+
 			class DC15X_HIGH_332nd
 			{
 				magazine = "332nd_aux_magazine_DC_15x_x10";
@@ -828,7 +864,6 @@ class CfgVehicles
 				count = 100;
 			};
 			
-
 			class DW_32_HIGH_332nd
 			{
 				magazine = "332nd_aux_magazine_DW32_High_x5";
