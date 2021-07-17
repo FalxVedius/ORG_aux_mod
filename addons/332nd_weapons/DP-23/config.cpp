@@ -176,7 +176,7 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\SWLW_merc_trando\scatterguns\acpa\sounds\acpa",
+					"332nd_weapons\DP-23\sounds\DP-23shotgun.wss",
 					1.5,
 					1.1,
 					1800

@@ -41,7 +41,7 @@ class cfgWeapons
 
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15L,125),
-			MACRO_NEW_MAG(DC_15L,125_T)
+			MACRO_NEW_MAG(DC_15L_T,125)
 		};
 
 		class WeaponSlotsInfo: WeaponSlotsInfo

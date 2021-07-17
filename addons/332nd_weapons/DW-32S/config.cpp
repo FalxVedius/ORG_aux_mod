@@ -89,6 +89,25 @@ class cfgWeapons
 				opticsDisablePeripherialVision=1;
 				cameraDir="";
 			};
+			class Iron: NCTALKEP
+			{
+				opticsID=2;
+				useModelOptics=0;
+				opticsPPEffects[]=
+				{
+					"",
+					""
+				};
+				opticsFlare=0;
+				opticsDisablePeripherialVision=0;
+				discreteDistance[]={100};
+				discreteDistanceInitIndex=0;
+				opticsZoomMin=0.375;
+				opticsZoomMax=1.1;
+				opticsZoomInit=0.75;
+				memoryPointCamera="eye";
+				visionMode[]={};
+			};
 		};
 
 		class stun: stun
@@ -123,10 +142,10 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"SWLW_clones\pistols\dc17\sounds\DC17_1",
+					"332nd_weapons\DW-32S\sounds\DW-32s.wss",
 					1,
-					0.9,
-					1800
+					1,
+					2000
 				};
 				soundBegin[]=
 				{

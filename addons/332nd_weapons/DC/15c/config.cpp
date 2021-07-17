@@ -119,6 +119,7 @@ class cfgWeapons
 
 		class OpticsModes
         {
+
             class sight
             {
                 opticsID=2;

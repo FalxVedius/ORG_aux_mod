@@ -92,13 +92,13 @@ class CfgMagazines
 		tracersEvery=1;
 	};
 
-	class MACRO_NEW_MAG(DC_15L,125_T): MACRO_NEW_MAG(DC_15L,125) //DC-15L
+	class MACRO_NEW_MAG(DC_15L_T,125): MACRO_NEW_MAG(DC_15L,125) //DC-15L
 	{
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		displayName=MACRO_AMMO_DISPLAYNAME(15L,125 Tracer)
+		displayName=MACRO_AMMO_DISPLAYNAME(15L (T),125 Tracer)
 		displayNameShort="High Power Tracer 125rnd";
-		descriptionShort="332nd High Power Round Tracer";
+		descriptionShort="332nd (T) High Power Round Tracer";
 		ammo=MACRO_NEW_AMMO(127x108_Blue_T);
 		tracersEvery=1;
 	};
