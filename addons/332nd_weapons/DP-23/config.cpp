@@ -135,7 +135,7 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"\SWLW_merc_trando\scatterguns\acpa\sounds\acpa",
+					"332nd_weapons\DP-23\sounds\DP23_shotgun.wss",
 					1.5,
 					0.9,
 					1800
@@ -146,7 +146,7 @@ class cfgWeapons
 					1,
 				};
 			};
-			reloadTime=0.20;
+			reloadTime=0.7;
 			dispersion=0.00000000000000000000045;
 			minRange=5;
 			minRangeProbab=0.30000001;
@@ -176,7 +176,7 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"332nd_weapons\DP-23\sounds\DP-23shotgun.wss",
+					"332nd_weapons\DP-23\sounds\DP23_shotgun.wss",
 					1.5,
 					1.1,
 					1800
@@ -187,7 +187,7 @@ class cfgWeapons
 					1,
 				};
 			};
-			reloadTime=0.20;
+			reloadTime=0.7;
 			dispersion=0.002;
 			minRange=5;
 			minRangeProbab=0.30000001;
@@ -272,7 +272,7 @@ class CfgAmmo
 		thrust = 210;
 		thrustTime = 1.5;
 		timeToLive = 6;
-
+		triggerDistance = 0;
 		typicalSpeed = 900;
 	}
 
@@ -282,13 +282,16 @@ class CfgAmmo
 		submunitionConeAngle = 3;
 		submunitionConeAngleHorizontal=40;
 		submunitionConeType[] = {"poissondisc",12};
+		hit = 15;
+		triggerDistance = 0;
 	}
 
 	class MACRO_NEW_AMMO(DP23_Pellet): B_12Gauge_Pellets_Submunition_Deploy
 	{
-		hit = 10;
+		hit = 15;
 		caliber = 1;
 		typicalSpeed = 360;
+		triggerDistance = 0;
 		effectfly = "ls_plasma_blue";
 		ExplosionEffects = "ls_plasma_impact";
 		model = "ls_weapons_core\Effects\laser_blue.p3d";
