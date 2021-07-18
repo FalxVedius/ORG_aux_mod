@@ -87,7 +87,7 @@ class CfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"332nd_weapons\Valken_38x\sounds\ValkenSniper.wss",
+					"332nd_weapons\Valken_38x\sounds\ValkenFire.wss",
 					1,
 					1,
 					2200
