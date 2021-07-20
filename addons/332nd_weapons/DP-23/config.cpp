@@ -135,7 +135,7 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"332nd_weapons\DP-23\sounds\DP23_shotgun.wss",
+					"332nd_weapons\DP-23\sounds\DP-23Fire.wss",
 					1.5,
 					0.9,
 					1800
