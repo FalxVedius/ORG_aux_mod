@@ -522,6 +522,20 @@
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
 		}
+	#define MACRO_NEW_CISDROIDEKA_UNIT(classname,displayname)\
+		class MACRO_NEW_UNIT(cisdroideka,classname): MACRO_NEW_UNIT(cisdroideka,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+		}
+	#define MACRO_NEW_CISDROIDEKA_MOVE_UNIT(classname,displayname)\
+		class MACRO_NEW_UNIT(cisdroidekamoveable,classname): MACRO_NEW_UNIT(cisdroidekamoveable,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+		}
 
 	// ---- Vests ---- 
 

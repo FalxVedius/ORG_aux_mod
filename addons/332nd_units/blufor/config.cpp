@@ -173,6 +173,7 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_corporal,Corporal,332nd_corporal)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_sergeant,Sergeant,332nd_sergeant)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_officer,Officer,332nd_officer)
+    MACRO_NEW_INF_UNIFORM_ITEM(332nd_original,Original,332nd_original)
 
     //RTO
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_cadet,Cadet,332nd_rto_cadet)
@@ -240,6 +241,7 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(332nd_corporal,Clone Corporal,332nd_corporal,corporal\Corporal_Upper.paa,corporal\Corporal_Lower.paa)
     MACRO_NEW_INF_UNIT(332nd_sergeant,Clone Sergeant,332nd_sergeant,sergeant\Sergeant_Upper.paa,sergeant\Sergeant_Lower.paa)
     MACRO_NEW_INF_UNIT(332nd_officer,Clone Officer,332nd_officer,officer\Officer_Upper.paa,officer\Officer_Lower.paa)
+    MACRO_NEW_INF_UNIT(332nd_original,Clone Original Armor,332nd_original,trooper\332nd_Original_Upper_Armor.paa,trooper\332nd_Original_Lower_Armor.paa)
 
     //RTO
     MACRO_NEW_RTO_UNIT(332nd_rto_cadet,RTO Cadet,332nd_rto_cadet,cadet\rto_cadet_upper.paa,cadet\rto_cadet_lower.paa)

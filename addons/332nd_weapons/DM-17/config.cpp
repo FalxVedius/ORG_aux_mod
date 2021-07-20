@@ -43,6 +43,7 @@ class CfgAmmo
 		hit = 0.0099999998;
 		aiAmmoUsageFlags = 0;
 		Aux332nd_IsMedicRound = 1;
+		caliber = 0.1;
 	};
 };
 

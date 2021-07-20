@@ -108,7 +108,7 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_INF_KAMA_ITEM(332nd_officer,Officer,kama\Officer_accessories.paa)
+    MACRO_NEW_INF_KAMA_ITEM(332nd_officer,2nd Lt,kama\Officer_accessories.paa)
     MACRO_NEW_INF_KAMA_ITEM(332nd_1st_lt,1st Lt,kama\1st_lt.paa)
 
     

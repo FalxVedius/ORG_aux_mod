@@ -116,35 +116,40 @@ class CfgEditorSubcategories
 		displayName = "BX";
 		priority = 9;
 	};
+	class EdSubcat_332nd_HEAVY
+	{
+		displayName = "Heavy Droids";
+		priority = 10;
+	};
 	class EdSubcat_332nd_IFV
 	{
 		displayName = "IFVs";
-		priority = 10;
+		priority = 11;
 	};
 	class EdSubcat_332nd_PLANE
 	{
 		displayName = "Planes";
-		priority = 11;
+		priority = 12;
 	};
 	class EdSubcat_332nd_RESUPPLY
 	{
 		displayName = "Resupply";
-		priority = 12;
+		priority = 13;
 	};
 	class EdSubcat_332nd_TANK
 	{
 		displayName = "Tanks";
-		priority = 13;
+		priority = 14;
 	};
 	class EdSubcat_332nd_TRUCK
 	{
 		displayName = "Trucks";
-		priority = 14;
+		priority = 15;
 	};
 	class EdSubcat_332nd_TURR
 	{
 		displayName = "Turrets";
-		priority = 15;
+		priority = 16;
 	};
 };
 
@@ -556,6 +561,10 @@ class CfgFunctions
 			class Killed_BX
 			{
 			};
+
+			class Killed_Heavy
+			{
+			};
 		};
 
 		class Jumppack
@@ -563,6 +572,14 @@ class CfgFunctions
 			class Jumppack
 			{
 				file = "\332nd_units\opfor\fn_Jumppack.sqf";
+			};
+		};
+
+		class Droideka
+		{
+			file = "\332nd_units\opfor";
+			class initDroideka_Move
+			{
 			};
 		};
 	};
@@ -1976,6 +1993,7 @@ class CfgVehicles
 	class O_Helipilot_F;
 	class lsd_cis_bxDroid_base;
 	class O_Soldier_base_F;
+	class k_CIS_Droideka;
 
 	class JLTS_Droid_B1_E5 :O_Soldier_F
 	{
@@ -6149,6 +6167,32 @@ class CfgVehicles
 
 	};
 
+
+	//Heavy Droids
+	class MACRO_NEW_UNIT(cisdroideka,base) : k_CIS_Droideka
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Droideka Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+	};
+
+	class MACRO_NEW_UNIT(cisdroidekamoveable,base) : k_CIS_Droideka
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Droideka Moveable Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_initDroideka_Move;";
+		};
+	};
+
 	// ---- End Opfor Units for Uniforms ----
 };
 
@@ -6241,5 +6285,16 @@ class Extended_Killed_EventHandlers
 	class MACRO_NEW_UNIT(cisbxbreach,base)
 	{
 		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+	};
+
+
+	//Heavy Droids
+	class MACRO_NEW_UNIT(cisdroideka,base)
+	{
+		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_Heavy";
+	};
+	class MACRO_NEW_UNIT(cisdroidekamoveable,base)
+	{
+		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_Heavy";
 	};
 };

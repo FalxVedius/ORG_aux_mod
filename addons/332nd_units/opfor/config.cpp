@@ -34,6 +34,9 @@ class CfgPatches
 			MACRO_NEW_UNIT(cisbxar,332nd_CIS_BX_Support),
 			MACRO_NEW_UNIT(cisbxat,332nd_CIS_BX_AT),
 			MACRO_NEW_UNIT(cisbxbreach,332nd_CIS_BX_BREACHER),
+
+			MACRO_NEW_UNIT(cisdroideka,332nd_CIS_HEAVY_Droideka),
+			MACRO_NEW_UNIT(cisdroidekamoveable,332nd_CIS_HEAVY_Droideka_Moveable),
         };
         weapons[] = {
             MACRO_NEW_UNIFORM(cisb1,332nd_CIS_B1),
@@ -156,6 +159,9 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(cisbxat,base);
 	class MACRO_NEW_UNIT(cisbxbreach,base);
 
+	class MACRO_NEW_UNIT(cisdroideka,base);
+	class MACRO_NEW_UNIT(cisdroidekamoveable,base);
+
     //B1
     MACRO_NEW_CISB1_UNIT(332nd_CIS_B1,B1 Battle Droid,332nd_CIS_B1)
     MACRO_NEW_CISB1JUMPPACK_UNIT(332nd_CIS_B1_Jumppack,B1 Jumppack Battle Droid,332nd_CIS_B1_Jumppack)
@@ -180,6 +186,10 @@ class CfgVehicles
 	MACRO_NEW_CISBXSUPPORT_UNIT(332nd_CIS_BX_Support,BX Support Battle Droid,332nd_CIS_BX)
 	MACRO_NEW_CISBXAT_UNIT(332nd_CIS_BX_AT,BX Anti-Tank Battle Droid,332nd_CIS_BX)
 	MACRO_NEW_CISBXBREACH_UNIT(332nd_CIS_BX_Breacher,BX Breacher Battle Droid,332nd_CIS_BX)
+
+	//Heavy Droids
+	MACRO_NEW_CISDROIDEKA_UNIT(332nd_CIS_HEAVY_Droideka,Droideka (Static))
+	MACRO_NEW_CISDROIDEKA_MOVE_UNIT(332nd_CIS_HEAVY_Droideka_Moveable,Droideka (Moveable))
 };
 
 class CfgGroups
@@ -1652,6 +1662,113 @@ class CfgGroups
 						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
+					};
+				};
+			};
+
+			class VultureTeams
+			{
+				name = "Vulture Elements";
+				class CIS_332nd_Vulture_CAP
+				{
+					name = "CAP Vulture Element";
+					side = 0;
+					faction = "EdCat_332ndCIS";
+					class Unit0
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAP";
+						rank = "CORPORAL";
+						position[] = { 0,0,50 };
+					};
+					class Unit1
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 0,20,50 };
+					};
+					class Unit2
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 20,0,50 };
+					};
+					class Unit3
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 0,-20,50 };
+					};
+				};
+				class CIS_332nd_Vulture_CAS
+				{
+					name = "CAS Vulture Element";
+					side = 0;
+					faction = "EdCat_332ndCIS";
+					class Unit0
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAS";
+						rank = "CORPORAL";
+						position[] = { 0,0,50 };
+					};
+					class Unit1
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAS";
+						rank = "PRIVATE";
+						position[] = { 0,20,50 };
+					};
+					class Unit2
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 20,0,50 };
+					};
+					class Unit3
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 0,-20,50 };
+					};
+				};
+				class CIS_332nd_Vulture_GUN
+				{
+					name = "Gun Vulture Element";
+					side = 0;
+					faction = "EdCat_332ndCIS";
+					class Unit0
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "CORPORAL";
+						position[] = { 0,0,50 };
+					};
+					class Unit1
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 0,20,50 };
+					};
+					class Unit2
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 20,0,50 };
+					};
+					class Unit3
+					{
+						side = 0;
+						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						rank = "PRIVATE";
+						position[] = { 0,-20,50 };
 					};
 				};
 			};

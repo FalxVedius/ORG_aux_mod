@@ -14,8 +14,8 @@ class CfgPatches
 		units[] = {
             MACRO_NEW_HELMET(aviation,332nd_pilot),
 			MACRO_NEW_HELMET(warden,332nd_warden),
-			MACRO_NEW_HELMET(aviation,332nd_aspect),
 			MACRO_NEW_HELMET(aviation,332nd_blast),
+			MACRO_NEW_HELMET(aviation,Dragneel),
         };
 		weapons[] = {};
 	};
@@ -30,8 +30,8 @@ class CfgWeapons
 
 	//pilots
     MACRO_NEW_AVIATION_HELMET_ITEM(332nd_pilot,332nd Pilot,Pilot.paa)
-	MACRO_NEW_AVIATION_HELMET_ITEM(332nd_aspect,Aspect,Aspect.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(332nd_blast,Blast,Blast.paa)
+	MACRO_NEW_AVIATION_HELMET_ITEM(Dragneel,Dragneel,Dragneel.paa)
 	
 	//warden
 	MACRO_NEW_WARDEN_HELMET_ITEM(332nd_warden,332nd Warden,warden.paa)
