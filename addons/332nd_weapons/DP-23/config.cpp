@@ -18,6 +18,22 @@ class CfgPatches
 	};
 };
 
+
+class CfgFunctions
+{
+	class Aux332nd
+	{
+		class WeaponSounds
+		{
+			file = "\332nd_weapons\DP-23";
+			class Fired_DP23_Sound
+			{
+			};
+		};
+	};
+};
+
+
 class Mode_SemiAuto;
 class Mode_FullAuto;
 
@@ -210,6 +226,11 @@ class cfgWeapons
 					"acc_pointer_IR"
 				};
 			};
+		};
+
+		class EventHandlers
+		{
+			fired = "[_this] spawn Aux332nd_fnc_Fired_DP23_Sound;";
 		};
 				
 	};

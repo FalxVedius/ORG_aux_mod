@@ -57,6 +57,10 @@ class CfgVehicles
 	class ls_cis_hmp : ls_hmp_base
 	{
 		class Components;
+		class Turrets
+		{
+			class MainTurret;
+		};
 	};
 	class ls_cis_hmp_transport : ls_hmp_base
 	{
@@ -69,6 +73,17 @@ class CfgVehicles
 		scope = 2;
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HELI";
+
+		crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+		};
+
 		weapons[] =
 		{
 			"ls_hmp_gun",
@@ -140,6 +155,17 @@ class CfgVehicles
 		scope = 2;
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HELI";
+
+		crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+		};
+
 		weapons[] =
 		{
 			"ls_hmp_gun",
@@ -213,6 +239,9 @@ class CfgVehicles
 		scope = 2;
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HELI";
+
+		crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
 		weapons[] =
 		{
 			"ls_hmp_gun",

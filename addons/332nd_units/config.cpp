@@ -5802,6 +5802,8 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
+
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		weapons[] = { "Police_Bat","Throw","Put" };
@@ -5989,6 +5991,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
+
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };

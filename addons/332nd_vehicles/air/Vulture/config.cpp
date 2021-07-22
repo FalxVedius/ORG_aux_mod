@@ -76,6 +76,8 @@ class CfgVehicles
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
 
+		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
 		  weapons[] = 
 		  {
 			  "3as_vulture_Light_AOE_cannon",
@@ -184,6 +186,8 @@ class CfgVehicles
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
 
+		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
 		  weapons[] =
 		  {
 			  "3as_vulture_Light_AOE_cannon",
@@ -289,6 +293,8 @@ class CfgVehicles
 		  scope = 2;
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
+
+		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
 
 		  weapons[] =
 		  {

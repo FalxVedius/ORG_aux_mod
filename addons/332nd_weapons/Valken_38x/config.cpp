@@ -18,6 +18,23 @@ class CfgPatches
 		};
 	};
 };
+
+
+class CfgFunctions
+{
+	class Aux332nd
+	{
+		class WeaponSounds
+		{
+			file = "\332nd_weapons\Valken_38x";
+			class Fired_Valken_Sound
+			{
+			};
+		};
+	};
+};
+
+
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
@@ -143,6 +160,12 @@ class CfgWeapons
 				distanceZoomMax=100;
 			};
 		};
+
+		class EventHandlers
+		{
+			fired = "[_this] spawn Aux332nd_fnc_Fired_Valken_Sound;";
+		};
+
 	};
 
 
