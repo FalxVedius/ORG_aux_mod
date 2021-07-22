@@ -213,6 +213,7 @@ class CfgWeapons
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_lieutenant,Flight Lieutenant,332nd_flight_lieutenant)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_captain,Flight Captain,332nd_flight_captain)
 
+
     #include "_nvg.hpp"
     #include "_bino.hpp"
 };
@@ -281,4 +282,4 @@ class CfgVehicles
     MACRO_NEW_AVI_UNIT(332nd_flight_jr_lieutenant,Flight Jr Lieutenant,332nd_flight_jr_lieutenant,jr_lieutenant\jr_lieutenant_upper.paa,jr_lieutenant\jr_lieutenant_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_lieutenant,Flight Lieutenant,332nd_flight_lieutenant,lieutenant\lieutenant_upper.paa,lieutenant\lieutenant_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_captain,Flight Captain,332nd_flight_captain,captain\captain_upper.paa,captain\captain_lower.paa)
-};
+}
