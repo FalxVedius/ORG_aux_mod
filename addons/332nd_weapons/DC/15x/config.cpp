@@ -26,7 +26,6 @@ class cfgWeapons
 	{
 		class Single;
 	}
-
 	class MACRO_NEW_WEAPON(DC_15x): JLTS_DC15X
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15x)
@@ -46,7 +45,7 @@ class cfgWeapons
 			MACRO_NEW_MAG(DC_15x,10)
 		};
 
-		class Single:Single
+		class Single: Single
         {
 			sounds[]=
 			{
@@ -64,21 +63,7 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
-					1.5,
-					1,
-					1800
-				};
-				begin2[]=
-				{
-					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
-					1.5,
-					1,
-					1800
-				};
-				begin3[]=
-				{
-					"SWLW_merc_mando\rifles\sniper\sounds\sniper",
+					"332nd_weapons\DC\15X\sounds\DC-15X.wss",
 					1.5,
 					1,
 					1800
@@ -86,11 +71,7 @@ class cfgWeapons
 				soundBegin[]=
 				{
 					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
+					1
 				};
 			};
 			
@@ -138,8 +119,61 @@ class cfgWeapons
             "acc_flashlight",
             "acc_pointer_IR"
         };
-	
 	}
+
+	class InventoryOpticsItem_Base_F;
+	class JLTS_DC15X_scope;
+	class 332nd_DC15X_scope: JLTS_DC15X_scope
+	{
+		displayName="332nd DC15X scope";
+		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_scope_ui_ca.paa";
+		descriptionShort="$STR_JLTS_descs_DC15X_scope";
+		class ItemInfo: InventoryOpticsItem_Base_F
+		{
+			mass=16;
+			opticType=2;
+			weaponInfoType="RscWeaponRangeZeroingFOV";
+			optics=1;
+			modelOptics="\A3\Weapons_F\acc\reticle_sniper_F";
+			class OpticsModes
+			{
+				class Snip
+				{
+					opticsID=1;
+					opticsDisplayName="WFOV";
+					useModelOptics=1;
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin=0.125;
+					opticsZoomMax=0.04;
+					opticsZoomInit=0.0625;
+					discreteDistance[]={100,300,400,500,600,700,800,900,1000};
+					discreteDistanceInitIndex=1;
+					distanceZoomMin=100;
+					distanceZoomMax=1000;
+					discreteFov[]={0.125,0.0625};
+					discreteInitIndex=0;
+					memoryPointCamera="opticView";
+					modelOptics[]=
+					{
+						"\A3\Weapons_F\acc\reticle_lrps_F",
+						"\A3\Weapons_F\acc\reticle_lrps_z_F"
+					};
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					opticsFlare=1;
+					opticsDisablePeripherialVision=1;
+					cameraDir="";
+				};
+			};
+		};
+	};
 
 	class MACRO_NEW_WEAPON(DC_15x_Scoped): MACRO_NEW_WEAPON(DC_15x)
 	{
@@ -153,7 +187,7 @@ class cfgWeapons
 			class LinkedItemsOptic
 			{
 				slot = "CowsSlot";
-				item = "JLTS_DC15X_scope";
+				item = "332nd_DC15X_scope";
 			};
 		};
 	};

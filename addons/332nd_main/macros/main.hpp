@@ -92,6 +92,14 @@
 			displayName = [332nd] Warden Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\warden\##texture};\
 		};
+		#define MACRO_NEW_ARF_HELMET_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_HELMET(arf,classname): MACRO_NEW_HELMET(arf,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Recon Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arf\##texture};\
+		};
 
 	// ---- Uniforms ---- 
 	#define MACRO_NEW_RECRUIT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
@@ -159,6 +167,7 @@
 				uniformClass = MACRO_NEW_UNIT(cwo,uniformClassname);\
 			};\
 		};
+
 
 	// --- Opfor Uniforms ---
 	#define MACRO_NEW_CISB1_UNIFORM_ITEM(classname,displayname,uniformClassname)\
@@ -352,6 +361,7 @@
 				MACRO_UNIFORM_TEXTURES_PATH\aviation\uniforms\##lower\
 			};\
 		}
+
 
 	// ----Opfor Units ----
 	#define MACRO_NEW_CISB1_UNIT(classname,displayname,uniformClassname)\
