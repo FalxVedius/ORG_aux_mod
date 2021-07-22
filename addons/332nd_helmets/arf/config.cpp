@@ -41,7 +41,7 @@ class CfgWeapons
 	MACRO_NEW_ARF_HELMET_ITEM(332nd_recon_veteran,332nd Veteran Recon,arf_vet_ca.paa)
 	MACRO_NEW_ARF_HELMET_ITEM(332nd_recon_veteran_woodland,332nd Veteran Recon (Woodland),arf_vet_woodland_ca.paa)
 	MACRO_NEW_ARF_HELMET_ITEM(332nd_recon_veteran_desert,332nd Veteran Recon (Desert),arf_vet_desert_ca.paa)
-	MACRO_NEW_ARF_HELMET_ITEM(332nd_recon_veteran_urban,332nd Veteran Recon (Urban / Night-Ops),arf_vet_urban_ca.paa)
+	MACRO_NEW_ARF_HELMET_ITEM(332nd_recon_veteran_urban,332nd Veteran Recon (Urban/Night-Ops),arf_vet_urban_ca.paa)
 	MACRO_NEW_ARF_HELMET_ITEM(332nd_recon_veteran_jungle,332nd Veteran Recon (Jungle),arf_vet_jungle_ca.paa)
 	MACRO_NEW_ARF_HELMET_ITEM(332nd_recon_veteran_snow,332nd Veteran Recon (Snow),arf_vet_snow_ca.paa)
 }
