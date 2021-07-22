@@ -84,6 +84,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -122,6 +123,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -159,6 +161,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply200";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -195,6 +198,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -232,6 +236,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -269,6 +274,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -306,6 +312,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -345,6 +352,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -382,6 +390,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -419,6 +428,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -456,6 +466,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -493,6 +504,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -530,6 +542,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -567,6 +580,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -603,6 +617,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -640,6 +655,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -677,6 +693,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {
@@ -714,6 +731,7 @@ class CfgWeapons
         class ItemInfo : ItemInfo
         {
             containerClass = "Supply210";
+            vestType = "Rebreather";
 
             class HitpointsProtectionInfo
             {

@@ -167,6 +167,71 @@
 				uniformClass = MACRO_NEW_UNIT(cwo,uniformClassname);\
 			};\
 		};
+	#define MACRO_NEW_ARF_BASE_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(arfbase,classname): MACRO_NEW_UNIFORM(arfbase,base)\
+		{\
+			displayName = [332nd] Recon Base Uniform ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(arfbase,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_ARF_DESERT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(arfdes,classname): MACRO_NEW_UNIFORM(arfdes,base)\
+		{\
+			displayName = [332nd] Recon Desert Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(arfdes,uniformClassname);\
+			};\
+		};
+	#define MACRO_NEW_ARF_JUNGLE_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(arfjung,classname): MACRO_NEW_UNIFORM(arfjung,base)\
+		{\
+			displayName = [332nd] Recon Jungle Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(arfjung,uniformClassname); \
+			}; \
+		};
+	#define MACRO_NEW_ARF_SNOW_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(arfsnow,classname): MACRO_NEW_UNIFORM(arfsnow,base)\
+		{\
+			displayName = [332nd] Recon Snow Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(arfsnow,uniformClassname); \
+			}; \
+		};
+	#define MACRO_NEW_ARF_URBAN_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(arfurb,classname): MACRO_NEW_UNIFORM(arfurb,base)\
+		{\
+			displayName = [332nd] Recon Urban/Night-Ops Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(arfurb,uniformClassname); \
+			}; \
+		};
+	#define MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(arfwood,classname): MACRO_NEW_UNIFORM(arfwood,base)\
+		{\
+			displayName = [332nd] Recon Woodland Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(arfwood,uniformClassname); \
+			}; \
+		};
 
 
 	// --- Opfor Uniforms ---
@@ -360,6 +425,107 @@
 				MACRO_UNIFORM_TEXTURES_PATH\aviation\uniforms\##upper,\
 				MACRO_UNIFORM_TEXTURES_PATH\aviation\uniforms\##lower\
 			};\
+		}
+
+	#define MACRO_NEW_ARF_BASE_UNIT(classname,displayname,uniformClassname,upper,lower,helmet)\
+		class MACRO_NEW_UNIT(arfbase,classname): MACRO_NEW_UNIT(arfbase,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(arfbase,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Base\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Base\##lower\
+			};\
+			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};\
+			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};\
+		}
+
+	#define MACRO_NEW_ARF_DESERT_UNIT(classname,displayname,uniformClassname,upper,lower,helmet)\
+		class MACRO_NEW_UNIT(arfdes,classname): MACRO_NEW_UNIT(arfdes,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(arfdes,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Desert\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Desert\##lower\
+			};\
+			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+		}
+
+	#define MACRO_NEW_ARF_JUNGLE_UNIT(classname,displayname,uniformClassname,upper,lower,helmet)\
+		class MACRO_NEW_UNIT(arfjung,classname): MACRO_NEW_UNIT(arfjung,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(arfjung,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Jungle\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Jungle\##lower\
+			};\
+			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+		}
+
+	#define MACRO_NEW_ARF_SNOW_UNIT(classname,displayname,uniformClassname,upper,lower,helmet)\
+		class MACRO_NEW_UNIT(arfsnow,classname): MACRO_NEW_UNIT(arfsnow,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(arfsnow,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Snow\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Snow\##lower\
+			};\
+			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+		}
+
+	#define MACRO_NEW_ARF_URBAN_UNIT(classname,displayname,uniformClassname,upper,lower,helmet)\
+		class MACRO_NEW_UNIT(arfurb,classname): MACRO_NEW_UNIT(arfurb,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(arfurb,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Urban\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Urban\##lower\
+			};\
+			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+		}
+
+	#define MACRO_NEW_ARF_WOODLAND_UNIT(classname,displayname,uniformClassname,upper,lower,helmet)\
+		class MACRO_NEW_UNIT(arfwood,classname): MACRO_NEW_UNIT(arfwood,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(arfwood,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Woodland\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\arf\uniforms\Woodland\##lower\
+			};\
+			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
 		}
 
 

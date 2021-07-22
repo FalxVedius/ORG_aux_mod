@@ -23,13 +23,23 @@ class CfgFunctions
 {
 	class Aux332nd
 	{
-		class WeaponSounds
+		class DP_23Sounds
 		{
 			file = "\332nd_weapons\DP-23";
 			class Fired_DP23_Sound
 			{
 			};
 		};
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class DP23_Bolt_Sound
+	{
+		name = "DP23-Bolt-Sound";
+		sound[] = { "\sounds\DP-23Bolt.wss", db + 250, 1.0, 10 };
 	};
 };
 

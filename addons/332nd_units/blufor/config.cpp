@@ -158,6 +158,37 @@ class CfgWeapons
         class ItemInfo;
     };
 
+    class MACRO_NEW_UNIFORM(arfbase,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(arfdes,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(arfjung,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(arfsnow,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(arfurb,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(arfwood,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+
     //Recruit
     MACRO_NEW_RECRUIT_UNIFORM_ITEM(332nd_recruit,Recruit,332nd_recruit)
 
@@ -213,6 +244,48 @@ class CfgWeapons
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_lieutenant,Flight Lieutenant,332nd_flight_lieutenant)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_captain,Flight Captain,332nd_flight_captain)
 
+    //ARF Base
+    MACRO_NEW_ARF_BASE_UNIFORM_ITEM(332nd_arfbase_trooper,Trooper,332nd_arfbase_trooper)
+    MACRO_NEW_ARF_BASE_UNIFORM_ITEM(332nd_arfbase_senior,Senior,332nd_arfbase_senior)
+    MACRO_NEW_ARF_BASE_UNIFORM_ITEM(332nd_arfbase_veteran,Veteran,332nd_arfbase_veteran)
+    MACRO_NEW_ARF_BASE_UNIFORM_ITEM(332nd_arfbase_corp,Corporal,332nd_arfbase_corp)
+    MACRO_NEW_ARF_BASE_UNIFORM_ITEM(332nd_arfbase_serg,Sergeant,332nd_arfbase_serg)
+
+    //ARF Desert
+    MACRO_NEW_ARF_DESERT_UNIFORM_ITEM(332nd_arfdes_trooper,Trooper,332nd_arfdes_trooper)
+    MACRO_NEW_ARF_DESERT_UNIFORM_ITEM(332nd_arfdes_senior,Senior,332nd_arfdes_senior)
+    MACRO_NEW_ARF_DESERT_UNIFORM_ITEM(332nd_arfdes_veteran,Veteran,332nd_arfdes_veteran)
+    MACRO_NEW_ARF_DESERT_UNIFORM_ITEM(332nd_arfdes_corp,Corporal,332nd_arfdes_corp)
+    MACRO_NEW_ARF_DESERT_UNIFORM_ITEM(332nd_arfdes_serg,Sergeant,332nd_arfdes_serg)
+
+    //ARF Jungle
+    MACRO_NEW_ARF_JUNGLE_UNIFORM_ITEM(332nd_arfjung_trooper,Trooper,332nd_arfjung_trooper)
+    MACRO_NEW_ARF_JUNGLE_UNIFORM_ITEM(332nd_arfjung_senior,Senior,332nd_arfjung_senior)
+    MACRO_NEW_ARF_JUNGLE_UNIFORM_ITEM(332nd_arfjung_veteran,Veteran,332nd_arfjung_veteran)
+    MACRO_NEW_ARF_JUNGLE_UNIFORM_ITEM(332nd_arfjung_corp,Corporal,332nd_arfjung_corp)
+    MACRO_NEW_ARF_JUNGLE_UNIFORM_ITEM(332nd_arfjung_serg,Sergeant,332nd_arfjung_serg)
+
+    //ARF Snow
+    MACRO_NEW_ARF_SNOW_UNIFORM_ITEM(332nd_arfsnow_trooper,Trooper,332nd_arfsnow_trooper)
+    MACRO_NEW_ARF_SNOW_UNIFORM_ITEM(332nd_arfsnow_senior,Senior,332nd_arfsnow_senior)
+    MACRO_NEW_ARF_SNOW_UNIFORM_ITEM(332nd_arfsnow_veteran,Veteran,332nd_arfsnow_veteran)
+    MACRO_NEW_ARF_SNOW_UNIFORM_ITEM(332nd_arfsnow_corp,Corporal,332nd_arfsnow_corp)
+    MACRO_NEW_ARF_SNOW_UNIFORM_ITEM(332nd_arfsnow_serg,Sergeant,332nd_arfsnow_serg)
+
+    //ARF Urban
+    MACRO_NEW_ARF_URBAN_UNIFORM_ITEM(332nd_arfurb_trooper,Trooper,332nd_arfurb_trooper)
+    MACRO_NEW_ARF_URBAN_UNIFORM_ITEM(332nd_arfurb_senior,Senior,332nd_arfurb_senior)
+    MACRO_NEW_ARF_URBAN_UNIFORM_ITEM(332nd_arfurb_veteran,Veteran,332nd_arfurb_veteran)
+    MACRO_NEW_ARF_URBAN_UNIFORM_ITEM(332nd_arfurb_corp,Corporal,332nd_arfurb_corp)
+    MACRO_NEW_ARF_URBAN_UNIFORM_ITEM(332nd_arfurb_serg,Sergeant,332nd_arfurb_serg)
+
+    //ARF Woodland
+    MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(332nd_arfwood_trooper,Trooper,332nd_arfwood_trooper)
+    MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(332nd_arfwood_senior,Senior,332nd_arfwood_senior)
+    MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(332nd_arfwood_veteran,Veteran,332nd_arfwood_veteran)
+    MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(332nd_arfwood_corp,Corporal,332nd_arfwood_corp)
+    MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(332nd_arfwood_serg,Sergeant,332nd_arfwood_serg)
+
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -226,6 +299,14 @@ class CfgVehicles
     class MACRO_NEW_UNIT(cwo,base);
     class MACRO_NEW_UNIT(rto,base);
     class MACRO_NEW_UNIT(medic,base);
+
+    class MACRO_NEW_UNIT(arfbase,base);
+    class MACRO_NEW_UNIT(arfdes,base);
+    class MACRO_NEW_UNIT(arfjung,base);
+    class MACRO_NEW_UNIT(arfsnow,base);
+    class MACRO_NEW_UNIT(arfurb,base);
+    class MACRO_NEW_UNIT(arfwood,base);
+
 
     //Recruit
     MACRO_NEW_RECRUIT_UNIT(332nd_recruit,Clone Recruit,332nd_recruit)
@@ -282,4 +363,46 @@ class CfgVehicles
     MACRO_NEW_AVI_UNIT(332nd_flight_jr_lieutenant,Flight Jr Lieutenant,332nd_flight_jr_lieutenant,jr_lieutenant\jr_lieutenant_upper.paa,jr_lieutenant\jr_lieutenant_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_lieutenant,Flight Lieutenant,332nd_flight_lieutenant,lieutenant\lieutenant_upper.paa,lieutenant\lieutenant_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_captain,Flight Captain,332nd_flight_captain,captain\captain_upper.paa,captain\captain_lower.paa)
-}
+
+    //ARF Base
+    MACRO_NEW_ARF_BASE_UNIT(332nd_arfbase_trooper,Recon Base Trooper,332nd_arfbase_trooper,Trooper\arf_trooper_upper_ca.paa,Trooper\arf_trooper_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon)
+    MACRO_NEW_ARF_BASE_UNIT(332nd_arfbase_senior,Recon Base Senior Trooper,332nd_arfbase_senior,Senior_Trooper\arf_snrtrooper_upper_ca.paa,Senior_Trooper\arf_snrtrooper_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon)
+    MACRO_NEW_ARF_BASE_UNIT(332nd_arfbase_veteran,Recon Base Veteran Trooper,332nd_arfbase_veteran,Veteran_Trooper\arf_vettrooper_upper_ca.paa,Veteran_Trooper\arf_vettrooper_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran)
+    MACRO_NEW_ARF_BASE_UNIT(332nd_arfbase_corp,Recon Base Corporal,332nd_arfbase_corp,Corporal\arf_corporal_upper_ca.paa,Corporal\arf_corporal_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran)
+    MACRO_NEW_ARF_BASE_UNIT(332nd_arfbase_serg,Recon Base Sergeant,332nd_arfbase_serg,Sergeant\arf_sergeant_upper_ca.paa,Sergeant\arf_sergeant_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran)
+
+    //ARF Desert
+    MACRO_NEW_ARF_DESERT_UNIT(332nd_arfdes_trooper,Recon Desert Trooper,332nd_arfdes_trooper,Trooper\arf_trooper_desert_upper_ca.paa,Trooper\arf_trooper_desert_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_desert)
+    MACRO_NEW_ARF_DESERT_UNIT(332nd_arfdes_senior,Recon Desert Senior Trooper,332nd_arfdes_senior,Senior_Trooper\arf_snrtrooper_desert_upper_ca.paa,Senior_Trooper\arf_snrtrooper_desert_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_desert)
+    MACRO_NEW_ARF_DESERT_UNIT(332nd_arfdes_veteran,Recon Desert Veteran Trooper,332nd_arfdes_veteran,Veteran_Trooper\arf_vettrooper_desert_upper_ca.paa,Veteran_Trooper\arf_vettrooper_desert_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_desert)
+    MACRO_NEW_ARF_DESERT_UNIT(332nd_arfdes_corp,Recon Desert Corporal,332nd_arfdes_corp,Corporal\arf_corporal_desert_upper_ca.paa,Corporal\arf_corporal_desert_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_desert)
+    MACRO_NEW_ARF_DESERT_UNIT(332nd_arfdes_serg,Recon Desert Sergeant,332nd_arfdes_serg,Sergeant\arf_sergeant_desert_upper_ca.paa,Sergeant\arf_sergeant_desert_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_desert)
+
+    //ARF Jungle
+    MACRO_NEW_ARF_JUNGLE_UNIT(332nd_arfjung_trooper,Recon Jungle Trooper,332nd_arfjung_trooper,Trooper\arf_trooper_jungle_upper_ca.paa,Trooper\arf_trooper_jungle_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_jungle)
+    MACRO_NEW_ARF_JUNGLE_UNIT(332nd_arfjung_senior,Recon Jungle Senior Trooper,332nd_arfjung_senior,Senior_Trooper\arf_snrtrooper_jungle_upper_ca.paa,Senior_Trooper\arf_snrtrooper_jungle_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_jungle)
+    MACRO_NEW_ARF_JUNGLE_UNIT(332nd_arfjung_veteran,Recon Jungle Veteran Trooper,332nd_arfjung_veteran,Veteran_Trooper\arf_vettrooper_jungle_upper_ca.paa,Veteran_Trooper\arf_vettrooper_jungle_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_jungle)
+    MACRO_NEW_ARF_JUNGLE_UNIT(332nd_arfjung_corp,Recon Jungle Corporal,332nd_arfjung_corp,Corporal\arf_corporal_jungle_upper_ca.paa,Corporal\arf_corporal_jungle_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_jungle)
+    MACRO_NEW_ARF_JUNGLE_UNIT(332nd_arfjung_serg,Recon Jungle Sergeant,332nd_arfjung_serg,Sergeant\arf_sergeant_jungle_upper_ca.paa,Sergeant\arf_sergeant_jungle_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_jungle)
+
+    //ARF Snow
+    MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_trooper,Recon Snow Trooper,332nd_arfsnow_trooper,Trooper\arf_trooper_snow_upper_ca.paa,Trooper\arf_trooper_snow_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_snow)
+    MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_senior,Recon Snow Senior Trooper,332nd_arfsnow_senior,Senior_Trooper\arf_snrtrooper_snow_upper_ca.paa,Senior_Trooper\arf_snrtrooper_snow_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_snow)
+    MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_veteran,Recon Snow Veteran Trooper,332nd_arfsnow_veteran,Veteran_Trooper\arf_vettrooper_snow_upper_ca.paa,Veteran_Trooper\arf_vettrooper_snow_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_snow)
+    MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_corp,Recon Snow Corporal,332nd_arfsnow_corp,Corporal\arf_corporal_snow_upper_ca.paa,Corporal\arf_corporal_snow_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_snow)
+    MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_serg,Recon Snow Sergeant,332nd_arfsnow_serg,Sergeant\arf_sergeant_snow_upper_ca.paa,Sergeant\arf_sergeant_snow_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_snow)
+
+    //ARF Urban
+    MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_trooper,Recon Urban/Night-Ops Trooper,332nd_arfurb_trooper,Trooper\arf_trooper_urban_upper_ca.paa,Trooper\arf_trooper_urban_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_urban)
+    MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_senior,Recon Urban/Night-Ops Senior Trooper,332nd_arfurb_senior,Senior_Trooper\arf_snrtrooper_urban_upper_ca.paa,Senior_Trooper\arf_snrtrooper_urban_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_urban)
+    MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_veteran,Recon Urban/Night-Ops Veteran Trooper,332nd_arfurb_veteran,Veteran_Trooper\arf_vettrooper_urban_upper_ca.paa,Veteran_Trooper\arf_vettrooper_urban_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_urban)
+    MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_corp,Recon Urban/Night-Ops Corporal,332nd_arfurb_corp,Corporal\arf_corporal_urban_upper_ca.paa,Corporal\arf_corporal_urban_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_urban)
+    MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_serg,Recon Urban/Night-Ops Sergeant,332nd_arfurb_serg,Sergeant\arf_sergeant_urban_upper_ca.paa,Sergeant\arf_sergeant_urban_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_urban)
+
+    //ARF Woodland
+    MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_trooper,Recon Woodland Trooper,332nd_arfwood_trooper,Trooper\arf_trooper_woodland_upper_ca.paa,Trooper\arf_trooper_woodland_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_woodland)
+    MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_senior,Recon Woodland Senior Trooper,332nd_arfwood_senior,Senior_Trooper\arf_snrtrooper_woodland_upper_ca.paa,Senior_Trooper\arf_snrtrooper_woodland_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_woodland)
+    MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_veteran,Recon Woodland Veteran Trooper,332nd_arfwood_veteran,Veteran_Trooper\arf_vettrooper_woodland_upper_ca.paa,Veteran_Trooper\arf_vettrooper_woodland_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_woodland)
+    MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_corp,Recon Woodland Corporal,332nd_arfwood_corp,Corporal\arf_corporal_woodland_upper_ca.paa,Corporal\arf_corporal_woodland_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_woodland)
+    MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_serg,Recon Woodland Sergeant,332nd_arfwood_serg,Sergeant\arf_sergeant_woodland_upper_ca.paa,Sergeant\arf_sergeant_woodland_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon_veteran_woodland)
+};

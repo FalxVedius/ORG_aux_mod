@@ -24,13 +24,23 @@ class CfgFunctions
 {
 	class Aux332nd
 	{
-		class WeaponSounds
+		class Valken_Sounds
 		{
 			file = "\332nd_weapons\Valken_38x";
 			class Fired_Valken_Sound
 			{
 			};
 		};
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class Valken_Bolt_Sound
+	{
+		name = "Valken-Bolt-Sound";
+		sound[] = { "\sounds\ValkenBolt.wss", db + 250, 1.0, 10 };
 	};
 };
 

@@ -53,18 +53,22 @@ class CfgVehicles
 	class ls_hmp_base : Helicopter_Base_H
 	{
 		class Components;
-	};
-	class ls_cis_hmp : ls_hmp_base
-	{
-		class Components;
-		class Turrets
+		class Turrets : Turrets
 		{
 			class MainTurret;
 		};
 	};
+	class ls_cis_hmp : ls_hmp_base
+	{
+		class Components;
+	};
 	class ls_cis_hmp_transport : ls_hmp_base
 	{
 		class Components;
+		class Turrets : Turrets
+		{
+			class MainTurret;
+		};
 	};
 
 	class MACRO_NEW_VEHICLE(air,CIS,HMP_CAS) : ls_cis_hmp
@@ -241,6 +245,14 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_HELI";
 
 		crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+		};
 
 		weapons[] =
 		{

@@ -95,6 +95,9 @@ class CfgWeapons
         displayName = "[332nd] Aviation Helmet ('base')";
         subItems[] = {"Integrated_NVG_TI_1_F"};
 
+		ace_hearing_lowerVolume = 0.60000002;
+		ace_hearing_protection = 0.85000002;
+
 		class ItemInfo : ItemInfo
 		{
 			class HitpointsProtectionInfo
@@ -104,6 +107,7 @@ class CfgWeapons
 					hitpointName = "HitHead";
 					armor = 16;
 					passThrough = 0.5;
+					explosionShielding = 0.75;
 				};
 			};
 		};
@@ -125,6 +129,9 @@ class CfgWeapons
         author = MACRO_AUTHOR;
         displayName = "[332nd] ARF Helmet ('base')";
         subItems[] = {"Integrated_NVG_TI_1_F"};
+
+		ace_hearing_lowerVolume = 0.60000002;
+		ace_hearing_protection = 0.85000002;
 
 		class ItemInfo : ItemInfo
 		{
@@ -155,6 +162,9 @@ class CfgWeapons
         author = MACRO_AUTHOR;
         displayName = "[332nd] Warden Helmet ('base')";
         subItems[] = {"Integrated_NVG_TI_1_F"};
+
+		ace_hearing_lowerVolume = 0.60000002;
+		ace_hearing_protection = 0.85000002;
 
 		class ItemInfo : ItemInfo
 		{
