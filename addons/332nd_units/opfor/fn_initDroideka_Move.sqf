@@ -7,7 +7,13 @@ if (is3DEN) exitWith {
 _obj = _this select 0;
 _unit = _obj select 0;
 
-_vr = "O_Soldier_VR_F" createUnit [position _unit,[]];
+thisDroideka = nil;
+
+"O_Soldier_VR_F" createUnit [position _unit,[],"thisDroideka = this"];
+
+waitUntil { !(isNil thisDroideka) };
+
+_vr = thisDroideka;
 _vr allowDamage false;
 _vr hideObjectGlobal true;
 

@@ -23,6 +23,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Riddle),
 			MACRO_NEW_HELMET(infantry,Hoggy),
 			MACRO_NEW_HELMET(infantry,Cross),
+			MACRO_NEW_HELMET(infantry,Poseidon_V1),
 			MACRO_NEW_HELMET(infantry,332nd_recruit),
         };
 		weapons[] = {};
@@ -45,5 +46,6 @@ class CfgWeapons
     MACRO_NEW_INF_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Riddle,Riddle,Riddle.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Hoggy,Hoggy,Hoggy.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Poseidon_V1,Poseidon_V1,Poseidon_V1.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Cross,Cross,Cross.paa)
 }
