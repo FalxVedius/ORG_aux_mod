@@ -49,6 +49,7 @@ class cfgWeapons
 		recoil="recoil_15c";
 		recoilProne="recoil_15c";
 		cursor="332_DOT";
+		muzzles[] = {"this"};
         cursoraim="332_DC15C";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15c_Medium,45)
@@ -192,7 +193,6 @@ class cfgWeapons
 		};
 		weaponInfoType="RscWeaponZeroing";
 		model = "3AS\3AS_Weapons\DC15C\3AS_DC15C_GL.p3d";
-		modelOptics="3AS\3AS_Weapons\Data\A3_2d_optic.p3d";
 
 		//magazines[] = {
 		//	MACRO_NEW_MAG(DC_15c_Medium,45)
@@ -323,8 +323,8 @@ class cfgWeapons
 			cursorAim="332_UGL";
 			baseweapon="";
 			showtoplayer=1;
-			discreteDistance[]={50,100,200,300,400};
-			discreteDistanceCameraPoint[] = {"OP_eye_50","OP_eye_100","OP_eye_200","OP_eye_300","OP_eye_400"};
+			discreteDistance[]={25,50,100,200,300,400};
+			discreteDistanceCameraPoint[] = {"GL_EYE","OP_eye_50","OP_eye_100","OP_eye_200","OP_eye_300","OP_eye_400"};
 			sounds[]=
 			{
 				"StandardSound"

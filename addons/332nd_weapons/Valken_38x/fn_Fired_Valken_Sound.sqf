@@ -15,9 +15,9 @@ if((_unit ammo _weapon) isEqualTo 0)exitWith{};
 _obj= "HeliHEmpty" createVehicleLocal [0,0,0]; 
 _obj attachTo [_unit,[0,0,1.5]];
 
-sleep 0.4;
+sleep 0.35;
 
-playSound3D ["332nd_weapons\Valken_38x\sounds\ValkenBolt.ogg", _obj, false, getPosASL _obj, 5, 1, 20];
+playSound3D ["332nd_weapons\Valken_38x\sounds\ValkenBolt.ogg", _obj, false, getPosASL _obj, 2.5, 1, 30];
 			
 
 sleep 2;

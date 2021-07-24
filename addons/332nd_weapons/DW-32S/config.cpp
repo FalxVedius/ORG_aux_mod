@@ -52,8 +52,7 @@ class cfgWeapons
 		cursor="332_DOT";
         cursoraim="332_DMR";
 		modes[]=  {
-			"Single",
-			"Stun"
+			"Single"
 		};
         weaponInfoType = "RscOptics_tws";
 		modelOptics="\A3\Weapons_f\acc\reticle_tws";
@@ -101,10 +100,11 @@ class cfgWeapons
 				opticsFlare=0;
 				opticsDisablePeripherialVision=0;
 				discreteDistance[]={100};
+				 discretefov[] = {0.175,0.1};
 				discreteDistanceInitIndex=0;
-				opticsZoomMin=0.375;
+				opticsZoomMin=0.175;
 				opticsZoomMax=1.1;
-				opticsZoomInit=0.75;
+				opticsZoomInit=1;
 				memoryPointCamera="eye";
 				visionMode[]={};
 			};
