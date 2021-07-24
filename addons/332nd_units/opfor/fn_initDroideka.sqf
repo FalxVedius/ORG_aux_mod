@@ -7,23 +7,6 @@ if (is3DEN) exitWith {
 _obj = _this select 0;
 _unit = _obj select 0;
 
-_grp = createGroup east;
-
-_vr = _grp createUnit [ "O_Soldier_VR_F", position _unit, [], 0, "CAN_COLLIDE"];
-
-_vr allowDamage false;
-_vr hideObjectGlobal true;
-
-_vr setUnitPos "DOWN";
-_vr setUnitCombatMode "BLUE";
-_vr setCombatBehaviour "CARELESS";
-
-_d = direction _unit;
-_vr setDir _d;
-
-_unit attachTo [_vr];
-
-
 if (isServer) then {
 
 	_coolDownTimer = 0;
@@ -79,13 +62,10 @@ if (isServer) then {
 		};
 	
 	};
-			
+	
 	if(!(isNil "_shield")) then
 	{
 		deleteVehicle _shield;
 	};
 	_shield = nil;
-	
-	
-	deleteVehicle _vr;
 };

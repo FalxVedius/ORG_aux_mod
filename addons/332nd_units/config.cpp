@@ -653,6 +653,9 @@ class CfgFunctions
 			class initDroideka_Move
 			{
 			};
+			class initDroideka
+			{
+			};
 		};
 	};
 };
@@ -7681,6 +7684,12 @@ class CfgVehicles
 
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HEAVY";
+
+		armor = 275;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_initDroideka;";
+		};
 	};
 
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base) : k_CIS_Droideka
@@ -7691,6 +7700,8 @@ class CfgVehicles
 
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HEAVY";
+
+		armor = 275;
 
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka_Move;";
