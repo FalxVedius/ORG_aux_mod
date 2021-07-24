@@ -56,11 +56,19 @@ class CfgVehicles
 		class Turrets : Turrets
 		{
 			class MainTurret;
+			class MainTurret2;
+			class MainTurret3;
 		};
 	};
 	class ls_cis_hmp : ls_hmp_base
 	{
 		class Components;
+		class Turrets : Turrets
+		{
+			class MainTurret;
+			class MainTurret2;
+			class MainTurret3;
+		};
 	};
 	class ls_cis_hmp_transport : ls_hmp_base
 	{
@@ -68,6 +76,8 @@ class CfgVehicles
 		class Turrets : Turrets
 		{
 			class MainTurret;
+			class MainTurret2;
+			class MainTurret3;
 		};
 	};
 
@@ -83,6 +93,14 @@ class CfgVehicles
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+			class MainTurret2 : MainTurret2
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+			class MainTurret3 : MainTurret3
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
 			};
@@ -168,6 +186,14 @@ class CfgVehicles
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
 			};
+			class MainTurret2 : MainTurret2
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+			class MainTurret3 : MainTurret3
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
 		};
 
 		weapons[] =
@@ -249,6 +275,14 @@ class CfgVehicles
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+			class MainTurret2 : MainTurret2
+			{
+				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+			};
+			class MainTurret3 : MainTurret3
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
 			};

@@ -39,7 +39,7 @@ class CfgSounds
 	class DP23_Bolt_Sound
 	{
 		name = "DP23-Bolt-Sound";
-		sound[] = { "\sounds\DP-23Bolt.wss", db + 250, 1.0, 10 };
+		sound[] = { "\sounds\DP-23Bolt.ogg", db + 250, 1.0, 20 };
 	};
 };
 
@@ -240,7 +240,7 @@ class cfgWeapons
 
 		class EventHandlers
 		{
-			fired = "[_this] spawn Aux332nd_fnc_Fired_DP23_Sound;";
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_DP23_Sound;";
 		};
 				
 	};

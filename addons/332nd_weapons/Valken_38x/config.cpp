@@ -40,7 +40,7 @@ class CfgSounds
 	class Valken_Bolt_Sound
 	{
 		name = "Valken-Bolt-Sound";
-		sound[] = { "\sounds\ValkenBolt.wss", db + 250, 1.0, 10 };
+		sound[] = { "\sounds\ValkenBolt.ogg", db + 250, 1.0, 20 };
 	};
 };
 
@@ -173,7 +173,7 @@ class CfgWeapons
 
 		class EventHandlers
 		{
-			fired = "[_this] spawn Aux332nd_fnc_Fired_Valken_Sound;";
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_Valken_Sound;";
 		};
 
 	};
