@@ -845,6 +845,12 @@ class CfgVehicles
 				count = 10;
 			};
 
+			class DC15B_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15b";
+				count = 10;
+			};
+
 			class RPS1_Weps_332nd
 			{
 				weapon = "332nd_aux_weapon_RPS_1";
@@ -872,16 +878,10 @@ class CfgVehicles
 				count = 50;
 			};
 
-			class DC15A_StunLong_332nd
+			class 332_Stun_332nd
 			{
-				magazine = "JLTS_stun_mag_long";
-				count = 40;
-			};
-
-			class DC15A_StunShort_332nd
-			{
-				magazine = "JLTS_stun_mag_short";
-				count = 40;
+				magazine = "332nd_aux_magazine_Stun_x10";
+				count = 100;
 			};
 
 			class DC15A_UGLAP_332nd
@@ -907,6 +907,13 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
 				count = 300;
 			};
+
+			class DC15b_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15b_x60";
+				count = 200;
+			};
+
 
 			class DC17_332nd
 			{
@@ -990,6 +997,12 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_Valken38x_T_x15";
 				count = 100;
+			};
+
+			class Westar_m5_40rnd
+			{
+				magazine = "332nd_aux_magazine_Westar_M5_x40";
+				count = 300;
 			};
 
 			class Z6_332nd

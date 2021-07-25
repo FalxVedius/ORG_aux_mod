@@ -26,7 +26,8 @@ class cfgWeapons
 		class FullAuto;
 		class Single;
 		class Stun;
-	}
+	};
+	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_15s):JLTS_DC15S
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15s)
@@ -39,6 +40,21 @@ class cfgWeapons
 		modes[]=  {
 		 "FullAuto",
 		 "Single"
+		};
+		class 332Stun: JLTS_stun_muzzle
+		{
+	       magazines[]=
+		   {
+		  	MACRO_NEW_MAG(Stun,10)
+		   };
+		   magazineWell[]={};
+		   cursoraim="332_Stun";
+		   cursor="332_DOT"
+		};
+		muzzles[]=
+		{
+			"this",
+			"332Stun"
 		};
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		class FullAuto: FullAuto

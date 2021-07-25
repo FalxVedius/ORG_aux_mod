@@ -25,7 +25,7 @@ class cfgWeapons
 	{
 		class Single;
 	}
-    
+    class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(Westar35SA_mod): SWLW_Westar35SA
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(Wester-35SA Mod)
@@ -40,7 +40,22 @@ class cfgWeapons
         linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
 
 		modes[] = {"FullAuto","close","short","medium"};
-
+		
+		class 332PistolStun: JLTS_stun_muzzle
+		{
+	       magazines[]=
+		   {
+		  	MACRO_NEW_MAG(Stun,10)
+		   };
+		   magazineWell[]={};
+		   cursoraim="332_Stun";
+		   cursor="332_DOT"
+		};
+		muzzles[]=
+		{
+			"this",
+			"332PistolStun"
+		};
         compatibleItems[]=
         {
             "acc_flashlight",

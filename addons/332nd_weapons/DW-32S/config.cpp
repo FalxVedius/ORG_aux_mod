@@ -38,6 +38,7 @@ class cfgWeapons
 			class PointerSlot;
 		}
 	}
+	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DW_32S): JLTS_DW32S
     {
 		scope=2;
@@ -110,10 +111,20 @@ class cfgWeapons
 			};
 		};
 
-		class stun: stun
+		class 332Stun: JLTS_stun_muzzle
 		{
-		cursor="332_DOT";
-        cursoraim="332_Stun";
+	       magazines[]=
+		   {
+		  	MACRO_NEW_MAG(Stun,10)
+		   };
+		   magazineWell[]={};
+		   cursoraim="332_Stun";
+		   cursor="332_DOT"
+		};
+		muzzles[]=
+		{
+			"this",
+			"332Stun"
 		};
 
 		magazines[]=

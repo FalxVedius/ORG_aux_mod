@@ -32,7 +32,7 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L)
 		cursor="332_DOT";
         cursoraim="332_Chevron";
-		reloadTime=0.16;
+		reloadTime=0.18;
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
 		recoil = "recoil_sw";

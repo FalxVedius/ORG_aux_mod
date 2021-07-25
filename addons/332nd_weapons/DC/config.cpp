@@ -196,6 +196,22 @@ class CfgMagazines
 		tracersEvery=1;
 	};
 
+	class MACRO_NEW_MAG(DC_15b,60): 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=60;
+		mass=15;
+		initspeed=1500;
+		displayName=MACRO_AMMO_DISPLAYNAME(DC-15b "barker",60)
+		displayNameShort="Refined Medium Magazine x15";
+		descriptionShort="Refined Medium Magazine x15";
+		ammo=MACRO_NEW_AMMO(338_Blue);
+		tracersEvery=1;
+	};
+
 	class MACRO_NEW_MAG(Valken38x,15): 30rnd_762x39_AK12_Mag_F
 	{
 		modelSpecial="";
@@ -218,6 +234,38 @@ class CfgMagazines
 		displayNameShort="Refined Medium Tracer Magazine x15";
 		descriptionShort="Refined Medium Tracer Magazine x15";
 		ammo=MACRO_NEW_AMMO(408_Blue_T);
+		tracersEvery=1;
+	};
+
+	class MACRO_NEW_MAG(Westar_M5,40): 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=40;
+		mass=15;
+		initspeed=800;
+		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Suppressed Medium,40)
+		displayNameShort="Westar suppressed medium magazine";
+		descriptionShort="Westar suppressed medium magazine";
+		ammo=MACRO_NEW_AMMO(Medium_Westar);
+		tracersEvery=1;
+	};
+
+	class JLTS_stun_mag_long;
+	class MACRO_NEW_MAG(Stun,10): 30rnd_762x39_AK12_Mag_F
+	{
+		count=10;
+		mass=6;
+		JLTS_stunDuration = 30;
+		initspeed=250;
+		ammo = MACRO_NEW_AMMO(Stun);
+		displayName=MACRO_AMMO_DISPLAYNAME(10rnd Stun (30sec) Magazine,10)
+		displayNameShort="332nd 30 sec stun magazine";
+		descriptionShort="332nd 30 sec stun magazine";
+		model = "\MRC\JLTS\weapons\Core\stun_mag.p3d";
+		picture = "\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
 		tracersEvery=1;
 	};
 };
@@ -294,5 +342,24 @@ class CfgAmmo
 	{
 	    effectfly="332nd_aux_effects_blue_bullet";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200};
+	};
+	class ls_ammo_762_blue;
+	class MACRO_NEW_AMMO(Medium_Westar): ls_ammo_762_blue
+	{
+       audibleFire = 2;
+       ACE_bulletMass = 3;
+       visibleFireTime = 3;
+	   visibleFire = 1;
+	   cartridge = "";
+	};
+
+	class JLTS_bullet_stun;
+	class MACRO_NEW_AMMO(Stun): JLTS_bullet_stun
+	{
+	   JLTS_isStunAmmo = 1;
+       audibleFire = 2;
+       visibleFireTime = 3;
+	   visibleFire = 1;
+	   cartridge = "";
 	};
 }

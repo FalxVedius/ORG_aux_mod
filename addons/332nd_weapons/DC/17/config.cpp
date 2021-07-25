@@ -23,10 +23,9 @@ class cfgWeapons
 	class hgun_P07_F;
 	class JLTS_DC17SA:hgun_P07_F
 	{
-	    class Stun;
 		class Single;
 	}
-    
+    class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_17): JLTS_DC17SA
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17)
@@ -38,7 +37,22 @@ class cfgWeapons
 		cursor="332_DOT";
         cursoraim="332_DC17";
 		magazines[] = {MACRO_NEW_MAG(DC_17,15)};
-        linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+        class 332PistolStun: JLTS_stun_muzzle
+		{
+	       magazines[]=
+		   {
+		  	MACRO_NEW_MAG(Stun,10)
+		   };
+		   magazineWell[]={};
+		   cursoraim="332_Stun";
+		   cursor="332_DOT"
+		};
+		muzzles[]=
+		{
+			"this",
+			"332PistolStun"
+		};
+		linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
         compatibleItems[]=
         {
             "acc_flashlight",
@@ -95,11 +109,6 @@ class cfgWeapons
                 modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
             };
         };
-		class stun: stun
-		{
-		cursor="332_DOT";
-        cursoraim="332_Stun";
-		};
 
         class Single: Single
 		{

@@ -62,7 +62,7 @@ class cfgWeapons
             class PointerSlot;
         }
     }
-
+	class JLTS_stun_muzzle;
     class MACRO_NEW_WEAPON(DP_23): JLTS_DP23
     {
 		scope=2;
@@ -87,6 +87,22 @@ class cfgWeapons
 			MACRO_NEW_MAG(DP23,12Wide)
 		};
 	
+		class 332Stun: JLTS_stun_muzzle
+		{
+	       magazines[]=
+		   {
+		  	MACRO_NEW_MAG(Stun,10)
+		   };
+		   magazineWell[]={};
+		   cursoraim="332_Stun";
+		   cursor="332_DOT"
+		};
+		muzzles[]=
+		{
+			"this",
+			"332Stun"
+		};
+
         class OpticsModes
         {
             class sight

@@ -41,6 +41,7 @@ class cfgWeapons
 		class Single;
 		class WeaponSlotsInfo;
 	};
+	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_15c): 3AS_DC15C_F
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15c)
@@ -49,13 +50,27 @@ class cfgWeapons
 		recoil="recoil_15c";
 		recoilProne="recoil_15c";
 		cursor="332_DOT";
-		muzzles[] = {"this"};
         cursoraim="332_DC15C";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15c_Medium,45)
 		};
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Burst"};
+		class 332Stun: JLTS_stun_muzzle
+		{
+	       magazines[]=
+		   {
+		  	MACRO_NEW_MAG(Stun,10)
+		   };
+		   magazineWell[]={};
+		   cursoraim="332_Stun";
+		   cursor="332_DOT"
+		};
+		muzzles[]=
+		{
+			"this",
+			"332Stun"
+		};
 		class Burst: Single
 		{
 		    burst=3;

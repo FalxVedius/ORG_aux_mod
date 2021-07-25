@@ -37,7 +37,6 @@ class cfgWeapons
 		class EGLM;
 		class Single;
 		class FullAuto;
-		class Stun;
 	}
 
 	class JLTS_DC15A_ugl : JLTS_DC15A
@@ -49,9 +48,8 @@ class cfgWeapons
 		class EGLM;
 		class Single;
 		class FullAuto;
-		class Stun;
 	}
-
+	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_15a): JLTS_DC15A_plastic
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15a)
@@ -204,10 +202,20 @@ class cfgWeapons
             };
         };
 
-		class stun: stun
+		class 332Stun: JLTS_stun_muzzle
 		{
-		cursoraim="332_Stun";
-		cursor="332_DOT"
+	       magazines[]=
+		   {
+		  	MACRO_NEW_MAG(Stun,10)
+		   };
+		   magazineWell[]={};
+		   cursoraim="332_Stun";
+		   cursor="332_DOT"
+		};
+		muzzles[]=
+		{
+			"this",
+			"332Stun"
 		};
 	};
 
