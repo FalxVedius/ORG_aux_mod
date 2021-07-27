@@ -149,6 +149,8 @@ class CfgWeapons
 			maxRangeProbab=0.30000001;
 			soundContinuous=0;
 			soundBurst=0;
+			textureType = "semi";
+			displayName="Single";
 			sounds[]=
 			{
 				"StandardSound",
@@ -181,8 +183,10 @@ class CfgWeapons
 			midRange=15;
 			midRangeProbab=0.69999999;
 			maxRange=30;
+			displayName="FullAuto";
 			maxRangeProbab=0.1;
 			aiRateOfFire=1e-006;
+			textureType = "fullAuto";
 			sounds[]=
 			{
 				"StandardSound"

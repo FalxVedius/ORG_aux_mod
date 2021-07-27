@@ -20,7 +20,7 @@ class CfgPatches
 
 
 class Mode_FullAuto;
-
+class mode_SemiAuto;
 class cfgWeapons
 {
 	class Rifle_Long_Base_F;
@@ -35,8 +35,7 @@ class cfgWeapons
 		{
 			class CowsSlot;
 		}
-	}
-
+	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(Z6): JLTS_Z6
 	{
 		scope=2;
@@ -50,11 +49,14 @@ class cfgWeapons
 		cursor="332_DOT";
 		cursoraim="332_Z6";
 		modes[]=  {
-			"FullAuto",
-			"Supercharge"
+			"FullAuto"
 		};
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-        
+        muzzles[]=
+		{
+			"this",
+			"332_Z6Supercharge"
+		};
 		class OpticsModes
         {
             class sight
@@ -279,21 +281,73 @@ class cfgWeapons
 			maxRange=30;
 			maxRangeProbab=0.1;
 		};
-		class Supercharge: Mode_FullAuto
+		//class Supercharge: Mode_FullAuto
+		//{
+		//	sounds[]=
+		//	{
+		//		"StandardSound"
+		//	};
+		//	class BaseSoundModeType;
+		//	class StandardSound: BaseSoundModeType
+		//	{
+		//		begin1[]=
+		//		{
+		//			"SWLW_clones\machineguns\z6\sounds\Z6_1.wss",
+		//			1.2,
+		//			1.2,
+		//			2000
+		//		};
+		//		soundBegin[]=
+		//		{
+		//			"begin1",
+		//			1
+		//		};
+		//	};
+		//	displayname="Supercharge";
+		//	reloadTime=0.05;
+		//	dispersion=0.01;
+		//	minRange=0;
+		//	minRangeProbab=0.89999998;
+		//	midRange=15;
+		//	midRangeProbab=0.69999999;
+		//	maxRange=30;
+		//	maxRangeProbab=0.1;
+		//	textureType="fastAuto";
+		//};
+        class 332_Z6Supercharge: JLTS_stun_muzzle
+		{
+			displayName="Supercharge";
+			descriptionShort="Z6 Supercharge";
+			reloadTime=1;
+			cursor="332_DOT";
+			cursorAim="332_UGL";
+			showtoplayer=1;
+			modes[] = {"Single"};
+			discreteDistance[]={100,200,300,400};
+			memoryPointCamera="eye";
+			
+			class Single: mode_SemiAuto
 		{
 			sounds[]=
 			{
 				"StandardSound"
 			};
-			class BaseSoundModeType;
+			class BaseSoundModeType
+			{
+				weaponSoundEffect="";
+				closure1[]={};
+				closure2[]={};
+				soundClosure[]={};
+			};
 			class StandardSound: BaseSoundModeType
 			{
+				weaponSoundEffect="";
 				begin1[]=
 				{
-					"SWLW_clones\machineguns\z6\sounds\Z6_1.wss",
-					1.2,
-					1.2,
-					2000
+					"SWLW_clones\rifles\gl\sounds\gl",
+					5,
+					1,
+					1800
 				};
 				soundBegin[]=
 				{
@@ -301,16 +355,25 @@ class cfgWeapons
 					1
 				};
 			};
-			displayname="Supercharge";
-			reloadTime=0.05;
-			dispersion=0.01;
-			minRange=0;
-			minRangeProbab=0.89999998;
-			midRange=15;
-			midRangeProbab=0.69999999;
-			maxRange=30;
-			maxRangeProbab=0.1;
-			textureType="fastAuto";
+		};
+			
+		    magazineWell[]={};
+			magazines[]= 
+				{
+				MACRO_NEW_MAG(Z6_Supercharge,1)
+				};
+			useModelOptics=0;
+			useExternalOptic=0;
+			cameraDir="OP_look";
+			discreteDistanceInitIndex=0;
+			reloadAction = "GestureReloadPistol";
+			reloadMagazineSound[]=
+			{
+				"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
+				1,
+				1,
+				10
+			};
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -330,8 +393,24 @@ class cfgWeapons
 				};
 			};
 		};
-	}
-}
+	};
+};
+
+
+
+
+class cfgAmmo
+{
+  class ls_ammo_127x108_blue;
+  class MACRO_NEW_AMMO(Z6_Supercharge): ls_ammo_127x108_blue
+    {
+    hit = 46;
+	effectfly="332nd_aux_effects_RPS4_blue";
+
+	};
+};
+
+
 
 class CfgMagazines
 {
@@ -358,4 +437,21 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Medium,125)
 		displayNameShort="Med Power 125rnd";
 	};
-}
+
+	class MACRO_NEW_MAG(Z6_Supercharge,1): 30rnd_762x39_AK12_Mag_F //DW-32S
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=1;
+		mass=3;
+		tracerscale = 6;
+		initspeed=400;
+		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Supercharge,1)
+		displayNameShort="Conc-Med Power Tracer 20rnd";
+		descriptionShort="332nd Concentrated-Medium Power Tracer Round";
+		ammo=MACRO_NEW_AMMO(Z6_Supercharge);
+		tracersEvery=1;
+	};
+};
