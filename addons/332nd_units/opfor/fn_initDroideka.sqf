@@ -4,10 +4,10 @@ if (is3DEN) exitWith {
 
 };
 
-_obj = _this select 0;
-_unit = _obj select 0;
-
 if (isServer) then {
+
+	_obj = _this select 0;
+	_unit = _obj select 0;
 
 	_coolDownTimer = 0;
 	_timer = 0;
