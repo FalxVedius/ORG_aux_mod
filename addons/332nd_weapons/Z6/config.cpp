@@ -35,6 +35,7 @@ class cfgWeapons
 		{
 			class CowsSlot;
 		}
+	};
 	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(Z6): JLTS_Z6
 	{
