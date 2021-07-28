@@ -294,7 +294,6 @@ class CfgVehicles
 		  displayName = "Vulture Droid";
 		  scope = 2;
 		  scopeCurator = 2;
-
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
 
