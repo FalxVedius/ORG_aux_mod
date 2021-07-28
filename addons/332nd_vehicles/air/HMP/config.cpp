@@ -85,6 +85,7 @@ class CfgVehicles
 	{
 		displayName = "CAS HMP";
 		scope = 2;
+		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HELI";
 
@@ -175,6 +176,7 @@ class CfgVehicles
 	{
 		displayName = "AA HMP";
 		scope = 2;
+		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HELI";
 
@@ -267,6 +269,7 @@ class CfgVehicles
 	{
 		displayName = "HMP Transport";
 		scope = 2;
+		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HELI";
 

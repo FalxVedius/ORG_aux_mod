@@ -73,6 +73,7 @@ class CfgVehicles
 	{
 		  displayName = "CAP Vulture Droid";
 		  scope = 2;
+		  scopeCurator = 2;
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
 
@@ -183,6 +184,7 @@ class CfgVehicles
 	{
 		  displayName = "CAS Vulture Droid";
 		  scope = 2;
+		  scopeCurator = 2;
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
 
@@ -291,6 +293,7 @@ class CfgVehicles
 	{
 		  displayName = "Vulture Droid";
 		  scope = 2;
+		  scopeCurator = 2;
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
 

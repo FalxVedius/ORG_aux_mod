@@ -327,7 +327,7 @@ class CfgWeapons
 	}; 
 	class put: default
 	{
-		muzzles[]=
+		muzzles[] +=
 		{
 			"332_demoCharge_Muzzle"
 		};
