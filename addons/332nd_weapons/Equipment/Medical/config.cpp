@@ -163,14 +163,14 @@ class ACE_Medical_Treatment
 			timeTillMaxEffect = 30;
 			viscosityChange = -1;
 		};
-		/*class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : Epinephrine
+		class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : Epinephrine
 		{
 
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Kolto_Inj) : Epinephrine
 		{
 
-		};*/
+		};
 		class MACRO_NEW_MEDICAL_ITEM(Combat) : Epinephrine
 		{
 			hrIncreaseHigh[] =

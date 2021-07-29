@@ -19,6 +19,30 @@ class CfgPatches
 	};
 };
 
+class CfgFunctions
+{
+	class Aux332nd
+	{
+		class DC_15XSounds
+		{
+			file = "\332nd_weapons\DC\15x";
+			class Fired_DC15X_Sound
+			{
+			};
+		};
+	};
+};
+
+class CfgSounds
+{
+	sounds[] = {};
+	class DC15X_Bolt_Sound
+	{
+		name = "DC15X-Bolt-Sound";
+		sound[] = { "\sounds\DC-15xBolt.ogg", db + 250, 1.0, 20 };
+	};
+};
+
 class cfgWeapons
 {
 	class arifle_MX_Base_F;
@@ -119,7 +143,12 @@ class cfgWeapons
             "acc_flashlight",
             "acc_pointer_IR"
         };
-	}
+
+		class EventHandlers
+		{
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_DC15X_Sound;";
+		};
+	};
 
 	class InventoryOpticsItem_Base_F;
 	class JLTS_DC15X_scope;
@@ -191,4 +220,4 @@ class cfgWeapons
 			};
 		};
 	};
-}
+};
