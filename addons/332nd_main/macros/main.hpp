@@ -347,6 +347,44 @@
 		};
 	// --- End Opfor Uniforms ---
 
+// ---- START REBEL UNIFORM ----
+
+#define MACRO_NEW_REBEL_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel,classname): MACRO_NEW_UNIFORM(rebel,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel,uniformClassname);\
+		}; \
+	};
+
+#define MACRO_NEW_REBEL_AT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_AT,classname): MACRO_NEW_UNIFORM(rebel_AT,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_AT,uniformClassname);\
+		}; \
+	};
+
+#define MACRO_NEW_REBEL_SNIPER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Sniper,classname): MACRO_NEW_UNIFORM(rebel_Sniper,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Sniper,uniformClassname);\
+		}; \
+	};
+
+// ---- END REBEL ----
+
+
 	//units for uniforms
 	#define MACRO_NEW_RECRUIT_UNIT(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIT(recruit,classname): MACRO_NEW_UNIT(recruit,base)\
@@ -712,6 +750,37 @@
 			scope = 2;\
 			displayName = displayname;\
 		}
+
+
+// ---- START REBEL UNITS ----
+#define MACRO_NEW_REBEL_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel,classname): MACRO_NEW_UNIT(rebel,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_AT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_AT,classname): MACRO_NEW_UNIT(rebel_AT,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_AT,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_SNIPER_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Sniper,classname): MACRO_NEW_UNIT(rebel_Sniper,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Sniper,uniformClassname);\
+		}
+
+	// ---- END REBEL ----
 
 	// ---- Vests ---- 
 

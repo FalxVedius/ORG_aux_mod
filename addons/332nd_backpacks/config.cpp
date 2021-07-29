@@ -188,4 +188,168 @@ class CfgVehicles
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}	
+
+	//Rebel player bag
+	class MACRO_NEW_BACKPACK(blufor, 332nd_rebel_pack) : SWLB_clone_bag_leg
+	{
+		displayName = "[332nd] rebel Pack";
+		maximumLoad = 332;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		class TransportItems
+		{
+			class PlasmaIV_500_rebel
+			{
+				name = "ACE_plasmaIV_500";
+				count = 2;
+			};
+
+		};
+
+		class TransportWeapons
+		{
+
+		};
+
+		class TransportMagazines
+		{
+			class DC_15s_x60_rebel
+			{
+				magazine = "332nd_aux_magazine_DC_15s_x60";
+				count = 15;
+			};
+
+			class Frag_rebel
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 2;
+			};
+
+		};
+
+
+	}
+
+	class MACRO_NEW_BACKPACK(blufor, 332nd_rebel_AT_pack) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_co.paa
+		};
+
+		displayName = "[332nd] rebel AT Pack";
+		maximumLoad = 332;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		class TransportItems
+		{
+			class PlasmaIV_500_rebel
+			{
+				name = "ACE_plasmaIV_500";
+				count = 2;
+			};
+
+		};
+
+		class TransportWeapons
+		{
+
+		};
+
+		class TransportMagazines
+		{
+			class DC_15s_x60_rebel
+			{
+				magazine = "332nd_aux_magazine_DC_15s_x60";
+				count = 15;
+			};
+
+			class Frag_rebel
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 2;
+			};
+
+			class RPS4_HE_rnd_rebel
+			{
+				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				count = 3;
+			};
+
+		};
+
+
+	}
+
+	class JLTS_B1_backpack;
+	class MACRO_NEW_BACKPACK(blufor, 332nd_rebel_Sniper_pack) : JLTS_B1_backpack
+	{
+
+		displayName = "[332nd] rebel Sniper Pack";
+		maximumLoad = 332;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		class TransportItems
+		{
+			class PlasmaIV_500_rebel
+			{
+				name = "ACE_plasmaIV_500";
+				count = 2;
+			};
+
+		};
+
+		class TransportWeapons
+		{
+
+		};
+
+		class TransportMagazines
+		{
+			class DC_15x_x10_rebel
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x10";
+				count = 7;
+			};
+
+			class DC_15x_x2_rebel
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x2";
+				count = 10;
+			};
+
+			class Frag_rebel
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 2;
+			};
+
+			class Smoke_Blue_rebel
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
+				count = 2;
+			};
+
+			class Smoke_Orange_rebel
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
+				count = 2;
+			};
+
+			class Smoke_White_rebel
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
+				count = 2;
+			};
+
+		};
+
+
+	}
 }
