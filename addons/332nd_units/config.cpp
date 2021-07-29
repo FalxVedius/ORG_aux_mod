@@ -342,6 +342,7 @@ class CfgWeapons
 	// ---- Opfor Uniforms ----
 
 	//B1
+	
 	class JLTS_DroidB1 : U_I_CombatUniform
 	{
 		class ItemInfo;
@@ -504,6 +505,39 @@ class CfgWeapons
 		};
 	};
 	// ---- End opfor Uniforms ----
+
+	class MACRO_NEW_UNIFORM(rebel,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_At,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] AT Rebel uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_At,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Snpier,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Sniper uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Sniper,base);
+			containerClass = "Supply140";
+		};
+	};
 }
 
 class CfgSounds
@@ -620,38 +654,7 @@ class CfgSounds
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
 	};
 
-	class MACRO_NEW_UNIFORM(rebel,base) : JLTS_DroidB1
-	{
-		displayName = "[332nd] Rebel uniform ('base')";
-		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
-		class ItemInfo : ItemInfo
-		{
-			uniformClass = MACRO_NEW_UNIT(rebel,base);
-			containerClass = "Supply140";
-		};
-	};
 
-	class MACRO_NEW_UNIFORM(rebel_At,base) : JLTS_DroidB1
-	{
-		displayName = "[332nd] AT Rebel uniform ('base')";
-		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
-		class ItemInfo : ItemInfo
-		{
-			uniformClass = MACRO_NEW_UNIT(rebel_At,base);
-			containerClass = "Supply140";
-		};
-	};
-
-	class MACRO_NEW_UNIFORM(rebel_Snpier,base) : JLTS_DroidB1
-	{
-		displayName = "[332nd] Rebel Sniper uniform ('base')";
-		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
-		class ItemInfo : ItemInfo
-		{
-			uniformClass = MACRO_NEW_UNIT(rebel_Sniper,base);
-			containerClass = "Supply140";
-		};
-	};
 };
 
 class CfgFunctions
