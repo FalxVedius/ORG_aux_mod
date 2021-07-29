@@ -190,7 +190,7 @@ class CfgVehicles
 	}	
 
 	//Rebel player bag
-	class MACRO_NEW_BACKPACK(blufor, 332nd_rebel_pack) : SWLB_clone_bag_leg
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_pack) : SWLB_clone_bag_leg
 	{
 		displayName = "[332nd] rebel Pack";
 		maximumLoad = 332;
@@ -232,7 +232,7 @@ class CfgVehicles
 
 	}
 
-	class MACRO_NEW_BACKPACK(blufor, 332nd_rebel_AT_pack) : JLTS_Clone_backpack
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_AT_pack) : JLTS_Clone_backpack
 	{
 		hiddenSelectionsTextures[] =
 		{
@@ -286,7 +286,7 @@ class CfgVehicles
 	}
 
 	class JLTS_B1_backpack;
-	class MACRO_NEW_BACKPACK(blufor, 332nd_rebel_Sniper_pack) : JLTS_B1_backpack
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_Sniper_pack) : JLTS_B1_backpack
 	{
 
 		displayName = "[332nd] rebel Sniper Pack";

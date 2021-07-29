@@ -33,7 +33,7 @@ class CfgPatches
 	};
 };
 
-class CfgFactionClasses
+	class CfgFactionClasses
 {
 	class EdCat_332nd
 	{
@@ -620,35 +620,35 @@ class CfgSounds
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
 	};
 
-	class MACRO_NEW_UNIFORM(rebel, base) : JLTS_DroidB1
+	class MACRO_NEW_UNIFORM(rebel,base) : JLTS_DroidB1
 	{
 		displayName = "[332nd] Rebel uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
-			uniformClass = MACRO_NEW_UNIT(rebel, base);
+			uniformClass = MACRO_NEW_UNIT(rebel,base);
 			containerClass = "Supply140";
 		};
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_At, base) : JLTS_DroidB1
+	class MACRO_NEW_UNIFORM(rebel_At,base) : JLTS_DroidB1
 	{
 		displayName = "[332nd] AT Rebel uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
-			uniformClass = MACRO_NEW_UNIT(rebel_At, base);
+			uniformClass = MACRO_NEW_UNIT(rebel_At,base);
 			containerClass = "Supply140";
 		};
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_Snpier, base) : JLTS_DroidB1
+	class MACRO_NEW_UNIFORM(rebel_Snpier,base) : JLTS_DroidB1
 	{
 		displayName = "[332nd] Rebel Sniper uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
-			uniformClass = MACRO_NEW_UNIT(rebel_Sniper, base);
+			uniformClass = MACRO_NEW_UNIT(rebel_Sniper,base);
 			containerClass = "Supply140";
 		};
 	};
@@ -7768,7 +7768,7 @@ class CfgVehicles
 	};
 
 	//Rebel
-	class MACRO_NEW_UNIT(rebel, base) : JLTS_Droid_B1_E5
+	class MACRO_NEW_UNIT(rebel,base) : JLTS_Droid_B1_E5
 	{
 
 		author = MACRO_AUTHOR;
@@ -7779,7 +7779,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_RBASIC";
 		side = 2;
 
-		uniformClass = MACRO_NEW_UNIFORM(rebel, base);
+		uniformClass = MACRO_NEW_UNIFORM(rebel,base);
 		hiddenSelections[] = { "camo1" };
 
 		hiddenSelectionsTextures[] =
@@ -8012,7 +8012,7 @@ class CfgVehicles
 
 	};//Added
 
-	class MACRO_NEW_UNIT(rebel_AT, base) : JLTS_Droid_B1_E5
+	class MACRO_NEW_UNIT(rebel_AT,base) : JLTS_Droid_B1_E5
 	{
 
 		author = MACRO_AUTHOR;
@@ -8023,7 +8023,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_RBASIC";
 		side = 2;
 
-		uniformClass = MACRO_NEW_UNIFORM(rebel_AT, base);
+		uniformClass = MACRO_NEW_UNIFORM(rebel_AT,base);
 		hiddenSelections[] = { "camo1" };
 
 		hiddenSelectionsTextures[] =
@@ -8256,7 +8256,7 @@ class CfgVehicles
 
 	};//Added
 
-	class MACRO_NEW_UNIT(rebel_Sniper, base) : JLTS_Droid_B1_E5
+	class MACRO_NEW_UNIT(rebel_Sniper,base) : JLTS_Droid_B1_E5
 	{
 
 		author = MACRO_AUTHOR;
@@ -8267,7 +8267,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_RBASIC";
 		side = 2;
 
-		uniformClass = MACRO_NEW_UNIFORM(rebel_Sniper, base);
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Sniper,base);
 		hiddenSelections[] = { "camo1" };
 
 		hiddenSelectionsTextures[] =
