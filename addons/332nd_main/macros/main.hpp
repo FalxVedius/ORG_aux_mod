@@ -382,6 +382,18 @@
 		}; \
 	};
 
+#define MACRO_NEW_REBEL_MEDIC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Medic,classname): MACRO_NEW_UNIFORM(rebel_Medic,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Medic,uniformClassname);\
+		}; \
+	};
+
+
 // ---- END REBEL ----
 
 
@@ -778,6 +790,15 @@
 			scope = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(rebel_Sniper,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_MEDIC_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Medic,classname): MACRO_NEW_UNIT(rebel_Medic,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Medic,uniformClassname);\
 		}
 
 	// ---- END REBEL ----

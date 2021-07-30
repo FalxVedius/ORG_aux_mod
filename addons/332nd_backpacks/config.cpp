@@ -352,4 +352,71 @@ class CfgVehicles
 
 
 	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_Medic_pack) : JLTS_B1_backpack
+	{
+
+		displayName = "[332nd] rebel medic Pack";
+		maximumLoad = 332;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		class TransportItems
+		{
+			class PlasmaIV_500_rebel
+			{
+				name = "ACE_plasmaIV_500";
+				count = 2;
+			};
+
+		};
+
+		class TransportWeapons
+		{
+
+		};
+
+		class TransportMagazines
+		{
+			class DC_15x_x10_rebel
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x10";
+				count = 7;
+			};
+
+			class DC_15x_x2_rebel
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x2";
+				count = 10;
+			};
+
+			class Frag_rebel
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 2;
+			};
+
+			class Smoke_Blue_rebel
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
+				count = 2;
+			};
+
+			class Smoke_Orange_rebel
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
+				count = 2;
+			};
+
+			class Smoke_White_rebel
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
+				count = 2;
+			};
+
+		};
+
+
+	}
 }
