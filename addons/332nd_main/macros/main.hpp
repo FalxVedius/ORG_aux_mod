@@ -393,6 +393,16 @@
 		}; \
 	};
 
+#define MACRO_NEW_REBEL_HEAVY_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Heavy,classname): MACRO_NEW_UNIFORM(rebel_Heavy,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Heavy,uniformClassname);\
+		}; \
+	};
 
 // ---- END REBEL ----
 
@@ -799,6 +809,15 @@
 			scope = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(rebel_Medic,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_HEAVY_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Heavy,classname): MACRO_NEW_UNIT(rebel_Heavy,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Heavy,uniformClassname);\
 		}
 
 	// ---- END REBEL ----

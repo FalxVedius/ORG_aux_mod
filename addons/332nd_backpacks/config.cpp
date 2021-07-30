@@ -254,11 +254,6 @@ class CfgVehicles
 
 	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_AT_pack) : JLTS_B1_backpack
 	{
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_co.paa
-		};
-
 		displayName = "[332nd] rebel AT Pack";
 		maximumLoad = 332;
 
@@ -494,6 +489,66 @@ class CfgVehicles
 			class Smoke_White_rebel
 			{
 				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
+				count = 2;
+			};
+
+		};
+
+
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_Heavy_pack) : JLTS_B1_backpack
+	{
+		
+		displayName = "[332nd] rebel Heavy Pack";
+		maximumLoad = 332;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		class TransportItems
+		{
+			class PlasmaIV_500_rebel
+			{
+				name = "ACE_plasmaIV_500";
+				count = 2;
+			};
+
+			class Pressure_Cuff_rebel
+			{
+				name = "332nd_aux_medical_PressureCuff";
+				count = 4;
+			};
+
+			class Plasti_Band_rebel
+			{
+				name = "332nd_aux_medical_PlastiBandage";
+				count = 5;
+			};
+
+			class Bacta_Spray_rebel
+			{
+				name = "332nd_aux_medical_BactaSpray";
+				count = 5;
+			};
+
+		};
+
+		class TransportWeapons
+		{
+
+		};
+
+		class TransportMagazines
+		{
+			class SWLW_LS150_rebel
+			{
+				magazine = "SWLW_LS150_mag";
+				count = 5;
+			};
+			class Frag_rebel
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
 				count = 2;
 			};
 

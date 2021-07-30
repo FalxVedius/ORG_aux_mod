@@ -18,13 +18,14 @@ class CfgPatches
 			MACRO_NEW_UNIT(rebel_AT,332nd_indep_rebel_AT),
 			MACRO_NEW_UNIT(rebel_Sniper,332nd_indep_rebel_Sniper),
 			MACRO_NEW_UNIT(rebel_Medic,332nd_indep_rebel_Medic),
+			MACRO_NEW_UNIT(rebel_Heavy,332nd_indep_rebel_Heavy),
         };
         weapons[] = {
 			MACRO_NEW_UNIFORM(rebel,332nd_indep_rebel),
 			MACRO_NEW_UNIFORM(rebel_AT,332nd_indep_rebel_AT),
 			MACRO_NEW_UNIFORM(rebel_Sniper,332nd_indep_rebel_Sniper),
 			MACRO_NEW_UNIFORM(rebel_Medic,332nd_indep_rebel_Medic),
-
+			MACRO_NEW_UNIFORM(rebel_Heavy,332nd_indep_rebel_Heavy),
         };
     };
 };
@@ -54,11 +55,17 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
+	class MACRO_NEW_UNIFORM(rebel_Heavy,base) : JLTS_DroidB1
+	{
+		class ItemInfo;
+	};
+
 	//Rebel
 	MACRO_NEW_REBEL_UNIFORM_ITEM(332nd_indep_rebel,Rebel,332nd_indep_rebel)//Class name, shown name, unit name
 	MACRO_NEW_REBEL_AT_UNIFORM_ITEM(332nd_indep_rebel_AT,AT Rebel,332nd_indep_rebel_AT)
 	MACRO_NEW_REBEL_SNIPER_UNIFORM_ITEM(332nd_indep_rebel_Sniper,Sniper Rebel,332nd_indep_rebel_Sniper)
 	MACRO_NEW_REBEL_MEDIC_UNIFORM_ITEM(332nd_indep_rebel_Medic,Medical Rebel,332nd_indep_rebel_Medic)
+	MACRO_NEW_REBEL_HEAVY_UNIFORM_ITEM(332nd_indep_rebel_Heavy,Heavy Rebel,332nd_indep_rebel_Heavy)
 
 
 };
@@ -69,13 +76,14 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(rebel_AT,base);
 	class MACRO_NEW_UNIT(rebel_Sniper,base);
 	class MACRO_NEW_UNIT(rebel_Medic,base);
+	class MACRO_NEW_UNIT(rebel_Heavy,base);
 
 		//Rebels
 		MACRO_NEW_REBEL_UNIT(332nd_indep_rebel,Rebel,332nd_indep_rebel)//Added
 		MACRO_NEW_REBEL_AT_UNIT(332nd_indep_rebel_AT,AT Rebel,332nd_indep_rebel_AT)
 		MACRO_NEW_REBEL_SNIPER_UNIT(332nd_indep_rebel_Sniper,Sniper Rebel,332nd_indep_rebel_Sniper)
 		MACRO_NEW_REBEL_MEDIC_UNIT(332nd_indep_rebel_Medic,Medical Rebel,332nd_indep_rebel_Medic)
-		
+		MACRO_NEW_REBEL_HEAVY_UNIT(332nd_indep_rebel_Heavy,Heavy Rebel,332nd_indep_rebel_Heavy)
 };
 
 class CfgGroups
@@ -126,7 +134,7 @@ class CfgGroups
 					class Unit4
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_unit_332nd_indep_rebel";
+						vehicle = "332nd_aux_rebel_Heavy_unit_332nd_indep_rebel_Heavy";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
