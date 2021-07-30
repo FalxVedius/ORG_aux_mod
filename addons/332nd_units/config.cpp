@@ -7803,30 +7803,27 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_E5_B1","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_E5_B1","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_pack";
 		magazines[] =
 		{
-			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
+			mag_15(332nd_aux_magazine_E5Low_x50),
 			mag_2(332nd_aux_magazine_332_FRAG_x1)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
+			mag_15(332nd_aux_magazine_E5Low_x50),
 			mag_2(332nd_aux_magazine_332_FRAG_x1)
 
 		};
 		items[] =
 		{
 			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_EntrenchingTool",
 			"ACE_Flashlight_XL50",
 			"ACE_M26_Clacker",
@@ -7835,14 +7832,13 @@ class CfgVehicles
 			mag_3(ACE_plasmaIV_500),
 			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 		respawnItems[] =
 		{
 			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_EntrenchingTool",
 			"ACE_Flashlight_XL50",
 			"ACE_M26_Clacker",
@@ -7851,7 +7847,7 @@ class CfgVehicles
 			mag_3(ACE_plasmaIV_500),
 			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 
 		class HitPoints : HitPoints
@@ -8047,8 +8043,8 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_4","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_4","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AT_pack";
 		magazines[] =
@@ -8056,46 +8052,38 @@ class CfgVehicles
 			mag_15(332nd_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 			mag_2(332nd_aux_magazine_332_FRAG_x1),
-			mag_3(332nd_aux_magazine_RPS4_HE_x1)
+			mag_3(332nd_aux_magazine_RPS6_ATMag_x1)
 		};
 		respawnMagazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 			mag_2(332nd_aux_magazine_332_FRAG_x1),
-			mag_3(332nd_aux_magazine_RPS4_HE_x1)
+			mag_3(332nd_aux_magazine_RPS6_ATMag_x1)
 		};
 		items[] =
 		{
 			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
 			"ACE_M26_Clacker",
 			"MineDetector",
 			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 		respawnItems[] =
 		{
 			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
 			"ACE_M26_Clacker",
 			"MineDetector",
 			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 
 		class HitPoints : HitPoints
@@ -8307,29 +8295,21 @@ class CfgVehicles
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
-			"ACE_EntrenchingTool",
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_Flashlight_XL50",
 			"MineDetector",
-			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
-			"ACE_EntrenchingTool",
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_Flashlight_XL50",
 			"MineDetector",
-			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 
 		class HitPoints : HitPoints
@@ -8525,45 +8505,49 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Medic_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60)
+			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_35sa_low_x30)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60)
+			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_35sa_low_x30)
 
 		};
 		items[] =
 		{
 			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_EntrenchingTool",
 			"ACE_Flashlight_XL50",
 			"MineDetector",
+			mag_2(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
 			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 		respawnItems[] =
 		{
 			mag_2(ACE_CableTie),
-			mag_10(ACE_elasticBandage),
-			mag_5(ACE_packingBandage),
-			mag_5(ACE_quikclot),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
 			"ACE_EntrenchingTool",
 			"ACE_Flashlight_XL50",
 			"MineDetector",
+			mag_2(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
 			"ACE_wirecutter",
 			"ACE_EarPlugs",
-			mag_4(ACE_tourniquet),
+			mag_4(332nd_aux_medical_PressureCuff),
 		};
 
 		class HitPoints : HitPoints

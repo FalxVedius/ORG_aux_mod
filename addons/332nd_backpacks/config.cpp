@@ -190,7 +190,9 @@ class CfgVehicles
 	}	
 
 	//Rebel player bag
-	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_pack) : SWLB_clone_bag_leg
+
+	class JLTS_B1_backpack;
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_pack) : JLTS_B1_backpack
 	{
 		displayName = "[332nd] rebel Pack";
 		maximumLoad = 332;
@@ -206,6 +208,24 @@ class CfgVehicles
 				count = 2;
 			};
 
+			class Pressure_Cuff_rebel
+			{
+				name = "332nd_aux_medical_PressureCuff";
+				count = 4;
+			};
+
+			class Plasti_Band_rebel
+			{
+				name = "332nd_aux_medical_PlastiBandage";
+				count = 5;
+			};
+
+			class Bacta_Spray_rebel
+			{
+				name = "332nd_aux_medical_BactaSpray";
+				count = 5;
+			};
+
 		};
 
 		class TransportWeapons
@@ -215,9 +235,9 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-			class DC_15s_x60_rebel
+			class DC_E5_rebel
 			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
+				magazine = "332nd_aux_magazine_E5Low_x50";
 				count = 15;
 			};
 
@@ -232,7 +252,7 @@ class CfgVehicles
 
 	}
 
-	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_AT_pack) : JLTS_Clone_backpack
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_AT_pack) : JLTS_B1_backpack
 	{
 		hiddenSelectionsTextures[] =
 		{
@@ -253,6 +273,24 @@ class CfgVehicles
 				count = 2;
 			};
 
+			class Pressure_Cuff_rebel
+			{
+				name = "332nd_aux_medical_PressureCuff";
+				count = 4;
+			};
+
+			class Plasti_Band_rebel
+			{
+				name = "332nd_aux_medical_PlastiBandage";
+				count = 5;
+			};
+
+			class Bacta_Spray_rebel
+			{
+				name = "332nd_aux_medical_BactaSpray";
+				count = 5;
+			};
+
 		};
 
 		class TransportWeapons
@@ -274,10 +312,10 @@ class CfgVehicles
 				count = 2;
 			};
 
-			class RPS4_HE_rnd_rebel
+			class RPS6_AT_rnd_rebel
 			{
-				magazine = "332nd_aux_magazine_RPS4_HE_x1";
-				count = 3;
+				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				count = 4;
 			};
 
 		};
@@ -285,7 +323,6 @@ class CfgVehicles
 
 	}
 
-	class JLTS_B1_backpack;
 	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_Sniper_pack) : JLTS_B1_backpack
 	{
 
@@ -299,8 +336,29 @@ class CfgVehicles
 		{
 			class PlasmaIV_500_rebel
 			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
+				class PlasmaIV_500_rebel
+				{
+					name = "ACE_plasmaIV_500";
+					count = 2;
+				};
+
+				class Pressure_Cuff_rebel
+				{
+					name = "332nd_aux_medical_PressureCuff";
+					count = 4;
+				};
+
+				class Plasti_Band_rebel
+				{
+					name = "332nd_aux_medical_PlastiBandage";
+					count = 5;
+				};
+
+				class Bacta_Spray_rebel
+				{
+					name = "332nd_aux_medical_BactaSpray";
+					count = 5;
+				};
 			};
 
 		};
@@ -367,7 +425,31 @@ class CfgVehicles
 			class PlasmaIV_500_rebel
 			{
 				name = "ACE_plasmaIV_500";
-				count = 2;
+				count = 4;
+			};
+
+			class Pressure_Cuff_rebel
+			{
+				name = "332nd_aux_medical_PressureCuff";
+				count = 8;
+			};
+
+			class Plasti_Band_rebel
+			{
+				name = "332nd_aux_medical_PlastiBandage";
+				count = 15;
+			};
+
+			class Bacta_Spray_rebel
+			{
+				name = "332nd_aux_medical_BactaSpray";
+				count = 15;
+			};
+
+			class Blood_tank_rebel
+			{
+				name = "332nd_aux_medical_Blood";
+				count = 5;
 			};
 
 		};
@@ -379,15 +461,15 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-			class DC_15x_x10_rebel
+			class DC_15s_x60_rebel_medic
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x10";
+				magazine = "332nd_aux_magazine_DC_15s_x60";
 				count = 7;
 			};
 
-			class DC_15x_x2_rebel
+			class 35sa_low_x30_rebel_medic
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
+				magazine = "332nd_aux_magazine_35sa_low_x30";
 				count = 10;
 			};
 
