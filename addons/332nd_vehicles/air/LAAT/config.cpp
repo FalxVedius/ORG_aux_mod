@@ -914,7 +914,7 @@ class CfgVehicles
             };
             class HitEngine : HitEngine
             {
-                armor = 0.5;
+                armor = 1;
                 convexComponent = "engine_hit";
                 explosionShielding = 2;
                 material = 51;
@@ -923,24 +923,27 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.2 * 5;
+                minimalHit = 0.6;
             };
             class HitEngine_1 : HitEngine_1
             {
-                armor = 0.5;
+                armor = 1;
                 passThrough = 1;
                 explosionShielding = 2;
                 convexComponent = "engine_hit_1";
                 name = "engine_hit_1";
                 hitpoint = "engine_hit_1";
+                minimalHit = 0.6;
             };
             class HitEngine_2 : HitEngine_2
             {
-                armor = 0.5;
+                armor = 1;
                 passThrough = 1;
                 explosionShielding = 2;
                 convexComponent = "engine_hit_2";
                 name = "engine_hit_2";
                 hitpoint = "engine_hit_2";
+                minimalHit = 0.6;
             };
             class HitHRotor : HitHRotor
             {
@@ -974,6 +977,7 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.5;
+                minimalHit = 0.6;
             };
         };
     }
@@ -1402,7 +1406,7 @@ class CfgVehicles
             };
             class HitEngine : HitEngine
             {
-                armor = 0.5;
+                armor = 1;
                 convexComponent = "engine_hit";
                 explosionShielding = 2;
                 material = 51;
@@ -1411,20 +1415,27 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.2 * 5;
+                minimalHit = 0.6;
             };
             class HitEngine_1 : HitEngine_1
             {
-                armor = 0.5;
+                armor = 1;
+                passThrough = 1;
+                explosionShielding = 2;
                 convexComponent = "engine_hit_1";
                 name = "engine_hit_1";
                 hitpoint = "engine_hit_1";
+                minimalHit = 0.6;
             };
             class HitEngine_2 : HitEngine_2
             {
-                armor = 0.5;
+                armor = 1;
+                passThrough = 1;
+                explosionShielding = 2;
                 convexComponent = "engine_hit_2";
                 name = "engine_hit_2";
                 hitpoint = "engine_hit_2";
+                minimalHit = 0.6;
             };
             class HitHRotor : HitHRotor
             {
@@ -1458,6 +1469,7 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.5;
+                minimalHit = 0.6;
             };
         };
     }
