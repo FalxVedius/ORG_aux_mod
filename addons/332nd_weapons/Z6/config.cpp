@@ -273,8 +273,8 @@ class cfgWeapons
 				};
 			};
 			displayname="FullAuto";
-			reloadTime=0.1055;
-			dispersion=0.003;
+			reloadTime=0.1;
+			dispersion=0.001;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -321,7 +321,7 @@ class cfgWeapons
 			descriptionShort="Z6 Supercharge";
 			reloadTime=1;
 			cursor="332_DOT";
-			cursorAim="332_UGL";
+            cursoraim="332_DC17";
 			showtoplayer=1;
 			modes[] = {"Single"};
 			discreteDistance[]={100,200,300,400};
@@ -345,10 +345,10 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"SWLW_clones\rifles\gl\sounds\gl",
-					5,
-					1,
-					1800
+					"332nd_Weapons\Z6\sounds\Z6Supercharge.wss",
+					1.5,
+					0.98,
+					1500
 				};
 				soundBegin[]=
 				{
@@ -367,7 +367,6 @@ class cfgWeapons
 			useExternalOptic=0;
 			cameraDir="OP_look";
 			discreteDistanceInitIndex=0;
-			reloadAction = "GestureReloadPistol";
 			reloadMagazineSound[]=
 			{
 				"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
@@ -405,8 +404,12 @@ class cfgAmmo
   class ls_ammo_127x108_blue;
   class MACRO_NEW_AMMO(Z6_Supercharge): ls_ammo_127x108_blue
     {
-    hit = 50;
+    hit = 90;
+	indirecthit=8;
+	indirectHitRange = 1;
+	caliber=20;
 	effectfly="332nd_aux_effects_RPS4_blue";
+	explosionEffects = "ImpactPlasmaExpBlue";
 	};
 };
 

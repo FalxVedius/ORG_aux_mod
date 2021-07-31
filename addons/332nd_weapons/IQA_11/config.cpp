@@ -301,8 +301,8 @@ class CfgWeapons
 				begin1[]=
 				{
 					"332nd_Weapons\IQA_11\sounds\IQA_11_Suppressed.wss",
-					35,
-					1,
+					45,
+					2,
 					300
 				};
 				soundBegin[]=

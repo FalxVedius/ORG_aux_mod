@@ -348,6 +348,7 @@ class CfgAmmo
 		caliber = 10;
 		hit = 500;
 		typicalSpeed=5000;
+		explosionEffects = "ImpactPlasmaExpGreen";
 		tracerscale = 3;
 		airFriction = -0.000005;
 			class CamShakeFire
