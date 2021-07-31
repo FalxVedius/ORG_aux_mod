@@ -31,6 +31,14 @@ class CfgFunctions
 			{
 
 			};
+			class StopBleeding
+			{
+
+			};
+			class StopBleedingLocal
+			{
+
+			};
 			class MedicalInit
 			{
 
@@ -163,14 +171,14 @@ class ACE_Medical_Treatment
 			timeTillMaxEffect = 30;
 			viscosityChange = -1;
 		};
-		/*class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : Epinephrine
+		class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : Epinephrine
 		{
 
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Kolto_Inj) : Epinephrine
 		{
 
-		};*/
+		};
 		class MACRO_NEW_MEDICAL_ITEM(Combat) : Epinephrine
 		{
 			hrIncreaseHigh[] =
@@ -328,6 +336,8 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Combat Stimulant";
 		displayNameProgress = "Injecting Stimulant...";
+
+		callbackSuccess = "Aux332nd_fnc_StopBleeding";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(AdhesiveDefibStrip) : CPR
 	{
@@ -589,7 +599,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(Combat) : ACE_epinephrine
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Combat Stimulant)
 		descriptionShort = "332nd Healing";
