@@ -405,9 +405,8 @@ class cfgAmmo
   class ls_ammo_127x108_blue;
   class MACRO_NEW_AMMO(Z6_Supercharge): ls_ammo_127x108_blue
     {
-    hit = 46;
+    hit = 50;
 	effectfly="332nd_aux_effects_RPS4_blue";
-
 	};
 };
 

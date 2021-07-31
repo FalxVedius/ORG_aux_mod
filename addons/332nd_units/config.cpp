@@ -914,7 +914,6 @@ class CfgVehicles
 				count = 200;
 			};
 
-
 			class DC17_332nd
 			{
 				magazine = "332nd_aux_magazine_DC_17_x15";
@@ -937,18 +936,6 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_DC_15L_T_x125";
 				count = 100;
-			};
-
-			class DC15X_HIGH_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x10";
-				count = 50;
-			};
-
-			class DC15X_LOW_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
-				count = 25;
 			};
 
 			class DP_23_332nd
@@ -999,6 +986,24 @@ class CfgVehicles
 				count = 100;
 			};
 
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
+			 
+			class IQA11_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_T_x8";
+				count = 100;
+			};
+
+			class IQA11_high_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_x8";
+				count = 100;
+			};
+			
 			class Westar_m5_40rnd
 			{
 				magazine = "332nd_aux_magazine_Westar_M5_x40";
@@ -1086,6 +1091,12 @@ class CfgVehicles
 			class RPS4HE_332nd
 			{
 				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				count = 20;
+			};
+
+			class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x3";
 				count = 20;
 			};
 		};

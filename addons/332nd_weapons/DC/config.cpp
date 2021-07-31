@@ -102,33 +102,6 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(127x108_Blue_T);
 		tracersEvery=1;
 	};
-	
-	class MACRO_NEW_MAG(DC_15x,2): 30rnd_762x39_AK12_Mag_F //15X
-	{
-	    modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=2;
-		mass=25
-		initspeed=1200;
-		displayName=MACRO_AMMO_DISPLAYNAME(15x Super High,2)
-		displayNameShort="Super High Energy 2rnd";
-		descriptionShort="332nd High Power-High Velocity Round";
-		ammo="ls_50mm_laat_apfsds";
-		tracersEvery=1;
-	};
-	class MACRO_NEW_MAG(DC_15x,10): MACRO_NEW_MAG(DC_15x,2) //15X
-	{
-		count=10;
-		mass=25
-		initspeed=2100;
-		displayName=MACRO_AMMO_DISPLAYNAME(15x High Power,10)
-		displayNameShort="High PowerHv 10rnd";
-		descriptionShort="332nd High Power-High Velocity Round";
-		ammo="ls_ammo_127x108_green";
-		tracersEvery=1;
-	};
 
 	class MACRO_NEW_MAG(DC_17,15): 30rnd_762x39_AK12_Mag_F //DC-17
 	{
@@ -179,7 +152,7 @@ class CfgMagazines
 		ammo="ls_ammo_762_blue";
 		tracersEvery=1;
 	};
-	class 30rnd_762x39_AK12_Mag_F;
+
 	class MACRO_NEW_MAG(E5Low,50): 30rnd_762x39_AK12_Mag_F
 	{
 		modelSpecial="";
@@ -251,6 +224,22 @@ class CfgMagazines
 		descriptionShort="Westar suppressed medium magazine";
 		ammo=MACRO_NEW_AMMO(Medium_Westar);
 		tracersEvery=1;
+	}; 
+	class JLTS_DC15X_mag;
+	class MACRO_NEW_MAG(DC_15x,3): JLTS_DC15X_mag
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=3;
+		mass=40;
+		initspeed=5000;
+		displayName=MACRO_AMMO_DISPLAYNAME(15x Anti-Tank Magazine,3)
+		displayNameShort="3 rnd 15x AT Magazine";
+		descriptionShort="3 rnd 15x AT Magazine";
+		ammo=MACRO_NEW_AMMO(DC_15xATR);
+		tracersEvery=1;
 	};
 
 	class JLTS_stun_mag_long;
@@ -295,38 +284,37 @@ class CfgAmmo
 	{
 	     hit = 20;
 		 effectfly="332nd_aux_effects_blue_bullet";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
 	};
 	class ls_ammo_127x108_blue;
 	class MACRO_NEW_AMMO(127x108_Blue_T): ls_ammo_127x108_blue
 	{
 		 effectfly="332nd_aux_effects_blue_bullet";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
 	};
 	class ls_ammo_338_green;
 	class MACRO_NEW_AMMO(338_Green_T):  ls_ammo_338_green
 	{
 	    hit = 20;
 	    effectfly="332nd_aux_effects_green_bullet";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
 	}
 
 	class MACRO_NEW_AMMO(338_Green):  ls_ammo_338_green
 	{
 	    hit = 20;
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
 	}
 
 	class MACRO_NEW_AMMO(338_Blue): ls_ammo_338_blue
 	{
 	     hit = 20;
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
 	};
 	class ls_ammo_127x108_green;
     class MACRO_NEW_AMMO(127x108_green_T): ls_ammo_127x108_green
 	{
 		 effectfly="332nd_aux_effects_green_bullet";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
 	};
 	class ls_ammo_65_red;
 	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
@@ -353,6 +341,36 @@ class CfgAmmo
 	   cartridge = "";
 	};
 
+    class MACRO_NEW_AMMO(DC_15xATR): ls_ammo_127x108_green
+	{
+		effectfly="332nd_aux_effects_RPS4_green";
+        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,0.9,1500};
+		caliber = 10;
+		hit = 500;
+		typicalSpeed=5000;
+		tracerscale = 3;
+		airFriction = -0.000005;
+			class CamShakeFire
+		{
+			power = 15;
+			duration = 0.5;
+			frequency = 20;
+			distance = 10;
+		};
+		class CamShakePlayerFire
+		{
+			power = 0.06;
+			duration = 0.1;
+			frequency = 20;
+		};
+		class CamShakeHit
+		{
+			power = 100;
+			duration = 1;
+			frequency = 20;
+		};
+	};
+	 
 	class JLTS_bullet_stun;
 	class MACRO_NEW_AMMO(Stun): JLTS_bullet_stun
 	{
@@ -362,4 +380,4 @@ class CfgAmmo
 	   visibleFire = 1;
 	   cartridge = "";
 	};
-}
+};

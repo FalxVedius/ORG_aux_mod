@@ -404,6 +404,18 @@ class CfgVehicles
                 count = 100;
             };
 
+            class IQA11_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_T_x8";
+				count = 100;
+			};
+
+			class IQA11_high_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_x8";
+				count = 100;
+			};
+
             class Westar_m5_40rnd
 			{
 				magazine = "332nd_aux_magazine_Westar_M5_x40";
@@ -493,6 +505,12 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_RPS4_HE_x1";
                 count = 20;
             };
+
+            class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x3";
+				count = 20;
+			};
         };
 
         class EventHandlers
@@ -858,6 +876,12 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_RPS4_HE_x1";
                 count = 20;
             };
+
+             class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x3";
+				count = 20;
+			};
         };
 
 
@@ -1221,6 +1245,18 @@ class CfgVehicles
                 count = 100;
             };
 
+             class IQA11_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_T_x8";
+				count = 100;
+			};
+
+			class IQA11_high_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_x8";
+				count = 100;
+			};
+
             class Westar_m5_40rnd
 			{
 				magazine = "332nd_aux_magazine_Westar_M5_x40";
@@ -1310,6 +1346,12 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_RPS4_HE_x1";
                 count = 20;
             };
+
+             class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x3";
+				count = 20;
+			};
         };
 
         hiddenselections[] = {
