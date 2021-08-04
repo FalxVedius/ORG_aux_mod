@@ -39,6 +39,14 @@ class CfgFunctions
 			{
 
 			};
+			class Bacta
+			{
+
+			};
+			class BactaLocal
+			{
+
+			};
 			class MedicalInit
 			{
 
@@ -106,11 +114,11 @@ class ACE_Medical_Treatment
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Bacta) : BloodIV
 		{
-
+			volume = 0;
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Kolto) : BloodIV
 		{
-
+			volume = 500;
 		};
 	};
 
@@ -246,6 +254,8 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Bacta Tank";
 		displayNameProgress = "Transfusing Bacta...";
+
+		callbackSuccess = "Aux332nd_fnc_Bacta";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Blood) : BloodIV
 	{
@@ -466,7 +476,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(Bacta) : ACE_bloodIV
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Tank)
 		descriptionShort = "332nd Healing";
@@ -601,7 +611,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Combat Stimulant)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Combat Stimulant *WIP*)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
