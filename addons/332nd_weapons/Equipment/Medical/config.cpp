@@ -599,7 +599,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(Combat) : ACE_epinephrine
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Combat Stimulant)
 		descriptionShort = "332nd Healing";
