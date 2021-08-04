@@ -344,18 +344,6 @@ class CfgVehicles
                 count = 100;
             };
 
-            class DC15X_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x10";
-                count = 50;
-            };
-
-            class DC15X_LOW_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x2";
-                count = 25;
-            };
-
             class DP_23_332nd
             {
                 magazine = "332nd_aux_magazine_DP23_x12";
@@ -725,18 +713,6 @@ class CfgVehicles
             {
                 magazine = "332nd_aux_magazine_DC_15L_T_x125";
                 count = 100;
-            };
-
-            class DC15X_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x10";
-                count = 50;
-            };
-
-            class DC15X_LOW_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x2";
-                count = 25;
             };
 
             class DP_23_332nd
@@ -1187,18 +1163,6 @@ class CfgVehicles
             {
                 magazine = "332nd_aux_magazine_DC_15L_T_x125";
                 count = 100;
-            };
-
-            class DC15X_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x10";
-                count = 50;
-            };
-
-            class DC15X_LOW_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x2";
-                count = 25;
             };
 
             class DP_23_332nd
