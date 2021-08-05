@@ -60,6 +60,8 @@ class CfgPatches
             MACRO_NEW_UNIT(aviation,332nd_flight_jr_lieutenant),
             MACRO_NEW_UNIT(aviation,332nd_flight_lieutenant),
             MACRO_NEW_UNIT(aviation,332nd_flight_captain),
+
+            MACRO_NEW_UNIT(mech,332nd_mechanized_trooper),
 		};
 		weapons[] = {
             MACRO_NEW_UNIFORM(recruit,332nd_recruit),
@@ -111,6 +113,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(aviation,332nd_flight_jr_lieutenant),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_lieutenant),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_captain),
+
+            MACRO_NEW_UNIFORM(mech,332nd_mechanized_trooper),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -187,6 +191,11 @@ class CfgWeapons
     };
 
     class MACRO_NEW_UNIFORM(arfwood,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(mech,base) : JLTS_CloneArmor
     {
         class ItemInfo;
     };
@@ -290,6 +299,9 @@ class CfgWeapons
     MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(332nd_arfwood_corp,Corporal,332nd_arfwood_corp)
     MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(332nd_arfwood_serg,Sergeant,332nd_arfwood_serg)
 
+    //Mechanized
+    MACRO_NEW_MECHANIZED_UNIFORM_ITEM(332nd_mechanized_trooper,Trooper,332nd_mechanized_trooper)
+
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -300,6 +312,7 @@ class CfgVehicles
     class MACRO_NEW_UNIT(recruit,base);
     class MACRO_NEW_UNIT(infantry,base);
     class MACRO_NEW_UNIT(aviation,base);
+    class MACRO_NEW_UNIT(mech,base);
     class MACRO_NEW_UNIT(cwo,base);
     class MACRO_NEW_UNIT(rto,base);
     class MACRO_NEW_UNIT(medic,base);
@@ -359,6 +372,9 @@ class CfgVehicles
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer_2,CWO 2,332nd_warrant_officer_2,warrant_officer_2\cwo2_top.paa,warrant_officer_2\cwo2_bottom.paa)
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer_3,CWO 3,332nd_warrant_officer_3,warrant_officer_3\cwo3_top.paa,warrant_officer_3\cwo3_bottom.paa)
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer_4,CWO 4,332nd_warrant_officer_4,warrant_officer_4\cwo4_top.paa,warrant_officer_4\cwo4_bottom.paa)
+
+    //Mechanized
+    MACRO_NEW_MECHANIZED_UNIT(332nd_mechanized_trooper,Trooper,332nd_mechanized_trooper,trooper\Mechanizedupper_ca.paa,trooper\Mechanizedlower_ca.paa)
 
     //Aviation
     MACRO_NEW_AVI_UNIT(332nd_flight_cadet,Flight Cadet,332nd_flight_cadet,flight_cadet\cadet_upper.paa,flight_cadet\cadet_lower.paa)
