@@ -344,18 +344,6 @@ class CfgVehicles
                 count = 100;
             };
 
-            class DC15X_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x10";
-                count = 50;
-            };
-
-            class DC15X_LOW_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x2";
-                count = 25;
-            };
-
             class DP_23_332nd
             {
                 magazine = "332nd_aux_magazine_DP23_x12";
@@ -403,6 +391,18 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_Valken38x_T_x15";
                 count = 100;
             };
+
+            class IQA11_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_T_x8";
+				count = 100;
+			};
+
+			class IQA11_high_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_x8";
+				count = 100;
+			};
 
             class Westar_m5_40rnd
 			{
@@ -493,6 +493,12 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_RPS4_HE_x1";
                 count = 20;
             };
+
+            class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x3";
+				count = 20;
+			};
         };
 
         class EventHandlers
@@ -709,18 +715,6 @@ class CfgVehicles
                 count = 100;
             };
 
-            class DC15X_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x10";
-                count = 50;
-            };
-
-            class DC15X_LOW_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x2";
-                count = 25;
-            };
-
             class DP_23_332nd
             {
                 magazine = "332nd_aux_magazine_DP23_x12";
@@ -858,6 +852,12 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_RPS4_HE_x1";
                 count = 20;
             };
+
+             class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x3";
+				count = 20;
+			};
         };
 
 
@@ -890,7 +890,7 @@ class CfgVehicles
             };
             class HitEngine : HitEngine
             {
-                armor = 0.5;
+                armor = 1;
                 convexComponent = "engine_hit";
                 explosionShielding = 2;
                 material = 51;
@@ -899,24 +899,27 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.2 * 5;
+                minimalHit = 0.6;
             };
             class HitEngine_1 : HitEngine_1
             {
-                armor = 0.5;
+                armor = 1;
                 passThrough = 1;
                 explosionShielding = 2;
                 convexComponent = "engine_hit_1";
                 name = "engine_hit_1";
                 hitpoint = "engine_hit_1";
+                minimalHit = 0.6;
             };
             class HitEngine_2 : HitEngine_2
             {
-                armor = 0.5;
+                armor = 1;
                 passThrough = 1;
                 explosionShielding = 2;
                 convexComponent = "engine_hit_2";
                 name = "engine_hit_2";
                 hitpoint = "engine_hit_2";
+                minimalHit = 0.6;
             };
             class HitHRotor : HitHRotor
             {
@@ -950,6 +953,7 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.5;
+                minimalHit = 0.6;
             };
         };
     }
@@ -1161,18 +1165,6 @@ class CfgVehicles
                 count = 100;
             };
 
-            class DC15X_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x10";
-                count = 50;
-            };
-
-            class DC15X_LOW_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x2";
-                count = 25;
-            };
-
             class DP_23_332nd
             {
                 magazine = "332nd_aux_magazine_DP23_x12";
@@ -1220,6 +1212,18 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_Valken38x_T_x15";
                 count = 100;
             };
+
+             class IQA11_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_T_x8";
+				count = 100;
+			};
+
+			class IQA11_high_332nd
+			{
+				magazine = "332nd_aux_magazine_IQA_11_x8";
+				count = 100;
+			};
 
             class Westar_m5_40rnd
 			{
@@ -1310,6 +1314,12 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_RPS4_HE_x1";
                 count = 20;
             };
+
+             class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x3";
+				count = 20;
+			};
         };
 
         hiddenselections[] = {
@@ -1360,7 +1370,7 @@ class CfgVehicles
             };
             class HitEngine : HitEngine
             {
-                armor = 0.5;
+                armor = 1;
                 convexComponent = "engine_hit";
                 explosionShielding = 2;
                 material = 51;
@@ -1369,20 +1379,27 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.2 * 5;
+                minimalHit = 0.6;
             };
             class HitEngine_1 : HitEngine_1
             {
-                armor = 0.5;
+                armor = 1;
+                passThrough = 1;
+                explosionShielding = 2;
                 convexComponent = "engine_hit_1";
                 name = "engine_hit_1";
                 hitpoint = "engine_hit_1";
+                minimalHit = 0.6;
             };
             class HitEngine_2 : HitEngine_2
             {
-                armor = 0.5;
+                armor = 1;
+                passThrough = 1;
+                explosionShielding = 2;
                 convexComponent = "engine_hit_2";
                 name = "engine_hit_2";
                 hitpoint = "engine_hit_2";
+                minimalHit = 0.6;
             };
             class HitHRotor : HitHRotor
             {
@@ -1416,6 +1433,7 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.5;
+                minimalHit = 0.6;
             };
         };
     }

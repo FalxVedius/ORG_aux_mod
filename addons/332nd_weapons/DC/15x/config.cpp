@@ -14,7 +14,8 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {
 			MACRO_NEW_WEAPON(DC_15x),
-			MACRO_NEW_WEAPON(DC_15x_Scoped)
+			//MACRO_NEW_WEAPON(DC_15x_Scoped),
+			//"332nd_DC15X_scope"
 		};
 	};
 };
@@ -43,33 +44,47 @@ class CfgSounds
 	};
 };
 
+class CowsSlot;
+class PointerSlot;
+//class GunClouds;
+class mode_SemiAuto;
 class cfgWeapons
 {
 	class arifle_MX_Base_F;
-	class JLTS_DC15X:arifle_MX_Base_F
+	class JLTS_DC15X: arifle_MX_Base_F
 	{
-		class Single;
+		class WeaponSlotsInfo;
 	}
 	class MACRO_NEW_WEAPON(DC_15x): JLTS_DC15X
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15x)
+		displayName = MACRO_WEAPON_DISPLAYNAME(*TEST* DC 15x ATR)
 
-		reloadTime=0.1;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_m320";
 		recoilprone="recoil_m320";
 		canShootInWater=1;
-        modelOptics="\A3\Weapons_f\acc\reticle_tws";
         baseWeapon=MACRO_NEW_WEAPON(DC_15x);
-        weaponInfoType = "RscOptics_tws";
 		cursor="332_DOT";
         cursoraim="332_Chevron";
 		magazines[] = {
-			MACRO_NEW_MAG(DC_15x,2),
-			MACRO_NEW_MAG(DC_15x,10)
+			MACRO_NEW_MAG(DC_15x,3)
 		};
-
-		class Single: Single
+		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
+	 //   class GunClouds: GunClouds
+		//{
+		//	cloudletDuration = 0.3;
+		//	size = 0.5;
+		//	cloudletAccY = 0.4;
+		//	cloudletFadeIn = 0.01;
+		//	cloudletFadeOut = 1;
+		//	cloudletGrowUp = 1;
+		//	cloudletMaxYSpeed = 0.8;
+		//	cloudletMinYSpeed = 0.2;
+		//	cloudletAlpha = 1;
+		//	interval = -0.01;
+		//	sourceSize = 0.1;
+		//};
+		class Single: mode_SemiAuto
         {
 			sounds[]=
 			{
@@ -90,7 +105,7 @@ class cfgWeapons
 					"332nd_weapons\DC\15X\sounds\DC-15X.wss",
 					1.5,
 					1,
-					1800
+					4500
 				};
 				soundBegin[]=
 				{
@@ -98,51 +113,87 @@ class cfgWeapons
 					1
 				};
 			};
-			
-            reloadTime=0.75;
-			dispersion=0.0;
-        }
+            reloadTime=2;
+			dispersion=0.0000001;
+        };
 
-        class OpticsModes
+		class OpticsModes
+        {
+            class sight
+            {
+                opticsID=2;
+                useModelOptics=0;
+                opticsPPEffects[]=
+                {
+                    "OpticsCHAbera5",
+                    "OpticsBlur5"
+                };
+                opticsDisablePeripherialVision=0.67000002;
+                opticsZoomMin=0.375;
+                opticsZoomMax=1.1;
+                opticsZoomInit=0.75;
+                discreteInitIndex=0;
+                distanceZoomMin=100;
+                distanceZoomMax=700;
+                discreteDistance[]={100};
+                discreteDistanceInitIndex=0;
+                memoryPointCamera="eye";
+                visionMode[]={};
+                opticsFlare="true";
+                cameraDir="";
+            };
+            class scope: sight
+            {
+                opticsID=1;
+                useModelOptics=1;
+                opticsPPEffects[]=
+                {
+                    "OpticsCHAbera2",
+                    "OpticsBlur3"
+                };
+                opticsZoomMin=0.0300;
+                opticsZoomMax=0.125;
+                opticsZoomInit=0.125;
+                memoryPointCamera="optic_view";
+                opticsFlare=1;
+                opticsDisablePeripherialVision=1;
+                visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"TI"
+					};
+					thermalMode[] = {0, 1};
+                discretefov[] = {0.125};
+                discreteInitIndex = 0;
+                discreteDistanceInitIndex = 0;
+                discreteDistance[] = {100};
+                distanceZoomMin=100;
+                distanceZoomMax=1000;
+                modelOptics = "\A3\Weapons_f\acc\reticle_tws";
+            };
+        };
+
+      class WeaponSlotsInfo: WeaponSlotsInfo
 		{
-			class NCTALKEP
+			class CowsSlot: CowsSlot
 			{
-				opticsID=1;
-				useModelOptics=1;
-				opticsPPEffects[]=
+				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
+				compatibleItems[]=
 				{
-					"OpticsCHAbera1",
-					"OpticsBlur1"
+					""
 				};
-				opticsZoomMin=0.0005;
-				opticsZoomMax=0.1;
-				opticsZoomInit=0.0625;
-				discreteDistance[]={100,200,300,400,450,500,550,600,650,700,750,800,850,900,950,1000,1050,1100,1150,1200,1250,1300,1350,1400,1450,1500,1550,1600,1650,1700,1750,1800,1850,1900,1950,2000,2050,2100,2150,2200,2250,2300,2350,2400};
-				discreteDistanceInitIndex = 0;
-				distanceZoomMin=100;
-				distanceZoomMax=1900;
-				memoryPointCamera="opticView";
-				discreteinitindex = 0;
-				visionMode[]=
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
 				{
-					"Normal",
-					"NVG",
-					"Ti"
+					"acc_flashlight",
+					"acc_pointer_IR"
 				};
-				thermalMode[] = {0, 1};
-                discretefov[] = {0.1, 0.0625, 0.0350, 0.0150, 0.0050,0.0005};
-				opticsFlare=1;
-				opticsDisablePeripherialVision=1;
-				cameraDir="";
 			};
 		};
-
-        linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-        compatibleItems[]=
-        {
-            "acc_flashlight",
-            "acc_pointer_IR"
-        };
 
 		class EventHandlers
 		{
@@ -150,74 +201,56 @@ class cfgWeapons
 		};
 	};
 
-	class InventoryOpticsItem_Base_F;
-	class JLTS_DC15X_scope;
-	class 332nd_DC15X_scope: JLTS_DC15X_scope
-	{
-		displayName="332nd DC15X scope";
-		picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_scope_ui_ca.paa";
-		descriptionShort="$STR_JLTS_descs_DC15X_scope";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=16;
-			opticType=2;
-			weaponInfoType="RscWeaponRangeZeroingFOV";
-			optics=1;
-			modelOptics="\A3\Weapons_F\acc\reticle_sniper_F";
-			class OpticsModes
-			{
-				class Snip
-				{
-					opticsID=1;
-					opticsDisplayName="WFOV";
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera1",
-						"OpticsBlur1"
-					};
-					opticsZoomMin=0.125;
-					opticsZoomMax=0.04;
-					opticsZoomInit=0.0625;
-					discreteDistance[]={100,300,400,500,600,700,800,900,1000};
-					discreteDistanceInitIndex=1;
-					distanceZoomMin=100;
-					distanceZoomMax=1000;
-					discreteFov[]={0.125,0.0625};
-					discreteInitIndex=0;
-					memoryPointCamera="opticView";
-					modelOptics[]=
-					{
-						"\A3\Weapons_F\acc\reticle_lrps_F",
-						"\A3\Weapons_F\acc\reticle_lrps_z_F"
-					};
-					visionMode[]=
-					{
-						"Normal",
-						"NVG"
-					};
-					opticsFlare=1;
-					opticsDisablePeripherialVision=1;
-					cameraDir="";
-				};
-			};
-		};
-	};
-
-	class MACRO_NEW_WEAPON(DC_15x_Scoped): MACRO_NEW_WEAPON(DC_15x)
-	{
-		scope = 2;
-		scopeArsenal = 2;
-
-		baseweapon= MACRO_NEW_WEAPON(DC_15x_Scoped);
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15x (Scoped))
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				slot = "CowsSlot";
-				item = "332nd_DC15X_scope";
-			};
-		};
-	};
+	//class InventoryOpticsItem_Base_F;
+	//class JLTS_DC15X_scope;
+	//class 332nd_DC15X_scope: JLTS_DC15X_scope
+	//{
+	//    model="";
+	//	displayName="332nd Integrated DC-15X scope";
+	//	picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_scope_ui_ca.paa";
+	//	descriptionShort="$STR_JLTS_descs_DC15X_scope";
+	//	class ItemInfo: InventoryOpticsItem_Base_F
+	//	{
+	//		mass=16;
+	//		opticType=2;
+	//		weaponInfoType="RscWeaponRangeZeroingFOV";
+	//		optics=1;
+	//		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
+	//		class OpticsModes
+	//		{
+	//			class Snip
+	//			{
+	//				opticsID=1;
+	//				opticsDisplayName="WFOV";
+	//				useModelOptics=1;
+	//				opticsPPEffects[]=
+	//				{
+	//					"OpticsCHAbera1",
+	//					"OpticsBlur1"
+	//				};
+	//				opticsZoomMin=0.125;
+	//				opticsZoomMax=0.04;
+	//				opticsZoomInit=0.0625;
+	//				discreteDistance[]={100};
+	//				discreteDistanceInitIndex=1;
+	//				distanceZoomMin=100;
+	//				distanceZoomMax=1000;
+	//				discreteFov[]={0.125};
+	//				discreteInitIndex=0;
+	//				memoryPointCamera="opticView";
+	//				modelOptics = "\A3\Weapons_f\acc\reticle_tws";
+	//				visionMode[]=
+	//				{
+	//					"Normal",
+	//					"NVG",
+	//					"TI"
+	//				};
+	//				thermalMode[] = {0, 1};
+	//				opticsFlare=1;
+	//				opticsDisablePeripherialVision=1;
+	//				cameraDir="";
+	//			};
+	//		};
+	//	};
+	//};
 };

@@ -232,6 +232,17 @@
 				uniformClass = MACRO_NEW_UNIT(arfwood,uniformClassname); \
 			}; \
 		};
+	#define MACRO_NEW_MECHANIZED_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(mech,classname): MACRO_NEW_UNIFORM(mech,base)\
+		{\
+			displayName = [332nd] Mechanized Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(mech,uniformClassname); \
+			}; \
+		};
 
 
 	// --- Opfor Uniforms ---
@@ -586,6 +597,20 @@
 			};\
 			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
 			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"}; \
+		}
+	#define MACRO_NEW_MECHANIZED_UNIT(classname,displayname,uniformClassname,upper,lower)\
+		class MACRO_NEW_UNIT(mech,classname): MACRO_NEW_UNIT(mech,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(mech,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\mechanized\uniforms\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\mechanized\uniforms\##lower\
+			};\
 		}
 
 

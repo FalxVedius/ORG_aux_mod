@@ -39,7 +39,7 @@ class CfgWeapons
 	class  JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_15b): 3AS_DC15A_Base_F
 	{
-	    displayName = MACRO_WEAPON_DISPLAYNAME(DC 15b "Barker")
+	    displayName = MACRO_WEAPON_DISPLAYNAME(*Test* DC 15b "Barker")
 	    scope=2;
 		magazines[]= 
 		{

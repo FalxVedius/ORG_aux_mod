@@ -36,10 +36,7 @@ class CfgVehicles
         NSM_jumppack_recharge = 4;
 
         JLTS_isJumppack = 0;
-
-        //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_is_jumppack = 0;
-    }
+    };
 
     class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_LR) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
     {
@@ -60,11 +57,44 @@ class CfgVehicles
         NSM_jumppack_recharge = 4;
 
         JLTS_isJumppack = 0;
+    };
 
-        //Code to be deleted once we remove 501st dependencies
-        RD501_jumppack_is_jumppack = 0;
-    }
-}
+    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_MED) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
+    {
+        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Medic Pack)
+        scope = 2;
+        maximumLoad = 400;
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+
+        tf_dialog = "JLTS_clone_rto_radio_dialog";
+        tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+        tf_encryptionCode = "tf_west_radio_code";
+        tf_hasLRradio = 1;
+        tf_range = 25000;
+        tf_subtype = "digital_lr";
+
+        NSM_jumppack_spam_delay = 0;
+        NSM_jumppack_energy_capacity = 80;
+        NSM_jumppack_recharge = 4;
+
+        JLTS_isJumppack = 0;
+    };
+
+    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_FUNOP) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
+    {
+        displayName = MACRO_ITEM_DISPLAYNAME(JT-12,FunOp Pack)
+        scope = 2;
+        maximumLoad = 675;
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+
+        NSM_jumppack_spam_delay = 0;
+        NSM_jumppack_energy_capacity = 80;
+        NSM_jumppack_recharge = 4;
+
+        JLTS_isJumppack = 0;
+    };
+};
+
 
 
 
