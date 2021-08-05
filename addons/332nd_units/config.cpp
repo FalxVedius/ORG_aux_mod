@@ -7333,8 +7333,8 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
-		weapons[] = { "Police_Bat","Throw","Put" };
-		respawnWeapons[] = { "Police_Bat","Throw","Put" };
+		weapons[] = { "WBK_Dutch_Vibro","Throw","Put" };
+		respawnWeapons[] = { "WBK_Dutch_Vibro","Throw","Put" };
 
 		class HitPoints : HitPoints
 		{
@@ -7523,8 +7523,8 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
-		weapons[] = { "Police_Bat","Throw","Put" };
-		respawnWeapons[] = { "Police_Bat","Throw","Put" };
+		weapons[] = { "WBK_Dutch_Vibro","Throw","Put" };
+		respawnWeapons[] = { "WBK_Dutch_Vibro","Throw","Put" };
 
 		class HitPoints : HitPoints
 		{
