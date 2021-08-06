@@ -723,64 +723,101 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class Elastics_332nd
+			
+			class BactaSprayx25_332nd
 			{
-				name = "ACE_elasticBandage";
-				count = 300;
+				name = "332nd_aux_medical_BactaSpray_x25";
+				count = 4;
 			};
 
-			class Packing_332nd
+			class PlastiBandagex25_332nd
 			{
-				name = "ACE_packingBandage";
-				count = 300;
+				name = "332nd_aux_medical_PlastiBandage_x25";
+				count = 4;
 			};
 
-			class Quickclot_332nd
+			class MedPatchx25_332nd
 			{
-				name = "ACE_quikclot";
-				count = 300;
+				name = "332nd_aux_medical_MedPatch_x25";
+				count = 4;
+			};
+
+			class BactaSprayx10_332nd
+			{
+				name = "332nd_aux_medical_BactaSpray_x10";
+				count = 10;
+			};
+
+			class PlastiBandagex10_332nd
+			{
+				name = "332nd_aux_medical_PlastiBandage_x10";
+				count = 10;
+			};
+
+			class MedPatchx10_332nd
+			{
+				name = "332nd_aux_medical_MedPatch_x10";
+				count = 10;
+			};
+
+			class BactaSprayx5_332nd
+			{
+				name = "332nd_aux_medical_BactaSpray_x5";
+				count = 10;
+			};
+
+			class PlastiBandagex5_332nd
+			{
+				name = "332nd_aux_medical_PlastiBandage_x5";
+				count = 10;
+			};
+
+			class MedPatchx5_332nd
+			{
+				name = "332nd_aux_medical_MedPatch_x5";
+				count = 10;
+			};
+
+			class BactaSpray_332nd
+			{
+				name = "332nd_aux_medical_BactaSpray";
+				count = 50;
+			};
+
+			class PlastiBandage_332nd
+			{
+				name = "332nd_aux_medical_PlastiBandage";
+				count = 50;
+			};
+
+			class MedPatch_332nd
+			{
+				name = "332nd_aux_medical_MedPatch";
+				count = 50;
 			};
 
 			class Painkillers_332nd
 			{
-				name = "ACE_morphine";
+				name = "332nd_aux_medical_PainKiller";
 				count = 40;
 			};
 
-			class Epinephrine_332nd
+			class Adrenaline_332nd
 			{
-				name = "ACE_epinephrine";
+				name = "332nd_aux_medical_Adrenaline";
 				count = 40;
 			};
 
-			class Plasma1k_332nd
+			class Blood_332nd
 			{
-				name = "ACE_plasmaIV";
-				count = 25;
+				name = "332nd_aux_medical_Blood";
+				count = 75;
 			};
 
-			class Plasma500_332nd
+			class PressureCuff_332nd
 			{
-				name = "ACE_plasmaIV_500";
-				count = 50;
-			};
-
-			class Plasma250_332nd
-			{
-				name = "ACE_plasmaIV_250";
-				count = 50;
-			};
-
-			class Tournys_332nd
-			{
-				name = "ACE_tourniquet";
+				name = "332nd_aux_medical_PressureCuff";
 				count = 30;
-			};
-
-			class PAK_332nd
-			{
-				name = "ACE_personalAidKit";
-				count = 5;
 			};
 		};
 

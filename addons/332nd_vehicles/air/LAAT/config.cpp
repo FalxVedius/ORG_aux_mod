@@ -38,7 +38,7 @@ class CfgVehicles
 {   
     #include "_inheritance.hpp"
 
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base):ls_laat
+    class MACRO_NEW_VEHICLE(air, LAAT, mk1_332nd_base) :ls_laat
     {
         displayName = "LAAT Mk1 Base";
         scope = 0;
@@ -50,7 +50,7 @@ class CfgVehicles
             MACRO_AIR_COMMON_WEAPS,
             "ls_laat_gun","ls_laat_gun_2","missiles_DAR"
         };
-		magazines[] = {
+        magazines[] = {
             MACRO_AIR_COMMON_MAGS,
             "200rnd_laat_he_mag","200rnd_laat_he_mag","200rnd_laat_apfsds_mag","200rnd_laat_apfsds_mag",
             "12rnd_missiles","12rnd_missiles","12rnd_missiles"
@@ -66,7 +66,7 @@ class CfgVehicles
             "zasleh_l","zasleh_r","zasleh_b"
         };
 
-		hiddenselectionstextures[] = {
+        hiddenselectionstextures[] = {
             MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
             MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
             MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
@@ -74,21 +74,21 @@ class CfgVehicles
             MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
         };
 
-        crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
-        typicalcargo[] = {MACRO_NEW_UNIT(aviation,332nd_flight_cadet)};
+        crew = MACRO_NEW_UNIT(aviation, 332nd_flight_cadet);
+        typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
 
         class EventHandlers
         {
             init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
         };
-        
+
         class TextureSources
         {
             class Ahegao
-			{
-				displayName = "Transport Gunship (Ahegao)";
+            {
+                displayName = "Transport Gunship (Ahegao)";
                 author = MACRO_AUTHOR;
-                factions[] = {"SWLB_GAR"};
+                factions[] = { "SWLB_GAR" };
                 textures[] = {
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
@@ -96,17 +96,17 @@ class CfgVehicles
                     "swlb_a_vehicle\laat\data\missiles_co.paa",
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
                 };
-			};
-        }
+            };
+        };
 
-        class Turrets: Turrets
+        class Turrets : Turrets
         {
-            class MainTurret: MainTurret
+            class MainTurret : MainTurret
             {
                 weapons[] = {
                     MACRO_AIR_COMMON_WEAPS,
                     "ParticleBeamCannon"
-                    
+
                 };
                 magazines[] = {
                     MACRO_AIR_COMMON_MAGS,
@@ -116,19 +116,18 @@ class CfgVehicles
         }
 
         class UserActions
-		{
-			#include "../../_common/damage_report_action.hpp"
-		};
-		class ACE_SelfActions:ACE_SelfActions
-		{		
-			
-			#include "../../_common/hud_color_changer_ace_action.hpp"
-		};
+        {
+            #include "../../_common/damage_report_action.hpp"
+        };
+        class ACE_SelfActions :ACE_SelfActions
+        {
+            #include "../../_common/hud_color_changer_ace_action.hpp"
+        };
 
-		#include "../../_common/universal_mfd.hpp"
+        #include "../../_common/universal_mfd.hpp"
 
         #include "_lights.hpp"
-    }
+    };
 
     class ls_heli_laatle;
     class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd) :ls_heli_laatle
@@ -146,64 +145,101 @@ class CfgVehicles
 
         class TransportItems
         {
-            class Elastics_332nd
+
+            class BactaSprayx25_332nd
             {
-                name = "ACE_elasticBandage";
-                count = 300;
+                name = "332nd_aux_medical_BactaSpray_x25";
+                count = 4;
             };
 
-            class Packing_332nd
+            class PlastiBandagex25_332nd
             {
-                name = "ACE_packingBandage";
-                count = 300;
+                name = "332nd_aux_medical_PlastiBandage_x25";
+                count = 4;
             };
 
-            class Quickclot_332nd
+            class MedPatchx25_332nd
             {
-                name = "ACE_quikclot";
-                count = 300;
+                name = "332nd_aux_medical_MedPatch_x25";
+                count = 4;
+            };
+
+            class BactaSprayx10_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray_x10";
+                count = 10;
+            };
+
+            class PlastiBandagex10_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage_x10";
+                count = 10;
+            };
+
+            class MedPatchx10_332nd
+            {
+                name = "332nd_aux_medical_MedPatch_x10";
+                count = 10;
+            };
+
+            class BactaSprayx5_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray_x5";
+                count = 10;
+            };
+
+            class PlastiBandagex5_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage_x5";
+                count = 10;
+            };
+
+            class MedPatchx5_332nd
+            {
+                name = "332nd_aux_medical_MedPatch_x5";
+                count = 10;
+            };
+
+            class BactaSpray_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray";
+                count = 50;
+            };
+
+            class PlastiBandage_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage";
+                count = 50;
+            };
+
+            class MedPatch_332nd
+            {
+                name = "332nd_aux_medical_MedPatch";
+                count = 50;
             };
 
             class Painkillers_332nd
             {
-                name = "ACE_morphine";
+                name = "332nd_aux_medical_PainKiller";
                 count = 40;
             };
 
-            class Epinephrine_332nd
+            class Adrenaline_332nd
             {
-                name = "ACE_epinephrine";
+                name = "332nd_aux_medical_Adrenaline";
                 count = 40;
             };
 
-            class Plasma1k_332nd
+            class Blood_332nd
             {
-                name = "ACE_plasmaIV";
-                count = 25;
+                name = "332nd_aux_medical_Blood";
+                count = 75;
             };
 
-            class Plasma500_332nd
+            class PressureCuff_332nd
             {
-                name = "ACE_plasmaIV_500";
-                count = 50;
-            };
-
-            class Plasma250_332nd
-            {
-                name = "ACE_plasmaIV_250";
-                count = 50;
-            };
-
-            class Tournys_332nd
-            {
-                name = "ACE_tourniquet";
+                name = "332nd_aux_medical_PressureCuff";
                 count = 30;
-            };
-
-            class PAK_332nd
-            {
-                name = "ACE_personalAidKit";
-                count = 5;
             };
         };
 
@@ -505,7 +541,7 @@ class CfgVehicles
         {
             init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
         };
-    }
+    };
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd):MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
     {
@@ -517,64 +553,101 @@ class CfgVehicles
 
         class TransportItems
         {
-            class Elastics_332nd
+
+            class BactaSprayx25_332nd
             {
-                name = "ACE_elasticBandage";
-                count = 300;
+                name = "332nd_aux_medical_BactaSpray_x25";
+                count = 4;
             };
 
-            class Packing_332nd
+            class PlastiBandagex25_332nd
             {
-                name = "ACE_packingBandage";
-                count = 300;
+                name = "332nd_aux_medical_PlastiBandage_x25";
+                count = 4;
             };
 
-            class Quickclot_332nd
+            class MedPatchx25_332nd
             {
-                name = "ACE_quikclot";
-                count = 300;
+                name = "332nd_aux_medical_MedPatch_x25";
+                count = 4;
+            };
+
+            class BactaSprayx10_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray_x10";
+                count = 10;
+            };
+
+            class PlastiBandagex10_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage_x10";
+                count = 10;
+            };
+
+            class MedPatchx10_332nd
+            {
+                name = "332nd_aux_medical_MedPatch_x10";
+                count = 10;
+            };
+
+            class BactaSprayx5_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray_x5";
+                count = 10;
+            };
+
+            class PlastiBandagex5_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage_x5";
+                count = 10;
+            };
+
+            class MedPatchx5_332nd
+            {
+                name = "332nd_aux_medical_MedPatch_x5";
+                count = 10;
+            };
+
+            class BactaSpray_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray";
+                count = 50;
+            };
+
+            class PlastiBandage_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage";
+                count = 50;
+            };
+
+            class MedPatch_332nd
+            {
+                name = "332nd_aux_medical_MedPatch";
+                count = 50;
             };
 
             class Painkillers_332nd
             {
-                name = "ACE_morphine";
+                name = "332nd_aux_medical_PainKiller";
                 count = 40;
             };
 
-            class Epinephrine_332nd
+            class Adrenaline_332nd
             {
-                name = "ACE_epinephrine";
+                name = "332nd_aux_medical_Adrenaline";
                 count = 40;
             };
 
-            class Plasma1k_332nd
+            class Blood_332nd
             {
-                name = "ACE_plasmaIV";
-                count = 25;
+                name = "332nd_aux_medical_Blood";
+                count = 75;
             };
 
-            class Plasma500_332nd
+            class PressureCuff_332nd
             {
-                name = "ACE_plasmaIV_500";
-                count = 50;
-            };
-
-            class Plasma250_332nd
-            {
-                name = "ACE_plasmaIV_250";
-                count = 50;
-            };
-
-            class Tournys_332nd
-            {
-                name = "ACE_tourniquet";
+                name = "332nd_aux_medical_PressureCuff";
                 count = 30;
-            };
-
-            class PAK_332nd
-            {
-                name = "ACE_personalAidKit";
-                count = 5;
             };
         };
 
@@ -956,7 +1029,7 @@ class CfgVehicles
                 minimalHit = 0.6;
             };
         };
-    }
+    };
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
     {
@@ -967,64 +1040,101 @@ class CfgVehicles
 
         class TransportItems
         {
-            class Elastics_332nd
+
+            class BactaSprayx25_332nd
             {
-                name = "ACE_elasticBandage";
-                count = 300;
+                name = "332nd_aux_medical_BactaSpray_x25";
+                count = 4;
             };
 
-            class Packing_332nd
+            class PlastiBandagex25_332nd
             {
-                name = "ACE_packingBandage";
-                count = 300;
+                name = "332nd_aux_medical_PlastiBandage_x25";
+                count = 4;
             };
 
-            class Quickclot_332nd
+            class MedPatchx25_332nd
             {
-                name = "ACE_quikclot";
-                count = 300;
+                name = "332nd_aux_medical_MedPatch_x25";
+                count = 4;
+            };
+
+            class BactaSprayx10_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray_x10";
+                count = 10;
+            };
+
+            class PlastiBandagex10_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage_x10";
+                count = 10;
+            };
+
+            class MedPatchx10_332nd
+            {
+                name = "332nd_aux_medical_MedPatch_x10";
+                count = 10;
+            };
+
+            class BactaSprayx5_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray_x5";
+                count = 10;
+            };
+
+            class PlastiBandagex5_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage_x5";
+                count = 10;
+            };
+
+            class MedPatchx5_332nd
+            {
+                name = "332nd_aux_medical_MedPatch_x5";
+                count = 10;
+            };
+
+            class BactaSpray_332nd
+            {
+                name = "332nd_aux_medical_BactaSpray";
+                count = 50;
+            };
+
+            class PlastiBandage_332nd
+            {
+                name = "332nd_aux_medical_PlastiBandage";
+                count = 50;
+            };
+
+            class MedPatch_332nd
+            {
+                name = "332nd_aux_medical_MedPatch";
+                count = 50;
             };
 
             class Painkillers_332nd
             {
-                name = "ACE_morphine";
+                name = "332nd_aux_medical_PainKiller";
                 count = 40;
             };
 
-            class Epinephrine_332nd
+            class Adrenaline_332nd
             {
-                name = "ACE_epinephrine";
+                name = "332nd_aux_medical_Adrenaline";
                 count = 40;
             };
 
-            class Plasma1k_332nd
+            class Blood_332nd
             {
-                name = "ACE_plasmaIV";
-                count = 25;
+                name = "332nd_aux_medical_Blood";
+                count = 75;
             };
 
-            class Plasma500_332nd
+            class PressureCuff_332nd
             {
-                name = "ACE_plasmaIV_500";
-                count = 50;
-            };
-
-            class Plasma250_332nd
-            {
-                name = "ACE_plasmaIV_250";
-                count = 50;
-            };
-
-            class Tournys_332nd
-            {
-                name = "ACE_tourniquet";
+                name = "332nd_aux_medical_PressureCuff";
                 count = 30;
-            };
-
-            class PAK_332nd
-            {
-                name = "ACE_personalAidKit";
-                count = 5;
             };
         };
 
@@ -1436,5 +1546,5 @@ class CfgVehicles
                 minimalHit = 0.6;
             };
         };
-    }
-}
+    };
+};

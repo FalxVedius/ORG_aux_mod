@@ -100,7 +100,230 @@ class ACE_Medical_Treatment
 		};
 		class MACRO_NEW_MEDICAL_ITEM(MediKit) : ElasticBandage
 		{
-
+			class Abrasion
+			{
+				effectiveness = 40;
+				reopeningChance = 0.6;
+				reopeningMaxDelay = 150;
+				reopeningMinDelay = 80;
+			};
+			class AbrasionLarge
+			{
+				effectiveness = 25;
+				reopeningChance = 1;
+				reopeningMaxDelay = 150;
+				reopeningMinDelay = 80;
+			};
+			class AbrasionMedium
+			{
+				effectiveness = 30;
+				reopeningChance = 0.9;
+				reopeningMaxDelay = 150;
+				reopeningMinDelay = 80;
+			};
+			class AbrasionMinor
+			{
+				effectiveness = 40;
+				reopeningChance = 0.6;
+				reopeningMaxDelay = 150;
+				reopeningMinDelay = 80;
+			};
+			class Avulsion
+			{
+				effectiveness = 20;
+				reopeningChance = 0.7;
+				reopeningMaxDelay = 160;
+				reopeningMinDelay = 100;
+			};
+			class AvulsionLarge
+			{
+				effectiveness = 10;
+				reopeningChance = 0.7;
+				reopeningMaxDelay = 160;
+				reopeningMinDelay = 100;
+			};
+			class AvulsionMedium
+			{
+				effectiveness = 14;
+				reopeningChance = 0.7;
+				reopeningMaxDelay = 160;
+				reopeningMinDelay = 100;
+			};
+			class AvulsionMinor
+			{
+				effectiveness = 20;
+				reopeningChance = 0.7;
+				reopeningMaxDelay = 160;
+				reopeningMinDelay = 100;
+			};
+			class Contusion
+			{
+				effectiveness = 20;
+				reopeningChance = 0;
+				reopeningMaxDelay = 0;
+				reopeningMinDelay = 0;
+			};
+			class ContusionLarge
+			{
+				effectiveness = 20;
+				reopeningChance = 0;
+				reopeningMaxDelay = 0;
+				reopeningMinDelay = 0;
+			};
+			class ContusionMedium
+			{
+				effectiveness = 20;
+				reopeningChance = 0;
+				reopeningMaxDelay = 0;
+				reopeningMinDelay = 0;
+			};
+			class ContusionMinor
+			{
+				effectiveness = 20;
+				reopeningChance = 0;
+				reopeningMaxDelay = 0;
+				reopeningMinDelay = 0;
+			};
+			class Crush
+			{
+				effectiveness = 20;
+				reopeningChance = 0.5;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 60;
+			};
+			class CrushLarge
+			{
+				effectiveness = 16;
+				reopeningChance = 0.8;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 60;
+			};
+			class CrushMedium
+			{
+				effectiveness = 17;
+				reopeningChance = 0.7;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 60;
+			};
+			class CrushMinor
+			{
+				effectiveness = 20;
+				reopeningChance = 0.6;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 60;
+			};
+			class Cut
+			{
+				effectiveness = 50;
+				reopeningChance = 0.4;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 70;
+			};
+			class CutLarge
+			{
+				effectiveness = 20;
+				reopeningChance = 0.8;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 70;
+			};
+			class CutMedium
+			{
+				effectiveness = 35;
+				reopeningChance = 0.7;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 70;
+			};
+			class CutMinor
+			{
+				effectiveness = 50;
+				reopeningChance = 0.6;
+				reopeningMaxDelay = 100;
+				reopeningMinDelay = 70;
+			};
+			class Laceration
+			{
+				effectiveness = 20;
+				reopeningChance = 0.65;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 50;
+			};
+			class LacerationLarge
+			{
+				effectiveness = 10;
+				reopeningChance = 0.9;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 50;
+			};
+			class LacerationMedium
+			{
+				effectiveness = 15;
+				reopeningChance = 0.8;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 50;
+			};
+			class LacerationMinor
+			{
+				effectiveness = 20;
+				reopeningChance = 0.65;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 50;
+			};
+			class PunctureWound
+			{
+				effectiveness = 25;
+				reopeningChance = 1;
+				reopeningMaxDelay = 300;
+				reopeningMinDelay = 100;
+			};
+			class PunctureWoundLarge
+			{
+				effectiveness = 15;
+				reopeningChance = 1;
+				reopeningMaxDelay = 300;
+				reopeningMinDelay = 100;
+			};
+			class PunctureWoundMedium
+			{
+				effectiveness = 20;
+				reopeningChance = 1;
+				reopeningMaxDelay = 300;
+				reopeningMinDelay = 100;
+			};
+			class PunctureWoundMinor
+			{
+				effectiveness = 25;
+				reopeningChance = 1;
+				reopeningMaxDelay = 300;
+				reopeningMinDelay = 100;
+			};
+			class VelocityWound
+			{
+				effectiveness = 22;
+				reopeningChance = 1;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 80;
+			};
+			class VelocityWoundLarge
+			{
+				effectiveness = 15;
+				reopeningChance = 1;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 80;
+			};
+			class VelocityWoundMedium
+			{
+				effectiveness = 17.5;
+				reopeningChance = 1;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 80;
+			};
+			class VelocityWoundMinor
+			{
+				effectiveness = 22;
+				reopeningChance = 1;
+				reopeningMaxDelay = 200;
+				reopeningMinDelay = 80;
+			};
 		};
 	};
 
@@ -400,7 +623,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(MediKit) : ACE_elasticBandage
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Medi-Kit)
 		descriptionShort = "332nd Healing";
@@ -411,7 +634,7 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 1;
+			mass = 10;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(PlastiBandage) : ACE_packingBandage
@@ -470,7 +693,7 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 10;
+			mass = 5;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Bacta) : ACE_bloodIV
@@ -498,7 +721,7 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 10;
+			mass = 5;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Kolto) : ACE_bloodIV
@@ -526,7 +749,7 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 10;
+			mass = 5;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Adrenaline) : ACE_epinephrine
