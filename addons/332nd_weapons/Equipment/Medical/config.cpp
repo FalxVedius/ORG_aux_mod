@@ -699,7 +699,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(Bacta) : ACE_bloodIV
 	{
 		scope = 2;
-		scopeArsenal = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Tank)
 		descriptionShort = "332nd Healing";
