@@ -778,6 +778,12 @@ class CfgVehicles
 				count = 10;
 			};
 
+			class MediKit_332nd
+			{
+				name = "332nd_aux_medical_MediKit";
+				count = 10;
+			};
+
 			class BactaSpray_332nd
 			{
 				name = "332nd_aux_medical_BactaSpray";

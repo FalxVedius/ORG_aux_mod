@@ -2,22 +2,22 @@
 #define MACRO_LAAT_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\air\LAAT
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(laat)
-	{
-		author = "Namenai";
+    class MACRO_PATCH_NAME(laat)
+    {
+        author = "Namenai";
         addonRootClass = MACRO_PATCH_NAME(air_vehicles);
-		requiredAddons[]=
-		{
-			MACRO_PATCH_NAME(air_vehicles)
-		};
-		requiredVersion = 0.1;
-		units[] = {
+        requiredAddons[] =
+        {
+            MACRO_PATCH_NAME(air_vehicles)
+        };
+        requiredVersion = 0.1;
+        units[] = {
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd),
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao),
             MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd),
         };
-		weapons[] = {};
-	};
+        weapons[] = {};
+    };
 };
 
 class CfgFunctions
@@ -35,10 +35,10 @@ class CfgFunctions
 };
 
 class CfgVehicles
-{   
-    #include "_inheritance.hpp"
+{
+#include "_inheritance.hpp"
 
-    class MACRO_NEW_VEHICLE(air, LAAT, mk1_332nd_base) :ls_laat
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base) :ls_laat
     {
         displayName = "LAAT Mk1 Base";
         scope = 0;
@@ -74,7 +74,7 @@ class CfgVehicles
             MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
         };
 
-        crew = MACRO_NEW_UNIT(aviation, 332nd_flight_cadet);
+        crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
 
         class EventHandlers
@@ -97,7 +97,7 @@ class CfgVehicles
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
                 };
             };
-        };
+        }
 
         class Turrets : Turrets
         {
@@ -117,17 +117,18 @@ class CfgVehicles
 
         class UserActions
         {
-            #include "../../_common/damage_report_action.hpp"
+#include "../../_common/damage_report_action.hpp"
         };
         class ACE_SelfActions :ACE_SelfActions
         {
-            #include "../../_common/hud_color_changer_ace_action.hpp"
+
+#include "../../_common/hud_color_changer_ace_action.hpp"
         };
 
-        #include "../../_common/universal_mfd.hpp"
+#include "../../_common/universal_mfd.hpp"
 
-        #include "_lights.hpp"
-    };
+#include "_lights.hpp"
+    }
 
     class ls_heli_laatle;
     class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd) :ls_heli_laatle
@@ -197,6 +198,12 @@ class CfgVehicles
             class MedPatchx5_332nd
             {
                 name = "332nd_aux_medical_MedPatch_x5";
+                count = 10;
+            };
+
+            class MediKit_332nd
+            {
+                name = "332nd_aux_medical_MediKit";
                 count = 10;
             };
 
@@ -288,10 +295,10 @@ class CfgVehicles
             };
 
             class DC15B_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DC_15b";
-				count = 10;
-			};
+            {
+                weapon = "332nd_aux_weapon_DC_15b";
+                count = 10;
+            };
 
             class RPS1_Weps_332nd
             {
@@ -321,10 +328,10 @@ class CfgVehicles
             };
 
             class 332_Stun_332nd
-			{
-				magazine = "332nd_aux_magazine_Stun_x10";
-				count = 100;
-			};
+            {
+                magazine = "332nd_aux_magazine_Stun_x10";
+                count = 100;
+            };
 
             class DC15A_UGLAP_332nd
             {
@@ -351,10 +358,10 @@ class CfgVehicles
             };
 
             class DC15b_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
-				count = 200;
-			};
+            {
+                magazine = "332nd_aux_magazine_DC_15b_x60";
+                count = 200;
+            };
 
             class DC17_332nd
             {
@@ -429,22 +436,22 @@ class CfgVehicles
             };
 
             class IQA11_high_T_332nd
-			{
-				magazine = "332nd_aux_magazine_IQA_11_T_x8";
-				count = 100;
-			};
+            {
+                magazine = "332nd_aux_magazine_IQA_11_T_x8";
+                count = 100;
+            };
 
-			class IQA11_high_332nd
-			{
-				magazine = "332nd_aux_magazine_IQA_11_x8";
-				count = 100;
-			};
+            class IQA11_high_332nd
+            {
+                magazine = "332nd_aux_magazine_IQA_11_x8";
+                count = 100;
+            };
 
             class Westar_m5_40rnd
-			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
-				count = 300;
-			};
+            {
+                magazine = "332nd_aux_magazine_Westar_M5_x40";
+                count = 300;
+            };
 
             class Z6_332nd
             {
@@ -531,19 +538,19 @@ class CfgVehicles
             };
 
             class DC15xATR_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x3";
-				count = 20;
-			};
+            {
+                magazine = "332nd_aux_magazine_DC_15x_x3";
+                count = 20;
+            };
         };
 
         class EventHandlers
         {
             init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
         };
-    };
+    }
 
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd):MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd) :MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
     {
         scope = 2;
         forceInGarage = 1;
@@ -605,6 +612,12 @@ class CfgVehicles
             class MedPatchx5_332nd
             {
                 name = "332nd_aux_medical_MedPatch_x5";
+                count = 10;
+            };
+
+            class MediKit_332nd
+            {
+                name = "332nd_aux_medical_MediKit";
                 count = 10;
             };
 
@@ -696,10 +709,10 @@ class CfgVehicles
             };
 
             class DC15B_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DC_15b";
-				count = 10;
-			};
+            {
+                weapon = "332nd_aux_weapon_DC_15b";
+                count = 10;
+            };
 
             class RPS1_Weps_332nd
             {
@@ -729,10 +742,10 @@ class CfgVehicles
             };
 
             class 332_Stun_332nd
-			{
-				magazine = "332nd_aux_magazine_Stun_x10";
-				count = 100;
-			};
+            {
+                magazine = "332nd_aux_magazine_Stun_x10";
+                count = 100;
+            };
 
             class DC15A_UGLAP_332nd
             {
@@ -759,10 +772,10 @@ class CfgVehicles
             };
 
             class DC15b_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
-				count = 200;
-			};
+            {
+                magazine = "332nd_aux_magazine_DC_15b_x60";
+                count = 200;
+            };
 
             class DC17_332nd
             {
@@ -837,10 +850,10 @@ class CfgVehicles
             };
 
             class Westar_m5_40rnd
-			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
-				count = 300;
-			};
+            {
+                magazine = "332nd_aux_magazine_Westar_M5_x40";
+                count = 300;
+            };
 
             class Z6_332nd
             {
@@ -926,11 +939,11 @@ class CfgVehicles
                 count = 20;
             };
 
-             class DC15xATR_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x3";
-				count = 20;
-			};
+            class DC15xATR_332nd
+            {
+                magazine = "332nd_aux_magazine_DC_15x_x3";
+                count = 20;
+            };
         };
 
 
@@ -1029,9 +1042,9 @@ class CfgVehicles
                 minimalHit = 0.6;
             };
         };
-    };
+    }
 
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao) : MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
     {
         displayName = "LAAT Mk1 (Ahegao Squadron)";
         forceInGarage = 0;
@@ -1092,6 +1105,12 @@ class CfgVehicles
             class MedPatchx5_332nd
             {
                 name = "332nd_aux_medical_MedPatch_x5";
+                count = 10;
+            };
+
+            class MediKit_332nd
+            {
+                name = "332nd_aux_medical_MediKit";
                 count = 10;
             };
 
@@ -1183,10 +1202,10 @@ class CfgVehicles
             };
 
             class DC15B_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DC_15b";
-				count = 10;
-			};
+            {
+                weapon = "332nd_aux_weapon_DC_15b";
+                count = 10;
+            };
 
             class RPS1_Weps_332nd
             {
@@ -1216,10 +1235,10 @@ class CfgVehicles
             };
 
             class 332_Stun_332nd
-			{
-				magazine = "332nd_aux_magazine_Stun_x10";
-				count = 100;
-			};
+            {
+                magazine = "332nd_aux_magazine_Stun_x10";
+                count = 100;
+            };
 
             class DC15A_UGLAP_332nd
             {
@@ -1246,10 +1265,10 @@ class CfgVehicles
             };
 
             class DC15b_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
-				count = 200;
-			};
+            {
+                magazine = "332nd_aux_magazine_DC_15b_x60";
+                count = 200;
+            };
 
             class DC17_332nd
             {
@@ -1323,23 +1342,23 @@ class CfgVehicles
                 count = 100;
             };
 
-             class IQA11_high_T_332nd
-			{
-				magazine = "332nd_aux_magazine_IQA_11_T_x8";
-				count = 100;
-			};
+            class IQA11_high_T_332nd
+            {
+                magazine = "332nd_aux_magazine_IQA_11_T_x8";
+                count = 100;
+            };
 
-			class IQA11_high_332nd
-			{
-				magazine = "332nd_aux_magazine_IQA_11_x8";
-				count = 100;
-			};
+            class IQA11_high_332nd
+            {
+                magazine = "332nd_aux_magazine_IQA_11_x8";
+                count = 100;
+            };
 
             class Westar_m5_40rnd
-			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
-				count = 300;
-			};
+            {
+                magazine = "332nd_aux_magazine_Westar_M5_x40";
+                count = 300;
+            };
 
             class Z6_332nd
             {
@@ -1425,11 +1444,11 @@ class CfgVehicles
                 count = 20;
             };
 
-             class DC15xATR_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x3";
-				count = 20;
-			};
+            class DC15xATR_332nd
+            {
+                magazine = "332nd_aux_magazine_DC_15x_x3";
+                count = 20;
+            };
         };
 
         hiddenselections[] = {
@@ -1546,5 +1565,5 @@ class CfgVehicles
                 minimalHit = 0.6;
             };
         };
-    };
-};
+    }
+}

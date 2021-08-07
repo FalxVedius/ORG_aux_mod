@@ -87,9 +87,7 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics : CommanderOptics
-					{
-					};
+
 				};
 			};
 		};
@@ -102,9 +100,7 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics : CommanderOptics
-					{
-					};
+
 				};
 			};
 		};
@@ -119,7 +115,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
 
-		armor = 750;
+		armor = 575;
 		armorStructural = 5;
 
 		class Turrets : Turrets
@@ -128,9 +124,7 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics : CommanderOptics
-					{
-					};
+
 				};
 			};
 		};
