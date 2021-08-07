@@ -363,7 +363,7 @@ class CfgWeapons
 	class 332nd_WestarM5_Scope: ItemCore
 	{
 		scope=2;
-		displayName="[332nd] Westar M-5 Thermal Scope";
+		displayName="[332nd] Thermal Spotting Scope";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
 		model="\3AS\3AS_Weapons\WestarM5\3AS_Westar_Scope_F.p3d";
 		weaponInfoType="RscWeaponZeroing";

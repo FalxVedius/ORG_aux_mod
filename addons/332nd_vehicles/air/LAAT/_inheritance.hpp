@@ -32,4 +32,4 @@ class ls_laat: ls_laat_base
         class HitVRotor;
         class HitAvionics;
     };
-}
+};

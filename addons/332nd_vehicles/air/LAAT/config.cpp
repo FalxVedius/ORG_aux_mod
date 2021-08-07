@@ -38,7 +38,7 @@ class CfgVehicles
 {
 #include "_inheritance.hpp"
 
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base) :ls_laat
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base): ls_laat
     {
         displayName = "LAAT Mk1 Base";
         scope = 0;
@@ -55,6 +55,12 @@ class CfgVehicles
             "200rnd_laat_he_mag","200rnd_laat_he_mag","200rnd_laat_apfsds_mag","200rnd_laat_apfsds_mag",
             "12rnd_missiles","12rnd_missiles","12rnd_missiles"
         };
+        class EventHandlers
+        {
+            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
+        };
+        ls_impulsor_fuelDrain_1=0.00005;
+        ls_impulsor_fuelDrain_2=0.00005;
 
         hiddenselections[] = {
             "body","body_2",
@@ -77,13 +83,59 @@ class CfgVehicles
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
 
-        class EventHandlers
-        {
-            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
-        };
+        
 
         class TextureSources
         {
+             class base
+			{
+				displayname="332nd Standard";
+				author="Halligan";
+				textures[]=
+				{
+					  MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
+                      MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+                     MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+                     "swlb_a_vehicle\laat\data\missiles_co.paa",
+                       MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+				};
+				factions[]=
+				{
+				    "EdCat_332nd";
+				};
+			};
+            class Noseart_Verus: base
+			{
+				displayName="332nd Verus Noseart";
+				author="Halligan";
+				textures[]=
+				{
+					MACRO_LAAT_TEXTURES\Variants\Varus\Varus_ca.paa,
+                    "swlb_a_vehicle\laat\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,
+                    "swlb_a_vehicle\laat\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+                    "swlb_a_vehicle\laat\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+				};
+			};
+             class Noseart_Chopper: base
+			{
+				displayName="332nd Chopper Noseart";
+				author="Halligan";
+				textures[]=
+				{
+					MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,
+                    "swlb_a_vehicle\laat\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,
+                    "swlb_a_vehicle\laat\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+                    "swlb_a_vehicle\laat\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+				};
+			};
             class Ahegao
             {
                 displayName = "Transport Gunship (Ahegao)";
@@ -97,7 +149,7 @@ class CfgVehicles
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
                 };
             };
-        }
+        };
 
         class Turrets : Turrets
         {
@@ -140,6 +192,16 @@ class CfgVehicles
 
         faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
+       
+        class EventHandlers
+        {
+	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor;";
+        };
+        ls_impulsor_fuelDrain_1=0.00005;
+        ls_impulsor_fuelDrain_2=0.00005;
+        ls_impulsor_boostSpeed_1=600;
+        ls_impulsor_boostSpeed_2=900;
+        ls_hasImpulse=1;
 
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
@@ -1468,6 +1530,8 @@ class CfgVehicles
             "swlb_a_vehicle\laat\data\missiles_co.paa",
             MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
         };
+
+
 
 
         class HitPoints : HitPoints
