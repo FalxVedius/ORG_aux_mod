@@ -673,16 +673,7 @@ class CfgFunctions
 };
 
 class CfgVehicles
-{  
-	// ---- Supply Containers for Unif ----
-
-	class ContainerSupply;
-	class SupplyXX : ContainerSupply
-	{
-		maximumLoad = XX;
-	};
-
-	// ---- End Supply Containers for Armor ----
+{
 
 	// ---- Supply Crates ----
 
@@ -693,9 +684,7 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 2;
-		scopeArsenal = 2;
 		scopeCurator = 2;
-		vehicleClass = "Ammo";
 		displayName = "[332nd] Empty Ammo Box";
 		maximumLoad = 5000;
 
@@ -712,9 +701,7 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 2;
-		scopeArsenal = 2;
 		scopeCurator = 2;
-		vehicleClass = "Ammo";
 		displayName = "[332nd] Medical Resupply Box";
 		maximumLoad = 5000;
 
@@ -846,9 +833,7 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 2;
-		scopeArsenal = 2;
 		scopeCurator = 2;
-		vehicleClass = "Ammo";
 		displayName = "[332nd] Ammo Resupply Box";
 		maximumLoad = 5000;
 
@@ -3906,7 +3891,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -3914,7 +3898,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -4108,7 +4091,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -4116,7 +4098,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -4308,6 +4289,24 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
+		magazines[] =
+		{
+			mag_10(JLTS_SBB3_mag),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(JLTS_SBB3_mag),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		
+
 		class HitPoints : HitPoints
 		{
 			class HitFace
@@ -4489,6 +4488,23 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		magazines[] =
+		{
+			mag_10(JLTS_E5C_mag),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(JLTS_E5C_mag),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
 
 		class HitPoints : HitPoints
 		{
@@ -4679,7 +4695,7 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -4687,7 +4703,7 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5063,7 +5079,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5071,7 +5086,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5265,7 +5279,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5273,7 +5286,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5467,7 +5479,7 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5475,7 +5487,7 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5669,7 +5681,7 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5677,7 +5689,7 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5871,7 +5883,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -5879,7 +5890,6 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
