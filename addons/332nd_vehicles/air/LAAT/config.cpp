@@ -34,6 +34,24 @@ class CfgFunctions
     };
 };
 
+class Extended_init_EventHandlers
+{
+	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
+	{
+		class laat_init_eh
+		{
+			init="if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle; }; (_this select 0) setVariable [""lockState"", 0, true]; (_this select 0) setVariable [""ls_traumaState"", 0, true]; (_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[15,16,17,18,19,20]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+		};
+	};
+	class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd)
+	{
+		class laat_init_eh
+		{
+			init="if (local (_this select 0)) then {[(_this select 0), """", [""hidedoor1"", 0, ""hidedoor4"",0], false] call bis_fnc_initVehicle; }; (_this select 0) setVariable [""lockState"", 0, true]; (_this select 0) setVariable [""ls_traumaState"", 0, true]; (_this) spawn ls_vehicle_fnc_ImpulsorMonitor; ";
+		};
+	};
+};
+
 class CfgVehicles
 {
     class Helicopter_Base_H;
@@ -82,12 +100,13 @@ class CfgVehicles
 
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
-            "ls_laat_gun","ls_laat_gun_2","missiles_DAR"
+            "ls_laat_gun","ls_laat_gun_2", MACRO_NEW_WEAPON(air_dumb_rocketpod)
         };
         magazines[] = {
             MACRO_AIR_COMMON_MAGS,
             "200rnd_laat_he_mag","200rnd_laat_he_mag","200rnd_laat_apfsds_mag","200rnd_laat_apfsds_mag",
-            "12rnd_missiles","12rnd_missiles","12rnd_missiles"
+            MACRO_NEW_MAG(Air_Dumb_rocket,24),
+			MACRO_NEW_MAG(Air_Dumb_rocket,24),
         };
         class EventHandlers
         {
@@ -2471,9 +2490,23 @@ class CfgVehicles
             };
         };
     };
+	
+	class ls_laatle_base
+	{
+	  class Turrets
+		{
+			class MainTurret;
+		};
+	};
+	class ls_heli_laatle: ls_laatle_base
+	{
+	  class Turrets: Turrets
+		{
+			class MainTurret;
+		};
+	};
 
-    class ls_heli_laatle;
-    class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd) :ls_heli_laatle
+    class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): ls_heli_laatle
     {
         displayName = "LAAT/le Gunship";
         scope = 2;
@@ -2482,16 +2515,264 @@ class CfgVehicles
 
         faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
-
-        ls_impulsor_fuelDrain_1=0.00005;
+		weapons[]=
+				{
+					 MACRO_NEW_WEAPON(air_dumb_rocketpod)
+				};
+				magazines[]=
+				{
+					MACRO_NEW_MAG(Air_Dumb_rocket,24),
+					MACRO_NEW_MAG(Air_Dumb_rocket,24),
+					MACRO_NEW_MAG(Air_Dumb_rocket,24)
+				};
+       
+		mainBladeRadius=0.1;
+		liftForceCoef=3;
+		cyclicAsideForceCoef=2.8;
+		backRotorForceCoef=1.8;
+		cyclicForwardForceCoef=2;
+		mainRotorSpeed=-1;
+		backRotorSpeed=1;
+        crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
+        typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
+		//class RotorLibHelicopterProperties
+		//{
+		//	RTDconfig="\ls_vehicles_heli\laatle\RTD_heli_laatle.xml";
+		//};
+		class RotorLibHelicopterProperties
+		{
+			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
+			autoHoverCorrection[]={3.2,0,0};
+			defaultCollective=0.80500001;
+			retreatBladeStallWarningSpeed=83;
+			maxTorque=5800;
+			stressDamagePerSec=0.0099999998;
+			maxHorizontalStabilizerLeftStress=8000;
+			maxHorizontalStabilizerRightStress=8000;
+			maxVerticalStabilizerStress=4000;
+			horizontalWingsAngleCollMin=0;
+			horizontalWingsAngleCollMax=0;
+			maxMainRotorStress=225000;
+			maxTailRotorStress=225000;
+		};
+		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
         ls_impulsor_boostSpeed_1=600;
         ls_impulsor_boostSpeed_2=900;
         ls_hasImpulse=1;
-
-        crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
-        typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
-
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"Ti"
+				};
+				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100,2400};
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				memoryPointGun[]=
+				{
+					"usti_hlavne_1",
+					"usti_hlavne_2"
+				};
+				class ViewGunner
+				{
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					gunnerOpticsEffect[]={};
+					stabilizedInAxes=0;
+					directionStabilized=0;
+					horizontallyStabilized=0;
+					initFov=1;
+					minFov=0.60000002;
+					maxFov=0.85000002;
+					initAngleX=180;
+					minAngleX=90;
+					maxAngleX=270;
+					initAngleY=-45;
+					minAngleY=-90;
+					maxAngleY=-30;
+					minMoveX=-0.1;
+					maxMoveX=0.1;
+					minMoveY=-0.025;
+					maxMoveY=0.1;
+					minMoveZ=-0.1;
+					maxMoveZ=0.1;
+					gunnerOpticsModel="";
+				};
+				class Viewoptics
+				{
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleX=0;
+					minAngleY=-15;
+					maxAngleY=15;
+					initAngleY=0;
+					initFov=0.75;
+					minFov=0.25;
+					maxFov=0.75;
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						initAngleX=0;
+						minAngleX=0;
+						maxAngleX=0;
+						initAngleY=0;
+						minAngleY=-15;
+						maxAngleY=15;
+						initFov=0.46599999;
+						minFov=0.46599999;
+						maxFov=0.46599999;
+						opticsDisplayName="W";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+					};
+					class Medium: Wide
+					{
+						initFov=0.093000002;
+						minFov=0.093000002;
+						maxFov=0.093000002;
+						opticsDisplayName="M";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+					};
+					class Narrow: Wide
+					{
+						initFov=0.028999999;
+						minFov=0.028999999;
+						maxFov=0.028999999;
+						opticsDisplayName="N";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						visionMode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+						gunnerOpticsEffect[]={};
+						initAngleX=-10;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						minFov=0.25;
+						maxFov=1.25;
+						initFov=0.75;
+						gunnerOpticsModel="";
+					};
+				};
+				gunnerOpticsEffect[]=
+				{
+					"TankCommanderOptics1",
+					"BWTV"
+				};
+				primaryObserver=0;
+				primaryGunner=1;
+				animationSourceBody="mainTurret";
+				body="mainTurret";
+				gun="mainGun";
+				animationSourceGun="mainGun";
+				primary=1;
+				usePip=1;
+				turretFollowFreeLook=0;
+				gunnerCompartments="Compartment1";
+				gunnerLeftHandAnimName="";
+				gunnerRightHandAnimName="";
+				proxyindex=1;
+				isCopilot=1;
+				gunnerName="Co-Pilot";
+				showHMD=1;
+				castCargoShadow=0;
+				viewCargoShadow=0;
+				castDriverShadow=0;
+				viewDriverShadow=0;
+				CanEject=0;
+				hideWeaponsGunner=1;
+				memoryPointsGetInGunner="pos_gunner";
+				memoryPointsGetInGunnerDir="pos_gunner_dir";
+				memoryPointGunnerOutOptics="gunnerviewout";
+				discreteDistanceInitIndex=5;
+				gunnerAction="Driver_mid01";
+				gunnerInAction="Driver_mid01";
+				gunnerGetInAction="GetInLow";
+				gunnerGetOutAction="GetOutLow";
+				gunnerUsesPilotView=0;
+				commanding=-1;
+				startEngine=0;
+				stabilizedInAxes=3;
+				showAllTargets=4;
+				memoryPointLRocket="RocketL";
+				memoryPointRRocket="RocketR";
+				memoryPointLMissile="RocketL";
+				memoryPointRMissile="RocketR";
+				selectionFireAnim="zasleh";
+				weapons[]=
+				{
+					MACRO_NEW_WEAPON(LE_30mm)
+				};
+				magazines[]=
+				{
+					MACRO_NEW_MAG(LE_30mm,600),
+					MACRO_NEW_MAG(LE_30mm,600),
+					MACRO_NEW_MAG(LE_30mm,600)
+				};
+				outGunnerMayFire=1;
+				castGunnerShadow=0;
+				viewGunnerShadow=0;
+				gunnerOpticsModel="";
+				gunnerForceOptics=0;
+				turretInfoType="RscOptics_Heli_Attack_01_gunner";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner",
+					0.31622776,
+					1,
+					30
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical",
+					0.31622776,
+					1,
+					30
+				};
+				minElev=-30;
+				initElev=0;
+				maxElev=30;
+				minTurn=-60;
+				initTurn=0;
+				maxTurn=60;
+				minCamElev=-90;
+				maxCamElev=90;
+				elevationMode=0;
+				memoryPointGunnerOptics="gunnerview";
+			};
+		};
         class TransportItems
         {
 
@@ -2894,9 +3175,9 @@ class CfgVehicles
 
 		class EventHandlers
         {
+		    init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
             init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
         };
-	   
 	};
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd) :	MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)

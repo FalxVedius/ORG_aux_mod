@@ -31,6 +31,10 @@ class CfgLights
 	{
 		color[] = {186,0,0};
 	};
+    class 332nd_aux_effects_rocket_Purple: ls_light_hailfireRocket
+	{
+		color[] = {0.6,0,0.6};
+	};
 };
 
 class CfgCloudlets
@@ -83,6 +87,16 @@ class CfgCloudlets
 		size[] = {2,2};
 		volume = 2;	
 	};
+
+    	class 332nd_aux_effects_smoke_Rocket_Purple: ls_particle_hailfireRocket //PLX
+	{
+		color[] = {{0.8,0,0.8,1},{0,0,0,1},{0,0,0,1}};
+		colorVar[] = {0,0,0,1};
+		lifetime = 3;
+		colorCoef[] = {1,1,1,1};
+		size[] = {2,2};
+		volume = 10;	
+	};
 	
 	class ls_particle_hailfireRocketSparks;
 	class 332nd_aux_effects_sparks_blue: ls_particle_hailfireRocketSparks //PLX / RPS4
@@ -113,6 +127,12 @@ class CfgCloudlets
 		lifetime = 3;
 		weight = 1;
 		emissiveColor[] = {{1,0.8,0.8,1}};
+	};
+    class 332nd_aux_effects_sparks_rocket: ls_particle_hailfireRocketSparks //RPS-6
+	{
+	    color[] = {{1,1,1,-50}};
+		lifetime = 0.5;
+		emissiveColor[] = {{1,1,1,1}};
 	};
 
     class ArtilleryShell1;
@@ -288,6 +308,30 @@ class 332nd_aux_effects_missile_plx_red
     class MissileEffect2 : MissileEffect1
     {
         type = "332nd_aux_effects_sparks_red";
+    };
+};
+
+class 332nd_aux_effects_missile_Rocket_Purple
+{
+    class light1
+    {
+        intensity = 1;
+        interval = 1;
+        lifeTime = 4;
+        position[] = {0,0,0};
+        simulation = "light";
+        type = "332nd_aux_effects_rocket_Purple";
+    };
+
+    class MissileEffect1
+    {
+        simulation = "particles";
+        type = "332nd_aux_effects_smoke_Rocket_Purple"; 
+    };
+
+    class MissileEffect2 : MissileEffect1
+    {
+        type = "332nd_aux_effects_sparks_rocket";
     };
 };
 

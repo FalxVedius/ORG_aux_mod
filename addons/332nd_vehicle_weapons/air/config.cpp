@@ -34,7 +34,6 @@ class CfgAmmo
 	};
 	
 	
-	class ls_50mm_laat_he;
 	class MACRO_NEW_AMMO(ARCHigh): ls_50mm_laat_he
 	{
 	flaresize=20;
@@ -58,7 +57,6 @@ class CfgAmmo
 		frequency = 20;
 	};
 	ExplosionEffects = "80mm_Explode";
-	tracerscale=10;
     soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
 	hit=800;
 	caliber=10;
@@ -86,6 +84,70 @@ class CfgAmmo
 	indirectHit = 35;
 	indirectHitRange = 3;
 	};
+	class ls_50mm_apfsds;
+	class MACRO_NEW_AMMO(Nu_20mm): ls_50mm_laat_he
+	{
+	model="SWLW_main\Effects\laser_blue.p3d";
+	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+	flaresize=4;
+	caliber=3;
+	tracersEvery = 1;
+	hit=100;
+	explosionEffects = "ImpactPlasmaExpBlue";
+	indirectHit =6;
+	mass=2;
+	indirectHitRange = 0.5;
+	tracerscale=2;
+	};
+	class MACRO_NEW_AMMO(LE_30mm): ls_50mm_laat_he
+	{
+	model="SWLW_main\Effects\laser_green.p3d";
+	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+	flaresize=4;
+	caliber=5;
+	tracersEvery = 1;
+	hit=150;
+	explosionEffects = "ImpactPlasmaExpgreen";
+	indirectHit =12;
+	mass=2;
+	indirectHitRange = 2.5;
+	tracerscale=2;
+	};
+	class MACRO_NEW_AMMO(Nu_75mm_he): ls_50mm_laat_he
+	{
+	model="SWLW_main\Effects\laser_green.p3d";
+	effectfly="332nd_aux_effects_RPS4_green";
+	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
+	flaresize=10;
+	caliber = 10;
+	tracersEvery = 1;
+	hit = 300;
+	explosionEffects = "ATRocketExplosion";
+	indirectHit = 26;
+	mass=2;
+	indirectHitRange = 4.2;
+	tracerscale=2;
+	};
+};
+
+class Rocket_03_HE_F;
+class MACRO_NEW_AMMO(air_dumb_Rocket): Rocket_03_HE_F
+{
+   caliber = 2;
+   hit = 210;
+   indirectHit = 55;
+   indirectHitRange = 15;
+   soundFly[]=
+		{
+			"swlw_rework\sounds\launcher\E60R_fly.wss",
+			6,
+			0.9,
+			1000
+		};
+   manualcontrol=0;
+   effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
+   explosionEffects = "ATRocketExplosion";
+   effectfly="332nd_aux_effects_missile_Rocket_Purple";
 };
 
 class CfgMagazines
@@ -108,6 +170,37 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(ARCLow)
 		tracersEvery = 1;
 		count=600;
+	}
+	class MACRO_NEW_MAG(Nu_20mm,2400): 1000Rnd_25mm_shells
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(Nu 20mm)
+		descriptionshort="20mm";
+		initSpeed = 1500;
+		displayNameShort="20mm test";
+		ammo=MACRO_NEW_AMMO(Nu_20mm)
+		tracersEvery = 1;
+		count=2400;
+	};
+
+	class MACRO_NEW_MAG(LE_30mm,600): 1000Rnd_25mm_shells
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(Nu 20mm)
+		descriptionshort="20mm";
+		initSpeed = 1000;
+		displayNameShort="20mm test";
+		ammo=MACRO_NEW_AMMO(LE_30mm)
+		tracersEvery = 1;
+		count=600;
+	};
+	class MACRO_NEW_MAG(Nu_75mm,80): 1000Rnd_25mm_shells
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(ARC LOW)
+		descriptionshort="75mm";
+		initSpeed = 1000;
+		displayNameShort="75mm test";
+		ammo=MACRO_NEW_AMMO(Nu_75mm_he)
+		tracersEvery = 1;
+		count=80;
 	};
 	class MACRO_NEW_MAG(DC_15L,125);
 	class MACRO_NEW_MAG(15L,500): MACRO_NEW_MAG(DC_15L,125)
@@ -128,6 +221,16 @@ class CfgMagazines
 		scope=1;
 		count=2;
 	};
+	class 24Rnd_missiles;
+	class MACRO_NEW_MAG(Air_Dumb_rocket,24):  24Rnd_missiles
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(Shriker 24rnd)
+		ammo = MACRO_NEW_AMMO(air_dumb_Rocket)
+		descriptionshort="Concussion AT Missile";
+		displayNameShort="Concussion Missile";
+		scope=1;
+		count=24;
+	};
 };
 
 class LowROF;
@@ -146,10 +249,9 @@ class CfgWeapons
 		displayName = "Cannon Low Energy";
 		class manual: LowROF
 		{
-			magazineReloadTime = 2;
 			displayname="Full";
 			burst=1;
-			magazineReloadTime=6;
+			magazineReloadTime=4;
 			autoReload=1;
 			reloadTime=0.1;
 			dispersion=0.00005;
@@ -221,9 +323,160 @@ class CfgWeapons
 			maxRangeProbab=0.0099999998;
 		};
 	};
+	class MACRO_NEW_WEAPON(Nu_20mm): 3as_ARC_Light_Canon
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Nu_20mm,2400)
+		};
+		modes[] = {"manual"};
+		displayName = "Nu Point defence";
+		class manual: LowROF
+		{
+			displayname="Full";
+			burst=1;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.04;
+			dispersion=0.002;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\Space_CIWS.wss",
+					1.5,
+					1,
+					3000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+	};
+
+	class MACRO_NEW_WEAPON(LE_30mm): 3as_ARC_Light_Canon
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(LE_30mm,600)
+		};
+		modes[] = {"manual"};
+		displayName = "LE 30mm cannon";
+		class manual: LowROF
+		{
+			displayname="Full";
+			burst=1;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.10;
+			dispersion=0.0002;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\Space_CIWS.wss",
+					1.5,
+					0.95,
+					3000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+	};
+
+	class MACRO_NEW_WEAPON(Nu_75mm): 3as_ARC_Light_Canon
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Nu_75mm,80)
+		};
+		modes[] = {"manual"};
+		displayName = "Cannon Low Energy";
+		class manual: LowROF
+		{
+			magazineReloadTime = 2;
+			displayname="Full";
+			burst=1;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.25;
+			dispersion=0.00005;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\ARC_170Cannon.wss",
+					4,
+					1,
+					3000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+	};
 	
-
-
+	class missiles_DAR;
+	class MACRO_NEW_WEAPON(air_dumb_rocketpod): 3as_ARC_Light_Canon
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Air_Dumb_rocket,24)
+		};
+		modes[] = {"Far_AI","Medium_AI","manual"};
+		displayName = "Shrieker Dumb-Fire";
+		class manual: LowROF
+		{
+			magazineReloadTime = 2;
+			displayname="Full";
+			burst=1;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.35;
+			dispersion=0.00005;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\Dumb_Rocket.wss",
+					3,
+					1,
+					3000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+	};
 
     class LMG_coax_ext;
 	class MACRO_NEW_WEAPON(RX200_15L): LMG_coax_ext

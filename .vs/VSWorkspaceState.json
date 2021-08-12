@@ -2,11 +2,16 @@
   "ExpandedNodes": [
     "",
     "\\addons",
+    "\\addons\\332nd_vehicles",
+    "\\addons\\332nd_vehicles\\air",
+    "\\addons\\332nd_vehicles\\air\\ARC170",
     "\\addons\\332nd_weapons",
     "\\addons\\332nd_weapons\\DC",
-    "\\addons\\332nd_weapons\\DC\\15c",
-    "\\addons\\332nd_weapons\\Reticules"
+    "\\addons\\332nd_weapons\\Launchers",
+    "\\addons\\332nd_weapons\\Launchers\\RPS-6",
+    "\\addons\\332nd_weapons\\Westar35SA_Mod",
+    "\\addons\\332nd_weapons\\Z6"
   ],
-  "SelectedNode": "\\addons\\332nd_weapons\\Reticules\\config.cpp",
+  "SelectedNode": "\\addons\\332nd_weapons\\Westar35SA_Mod\\config.cpp",
   "PreviewInSolutionExplorer": true
 }

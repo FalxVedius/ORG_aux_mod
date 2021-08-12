@@ -1,9 +1,9 @@
 #include "../../../332nd_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(HMP)
+	class MACRO_PATCH_NAME(332_NuShuttle)
 	{
-		author = "Falx";
+		author = "Halligan";
         addonRootClass = MACRO_PATCH_NAME(air_vehicles);
 		requiredAddons[]=
 		{
@@ -11,9 +11,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(air,CIS,HMP_CAS),
-			MACRO_NEW_VEHICLE(air,CIS,HMP_AA),
-			MACRO_NEW_VEHICLE(air,CIS,HMP_Transport),
+            MACRO_NEW_VEHICLE(air,Nu,332nd_Nu_Shuttle),
         };
 		weapons[] = {};
 	};

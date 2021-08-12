@@ -186,7 +186,7 @@ class CfgAmmo
 		{
 			"swlw_rework\sounds\launcher\E60R_fly.wss",
 			6,
-			1.5,
+			0.9,
 			1000
 		};
 	};
@@ -244,7 +244,7 @@ class CfgMagazines
 	
 	class MACRO_NEW_MAG(RPS6_ATMag,1): SWLW_plx1_at_mag
 	{
-		ammo=MACRO_NEW_AMMO(RPS6_ATRocket);
+		ammo=MACRO_NEW_AMMO(RPS4_AT)
 		displayName=MACRO_AMMO_DISPLAYNAME(RPS6-AT,1)
 		scope=2;
 		count=1;
