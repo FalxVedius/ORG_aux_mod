@@ -26,6 +26,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Falx),
 			MACRO_NEW_HELMET(infantry,Deserter),
 			MACRO_NEW_HELMET(infantry,Poseidon_V1),
+			MACRO_NEW_HELMET(infantry,Frost),
 			MACRO_NEW_HELMET(infantry,332nd_recruit),
         };
 		weapons[] = {};
@@ -51,5 +52,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Poseidon_V1,Poseidon_V1,Poseidon_V1.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Cross,Cross,Cross.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Falx,Falx,Falx.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Frost,Frost,Frost.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deserter,Deserter,332nd_Rebal_Helmet_phase_2_ca.paa)
 }

@@ -133,6 +133,14 @@ class CfgVehicles
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_JTAC): JLTS_Clone_backpack_RTO
+	{
+		displayName = "[332nd] RTO (JTAC) Pack";
+		maximumLoad = 450;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
 	class JLTS_Clone_belt_bag;
 	class MACRO_NEW_BACKPACK(blufor,332nd_belt_bag): JLTS_Clone_belt_bag
 	{

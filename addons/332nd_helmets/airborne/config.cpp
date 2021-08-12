@@ -18,6 +18,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(ab,Chronic),
 			MACRO_NEW_HELMET(ab,Griif),
 			MACRO_NEW_HELMET(ab,Sazi),
+			MACRO_NEW_HELMET(ab,Cutter)
         };
 		weapons[] = {};
 	};
@@ -34,4 +35,5 @@ class CfgWeapons
 	MACRO_NEW_AB_HELMET_ITEM(Chronic,Chronic,Chronic.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Griif,Griif,Griif.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Sazi,Sazi,Sazi.paa)
-}
+	MACRO_NEW_AB_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
+};

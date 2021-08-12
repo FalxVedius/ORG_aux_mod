@@ -62,7 +62,7 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(RPS6_AARocket): M_Titan_AA
 	{
 		cmImmunity=0.8;
-		hit=800;
+		hit=1400;
 		effectsMissile = "332nd_aux_effects_missile_red";
 		missileLockMaxDistance = 3000;
 		manueuvrability = 25;
@@ -83,7 +83,7 @@ class CfgAmmo
 	  effectfly = "ls_plasma_blue";
 	  effectflare = "FlareShell";
 	  flaresize = 10;
-	  hit=800;
+	  hit=950;
 	  caliber = 30;
 	  tracerscale = 6;
 	  tracerstarttime = 0;
@@ -134,7 +134,7 @@ class CfgAmmo
     {
 		irLock=1;
 		allowAgainstInfantry=0;
-		hit=1800;
+		hit=2100;
 		airlock=0;
 		autoSeekTarget = 1;
 		lockSeekRadius = 25;
@@ -193,7 +193,7 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(PLX1_AA): M_Titan_AA
 	{
 		cmImmunity=1.0;
-		hit=900;
+		hit=1400;
 		missileLockMaxDistance = 3000;
 		manueuvrability = 30;
 		sideAirFriction = 0.02;
