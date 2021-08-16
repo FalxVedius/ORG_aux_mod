@@ -1119,7 +1119,6 @@ class CfgVehicles
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
-			"240Rnd_CMFlare_Chaff_Magazine",
 			"Laser_Battery_F",
 			MACRO_NEW_MAG(Nu_75mm,80),
 			MACRO_NEW_MAG(Nu_75mm,80),

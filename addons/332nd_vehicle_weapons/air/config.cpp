@@ -56,7 +56,7 @@ class CfgAmmo
 		duration = 1;
 		frequency = 20;
 	};
-	ExplosionEffects = "80mm_Explode";
+	ExplosionEffects = "120mm_Explode";
     soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
 	hit=800;
 	caliber=10;
@@ -92,7 +92,7 @@ class CfgAmmo
 	flaresize=4;
 	caliber=3;
 	tracersEvery = 1;
-	hit=100;
+	hit=130;
 	explosionEffects = "ImpactPlasmaExpBlue";
 	indirectHit =6;
 	mass=2;
@@ -128,44 +128,53 @@ class CfgAmmo
 	indirectHitRange = 4.2;
 	tracerscale=2;
 	};
-};
-
-class Rocket_03_HE_F;
-class MACRO_NEW_AMMO(air_dumb_Rocket): Rocket_03_HE_F
-{
-   caliber = 2;
-   hit = 210;
-   indirectHit = 55;
-   indirectHitRange = 15;
-   soundFly[]=
+	class Rocket_03_HE_F;
+    class MACRO_NEW_AMMO(Shrieker_Rocket): Rocket_03_HE_F
+    {
+	  caliber = 2;
+	  hit = 210;
+	  indirectHit = 55;
+	  indirectHitRange = 15;
+	  flaresize=10;
+	  proxyShape = "";
+	  thrustTime = 5;
+	  soundFly[]=
 		{
 			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			6,
-			0.9,
-			1000
+			3,
+			10,
+			2000
 		};
-   manualcontrol=0;
-   effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
-   explosionEffects = "ATRocketExplosion";
-   effectfly="332nd_aux_effects_missile_Rocket_Purple";
+	  manualcontrol=0;
+	  effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
+    };
+	class CMflareAmmo;
+	class MACRO_NEW_AMMO(CM_FLARE): CMflareAmmo
+    {
+	  flaresize=5;
+	  //effectsSmoke = "332nd_aux_effects_CMFlare";
+    };
 };
+	
+
+
 
 class CfgMagazines
 {
 	class 1000Rnd_25mm_shells;
-	class MACRO_NEW_MAG(ARC170_High,60): 1000Rnd_25mm_shells
+	class MACRO_NEW_MAG(ARC170_High,15): 1000Rnd_25mm_shells
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(ARC HIGH)
 		ammo=MACRO_NEW_AMMO(ARCHigh)
 		initSpeed = 2000;
 		tracersEvery = 1;
-		count=60;
+		count=15;
 	};
 	class MACRO_NEW_MAG(ARC170_Low,600): 1000Rnd_25mm_shells
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(ARC LOW)
 		descriptionshort="ARC High Energy";
-		initSpeed = 3000;
+		initSpeed = 1200
 		displayNameShort="High Energy";
 		ammo=MACRO_NEW_AMMO(ARCLow)
 		tracersEvery = 1;
@@ -222,14 +231,21 @@ class CfgMagazines
 		count=2;
 	};
 	class 24Rnd_missiles;
-	class MACRO_NEW_MAG(Air_Dumb_rocket,24):  24Rnd_missiles
+	class MACRO_NEW_MAG(Air_Dumb_rocket,24): 24Rnd_missiles
 	{
-		displayName=MACRO_AMMO_DISPLAYNAME(Shriker 24rnd)
-		ammo = MACRO_NEW_AMMO(air_dumb_Rocket)
-		descriptionshort="Concussion AT Missile";
-		displayNameShort="Concussion Missile";
+		displayName=MACRO_AMMO_DISPLAYNAME(Shrieker 24rnd);
+		ammo="332nd_aux_ammo_Shrieker_Rocket";
+		descriptionshort="Shrieker";
+		displayNameShort="Shrieker";
 		scope=1;
 		count=24;
+	};
+	class 120Rnd_CMFlare_Chaff_Magazine;
+	class MACRO_NEW_MAG(332_CM_Flare,120): 120Rnd_CMFlare_Chaff_Magazine
+	{
+		ammo=MACRO_NEW_AMMO(CM_FLARE);
+		scope=1;
+		count=120;
 	};
 };
 
@@ -330,6 +346,7 @@ class CfgWeapons
 			MACRO_NEW_MAG(Nu_20mm,2400)
 		};
 		modes[] = {"manual"};
+		ballisticsComputer = 1;
 		displayName = "Nu Point defence";
 		class manual: LowROF
 		{
@@ -337,7 +354,7 @@ class CfgWeapons
 			burst=1;
 			magazineReloadTime=6;
 			autoReload=1;
-			reloadTime=0.04;
+			reloadTime=0.1;
 			dispersion=0.002;
 			sounds[]=
 			{
@@ -347,7 +364,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Space_CIWS.wss",
+					"332nd_vehicle_weapons\air\sounds\Defensive20mm.wss",
 					1.5,
 					1,
 					3000
@@ -385,9 +402,9 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Space_CIWS.wss",
-					1.5,
-					0.95,
+					"332nd_vehicle_weapons\air\sounds\30mm.wss",
+					1,
+					1,
 					3000
 				};
 				soundBegin[]=
@@ -438,16 +455,18 @@ class CfgWeapons
 		};
 	};
 	
+	class MissileLauncher;
 	class missiles_DAR;
-	class MACRO_NEW_WEAPON(air_dumb_rocketpod): 3as_ARC_Light_Canon
+	class Burst;
+	class MACRO_NEW_WEAPON(air_dumb_rocketpod): missiles_DAR
 	{
 		magazineWell[] = {};
 		magazines[] = {
 			MACRO_NEW_MAG(Air_Dumb_rocket,24)
 		};
-		modes[] = {"Far_AI","Medium_AI","manual"};
+		modes[] = {"Far_AI","Medium_AI","Burst"};
 		displayName = "Shrieker Dumb-Fire";
-		class manual: LowROF
+		class Burst: Burst
 		{
 			magazineReloadTime = 2;
 			displayname="Full";
@@ -465,9 +484,9 @@ class CfgWeapons
 				begin1[]=
 				{
 					"332nd_vehicle_weapons\air\sounds\Dumb_Rocket.wss",
-					3,
+					2,
 					1,
-					3000
+					4000
 				};
 				soundBegin[]=
 				{
@@ -476,6 +495,15 @@ class CfgWeapons
 				};
 			};
 		};
+	};
+	class CMFlareLauncher;
+	class MACRO_NEW_WEAPON(CM_Flare): CMFlareLauncher
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(332_CM_Flare,120)
+		};
+		displayName = "CM Flares";
 	};
 
     class LMG_coax_ext;

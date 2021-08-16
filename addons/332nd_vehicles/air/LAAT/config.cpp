@@ -19,6 +19,23 @@ class CfgPatches
         weapons[] = {};
     };
 };
+class SensorTemplatePassiveRadar;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 
 class CfgFunctions
 {
@@ -58,6 +75,7 @@ class CfgVehicles
 
     class ls_laat_base : Helicopter_Base_H
     {
+	    class Components;
         class Turrets;
         class Reflectors;
     };
@@ -68,7 +86,7 @@ class CfgVehicles
         {
             class MainTurret;
         };
-
+		class Components;
         class ACE_SelfActions;
 
         class Reflectors : Reflectors
@@ -100,7 +118,7 @@ class CfgVehicles
 
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
-            "ls_laat_gun","ls_laat_gun_2", MACRO_NEW_WEAPON(air_dumb_rocketpod)
+            "ls_laat_gun","ls_laat_gun_2", MACRO_NEW_WEAPON(air_dumb_rocketpod), 
         };
         magazines[] = {
             MACRO_AIR_COMMON_MAGS,
@@ -136,6 +154,109 @@ class CfgVehicles
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
 
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture="swlb_a_vehicle\laat\data\ui\laat_ui.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						priority=5;
+						hardpoints[]=
+						{
+							"332_A_Pylon"
+						};
+						turret[]={};
+						UIposition[]={0.059999999,0.40000001};
+					};
+					class PylonLeft2: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_Shrieker_x20";  
+						priority=4;
+						hardpoints[]=
+						{
+							"332_C_Pylon"
+						};
+						UIposition[]={0.079999998,0.34999999};
+					};
+					class PylonLeft3: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority=3;
+						hardpoints[]=
+						{
+							"332_B_Pylon"
+						};
+						UIposition[]={0.1,0.30000001};
+					};
+					class PylonRight3: PylonLeft3
+					{
+						mirroredMissilePos=3;
+						UIposition[]={0.58999997,0.30000001};
+					};
+					class PylonRight2: PylonLeft2
+					{
+						mirroredMissilePos=2;
+						UIposition[]={0.62,0.34999999};
+					};
+					class PylonRight1: PylonLeft1
+					{
+						mirroredMissilePos=1;
+						UIposition[]={0.63999999,0.40000001};
+					};
+				};
+			//	class Presets
+			//	{
+			//		class Empty
+			//		{
+			//			displayName="Empty";
+			//			attachment[]={};
+			//		};
+			//		class Default
+			//		{
+			//			displayName="Default";
+			//			attachment[]=
+			//			{
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles"
+			//			};
+			//		};
+			//		class AT
+			//		{
+			//			displayName="AT";
+			//			attachment[]=
+			//			{
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonMissile_1Rnd_LG_scalpel",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonMissile_1Rnd_LG_scalpel",
+			//				"PylonRack_12Rnd_PG_missiles"
+			//			};
+			//		};
+			//		class CAS
+			//		{
+			//			displayName="CAS";
+			//			attachment[]=
+			//			{
+			//				"PylonRack_12Rnd_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonRack_12Rnd_missiles",
+			//				"PylonRack_12Rnd_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonRack_12Rnd_missiles"
+			//			};
+			//		};
+			//	};
+			};
+		};
 
         class Turrets : Turrets
         {
@@ -2493,6 +2614,7 @@ class CfgVehicles
 	
 	class ls_laatle_base
 	{
+	  class Components;
 	  class Turrets
 		{
 			class MainTurret;
@@ -2500,6 +2622,7 @@ class CfgVehicles
 	};
 	class ls_heli_laatle: ls_laatle_base
 	{
+	  class Components;
 	  class Turrets: Turrets
 		{
 			class MainTurret;
@@ -2517,15 +2640,20 @@ class CfgVehicles
         editorSubcategory = "EdSubcat_332nd_HELI";
 		weapons[]=
 				{
-					 MACRO_NEW_WEAPON(air_dumb_rocketpod)
+					 MACRO_NEW_WEAPON(air_dumb_rocketpod),
+					"CMFlareLauncher"
 				};
 				magazines[]=
 				{
+				   "240Rnd_CMFlare_Chaff_Magazine",
+			       "240Rnd_CMFlare_Chaff_Magazine",
+			       "240Rnd_CMFlare_Chaff_Magazine",
 					MACRO_NEW_MAG(Air_Dumb_rocket,24),
 					MACRO_NEW_MAG(Air_Dumb_rocket,24),
 					MACRO_NEW_MAG(Air_Dumb_rocket,24)
 				};
-       
+        radarTargetSize = 0.3;
+		visualTargetSize = 0.3;
 		mainBladeRadius=0.1;
 		liftForceCoef=3;
 		cyclicAsideForceCoef=2.8;
@@ -2560,6 +2688,27 @@ class CfgVehicles
         ls_impulsor_boostSpeed_1=600;
         ls_impulsor_boostSpeed_2=900;
         ls_hasImpulse=1;
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture="swlb_a_vehicle\laat\data\ui\laat_ui.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority=5;
+						hardpoints[]=
+						{
+							"332_C_Pylon"
+						};
+						turret[]={};
+						UIposition[]={0.059999999,0.40000001};
+					};
+				};
+			};
+		};
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -3175,8 +3324,8 @@ class CfgVehicles
 
 		class EventHandlers
         {
-		    init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
-            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
+		    //init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
+            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory";
         };
 	};
 
@@ -3742,14 +3891,15 @@ class CfgVehicles
         };
 	};
 
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao) : MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
-    {
-        displayName = "LAAT Mk1 (Ahegao Squadron)";
-        forceInGarage = 0;
+	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_AB): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
+	{
+	    scope = 2;
+        forceInGarage = 1;
         armor = 100 * 0.5;
         maximumLoad = 10000;
-
-        class TransportItems
+		model="\lsd_vehicles_heli\laati\lsd_heli_laati_ab";
+		displayName="LAAT MK1 (AB)";
+		 class TransportItems
         {
 
             class BactaSprayx25_332nd
@@ -4040,18 +4190,6 @@ class CfgVehicles
                 count = 100;
             };
 
-            class IQA11_high_T_332nd
-            {
-                magazine = "332nd_aux_magazine_IQA_11_T_x8";
-                count = 100;
-            };
-
-            class IQA11_high_332nd
-            {
-                magazine = "332nd_aux_magazine_IQA_11_x8";
-                count = 100;
-            };
-
             class Westar_m5_40rnd
             {
                 magazine = "332nd_aux_magazine_Westar_M5_x40";
@@ -4149,25 +4287,62 @@ class CfgVehicles
             };
         };
 
-        hiddenselections[] = {
-            "body","body_2",
-            "door_1","door_2","door_3",
-            "wings",
-            "missiles",
-            "cockpits","glass",
-            "clan",
-            "zasleh_l","zasleh_r","zasleh_b"
-        };
-
-        hiddenselectionstextures[] = {
-            MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
-            MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
-            MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
-            "swlb_a_vehicle\laat\data\missiles_co.paa",
-            MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-        };
-
-
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture="swlb_a_vehicle\laat\data\ui\laat_ui.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						priority=5;
+						hardpoints[]=
+						{
+							"332_A_Pylon"
+						};
+						turret[]={};
+						UIposition[]={0.059999999,0.40000001};
+					};
+					class PylonLeft2: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_Shrieker_x20";  
+						priority=4;
+						hardpoints[]=
+						{
+							"332_C_Pylon"
+						};
+						UIposition[]={0.079999998,0.34999999};
+					};
+					class PylonLeft3: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority=3;
+						hardpoints[]=
+						{
+							"332_B_Pylon"
+						};
+						UIposition[]={0.1,0.30000001};
+					};
+					class PylonRight3: PylonLeft3
+					{
+						mirroredMissilePos=3;
+						UIposition[]={0.58999997,0.30000001};
+					};
+					class PylonRight2: PylonLeft2
+					{
+						mirroredMissilePos=2;
+						UIposition[]={0.62,0.34999999};
+					};
+					class PylonRight1: PylonLeft1
+					{
+						mirroredMissilePos=1;
+						UIposition[]={0.63999999,0.40000001};
+					};
+				};
+			};
+		};
         class HitPoints : HitPoints
         {
             class HitHull : HitHull
@@ -4264,8 +4439,8 @@ class CfgVehicles
             };
         };
 
-        class TextureSources
-        {
+         class TextureSources
+          {
             class Standard
             {
                 displayname = "332nd Standard";
@@ -4277,6 +4452,40 @@ class CfgVehicles
                      MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
                      "swlb_a_vehicle\laat\data\missiles_co.paa",
                        MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+            class Noseart_Verus
+            {
+                displayName = "332nd Verus Noseart";
+                author = "Halligan";
+                textures[] =
+                {
+                    MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+                    "swlb_a_vehicle\laat\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+            class Noseart_Chopper
+            {
+                displayName = "332nd Chopper Noseart";
+                author = "Halligan";
+                textures[] =
+                {
+                    MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+                    "swlb_a_vehicle\laat\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
                 };
                 factions[] =
                 {
@@ -4296,6 +4505,7 @@ class CfgVehicles
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
                 };
             };
-        };
-	};
+          };
+	  };
+   };
 };
