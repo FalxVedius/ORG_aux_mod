@@ -132,5 +132,66 @@ switch (true) do {
 	default {};
 };
 
+_aliveDroids = nearestObjects [_unit,
+[
+"332nd_aux_cisb1_unit_332nd_CIS_B1",
+"332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher",
+"332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support",
+"332nd_aux_cisb1at_unit_332nd_CIS_B1_AT",
+"332nd_aux_cisb1comm_unit_332nd_CIS_B1_Commander",
+"332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security",
+"332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper",
+"332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot",
+"332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew",
+"332nd_aux_cisb1marine_unit_332nd_CIS_B1_Marine",
+"332nd_aux_cisb1jumppack_unit_332nd_CIS_B1_Jumppack"
+],15];
+
+{
+	if (!(_x == _unit) && (alive _x) && !(lifeState _x == "INCAPACITATED")) then {
+	
+		friendlyunit = _x;
+		break;
+	};
+} forEach _aliveDroids;
+
+
+_rndNum = floor(random 10);
+_rndSound = floor(random 4);
+_obj2= "HeliHEmpty" createVehicleLocal [0,0,0]; 
+_obj2 attachTo [friendlyunit,[0,0,1.5]];
+
+switch (true) do {
+
+	case (_rndNum <= 4): 
+	{ 
+		switch (true) do {
+		
+			case (_rndSound == 0): 
+			{
+				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_03.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+			};
+			case (_rndSound == 1): 
+			{
+				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_05.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+			};
+			case (_rndSound == 2): 
+			{
+				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_06.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+			};
+			case (_rndSound == 3): 
+			{
+				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_21.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+			};
+		
+			default { playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_03.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150]; };
+		};
+	};
+	
+	case (_rndNum >= 5): {};
+	default {};
+};
+
 
 deleteVehicle _obj;
+deleteVehicle _obj2;

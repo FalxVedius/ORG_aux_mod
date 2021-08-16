@@ -699,6 +699,22 @@
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
 		}
+	#define MACRO_NEW_CISBXHYBRIDCOMM_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxhybridcomm,classname): MACRO_NEW_UNIT(cisbxhybridcomm,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXHYBRID_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxhybrid,classname): MACRO_NEW_UNIT(cisbxhybrid,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
 	#define MACRO_NEW_CISBXAT_UNIT(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIT(cisbxat,classname): MACRO_NEW_UNIT(cisbxat,base)\
 		{\

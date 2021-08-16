@@ -158,6 +158,8 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(cisbxar,base);
 	class MACRO_NEW_UNIT(cisbxat,base);
 	class MACRO_NEW_UNIT(cisbxbreach,base);
+	class MACRO_NEW_UNIT(cisbxhybridcomm,base);
+	class MACRO_NEW_UNIT(cisbxhybrid,base);
 
 	class MACRO_NEW_UNIT(cisdroideka,base);
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base);
@@ -186,6 +188,8 @@ class CfgVehicles
 	MACRO_NEW_CISBXSUPPORT_UNIT(332nd_CIS_BX_Support,BX Support Battle Droid,332nd_CIS_BX)
 	MACRO_NEW_CISBXAT_UNIT(332nd_CIS_BX_AT,BX Anti-Tank Battle Droid,332nd_CIS_BX)
 	MACRO_NEW_CISBXBREACH_UNIT(332nd_CIS_BX_Breacher,BX Breacher Battle Droid,332nd_CIS_BX)
+	MACRO_NEW_CISBXHYBRIDCOMM_UNIT(332nd_CIS_BX_Hybrid_Commander,BX Commander Hybrid Battle Droid,332nd_CIS_BX_Captain)
+	MACRO_NEW_CISBXHYBRID_UNIT(332nd_CIS_BX_Hybrid,BX Hybrid Battle Droid,332nd_CIS_BX)
 
 	//Heavy Droids
 	MACRO_NEW_CISDROIDEKA_UNIT(332nd_CIS_HEAVY_Droideka,Droideka (Static))
