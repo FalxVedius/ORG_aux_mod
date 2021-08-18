@@ -33,6 +33,21 @@ class CfgAmmo
 	tracerscale=2;
 	};
 	
+	class ls_50mm_laat_apfsds;
+	class MACRO_NEW_AMMO(LAAT_40mm): ls_50mm_laat_apfsds
+	{
+	model="SWLW_main\Effects\laser_green.p3d";
+	effectfly="332nd_aux_effects_green_tracer_AVI";
+	soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,500};
+	flaresize=10;
+	caliber=10;
+	explosionEffects = "ATRocketExplosion";
+	tracersEvery = 1;
+	indirectHit = 12;
+	mass=2;
+	indirectHitRange = 4;
+	tracerscale=2;
+	};
 	
 	class MACRO_NEW_AMMO(ARCHigh): ls_50mm_laat_he
 	{
@@ -90,10 +105,25 @@ class CfgAmmo
 	model="SWLW_main\Effects\laser_blue.p3d";
 	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 	flaresize=4;
+	effectfly="332nd_aux_effects_blue_tracer_AVI";
 	caliber=3;
 	tracersEvery = 1;
 	hit=130;
 	explosionEffects = "ImpactPlasmaExpBlue";
+	indirectHit =6;
+	mass=2;
+	indirectHitRange = 0.5;
+	tracerscale=2;
+	};
+	class MACRO_NEW_AMMO(Vulture_30mm): ls_50mm_laat_he
+	{
+	model="SWLW_main\Effects\laser_red.p3d";
+	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+	flaresize=4;
+	caliber=3;
+	tracersEvery = 1;
+	hit=120;
+	explosionEffects = "ATRocketExplosion";
 	indirectHit =6;
 	mass=2;
 	indirectHitRange = 0.5;
@@ -104,11 +134,27 @@ class CfgAmmo
 	model="SWLW_main\Effects\laser_green.p3d";
 	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 	flaresize=4;
+	effectfly="332nd_aux_effects_green_tracer_AVI";
 	caliber=5;
 	tracersEvery = 1;
 	hit=150;
 	explosionEffects = "ImpactPlasmaExpgreen";
 	indirectHit =12;
+	mass=2;
+	indirectHitRange = 2.5;
+	tracerscale=2;
+	};
+	class MACRO_NEW_AMMO(Z95_30mm): ls_50mm_laat_he
+	{
+	model="SWLW_main\Effects\laser_blue.p3d";
+	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+	flaresize=4;
+	effectfly="332nd_aux_effects_blue_tracer_AVI";
+	caliber=5;
+	tracersEvery = 1;
+	hit=150;
+	explosionEffects = "ATRocketExplosion";
+	indirectHit =25;
 	mass=2;
 	indirectHitRange = 2.5;
 	tracerscale=2;
@@ -174,11 +220,31 @@ class CfgMagazines
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(ARC LOW)
 		descriptionshort="ARC High Energy";
-		initSpeed = 1200
+		initSpeed = 1200;
 		displayNameShort="High Energy";
 		ammo=MACRO_NEW_AMMO(ARCLow)
 		tracersEvery = 1;
 		count=600;
+	}
+	class MACRO_NEW_MAG(LAAT_40mm,600): 1000Rnd_25mm_shells
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(ARC LOW)
+		descriptionshort="ARC High Energy";
+		initSpeed = 1000;
+		displayNameShort="LAAT Nose Gun";
+		ammo=MACRO_NEW_AMMO(LAAT_40mm)
+		tracersEvery = 1;
+		count=600;
+	}
+	class MACRO_NEW_MAG(Vulture_30mm,1000): 1000Rnd_25mm_shells
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(ARC LOW)
+		descriptionshort="Vulture main cannon";
+		initSpeed = 1000;
+		displayNameShort="High Energy";
+		ammo=MACRO_NEW_AMMO(Vulture_30mm)
+		tracersEvery = 1;
+		count=1000;
 	}
 	class MACRO_NEW_MAG(Nu_20mm,2400): 1000Rnd_25mm_shells
 	{
@@ -189,6 +255,17 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(Nu_20mm)
 		tracersEvery = 1;
 		count=2400;
+	};
+
+	class MACRO_NEW_MAG(Z95_30mm,1000): 1000Rnd_25mm_shells
+	{
+		displayName="Z-95 30mm";
+		descriptionshort="30mm";
+		initSpeed = 1100;
+		displayNameShort="30mm Nose";
+		ammo=MACRO_NEW_AMMO(Z95_30mm)
+		tracersEvery = 1;
+		count=1200;
 	};
 
 	class MACRO_NEW_MAG(LE_30mm,600): 1000Rnd_25mm_shells
@@ -339,6 +416,93 @@ class CfgWeapons
 			maxRangeProbab=0.0099999998;
 		};
 	};
+	class MGun;
+	class ls_laat_gun;
+	class MACRO_NEW_WEAPON(LAAT_40mm): ls_laat_gun
+	{
+	   	magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(LAAT_40mm,600)
+		};
+		ballisticsComputer = 1;
+		FCSMaxLeadSpeed = 100.5556;
+		FCSZeroingDelay = 0.2;
+		displayName = "LAAT 40mm";
+		class GunParticles
+		{
+		};
+		class FullAuto:  MGun
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\LAAT_Nose.wss",
+					1,
+					1,
+					3000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.1375;
+			dispersion=0;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.050000001;
+		};
+		class close: FullAuto
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+		
+
+
+
 	class MACRO_NEW_WEAPON(Nu_20mm): 3as_ARC_Light_Canon
 	{
 		magazineWell[] = {};
@@ -348,6 +512,82 @@ class CfgWeapons
 		modes[] = {"manual"};
 		ballisticsComputer = 1;
 		displayName = "Nu Point defence";
+		class manual: LowROF
+		{
+			displayname="Full";
+			burst=1;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.05;
+			dispersion=0.002;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"swlg_clones_tanks\tx130\data\sounds\Saber_heavy_shot.wss",
+					1,
+					3,
+					3000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(Vulture_cannon): 3as_ARC_Light_Canon
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Vulture_30mm,1000)
+		};
+		modes[] = {"manual"};
+		ballisticsComputer = 1;
+		displayName = "Vulture Main Cannon";
 		class manual: LowROF
 		{
 			displayname="Full";
@@ -364,10 +604,10 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Defensive20mm.wss",
-					1.5,
-					1,
-					3000
+					"332nd_vehicle_weapons\air\sounds\Vulture_Cannon.wss",
+					2,
+					0.95,
+					6000
 				};
 				soundBegin[]=
 				{
@@ -375,6 +615,43 @@ class CfgWeapons
 					1
 				};
 			};
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
 		};
 	};
 
@@ -385,6 +662,7 @@ class CfgWeapons
 			MACRO_NEW_MAG(LE_30mm,600)
 		};
 		modes[] = {"manual"};
+		ballisticsComputer = 1;
 		displayName = "LE 30mm cannon";
 		class manual: LowROF
 		{
@@ -414,6 +692,119 @@ class CfgWeapons
 				};
 			};
 		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(Z95_30mm): 3as_ARC_Light_Canon
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Z95_30mm,1000)
+		};
+		modes[] = {"manual"};
+		ballisticsComputer = 1;
+		displayName = "Z95 30mm cannon";
+		class manual: LowROF
+		{
+			displayname="Full";
+			burst=1;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.10;
+			dispersion=0.00002;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
+					2,
+					0.95,
+					6000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
 	};
 
 	class MACRO_NEW_WEAPON(Nu_75mm): 3as_ARC_Light_Canon
@@ -442,7 +833,7 @@ class CfgWeapons
 				begin1[]=
 				{
 					"332nd_vehicle_weapons\air\sounds\ARC_170Cannon.wss",
-					4,
+					2,
 					1,
 					3000
 				};
@@ -452,6 +843,43 @@ class CfgWeapons
 					1
 				};
 			};
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
 		};
 	};
 	

@@ -118,11 +118,11 @@ class CfgVehicles
 
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
-            "ls_laat_gun","ls_laat_gun_2", MACRO_NEW_WEAPON(air_dumb_rocketpod), 
+            MACRO_NEW_WEAPON(LAAT_40mm), MACRO_NEW_WEAPON(air_dumb_rocketpod), 
         };
         magazines[] = {
             MACRO_AIR_COMMON_MAGS,
-            "200rnd_laat_he_mag","200rnd_laat_he_mag","200rnd_laat_apfsds_mag","200rnd_laat_apfsds_mag",
+            MACRO_NEW_MAG(LAAT_40mm,600),
             MACRO_NEW_MAG(Air_Dumb_rocket,24),
 			MACRO_NEW_MAG(Air_Dumb_rocket,24),
         };

@@ -124,6 +124,369 @@ class CfgVehicles
         ls_impulsor_boostSpeed_1=600;
         ls_impulsor_boostSpeed_2=1200;
         ls_hasImpulse=1;
+		soundEngineOnInt[]=
+		{
+			"\lsd_sounds\vehicles\laatc\engine_start_int.wss",
+			1,
+			1
+		};
+		soundEngineOnExt[]=
+		{
+			"\lsd_sounds\vehicles\laatc\engine_start_ext.wss",
+			4,
+			1,
+			600
+		};
+		soundEngineOffInt[]=
+		{
+			"\lsd_sounds\vehicles\laatc\engine_end_int.wss",
+			1,
+			1
+		};
+		soundEngineOffExt[]=
+		{
+			"\lsd_sounds\vehicles\laatc\engine_end_ext.wss",
+			4,
+			1,
+			600
+		};
+			class Sounds
+		{
+			class EngineInt
+			{
+				sound[]=
+				{
+					"lsd_sounds\vehicles\laatc\engine_int.wss",
+					2,
+					1
+				};
+				frequency="rotorSpeed*(1+rotorThrust/6)*0.8";
+				volume="2 * (1-camPos)*(rotorSpeed factor[0.4,1])";
+			};
+			class EngineExt
+			{
+				sound[]=
+				{
+					"lsd_sounds\vehicles\laatc\engine_ext.wss",
+					8,
+					1,
+					600
+				};
+				frequency="rotorSpeed*(1+rotorThrust/6)*0.8";
+				volume="camPos*((rotorSpeed-0.72)*4)";
+			};
+			class RotorInt
+			{
+				sound[]=
+				{
+					"lsd_sounds\vehicles\laatc\rotor_ext.wss",
+					2,
+					1
+				};
+				frequency="rotorSpeed * (1-rotorThrust/5) * 1.2";
+				volume="(1-camPos)*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)*0.9";
+			};
+			class RotorExt
+			{
+				sound[]=
+				{
+					"lsd_sounds\vehicles\laatc\rotor_ext.wss",
+					8,
+					1,
+					3000
+				};
+				frequency="rotorSpeed * (1-rotorThrust/5) * 1.2";
+				volume="camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
+				cone[]={1.6,3.1400001,1.6,0.94999999};
+			};
+			class RotorNoiseExt
+			{
+				sound[]=
+				{
+					"lsd_sounds\vehicles\laatc\rotor_swist",
+					8,
+					1,
+					1500
+				};
+				frequency=1;
+				volume="camPos * (rotorThrust factor [0.7, 0.9])";
+				cone[]={0.69999999,1.3,1,0};
+			};
+			class scrubLandInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+			};
+			class scrubLandExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\dummysound",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+			};
+			class scrubBuildingInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+			};
+			class scrubBuildingExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\dummysound",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="camPos * (scrubBuilding factor[0.02, 0.05])";
+			};
+			class scrubTreeInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="(1 - camPos) * ((scrubTree) factor [0, 0.01])";
+			};
+			class scrubTreeExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="camPos * ((scrubTree) factor [0, 0.01])";
+			};
+			class RainExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_ext",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="camPos * (rain - rotorSpeed/2) * 2";
+			};
+			class RainInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_int",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="(1-camPos)*(rain - rotorSpeed/2)*2";
+			};
+			class SlingLoadDownExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
+					1.25893,
+					1,
+					500
+				};
+				frequency=1;
+				volume="camPos*(slingLoadActive factor [0,-1])";
+			};
+			class SlingLoadUpExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
+					1.25893,
+					1,
+					500
+				};
+				frequency=1;
+				volume="camPos*(slingLoadActive factor [0,1])";
+			};
+			class SlingLoadDownInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
+					1,
+					1,
+					500
+				};
+				frequency=1;
+				volume="(1-camPos)*(slingLoadActive factor [0,-1])";
+			};
+			class SlingLoadUpInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
+					1,
+					1,
+					500
+				};
+				frequency=1;
+				volume="(1-camPos)*(slingLoadActive factor [0,1])";
+			};
+			class WindInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\wind_closed",
+					0.707946,
+					1,
+					50
+				};
+				frequency=1;
+				volume="(1-camPos)*(speed factor[5, 60])*(speed factor[5, 60])";
+			};
+			class GStress
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\vehicle_stress2d",
+					1.12202,
+					1,
+					50
+				};
+				frequency=1;
+				volume="engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
+			};
+			class SpeedStress
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\vehicle_stress3",
+					1,
+					1,
+					50
+				};
+				frequency=1;
+				volume="(1-camPos)*(speed factor[40,80])";
+			};
+			class damageAlarmInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
+					0.316228,
+					1
+				};
+				frequency=1;
+				volume="engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
+			};
+			class damageAlarmExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
+					0.22387201,
+					1,
+					20
+				};
+				frequency=1;
+				volume="engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
+			};
+			class rotorLowAlarmInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
+					0.316228,
+					1
+				};
+				frequency=1;
+				volume="engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			};
+			class rotorLowAlarmExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
+					0.22387201,
+					1,
+					20
+				};
+				frequency=1;
+				volume="engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			};
+			class TransmissionDamageExt_phase1
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
+					1,
+					1,
+					150
+				};
+				frequency="0.66 + rotorSpeed / 3";
+				volume="camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+			class TransmissionDamageExt_phase2
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
+					1,
+					1,
+					150
+				};
+				frequency="0.66 + rotorSpeed / 3";
+				volume="camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+			class TransmissionDamageInt_phase1
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
+					1,
+					1,
+					150
+				};
+				frequency="0.66 + rotorSpeed / 3";
+				volume="(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+			class TransmissionDamageInt_phase2
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
+					1,
+					1,
+					150
+				};
+				frequency="0.66 + rotorSpeed / 3";
+				volume="(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
+			};
+		};
         class EventHandlers
         {
 	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
@@ -132,11 +495,11 @@ class CfgVehicles
 		{
 			class HitHull
 			{
-				armor=1000;
+				armor=3000;
 				convexComponent="hull_hit";
 				depends="Total";
 				explosionShielding=1;
-				material=51;
+				material=55;
 				name="hull_hit";
 				passThrough=1;
 				visual="zbytek";
@@ -157,7 +520,7 @@ class CfgVehicles
 			};
 			class HitEngine
 			{
-				armor=0.5;
+				armor=50;
 				convexComponent="engine_hit";
 				explosionShielding=2;
 				material=51;
@@ -181,7 +544,7 @@ class CfgVehicles
 			};
 			class HitAvionics
 			{
-				armor=1.5;
+				armor=50;
 				convexComponent="avionics_hit";
 				explosionShielding=2;
 				material=51;

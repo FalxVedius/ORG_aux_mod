@@ -100,6 +100,19 @@ class CfgCloudlets
 		volume = 20;
         weight=20;
 	};
+
+    class 332nd_aux_effects_smoke_Proton_Purple: Missile4 //Shrieker
+	{
+		color[] = {{0.20,0,0.10,1},{0.20,0,0.10,0.5},{0.20,0,0.10,0.3},{0.20,0,0.10,0.1},{0.20,0,0.10,0.01}};
+		colorVar[] = {0,0,0,1};
+		colorCoef[] = {1,1,1,1};
+        interval=0.001;
+		size[] = {0.6};
+        lifetime = 1.5;
+		volume = 25;
+        weight=25;
+	};
+
     class 332nd_aux_effects_smoke_Rocket_Blue: Missile4 //Shrieker
 	{
 		color[] = {{0,0.05,0.2,1},{0,0,0,0.5},{0,0,0,0.3},{0,0,0,0.1},{0,0,0,0.01}};
@@ -190,6 +203,32 @@ class CfgCloudlets
     color[] = {{0.2,0.8,0,0.20},{0.1,0.85,0.1,0.10},{0.15,0.9,0.15,0.02},{0.2,0.95,0.2,0.006},{0.25,1,0.25,0.001}};
     emissiveColor[] = {{0.5,0.8,0.5,0.14},{0.8,0.8,0.8,0.5}};
     };
+
+    class 332nd_aux_effects_AVI_tracergreen: ArtilleryShell1
+	{
+		color[] = {{0,1.5,0,0.20},{0,0.5,0,0.001}};
+		colorVar[] = {0,0,0,0};
+		colorCoef[] = {1,1,1,1};
+		volume = 25;	
+        lifetime = 0.6;
+        size[] = {0.6};
+        interval = 0.005;
+        weight=25;
+        emissiveColor[] = {{0.5,0.5,0.8,0.14},{0.8,0.8,0.8,0.5}};
+	};
+
+    class 332nd_aux_effects_AVI_tracerblue: ArtilleryShell1
+	{
+		color[] = {{0,0,1.5,0.20},{0,0,0.5,0.001}};
+		colorVar[] = {0,0,0,0};
+		colorCoef[] = {1,1,1,1};
+		volume = 25;	
+        lifetime = 0.6;
+        size[] = {0.6};
+        interval = 0.005;
+        weight=25;
+        emissiveColor[] = {{0.5,0.5,0.8,0.14},{0.8,0.8,0.8,0.5}};
+	};
 
     //CM
    class Cmeasures1;
@@ -439,6 +478,25 @@ class 332nd_aux_effects_missile_Rocket_Red
     };
 };
 
+class 332nd_aux_effects_missile_Proton_Purple
+{
+    class light1
+    {
+        intensity = 1;
+        interval = 1;
+        lifeTime = 4;
+        position[] = {0,0,0};
+        simulation = "light";
+        type = "332nd_aux_effects_rocket_pur-ple";
+    };
+
+    class MissileEffect1
+    {
+        simulation = "particles";
+        type = "332nd_aux_effects_smoke_Proton_Purple"; 
+    };
+};
+
 class CounterMeasureFlare;
 class 332nd_aux_effects_CMFlare
 {
@@ -505,4 +563,23 @@ class 332nd_aux_effects_green_bullet
         type = "332nd_aux_effects_smoke_tracergreen"; 
     };
 };
-	
+
+class 332nd_aux_effects_green_tracer_AVI
+{
+    class MissileEffect1
+    {
+        qualityLevel = 2;
+        simulation = "particles";
+        type = "332nd_aux_effects_AVI_tracergreen"; 
+    };
+};
+
+class 332nd_aux_effects_blue_tracer_AVI
+{
+    class MissileEffect1
+    {
+        qualityLevel = 2;
+        simulation = "particles";
+        type = "332nd_aux_effects_AVI_tracerblue"; 
+    };
+};
