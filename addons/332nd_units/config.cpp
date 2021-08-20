@@ -8424,7 +8424,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\AT_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
@@ -8658,7 +8658,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Sniper_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
@@ -9821,7 +9821,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\AA_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
