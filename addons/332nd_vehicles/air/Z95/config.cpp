@@ -106,14 +106,13 @@ class CfgVehicles
 
 		weapons[] =
 		{
-			"3as_Z95_Light_Cannon",
+			MACRO_NEW_WEAPON(Z95_30mm),
 			"CMFlareLauncher",
 			"Laserdesignator_pilotCamera"
 		};
 		magazines[] =
 		{
-			"3as_Z95_1000Rnd_Light_shells",
-			"3as_Z95_1000Rnd_Light_shells",
+		    MACRO_NEW_MAG(Z95_30mm,1000),
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries",
 			"120Rnd_CMFlare_Chaff_Magazine",
@@ -122,7 +121,159 @@ class CfgVehicles
 			"120Rnd_CMFlare_Chaff_Magazine"
 		};
 
+		class Sounds
+		{
+			class TurbineOut
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineExt.wss",
+					1,
+					0.5,
+					1000
+				};
+				frequency = "rpm * (thrust/4 + 0.5)";
+				volume = "camPos * 2 * rpm * thrust * (rpm factor[0, 0.4])";
+			};
+			class TurbineHighInt
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighInt.wss",
+					0.1,
+					1,
+					2500
+				};
+				frequency = "1.7 * (rpm factor[-5,1])";
+				volume = "0.8 * (1-camPos) * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
+			};
+			class TurbineHighOut
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighExt.wss",
+					1,
+					1,
+					4000
+				};
+				frequency = "1.7 * (rpm factor[-5,1])";
+				volume = "0.8 * camPos * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
+			};
+			class TurbineInt
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineInt.wss",
+					0.1,
+					1,
+					2100
+				};
+				frequency = "rpm * (thrust/4 + 0.5)";
+				volume = "(1-camPos) * 2 * rpm * thrust * (rpm factor[0, 0.4])";
+			};
+			
+			class EngineHighInt
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineHighInt.wss",
+					3,
+					1,
+					2100
+				};
+				frequency = 1;
+				volume = "(1-camPos)*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			class EngineHighOut
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineHighExt.wss",
+					4,
+					1,
+					4000
+				};
+				frequency = 1;
+				volume = "camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			class EngineLowInt
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineLowInt.wss",
+					1,
+					2,
+					1200
+				};
+				frequency = "1.0 min (rpm + 0.5)";
+				volume = "(1-camPos)*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+			};
+			class EngineLowOut
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineLowExt.wss",
+					2,
+					1,
+					1000
+				};
+				frequency = "1.0 min (rpm + 0.5)";
+				volume = "camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+			};
+			
+			class ForsageIn
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95ForsageInt.wss",
+					0.5,
+					1,
+					2000
+				};
+				frequency = "1";
+				volume = "(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
+			};
 
+			class ForsageOut
+			{
+			cone[] = {20,15,5,3};
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95ForsageExt.wss",
+					3.5,
+					0.95,
+				};
+				frequency = "1";
+				volume = "engineOn*camPos*(thrust factor[0.6, 1.0])";
+			};
+			
+		
+			
+			class RainExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_ext",
+					1.77828,
+					1,
+					100
+				};
+				frequency=1;
+				volume="camPos * rain * (speed factor[50, 0])";
+			};
+			class RainInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_int",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="(1-camPos) * rain * (speed factor[50, 0])";
+			};
+		};
 		class Components : Components
 		{
 			class SensorsManagerComponent
@@ -341,11 +492,11 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"B_BIM9X_RAIL"
+							"332_C_Pylon"
 						};
-						attachment = "3as_PylonRack_ARC_6Rnd_Missile_AGM";
+						attachment = MACRO_NEW_MAG(Pylon_AA_Med,3);
 						priority = 10;
-						maxweight = 300;
+						maxweight = 10000;
 						UIposition[] = { 0.60000002,0.44999999 };
 					};
 					class pylons2 : pylons1
@@ -357,16 +508,11 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"B_BIM9X_RAIL",
-							"B_BIM9X_DUAL_RAIL",
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"ARC_AGM_PYLON"
+							"332_A_Pylon"
 						};
-						attachment = "PylonRack_Missile_AMRAAM_D_x2";
+						attachment = MACRO_NEW_MAG(Pylon_AA_Med,3);
 						priority = 9;
-						maxweight = 2500;
+						maxweight = 10000;
 						UIposition[] = { 0.55000001,0.34999999 };
 					};
 					class pylons4 : pylons3
@@ -378,18 +524,11 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"B_BIM9X_RAIL",
-							"B_BIM9X_DUAL_RAIL",
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"B_AGM65_DUAL_RAIL",
-							"B_HARM_RAIL",
-							"ARC_AGM_PYLON"
+							"332_B_Pylon"
 						};
-						attachment = "PylonRack_Missile_AMRAAM_D_x2";
+						attachment = MACRO_NEW_MAG(Pylon_AGM_Med,3);
 						priority = 7;
-						maxweight = 5000;
+						maxweight = 10000;
 						UIposition[] = { 0.5,0.25 };
 					};
 					class pylons6 : pylons5
@@ -401,64 +540,64 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"z95_CANON_PYLON"
+							"332_B_Pylon"
 						};
 						priority = 5;
-						attachment = "3as_PylonWeapon_Z95_240Rnd_Heavy_Shells";
-						maxweight = 4000;
+						attachment = MACRO_NEW_MAG(Pylon_AGM_Med,3);
+						maxweight = 10000;
 						UIposition[] = { 0.32499999,0.15000001 };
 					};
 				};
-				class presets
-				{
-					class empty
-					{
-						displayName = "$STR_empty";
-						attachment[] = {};
-					};
-					class Default
-					{
-						displayName = "$STR_vehicle_default";
-						attachment[] =
-						{
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
-						};
-					};
-					class AA
-					{
-						displayName = "$STR_A3_cfgmagazines_titan_aa_dns";
-						attachment[] =
-						{
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
-						};
-					};
-					class CAS
-					{
-						displayName = "$STR_A3_CAS_PRESET_DISPLAYNAME";
-						attachment[] =
-						{
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
-						};
-					};
-				};
+				//class presets
+				//{
+				//	class empty
+				//	{
+				//		displayName = "$STR_empty";
+				//		attachment[] = {};
+				//	};
+				//	class Default
+				//	{
+				//		displayName = "$STR_vehicle_default";
+				//		attachment[] =
+				//		{
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
+				//		};
+				//	};
+				//	class AA
+				//	{
+				//		displayName = "$STR_A3_cfgmagazines_titan_aa_dns";
+				//		attachment[] =
+				//		{
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
+				//		};
+				//	};
+				//	class CAS
+				//	{
+				//		displayName = "$STR_A3_CAS_PRESET_DISPLAYNAME";
+				//		attachment[] =
+				//		{
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
+				//		};
+				//	};
+				//};
 			};
 			class VehicleSystemsDisplayManagerComponentLeft : DefaultVehicleSystemsDisplayManagerLeft
 			{
