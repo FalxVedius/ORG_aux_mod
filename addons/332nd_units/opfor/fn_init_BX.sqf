@@ -27,22 +27,22 @@ if (isServer) then {
 		
 				case (_rndSound == 0): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_incGrenade_1.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_incGrenade_1_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 1): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_incGrenade_2.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_incGrenade_2_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 2): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_incGrenade_3.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_incGrenade_3_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 3): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_incGrenade_4.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_incGrenade_4_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 			
-				default { playSound3D ["WebKnightsRobotics\sounds\B1_shooting_1.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150]; };
+				default { [_obj,["B1_incGrenade_1_332nd", 150, 0.8]] remoteExec ["say3d",0,true]; };
 			};
 		};
 	
@@ -54,7 +54,7 @@ if (isServer) then {
 	
 		_obj = _this select 0;
 		_unitLocal = _obj select 0;
-		_unconList = nearestObjects [_unitLocal, ["CAManBase"], 15];
+		_unconList = nearestObjects [_unitLocal, ["CAManBase"], 5];
 		
 		_UnconFlag = false;
 		
@@ -71,6 +71,8 @@ if (isServer) then {
 		
 		if (_UnconFlag) then {
 		
+		systemChat "Player found to be unconcious";
+		
 			_rndSound = floor(random 10);
 			_obj= "HeliHEmpty" createVehicleLocal [0,0,0]; 
 			_obj attachTo [_unitLocal,[0,0,1.5]];
@@ -79,46 +81,46 @@ if (isServer) then {
 		
 				case (_rndSound == 0): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["B1_EnemyKilled_1_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 1): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["B1_EnemyKilled_2_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 2): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyDown_02.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyDown_1_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 3): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyDown_08.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyDown_2_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 4): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyDown_09.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyDown_3_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 5): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyDown_25.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyDown_4_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 6): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyHit_02.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyHit_1_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 7): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyHit_03.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyHit_2_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 8): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyHit_20.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyHit_3_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 9): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\EnemyHit_24.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_EnemyHit_4_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 			
-				default { playSound3D ["WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", _obj, false, getPosASL _obj, 5, 1, 150]; };
+				default { [_obj,["B1_EnemyKilled_1_332nd", 150, 0.8]] remoteExec ["say3d",0,true]; };
 			};
 		};
 	

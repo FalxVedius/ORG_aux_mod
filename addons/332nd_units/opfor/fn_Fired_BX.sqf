@@ -1,6 +1,6 @@
 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 
-if (_muzzle == "HandGrenadeMuzzle") then
+if (_muzzle == "332nd_FRAG_Muzzle") then
 {
 	_rndNum = floor(random 10);
 
@@ -16,18 +16,18 @@ if (_muzzle == "HandGrenadeMuzzle") then
 		
 				case (_rndSound == 0): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\ThrowingGrenade_03.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_ThrowingGrenade_1_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 1): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\ThrowingGrenade_05.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_ThrowingGrenade_2_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 2): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\ThrowingGrenade_06.wav", _obj, false, getPosASL _obj, 5, 1, 150];
+					[_obj,["BX_ThrowingGrenade_3_332nd", 150, 1]] remoteExec ["say3d",0,true];
 				};
 			
-				default { playSound3D ["WebKnightsRobotics\sounds\ThrowingGrenade_03.wav", _obj, false, getPosASL _obj, 5, 1, 150]; };
+				default { [_obj,["BX_ThrowingGrenade_1_332nd", 150, 1]] remoteExec ["say3d",0,true]; };
 			};
 	};
 	
@@ -47,7 +47,7 @@ else
 	
 	switch (true) do {
 	
-		case (_rndNum <= 49): 
+		case (_rndNum <= 4): 
 		{ 
 			_rndSound = floor(random 4);
 			_obj= "HeliHEmpty" createVehicleLocal [0,0,0]; 
@@ -57,28 +57,28 @@ else
 			
 				case (_rndSound == 0): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_shooting_1.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_shooting_1_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 1): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_shooting_2.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_shooting_2_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 2): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_shooting_3.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_shooting_3_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				case (_rndSound == 3): 
 				{
-					playSound3D ["WebKnightsRobotics\sounds\B1_shooting_4.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150];
+					[_obj,["B1_shooting_4_332nd", 150, 0.8]] remoteExec ["say3d",0,true];
 				};
 				
-				default { playSound3D ["WebKnightsRobotics\sounds\B1_shooting_1.ogg", _obj, false, getPosASL _obj, 5, 0.8, 150]; };
+				default { [_obj,["B1_shooting_1_332nd", 150, 0.8]] remoteExec ["say3d",0,true]; };
 			};
 	
 		};
 		
 	
-		case (_rndNum >= 50): {};
+		case (_rndNum >= 5): {};
 		default {};
 	};
 	

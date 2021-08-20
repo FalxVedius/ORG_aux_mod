@@ -618,6 +618,173 @@ class CfgSounds
 		name = "B1-Death-Sound-23";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
 	};
+	
+	//Redefine Webknights Sounds to be louder
+	class B1_shooting_1_332nd
+	{
+		name = "B1_shooting_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_shooting_1.ogg", db + 250, 1, 125 };
+	};
+	class B1_shooting_2_332nd
+	{
+		name = "B1_shooting_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_2.ogg", db + 250, 1, 125 };
+	};
+	class B1_shooting_3_332nd
+	{
+		name = "B1_shooting_3_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_shooting_3.ogg", db + 250, 1, 125 };
+	};
+	class B1_shooting_4_332nd
+	{
+		name = "B1_shooting_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_shooting_4.ogg", db + 250, 1, 125 };
+	};
+	class B1_EnemyKilled_1_332nd
+	{
+		name = "B1_EnemyKilled_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", db + 250, 1, 125 };
+	};
+	class B1_EnemyKilled_2_332nd
+	{
+		name = "B1_EnemyKilled_2_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", db + 250, 1, 125 };
+	};
+	class B1_incGrenade_1_332nd
+	{
+		name = "B1_incGrenade_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_1.ogg", db + 250, 1, 125 };
+	};
+	class B1_incGrenade_2_332nd
+	{
+		name = "B1_incGrenade_2_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_2.ogg", db + 250, 1, 125 };
+	};
+	class B1_incGrenade_3_332nd
+	{
+		name = "B1_incGrenade_3_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_3.ogg", db + 250, 1, 125 };
+	};
+	class B1_incGrenade_4_332nd
+	{
+		name = "B1_incGrenade_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_4.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_dying_332nd
+	{
+		name = "WBK_b2_dying_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_dying_2.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_firing_1_332nd
+	{
+		name = "WBK_b2_firing_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_1.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_firing_2_332nd
+	{
+		name = "WBK_b2_firing_2_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_2.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_firing_3_332nd
+	{
+		name = "WBK_b2_firing_3_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_3.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_firing_4_332nd
+	{
+		name = "WBK_b2_firing_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_4.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_firing_5_332nd
+	{
+		name = "WBK_b2_firing_5_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_5.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_incGrenade_1_332nd
+	{
+		name = "WBK_b2_incGrenade_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_incGrenade_1.ogg", db + 250, 1, 125 };
+	};
+	class WBK_b2_incGrenade_2_332nd
+	{
+		name = "WBK_b2_incGrenade_2_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_incGrenade_2.ogg", db + 250, 1, 125 };
+	};
+	class BX_EnemyDown_1_332nd
+	{
+		name = "EnemyDown_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_02.wav", db + 250, 1, 125 };
+	};
+	class BX_EnemyDown_2_332nd
+	{
+		name = "EnemyDown_2_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_08.wav", db + 250, 1, 125 };
+	};
+	class BX_EnemyDown_3_332nd
+	{
+		name = "EnemyDown_3_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_09.wav", db + 250, 1, 125 };
+	};
+	class BX_EnemyDown_4_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_25.wav", db + 250, 1, 125 };
+	};
+	class BX_EnemyHit_1_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_02.wav", db + 250, 1, 125 };
+	};
+	class BX_EnemyHit_2_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_03.wav", db + 250, 1, 125 };
+	};
+	class BX_EnemyHit_3_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_20.wav", db + 250, 1, 125 };
+	};
+	class BX_EnemyHit_4_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_24.wav", db + 250, 1, 125 };
+	};
+	class BX_FriendlyDown_1_332nd
+	{
+		name = "BX_FriendlyDown_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_03.wav", db + 250, 1, 125 };
+	};
+	class BX_FriendlyDown_2_332nd
+	{
+		name = "BX_FriendlyDown_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_05.wav", db + 250, 1, 125 };
+	};
+	class BX_FriendlyDown_3_332nd
+	{
+		name = "BX_FriendlyDown_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_06.wav", db + 250, 1, 125 };
+	};
+	class BX_FriendlyDown_4_332nd
+	{
+		name = "BX_FriendlyDown_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_21.wav", db + 250, 1, 125 };
+	};
+	class BX_ThrowingGrenade_1_332nd
+	{
+		name = "BX_ThrowingGrenade_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\ThrowingGrenade_03.wav", db + 250, 1, 125 };
+	};
+	class BX_ThrowingGrenade_2_332nd
+	{
+		name = "BX_ThrowingGrenade_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\ThrowingGrenade_05.wav", db + 250, 1, 125 };
+	};
+	class BX_ThrowingGrenade_3_332nd
+	{
+		name = "BX_ThrowingGrenade_1_332nd";
+		sound[] = { "\WebKnightsRobotics\sounds\ThrowingGrenade_06.wav", db + 250, 1, 125 };
+	};
 };
 
 class CfgFunctions
@@ -647,18 +814,6 @@ class CfgFunctions
 			};
 
 			class Killed_Heavy
-			{
-			};
-		};
-
-		class HitSounds
-		{
-			file = "\332nd_units\opfor";
-			class HandleDamage 
-			{
-			};
-
-			class HandleDamage_BX
 			{
 			};
 		};
@@ -3927,7 +4082,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO"};
+		identityTypes[] = { "LanguageENG_F","Head_NATO"};
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -4189,10 +4344,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisb1jumppack,base) : JLTS_Droid_B1_Rocket
@@ -4205,7 +4356,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1jumppack,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -4484,7 +4635,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		magazines[] =
 		{
@@ -4746,10 +4897,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisb1ar,base) : JLTS_Droid_B1_AR
@@ -4762,7 +4909,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		magazines[] =
 		{
@@ -5023,10 +5170,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisb1at,base) : JLTS_Droid_B1_AT
@@ -5039,7 +5182,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
@@ -5303,10 +5446,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisb1sniper,base) : JLTS_Droid_B1_Sniper
@@ -5319,7 +5458,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		class HitPoints : HitPoints
 		{
@@ -5561,10 +5700,6 @@ class CfgVehicles
 		class SoundRecovered
 		{
 			breath[] = {};
-		};
-
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
 		};
 
 	};
@@ -5579,7 +5714,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1crew,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -5839,10 +5974,6 @@ class CfgVehicles
 		class SoundRecovered
 		{
 			breath[] = {};
-		};
-
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
 		};
 
 	};
@@ -5857,7 +5988,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1comm,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -6119,10 +6250,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisb1marine,base) : JLTS_Droid_B1_Marine
@@ -6135,7 +6262,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1marine,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
@@ -6399,10 +6526,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisb1sec,base) : JLTS_Droid_B1_Security
@@ -6415,7 +6538,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1sec,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -6677,10 +6800,6 @@ class CfgVehicles
 		class SoundRecovered
 		{
 			breath[] = {};
-		};
-
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
 		};
 
 	};
@@ -6695,7 +6814,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1pilot,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -6955,10 +7074,6 @@ class CfgVehicles
 		class SoundRecovered
 		{
 			breath[] = {};
-		};
-
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_B1;";
 		};
 
 	};
@@ -6975,7 +7090,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
@@ -7231,10 +7346,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisbxar,base) : lsd_cis_bxdroid_specops
@@ -7247,7 +7358,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5C","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5C","Throw","Put" };
@@ -7503,10 +7614,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisbxat,base) : lsd_cis_bxdroid_specops
@@ -7520,7 +7627,7 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		backpack = "JLTS_B1_backpack_at_predef";
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","JLTS_RPS6", "Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","JLTS_RPS6","Throw","Put" };
@@ -7776,10 +7883,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisbxbreach,base) : lsd_cis_bxdroid_specops
@@ -7792,7 +7895,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_SBB3","Throw","Put" };
 		respawnWeapons[] = { "JLTS_SBB3","Throw","Put" };
@@ -8048,10 +8151,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisbxcapt,base) : lsd_cis_bxCaptain_specops
@@ -8064,7 +8163,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
@@ -8318,10 +8417,6 @@ class CfgVehicles
 		class SoundRecovered
 		{
 			breath[] = {};
-		};
-
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
 		};
 
 	};
@@ -8336,7 +8431,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxsec,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
@@ -8590,10 +8685,6 @@ class CfgVehicles
 		class SoundRecovered
 		{
 			breath[] = {};
-		};
-
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
 		};
 
 	};
@@ -8608,7 +8699,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxdiplo,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
@@ -8864,10 +8955,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisbxassassin,base) : lsd_cis_bxAssassin_specops
@@ -8880,7 +8967,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
-		identityTypes[] = { "ACE_NoVoice","Head_NATO" };
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5S","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5S","Throw","Put" };
@@ -9136,10 +9223,6 @@ class CfgVehicles
 			breath[] = {};
 		};
 
-		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_BX;";
-		};
-
 	};
 
 	class MACRO_NEW_UNIT(cisbxmelee,base) : O_soldier_Melee
@@ -9153,7 +9236,7 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
-		identityTypes[] = { "ACE_NoVoice", "Head_LSD_BX" };
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
@@ -9415,7 +9498,7 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
-		identityTypes[] = { "ACE_NoVoice", "Head_LSD_BX" };
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
@@ -9677,7 +9760,7 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
-		identityTypes[] = { "ACE_NoVoice", "Head_LSD_BX" };
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
@@ -9950,7 +10033,7 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
-		identityTypes[] = { "ACE_NoVoice", "Head_LSD_BX" };
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
@@ -10254,209 +10337,209 @@ class Extended_Killed_EventHandlers
 	//B1s
 	class MACRO_NEW_UNIT(cisb1,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1jumppack,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1breach,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1ar,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1at,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1sniper,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1crew,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1comm,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1marine,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1sec,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1pilot,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 
 
 	//BXs
 	class MACRO_NEW_UNIT(cisbx,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxcapt,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxsec,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxdiplo,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxassassin,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmelee,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmeleerush,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxar,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxat,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxbreach,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybrid,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 
 
 	//Heavy Droids
 	class MACRO_NEW_UNIT(cisdroideka,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_Heavy";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy;";
 	};
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_Heavy";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy;";
 	};
 };
 
-class Extended_HandleDamage_EventHandlers
+class Extended_Init_EventHandlers
 {
 	//B1s
 	class MACRO_NEW_UNIT(cisb1,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1jumppack,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1breach,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1ar,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1at,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1sniper,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1crew,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1comm,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1marine,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1sec,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1pilot,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
 	};
 
 
 	//BXs
 	class MACRO_NEW_UNIT(cisbx,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxcapt,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxsec,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxdiplo,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxassassin,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmelee,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmeleerush,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxar,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxat,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxbreach,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybrid,base)
 	{
-		Aux332nd_HitSound = "(_this select 0) call Aux332nd_fnc_HandleDamage_BX";
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
 };
 
@@ -10465,97 +10548,97 @@ class Extended_Fired_EventHandlers
 	//B1s
 	class MACRO_NEW_UNIT(cisb1,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1jumppack,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1breach,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1ar,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1at,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1sniper,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1crew,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1comm,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1marine,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1sec,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 	class MACRO_NEW_UNIT(cisb1pilot,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
 	};
 
 
 	//BXs
 	class MACRO_NEW_UNIT(cisbx,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxcapt,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxsec,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxdiplo,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxassassin,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmelee,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmeleerush,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxar,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxat,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxbreach,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybrid,base)
 	{
-		Aux332nd_FiredSound = "(_this select 0) call Aux332nd_fnc_Fired_BX";
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
 	};
 };

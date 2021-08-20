@@ -108,11 +108,11 @@ switch (true) do {
 				
 				switch (true) do {
 				
-					case (_rndYoda == 0): 
+					case (_rndYoda <= 5): 
 					{
 						playSound3D ["332nd_units\opfor\DeathSounds\B1-Death-Sound-23.ogg", _obj, false, getPosASL _obj, 5, 0.8, 125];
 					};
-					case (_rndYoda >= 1): 
+					case (_rndYoda >= 6): 
 					{
 						playSound3D ["332nd_units\opfor\DeathSounds\B1-Death-Sound-1.ogg", _obj, false, getPosASL _obj, 5, 0.8, 125]; 
 					};
@@ -135,23 +135,24 @@ switch (true) do {
 
 _aliveDroids = nearestObjects [_unit,
 [
-"332nd_aux_cisb1_unit_332nd_CIS_B1",
-"332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher",
-"332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support",
-"332nd_aux_cisb1at_unit_332nd_CIS_B1_AT",
-"332nd_aux_cisb1comm_unit_332nd_CIS_B1_Commander",
-"332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security",
-"332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper",
-"332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot",
-"332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew",
-"332nd_aux_cisb1marine_unit_332nd_CIS_B1_Marine",
-"332nd_aux_cisb1jumppack_unit_332nd_CIS_B1_Jumppack"
-],15];
+"332nd_aux_cisbx_unit_332nd_CIS_BX",
+"332nd_aux_cisbxcapt_unit_332nd_CIS_BX_Captain",
+"332nd_aux_cisbxsec_unit_332nd_CIS_BX_Security",
+"332nd_aux_cisbxdiplo_unit_332nd_CIS_BX_Diplomat",
+"332nd_aux_cisbxassassin_unit_332nd_CIS_BX_Assassin",
+"332nd_aux_cisbxmelee_unit_332nd_CIS_BX_Melee",
+"332nd_aux_cisbxmeleerush_unit_332nd_CIS_BX_MeleeRush",
+"332nd_aux_cisbxar_unit_332nd_CIS_BX_Support",
+"332nd_aux_cisbxat_unit_332nd_CIS_BX_AT",
+"332nd_aux_cisbxbreach_unit_332nd_CIS_BX_BREACHER"
+],5];
+
+_friendlyUnitPos = _unit;
 
 {
 	if (!(_x == _unit) && (alive _x) && !(lifeState _x == "INCAPACITATED")) then {
 	
-		friendlyunit = _x;
+		_friendlyUnitPos = _x;
 		break;
 	};
 } forEach _aliveDroids;
@@ -160,36 +161,36 @@ _aliveDroids = nearestObjects [_unit,
 _rndNum = floor(random 10);
 _rndSound = floor(random 4);
 _obj2= "HeliHEmpty" createVehicleLocal [0,0,0]; 
-_obj2 attachTo [friendlyunit,[0,0,1.5]];
+_obj2 attachTo [_friendlyUnitPos,[0,0,1.5]];
 
 switch (true) do {
 
-	case (_rndNum <= 4): 
+	case (_rndNum <= 49): 
 	{ 
 		switch (true) do {
 		
 			case (_rndSound == 0): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_03.wav", _obj2, false, getPosASL _obj2, 5, 1, 150];
+				[_obj,["BX_FriendlyDown_1_332nd", 150, 1]] remoteExec ["say3d",0,true];
 			};
 			case (_rndSound == 1): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_05.wav", _obj2, false, getPosASL _obj2, 5, 1, 150];
+				[_obj,["BX_FriendlyDown_2_332nd", 150, 1]] remoteExec ["say3d",0,true];
 			};
 			case (_rndSound == 2): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_06.wav", _obj2, false, getPosASL _obj2, 5, 1, 150];
+				[_obj,["BX_FriendlyDown_3_332nd", 150, 1]] remoteExec ["say3d",0,true];
 			};
 			case (_rndSound == 3): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_21.wav", _obj2, false, getPosASL _obj2, 5, 1, 150];
+				[_obj,["BX_FriendlyDown_4_332nd", 150, 1]] remoteExec ["say3d",0,true];
 			};
 		
-			default { playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_03.wav", _obj2, false, getPosASL _obj2, 5, 1, 150]; };
+			default { [_obj,["BX_FriendlyDown_1_332nd", 150, 1]] remoteExec ["say3d",0,true]; };
 		};
 	};
 	
-	case (_rndNum >= 5): {};
+	case (_rndNum >= 50): {};
 	default {};
 };
 

@@ -6,7 +6,7 @@ _bloodVolume = _patient getVariable ["ace_medical_bloodVolume", 6.0];
 
 _partIndex = ["head", "body", "leftarm", "rightarm", "leftleg", "rightleg"] find toLower _bodyPart;
 
-private _volume = 1;
+private _volume = 500;
 private _type   = "Blood";
 
 private _ivBags = _patient getVariable ["ace_medical_ivBags", []];
@@ -22,51 +22,51 @@ _handle = [_counter, _patient, _medic] spawn {
 
 	while {true} do {
 
-		scopeName "BactaLoop_Local";
+		scopeName "KoltoLoop_Local";
 	
-		if(_counter < 5) then
+		if(_counter < 3) then
 		{
 			_wounds = _patient getVariable ["ace_medical_openWounds", []];
 			_bandagedWounds = _patient getVariable ["ace_medical_bandagedWounds", []];
 			_stitchedWounds = _patient getVariable ["ace_medical_stitchedWounds", []];
 			
-			if (_bandagedWounds isEqualTo [] && _wounds isEqualTo []) then { breakOut "BactaLoop_Local"; };
+			if (_bandagedWounds isEqualTo [] && _wounds isEqualTo []) then { breakOut "KoltoLoop_Local"; };
 		
 			["Aux332nd_evh_BandageLocal", [_medic, _patient, "head", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
 			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
-			sleep 3;
+			sleep 6;
 			
 			["Aux332nd_evh_BandageLocal", [_medic, _patient, "body", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
 			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
-			sleep 3;
+			sleep 6;
 			
 			["Aux332nd_evh_BandageLocal", [_medic, _patient, "leftarm", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
 			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
-			sleep 3;
+			sleep 6;
 			
 			["Aux332nd_evh_BandageLocal", [_medic, _patient, "rightarm", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
 			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
-			sleep 3;
+			sleep 6;
 			
 			["Aux332nd_evh_BandageLocal", [_medic, _patient, "leftleg", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
 			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
-			sleep 3;
+			sleep 6;
 			
 			["Aux332nd_evh_BandageLocal", [_medic, _patient, "rightleg", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
 			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
-			sleep 3;
+			sleep 6;
 			
 			_counter = _counter + 1;
 		}
 		else
 		{
-			breakOut "BactaLoop_Local";
+			breakOut "KoltoLoop_Local";
 		};
 
 	};

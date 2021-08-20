@@ -108,11 +108,11 @@ switch (true) do {
 				
 				switch (true) do {
 				
-					case (_rndYoda == 0): 
+					case (_rndYoda <= 5): 
 					{
 						playSound3D ["332nd_units\opfor\DeathSounds\B1-Death-Sound-23.ogg", _obj, false, getPosASL _obj, 5, 1, 125];
 					};
-					case (_rndYoda >= 1): 
+					case (_rndYoda >= 6): 
 					{
 						playSound3D ["332nd_units\opfor\DeathSounds\B1-Death-Sound-1.ogg", _obj, false, getPosASL _obj, 5, 1, 125]; 
 					};
@@ -145,12 +145,14 @@ _aliveDroids = nearestObjects [_unit,
 "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew",
 "332nd_aux_cisb1marine_unit_332nd_CIS_B1_Marine",
 "332nd_aux_cisb1jumppack_unit_332nd_CIS_B1_Jumppack"
-],15];
+],5];
+
+_friendlyUnitPos = _unit;
 
 {
 	if (!(_x == _unit) && (alive _x) && !(lifeState _x == "INCAPACITATED")) then {
 	
-		friendlyunit = _x;
+		_friendlyUnitPos = _x;
 		break;
 	};
 } forEach _aliveDroids;
@@ -159,36 +161,36 @@ _aliveDroids = nearestObjects [_unit,
 _rndNum = floor(random 10);
 _rndSound = floor(random 4);
 _obj2= "HeliHEmpty" createVehicleLocal [0,0,0]; 
-_obj2 attachTo [friendlyunit,[0,0,1.5]];
+_obj2 attachTo [_friendlyUnitPos,[0,0,1.5]];
 
 switch (true) do {
 
-	case (_rndNum <= 4): 
+	case (_rndNum <= 49): 
 	{ 
 		switch (true) do {
 		
 			case (_rndSound == 0): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_03.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+				[_obj,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
 			};
 			case (_rndSound == 1): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_05.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+				[_obj,["BX_FriendlyDown_2_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
 			};
 			case (_rndSound == 2): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_06.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+				[_obj,["BX_FriendlyDown_3_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
 			};
 			case (_rndSound == 3): 
 			{
-				playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_21.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150];
+				[_obj,["BX_FriendlyDown_4_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
 			};
 		
-			default { playSound3D ["WebKnightsRobotics\sounds\FriendlyDown_03.wav", _obj2, false, getPosASL _obj2, 5, 1.2, 150]; };
+			default { [_obj,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3d",0,true]; };
 		};
 	};
 	
-	case (_rndNum >= 5): {};
+	case (_rndNum >= 50): {};
 	default {};
 };
 

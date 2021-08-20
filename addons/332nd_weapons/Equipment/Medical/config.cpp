@@ -47,6 +47,30 @@ class CfgFunctions
 			{
 
 			};
+			class Kolto
+			{
+
+			};
+			class KoltoLocal
+			{
+
+			};
+			class BactaInj
+			{
+
+			};
+			class BactaInjLocal
+			{
+
+			};
+			class KoltoInj
+			{
+
+			};
+			class KoltoInjLocal
+			{
+
+			};
 			class MedicalInit
 			{
 
@@ -404,11 +428,51 @@ class ACE_Medical_Treatment
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : Epinephrine
 		{
-
+			hrIncreaseHigh[] =
+			{
+				-1,
+				-2
+			};
+			hrIncreaseLow[] =
+			{
+				-1,
+				-2
+			};
+			hrIncreaseNormal[] =
+			{
+				-1,
+				-2
+			};
+			incompatibleMedication[] = {};
+			maxDose = 100;
+			painReduce = 0;
+			timeInSystem = 10;
+			timeTillMaxEffect = 9;
+			viscosityChange = -1;
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Kolto_Inj) : Epinephrine
 		{
-
+			hrIncreaseHigh[] =
+			{
+				-1,
+				-2
+			};
+			hrIncreaseLow[] =
+			{
+				-1,
+				-2
+			};
+			hrIncreaseNormal[] =
+			{
+				-1,
+				-2
+			};
+			incompatibleMedication[] = {};
+			maxDose = 100;
+			painReduce = 0;
+			timeInSystem = 10;
+			timeTillMaxEffect = 9;
+			viscosityChange = -1;
 		};
 		class MACRO_NEW_MEDICAL_ITEM(Combat) : Epinephrine
 		{
@@ -493,6 +557,8 @@ class ACE_Medical_Treatment_Actions
 
 		displayName = "Kolto Tank";
 		displayNameProgress = "Transfusing Kolto...";
+
+		callbackSuccess = "Aux332nd_fnc_Kolto";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Adrenaline) : Epinephrine
 	{
@@ -554,6 +620,8 @@ class ACE_Medical_Treatment_Actions
 		medicRequired = 1;
 		displayName = "Bacta Injector";
 		displayNameProgress = "Injecting Bacta...";
+
+		callbackSuccess = "Aux332nd_fnc_BactaInj";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Kolto_Inj) : Epinephrine
 	{
@@ -562,6 +630,8 @@ class ACE_Medical_Treatment_Actions
 		medicRequired = 1;
 		displayName = "Kolto Injector";
 		displayNameProgress = "Injecting Kolto...";
+
+		callbackSuccess = "Aux332nd_fnc_KoltoInj";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Combat) : Epinephrine
 	{
@@ -699,7 +769,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(Bacta) : ACE_bloodIV
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Tank)
 		descriptionShort = "332nd Healing";
@@ -721,13 +791,13 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 5;
+			mass = 10;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Kolto) : ACE_bloodIV
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Tank)
 		descriptionShort = "332nd Healing";
@@ -749,7 +819,7 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 5;
+			mass = 10;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Adrenaline) : ACE_epinephrine
@@ -780,7 +850,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(Bacta_Inj) : ACE_epinephrine
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Injector)
 		descriptionShort = "332nd Healing";
@@ -800,13 +870,13 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 1;
+			mass = 10;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Kolto_Inj) : ACE_epinephrine
 	{
 		scope = 2;
-		scopeArsenal = 0;
+		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Injector)
 		descriptionShort = "332nd Healing";
@@ -826,7 +896,7 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 1;
+			mass = 10;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Combat) : ACE_epinephrine
@@ -937,6 +1007,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(BactaSpray_x25) : ACE_elasticBandage
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(25 x Bacta Spray Pack)
 		descriptionShort = "332nd Healing";
@@ -953,6 +1024,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(BactaSpray_x10) : ACE_elasticBandage
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(10 x Bacta Spray Pack)
 		descriptionShort = "332nd Healing";
@@ -969,6 +1041,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(BactaSpray_x5) : ACE_elasticBandage
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(5 x Bacta Spray Pack)
 		descriptionShort = "332nd Healing";
@@ -985,6 +1058,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x25) : ACE_packingBandage
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(25 x Plasti Bandage Pack)
 		descriptionShort = "332nd Healing";
@@ -1001,6 +1075,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x10) : ACE_packingBandage
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(10 x Plasti Bandage Pack)
 		descriptionShort = "332nd Healing";
@@ -1017,6 +1092,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(PlastiBandage_x5) : ACE_packingBandage
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(5 x Plasti Bandage Pack)
 		descriptionShort = "332nd Healing";
@@ -1033,6 +1109,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(MedPatch_x25) : ACE_quikclot
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(25 x Med - Patch Pack)
 		descriptionShort = "332nd Healing";
@@ -1049,6 +1126,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(MedPatch_x10) : ACE_quikclot
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(10 x Med - Patch Pack)
 		descriptionShort = "332nd Healing";
@@ -1065,6 +1143,7 @@ class CfgWeapons
 	class MACRO_NEW_MEDICAL_ITEM(MedPatch_x5) : ACE_quikclot
 	{
 		scope = 2;
+		scopeArsenal = 0;
 		author = MACRO_AUTHOR;
 		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(5 x Med - Patch Pack)
 		descriptionShort = "332nd Healing";
