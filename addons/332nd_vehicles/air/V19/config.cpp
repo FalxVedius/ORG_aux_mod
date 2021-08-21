@@ -52,7 +52,6 @@ class CfgVehicles
 	class Air;
 	class Plane : Air
 	{
-		class NewTurret;
 		class ViewPilot;
 		class HitPoints
 		{
@@ -66,7 +65,7 @@ class CfgVehicles
 	};
 	class Plane_Fighter_03_base_F : Plane_Base_F
 	{
-
+	    class Components;
 	};
 	class 3as_V19_base : Plane_Fighter_03_base_F
 	{
@@ -85,19 +84,15 @@ class CfgVehicles
 
 		weapons[] =
 		{
-			"3as_ARC_Missile_AGM",
-			"3as_ARC_Missile_AA",
-			"ParticleBeamCannon_F",
+			MACRO_NEW_WEAPON(V19_25mm),
+			MACRO_NEW_WEAPON(AA_Pylon),
 			"CMFlareLauncher"
 		};
 		magazines[] =
 		{
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-			"3as_PylonMissile_ARC_2Rnd_Missile_AA",
-			"3as_PylonMissile_ARC_2Rnd_Missile_AA",
-			"3as_PylonMissile_ARC_2Rnd_Missile_AA",
-			"3as_PylonMissile_ARC_2Rnd_Missile_AA",
-			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+			MACRO_NEW_MAG(V19_25mm,1600),
+			MACRO_NEW_MAG(Pylon_AA_Med,3),
+			MACRO_NEW_MAG(Pylon_AA_Med,3),
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
@@ -107,8 +102,215 @@ class CfgVehicles
 			"Laser_Battery_F"
 		};
 
+		class Sounds
+		{
+			class TurbineOut
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineExt.wss",
+					1,
+					0.5,
+					1000
+				};
+				frequency = "rpm * (thrust/4 + 0.5)";
+				volume = "camPos * 2 * rpm * thrust * (rpm factor[0, 0.4])";
+			};
+			class TurbineHighInt
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighInt.wss",
+					0.1,
+					1,
+					2500
+				};
+				frequency = "1.7 * (rpm factor[-5,1])";
+				volume = "0.8 * (1-camPos) * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
+			};
+			class TurbineHighOut
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighExt.wss",
+					1,
+					1,
+					4000
+				};
+				frequency = "1.7 * (rpm factor[-5,1])";
+				volume = "0.8 * camPos * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
+			};
+			class TurbineInt
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineInt.wss",
+					0.1,
+					1,
+					2100
+				};
+				frequency = "rpm * (thrust/4 + 0.5)";
+				volume = "(1-camPos) * 2 * rpm * thrust * (rpm factor[0, 0.4])";
+			};
+			
+			class EngineHighInt
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\V19\V19EngineHighInt.wss",
+					1,
+					1,
+					2100
+				};
+				frequency = 1;
+				volume = "(1-camPos)*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			class EngineHighOut
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\V19\V19EngineHighExt.wss",
+					3,
+					0.95,
+					6000
+				};
+				frequency = 1;
+				volume = "camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			class EngineLowInt
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\V19\V19EngineInt.wss",
+					1,
+					1,
+					1200
+				};
+				frequency = "1.0 min (rpm + 0.5)";
+				volume = "(1-camPos)*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+			};
+			class EngineLowOut
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\V19\V19EngineExt.wss",
+					4,
+					0.9,
+					6000
+				};
+				frequency = "1.0 min (rpm + 0.5)";
+				volume = "camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+			};
+			
+			class ForsageIn
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\V19\ForsageInt.wss",
+					1,
+					1
+				};
+				frequency = "1";
+				volume = "(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
+			};
+
+			class ForsageOut
+			{
+			cone[] = {20,15,3,1};
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\V19\ForsageExt.wss",
+					3,
+					1
+				};
+				frequency = "1";
+				volume = "(1-camPos)*(engineOn*(thrust factor[0.9, 2.0]))";
+			};
+			
+		
+			
+			class RainExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_ext",
+					1.77828,
+					1,
+					100
+				};
+				frequency=1;
+				volume="camPos * rain * (speed factor[50, 0])";
+			};
+			class RainInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_int",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="(1-camPos) * rain * (speed factor[50, 0])";
+			};
+		};
+
 		class Components : Components
 		{
+		  class TransportPylonsComponent
+			  {
+				UIPicture = "3as\3as_z95\data\plane_z95_pylon_ca.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						priority=5;
+						hardpoints[]=
+						{
+							"332_A_Pylon"
+						};
+						turret[]={};
+						UIposition[]={0.059999999,0.40000001};
+					};
+					class PylonLeft2: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_Shrieker_x20";  
+						priority=4;
+						hardpoints[]=
+						{
+							"332_C_Pylon"
+						};
+						UIposition[]={0.079999998,0.34999999};
+					};
+					class PylonLeft3: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						priority=3;
+						hardpoints[]=
+						{
+							"332_A_Pylon"
+						};
+						UIposition[]={0.1,0.30000001};
+					};
+					class PylonRight3: PylonLeft3
+					{
+						mirroredMissilePos=3;
+						UIposition[]={0.58999997,0.30000001};
+					};
+					class PylonRight2: PylonLeft2
+					{
+						mirroredMissilePos=2;
+						UIposition[]={0.62,0.34999999};
+					};
+					class PylonRight1: PylonLeft1
+					{
+						mirroredMissilePos=1;
+						UIposition[]={0.63999999,0.40000001};
+					};
+				};
+			  };
+	
 			class SensorsManagerComponent
 			{
 				class Components

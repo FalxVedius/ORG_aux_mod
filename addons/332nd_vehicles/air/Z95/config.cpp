@@ -64,19 +64,10 @@ class CfgVehicles
 	};
 	class Plane_Fighter_03_base_F : Plane_Base_F
 	{
-		class Turrets
-		{
-			class MainTurret;
-		};
 	};
 	class Plane_Fighter_03_dynamicLoadout_base_F : Plane_Fighter_03_base_F
 	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-			};
-		};
+	
 		class Components : Components
 		{
 			class TransportPylonsComponent
@@ -96,14 +87,71 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,Z,95) : 3as_Z95_base
 	{
-		displayName = "Z-95 *WIP*";
+		displayName = "Z-95 *TEST*";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_PLANE";
-
+		hiddenselectionstextures[]=
+		{
+			"332nd_vehicles\_textures\air\Z95\332_body_co.paa",
+			"3AS\3as_Z95\Data\cockpit_co.paa",
+			"3AS\3as_saber\data\glass\glass_ca"
+		};
 		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
-
+		acceleration=450;
+		htMin=60;
+		htMax=1800;
+		afMax=200;
+		mfMax=100;
+		mFact=0;
+		tBody=0;
+		radartype=4;
+		lockdetectionsystem="2 + 8 + 4";
+		incommingmissliedetectionsystem=16;
+		maxSpeed=1400;
+		landingAoa="6 * 3.1415 / 180";
+		landingSpeed=215;
+		stallSpeed=190;
+		stallWarningTreshold=0.1;
+		armor=150;
+		armorStructured=1;
+		envelope[] = {0,0.01,0.2,4,6,7.6,8.4,9.2,9.4,9.6,9.7,9.8,8,1};
+		draconicForceXCoef=6;
+		draconicForceYCoef=5.5;
+		draconicForceZCoef=6.5;
+		draconicTorqueXCoef=2.0999999;
+		draconicTorqueYCoef=3;
+		angleOfIndicence=0.052359872;
+		airFriction0[]={75,50,12};
+		airFriction1[]={75,50,12};
+		airFriction2[]={75,50,12};
+		altNoForce=13000;
+		altFullForce=10000;
+		elevatorCoef[]={0.69999999,0.80000001,0.89999998,1,1.1,1.2,1.2,1.3,1.25,1.2,1.15,1.1,1};
+		elevatorSensitivity=2;
+		elevatorControlsSensitivityCoef=3.5;
+		aileronCoef[]={0.5,0.69999999,1,1,1.2,1.15,1.1};
+		aileronSensitivity=2.5;
+		aileronControlsSensitivityCoef=2;
+		rudderCoef[]={1.6,2,2,2.9000001,2.8,2,1};
+		rudderInfluence=0.89999998;
+		rudderControlsSensitivityCoef=6;
+		thrustCoef[] = {2.5,1.7,1.5,1.14,1.13,1.12,1.1,1.07,0.99,0.2,0,0,0};
+		irScanRangeMin=10;
+		irScanRangeMax=10000;
+		irScanToEyeFactor=8;
+		fuelCapacity=2000;
+		wheelSteeringSensitivity=1.5;
+		maxOmega=2000;
+		airBrake=70;
+		airBrakeFrictionCoef=60;
+		flaps=1;
+		flapsFrictionCoef=0.31999999;
+		gearsUpFrictionCoef=0.60000002;
+		airFrictionCoefs0[]={0,0,0};
+		airFrictionCoefs1[]={0.1,0.5,0.0066};
+		airFrictionCoefs2[]={0.001,0.0049999999,6.8000001e-005};
 		weapons[] =
 		{
 			MACRO_NEW_WEAPON(Z95_30mm),

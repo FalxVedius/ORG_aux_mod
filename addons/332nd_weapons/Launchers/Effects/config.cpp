@@ -217,6 +217,18 @@ class CfgCloudlets
         emissiveColor[] = {{0.5,0.5,0.8,0.14},{0.8,0.8,0.8,0.5}};
 	};
 
+    class 332nd_aux_effects_Bomb_tracerPurple: ArtilleryShell1
+	{
+		color[] = {{0.60,0,0.40,1},{0.60,0,0.40,0.5},{0.60,0,0.40,0.3},{0.60,0,0.40,0.1},{0.60,0,0.40,0.01}};
+		colorVar[] = {0,0,0,0};
+		colorCoef[] = {1,1,1,1};
+		volume = 35;	
+        lifetime = 5;
+        size[] = {0.6};
+        interval = 0.005;
+        weight=35;
+	};
+
     class 332nd_aux_effects_AVI_tracerblue: ArtilleryShell1
 	{
 		color[] = {{0,0,1.5,0.20},{0,0,0.5,0.001}};
@@ -581,5 +593,15 @@ class 332nd_aux_effects_blue_tracer_AVI
         qualityLevel = 2;
         simulation = "particles";
         type = "332nd_aux_effects_AVI_tracerblue"; 
+    };
+};
+
+class 332nd_aux_effects_purple_tracer_Bomb
+{
+    class MissileEffect1
+    {
+        qualityLevel = 2;
+        simulation = "particles";
+        type = "332nd_aux_effects_Bomb_tracerPurple"; 
     };
 };

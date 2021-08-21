@@ -105,9 +105,10 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "B_BIM9X_RAIL"
+							  "332_B_Pylon",
+							  "332_C_Pylon"
 						  };
-						  attachment = "PylonRack_Missile_BIM9X_x1";
+						  attachment = MACRO_NEW_MAG(Pylon_ProtonBomb,1)
 						  priority = 10;
 						  maxweight = 300;
 						  UIposition[] = { 0.5,0.25 };
@@ -121,16 +122,9 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "B_BIM9X_RAIL",
-							  "B_BIM9X_DUAL_RAIL",
-							  "B_AMRAAM_D_RAIL",
-							  "B_AMRAAM_D_DUAL_RAIL",
-							  "B_AGM65_RAIL",
-							  "ARC_AGM_PYLON",
-							  "B_BOMB_PYLON",
-							  "ARC_EMP_RAIL"
+							  "332_B_Pylon"
 						  };
-						  attachment = "PylonMissile_1Rnd_Bomb_04_F";
+						  attachment = MACRO_NEW_MAG(Pylon_ProtonBomb,1)
 						  priority = 9;
 						  maxweight = 2500;
 						  UIposition[] = { 0.55000001,0.34999999 };
@@ -144,16 +138,9 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "B_BIM9X_RAIL",
-							  "B_BIM9X_DUAL_RAIL",
-							  "B_AMRAAM_D_RAIL",
-							  "B_AMRAAM_D_DUAL_RAIL",
-							  "B_AGM65_RAIL",
-							  "B_AGM65_DUAL_RAIL",
-							  "B_HARM_RAIL",
-							  "ARC_AGM_PYLON"
+							  "332_B_Pylon"
 						  };
-						  attachment = "PylonRack_Missile_AMRAAM_D_x2";
+						  attachment = MACRO_NEW_MAG(Pylon_ProtonBomb,1);
 						  priority = 7;
 						  maxweight = 5000;
 						  UIposition[] = { 0.60000002,0.44999999 };
@@ -164,40 +151,40 @@ class CfgVehicles
 						  mirroredMissilePos = 5;
 					  };
 				  };
-				  class presets
-				  {
-					  class empty
-					  {
-						  displayName = "$STR_empty";
-						  attachment[] = {};
-					  };
-					  class AA
-					  {
-						  displayName = "$STR_A3_cfgmagazines_titan_aa_dns";
-						  attachment[] =
-						  {
-							  "PylonRack_Missile_BIM9X_x1",
-							  "PylonRack_Missile_BIM9X_x1",
-							  "3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							  "3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							  "PylonRack_Missile_AMRAAM_D_x2",
-							  "PylonRack_Missile_AMRAAM_D_x2"
-						  };
-					  };
-					  class CAS
-					  {
-						  displayName = "$STR_A3_CAS_PRESET_DISPLAYNAME";
-						  attachment[] =
-						  {
-							  "PylonRack_Missile_BIM9X_x1",
-							  "PylonRack_Missile_BIM9X_x1",
-							  "3as_PylonRack_ARC_1Rnd_EMP",
-							  "3as_PylonRack_ARC_1Rnd_EMP",
-							  "3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							  "3as_PylonRack_ARC_6Rnd_Missile_AGM"
-						  };
-					  };
-				  };
+				  //class presets
+				  //{
+					 // class empty
+					 // {
+						//  displayName = "$STR_empty";
+						//  attachment[] = {};
+					 // };
+					 // class AA
+					 // {
+						//  displayName = "$STR_A3_cfgmagazines_titan_aa_dns";
+						//  attachment[] =
+						//  {
+						//	  "PylonRack_Missile_BIM9X_x1",
+						//	  "PylonRack_Missile_BIM9X_x1",
+						//	  "3as_PylonRack_ARC_6Rnd_Missile_AGM",
+						//	  "3as_PylonRack_ARC_6Rnd_Missile_AGM",
+						//	  "PylonRack_Missile_AMRAAM_D_x2",
+						//	  "PylonRack_Missile_AMRAAM_D_x2"
+						//  };
+					 // };
+					 // class CAS
+					 // {
+						//  displayName = "$STR_A3_CAS_PRESET_DISPLAYNAME";
+						//  attachment[] =
+						//  {
+						//	  "PylonRack_Missile_BIM9X_x1",
+						//	  "PylonRack_Missile_BIM9X_x1",
+						//	  "3as_PylonRack_ARC_1Rnd_EMP",
+						//	  "3as_PylonRack_ARC_1Rnd_EMP",
+						//	  "3as_PylonRack_ARC_6Rnd_Missile_AGM",
+						//	  "3as_PylonRack_ARC_6Rnd_Missile_AGM"
+						//  };
+					 // };
+				  //};
 			  };
 		  };
 
@@ -209,10 +196,9 @@ class CfgVehicles
 		  };
 		  magazines[] = {
 		 MACRO_NEW_MAG(ARC170_Low,600),
-		MACRO_NEW_MAG(ARC170_Low,600),
-		MACRO_NEW_MAG(ARC170_Low,600),
-		 MACRO_NEW_MAG(ARC170_High,60),
-		 MACRO_NEW_MAG(ARC170_High,60),
+		 MACRO_NEW_MAG(ARC170_Low,600),
+		 MACRO_NEW_MAG(ARC170_High,16),
+		 MACRO_NEW_MAG(ARC170_High,16),
 		  "120Rnd_CMFlare_Chaff_Magazine",
 		  "Laserbatteries",
 		  "120Rnd_CMFlare_Chaff_Magazine",
@@ -230,8 +216,8 @@ class CfgVehicles
 		 "3as\3as_arc170\Data\units\Razor_Main_Frame_CO.paa",
 		 "3as\3as_arc170\Data\units\Razor_Wings_Engines_CO.paa",
 		 "3as\3as_arc170\Data\units\Razor_Guns_CO.paa" };
-		   acceleration = 400;
-		   VTOLPitchInfluence = 1;
+		   acceleration = 300;
+		   VTOLPitchInfluence = 10;
 		   VTOLRollInfluence = 10;
 		   VTOLYawInfluence = 12;
 		   htMin = 60;
@@ -243,14 +229,14 @@ class CfgVehicles
 		   radartype = 4;
 		   lockdetectionsystem = "2 + 8 + 4";
 		   incommingmissliedetectionsystem = 16;
-		   maxSpeed = 800;
+		   maxSpeed = 1200;
 		   landingAoa = 6 * 3.1415 / 180; // landing angle of attack in radians, for AI
 		   landingSpeed = 215;			   // for AI to approach the runawy, the plane should be stable at this speed
 		   stallSpeed = 190;
 		   stallWarningTreshold = 0.1;
 		   armor = 100;
 		   armorStructured = 1;
-		   envelope[] = {0};
+		   envelope[] = {0,0.01,0.2,4,6,7.6,8.4,9.2,9.4,9.6,9.7,9.8,8,1};
 		   draconicForceXCoef = 4.5;
 		   draconicForceYCoef = 8.5;
 		   draconicForceZCoef = 8.5;
@@ -270,9 +256,9 @@ class CfgVehicles
 		   aileronSensitivity = 3.8;
 		   aileronControlsSensitivityCoef = 3;
 		   rudderCoef[] = {0.6,1,1,0.9,0.8,1,1};
-		   rudderInfluence = 1.9;
+		   rudderInfluence = 0.9;
 		   rudderControlsSensitivityCoef = 4;
-		   thrustCoef[] = {1.1, 1.1, 1.1, 1.3, 1.6, 1.7, 1.5, 1.5, 1.4, 1.4, 1.2, 1.2, 1, 1, 1, 1};
+		   thrustCoef[] = {2,1.17,1.15,1.14,1.13,1.12,1.1,1.07,0.99,0.2,0,0,0};
 		   irScanRangeMin = 10;
 		   irScanRangeMax = 10000;
 		   irScanToEyeFactor = 8;

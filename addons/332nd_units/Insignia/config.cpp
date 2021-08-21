@@ -25,6 +25,13 @@ class CfgUnitInsignia
 		texture = "\332nd_units\Insignia\data\Torrent1_2.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
+	class 332nd_Torrent1_1
+	{
+		displayName = "[332nd] Torrent 1-1 (Big Game)";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Torrent1_1.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
 	class 332nd_Roundel
 	{
 		displayName = "[332nd] GAR Roundel";								// Name displayed in Arsenal

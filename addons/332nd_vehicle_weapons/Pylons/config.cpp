@@ -55,10 +55,10 @@ class CfgAmmo
 			4000
 		};
 
-		maxSpeed = 100;
-		thrust = 100;
+		maxSpeed = 50;
+		thrust = 50;
 		timeToLive = 60;
-		typicalSpeed = 200;
+		typicalSpeed = 50;
 		thrustTime = 60;
 		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
 	  manualcontrol=0;
@@ -77,6 +77,35 @@ class CfgAmmo
 	mass=2;
 	indirectHitRange = 8;
 	};
+	class Bo_GBU12_LGB;
+	class MACRO_NEW_AMMO(Proton_Bomb): Bo_GBU12_LGB
+	{
+	soundFly[]=
+		{
+			"332nd_vehicle_weapons\air\sounds\V1.wss",
+			2,
+			15,
+			1000
+		};
+    effectfly="332nd_aux_effects_purple_tracer_Bomb";
+	effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
+	model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
+	proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
+	maxSpeed = 100;
+		thrust = 50;
+		timeToLive = 60;
+		typicalSpeed = 50;
+		thrustTime = 1.5;
+	explosionEffects = "MK82_Explode";
+
+	weaponLockSystem = "1 + 2 + 4 + 8 + 16";
+	missileKeepLockedCone = 360;
+	hit=5000;
+	indirectHit = 1150;
+	indirectHitRange = 15;
+	};
+
+	
 
     class M_Air_AA;
 	class MACRO_NEW_AMMO(AA_Med): M_Air_AA
@@ -164,8 +193,20 @@ class CfgMagazines
 		displayNameShort="Proton Torpedo";
 		tracersEvery=1;
 		initspeed=50;
-		count = 1
+		count = 1;
 		ammo=MACRO_NEW_AMMO(Proton_Torpedo)
+	};
+	class PylonMissile_1Rnd_BombCluster_03_F;
+	class MACRO_NEW_MAG(Pylon_ProtonBomb,1): PylonMissile_1Rnd_BombCluster_03_F
+	{
+	    hardpoints[]= {"332_B_Pylon"};
+		displayName="Proton Bomb";
+		descriptionshort="Proton Bomb";
+		pylonWeapon = "332nd_aux_weapon_ProtonBomb_Pylon";
+		displayNameShort="Proton Bomb";
+		tracersEvery=1;
+		initspeed=0;
+		ammo=MACRO_NEW_AMMO(Proton_Bomb)
 	};
 };
 
@@ -205,6 +246,17 @@ class CfgWeapons
 			MACRO_NEW_MAG(Pylon_Shrieker,20)
 	   };
 	};
+
+
+	class weapon_GBU12Launcher;
+	class MACRO_NEW_WEAPON(ProtonBomb_Pylon): weapon_GBU12Launcher
+	{
+	displayName="Proton Bomb";
+	magazines[] = {
+			 MACRO_NEW_MAG(Pylon_ProtonBomb,1)
+		};
+	};
+
 	class Twin_Cannon_20mm;
 	class MACRO_NEW_WEAPON(20mm_Pylon): Twin_Cannon_20mm
 	{
@@ -212,71 +264,34 @@ class CfgWeapons
 	//{
 
 	//}
-	class manual: LowROF
-		{
-			displayname="Full";
-			burst=1;
-			magazineReloadTime=6;
-			autoReload=1;
-			reloadTime=0.05;
-			dispersion=0.002;
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class StandardSound
-			{
-				begin1[]=
-				{
-					"swlg_clones_tanks\tx130\data\sounds\Saber_heavy_shot.wss",
-					1.5,
-					3,
-					3000
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
-		};
-		class close: manual
-		{
-			burst=10;
-			aiRateOfFire=0.1375;
-			aiRateOfFireDistance=50;
-			minRange=10;
-			minRangeProbab=0.050000001;
-			midRange=20;
-			midRangeProbab=0.69999999;
-			maxRange=50;
-			maxRangeProbab=0.039999999;
-			showToPlayer=0;
-		};
-		class short: close
-		{
-			burst=10;
-			aiRateOfFire=0.1375;
-			aiRateOfFireDistance=300;
-			minRange=50;
-			minRangeProbab=0.050000001;
-			midRange=150;
-			midRangeProbab=0.69999999;
-			maxRange=300;
-			maxRangeProbab=0.039999999;
-		};
-		class medium: close
-		{
-			burst=10;
-			aiRateOfFire=0.1375;
-			aiRateOfFireDistance=600;
-			minRange=200;
-			minRangeProbab=0.050000001;
-			midRange=300;
-			midRangeProbab=0.69999999;
-			maxRange=500;
-			maxRangeProbab=0.1;
-		};
+	//class manual: LowROF
+	//	{
+	//		displayname="Full";
+	//		burst=1;
+	//		magazineReloadTime=6;
+	//		autoReload=1;
+	//		reloadTime=0.05;
+	//		dispersion=0.002;
+	//		sounds[]=
+	//		{
+	//			"StandardSound"
+	//		};
+	//		class StandardSound
+	//		{
+	//			begin1[]=
+	//			{
+	//				"swlg_clones_tanks\tx130\data\sounds\Saber_heavy_shot.wss",
+	//				1.5,
+	//				3,
+	//				3000
+	//			};
+	//			soundBegin[]=
+	//			{
+	//				"begin1",
+	//				1
+	//			};
+	//		};
+	//	};
 	lockAcquire = 1;
 	ballisticsComputer = 1;
 	canLock = 2;
@@ -284,6 +299,5 @@ class CfgWeapons
 	magazines[] = {
 			MACRO_NEW_MAG(Pylon_20mm,600)
 	   };
-
 	};
 };

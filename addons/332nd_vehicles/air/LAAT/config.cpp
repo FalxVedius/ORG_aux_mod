@@ -3954,6 +3954,7 @@ class CfgVehicles
 	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_AB): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
 	{
 	    scope = 2;
+	    scopeCurator = 2;
         forceInGarage = 1;
         armor = 100 * 0.5;
         maximumLoad = 10000;
@@ -4433,6 +4434,7 @@ class CfgVehicles
 				};
 			};
 		};
+	
         class HitPoints : HitPoints
         {
             class HitHull : HitHull
