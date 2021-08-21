@@ -132,7 +132,12 @@ switch (true) do {
 	default {};
 };
 
-_aliveDroids = nearestObjects [_unit,
+{
+	if (!(_x == _unit) and (alive _x) and !(lifeState _x == "INCAPACITATED")) then {
+	
+		friendlyUnitPos = _x;
+	};
+} forEach nearestObjects [_unit,
 [
 "332nd_aux_cisb1_unit_332nd_CIS_B1",
 "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher",
@@ -145,55 +150,42 @@ _aliveDroids = nearestObjects [_unit,
 "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew",
 "332nd_aux_cisb1marine_unit_332nd_CIS_B1_Marine",
 "332nd_aux_cisb1jumppack_unit_332nd_CIS_B1_Jumppack"
-],5];
-
-_friendlyUnitPos = _unit;
-
-{
-	if (!(_x == _unit) && (alive _x) && !(lifeState _x == "INCAPACITATED")) then {
-	
-		_friendlyUnitPos = _x;
-		break;
-	};
-} forEach _aliveDroids;
+],15];
 
 
 _rndNum = floor(random 10);
 _rndSound = floor(random 4);
-_obj2= "HeliHEmpty" createVehicleLocal [0,0,0]; 
-_obj2 attachTo [_friendlyUnitPos,[0,0,1.5]];
 
 switch (true) do {
 
-	case (_rndNum <= 49): 
+	case (_rndNum <= 4): 
 	{ 
 		switch (true) do {
 		
 			case (_rndSound == 0): 
 			{
-				[_obj,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+				[friendlyUnitPos,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 			};
 			case (_rndSound == 1): 
 			{
-				[_obj,["BX_FriendlyDown_2_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+				[friendlyUnitPos,["BX_FriendlyDown_2_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 			};
 			case (_rndSound == 2): 
 			{
-				[_obj,["BX_FriendlyDown_3_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+				[friendlyUnitPos,["BX_FriendlyDown_3_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 			};
 			case (_rndSound == 3): 
 			{
-				[_obj,["BX_FriendlyDown_4_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+				[friendlyUnitPos,["BX_FriendlyDown_4_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 			};
 		
-			default { [_obj,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3d",0,true]; };
+			default { [friendlyUnitPos,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3D",0,true]; };
 		};
 	};
 	
-	case (_rndNum >= 50): {};
+	case (_rndNum >= 5): {};
 	default {};
 };
 
 
 deleteVehicle _obj;
-deleteVehicle _obj2;

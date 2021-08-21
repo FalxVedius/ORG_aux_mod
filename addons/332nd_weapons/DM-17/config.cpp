@@ -45,21 +45,78 @@ class CfgAmmo
 		Aux332nd_IsMedicRound = 1;
 		caliber = 0.1;
 	};
+	class CombatStim_Round : ls_ammo_556_blue
+	{
+		hit = 0.0099999998;
+		aiAmmoUsageFlags = 0;
+		Aux332nd_IsCombatStimRound = 1;
+		caliber = 0.1;
+	};
+	class Bacta_Round : ls_ammo_556_blue
+	{
+		hit = 0.0099999998;
+		aiAmmoUsageFlags = 0;
+		Aux332nd_IsBactaRound = 1;
+		caliber = 0.1;
+	};
+	class Kolto_Round : ls_ammo_556_blue
+	{
+		hit = 0.0099999998;
+		aiAmmoUsageFlags = 0;
+		Aux332nd_IsKoltoRound = 1;
+		caliber = 0.1;
+	};
 };
 
 class CfgMagazines
 {
 	class 30rnd_762x39_AK12_Mag_F;
-	class MACRO_NEW_MAG(DM_17,1) : 30rnd_762x39_AK12_Mag_F
+	class MACRO_NEW_MAG(DM_17_HeartStarter,1) : 30rnd_762x39_AK12_Mag_F
 	{
 		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		count = 1;
 		mass = 5;
 		initspeed = 1400;
-		displayName = MACRO_AMMO_DISPLAYNAME(M17 HeartStarter,1)
+		displayName = MACRO_AMMO_DISPLAYNAME(DM17 HeartStarter,1)
 		displayNameShort = "Heart Starter rnd";
 		descriptionShort = "332nd Heart Starter Round";
 		ammo = "HeartStarter_Round";
+		tracersEvery = 1;
+	};
+	class MACRO_NEW_MAG(DM_17_CombatStim,1) : 30rnd_762x39_AK12_Mag_F
+	{
+		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		count = 1;
+		mass = 5;
+		initspeed = 1400;
+		displayName = MACRO_AMMO_DISPLAYNAME(DM17 CombatStim,1)
+		displayNameShort = "Combat Stim rnd";
+		descriptionShort = "332nd Combat Stim Round";
+		ammo = "CombatStim_Round";
+		tracersEvery = 1;
+	};
+	class MACRO_NEW_MAG(DM_17_Bacta,1) : 30rnd_762x39_AK12_Mag_F
+	{
+		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		count = 1;
+		mass = 5;
+		initspeed = 1400;
+		displayName = MACRO_AMMO_DISPLAYNAME(DM17 Bacta,1)
+		displayNameShort = "Bacta rnd";
+		descriptionShort = "332nd Bacta Round";
+		ammo = "Bacta_Round";
+		tracersEvery = 1;
+	};
+	class MACRO_NEW_MAG(DM_17_Kolto,1) : 30rnd_762x39_AK12_Mag_F
+	{
+		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		count = 1;
+		mass = 5;
+		initspeed = 1400;
+		displayName = MACRO_AMMO_DISPLAYNAME(DM17 Kolto,1)
+		displayNameShort = "Kolto rnd";
+		descriptionShort = "332nd Kolto Round";
+		ammo = "Kolto_Round";
 		tracersEvery = 1;
 	};
 };
@@ -81,7 +138,7 @@ class cfgWeapons
 		baseweapon = (DM_17)
 
 
-		magazines[] = { MACRO_NEW_MAG(DM_17,1) };
+		magazines[] = { MACRO_NEW_MAG(DM_17_HeartStarter,1), MACRO_NEW_MAG(DM_17_CombatStim,1), MACRO_NEW_MAG(DM_17_Bacta,1), MACRO_NEW_MAG(DM_17_Kolto,1) };
 		magazineWell[] = {};
 		linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 

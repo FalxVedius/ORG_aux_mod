@@ -30,22 +30,22 @@ if (isServer) then {
 		
 				case (_rndSound == 0): 
 				{
-					[_obj,["B1_incGrenade_1_332nd", 150, 1]] remoteExec ["say3d",0,true];
+					[_obj,["B1_incGrenade_1_332nd", 150, 1]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 1): 
 				{
-					[_obj,["B1_incGrenade_2_332nd", 150, 1]] remoteExec ["say3d",0,true];
+					[_obj,["B1_incGrenade_2_332nd", 150, 1]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 2): 
 				{
-					[_obj,["B1_incGrenade_3_332nd", 150, 1]] remoteExec ["say3d",0,true];
+					[_obj,["B1_incGrenade_3_332nd", 150, 1]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 3): 
 				{
-					[_obj,["B1_incGrenade_4_332nd", 150, 1]] remoteExec ["say3d",0,true];
+					[_obj,["B1_incGrenade_4_332nd", 150, 1]] remoteExec ["say3D",0,true];
 				};
 			
-				default { [_obj,["B1_incGrenade_1_332nd", 150, 1]] remoteExec ["say3d",0,true]; };
+				default { [_obj,["B1_incGrenade_1_332nd", 150, 1]] remoteExec ["say3D",0,true]; };
 			};
 		};
 	
@@ -84,46 +84,46 @@ if (isServer) then {
 		
 				case (_rndSound == 0): 
 				{
-					[_obj,["B1_EnemyKilled_1_332nd", 150, 1]] remoteExec ["say3d",0,true];
+					[_obj,["B1_EnemyKilled_1_332nd", 150, 1]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 1): 
 				{
-					[_obj,["B1_EnemyKilled_2_332nd", 150, 1]] remoteExec ["say3d",0,true];
+					[_obj,["B1_EnemyKilled_2_332nd", 150, 1]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 2): 
 				{
-					[_obj,["BX_EnemyDown_1_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyDown_1_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 3): 
 				{
-					[_obj,["BX_EnemyDown_2_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyDown_2_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 4): 
 				{
-					[_obj,["BX_EnemyDown_3_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyDown_3_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 5): 
 				{
-					[_obj,["BX_EnemyDown_4_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyDown_4_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 6): 
 				{
-					[_obj,["BX_EnemyHit_1_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyHit_1_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 7): 
 				{
-					[_obj,["BX_EnemyHit_2_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyHit_2_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 8): 
 				{
-					[_obj,["BX_EnemyHit_3_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyHit_3_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 				case (_rndSound == 9): 
 				{
-					[_obj,["BX_EnemyHit_4_332nd", 150, 1.2]] remoteExec ["say3d",0,true];
+					[_obj,["BX_EnemyHit_4_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
 				};
 			
-				default { [_obj,["B1_EnemyKilled_1_332nd", 150, 1]] remoteExec ["say3d",0,true]; };
+				default { [_obj,["B1_EnemyKilled_1_332nd", 150, 1]] remoteExec ["say3D",0,true]; };
 			};
 		};
 	

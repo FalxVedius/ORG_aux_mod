@@ -3021,6 +3021,36 @@ class CfgVehicles
                 count = 75;
             };
 
+			class Bacta_332nd
+			{
+				name = "332nd_aux_medical_Bacta";
+				count = 25;
+			};
+
+			class Kolto_332nd
+			{
+				name = "332nd_aux_medical_Kolto";
+				count = 25;
+			};
+
+			class BactaInj_332nd
+			{
+				name = "332nd_aux_medical_Bacta_Inj";
+				count = 25;
+			};
+
+			class KoltoInj_332nd
+			{
+				name = "332nd_aux_medical_Kolto_Inj";
+				count = 25;
+			};
+
+			class DefibStrips_332nd
+			{
+				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				count = 100;
+			};
+
             class PressureCuff_332nd
             {
                 name = "332nd_aux_medical_PressureCuff";
@@ -3435,6 +3465,36 @@ class CfgVehicles
                 name = "332nd_aux_medical_Blood";
                 count = 75;
             };
+
+			class Bacta_332nd
+			{
+				name = "332nd_aux_medical_Bacta";
+				count = 25;
+			};
+
+			class Kolto_332nd
+			{
+				name = "332nd_aux_medical_Kolto";
+				count = 25;
+			};
+
+			class BactaInj_332nd
+			{
+				name = "332nd_aux_medical_Bacta_Inj";
+				count = 25;
+			};
+
+			class KoltoInj_332nd
+			{
+				name = "332nd_aux_medical_Kolto_Inj";
+				count = 25;
+			};
+
+			class DefibStrips_332nd
+			{
+				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				count = 100;
+			};
 
             class PressureCuff_332nd
             {
@@ -3997,6 +4057,36 @@ class CfgVehicles
                 name = "332nd_aux_medical_Blood";
                 count = 75;
             };
+
+			class Bacta_332nd
+			{
+				name = "332nd_aux_medical_Bacta";
+				count = 25;
+			};
+
+			class Kolto_332nd
+			{
+				name = "332nd_aux_medical_Kolto";
+				count = 25;
+			};
+
+			class BactaInj_332nd
+			{
+				name = "332nd_aux_medical_Bacta_Inj";
+				count = 25;
+			};
+
+			class KoltoInj_332nd
+			{
+				name = "332nd_aux_medical_Kolto_Inj";
+				count = 25;
+			};
+
+			class DefibStrips_332nd
+			{
+				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				count = 100;
+			};
 
             class PressureCuff_332nd
             {

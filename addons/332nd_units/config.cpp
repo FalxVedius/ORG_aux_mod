@@ -623,167 +623,167 @@ class CfgSounds
 	class B1_shooting_1_332nd
 	{
 		name = "B1_shooting_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_shooting_1.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_1.ogg", 10, 1, 150 };
 	};
 	class B1_shooting_2_332nd
 	{
 		name = "B1_shooting_2_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_2.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_2.ogg", 10, 1, 150 };
 	};
 	class B1_shooting_3_332nd
 	{
 		name = "B1_shooting_3_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_shooting_3.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_3.ogg", 10, 1, 150 };
 	};
 	class B1_shooting_4_332nd
 	{
 		name = "B1_shooting_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_shooting_4.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_4.ogg", 10, 1, 150 };
 	};
 	class B1_EnemyKilled_1_332nd
 	{
 		name = "B1_EnemyKilled_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", 10, 1, 150 };
 	};
 	class B1_EnemyKilled_2_332nd
 	{
 		name = "B1_EnemyKilled_2_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", 10, 1, 150 };
 	};
 	class B1_incGrenade_1_332nd
 	{
 		name = "B1_incGrenade_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_1.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_1.ogg", 10, 1, 150 };
 	};
 	class B1_incGrenade_2_332nd
 	{
 		name = "B1_incGrenade_2_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_2.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_2.ogg", 10, 1, 150 };
 	};
 	class B1_incGrenade_3_332nd
 	{
 		name = "B1_incGrenade_3_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_3.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_3.ogg", 10, 1, 150 };
 	};
 	class B1_incGrenade_4_332nd
 	{
 		name = "B1_incGrenade_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\B1_incGrenade_4.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_4.ogg", 10, 1, 150 };
 	};
 	class WBK_b2_dying_332nd
 	{
 		name = "WBK_b2_dying_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_dying_2.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_dying_2.ogg",  10, 1, 150 };
 	};
 	class WBK_b2_firing_1_332nd
 	{
 		name = "WBK_b2_firing_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_1.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_1.ogg", 10, 1, 150 };
 	};
 	class WBK_b2_firing_2_332nd
 	{
 		name = "WBK_b2_firing_2_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_2.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_2.ogg", 10, 1, 150 };
 	};
 	class WBK_b2_firing_3_332nd
 	{
 		name = "WBK_b2_firing_3_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_3.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_3.ogg", 10, 1, 150 };
 	};
 	class WBK_b2_firing_4_332nd
 	{
 		name = "WBK_b2_firing_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_4.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_4.ogg", 10, 1, 150 };
 	};
 	class WBK_b2_firing_5_332nd
 	{
 		name = "WBK_b2_firing_5_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_firing_5.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_5.ogg", 10, 1, 150 };
 	};
 	class WBK_b2_incGrenade_1_332nd
 	{
 		name = "WBK_b2_incGrenade_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_incGrenade_1.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_1.ogg", 10, 1, 150 };
 	};
 	class WBK_b2_incGrenade_2_332nd
 	{
 		name = "WBK_b2_incGrenade_2_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\WBK_b2_incGrenade_2.ogg", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_2.ogg",  10, 1, 150 };
 	};
 	class BX_EnemyDown_1_332nd
 	{
 		name = "EnemyDown_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_02.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_02.wav",  db + 60, 1, 150 };
 	};
 	class BX_EnemyDown_2_332nd
 	{
 		name = "EnemyDown_2_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_08.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_08.wav",  db + 60, 1, 150 };
 	};
 	class BX_EnemyDown_3_332nd
 	{
 		name = "EnemyDown_3_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_09.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_09.wav", db + 60, 1, 150 };
 	};
 	class BX_EnemyDown_4_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyDown_25.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_25.wav", db + 60, 1, 150 };
 	};
 	class BX_EnemyHit_1_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_02.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_02.wav",  db + 60, 1, 150 };
 	};
 	class BX_EnemyHit_2_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_03.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_03.wav", db + 60, 1, 150 };
 	};
 	class BX_EnemyHit_3_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_20.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_20.wav",  db + 60, 1, 150 };
 	};
 	class BX_EnemyHit_4_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\EnemyHit_24.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_24.wav",  db + 60, 1, 150 };
 	};
 	class BX_FriendlyDown_1_332nd
 	{
 		name = "BX_FriendlyDown_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_03.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_03.wav", 1000, 1, 150 };
 	};
 	class BX_FriendlyDown_2_332nd
 	{
-		name = "BX_FriendlyDown_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_05.wav", db + 250, 1, 125 };
+		name = "BX_FriendlyDown_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_05.wav",  1000, 1, 150 };
 	};
 	class BX_FriendlyDown_3_332nd
 	{
-		name = "BX_FriendlyDown_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_06.wav", db + 250, 1, 125 };
+		name = "BX_FriendlyDown_3_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_06.wav", 1000, 1, 150 };
 	};
 	class BX_FriendlyDown_4_332nd
 	{
-		name = "BX_FriendlyDown_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\FriendlyDown_21.wav", db + 250, 1, 125 };
+		name = "BX_FriendlyDown_4_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_21.wav",  1000, 1, 150 };
 	};
 	class BX_ThrowingGrenade_1_332nd
 	{
 		name = "BX_ThrowingGrenade_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\ThrowingGrenade_03.wav", db + 250, 1, 125 };
+		sound[] = { "WebKnightsRobotics\sounds\ThrowingGrenade_03.wav", 2000, 1, 150 };
 	};
 	class BX_ThrowingGrenade_2_332nd
 	{
-		name = "BX_ThrowingGrenade_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\ThrowingGrenade_05.wav", db + 250, 1, 125 };
+		name = "BX_ThrowingGrenade_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\ThrowingGrenade_05.wav", 2000, 1, 150 };
 	};
 	class BX_ThrowingGrenade_3_332nd
 	{
-		name = "BX_ThrowingGrenade_1_332nd";
-		sound[] = { "\WebKnightsRobotics\sounds\ThrowingGrenade_06.wav", db + 250, 1, 125 };
+		name = "BX_ThrowingGrenade_3_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\ThrowingGrenade_06.wav", 2000, 1, 150 };
 	};
 };
 
@@ -995,6 +995,36 @@ class CfgVehicles
 			{
 				name = "332nd_aux_medical_Blood";
 				count = 75;
+			};
+
+			class Bacta_332nd
+			{
+				name = "332nd_aux_medical_Bacta";
+				count = 25;
+			};
+
+			class Kolto_332nd
+			{
+				name = "332nd_aux_medical_Kolto";
+				count = 25;
+			};
+
+			class BactaInj_332nd
+			{
+				name = "332nd_aux_medical_Bacta_Inj";
+				count = 25;
+			};
+
+			class KoltoInj_332nd
+			{
+				name = "332nd_aux_medical_Kolto_Inj";
+				count = 25;
+			};
+
+			class DefibStrips_332nd
+			{
+				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				count = 100;
 			};
 
 			class PressureCuff_332nd

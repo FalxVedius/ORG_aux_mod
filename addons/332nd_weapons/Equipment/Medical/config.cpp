@@ -771,7 +771,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Tank)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Tank *WIP*)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
@@ -799,7 +799,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Tank)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Tank *WIP*)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
@@ -852,7 +852,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Injector)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Injector *WIP*)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
@@ -878,7 +878,7 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Injector)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Injector *WIP*)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
