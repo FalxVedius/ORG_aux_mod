@@ -25,6 +25,14 @@ class CfgPatches
 	};
 };
 
+class CfgAddons {
+	class PreloadAddons {
+		class SL_Monitor {
+			list[] = { "332nd_main" };
+		};
+	};
+};
+
 class cfgFunctions
 {
 	class 332nd_aux_functions
@@ -66,3 +74,295 @@ class Extended_PreInit_EventHandlers
 //         init = "call compile preprocessFileLineNumbers '332nd_main\XEH_postinit.sqf'";
 //     };
 // };
+
+
+class CAWorld;
+class RscStandardDisplay;
+class RscVignette;
+class RscControlsGroupNoScrollbars;
+class RscFrame;
+class RscText;
+class RscPicture;
+class RscTitle;
+class RscButtonMenu;
+class RscHTML;
+class RscControlsGroupNoHScrollbars;
+class RscListBox;
+class RscPictureKeepAspect;
+class RscButton;
+class RscButtonImages;
+class RscShortcutButton;
+
+class RscDisplayLoading 
+{
+	class Variants 
+	{
+		class LoadingBackground_332nd
+		{
+			idd = 250;
+			class controls
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1;
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Banner.paa";
+				};
+			};
+		};
+
+		class Loading_West1 : LoadingBackground_332nd
+		{
+			class controls
+			{
+				class LoadingPicture_332nd
+				{
+					idc = 1;
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Banner.paa";
+				};
+			};
+		};
+
+		class Loading_West2 : LoadingBackground_332nd
+		{
+			class controls
+			{
+				class LoadingPicture_332nd
+				{
+					idc = 1;
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Banner.paa";
+				};
+			};
+		};
+
+		class Loading_East1 : LoadingBackground_332nd
+		{
+			class controls
+			{
+				class LoadingPicture_332nd
+				{
+					idc = 1;
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Banner.paa";
+				};
+			};
+		};
+
+		class Loading_East2 : LoadingBackground_332nd
+		{
+			class controls
+			{
+				class LoadingPicture_332nd
+				{
+					idc = 1;
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Banner.paa";
+				};
+			};
+		};
+	};
+};
+
+class RscDisplayLoadCustom : RscStandardDisplay 
+{
+	class controlsBackground 
+	{
+		class LoadingPicture_332nd : RscPicture 
+		{
+			idc = 1;
+			x = SafeZoneX;
+			y = SafeZoneY;
+			h = SafeZoneH;
+			w = SafeZoneW;
+			text = "\332nd_main\332nd_Banner.paa";
+		};
+	};
+};
+
+class RscDisplayLoadMission : RscStandardDisplay 
+{
+	class controlsBackground 
+	{
+		class LoadingPicture_332nd : RscPicture 
+		{
+			idc = 1;
+			x = SafeZoneX;
+			y = SafeZoneY;
+			h = SafeZoneH;
+			w = SafeZoneW;
+			text = "\332nd_main\332nd_Banner.paa";
+		};
+	};
+};
+
+class RscDisplayStart : RscStandardDisplay 
+{
+	class controls 
+	{
+		class LoadingPicture_332nd : RscPicture 
+		{
+			idc = 1;
+			x = SafeZoneX;
+			y = SafeZoneY;
+			h = SafeZoneH;
+			w = SafeZoneW;
+			text = "\332nd_main\332nd_Banner.paa";
+		};
+	};
+};
+
+class RscDisplayMPPlayers;
+class RscDisplayClientWait : RscDisplayMPPlayers 
+{
+	class LoadingPicture_332nd : RscPicture 
+	{
+		idc = 1;
+		x = SafeZoneX;
+		y = SafeZoneY;
+		h = SafeZoneH;
+		w = SafeZoneW;
+		text = "\332nd_main\332nd_Banner.paa";
+	};
+};
+
+class RscDisplayClient : RscStandardDisplay 
+{
+	class controlsBackground
+	{
+		class LoadingPicture_332nd : RscPicture 
+		{
+			idc = 1;
+			x = SafeZoneX;
+			y = SafeZoneY;
+			h = SafeZoneH;
+			w = SafeZoneW;
+			text = "\332nd_main\332nd_Banner.paa";
+		};
+	};
+};
+
+class RscDisplayConfigure 
+{
+	enableDisplay = 1;
+};
+
+class RscDisplayMain : RscStandardDisplay 
+{
+	idd = 0;
+	idc = 1;
+	enableDisplay = 1;
+
+	text = "\332nd_main\332nd_Banner.paa";
+
+	class RscActiveText;
+
+	class RscActivePicture : RscActiveText
+	{
+		style = 48;
+		color[] = 
+		{
+				1, 1, 1, 0.5
+		};
+		colorActive[] = 
+		{
+				1, 1, 1, 1
+		};
+	};
+	class Spotlight {};
+
+	class controls {
+		class Spotlight1 {};
+		class Spotlight2 {};
+		class Spotlight3 {};
+		class BackgroundSpotlightRight {};
+		class BackgroundSpotlightLeft {};
+		class BackgroundSpotlight {};
+
+		class B_Credits {};
+
+		class ConnectServer : RscButton 
+		{
+			idc = -1;
+			text = "Join the 332nd Legion Discord!";
+			style = 2;
+			url = "https://discord.gg/EYbu9QzfBN";
+			colorBackground[] = { 0, 0, 0, 0.4 };
+			colorBackgroundActive[] = { 1,0,0, 0,2 };
+			soundEnter[] = { "\332nd_main\ui\Hover_Sound.ogg",0.3,1 };
+			soundPush[] = { "\332nd_main\ui\Click_Sound.ogg",0.7,1 };
+			borderSize = 0.054;
+			colorBorder[] = { 0,0,0,0 };
+			x = "SafeZoneXAbs + 0.425 * SafeZoneW";
+			y = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
+			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+
+		};
+		class ConnectDiscord : RscButton 
+		{
+			idc = -1;
+			text = "Join the 332nd Legion Discord!";
+			style = 2;
+			url = "https://discord.gg/EYbu9QzfBN";
+			colorBackground[] = { 0, 0, 0, 0.4 };
+			colorBackgroundActive[] = { 1,0,0, 0,2 };
+			soundEnter[] = { "\332nd_main\ui\Hover_Sound.ogg",0.3,1 };
+			soundPush[] = { "\332nd_main\ui\Click_Sound.ogg",0.7,1 };
+			borderSize = 0.054;
+			colorBorder[] = { 0,0,0,0 };
+			x = "SafeZoneXAbs + 0.425 * SafeZoneW";
+			y = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
+			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+
+		};
+		class ConnectVK : RscButton 
+		{
+			idc = -1;
+			text = "Join the 332nd Legion Discord!";
+			style = 2;
+			url = "https://discord.gg/EYbu9QzfBN";
+			colorBackground[] = { 0, 0, 0, 0.4 };
+			colorBackgroundActive[] = { 1,0,0, 0,2 };
+			soundEnter[] = { "\332nd_main\ui\Hover_Sound.ogg",0.3,1 };
+			soundPush[] = { "\332nd_main\ui\Click_Sound.ogg",0.7,1 };
+			borderSize = 0.054;
+			colorBorder[] = { 0,0,0,0 };
+			x = "SafeZoneXAbs + 0.425 * SafeZoneW";
+			y = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
+			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
+			h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
+
+		};
+	};
+
+	class controlsBackground 
+	{
+		class LoadingPicture_332nd : RscPicture 
+		{
+			idc = 1;
+			x = SafeZoneX;
+			y = SafeZoneY;
+			h = SafeZoneH;
+			w = SafeZoneW;
+			text = "\332nd_main\332nd_Banner.paa";
+		};
+	};
+};
