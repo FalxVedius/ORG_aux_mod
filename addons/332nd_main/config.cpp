@@ -25,14 +25,6 @@ class CfgPatches
 	};
 };
 
-class CfgAddons {
-	class PreloadAddons {
-		class SL_Monitor {
-			list[] = { "332nd_main" };
-		};
-	};
-};
-
 class cfgFunctions
 {
 	class 332nd_aux_functions
