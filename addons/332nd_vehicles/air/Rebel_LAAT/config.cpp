@@ -71,7 +71,7 @@ class CfgVehicles
 		};
 	};
 
-	class MACRO_NEW_VEHICLE(air, LAAT, mk1_332nd_Rebel_base) : ls_laat
+	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel_base) : ls_laat
 	{
 		displayName = "Stolen LAAT Mk1 Base";
 		scope = 0;
@@ -113,7 +113,7 @@ class CfgVehicles
 			MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
 		};
 
-		crew = MACRO_NEW_UNIT(rebel, base);
+		crew = MACRO_NEW_UNIT(rebel,base);
 		typicalcargo[] = { MACRO_NEW_UNIT(rebel,base) };
 
 
@@ -2472,7 +2472,7 @@ class CfgVehicles
 	};
 
 	class ls_heli_laatle;
-	class MACRO_NEW_VEHICLE(air, LAATle, LAATle_332nd_Rebel) :ls_heli_laatle
+	class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd_Rebel) :ls_heli_laatle
 	{
 		displayName = "Stolen LAAT/le Gunship";
 		scope = 2;
@@ -2483,13 +2483,13 @@ class CfgVehicles
 		faction = "EdCat_332nd_Rebel";
 		editorSubcategory = "EdSubcat_332nd_AIR";
 
-		ls_impulsor_fuelDrain_1 = 0.00010;
-		ls_impulsor_fuelDrain_2 = 0.00010;
-		ls_impulsor_boostSpeed_1 = 900;
-		ls_impulsor_boostSpeed_2 = 1300;
+		ls_impulsor_fuelDrain_1 = 0.00600;
+		ls_impulsor_fuelDrain_2 = 0.00600;
+		ls_impulsor_boostSpeed_1 = 33000;
+		ls_impulsor_boostSpeed_2 = 43000;
 		ls_hasImpulse = 1;
 
-		crew = MACRO_NEW_REBEL_UNIT(rebel, base);
+		crew = MACRO_NEW_REBEL_UNIT(rebel,base);
 		typicalcargo[] = { MACRO_NEW_REBEL_UNIT(rebel,base) };
 
 		class TransportItems
@@ -2899,11 +2899,12 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_VEHICLE(air, LAAT, mk1_332nd_Rebel) : MACRO_NEW_VEHICLE(air, LAAT, mk1_332nd_Rebel_base)
+	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel) : MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel_base)
 	{
 		scope = 2;
 		forceInGarage = 1;
 		displayName = "Stolen LAAT Mk1";
+		side = 2;
 		armor = 80 * 0.2;
 		maximumLoad = 10000;
 
