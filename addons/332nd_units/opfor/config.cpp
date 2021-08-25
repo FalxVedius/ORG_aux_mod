@@ -37,6 +37,7 @@ class CfgPatches
 
 			MACRO_NEW_UNIT(cisdroideka,332nd_CIS_HEAVY_Droideka),
 			MACRO_NEW_UNIT(cisdroidekamoveable,332nd_CIS_HEAVY_Droideka_Moveable),
+			MACRO_NEW_UNIT(cisb2,332nd_CIS_HEAVY_B2),
         };
         weapons[] = {
             MACRO_NEW_UNIFORM(cisb1,332nd_CIS_B1),
@@ -51,6 +52,8 @@ class CfgPatches
 			MACRO_NEW_UNIFORM(cisbxcapt,332nd_CIS_BX_Captain),
 			MACRO_NEW_UNIFORM(cisbxsec,332nd_CIS_BX_Security),
 			MACRO_NEW_UNIFORM(cisbxdiplo,332nd_CIS_BX_Diplomat),
+
+			MACRO_NEW_UNIFORM(cisb2,332nd_CIS_B2),
         };
     };
 };
@@ -68,6 +71,7 @@ class CfgWeapons
 	class lsd_cis_bxCaptainDroid_uniform;
 	class lsd_cis_bxSecurityDroid_uniform;
 	class lsd_cis_bxDiplomatDroid_uniform;
+	class lsd_cis_b2Droid_uniform;
 
 	//B1
     class MACRO_NEW_UNIFORM(cisb1,base) : JLTS_DroidB1
@@ -117,6 +121,11 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
+	//B2
+	class MACRO_NEW_UNIFORM(cisb2,base) : lsd_cis_b2Droid_uniform
+	{
+		class ItemInfo;
+	};
 
     //CISB1
     MACRO_NEW_CISB1_UNIFORM_ITEM(332nd_CIS_B1,B1,332nd_CIS_B1)
@@ -132,6 +141,9 @@ class CfgWeapons
 	MACRO_NEW_CISBXCAPT_UNIFORM_ITEM(332nd_CIS_BX_Captain,BX Captain,332nd_CIS_BX_Captain)
 	MACRO_NEW_CISBXSEC_UNIFORM_ITEM(332nd_CIS_BX_Security,BX Security,332nd_CIS_BX_Security)
 	MACRO_NEW_CISBXDIPLO_UNIFORM_ITEM(332nd_CIS_BX_Diplomat,BX Diplomat,332nd_CIS_BX_Diplomat)
+
+	//CISB2
+	MACRO_NEW_CISB2_UNIFORM_ITEM(332nd_CIS_B2,B2,332nd_CIS_B2)
 };
 
 class CfgVehicles
@@ -163,6 +175,7 @@ class CfgVehicles
 
 	class MACRO_NEW_UNIT(cisdroideka,base);
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base);
+	class MACRO_NEW_UNIT(cisb2,base);
 
     //B1
     MACRO_NEW_CISB1_UNIT(332nd_CIS_B1,B1 Battle Droid,332nd_CIS_B1)
@@ -194,6 +207,7 @@ class CfgVehicles
 	//Heavy Droids
 	MACRO_NEW_CISDROIDEKA_UNIT(332nd_CIS_HEAVY_Droideka,Droideka (Static))
 	MACRO_NEW_CISDROIDEKA_MOVE_UNIT(332nd_CIS_HEAVY_Droideka_Moveable,Droideka (Moveable))
+	MACRO_NEW_CISB2_UNIT(332nd_CIS_HEAVY_B2,B2 Battle Droid,332nd_CIS_B2)
 };
 
 class CfgGroups

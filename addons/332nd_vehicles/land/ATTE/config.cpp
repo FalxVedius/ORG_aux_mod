@@ -18,26 +18,83 @@ class CfgPatches
 };
 class CfgVehicles
  {
-	
 
+	class LandVehicle;
+	class Tank : LandVehicle
+	{
+		class NewTurret;
+		class Sounds;
+		class HitPoints;
+	};
+	class Tank_F : Tank
+	{
+		class Turrets
+		{
+			class MainTurret : NewTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+		class Components;
+		class AnimationSources;
+		class ViewPilot;
+		class CargoTurret;
+		class ViewOptics;
+		class RCWSOptics;
+		class ViewGunner;
+		class ViewCargo;
+		class HeadLimits;
+		class HitPoints : HitPoints
+		{
+			class HitHull;
+			class HitEngine;
+			class HitLTrack;
+			class HitRTrack;
+			class HitFuel;
+		};
+		class Sounds : Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+	};
+
+	class 3as_ATTE_Base : Tank_F
+	{
+		class Turrets
+		{
+			class MainTurretTop;
+			class MainTurretFront;
+			class MainTurretBack;
+		};
+	};
 	
- //   class MACRO_NEW_VEHICLE(Land,AT,TE): 3AS_GAT_Light
- //   {
- //       displayName = "AT-TE *WIP*";
- //       scope = 2;
-	//	scopeCurator = 2;
-	//	faction = "EdCat_332nd";
-	//	editorSubcategory = "EdSubcat_332nd_TANK";
-	//	crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-	//	class Turrets : Turrets
-	//	 {
-	//	   class MainTurret : MainTurret
-	//	   {
-	//		   class Turrets
-	//		   {
-	//		   };
-	//		   gunnerType = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-	//	   };
-	//   };
-	//};
+    class MACRO_NEW_VEHICLE(Land,AT,TE): 3as_ATTE_Base
+    {
+        displayName = "AT-TE *WIP*";
+        scope = 2;
+		scopeCurator = 2;
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_TANK";
+		crew = "332nd_aux_infantry_unit_332nd_trooper";
+
+		class Turrets : Turrets
+		 {
+		   class MainTurretTop : MainTurretTop
+		   {
+
+		   };
+		   class MainTurretFront : MainTurretFront
+		   {
+
+		   };
+		   class MainTurretBack : MainTurretBack
+		   {
+
+		   };
+	   };
+	};
 };

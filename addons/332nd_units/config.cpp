@@ -389,6 +389,12 @@ class CfgWeapons
 	{
 		class ItemInfo;
 	};
+	class lsd_cis_b2Droid_uniform : ls_redforUniform_base
+	{
+		class ItemInfo;
+	};
+
+
 	//CIS B-1
 	class MACRO_NEW_UNIFORM(cisb1,base) : JLTS_DroidB1
 	{
@@ -502,6 +508,19 @@ class CfgWeapons
 			containerClass = "Supply140";
 		};
 	};
+
+	//CIS B2
+	class MACRO_NEW_UNIFORM(cisb2,base) : lsd_cis_b2Droid_uniform
+	{
+		displayName = "[332nd] B2 droid uniform ('base')";
+		scope = 0;							
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(cisb2,base);
+			containerClass = "Supply140";
+		};
+	};
+
 	// ---- End opfor Uniforms ----
 }
 
@@ -512,111 +531,133 @@ class CfgSounds
 	{
 		name = "B1-Death-Sound-1";
 		sound[] = {"\opfor\DeathSounds\B1-Death-Sound-1.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_2
 	{
 		name = "B1-Death-Sound-2";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-2.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_3
 	{
 		name = "B1-Death-Sound-3";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-3.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_4
 	{
 		name = "B1-Death-Sound-4";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-4.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_5
 	{
 		name = "B1-Death-Sound-5";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-5.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_6
 	{
 		name = "B1-Death-Sound-6";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-6.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_7
 	{
 		name = "B1-Death-Sound-7";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-7.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_8
 	{
 		name = "B1-Death-Sound-8";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-8.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_9
 	{
 		name = "B1-Death-Sound-9";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-9.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_10
 	{
 		name = "B1-Death-Sound-10";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-10.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_11
 	{
 		name = "B1-Death-Sound-11";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-11.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_12
 	{
 		name = "B1-Death-Sound-12";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-12.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_13
 	{
 		name = "B1-Death-Sound-13";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-13.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_14
 	{
 		name = "B1-Death-Sound-14";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-14.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_15
 	{
 		name = "B1-Death-Sound-15";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-15.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_16
 	{
 		name = "B1-Death-Sound-16";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-16.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_17
 	{
 		name = "B1-Death-Sound-17";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-17.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_18
 	{
 		name = "B1-Death-Sound-18";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-18.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_19
 	{
 		name = "B1-Death-Sound-19";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-19.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_20
 	{
 		name = "B1-Death-Sound-21";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-21.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_22
 	{
 		name = "B1-Death-Sound-22";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-22.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_23
 	{
 		name = "B1-Death-Sound-23";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	
 	//Redefine Webknights Sounds to be louder
@@ -624,166 +665,199 @@ class CfgSounds
 	{
 		name = "B1_shooting_1_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_1.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_shooting_2_332nd
 	{
 		name = "B1_shooting_2_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_2.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_shooting_3_332nd
 	{
 		name = "B1_shooting_3_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_3.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_shooting_4_332nd
 	{
 		name = "B1_shooting_4_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_4.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_EnemyKilled_1_332nd
 	{
 		name = "B1_EnemyKilled_1_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_EnemyKilled_2_332nd
 	{
 		name = "B1_EnemyKilled_2_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_incGrenade_1_332nd
 	{
 		name = "B1_incGrenade_1_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_1.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_incGrenade_2_332nd
 	{
 		name = "B1_incGrenade_2_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_2.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_incGrenade_3_332nd
 	{
 		name = "B1_incGrenade_3_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_3.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class B1_incGrenade_4_332nd
 	{
 		name = "B1_incGrenade_4_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_4.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_dying_332nd
 	{
 		name = "WBK_b2_dying_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_dying_2.ogg",  10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_firing_1_332nd
 	{
 		name = "WBK_b2_firing_1_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_1.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_firing_2_332nd
 	{
 		name = "WBK_b2_firing_2_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_2.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_firing_3_332nd
 	{
 		name = "WBK_b2_firing_3_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_3.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_firing_4_332nd
 	{
 		name = "WBK_b2_firing_4_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_4.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_firing_5_332nd
 	{
 		name = "WBK_b2_firing_5_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_5.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_incGrenade_1_332nd
 	{
 		name = "WBK_b2_incGrenade_1_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_1.ogg", 10, 1, 150 };
+		titles[] = {};
 	};
 	class WBK_b2_incGrenade_2_332nd
 	{
 		name = "WBK_b2_incGrenade_2_332nd";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_2.ogg",  10, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyDown_1_332nd
 	{
 		name = "EnemyDown_1_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_02.wav",  db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_02.ogg",  db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyDown_2_332nd
 	{
 		name = "EnemyDown_2_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_08.wav",  db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_08.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyDown_3_332nd
 	{
 		name = "EnemyDown_3_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_09.wav", db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_09.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyDown_4_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyDown_25.wav", db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_25.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyHit_1_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_02.wav",  db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_02.ogg",  db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyHit_2_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_03.wav", db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_03.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyHit_3_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_20.wav",  db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_20.ogg",  db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_EnemyHit_4_332nd
 	{
 		name = "EnemyDown_4_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\EnemyHit_24.wav",  db + 60, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_24.ogg",  db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_FriendlyDown_1_332nd
 	{
 		name = "BX_FriendlyDown_1_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_03.wav", 1000, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_03.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_FriendlyDown_2_332nd
 	{
 		name = "BX_FriendlyDown_2_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_05.wav",  1000, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_05.ogg",  db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_FriendlyDown_3_332nd
 	{
 		name = "BX_FriendlyDown_3_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_06.wav", 1000, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_06.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_FriendlyDown_4_332nd
 	{
 		name = "BX_FriendlyDown_4_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\FriendlyDown_21.wav",  1000, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_21.ogg",  db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_ThrowingGrenade_1_332nd
 	{
 		name = "BX_ThrowingGrenade_1_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\ThrowingGrenade_03.wav", 2000, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_03.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_ThrowingGrenade_2_332nd
 	{
 		name = "BX_ThrowingGrenade_2_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\ThrowingGrenade_05.wav", 2000, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_05.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 	class BX_ThrowingGrenade_3_332nd
 	{
 		name = "BX_ThrowingGrenade_3_332nd";
-		sound[] = { "WebKnightsRobotics\sounds\ThrowingGrenade_06.wav", 2000, 1, 150 };
+		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_06.ogg", db + 250, 1, 150 };
+		titles[] = {};
 	};
 };
 
@@ -808,12 +882,13 @@ class CfgFunctions
 			class Killed
 			{
 			};
-
 			class Killed_BX
 			{
 			};
-
 			class Killed_Heavy
+			{
+			};
+			class Killed_Heavy_B2
 			{
 			};
 		};
@@ -824,8 +899,10 @@ class CfgFunctions
 			class Fired
 			{
 			};
-
 			class Fired_BX
+			{
+			};
+			class Fired_B2
 			{
 			};
 		};
@@ -856,6 +933,9 @@ class CfgFunctions
 			{
 			};
 			class init_BX
+			{
+			};
+			class init_B2
 			{
 			};
 		};
@@ -4019,6 +4099,7 @@ class CfgVehicles
 	class lsd_cis_bxDroid_base;
 	class O_Soldier_base_F;
 	class k_CIS_Droideka;
+	class lsd_cis_b2Droid_base;
 
 	class JLTS_Droid_B1_E5 :O_Soldier_F
 	{
@@ -4097,6 +4178,10 @@ class CfgVehicles
 		class HitPoints;
 	};
 	class WBK_BX_Assasin_Commander : WBK_BX_Assasin_1
+	{
+		class HitPoints;
+	};
+	class lsd_cis_b2_standard : lsd_cis_b2Droid_base
 	{
 		class HitPoints;
 	};
@@ -10359,6 +10444,263 @@ class CfgVehicles
 		};
 	};
 
+	class MACRO_NEW_UNIT(cisb2,base) : lsd_cis_b2_standard
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] B2 Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+		uniformClass = MACRO_NEW_UNIFORM(cisb2,base);
+		nakedUniform = "lsd_cis_b2_standard";
+
+		identityTypes[] = { "LanguageENG_F", "Head_NATO" };
+
+		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		weapons[] = { "WBK_B2_NormalMod","Throw","Put" };
+		respawnWeapons[] = { "WBK_B2_NormalMod","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_8(SWLW_ZH73_Mag),
+		};
+		respawnMagazines[] =
+		{
+			mag_8(JLTS_E5_mag),
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 12;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.90000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 12;
+				material = -1;
+				name = "neck";
+				passThrough = 0.90000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 12;
+				material = -1;
+				name = "head";
+				passThrough = 0.90000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 128;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 96;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 96;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 128;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 16000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 96;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 96;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 96;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 16000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 96;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 96;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
+	};
+
 	// ---- End Opfor Units for Uniforms ----
 };
 
@@ -10471,6 +10813,10 @@ class Extended_Killed_EventHandlers
 	{
 		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy;";
 	};
+	class MACRO_NEW_UNIT(cisb2,base)
+	{
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy_B2;";
+	};
 };
 
 class Extended_Init_EventHandlers
@@ -10571,6 +10917,12 @@ class Extended_Init_EventHandlers
 	{
 		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
 	};
+
+	//Heavy Droids
+	class MACRO_NEW_UNIT(cisb2,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B2;";
+	};
 };
 
 class Extended_Fired_EventHandlers
@@ -10670,5 +11022,11 @@ class Extended_Fired_EventHandlers
 	class MACRO_NEW_UNIT(cisbxhybrid,base)
 	{
 		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+
+	//Heavy Droids
+	class MACRO_NEW_UNIT(cisb2,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_B2;";
 	};
 };

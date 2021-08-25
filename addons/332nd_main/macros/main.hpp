@@ -356,6 +356,16 @@
 				uniformClass = MACRO_NEW_UNIT(cisbxdiplo,uniformClassname);\
 			};\
 		};
+	#define MACRO_NEW_CISB2_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb2,classname): MACRO_NEW_UNIFORM(cisb2,base)\
+		{\
+			displayName = [332nd] CIS B2 Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb2,uniformClassname);\
+			};\
+		};
 	// --- End Opfor Uniforms ---
 
 	//units for uniforms
@@ -738,6 +748,14 @@
 			scope = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB2_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb2,classname): MACRO_NEW_UNIT(cisb2,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb2,uniformClassname);\
 		}
 	#define MACRO_NEW_CISDROIDEKA_UNIT(classname,displayname)\
 		class MACRO_NEW_UNIT(cisdroideka,classname): MACRO_NEW_UNIT(cisdroideka,base)\

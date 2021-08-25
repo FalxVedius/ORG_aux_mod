@@ -188,12 +188,25 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
 	class SWLB_clone_bag_leg;
-	class MACRO_NEW_BACKPACK(blufor,332nd_rifleman_pack): SWLB_clone_bag_leg
+	class MACRO_NEW_BACKPACK(blufor,332nd_rifleman_pack) : SWLB_clone_bag_leg
 	{
 		displayName = "[332nd] Rifleman Pack";
 		maximumLoad = 32;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
-	}	
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_hidden_pack) : SWLB_clone_bag_leg
+	{
+		displayName = "[332nd] Rifleman Pack (Hidden)";
+		maximumLoad = 32;
+
+		hiddenSelectionsTextures[] =
+		{
+			""
+		};
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
 }
