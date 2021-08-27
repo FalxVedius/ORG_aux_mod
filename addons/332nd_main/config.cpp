@@ -85,18 +85,40 @@ class RscButton;
 class RscButtonImages;
 class RscShortcutButton;
 
+class RscDisplayLoadMission : RscStandardDisplay
+{
+	class controlsBackground
+	{
+		class LoadingPicture_332nd : RscPicture
+		{
+			idc = 1000;
+
+			colorText[] = { 1,1,1,0.42 };
+
+			x = SafeZoneX;
+			y = SafeZoneY;
+			h = SafeZoneH;
+			w = SafeZoneW;
+			text = "\332nd_main\332nd_Banner.paa";
+		};
+	};
+};
+
 class RscDisplayLoading 
 {
 	class Variants 
 	{
-		class LoadingBackground_332nd
+		class LoadingBackground_332nd : RscDisplayLoadMission
 		{
-			idd = 250;
-			class controls
+
+			class controlsBackground : controlsBackground
 			{
 				class LoadingPicture_332nd : RscPicture
 				{
-					idc = 1;
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
 					x = SafeZoneX;
 					y = SafeZoneY;
 					h = SafeZoneH;
@@ -106,69 +128,166 @@ class RscDisplayLoading
 			};
 		};
 
-		class Loading_West1 : LoadingBackground_332nd
+		class LoadingBackground_332nd_V1 : RscDisplayLoadMission
 		{
-			class controls
+
+			class controlsBackground : controlsBackground
 			{
-				class LoadingPicture_332nd
+				class LoadingPicture_332nd : RscPicture
 				{
-					idc = 1;
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
 					x = SafeZoneX;
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Banner.paa";
+					text = "\332nd_main\332nd_Promo_1.paa";
 				};
 			};
 		};
 
-		class Loading_West2 : LoadingBackground_332nd
+		class LoadingBackground_332nd_V2 : RscDisplayLoadMission
 		{
-			class controls
+
+			class controlsBackground : controlsBackground
 			{
-				class LoadingPicture_332nd
+				class LoadingPicture_332nd : RscPicture
 				{
-					idc = 1;
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
 					x = SafeZoneX;
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Banner.paa";
+					text = "\332nd_main\332nd_Promo_2.paa";
 				};
 			};
 		};
 
-		class Loading_East1 : LoadingBackground_332nd
+		class LoadingBackground_332nd_V3 : RscDisplayLoadMission
 		{
-			class controls
+
+			class controlsBackground : controlsBackground
 			{
-				class LoadingPicture_332nd
+				class LoadingPicture_332nd : RscPicture
 				{
-					idc = 1;
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
 					x = SafeZoneX;
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Banner.paa";
+					text = "\332nd_main\332nd_Promo_3.paa";
 				};
 			};
 		};
 
-		class Loading_East2 : LoadingBackground_332nd
+		class LoadingBackground_332nd_V4 : RscDisplayLoadMission
 		{
-			class controls
+
+			class controlsBackground : controlsBackground
 			{
-				class LoadingPicture_332nd
+				class LoadingPicture_332nd : RscPicture
 				{
-					idc = 1;
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
 					x = SafeZoneX;
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Banner.paa";
+					text = "\332nd_main\332nd_Promo_4.paa";
 				};
 			};
 		};
+
+		class LoadingBackground_332nd_V5 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Promo_5.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V6 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Promo_6.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V7 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Promo_7.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V8 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\332nd_Promo_8.paa";
+				};
+			};
+		};
+
 	};
 };
 
@@ -178,7 +297,10 @@ class RscDisplayLoadCustom : RscStandardDisplay
 	{
 		class LoadingPicture_332nd : RscPicture 
 		{
-			idc = 1;
+			idc = 1000;
+
+			colorText[] = { 1,1,1,1 };
+
 			x = SafeZoneX;
 			y = SafeZoneY;
 			h = SafeZoneH;
@@ -188,21 +310,7 @@ class RscDisplayLoadCustom : RscStandardDisplay
 	};
 };
 
-class RscDisplayLoadMission : RscStandardDisplay 
-{
-	class controlsBackground 
-	{
-		class LoadingPicture_332nd : RscPicture 
-		{
-			idc = 1;
-			x = SafeZoneX;
-			y = SafeZoneY;
-			h = SafeZoneH;
-			w = SafeZoneW;
-			text = "\332nd_main\332nd_Banner.paa";
-		};
-	};
-};
+
 
 class RscDisplayStart : RscStandardDisplay 
 {
@@ -210,7 +318,8 @@ class RscDisplayStart : RscStandardDisplay
 	{
 		class LoadingPicture_332nd : RscPicture 
 		{
-			idc = 1;
+			idc = 1000;
+
 			x = SafeZoneX;
 			y = SafeZoneY;
 			h = SafeZoneH;
@@ -225,7 +334,10 @@ class RscDisplayClientWait : RscDisplayMPPlayers
 {
 	class LoadingPicture_332nd : RscPicture 
 	{
-		idc = 1;
+		idc = 1000;
+
+		colorText[] = { 1,1,1,1 };
+
 		x = SafeZoneX;
 		y = SafeZoneY;
 		h = SafeZoneH;
@@ -240,7 +352,10 @@ class RscDisplayClient : RscStandardDisplay
 	{
 		class LoadingPicture_332nd : RscPicture 
 		{
-			idc = 1;
+			idc = 1000;
+
+			colorText[] = { 1,1,1,1 };
+
 			x = SafeZoneX;
 			y = SafeZoneY;
 			h = SafeZoneH;
@@ -254,6 +369,7 @@ class RscDisplayConfigure
 {
 	enableDisplay = 1;
 };
+
 
 class RscDisplayMain : RscStandardDisplay 
 {
@@ -343,13 +459,17 @@ class RscDisplayMain : RscStandardDisplay
 			h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
 
 		};
+
 	};
 
 	class controlsBackground 
 	{
-		class LoadingPicture_332nd : RscPicture 
+		class LoadingPicture_332nd : RscPicture
 		{
 			idc = 1;
+
+			colorText[] = { 1,1,1,1 };
+
 			x = SafeZoneX;
 			y = SafeZoneY;
 			h = SafeZoneH;
