@@ -299,49 +299,49 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
 						rank = "PRIVATE";
-						position[] = { 0,1,0 };
+						position[] = { 2,-2,0 };
 					};
 					class Unit2
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_Medic_unit_332nd_indep_rebel_Medic";
 						rank = "PRIVATE";
-						position[] = { 0,1,0 };
+						position[] = { 2,-3,0 };
 					};
 					class Unit3
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
 						rank = "PRIVATE";
-						position[] = { 0,1,0 };
+						position[] = { 2,-4,0 };
 					};
 					class Unit4
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel_AA";
 						rank = "PRIVATE";
-						position[] = { 0,1,0 };
+						position[] = { 2,-5,0 };
 					};
 					class Unit5
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_Heavy_unit_332nd_indep_rebel_Heavy";
 						rank = "PRIVATE";
-						position[] = { 0,1,0 };
+						position[] = { 2,-6,0 };
 					};
 					class Unit6
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_unit_332nd_indep_rebel";
 						rank = "PRIVATE";
-						position[] = { 0,1,0 };
+						position[] = { 2,-7,0 };
 					};
 					class Unit7
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_unit_332nd_indep_rebel";
 						rank = "PRIVATE";
-						position[] = { 0,1,0 };
+						position[] = { 2,-8,0 };
 					};
 					//END Fireteam A
 
@@ -351,49 +351,49 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
 						rank = "PRIVATE";
-						position[] = { 1,1,0 };
+						position[] = { 1,-2,0 };
 					};
 					class Unit9
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_Medic_unit_332nd_indep_rebel_Medic";
 						rank = "PRIVATE";
-						position[] = { 1,1,0 };
+						position[] = { 1,-3,0 };
 					};
 					class Unit10
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
 						rank = "PRIVATE";
-						position[] = { 1,1,0 };
+						position[] = { 1,-4,0 };
 					};
 					class Unit11
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel_AA";
 						rank = "PRIVATE";
-						position[] = { 1,1,0 };
+						position[] = { 1,-5,0 };
 					};
 					class Unit12
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_Heavy_unit_332nd_indep_rebel_Heavy";
 						rank = "PRIVATE";
-						position[] = { 1,1,0 };
+						position[] = { 1,-6,0 };
 					};
 					class Unit13
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_unit_332nd_indep_rebel";
 						rank = "PRIVATE";
-						position[] = { 1,1,0 };
+						position[] = { 1,-7,0 };
 					};
 					class Unit14
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_unit_332nd_indep_rebel";
 						rank = "PRIVATE";
-						position[] = { 1,1,0 };
+						position[] = { 1,-8,0 };
 					};
 					//END Fireteam B
 
@@ -403,49 +403,49 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
 						rank = "PRIVATE";
-						position[] = { 1,-1,0 };
+						position[] = { -1,-2,0 };
 					};
 					class Unit16
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_Medic_unit_332nd_indep_rebel_Medic";
 						rank = "PRIVATE";
-						position[] = { 1,-1,0 };
+						position[] = { -1,-3,0 };
 					};
 					class Unit17
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -1,-4,0 };
 					};
 					class Unit18
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel_AA";
 						rank = "PRIVATE";
-						position[] = { 1,-1,0 };
+						position[] = { -1,-5,0 };
 					};
 					class Unit19
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_Heavy_unit_332nd_indep_rebel_Heavy";
 						rank = "PRIVATE";
-						position[] = { 1,-1,0 };
+						position[] = { -1,-6,0 };
 					};
 					class Unit20
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_unit_332nd_indep_rebel";
 						rank = "PRIVATE";
-						position[] = { 1,-1,0 };
+						position[] = { -1,-7,0 };
 					};
 					class Unit21
 					{
 						side = 2;
 						vehicle = "332nd_aux_rebel_unit_332nd_indep_rebel";
 						rank = "PRIVATE";
-						position[] = { 1,-1,0 };
+						position[] = { -1,-8,0 };
 					};
 					//END Fireteam C
 
@@ -455,7 +455,7 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -2,-2,0 };
 					};
 
 					class Unit23
@@ -463,7 +463,7 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_Medic_unit_332nd_indep_rebel_Medic";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -2,-3,0 };
 					};
 
 					class Unit24
@@ -471,7 +471,7 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -2,-4,0 };
 					};
 
 					class Unit25
@@ -479,7 +479,7 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -2,-5,0 };
 					};
 
 					class Unit26
@@ -487,7 +487,7 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel_AA";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -2,-6,0 };
 					};
 
 					class Unit27
@@ -495,7 +495,7 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel_AA";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -2,-7,0 };
 					};
 
 					class Unit28
@@ -503,7 +503,7 @@ class CfgGroups
 						side = 2;
 						vehicle = "332nd_aux_rebel_Heavy_unit_332nd_indep_rebel_Heavy";
 						rank = "PRIVATE";
-						position[] = { -1,-1,0 };
+						position[] = { -2,-8,0 };
 					};
 					//END Fireteam D
 
