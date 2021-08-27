@@ -8663,8 +8663,8 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15x_Scoped","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15x_Scoped","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_Valken38x","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_Valken38x","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Sniper_pack";
 		magazines[] =
