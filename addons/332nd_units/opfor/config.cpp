@@ -34,6 +34,8 @@ class CfgPatches
 			MACRO_NEW_UNIT(cisbxar,332nd_CIS_BX_Support),
 			MACRO_NEW_UNIT(cisbxat,332nd_CIS_BX_AT),
 			MACRO_NEW_UNIT(cisbxbreach,332nd_CIS_BX_BREACHER),
+			MACRO_NEW_UNIT(cisbxhybridcomm,332nd_CIS_BX_Hybrid_Commander),
+			MACRO_NEW_UNIT(cisbxhybrid,332nd_CIS_BX_Hybrid),
 
 			MACRO_NEW_UNIT(cisdroideka,332nd_CIS_HEAVY_Droideka),
 			MACRO_NEW_UNIT(cisdroidekamoveable,332nd_CIS_HEAVY_Droideka_Moveable),

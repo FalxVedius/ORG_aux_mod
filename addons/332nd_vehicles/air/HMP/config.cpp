@@ -1,7 +1,7 @@
 #include "../../../332nd_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(332_NuShuttle)
+	class MACRO_PATCH_NAME(HMP)
 	{
 		author = "Halligan";
         addonRootClass = MACRO_PATCH_NAME(air_vehicles);
@@ -11,7 +11,9 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(air,Nu,332nd_Nu_Shuttle),
+            MACRO_NEW_VEHICLE(air,CIS,HMP_CAS),
+			MACRO_NEW_VEHICLE(air,CIS,HMP_AA),
+			MACRO_NEW_VEHICLE(air,CIS,HMP_Transport),
         };
 		weapons[] = {};
 	};
@@ -53,9 +55,18 @@ class CfgVehicles
 		class Components;
 		class Turrets : Turrets
 		{
-			class MainTurret;
-			class MainTurret2;
-			class MainTurret3;
+			class MainTurret : MainTurret
+			{
+
+			};
+			class MainTurret2 : MainTurret
+			{
+
+			};
+			class MainTurret3 : MainTurret2
+			{
+
+			};
 		};
 	};
 	class ls_cis_hmp : ls_hmp_base
@@ -63,9 +74,18 @@ class CfgVehicles
 		class Components;
 		class Turrets : Turrets
 		{
-			class MainTurret;
-			class MainTurret2;
-			class MainTurret3;
+			class MainTurret : MainTurret
+			{
+
+			};
+			class MainTurret2 : MainTurret2
+			{
+
+			};
+			class MainTurret3 : MainTurret3
+			{
+
+			};
 		};
 	};
 	class ls_cis_hmp_transport : ls_hmp_base
@@ -73,9 +93,18 @@ class CfgVehicles
 		class Components;
 		class Turrets : Turrets
 		{
-			class MainTurret;
-			class MainTurret2;
-			class MainTurret3;
+			class MainTurret : MainTurret
+			{
+
+			};
+			class MainTurret2 : MainTurret2
+			{
+
+			};
+			class MainTurret3 : MainTurret3
+			{
+
+			};
 		};
 	};
 

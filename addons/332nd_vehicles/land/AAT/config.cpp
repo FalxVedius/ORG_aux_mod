@@ -69,7 +69,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -83,7 +86,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -97,7 +103,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -111,7 +120,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -125,7 +137,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -139,7 +154,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -153,7 +171,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -175,7 +196,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};
@@ -197,7 +221,10 @@ class CfgVehicles
 			{
 				class Turrets : Turrets
 				{
-					class CommanderOptics;
+					class CommanderOptics : CommanderOptics
+					{
+
+					};
 				};
 			};
 		};

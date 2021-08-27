@@ -112,6 +112,9 @@ class CfgVehicles
 		editorpreview="\3AS\3as_Laat\LAATI\data\editorpreview\3as_laat.jpg";
 		faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
+
+		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
+
 		memoryPointSupply="doplnovani";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		cargoaction[]=
