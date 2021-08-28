@@ -95,7 +95,7 @@ class CfgVehicles
 				};
 				 magazines[] =
 				{
-				MACRO_NEW_MAG(BARC_MainCannon,1000)
+				MACRO_NEW_MAG(BARC_MainCannon,300)
 				};
 	};
 
@@ -113,7 +113,7 @@ class CfgVehicles
 				};
 				 magazines[] =
 				{
-				MACRO_NEW_MAG(BARC_MainCannon,1000)
+				MACRO_NEW_MAG(BARC_MainCannon,300)
 				};
 		class Turrets : Turrets
 		{

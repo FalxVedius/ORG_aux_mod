@@ -24,7 +24,7 @@ class CfgAmmo
 	effectfly="332nd_aux_effects_green_tracer_AVI";
 	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
 	flaresize=10;
-	caliber=5;
+	caliber=3;
 	tracersEvery = 1;
 	hit=200;
 	indirectHit = 25;
@@ -40,7 +40,7 @@ class CfgAmmo
 	effectfly="332nd_aux_effects_green_tracer_AVI";
 	soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,500};
 	flaresize=10;
-	caliber=10;
+	caliber=8;
 	explosionEffects = "ATRocketExplosion";
 	tracersEvery = 1;
 	indirectHit = 12;
@@ -121,7 +121,7 @@ class CfgAmmo
 	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 	flaresize=4;
 	effectfly="332nd_aux_effects_blue_tracer_AVI";
-	caliber=1;
+	caliber=3;
 	tracersEvery = 1;
 	hit=175;
 	explosionEffects = "ImpactPlasmaExpBlue";

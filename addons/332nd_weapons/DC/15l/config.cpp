@@ -96,10 +96,10 @@ class cfgWeapons
 					"Ti"
 				};
 				thermalMode[] = {0, 1};
-                discretefov[] = {0.125,0.0625,0.0310, 0.0250};
+                discretefov[] = {0.125,0.0625};
                 discreteInitIndex = 0;
                 discreteDistanceInitIndex = 0;
-                discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000,1100,1200,1300,1400,1500,1600,1700,1800};
+                discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000};
                 distanceZoomMin=100;
                 distanceZoomMax=1800;
                
@@ -135,8 +135,8 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.16;
-			dispersion=0.0016;
+			reloadTime=0.12;
+			dispersion=0.002;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=250;

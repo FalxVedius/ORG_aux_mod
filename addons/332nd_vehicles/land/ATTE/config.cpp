@@ -16,6 +16,13 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+class Optics_Armored;
+class Optics_Gunner_MBT_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
 class CfgVehicles
  {
 
@@ -87,6 +94,19 @@ class CfgVehicles
 		 {
 		   class MainTurretTop : MainTurretTop
 		   {
+		   class OpticsIn: Optics_Gunner_MBT_01
+				{
+					class Wide: Wide
+					{
+					};
+					class Medium: Medium
+					{
+					};
+					class Narrow: Narrow
+					{
+					};
+				};
+			turretInfoType="RscOptics_MBT_01_gunner";
 			 weapons[] =
 			{
 				MACRO_NEW_WEAPON(Mass_Driver)

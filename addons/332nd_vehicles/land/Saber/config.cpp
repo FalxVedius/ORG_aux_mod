@@ -397,7 +397,7 @@ class CfgVehicles
 	
 	class MACRO_NEW_VEHICLE(Land,TX,130): 3as_saber_m1
 	{
-	    displayName = "TX-130 *WIP*";
+	    displayName = "TX-130 Saber *WIP*";
 	    scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -409,11 +409,46 @@ class CfgVehicles
 		{
 			class MainTurret_bottom : MainTurret_bottom
 			{
-
+			  memoryPointGun[]=
+				{
+					"z_gunL_muzzle",
+					"z_gunR_muzzle"
+				};
+			  weapons[] =
+			  {
+			    MACRO_NEW_WEAPON(Saber_High),
+				MACRO_NEW_WEAPON(Saber_low)
+			  };
+			  magazines[] =
+			  {
+			    MACRO_NEW_MAG(Saber_AP,25),
+				MACRO_NEW_MAG(Saber_AP,25),
+				MACRO_NEW_MAG(Saber_AP,25),
+				MACRO_NEW_MAG(Saber_AP,25),
+			    MACRO_NEW_MAG(MassDriver_HE,15),
+				MACRO_NEW_MAG(MassDriver_HE,15),
+				MACRO_NEW_MAG(Saber_Low,500),
+				MACRO_NEW_MAG(Saber_Low,500),
+				MACRO_NEW_MAG(Saber_Low,500),
+                MACRO_NEW_MAG(Saber_Low,500),
+				MACRO_NEW_MAG(Saber_Low,500)
+			  };
 			};
 			class Mainturret_top : Mainturret_top
 			{
-
+			weapons[] =
+			  {
+			    MACRO_NEW_WEAPON(Heavy_Hmg)
+			  };
+			  magazines[] =
+			  {
+			   MACRO_NEW_MAG(Heavy_HMG,150),
+			   MACRO_NEW_MAG(Heavy_HMG,150),
+			   MACRO_NEW_MAG(Heavy_HMG,150),
+			   MACRO_NEW_MAG(Heavy_HMG,150)
+			  };
+			outGunnerMayFire=1;
+			inGunnerMayFire=0;
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{

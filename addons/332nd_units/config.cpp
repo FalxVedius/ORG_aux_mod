@@ -10448,7 +10448,7 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B2 Battle Droid Base";
+		displayName = "[332nd] *WIP* B2 Battle Droid Base";
 
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HEAVY";
