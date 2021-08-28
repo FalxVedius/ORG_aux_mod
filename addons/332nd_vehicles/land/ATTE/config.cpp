@@ -80,20 +80,49 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
-
+		armor = 5000;
+		enginePower = 2500;
+		maxSpeed = 15;
 		class Turrets : Turrets
 		 {
 		   class MainTurretTop : MainTurretTop
 		   {
-
+			 weapons[] =
+			{
+				MACRO_NEW_WEAPON(Mass_Driver)
+			};
+			magazines[] =
+			{
+				MACRO_NEW_MAG(MassDriver_AP,25),
+				MACRO_NEW_MAG(MassDriver_AP,25),
+				MACRO_NEW_MAG(MassDriver_HE,15),
+				MACRO_NEW_MAG(MassDriver_HE,15)
+			};
 		   };
 		   class MainTurretFront : MainTurretFront
 		   {
-
+		   weapons[] =
+			{
+				MACRO_NEW_WEAPON(Heavy_Hmg)
+			};
+		   magazines[] =
+			{
+				MACRO_NEW_MAG(ATTE_HMG,1000),
+				MACRO_NEW_MAG(ATTE_HMG,1000),
+				MACRO_NEW_MAG(ATTE_HMG,1000)
+			};
 		   };
 		   class MainTurretBack : MainTurretBack
 		   {
-
+		   weapons[] =
+			{
+				MACRO_NEW_WEAPON(Heavy_Hmg)
+			};
+		   magazines[] =
+			{
+				MACRO_NEW_MAG(ATTE_HMG,1000),
+				MACRO_NEW_MAG(ATTE_HMG,1000)
+			};
 		   };
 	   };
 	};

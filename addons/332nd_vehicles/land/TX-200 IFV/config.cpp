@@ -68,13 +68,14 @@ class CfgVehicles
 	};
     class MACRO_NEW_VEHICLE(Land,TX,200):O_APC_Tracked_02_cannon_F
     {
-        displayName = "[332nd] TX-200";
+        displayName = "[332nd] *WIP* TX-200";
         scope = 2;
 		side=1;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_APCS";
-       hiddenSelections[] = {"camo1","camo2","camo3","CamoNet","CamoSlat", "track_l_hit", "track_r_hit"};
-	   hiddenSelectionsTextures[] = {MACRO_TX200_TEXTURES\MainBody_co.paa,MACRO_TX200_TEXTURES\LowerBody_co.paa,MACRO_TX200_TEXTURES\MainTurret_co.paa,"A3\Armor_F\Data\camonet_CSAT_HEX_Green_CO.paa","A3\armor_f\data\cage_csat_green_CO.paa"};
+      hiddenSelections[] = {"camo1","camo2","camo3","CamoNet","CamoSlat"};
+	   hiddenSelectionsTextures[] = {"\332nd_vehicles\_textures\land\TX200\MainBody_co.paa","\332nd_vehicles\_textures\land\TX200\LowerBody_co.paa","\332nd_vehicles\_textures\land\TX200\MainTurret_co.paa","",""};
+	   
 	   class Turrets: Turrets
 		{
 			class MainTurret: MainTurret

@@ -36,12 +36,18 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,AT,RT): 3AS_ATRT
     {
-        displayName = "AT-RT *WIP*";
+        displayName = "AT-RT *Test*";
         scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_TANK";
-
-
-	};
-};
+		weapons[] =
+			{
+				MACRO_NEW_WEAPON(ATRT_cannon)
+			};
+        magazines[] =
+			{
+				MACRO_NEW_MAG(ATRT_30mm,9999)
+			};
+	 };
+ };

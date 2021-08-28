@@ -74,14 +74,23 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,V,19) : 3as_V19_base
 	{
-		displayName = "V-19 *WIP*";
+		displayName = "V-19 *Test*";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_PLANE";
-
+		draconicTorqueYCoef=-0.1;
+		angleOfIndicence=0;
+		maxSpeed=2000;
+		armor=100;
+		thrustCoef[] = {3.5,4.7,4.5,5.14,5.13,5.12,5.1,4.07,4.99,4.2,3,3,3};
+		class EjectionSystem
+		{
+			EjectionSeatEnabled = 0;										//enable advanced ejection system								
+		};
 		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
-
+		airBrake=80;
+		airBrakeFrictionCoef=60;
 		weapons[] =
 		{
 			MACRO_NEW_WEAPON(V19_25mm),
@@ -101,7 +110,9 @@ class CfgVehicles
 			"Laser_Battery_F",
 			"Laser_Battery_F"
 		};
-
+		VTOLPitchInfluence = 20;
+		VTOLRollInfluence = 20;
+		VTOLYawInfluence = 22;
 		class Sounds
 		{
 			class TurbineOut
@@ -175,7 +186,7 @@ class CfgVehicles
 					6000
 				};
 				frequency = 1;
-				volume = "camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+				
 			};
 			class EngineLowInt
 			{
@@ -211,7 +222,7 @@ class CfgVehicles
 					1
 				};
 				frequency = "1";
-				volume = "(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
+				volume = "(1-camPos)*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
 			};
 
 			class ForsageOut
@@ -224,7 +235,7 @@ class CfgVehicles
 					1
 				};
 				frequency = "1";
-				volume = "(1-camPos)*(engineOn*(thrust factor[0.9, 2.0]))";
+				volume = "camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
 			};
 			
 		

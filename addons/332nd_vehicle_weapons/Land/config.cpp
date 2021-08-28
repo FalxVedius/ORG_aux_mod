@@ -17,7 +17,90 @@ class CfgPatches
 
 class CfgAmmo
 {
+    class Sh_125mm_APFSDS;
+	class MACRO_NEW_AMMO(MassDriver_AP): Sh_125mm_APFSDS
+	{
+    soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
+	cartridge = "";
+	caliber=40;
+	model = "ls_weapons_core\effects\laser_heat";
+	effectfly = "SWLW_plasma_green";
+	hit=800;
+	explosionEffects = "ATRocketExplosion";
+	tracerScale = 5;
+	indirectHit = 35;
+	indirectHitRange = 0.5;
+	};
+	class Sh_125mm_HE;
+	class MACRO_NEW_AMMO(MassDriver_HE): Sh_125mm_HE
+	{
+    soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
+	cartridge = "";
+	caliber=10;
+	explosionEffects = "ATRocketExplosion";
+	model = "ls_weapons_core\effects\laser_heat";
+	effectfly = "SWLW_plasma_green";
+	hit=300;
+	tracerScale = 5;
+	indirectHit = 80;
+	indirectHitRange = 6;
+	};
+
 	class ls_ammo_127x108_blue;
+	class MACRO_NEW_AMMO(ATRT_30mm): ls_ammo_127x108_blue
+	{
+		cartridge = "";
+		caliber=6;
+		hit=150;
+		model = "swlw_main\Effects\laser_blue.p3d";
+		tracerScale = 2.5;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		class CamShakeFire
+		{
+			power = 0;
+			duration = 0;
+			frequency = 0;
+			distance = 0;
+		};
+		class CamShakePlayerFire
+		{
+			power = 0;
+			duration = 0;
+			frequency = 0;
+		};
+		class CamShakeHit
+		{
+			power = 0;
+			duration = 0;
+			frequency = 0;
+		};
+	};
+
+	class MACRO_NEW_AMMO(20mmHMG): ls_ammo_127x108_blue
+	{
+	cartridge = "";
+	caliber=3.2;
+	hit=40;
+	tracerScale = 3.5;
+	indirectHit = 0;
+	indirectHitRange = 0;
+	};
+
+	class ls_50mm_laat_apfsds;
+	class MACRO_NEW_AMMO(BARC_40mm): ls_50mm_laat_apfsds
+	{
+	model="SWLW_main\Effects\laser_green.p3d";
+	flaresize=2;
+	caliber=10;
+	explosionEffects = "GrenadeExplosion";
+	tracersEvery = 1;
+	indirectHit = 12;
+	mass=2;
+	indirectHitRange = 1;
+	tracerscale=2;
+	};
+
 	class MACRO_NEW_AMMO(40mmAP): ls_ammo_127x108_blue
 	{
     soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
@@ -64,6 +147,64 @@ class CfgAmmo
 
 class CfgMagazines
 {
+    class 12Rnd_120mm_APFSDS_shells;
+	class MACRO_NEW_MAG(MassDriver_AP,25): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Mass Driver AP";
+		ammo=MACRO_NEW_AMMO(MassDriver_AP)
+		initSpeed = 1000;
+		tracersevery = 1;
+		count=25;
+	};
+	class MACRO_NEW_MAG(MassDriver_HE,15): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Mass Driver HE";
+		ammo=MACRO_NEW_AMMO(MassDriver_HE)
+		initSpeed = 2000;
+		tracersevery = 1;
+		count=15;
+	};
+
+	class 3AS_9999Rnd_ATRT_Mag;
+	class MACRO_NEW_MAG(ATRT_30mm,9999): 3AS_9999Rnd_ATRT_Mag
+	{
+		displayName="ATRT 30mm";
+		ammo=MACRO_NEW_AMMO(ATRT_30mm)
+		initSpeed = 1000;
+		tracersevery = 1;
+		count=99999;
+	};
+
+	class 100Rnd_127x99_mag;
+	class MACRO_NEW_MAG(ATTE_HMG,1000): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Heavy Hmg 1000rnd";
+		ammo=MACRO_NEW_AMMO(20mmHMG)
+		initSpeed = 1200;
+		tracersevery = 1;
+		count=1000;
+	};
+
+	class MACRO_NEW_MAG(BARC_MainCannon,1000): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="40mm Cannon 1000rnd";
+		ammo=MACRO_NEW_AMMO(BARC_40mm)
+		initSpeed = 800;
+		tracersevery = 1;
+		count=1000;
+	};
+
+	class MACRO_NEW_MAG(Heavy_HMG,150): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Heavy Hmg 150rnd";
+		ammo=MACRO_NEW_AMMO(20mmHMG)
+		initSpeed = 1200;
+		tracersevery = 1;
+		count=1000;
+	};
+
+
+
 	class 40Rnd_40mm_APFSDS_shells;
 	class MACRO_NEW_MAG(RX200_40mmAP,50): 40Rnd_40mm_APFSDS_shells
 	{
@@ -102,13 +243,322 @@ class CfgMagazines
 	};
 };
 
+class MGun;
 class player;
 class manual;
 class CfgWeapons
 {
+  class cannon_125mm_advanced;
+	class MACRO_NEW_WEAPON(Mass_Driver): cannon_125mm_advanced
+	{
+	    ace_overpressure_angle =0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+        ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+        ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = {"this"};
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(MassDriver_AP,25),
+			MACRO_NEW_MAG(MassDriver_HE,15)
+		};
+		modes[] = {"player","close","short","medium","far"};
+		displayName = "Mass Driver";
+		class player: player
+		{
+			magazineReloadTime = 5;
+			displayname="Full";
+			reloadTime=3;
+			dispersion=0.00005;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\Land\sounds\MassDriver.wss",
+					2.5,
+					0.95,
+					10000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1,
+				};
+			};
+		};
+				class close: player
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+		class Far: medium
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=510;
+			minRangeProbab=0.050000001;
+			midRange=700;
+			midRangeProbab=0.69999999;
+			maxRange=900;
+			maxRangeProbab=0.1;
+		};
+	};
+
+    class HMG_127;
+	class MACRO_NEW_WEAPON(Heavy_Hmg): HMG_127
+	{
+	    ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+        ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+        ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = {"this"};
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(ATTE_HMG,1000),
+			MACRO_NEW_MAG(Heavy_HMG,150)
+		};
+		modes[] = {"manual","close","short","medium","far"};
+		displayName = "Heavy Hmg";
+		class manual: manual
+		{
+			magazineReloadTime = 5;
+			displayname="Auto";
+			reloadTime=0.1;
+			dispersion=0.00005;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\Land\sounds\Hmg20mm.wss",
+					0.8,
+					0.9,
+					6000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1,
+				};
+			};
+		};
+		class close: manual
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+		class Far: medium
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=600;
+			minRange=510;
+			minRangeProbab=0.050000001;
+			midRange=700;
+			midRangeProbab=0.69999999;
+			maxRange=1200;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	};
+	
+	class BARC_Repeater;
+	class MACRO_NEW_WEAPON(BARC_40mm): BARC_Repeater
+	{
+	   	magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(BARC_MainCannon,1000)
+		};
+		displayName = "BARC Cannon";
+		modes[] = {"manual","close","short","medium"};
+		class GunParticles
+		{
+		};
+		class manual:  manual
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\LAAT_Nose.wss",
+					1,
+					1,
+					6000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.15;
+			dispersion=0;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.050000001;
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	class 3AS_ATRT_Weapon_F;
+	class MACRO_NEW_WEAPON(ATRT_cannon): 3AS_ATRT_Weapon_F
+	{
+	    ace_overpressure_angle =0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+        ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+        ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = {"this"};
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(ATRT_30mm,9999)
+		};
+		displayName = "ATRT Cannon";
+		//class FullAuto: FullAuto
+		//{
+		//	magazineReloadTime = 2;
+		//	displayname="Full";
+		//	reloadTime=0.35;
+		//	dispersion=0.00005;
+		//	sounds[]=
+		//	{
+		//		"StandardSound"
+		//	};
+		//	class StandardSound
+		//	{
+		//		begin1[]=
+		//		{
+		//			"3AS\3AS_Static\data\Sounds\FieldCannon\Fieldcannon.ogg",
+		//			25,
+		//			2.5,
+		//			4000
+		//		};
+		//		soundBegin[]=
+		//		{
+		//			"begin1",
+		//			1,
+		//		};
+		//	};
+		//};
+	};
+
 	class autocannon_40mm_CTWS;
 	class MACRO_NEW_WEAPON(RX200_40mm): autocannon_40mm_CTWS
 	{
+	    ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+        ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+        ace_overpressure_damage = 0;  // Damage multiplier
 		muzzles[] = {"this"};
 		magazineWell[] = {};
 		magazines[] = {

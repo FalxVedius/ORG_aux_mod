@@ -7,7 +7,8 @@ class CfgPatches
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(land_vehicles)
+			MACRO_PATCH_NAME(land_vehicles),
+			MACRO_PATCH_NAME(land_weapons)
 		};
 		requiredVersion = 0.1;
 		units[] = {
@@ -88,7 +89,14 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_arfbase_unit_332nd_arfbase_trooper";
-
+		weapons[] =
+				{
+				MACRO_NEW_WEAPON(BARC_40mm)
+				};
+				 magazines[] =
+				{
+				MACRO_NEW_MAG(BARC_MainCannon,1000)
+				};
 	};
 
 	class MACRO_NEW_VEHICLE(Land,BARC,Sidecar) : 3AS_BarcSideCar
@@ -99,14 +107,29 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_arfbase_unit_332nd_arfbase_trooper";
-
+		weapons[] =
+				{
+				MACRO_NEW_WEAPON(BARC_40mm)
+				};
+				 magazines[] =
+				{
+				MACRO_NEW_MAG(BARC_MainCannon,1000)
+				};
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
 			{
-
+			  weapons[] =
+				{
+				MACRO_NEW_WEAPON(Heavy_Hmg)
+				};
+				 magazines[] =
+				{
+				MACRO_NEW_MAG(Heavy_HMG,150),
+				MACRO_NEW_MAG(Heavy_HMG,150),
+				MACRO_NEW_MAG(Heavy_HMG,150)
+				};
 			};
 		};
-
 	};
 };

@@ -76,9 +76,9 @@ class CfgVehicles
 		  scopeCurator = 2;
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
-
+		  armor = 75;
 		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
-
+		  driverCanEject = 0;
 		  weapons[] = 
 		  {
 			  MACRO_NEW_WEAPON(Vulture_cannon),
@@ -93,6 +93,10 @@ class CfgVehicles
 			  "120Rnd_CMFlare_Chaff_Magazine",
 			  "120Rnd_CMFlare_Chaff_Magazine",
 		  };
+		  class EjectionSystem
+		{
+			EjectionSeatEnabled = 0;										//enable advanced ejection system								
+		};
 
 		  class Sounds
 		{	
@@ -287,10 +291,11 @@ class CfgVehicles
 	{
 		  displayName = "CAS Vulture Droid";
 		  scope = 2;
+		  armor = 75;
 		  scopeCurator = 2;
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
-
+		  driverCanEject = 0;
 		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
 
 		  weapons[] =
@@ -307,7 +312,10 @@ class CfgVehicles
 			  "120Rnd_CMFlare_Chaff_Magazine",
 			  "120Rnd_CMFlare_Chaff_Magazine",
 		  };
-
+		    class EjectionSystem
+		{
+			EjectionSeatEnabled = 0;										//enable advanced ejection system								
+		};
 		   class Sounds
 		{	
 			class EngineHighInt
@@ -502,9 +510,13 @@ class CfgVehicles
 		  scopeCurator = 2;
 		  faction = "EdCat_332ndCIS";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
-
+		  driverCanEject = 0;
+		  armor = 75;
 		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
-
+		    class EjectionSystem
+		{
+			EjectionSeatEnabled = 0;										//enable advanced ejection system								
+		};
 		  weapons[] =
 		  {
 			  MACRO_NEW_WEAPON(Vulture_cannon),

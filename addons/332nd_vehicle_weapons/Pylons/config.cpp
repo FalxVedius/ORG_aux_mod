@@ -189,7 +189,7 @@ class CfgMagazines
 		displayName="Proton Torpedo";
 		model = "\a3\Weapons_F_Orange\DynamicLoadout\PylonMissile_1x_BombCluster_01_F.p3d";
 		descriptionshort="Proton Torpedo";
-		pylonWeapon = "332nd_aux_weapon_AGM_Pylon";
+		pylonWeapon = "332nd_aux_weapon_ProtonTorpedo_Pylon";
 		displayNameShort="Proton Torpedo";
 		tracersEvery=1;
 		initspeed=50;
@@ -223,11 +223,22 @@ class CfgWeapons
 		weaponLockDelay = 0.5;
 		magazines[] = {
 			 MACRO_NEW_MAG(Pylon_AGM_Med,3),
-			 MACRO_NEW_MAG(Pylon_ProtonTorpedo,1)
 		};
 		displayName = "AGM";
 		lockAcquire = 1;
 	};
+
+	class MACRO_NEW_WEAPON(ProtonTorpedo_Pylon): MACRO_NEW_WEAPON(AGM_Pylon)
+	{
+		magazineWell[] = {};
+		weaponLockDelay = 0.5;
+		magazines[] = {
+			 MACRO_NEW_MAG(Pylon_ProtonTorpedo,1)
+		};
+		displayName = "Torpedo";
+		lockAcquire = 1;
+	};
+
 	class missiles_ASRAAM;
 	class MACRO_NEW_WEAPON(AA_Pylon):  missiles_ASRAAM
 	{

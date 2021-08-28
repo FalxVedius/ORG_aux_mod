@@ -136,12 +136,15 @@ class CfgAmmo
 	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 	flaresize=4;
 	caliber=3;
+	maxLeadSpeed = 2000;
+	allowAgainstInfantry=1;
 	tracersEvery = 1;
+	cost = 30;
 	hit=120;
 	explosionEffects = "ATRocketExplosion";
 	indirectHit =6;
 	mass=2;
-	indirectHitRange = 0.5;
+	indirectHitRange = 0.1;
 	tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(LE_30mm): ls_50mm_laat_he
@@ -255,7 +258,7 @@ class CfgMagazines
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(ARC LOW)
 		descriptionshort="Vulture main cannon";
-		initSpeed = 1000;
+		initSpeed = 800;
 		displayNameShort="High Energy";
 		ammo=MACRO_NEW_AMMO(Vulture_30mm)
 		tracersEvery = 1;
@@ -275,7 +278,7 @@ class CfgMagazines
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(Nu 20mm)
 		descriptionshort="25mm";
-		initSpeed = 600;
+		initSpeed = 500;
 		displayNameShort="25mm Autocannon";
 		ammo=MACRO_NEW_AMMO(Air_25mm)
 		tracersEvery = 1;
@@ -362,6 +365,7 @@ class CfgWeapons
 		magazines[] = {
 			MACRO_NEW_MAG(ARC170_Low,600)
 		};
+		ballisticsComputer = 1;
 		modes[] = {"manual"};
 		displayName = "Cannon Low Energy";
 		class manual: LowROF
@@ -618,7 +622,7 @@ class CfgWeapons
 			burst=1;
 			magazineReloadTime=6;
 			autoReload=1;
-			reloadTime=0.1;
+			reloadTime=0.08;
 			dispersion=0.002;
 			sounds[]=
 			{
@@ -685,7 +689,7 @@ class CfgWeapons
 		magazines[] = {
 			MACRO_NEW_MAG(Vulture_30mm,1000)
 		};
-		modes[] = {"manual"};
+		modes[] = {"manual","close","short","medium"};
 		ballisticsComputer = 1;
 		displayName = "Vulture Main Cannon";
 		class manual: LowROF
@@ -718,8 +722,10 @@ class CfgWeapons
 		};
 		class close: manual
 		{
-			burst=10;
-			aiRateOfFire=0.1375;
+		    aiDispersionCoefX=2.0
+			aiDispersionCoefX=2.0
+			burst=50;
+			aiRateOfFire=0.1;
 			aiRateOfFireDistance=50;
 			minRange=10;
 			minRangeProbab=0.050000001;
@@ -731,8 +737,10 @@ class CfgWeapons
 		};
 		class short: close
 		{
-			burst=10;
-			aiRateOfFire=0.1375;
+		    aiDispersionCoefX=2.0
+			aiDispersionCoefX=2.0
+			burst=30;
+			aiRateOfFire=0.1;
 			aiRateOfFireDistance=300;
 			minRange=50;
 			minRangeProbab=0.050000001;
@@ -743,14 +751,16 @@ class CfgWeapons
 		};
 		class medium: close
 		{
-			burst=10;
-			aiRateOfFire=0.1375;
+		    aiDispersionCoefX=2.0
+			aiDispersionCoefX=2.0
+			burst=30;
+			aiRateOfFire=0.1;
 			aiRateOfFireDistance=600;
 			minRange=200;
 			minRangeProbab=0.050000001;
 			midRange=300;
 			midRangeProbab=0.69999999;
-			maxRange=500;
+			maxRange=2000;
 			maxRangeProbab=0.1;
 		};
 	};
@@ -846,7 +856,7 @@ class CfgWeapons
 			burst=1;
 			magazineReloadTime=6;
 			autoReload=1;
-			reloadTime=0.10;
+			reloadTime=0.08;
 			dispersion=0.00002;
 			sounds[]=
 			{
