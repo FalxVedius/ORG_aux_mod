@@ -81,46 +81,47 @@ if (isServer) then {
 		
 				case (_rndSound == 0): 
 				{
-					[_obj,["B1_EnemyKilled_1_332nd", 150, 0.8]] remoteExec ["say3D",0,true];
+					playSound3D ["WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", _obj, false, getPosASL _obj, 5, 0.8, 125];
+					
 				};
 				case (_rndSound == 1): 
 				{
-					[_obj,["B1_EnemyKilled_2_332nd", 150, 0.8]] remoteExec ["say3D",0,true];
+					playSound3D ["WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", _obj, false, getPosASL _obj, 5, 0.8, 125];
 				};
 				case (_rndSound == 2): 
 				{
-					[_obj,["BX_EnemyDown_1_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyDown_02.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 				case (_rndSound == 3): 
 				{
-					[_obj,["BX_EnemyDown_2_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyDown_08.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 				case (_rndSound == 4): 
 				{
-					[_obj,["BX_EnemyDown_3_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyDown_09.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 				case (_rndSound == 5): 
 				{
-					[_obj,["BX_EnemyDown_4_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyDown_25.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 				case (_rndSound == 6): 
 				{
-					[_obj,["BX_EnemyHit_1_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyHit_02.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 				case (_rndSound == 7): 
 				{
-					[_obj,["BX_EnemyHit_2_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyHit_03.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 				case (_rndSound == 8): 
 				{
-					[_obj,["BX_EnemyHit_3_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyHit_20.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 				case (_rndSound == 9): 
 				{
-					[_obj,["BX_EnemyHit_4_332nd", 150, 1]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\EnemyHit_24.wav", _obj, false, getPosASL _obj, 5, 1, 125];
 				};
 			
-				default { [_obj,["B1_EnemyKilled_1_332nd", 150, 0.8]] remoteExec ["say3D",0,true]; };
+				default { playSound3D ["WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", _obj, false, getPosASL _obj, 5, 0.8, 125]; };
 			};
 		};
 	

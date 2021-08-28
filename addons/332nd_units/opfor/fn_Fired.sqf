@@ -17,18 +17,18 @@ if (_muzzle == "332nd_FRAG_Muzzle" || _muzzle == "332nd_HEDP_Muzzle") then
 		
 				case (_rndSound == 0): 
 				{
-					[_obj,["BX_ThrowingGrenade_1_332nd", 200, 1.2]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\ThrowingGrenade_03.wav", _obj, false, getPosASL _obj, 5, 1.2, 125];
 				};
 				case (_rndSound == 1): 
 				{
-					[_obj,["BX_ThrowingGrenade_2_332nd", 200, 1.2]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\ThrowingGrenade_05.wav", _obj, false, getPosASL _obj, 5, 1.2, 125];
 				};
 				case (_rndSound == 2): 
 				{
-					[_obj,["BX_ThrowingGrenade_3_332nd", 200, 1.2]] remoteExec ["say3D",0,true];
+					playSound3D ["332nd_units\opfor\VoiceSounds\ThrowingGrenade_06.wav", _obj, false, getPosASL _obj, 5, 1.2, 125];
 				};
 			
-				default { [_obj,["BX_ThrowingGrenade_1_332nd", 200, 1.2]] remoteExec ["say3D",0,true]; };
+				default { playSound3D ["332nd_units\opfor\VoiceSounds\ThrowingGrenade_03.wav", _obj, false, getPosASL _obj, 5, 1.2, 125]; };
 			};
 	};
 	

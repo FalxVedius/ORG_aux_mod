@@ -164,22 +164,22 @@ switch (true) do {
 		
 			case (_rndSound == 0): 
 			{
-				[friendlyUnitPos,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
 			};
 			case (_rndSound == 1): 
 			{
-				[friendlyUnitPos,["BX_FriendlyDown_2_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_05.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
 			};
 			case (_rndSound == 2): 
 			{
-				[friendlyUnitPos,["BX_FriendlyDown_3_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_06.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
 			};
 			case (_rndSound == 3): 
 			{
-				[friendlyUnitPos,["BX_FriendlyDown_4_332nd", 150, 1.2]] remoteExec ["say3D",0,true];
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_21.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
 			};
 		
-			default { [friendlyUnitPos,["BX_FriendlyDown_1_332nd", 150, 1.2]] remoteExec ["say3D",0,true]; };
+			default { playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125]; };
 		};
 	};
 	
