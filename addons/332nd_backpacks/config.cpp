@@ -127,15 +127,7 @@ class CfgVehicles
 	class JLTS_Clone_backpack_RTO;
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_base): JLTS_Clone_backpack_RTO
 	{
-		displayName = "[332nd] RTO Pack";
-		maximumLoad = 280;
-
-		editorCategory = "EdCat_332nd_Props";
-		editorSubcategory = "EdSubcat_332nd_PACKS";
-	}
-	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_JTAC): JLTS_Clone_backpack_RTO
-	{
-		displayName = "[332nd] RTO (JTAC) Pack";
+		displayName = "[332nd] JTAC Pack";
 		maximumLoad = 450;
 
 		editorCategory = "EdCat_332nd_Props";
@@ -188,14 +180,28 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
 	class SWLB_clone_bag_leg;
-	class MACRO_NEW_BACKPACK(blufor,332nd_rifleman_pack): SWLB_clone_bag_leg
+	class MACRO_NEW_BACKPACK(blufor,332nd_rifleman_pack) : SWLB_clone_bag_leg
 	{
 		displayName = "[332nd] Rifleman Pack";
 		maximumLoad = 32;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
-	}	
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_hidden_pack) : SWLB_clone_bag_leg
+	{
+		displayName = "[332nd] Rifleman Pack (Hidden)";
+		maximumLoad = 32;
+
+		hiddenSelectionsTextures[] =
+		{
+			""
+		};
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+		
 
 	//Rebel player bag
 

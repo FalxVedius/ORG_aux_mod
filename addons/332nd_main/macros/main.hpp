@@ -355,6 +355,16 @@
 				uniformClass = MACRO_NEW_UNIT(cisbxdiplo,uniformClassname);\
 			};\
 		};
+	#define MACRO_NEW_CISB2_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(cisb2,classname): MACRO_NEW_UNIFORM(cisb2,base)\
+		{\
+			displayName = [332nd] CIS B2 Battle droid ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(cisb2,uniformClassname);\
+			};\
+		};
 	// --- End Opfor Uniforms ---
 
 // ---- START REBEL UNIFORM ----
@@ -824,6 +834,22 @@
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
 		}
+	#define MACRO_NEW_CISBXHYBRIDCOMM_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxhybridcomm,classname): MACRO_NEW_UNIT(cisbxhybridcomm,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,uniformClassname);\
+		}
+	#define MACRO_NEW_CISBXHYBRID_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisbxhybrid,classname): MACRO_NEW_UNIT(cisbxhybrid,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
 	#define MACRO_NEW_CISBXAT_UNIT(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIT(cisbxat,classname): MACRO_NEW_UNIT(cisbxat,base)\
 		{\
@@ -847,6 +873,14 @@
 			scope = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisbx,uniformClassname);\
+		}
+	#define MACRO_NEW_CISB2_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb2,classname): MACRO_NEW_UNIT(cisb2,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb2,uniformClassname);\
 		}
 	#define MACRO_NEW_CISDROIDEKA_UNIT(classname,displayname)\
 		class MACRO_NEW_UNIT(cisdroideka,classname): MACRO_NEW_UNIT(cisdroideka,base)\

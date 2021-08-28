@@ -1,5 +1,4 @@
 #include "../../../332nd_main/macros/main.hpp" // my config macro lib
-#define MACRO_TX200_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\land\GAT
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(GAT)
@@ -65,63 +64,90 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_CIS_GAT_base_F : 3AS_GAT_base_F
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_CIS_GAT_F : 3AS_CIS_GAT_base_F
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_GAT : 3AS_CIS_GAT_base_F
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_GAT_Olive : 3AS_GAT
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_GAT_Light_Base : 3AS_GAT_base_F
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_GAT_Light_base_F : 3AS_GAT_Light_Base
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_GAT_Light : 3AS_GAT_Light_base_F
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 	class 3AS_GAT_Light_Olive : 3AS_GAT_Light
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret;
+			class MainTurret : MainTurret
+			{
+
+			};
 		};
 	};
 

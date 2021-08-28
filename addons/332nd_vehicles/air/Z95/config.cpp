@@ -64,19 +64,10 @@ class CfgVehicles
 	};
 	class Plane_Fighter_03_base_F : Plane_Base_F
 	{
-		class Turrets
-		{
-			class MainTurret;
-		};
 	};
 	class Plane_Fighter_03_dynamicLoadout_base_F : Plane_Fighter_03_base_F
 	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-			};
-		};
+	
 		class Components : Components
 		{
 			class TransportPylonsComponent
@@ -89,31 +80,93 @@ class CfgVehicles
 	class 3as_Z95_base : Plane_Fighter_03_dynamicLoadout_base_F
 	{
 		class Components : Components
-		{
-			
+		{	
 		};
 	};
 
 	class MACRO_NEW_VEHICLE(air,Z,95) : 3as_Z95_base
 	{
-		displayName = "Z-95 *WIP*";
+		displayName = "Z-95 *TEST*";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_PLANE";
-
+		hiddenselectionstextures[]=
+		{
+			"332nd_vehicles\_textures\air\Z95\332_body_co.paa",
+			"3AS\3as_Z95\Data\cockpit_co.paa",
+			"3AS\3as_saber\data\glass\glass_ca"
+		};
 		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
-
+		class EjectionSystem
+		{
+			EjectionSeatEnabled = 0;										//enable advanced ejection system								
+		};
+		VTOLPitchInfluence = 15;
+		VTOLRollInfluence = 15;
+		VTOLYawInfluence = 17;
+		acceleration=1000;
+		htMin=60;
+		htMax=1800;
+		afMax=200;
+		mfMax=100;
+		mFact=0;
+		tBody=0;
+		radartype=4;
+		lockdetectionsystem="2 + 8 + 4";
+		incommingmissliedetectionsystem=16;
+		maxSpeed=1600;
+		landingAoa="6 * 3.1415 / 180";
+		landingSpeed=215;
+		stallSpeed=190;
+		stallWarningTreshold=0.1;
+		armor=150;
+		armorStructured=1;
+		envelope[] = {0,0.01,0.2,4,6,7.6,8.4,9.2,9.4,9.6,9.7,9.8,8,1};
+		draconicForceXCoef=7;
+		draconicForceYCoef=4;
+		draconicForceZCoef=1;
+		draconicTorqueXCoef=2.0999999;
+		draconicTorqueYCoef=-0.4;
+		angleOfIndicence=0;
+		airFriction0[]={40,20,10};
+		airFriction1[]={40,20,10};
+		airFriction2[]={40,20,10};
+		altNoForce=20000;
+		altFullForce=20000;
+		elevatorCoef[]={1};
+		elevatorSensitivity=2;
+		elevatorControlsSensitivityCoef=6;
+		aileronCoef[]={1};
+		aileronSensitivity=2;
+		aileronControlsSensitivityCoef=4;
+		rudderCoef[]={3.6,4,5,5.9000001,4.8,4,3};
+		rudderInfluence=0.89999998;
+		rudderControlsSensitivityCoef=2;
+		thrustCoef[] = {2.5,2.7,3.5,3.14,3.13,3.12,3.1,3.07,2.99,2.2,2,2,2};
+		irScanRangeMin=10;
+		irScanRangeMax=10000;
+		irScanToEyeFactor=8;
+		fuelCapacity=2000;
+		wheelSteeringSensitivity=1.5;
+		maxOmega=2000;
+		airBrake=150;
+		airBrakeFrictionCoef=60;
+		flaps=1;
+		flapsFrictionCoef=0.31999999;
+		gearsUpFrictionCoef=0.60000002;
+		airFrictionCoefs0[]={0,0,0};
+		airFrictionCoefs1[]={0.1,0.5,0.0066};
+		airFrictionCoefs2[]={0.001,0.0049999999,6.8000001e-005};
 		weapons[] =
 		{
-			"3as_Z95_Light_Cannon",
+			MACRO_NEW_WEAPON(Z95_30mm),
 			"CMFlareLauncher",
 			"Laserdesignator_pilotCamera"
 		};
 		magazines[] =
 		{
-			"3as_Z95_1000Rnd_Light_shells",
-			"3as_Z95_1000Rnd_Light_shells",
+		    MACRO_NEW_MAG(Z95_30mm,1000),
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries",
 			"120Rnd_CMFlare_Chaff_Magazine",
@@ -122,216 +175,161 @@ class CfgVehicles
 			"120Rnd_CMFlare_Chaff_Magazine"
 		};
 
+		class Sounds
+		{
+			class TurbineOut
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineExt.wss",
+					1,
+					0.5,
+					1000
+				};
+				frequency = "rpm * (thrust/4 + 0.5)";
+				volume = "camPos * 2 * rpm * thrust * (rpm factor[0, 0.4])";
+			};
+			class TurbineHighInt
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighInt.wss",
+					0.1,
+					1,
+					2500
+				};
+				frequency = "1.7 * (rpm factor[-5,1])";
+				volume = "0.8 * (1-camPos) * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
+			};
+			class TurbineHighOut
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighExt.wss",
+					1,
+					1,
+					4000
+				};
+				frequency = "1.7 * (rpm factor[-5,1])";
+				volume = "0.8 * camPos * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
+			};
+			class TurbineInt
+			{
+				sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95TurbineInt.wss",
+					0.1,
+					1,
+					2100
+				};
+				frequency = "rpm * (thrust/4 + 0.5)";
+				volume = "(1-camPos) * 2 * rpm * thrust * (rpm factor[0, 0.4])";
+			};
+			
+			class EngineHighInt
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineHighInt.wss",
+					3,
+					1,
+					2100
+				};
+				frequency = 1;
+				volume = "(1-camPos)*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			class EngineHighOut
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineHighExt.wss",
+					4,
+					1,
+					4000
+				};
+				frequency = 1;
+				volume = "camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			class EngineLowInt
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineLowInt.wss",
+					1,
+					2,
+					1200
+				};
+				frequency = "1.0 min (rpm + 0.5)";
+				volume = "(1-camPos)*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+			};
+			class EngineLowOut
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95EngineLowExt.wss",
+					2,
+					1,
+					1000
+				};
+				frequency = "1.0 min (rpm + 0.5)";
+				volume = "camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
+			};
+			
+			class ForsageIn
+			{
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95ForsageInt.wss",
+					0.5,
+					1,
+					2000
+				};
+				frequency = "1";
+				volume = "(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
+			};
 
+			class ForsageOut
+			{
+			cone[] = {20,15,5,3};
+			sound[]=
+				{
+					"332nd_vehicles\air\sounds\Z95\Z95ForsageExt.wss",
+					3.5,
+					0.95,
+				};
+				frequency = "1";
+				volume = "engineOn*camPos*(thrust factor[0.6, 1.0])";
+			};
+			
+		
+			
+			class RainExt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_ext",
+					1.77828,
+					1,
+					100
+				};
+				frequency=1;
+				volume="camPos * rain * (speed factor[50, 0])";
+			};
+			class RainInt
+			{
+				sound[]=
+				{
+					"A3\Sounds_F\vehicles\noises\rain1_int",
+					1,
+					1,
+					100
+				};
+				frequency=1;
+				volume="(1-camPos) * rain * (speed factor[50, 0])";
+			};
+		};
 		class Components : Components
 		{
-			class SensorsManagerComponent
-			{
-				class Components
-				{
-					class IRSensorComponent : SensorTemplateIR
-					{
-						class AirTarget
-						{
-							minRange = 1000;
-							maxRange = 10000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = 1;
-						};
-						class GroundTarget
-						{
-							minRange = 1000;
-							maxRange = 10000;
-							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef = 1;
-						};
-						angleRangeHorizontal = 360;
-						angleRangeVertical = 360;
-						maxTrackableSpeed = 400;
-						componentType = "IRSensorComponent";
-						typeRecognitionDistance = 2000;
-						maxFogSeeThrough = 0.995;
-						color[] = { 1,0,0,1 };
-						allowsMarking = 1;
-						groundNoiseDistanceCoef = -1;
-						maxGroundNoiseDistance = -1;
-						minSpeedThreshold = 0;
-						maxSpeedThreshold = 0;
-						animDirection = "";
-						aimDown = 0;
-						minTrackableSpeed = -1e+010;
-						minTrackableATL = -1e+010;
-						maxTrackableATL = 1e+010;
-					};
-					class VisualSensorComponent : SensorTemplateVisual
-					{
-						class AirTarget
-						{
-							minRange = 30000;
-							maxRange = 30000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = 1;
-						};
-						class GroundTarget
-						{
-							minRange = 30000;
-							maxRange = 30000;
-							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef = 1;
-						};
-						angleRangeHorizontal = 360;
-						angleRangeVertical = 360;
-						maxTrackableSpeed = 100;
-						aimDown = 1;
-						animDirection = "";
-						componentType = "VisualSensorComponent";
-						nightRangeCoef = 0;
-						maxFogSeeThrough = 0.94;
-						color[] = { 1,1,0.5,0.80000001 };
-						typeRecognitionDistance = 2000;
-						allowsMarking = 1;
-						groundNoiseDistanceCoef = -1;
-						maxGroundNoiseDistance = -1;
-						minSpeedThreshold = 0;
-						maxSpeedThreshold = 0;
-						minTrackableSpeed = -1e+010;
-						minTrackableATL = -1e+010;
-						maxTrackableATL = 1e+010;
-					};
-					class PassiveRadarSensorComponent : SensorTemplatePassiveRadar
-					{
-						componentType = "PassiveRadarSensorComponent";
-						class AirTarget
-						{
-							minRange = 45000;
-							maxRange = 45000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						class GroundTarget
-						{
-							minRange = 20000;
-							maxRange = 20000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						typeRecognitionDistance = 12000;
-						angleRangeHorizontal = 360;
-						angleRangeVertical = 360;
-						groundNoiseDistanceCoef = -1;
-						maxGroundNoiseDistance = -1;
-						minSpeedThreshold = 0;
-						maxSpeedThreshold = 0;
-						animDirection = "";
-						aimDown = 0;
-						color[] = { 0.5,1,0.5,0.5 };
-						minTrackableSpeed = -1e+010;
-						maxTrackableSpeed = 1e+010;
-						minTrackableATL = -1e+010;
-						maxTrackableATL = 1e+010;
-						allowsMarking = 0;
-					};
-					class ActiveRadarSensorComponent : SensorTemplateActiveRadar
-					{
-						class AirTarget
-						{
-							minRange = 30000;
-							maxRange = 30000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						class GroundTarget
-						{
-							minRange = 8000;
-							maxRange = 8000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						typeRecognitionDistance = 8000;
-						angleRangeHorizontal = 180;
-						angleRangeVertical = 180;
-						groundNoiseDistanceCoef = 0.2;
-						componentType = "ActiveRadarSensorComponent";
-						maxGroundNoiseDistance = 200;
-						minSpeedThreshold = 30;
-						maxSpeedThreshold = 40;
-						color[] = { 0,1,1,1 };
-						allowsMarking = 1;
-						animDirection = "";
-						aimDown = 0;
-						minTrackableSpeed = -1e+010;
-						maxTrackableSpeed = 1e+010;
-						minTrackableATL = -1e+010;
-						maxTrackableATL = 1e+010;
-					};
-					class LaserSensorComponent : SensorTemplateLaser
-					{
-						componentType = "LaserSensorComponent";
-						class AirTarget
-						{
-							minRange = 15000;
-							maxRange = 15000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						class GroundTarget
-						{
-							minRange = 15000;
-							maxRange = 15000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						angleRangeHorizontal = 180;
-						angleRangeVertical = 180;
-						typeRecognitionDistance = 0;
-						color[] = { 1,1,1,0 };
-						allowsMarking = 1;
-						groundNoiseDistanceCoef = -1;
-						maxGroundNoiseDistance = -1;
-						minSpeedThreshold = 0;
-						maxSpeedThreshold = 0;
-						animDirection = "";
-						aimDown = 0;
-						minTrackableSpeed = -1e+010;
-						maxTrackableSpeed = 1e+010;
-						minTrackableATL = -1e+010;
-						maxTrackableATL = 1e+010;
-					};
-					class NVSensorComponent : SensorTemplateNV
-					{
-						componentType = "NVSensorComponent";
-						color[] = { 1,1,1,0 };
-						typeRecognitionDistance = 0;
-						class AirTarget
-						{
-							minRange = 8000;
-							maxRange = 8000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						class GroundTarget
-						{
-							minRange = 8000;
-							maxRange = 8000;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
-						};
-						angleRangeHorizontal = 90;
-						angleRangeVertical = 90;
-						allowsMarking = 1;
-						groundNoiseDistanceCoef = -1;
-						maxGroundNoiseDistance = -1;
-						minSpeedThreshold = 0;
-						maxSpeedThreshold = 0;
-						animDirection = "";
-						aimDown = 0;
-						minTrackableSpeed = -1e+010;
-						maxTrackableSpeed = 1e+010;
-						minTrackableATL = -1e+010;
-						maxTrackableATL = 1e+010;
-					};
-				};
-			};
 			class TransportPylonsComponent
 			{
 				UIPicture = "3as\3as_z95\data\plane_z95_pylon_ca.paa";
@@ -341,11 +339,11 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"B_BIM9X_RAIL"
+							"332_C_Pylon"
 						};
-						attachment = "3as_PylonRack_ARC_6Rnd_Missile_AGM";
+						attachment = MACRO_NEW_MAG(Pylon_AA_Med,3);
 						priority = 10;
-						maxweight = 300;
+						maxweight = 10000;
 						UIposition[] = { 0.60000002,0.44999999 };
 					};
 					class pylons2 : pylons1
@@ -357,16 +355,11 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"B_BIM9X_RAIL",
-							"B_BIM9X_DUAL_RAIL",
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"ARC_AGM_PYLON"
+							"332_A_Pylon"
 						};
-						attachment = "PylonRack_Missile_AMRAAM_D_x2";
+						attachment = MACRO_NEW_MAG(Pylon_AA_Med,3);
 						priority = 9;
-						maxweight = 2500;
+						maxweight = 10000;
 						UIposition[] = { 0.55000001,0.34999999 };
 					};
 					class pylons4 : pylons3
@@ -378,18 +371,11 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"B_BIM9X_RAIL",
-							"B_BIM9X_DUAL_RAIL",
-							"B_AMRAAM_D_RAIL",
-							"B_AMRAAM_D_DUAL_RAIL",
-							"B_AGM65_RAIL",
-							"B_AGM65_DUAL_RAIL",
-							"B_HARM_RAIL",
-							"ARC_AGM_PYLON"
+							"332_B_Pylon"
 						};
-						attachment = "PylonRack_Missile_AMRAAM_D_x2";
+						attachment = MACRO_NEW_MAG(Pylon_AGM_Med,3);
 						priority = 7;
-						maxweight = 5000;
+						maxweight = 10000;
 						UIposition[] = { 0.5,0.25 };
 					};
 					class pylons6 : pylons5
@@ -401,128 +387,66 @@ class CfgVehicles
 					{
 						hardpoints[] =
 						{
-							"z95_CANON_PYLON"
+							"332_B_Pylon"
 						};
 						priority = 5;
-						attachment = "3as_PylonWeapon_Z95_240Rnd_Heavy_Shells";
-						maxweight = 4000;
+						attachment = MACRO_NEW_MAG(Pylon_AGM_Med,3);
+						maxweight = 10000;
 						UIposition[] = { 0.32499999,0.15000001 };
 					};
 				};
-				class presets
-				{
-					class empty
-					{
-						displayName = "$STR_empty";
-						attachment[] = {};
-					};
-					class Default
-					{
-						displayName = "$STR_vehicle_default";
-						attachment[] =
-						{
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
-						};
-					};
-					class AA
-					{
-						displayName = "$STR_A3_cfgmagazines_titan_aa_dns";
-						attachment[] =
-						{
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"PylonRack_Missile_AMRAAM_D_x2",
-							"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
-						};
-					};
-					class CAS
-					{
-						displayName = "$STR_A3_CAS_PRESET_DISPLAYNAME";
-						attachment[] =
-						{
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonRack_ARC_6Rnd_Missile_AGM",
-							"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
-						};
-					};
-				};
+
+				//class presets
+				//{
+				//	class empty
+				//	{
+				//		displayName = "$STR_empty";
+				//		attachment[] = {};
+				//	};
+				//	class Default
+				//	{
+				//		displayName = "$STR_vehicle_default";
+				//		attachment[] =
+				//		{
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
+				//		};
+				//	};
+				//	class AA
+				//	{
+				//		displayName = "$STR_A3_cfgmagazines_titan_aa_dns";
+				//		attachment[] =
+				//		{
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"PylonRack_Missile_AMRAAM_D_x2",
+				//			"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
+				//		};
+				//	};
+				//	class CAS
+				//	{
+				//		displayName = "$STR_A3_CAS_PRESET_DISPLAYNAME";
+				//		attachment[] =
+				//		{
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonRack_ARC_6Rnd_Missile_AGM",
+				//			"3as_PylonWeapon_Z95_240Rnd_Heavy_Shells"
+				//		};
+				//	};
+				//};
 			};
-			class VehicleSystemsDisplayManagerComponentLeft : DefaultVehicleSystemsDisplayManagerLeft
-			{
-				defaultDisplay = "EmptyDisplay";
-				class Components
-				{
-					class EmptyDisplay
-					{
-						componentType = "EmptyDisplayComponent";
-					};
-					class MinimapDisplay
-					{
-						componentType = "MinimapDisplayComponent";
-						resource = "RscCustomInfoMiniMap";
-					};
-					class VehicleDriverDisplay
-					{
-						componentType = "TransportFeedDisplayComponent";
-						source = "Driver";
-					};
-					class VehicleMissileDisplay
-					{
-						componentType = "TransportFeedDisplayComponent";
-						source = "Missile";
-					};
-					class SensorDisplay
-					{
-						componentType = "SensorsDisplayComponent";
-						range[] = { 8000,2000,4000,16000,30000 };
-						resource = "RscCustomInfoSensors";
-					};
-				};
-			};
-			class VehicleSystemsDisplayManagerComponentRight : DefaultVehicleSystemsDisplayManagerRight
-			{
-				defaultDisplay = "SensorDisplay";
-				class Components
-				{
-					class EmptyDisplay
-					{
-						componentType = "EmptyDisplayComponent";
-					};
-					class MinimapDisplay
-					{
-						componentType = "MinimapDisplayComponent";
-						resource = "RscCustomInfoMiniMap";
-					};
-					class VehicleDriverDisplay
-					{
-						componentType = "TransportFeedDisplayComponent";
-						source = "Driver";
-					};
-					class VehicleMissileDisplay
-					{
-						componentType = "TransportFeedDisplayComponent";
-						source = "Missile";
-					};
-					class SensorDisplay
-					{
-						componentType = "SensorsDisplayComponent";
-						range[] = { 8000,2000,4000,16000,30000 };
-						resource = "RscCustomInfoSensors";
-					};
-				};
 			};
 		};
 	};

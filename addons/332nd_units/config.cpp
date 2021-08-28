@@ -409,6 +409,12 @@ class CfgWeapons
 	{
 		class ItemInfo;
 	};
+	class lsd_cis_b2Droid_uniform : ls_redforUniform_base
+	{
+		class ItemInfo;
+	};
+
+
 	//CIS B-1
 	class MACRO_NEW_UNIFORM(cisb1,base) : JLTS_DroidB1
 	{
@@ -522,6 +528,19 @@ class CfgWeapons
 			containerClass = "Supply140";
 		};
 	};
+
+	//CIS B2
+	class MACRO_NEW_UNIFORM(cisb2,base) : lsd_cis_b2Droid_uniform
+	{
+		displayName = "[332nd] B2 droid uniform ('base')";
+		scope = 0;							
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(cisb2,base);
+			containerClass = "Supply140";
+		};
+	};
+
 	// ---- End opfor Uniforms ----
 	class I_G_Soldier_SL_F;
 	class I_rebel_human : I_G_Soldier_SL_F
@@ -657,114 +676,334 @@ class CfgSounds
 	{
 		name = "B1-Death-Sound-1";
 		sound[] = {"\opfor\DeathSounds\B1-Death-Sound-1.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_2
 	{
 		name = "B1-Death-Sound-2";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-2.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_3
 	{
 		name = "B1-Death-Sound-3";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-3.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_4
 	{
 		name = "B1-Death-Sound-4";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-4.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_5
 	{
 		name = "B1-Death-Sound-5";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-5.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_6
 	{
 		name = "B1-Death-Sound-6";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-6.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_7
 	{
 		name = "B1-Death-Sound-7";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-7.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_8
 	{
 		name = "B1-Death-Sound-8";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-8.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_9
 	{
 		name = "B1-Death-Sound-9";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-9.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_10
 	{
 		name = "B1-Death-Sound-10";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-10.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_11
 	{
 		name = "B1-Death-Sound-11";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-11.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_12
 	{
 		name = "B1-Death-Sound-12";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-12.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_13
 	{
 		name = "B1-Death-Sound-13";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-13.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_14
 	{
 		name = "B1-Death-Sound-14";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-14.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_15
 	{
 		name = "B1-Death-Sound-15";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-15.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_16
 	{
 		name = "B1-Death-Sound-16";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-16.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_17
 	{
 		name = "B1-Death-Sound-17";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-17.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_18
 	{
 		name = "B1-Death-Sound-18";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-18.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_19
 	{
 		name = "B1-Death-Sound-19";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-19.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_20
 	{
 		name = "B1-Death-Sound-21";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-21.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_22
 	{
 		name = "B1-Death-Sound-22";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-22.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
 	class B1_Death_Sound_23
 	{
 		name = "B1-Death-Sound-23";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
 	};
-
-
+	
+	//Redefine Webknights Sounds to be louder
+	class B1_shooting_1_332nd
+	{
+		name = "B1_shooting_1_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_1.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_shooting_2_332nd
+	{
+		name = "B1_shooting_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_2.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_shooting_3_332nd
+	{
+		name = "B1_shooting_3_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_3.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_shooting_4_332nd
+	{
+		name = "B1_shooting_4_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_4.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_EnemyKilled_1_332nd
+	{
+		name = "B1_EnemyKilled_1_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_EnemyKilled_2_332nd
+	{
+		name = "B1_EnemyKilled_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_incGrenade_1_332nd
+	{
+		name = "B1_incGrenade_1_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_1.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_incGrenade_2_332nd
+	{
+		name = "B1_incGrenade_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_2.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_incGrenade_3_332nd
+	{
+		name = "B1_incGrenade_3_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_3.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class B1_incGrenade_4_332nd
+	{
+		name = "B1_incGrenade_4_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_4.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_dying_332nd
+	{
+		name = "WBK_b2_dying_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_dying_2.ogg",  10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_firing_1_332nd
+	{
+		name = "WBK_b2_firing_1_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_1.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_firing_2_332nd
+	{
+		name = "WBK_b2_firing_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_2.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_firing_3_332nd
+	{
+		name = "WBK_b2_firing_3_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_3.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_firing_4_332nd
+	{
+		name = "WBK_b2_firing_4_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_4.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_firing_5_332nd
+	{
+		name = "WBK_b2_firing_5_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_5.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_incGrenade_1_332nd
+	{
+		name = "WBK_b2_incGrenade_1_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_1.ogg", 10, 1, 150 };
+		titles[] = {};
+	};
+	class WBK_b2_incGrenade_2_332nd
+	{
+		name = "WBK_b2_incGrenade_2_332nd";
+		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_2.ogg",  10, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyDown_1_332nd
+	{
+		name = "EnemyDown_1_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_02.ogg",  db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyDown_2_332nd
+	{
+		name = "EnemyDown_2_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_08.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyDown_3_332nd
+	{
+		name = "EnemyDown_3_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_09.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyDown_4_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_25.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyHit_1_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_02.ogg",  db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyHit_2_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_03.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyHit_3_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_20.ogg",  db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_EnemyHit_4_332nd
+	{
+		name = "EnemyDown_4_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_24.ogg",  db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_FriendlyDown_1_332nd
+	{
+		name = "BX_FriendlyDown_1_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_03.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_FriendlyDown_2_332nd
+	{
+		name = "BX_FriendlyDown_2_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_05.ogg",  db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_FriendlyDown_3_332nd
+	{
+		name = "BX_FriendlyDown_3_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_06.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_FriendlyDown_4_332nd
+	{
+		name = "BX_FriendlyDown_4_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_21.ogg",  db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_ThrowingGrenade_1_332nd
+	{
+		name = "BX_ThrowingGrenade_1_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_03.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_ThrowingGrenade_2_332nd
+	{
+		name = "BX_ThrowingGrenade_2_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_05.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
+	class BX_ThrowingGrenade_3_332nd
+	{
+		name = "BX_ThrowingGrenade_3_332nd";
+		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_06.ogg", db + 250, 1, 150 };
+		titles[] = {};
+	};
 };
 
 class CfgFunctions
@@ -788,12 +1027,27 @@ class CfgFunctions
 			class Killed
 			{
 			};
-
 			class Killed_BX
 			{
 			};
-
 			class Killed_Heavy
+			{
+			};
+			class Killed_Heavy_B2
+			{
+			};
+		};
+
+		class FiredSounds
+		{
+			file = "\332nd_units\opfor";
+			class Fired
+			{
+			};
+			class Fired_BX
+			{
+			};
+			class Fired_B2
 			{
 			};
 		};
@@ -813,6 +1067,20 @@ class CfgFunctions
 			{
 			};
 			class initDroideka
+			{
+			};
+		};
+
+		class Inits
+		{
+			file = "\332nd_units\opfor";
+			class init_B1
+			{
+			};
+			class init_BX
+			{
+			};
+			class init_B2
 			{
 			};
 		};
@@ -952,6 +1220,36 @@ class CfgVehicles
 			{
 				name = "332nd_aux_medical_Blood";
 				count = 75;
+			};
+
+			class Bacta_332nd
+			{
+				name = "332nd_aux_medical_Bacta";
+				count = 25;
+			};
+
+			class Kolto_332nd
+			{
+				name = "332nd_aux_medical_Kolto";
+				count = 25;
+			};
+
+			class BactaInj_332nd
+			{
+				name = "332nd_aux_medical_Bacta_Inj";
+				count = 25;
+			};
+
+			class KoltoInj_332nd
+			{
+				name = "332nd_aux_medical_Kolto_Inj";
+				count = 25;
+			};
+
+			class DefibStrips_332nd
+			{
+				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				count = 100;
 			};
 
 			class PressureCuff_332nd
@@ -3947,6 +4245,7 @@ class CfgVehicles
 	class lsd_cis_bxDroid_base;
 	class O_Soldier_base_F;
 	class k_CIS_Droideka;
+	class lsd_cis_b2Droid_base;
 
 	class JLTS_Droid_B1_E5 :O_Soldier_F
 	{
@@ -4020,6 +4319,18 @@ class CfgVehicles
 	{
 		class HitPoints;
 	};
+	class WBK_BX_Assasin_1 : lsd_cis_bxdroid_specops
+	{
+		class HitPoints;
+	};
+	class WBK_BX_Assasin_Commander : WBK_BX_Assasin_1
+	{
+		class HitPoints;
+	};
+	class lsd_cis_b2_standard : lsd_cis_b2Droid_base
+	{
+		class HitPoints;
+	};
 
 	//B1
 	class MACRO_NEW_UNIT(cisb1,base) : JLTS_Droid_B1_E5
@@ -4031,6 +4342,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO"};
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -4220,6 +4533,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisb1jumppack,base) : JLTS_Droid_B1_Rocket
@@ -4231,6 +4616,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1jumppack,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -4425,6 +4812,78 @@ class CfgVehicles
 			init = "[_this] spawn Aux332nd_fnc_Jumppack";
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisb1breach,base) : JLTS_Droid_B1_SBB3
@@ -4436,6 +4895,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		magazines[] =
 		{
@@ -4625,6 +5086,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisb1ar,base) : JLTS_Droid_B1_AR
@@ -4636,6 +5169,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		magazines[] =
 		{
@@ -4824,6 +5359,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisb1at,base) : JLTS_Droid_B1_AT
@@ -4835,6 +5442,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
@@ -5026,6 +5635,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisb1sniper,base) : JLTS_Droid_B1_Sniper
@@ -5037,6 +5718,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		class HitPoints : HitPoints
 		{
@@ -5206,6 +5889,78 @@ class CfgVehicles
 			{
 				name = "leg_r";
 			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
 		};
 
 	};
@@ -5220,6 +5975,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1crew,base);
 
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 
@@ -5406,6 +6163,78 @@ class CfgVehicles
 			{
 				name = "leg_r";
 			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
 		};
 
 	};
@@ -5420,6 +6249,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1comm,base);
 
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 
@@ -5608,6 +6439,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisb1marine,base) : JLTS_Droid_B1_Marine
@@ -5619,6 +6522,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1marine,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
@@ -5810,6 +6715,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisb1sec,base) : JLTS_Droid_B1_Security
@@ -5821,6 +6798,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1sec,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -6010,6 +6989,78 @@ class CfgVehicles
 			{
 				name = "leg_r";
 			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
 		};
 
 	};
@@ -6024,6 +7075,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1pilot,base);
 
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 
@@ -6210,6 +7263,78 @@ class CfgVehicles
 			{
 				name = "leg_r";
 			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
 		};
 
 	};
@@ -6225,6 +7350,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
@@ -6408,6 +7535,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisbxar,base) : lsd_cis_bxdroid_specops
@@ -6419,6 +7618,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5C","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5C","Throw","Put" };
@@ -6602,6 +7803,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisbxat,base) : lsd_cis_bxdroid_specops
@@ -6614,6 +7887,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		backpack = "JLTS_B1_backpack_at_predef";
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","JLTS_RPS6", "Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","JLTS_RPS6","Throw","Put" };
@@ -6797,6 +8072,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisbxbreach,base) : lsd_cis_bxdroid_specops
@@ -6808,6 +8155,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_SBB3","Throw","Put" };
 		respawnWeapons[] = { "JLTS_SBB3","Throw","Put" };
@@ -6991,6 +8340,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisbxcapt,base) : lsd_cis_bxCaptain_specops
@@ -7002,6 +8423,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
@@ -7183,6 +8606,78 @@ class CfgVehicles
 			{
 				name = "leg_r";
 			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
 		};
 
 	};
@@ -7197,6 +8692,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxsec,base);
 
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
 
@@ -7377,6 +8874,78 @@ class CfgVehicles
 			{
 				name = "leg_r";
 			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
 		};
 
 	};
@@ -7391,6 +8960,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxdiplo,base);
 
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+
 		weapons[] = { "JLTS_E5","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
 
@@ -7573,6 +9144,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisbxassassin,base) : lsd_cis_bxAssassin_specops
@@ -7584,6 +9227,8 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
+
+		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
 		weapons[] = { "JLTS_E5S","Throw","Put" };
 		respawnWeapons[] = { "JLTS_E5S","Throw","Put" };
@@ -7765,6 +9410,78 @@ class CfgVehicles
 			{
 				name = "leg_r";
 			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
 		};
 
 	};
@@ -7957,6 +9674,78 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	class MACRO_NEW_UNIT(cisbxmeleerush,base) : O_soldier_Melee_RUSH
@@ -8147,6 +9936,624 @@ class CfgVehicles
 			};
 		};
 
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(cisbxhybridcomm,base) : WBK_BX_Assasin_Commander
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] BX Melee Rush Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_BX";
+		uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,base);
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
+
+		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		weapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
+		respawnWeapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_8(JLTS_E5_mag),
+			"WBK_Cybercrystal",
+		};
+		respawnMagazines[] =
+		{
+			mag_8(JLTS_E5_mag),
+			"WBK_Cybercrystal",
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.90000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "neck";
+				passThrough = 0.90000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 1;
+				material = -1;
+				name = "head";
+				passThrough = 0.90000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(cisbxhybrid,base) : WBK_BX_Assasin_1
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] BX Melee Rush Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_BX";
+		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+
+		identityTypes[] = { "LanguageENG_F", "Head_LSD_BX" };
+
+		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		weapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
+		respawnWeapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_8(JLTS_E5_mag),
+			"WBK_Cybercrystal",
+		};
+		respawnMagazines[] =
+		{
+			mag_8(JLTS_E5_mag),
+			"WBK_Cybercrystal",
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.90000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "neck";
+				passThrough = 0.90000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 1;
+				material = -1;
+				name = "head";
+				passThrough = 0.90000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 
@@ -8181,6 +10588,262 @@ class CfgVehicles
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka_Move;";
 		};
+	};
+
+	class MACRO_NEW_UNIT(cisb2,base) : lsd_cis_b2_standard
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+		uniformClass = MACRO_NEW_UNIFORM(cisb2,base);
+		nakedUniform = "lsd_cis_b2_standard";
+
+		identityTypes[] = { "LanguageENG_F", "Head_NATO" };
+
+		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
+		weapons[] = { "WBK_B2_NormalMod","Throw","Put" };
+		respawnWeapons[] = { "WBK_B2_NormalMod","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_8(SWLW_ZH73_Mag),
+		};
+		respawnMagazines[] =
+		{
+			mag_8(JLTS_E5_mag),
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 64;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.90000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 64;
+				material = -1;
+				name = "neck";
+				passThrough = 0.90000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 64;
+				material = -1;
+				name = "head";
+				passThrough = 0.90000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 100;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 75;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 75;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 100;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 75;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 75;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 75;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 75;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 75;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_1.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_2.ogg", 2, 1, 30}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\b2_step_3.ogg", 2, 1, 30}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
 	};
 
 	//Rebel
@@ -10755,6 +13418,7 @@ class CfgVehicles
 
 
 
+		displayName = "[332nd] B2 Battle Droid Base";
 	// ---- End Opfor Units for Uniforms ----
 
 	// ---- End Opfor Units for Uniforms ----
@@ -10765,100 +13429,324 @@ class Extended_Killed_EventHandlers
 	//B1s
 	class MACRO_NEW_UNIT(cisb1,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1jumppack,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1breach,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1ar,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1at,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1sniper,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1crew,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1comm,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1marine,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1sec,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 	class MACRO_NEW_UNIT(cisb1pilot,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed;";
 	};
 
 
 	//BXs
 	class MACRO_NEW_UNIT(cisbx,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxcapt,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxsec,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxdiplo,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxassassin,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmelee,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmeleerush,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxar,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxat,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxbreach,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_BX";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
+	{
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxhybrid,base)
+	{
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_BX;";
 	};
 
 
 	//Heavy Droids
 	class MACRO_NEW_UNIT(cisdroideka,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_Heavy";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy;";
 	};
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base)
 	{
-		Aux332nd_DeathSound = "(_this select 0) call Aux332nd_fnc_Killed_Heavy";
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy;";
+	};
+	class MACRO_NEW_UNIT(cisb2,base)
+	{
+		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy_B2;";
+	};
+};
+
+class Extended_Init_EventHandlers
+{
+	//B1s
+	class MACRO_NEW_UNIT(cisb1,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1jumppack,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1breach,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1ar,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1at,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1sniper,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1crew,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1comm,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1marine,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1sec,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+	class MACRO_NEW_UNIT(cisb1pilot,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+	};
+
+
+	//BXs
+	class MACRO_NEW_UNIT(cisbx,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxcapt,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxsec,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxdiplo,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxassassin,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxmelee,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxmeleerush,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxar,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxat,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxbreach,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxhybrid,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+	};
+
+	//Heavy Droids
+	class MACRO_NEW_UNIT(cisb2,base)
+	{
+		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B2;";
+	};
+};
+
+class Extended_Fired_EventHandlers
+{
+	//B1s
+	class MACRO_NEW_UNIT(cisb1,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1jumppack,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1breach,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1ar,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1at,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1sniper,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1crew,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1comm,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1marine,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1sec,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+	class MACRO_NEW_UNIT(cisb1pilot,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
+	};
+
+
+	//BXs
+	class MACRO_NEW_UNIT(cisbx,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxcapt,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxsec,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxdiplo,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxassassin,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxmelee,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxmeleerush,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxar,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxat,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxbreach,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+	class MACRO_NEW_UNIT(cisbxhybrid,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
+	};
+
+	//Heavy Droids
+	class MACRO_NEW_UNIT(cisb2,base)
+	{
+		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_B2;";
 	};
 };

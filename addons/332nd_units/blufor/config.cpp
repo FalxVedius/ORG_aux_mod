@@ -62,6 +62,42 @@ class CfgPatches
             MACRO_NEW_UNIT(aviation,332nd_flight_captain),
 
             MACRO_NEW_UNIT(mech,332nd_mechanized_trooper),
+
+            MACRO_NEW_UNIT(arfbase,332nd_arfbase_trooper),
+            MACRO_NEW_UNIT(arfbase,332nd_arfbase_senior),
+            MACRO_NEW_UNIT(arfbase,332nd_arfbase_veteran),
+            MACRO_NEW_UNIT(arfbase,332nd_arfbase_corp),
+            MACRO_NEW_UNIT(arfbase,332nd_arfbase_serg),
+
+            MACRO_NEW_UNIT(arfdes,332nd_arfdes_trooper),
+            MACRO_NEW_UNIT(arfdes,332nd_arfdes_senior),
+            MACRO_NEW_UNIT(arfdes,332nd_arfdes_veteran),
+            MACRO_NEW_UNIT(arfdes,332nd_arfdes_corp),
+            MACRO_NEW_UNIT(arfdes,332nd_arfdes_serg),
+
+            MACRO_NEW_UNIT(arfjung,332nd_arfjung_trooper),
+            MACRO_NEW_UNIT(arfjung,332nd_arfjung_senior),
+            MACRO_NEW_UNIT(arfjung,332nd_arfjung_veteran),
+            MACRO_NEW_UNIT(arfjung,332nd_arfjung_corp),
+            MACRO_NEW_UNIT(arfjung,332nd_arfjung_serg),
+
+            MACRO_NEW_UNIT(arfsnow,332nd_arfsnow_trooper),
+            MACRO_NEW_UNIT(arfsnow,332nd_arfsnow_senior),
+            MACRO_NEW_UNIT(arfsnow,332nd_arfsnow_veteran),
+            MACRO_NEW_UNIT(arfsnow,332nd_arfsnow_corp),
+            MACRO_NEW_UNIT(arfsnow,332nd_arfsnow_serg),
+
+            MACRO_NEW_UNIT(arfurb,332nd_arfurb_trooper),
+            MACRO_NEW_UNIT(arfurb,332nd_arfurb_senior),
+            MACRO_NEW_UNIT(arfurb,332nd_arfurb_veteran),
+            MACRO_NEW_UNIT(arfurb,332nd_arfurb_corp),
+            MACRO_NEW_UNIT(arfurb,332nd_arfurb_serg),
+
+            MACRO_NEW_UNIT(arfwood,332nd_arfwood_trooper),
+            MACRO_NEW_UNIT(arfwood,332nd_arfwood_senior),
+            MACRO_NEW_UNIT(arfwood,332nd_arfwood_veteran),
+            MACRO_NEW_UNIT(arfwood,332nd_arfwood_corp),
+            MACRO_NEW_UNIT(arfwood,332nd_arfwood_serg),
 		};
 		weapons[] = {
             MACRO_NEW_UNIFORM(recruit,332nd_recruit),
@@ -116,13 +152,47 @@ class CfgPatches
 
             MACRO_NEW_UNIFORM(mech,332nd_mechanized_trooper),
 
+            MACRO_NEW_UNIFORM(arfbase,332nd_arfbase_trooper),
+            MACRO_NEW_UNIFORM(arfbase,332nd_arfbase_senior),
+            MACRO_NEW_UNIFORM(arfbase,332nd_arfbase_veteran),
+            MACRO_NEW_UNIFORM(arfbase,332nd_arfbase_corp),
+            MACRO_NEW_UNIFORM(arfbase,332nd_arfbase_serg),
+
+            MACRO_NEW_UNIFORM(arfdes,332nd_arfdes_trooper),
+            MACRO_NEW_UNIFORM(arfdes,332nd_arfdes_senior),
+            MACRO_NEW_UNIFORM(arfdes,332nd_arfdes_veteran),
+            MACRO_NEW_UNIFORM(arfdes,332nd_arfdes_corp),
+            MACRO_NEW_UNIFORM(arfdes,332nd_arfdes_serg),
+
+            MACRO_NEW_UNIFORM(arfjung,332nd_arfjung_trooper),
+            MACRO_NEW_UNIFORM(arfjung,332nd_arfjung_senior),
+            MACRO_NEW_UNIFORM(arfjung,332nd_arfjung_veteran),
+            MACRO_NEW_UNIFORM(arfjung,332nd_arfjung_corp),
+            MACRO_NEW_UNIFORM(arfjung,332nd_arfjung_serg),
+
+            MACRO_NEW_UNIFORM(arfsnow,332nd_arfsnow_trooper),
+            MACRO_NEW_UNIFORM(arfsnow,332nd_arfsnow_senior),
+            MACRO_NEW_UNIFORM(arfsnow,332nd_arfsnow_veteran),
+            MACRO_NEW_UNIFORM(arfsnow,332nd_arfsnow_corp),
+            MACRO_NEW_UNIFORM(arfsnow,332nd_arfsnow_serg),
+
+            MACRO_NEW_UNIFORM(arfurb,332nd_arfurb_trooper),
+            MACRO_NEW_UNIFORM(arfurb,332nd_arfurb_senior),
+            MACRO_NEW_UNIFORM(arfurb,332nd_arfurb_veteran),
+            MACRO_NEW_UNIFORM(arfurb,332nd_arfurb_corp),
+            MACRO_NEW_UNIFORM(arfurb,332nd_arfurb_serg),
+
+            MACRO_NEW_UNIFORM(arfwood,332nd_arfwood_trooper),
+            MACRO_NEW_UNIFORM(arfwood,332nd_arfwood_senior),
+            MACRO_NEW_UNIFORM(arfwood,332nd_arfwood_veteran),
+            MACRO_NEW_UNIFORM(arfwood,332nd_arfwood_corp),
+            MACRO_NEW_UNIFORM(arfwood,332nd_arfwood_serg),
+
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
 			 MACRO_NEW_NVG(Specialist_Visor_black),
 			 MACRO_NEW_NVG(Commander_visor_NVG),
 			 MACRO_NEW_NVG(Trooper_NVG),
-			 MACRO_NEW_NVG(Specialist_Visor_332),
-			 MACRO_NEW_NVG(Leadership_Visor_332),
 			 MACRO_NEW_NVG(Leadership_Visor_black),
 			 MACRO_NEW_NVG(Leadership_Visor),
 			 

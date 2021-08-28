@@ -108,11 +108,11 @@ switch (true) do {
 				
 				switch (true) do {
 				
-					case (_rndYoda == 0): 
+					case (_rndYoda <= 5): 
 					{
 						playSound3D ["332nd_units\opfor\DeathSounds\B1-Death-Sound-23.ogg", _obj, false, getPosASL _obj, 5, 1, 125];
 					};
-					case (_rndYoda >= 1): 
+					case (_rndYoda >= 6): 
 					{
 						playSound3D ["332nd_units\opfor\DeathSounds\B1-Death-Sound-1.ogg", _obj, false, getPosASL _obj, 5, 1, 125]; 
 					};
@@ -128,6 +128,61 @@ switch (true) do {
 	};
 	
 	//70% chance of playing no sound
+	case (_rndNum >= 5): {};
+	default {};
+};
+
+{
+	if (!(_x == _unit) and (alive _x) and !(lifeState _x == "INCAPACITATED")) then {
+	
+		friendlyUnitPos = _x;
+	};
+} forEach nearestObjects [_unit,
+[
+"332nd_aux_cisb1_unit_332nd_CIS_B1",
+"332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher",
+"332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support",
+"332nd_aux_cisb1at_unit_332nd_CIS_B1_AT",
+"332nd_aux_cisb1comm_unit_332nd_CIS_B1_Commander",
+"332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security",
+"332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper",
+"332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot",
+"332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew",
+"332nd_aux_cisb1marine_unit_332nd_CIS_B1_Marine",
+"332nd_aux_cisb1jumppack_unit_332nd_CIS_B1_Jumppack"
+],15];
+
+
+_rndNum = floor(random 10);
+_rndSound = floor(random 4);
+
+switch (true) do {
+
+	case (_rndNum <= 4): 
+	{ 
+		switch (true) do {
+		
+			case (_rndSound == 0): 
+			{
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+			};
+			case (_rndSound == 1): 
+			{
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_05.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+			};
+			case (_rndSound == 2): 
+			{
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_06.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+			};
+			case (_rndSound == 3): 
+			{
+				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_21.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+			};
+		
+			default { playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125]; };
+		};
+	};
+	
 	case (_rndNum >= 5): {};
 	default {};
 };

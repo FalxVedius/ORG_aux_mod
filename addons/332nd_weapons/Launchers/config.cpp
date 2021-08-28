@@ -145,10 +145,10 @@ class CfgAmmo
 		indirectHit=20;
 		manualControl=1;
 		missileManualControlCone = 90;
-		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
+		weaponLockSystem = "1 + 2 + 16";
 		indirectHitRange=8;
 		maxSpeed = 100;
-		effectsMissile = "332nd_aux_effects_missile_plx_blue";
+		effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
 		manueuvrability = 30;
 		thrust = 80;
 		thrustTime = 20;
@@ -186,7 +186,7 @@ class CfgAmmo
 		{
 			"swlw_rework\sounds\launcher\E60R_fly.wss",
 			6,
-			1.5,
+			0.9,
 			1000
 		};
 	};
@@ -244,7 +244,7 @@ class CfgMagazines
 	
 	class MACRO_NEW_MAG(RPS6_ATMag,1): SWLW_plx1_at_mag
 	{
-		ammo=MACRO_NEW_AMMO(RPS6_ATRocket);
+		ammo=MACRO_NEW_AMMO(RPS6_ATRocket)
 		displayName=MACRO_AMMO_DISPLAYNAME(RPS6-AT,1)
 		scope=2;
 		count=1;

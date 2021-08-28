@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(HMP)
 	{
-		author = "Falx";
+		author = "Halligan";
         addonRootClass = MACRO_PATCH_NAME(air_vehicles);
 		requiredAddons[]=
 		{
@@ -55,9 +55,18 @@ class CfgVehicles
 		class Components;
 		class Turrets : Turrets
 		{
-			class MainTurret;
-			class MainTurret2;
-			class MainTurret3;
+			class MainTurret : MainTurret
+			{
+
+			};
+			class MainTurret2 : MainTurret
+			{
+
+			};
+			class MainTurret3 : MainTurret2
+			{
+
+			};
 		};
 	};
 	class ls_cis_hmp : ls_hmp_base
@@ -65,9 +74,18 @@ class CfgVehicles
 		class Components;
 		class Turrets : Turrets
 		{
-			class MainTurret;
-			class MainTurret2;
-			class MainTurret3;
+			class MainTurret : MainTurret
+			{
+
+			};
+			class MainTurret2 : MainTurret2
+			{
+
+			};
+			class MainTurret3 : MainTurret3
+			{
+
+			};
 		};
 	};
 	class ls_cis_hmp_transport : ls_hmp_base
@@ -75,9 +93,18 @@ class CfgVehicles
 		class Components;
 		class Turrets : Turrets
 		{
-			class MainTurret;
-			class MainTurret2;
-			class MainTurret3;
+			class MainTurret : MainTurret
+			{
+
+			};
+			class MainTurret2 : MainTurret2
+			{
+
+			};
+			class MainTurret3 : MainTurret3
+			{
+
+			};
 		};
 	};
 
