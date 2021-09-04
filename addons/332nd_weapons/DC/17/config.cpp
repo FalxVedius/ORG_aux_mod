@@ -34,6 +34,7 @@ class cfgWeapons
 		canShootInWater=1;
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		cursor="332_DOT";
+		baseweapon= (DC_17)
         cursoraim="332_DC17";
 		magazines[] = {MACRO_NEW_MAG(DC_17,15)};
         class 332PistolStun: JLTS_stun_muzzle
