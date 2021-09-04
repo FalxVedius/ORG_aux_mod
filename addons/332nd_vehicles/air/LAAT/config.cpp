@@ -15,7 +15,7 @@ class CfgPatches
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd),
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao),
             MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd),
-			MACRO_NEW_VEHICLE(air,LAATle,mk1_332nd_AB),
+			MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_AB),
         };
         weapons[] = {};
     };
