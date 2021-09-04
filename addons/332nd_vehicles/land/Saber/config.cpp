@@ -20,6 +20,25 @@ class CfgPatches
 	};
 };
 
+
+
+
+
+
+
+class Optics_Armored;
+class Optics_Commander_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Gunner_MBT_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -409,6 +428,19 @@ class CfgVehicles
 		{
 			class MainTurret_bottom : MainTurret_bottom
 			{
+			turretInfoType="RscOptics_MBT_01_gunner";
+			  class OpticsIn: Optics_Gunner_MBT_01
+			  {
+					class Wide: Wide
+					{
+					};
+					class Medium: Medium
+					{
+					};
+					class Narrow: Narrow
+					{
+					};
+			  };
 			  memoryPointGun[]=
 				{
 					"z_gunL_muzzle",
@@ -436,6 +468,19 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
+			turretInfoType="RscOptics_MBT_01_commander";
+			class OpticsIn: Optics_Commander_01
+						{
+							class Wide: Wide
+							{
+							};
+							class Medium: Medium
+							{
+							};
+							class Narrow: Narrow
+							{
+							};
+						};
 			weapons[] =
 			  {
 			    MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -481,13 +526,73 @@ class CfgVehicles
 
 		class Turrets : Turrets
 		{
+		    
 			class MainTurret_bottom : MainTurret_bottom
 			{
+			turretInfoType="RscOptics_MBT_01_gunner";
+			class OpticsIn: Optics_Gunner_MBT_01
+			  {
+					class Wide: Wide
+					{
+					};
+					class Medium: Medium
+					{
+					};
+					class Narrow: Narrow
+					{
+					};
+			  };
+			  memoryPointGun[]=
+				{
+					"z_gunL_muzzle",
+					"z_gunR_muzzle"
+				};
+			  weapons[] =
+			  {
+			    MACRO_NEW_WEAPON(Saber_High),
+				MACRO_NEW_WEAPON(Saber_low)
+			  };
+			  magazines[] =
+			  {
+			    MACRO_NEW_MAG(Saber_AP,25),
+				MACRO_NEW_MAG(Saber_AP,25),
+				MACRO_NEW_MAG(Saber_AP,25),
+				MACRO_NEW_MAG(Saber_AP,25),
+			    MACRO_NEW_MAG(MassDriver_HE,15),
+				MACRO_NEW_MAG(MassDriver_HE,15),
+				MACRO_NEW_MAG(Saber_Low,500),
+				MACRO_NEW_MAG(Saber_Low,500),
+				MACRO_NEW_MAG(Saber_Low,500),
+                MACRO_NEW_MAG(Saber_Low,500),
+				MACRO_NEW_MAG(Saber_Low,500)
+			  };
 
 			};
 			class Mainturret_top : Mainturret_top
 			{
-
+			turretInfoType="RscOptics_MBT_01_commander";
+			class OpticsIn: Optics_Commander_01
+						{
+							class Wide: Wide
+							{
+							};
+							class Medium: Medium
+							{
+							};
+							class Narrow: Narrow
+							{
+							};
+						};
+			weapons[] =
+			  {
+			    MACRO_NEW_WEAPON(BeamLaser_Full)
+			  };
+			  magazines[] =
+			  {
+			  MACRO_NEW_MAG(LaserBeamFull,2000)
+			  };
+			outGunnerMayFire=1;
+			inGunnerMayFire=0;
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{
@@ -522,7 +627,7 @@ class CfgVehicles
 		{
 			class MainTurret_bottom : MainTurret_bottom
 			{
-
+			    
 			};
 			class Mainturret_top : Mainturret_top
 			{
@@ -561,6 +666,93 @@ class CfgVehicles
 		{
 			class Mainturret_super : Mainturret_top
 			{
+			turretInfoType="RscOptics_MBT_01_gunner";
+			class OpticsIn: Optics_Gunner_MBT_01
+			  {
+					class Wide: Wide
+					{
+					};
+					class Medium: Medium
+					{
+					};
+					class Narrow: Narrow
+					{
+					};
+			  };
+			  weapons[] =
+			  {
+			    MACRO_NEW_WEAPON(SuperSaber_40mm),
+				MACRO_NEW_WEAPON(SuperSaber_High)
+			  };
+			  magazines[] =
+			  {
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+			   MACRO_NEW_MAG(MassDriver_AP,2),
+				MACRO_NEW_MAG(SuperSaber_40mm,140),
+				MACRO_NEW_MAG(SuperSaber_40mm,140),
+				MACRO_NEW_MAG(SuperSaber_40mm,140),
+                MACRO_NEW_MAG(SuperSaber_40mm,140),
+				MACRO_NEW_MAG(SuperSaber_40mm,140),
+			  };
 
 			};
 			class CargoTurret_01 : CargoTurret_01

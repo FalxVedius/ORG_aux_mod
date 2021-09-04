@@ -59,7 +59,7 @@ class CfgVehicles
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_co.paa
 		};
 		displayName = "[332nd] Support Pack";
-		maximumLoad = 265;
+		maximumLoad = 290;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -71,19 +71,7 @@ class CfgVehicles
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_base_co.paa
 		};
 		displayName = "[332nd] Support Pack (Base)";
-		maximumLoad = 265;
-
-		editorCategory = "EdCat_332nd_Props";
-		editorSubcategory = "EdSubcat_332nd_PACKS";
-	}
-	class MACRO_NEW_BACKPACK(blufor,332nd_funops): JLTS_Clone_backpack
-	{
-		hiddenSelectionsTextures[]=
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Funops_332_co.paa
-		};
-		displayName = "[332nd] Fun Ops Pack";
-		maximumLoad = 675;
+		maximumLoad = 290;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";

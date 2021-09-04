@@ -44,21 +44,23 @@ class CfgCloudlets
     class ls_particle_hailfireRocket;
 	class 332nd_aux_effects_smoke_RPS6blue: Missile2
 	{
-		color[] = {{0.1,0.2,0.8,1},{0.3,0.4,0.5,1}};
+		color[] = {{0,0,0.6,0.1}};
 		colorVar[] = {0,0,0,1};
-		lifetime = 0.5;
+		lifetime = 0.25;
 		colorCoef[] = {1,1,1,1};
-		size[] = {1,1};
-		volume = 1;	
+		size[] = {1,2};
+		volume = 30;	
+        weight=30;
 	};
 	class 332nd_aux_effects_smoke_RPS6red: Missile2
 	{
-		color[] = {{0.8,0.1,0.2,1},{0.5,0.4,0.3,1}};
+		color[] = {{0.2,0,0.05,0.1}};
 		colorVar[] = {0,0,0,1};
-		lifetime = 0.5;
+		lifetime = 0.25;
 		colorCoef[] = {1,1,1,1};
-		size[] = {1,1};
-		volume = 1;	
+		size[] = {1,2};
+		volume = 30;
+        weight=30;
 	};
 	
 	class 332nd_aux_effects_smoke_PLXblue: ls_particle_hailfireRocket //PLX

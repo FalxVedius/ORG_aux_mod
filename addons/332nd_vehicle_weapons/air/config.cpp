@@ -73,12 +73,12 @@ class CfgAmmo
 	};
 	ExplosionEffects = "ATRocketExplosion";
     soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
-	hit=800;
-	caliber=10;
+	hit=2500;
+	caliber=15;
 	mass=20;
-	tracerScale = 20;
-	indirectHit = 50;
-	indirectHitRange = 3;
+	tracerScale = 15;
+	indirectHit = 2500;
+	indirectHitRange = 4;
 	};
 	
 	class M_Titan_AT_long;
@@ -365,7 +365,7 @@ class CfgWeapons
 		magazines[] = {
 			MACRO_NEW_MAG(ARC170_Low,600)
 		};
-		ballisticsComputer = 1;
+		ballisticsComputer = 4;	
 		modes[] = {"manual"};
 		displayName = "Cannon Low Energy";
 		class manual: LowROF
@@ -614,7 +614,7 @@ class CfgWeapons
 			MACRO_NEW_MAG(V19_25mm,1600)
 		};
 		modes[] = {"manual","close","short","medium"};
-		ballisticsComputer = 1;
+		ballisticsComputer = 1;	
 		displayName = "V19 Main Lasers";
 		class manual: LowROF
 		{
@@ -848,7 +848,7 @@ class CfgWeapons
 			MACRO_NEW_MAG(Z95_30mm,1000)
 		};
 		modes[] = {"manual"};
-		ballisticsComputer = 1;
+		ballisticsComputer = 4;	
 		displayName = "Z95 30mm cannon";
 		class manual: LowROF
 		{

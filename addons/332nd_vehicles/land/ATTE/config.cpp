@@ -17,6 +17,12 @@ class CfgPatches
 	};
 };
 class Optics_Armored;
+class Optics_Commander_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
 class Optics_Gunner_MBT_01: Optics_Armored
 {
 	class Wide;
@@ -121,6 +127,19 @@ class CfgVehicles
 		   };
 		   class MainTurretFront : MainTurretFront
 		   {
+		   class OpticsIn: Optics_Commander_01
+						{
+							class Wide: Wide
+							{
+							};
+							class Medium: Medium
+							{
+							};
+							class Narrow: Narrow
+							{
+							};
+						};
+		   turretInfoType="RscOptics_MBT_01_commander";
 		   weapons[] =
 			{
 				MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -134,6 +153,19 @@ class CfgVehicles
 		   };
 		   class MainTurretBack : MainTurretBack
 		   {
+		   class OpticsIn: Optics_Commander_01
+						{
+							class Wide: Wide
+							{
+							};
+							class Medium: Medium
+							{
+							};
+							class Narrow: Narrow
+							{
+							};
+						};
+		   showCrewAim=0;
 		   weapons[] =
 			{
 				MACRO_NEW_WEAPON(Heavy_Hmg)

@@ -32,10 +32,9 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L)
 		cursor="332_DOT";
         cursoraim="332_Chevron";
-		reloadTime=0.18;
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
-		recoil = "recoil_sw";
+		recoil="recoil_zafir";
 		recoilProne = "assaultRifleBase";
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws_mg";
 
@@ -96,7 +95,7 @@ class cfgWeapons
 					"Ti"
 				};
 				thermalMode[] = {0, 1};
-                discretefov[] = {0.125,0.0625};
+                discretefov[] = {0.125};
                 discreteInitIndex = 0;
                 discreteDistanceInitIndex = 0;
                 discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000};
@@ -135,8 +134,9 @@ class cfgWeapons
 					1
 				};
 			};
-			reloadTime=0.12;
-			dispersion=0.002;
+			burst=2;
+			reloadTime=0.1;
+			dispersion=0;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=250;

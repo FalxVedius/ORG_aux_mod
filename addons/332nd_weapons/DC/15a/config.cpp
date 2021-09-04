@@ -19,6 +19,18 @@ class CfgPatches
 	};
 };
 
+
+class cfgRecoils
+{
+ class recoil_15a
+ {              //  x     y     a     b
+  muzzleOuter[]	= { 0,  0.8,  0,  0 };
+  kickBack[]	= { 0.03, 0.05 };
+  permanent	= 0;
+  temporary	= 0.8;
+ };
+};
+
 class cfgWeapons
 {
 	class arifle_MX_Base_F;
@@ -54,6 +66,8 @@ class cfgWeapons
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15a)
 		canShootInWater=1;
+		recoil="recoil_15a";
+		recoilProne="recoil_single_prone_mx";
 		ACE_Overheating_mrbs=300000;
 		cursor="332_DOT";
         cursoraim="332_DC15A";
@@ -95,8 +109,6 @@ class cfgWeapons
 				};
 			};
 			reloadTime=0.14;
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -226,7 +238,8 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15a UGL)
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
-
+		recoil="recoil_15a";
+		recoilProne="recoil_single_prone_mx";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15a_Medium,30),
 			MACRO_NEW_MAG(DC_15a_Low,60),
@@ -266,8 +279,6 @@ class cfgWeapons
 				};
 			};
 			reloadTime=0.14;
-			recoil="recoil_single_mx";
-			recoilProne="recoil_single_prone_mx";
 			dispersion=0.00000009;
 			minRange=2;
 			minRangeProbab=0.5;

@@ -1369,6 +1369,12 @@ class CfgVehicles
 				count = 200;
 			};
 
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
+            };
+
 			class Z6_ALT_332nd
 			{
 				magazine = "332nd_aux_magazine_Z6_x125";

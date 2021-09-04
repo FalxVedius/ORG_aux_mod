@@ -137,7 +137,7 @@ class CfgAmmo
 		airFriction=0.1;
 		timetolive=2;
 		maxSpeed=25;
-		deflectionSlowDown=1.0;
+		deflectionSlowDown=0;
 		typicalSpeed=0.12;
 		coefGravity=0;
 		deflecting=45;
@@ -160,7 +160,7 @@ class CfgAmmo
 		cartridge="";
 		cost=2;
 		deflecting=45;
-		deflectionSlowDown=1.0;
+		deflectionSlowDown=0;
 		visibleFire=32;
 		audibleFire=12;
 		visibleFireTime=20;
@@ -169,7 +169,6 @@ class CfgAmmo
 		maxSpeed=25;
 		typicalSpeed=0.12;
 		coefGravity=0.25;
-		deflecting=45;
 		explosive=1;
 		fuseDistance=1;
 		caliber=0.5;
@@ -217,7 +216,7 @@ class CfgWeapons
 		scope=2;
 		scopearsenal=2;
 		cursoraim="332_DC17";
-		displayName=MACRO_WEAPON_DISPLAYNAME(*Experimental* X42 PLasma Thrower)
+		displayName=MACRO_WEAPON_DISPLAYNAME(*Experimental* X42 Plasma Thrower)
 		descriptionShort="";
 		picture="3AS\3AS_Weapons\X42\Data\BTX42_ui_ca.paa";
 		model="3AS\3AS_Weapons\X42\BX42.p3d";

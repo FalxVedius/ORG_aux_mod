@@ -31,8 +31,7 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17)
 
         ACE_Overheating_mrbs=300000;
-		canShootInWaterMACRO_NEW_WEAPON=1;
-        baseweapon= (DC_17)
+		canShootInWater=1;
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		cursor="332_DOT";
         cursoraim="332_DC17";
