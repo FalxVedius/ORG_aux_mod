@@ -3268,6 +3268,12 @@ class CfgVehicles
                 count = 200;
             };
 
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
+            };
+
             class Z6_ALT_332nd
             {
                 magazine = "332nd_aux_magazine_Z6_x125";
@@ -3707,6 +3713,12 @@ class CfgVehicles
                 count = 200;
             };
 
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
+            };
+			
             class Flash_332nd
             {
                 magazine = "332nd_aux_magazine_332_FLASH_x1";
@@ -4292,6 +4304,12 @@ class CfgVehicles
             {
                 magazine = "332nd_aux_magazine_Z6_x200";
                 count = 200;
+            };
+
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
             };
 
             class Z6_ALT_332nd
