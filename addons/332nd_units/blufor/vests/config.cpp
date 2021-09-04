@@ -73,6 +73,14 @@ class CfgWeapons
     {
         class ItemInfo;
     };
+    class JLTS_CloneVestLieutenant : JLTS_CloneVestOfficer
+    {
+        class ItemInfo;
+    };
+    class JLTS_CloneVestPurge : V_PlateCarrier1_rgr
+    {
+        class ItemInfo;
+    };
 
     class MACRO_NEW_VEST(infantry,base): JLTS_CloneVestOfficer
     {
@@ -759,5 +767,82 @@ class CfgWeapons
     MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSP_Vest,Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistBase_ca.paa)
     MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSPRTO_Vest,RTO Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistRTO_ca.paa)
     MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSPMEDIC_Vest,Medic Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistMedic_ca.paa)
+
+
+    class MACRO_NEW_VEST(marshal,base) : JLTS_CloneVestLieutenant
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Infantry Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_MARSHAL_VEST_ITEM(332nd_Marshal_Vest,Marshal)
+
+
+    class MACRO_NEW_VEST(purge,base) : JLTS_CloneVestPurge
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Infantry Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_PURGE_VEST_ITEM(332nd_Purge_Vest,Purge)
+
     /// ---- End
 }

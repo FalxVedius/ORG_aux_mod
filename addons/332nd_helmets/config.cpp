@@ -23,6 +23,7 @@ class CfgWeapons
 
 	class CloneHelmetP2_Base : JLTS_CloneHelmetP2
 	{
+		scopeArsenal = 0;
 		class ItemInfo;
 	};
 
@@ -53,6 +54,7 @@ class CfgWeapons
 
 	class CloneHelmetAB_Base : JLTS_CloneHelmetAB
 	{
+		scopeArsenal = 0;
 		class ItemInfo;
 	};
 
@@ -83,6 +85,7 @@ class CfgWeapons
 
 	class CloneHelmetPilot_Base : 3as_P2_Pilot_helmet
 	{
+		scopeArsenal = 0;
 		class ItemInfo;
 	};
 
@@ -119,6 +122,7 @@ class CfgWeapons
 
 	class CloneARFHelmet_Base :3AS_ARF_Helmet
 	{
+		scopeArsenal = 0;
 		class ItemInfo;
 	};
 
@@ -151,6 +155,7 @@ class CfgWeapons
 
 	class CloneHelmetWarden_Base : 3as_Engineer_Helmet
 	{
+		scopeArsenal = 0;
 		class ItemInfo;
 	};
 
@@ -165,6 +170,28 @@ class CfgWeapons
 
 		ace_hearing_lowerVolume = 0.60000002;
 		ace_hearing_protection = 0.85000002;
+
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
+	}
+
+	class MACRO_NEW_HELMET(scenario,base) : CloneHelmetP2_Base
+	{
+		scopeArsenal = 0;
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[332nd] Scenario Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
 		{

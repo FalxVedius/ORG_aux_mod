@@ -39,7 +39,7 @@ class CfgPatches
 
 			MACRO_NEW_UNIT(cisdroideka,332nd_CIS_HEAVY_Droideka),
 			MACRO_NEW_UNIT(cisdroidekamoveable,332nd_CIS_HEAVY_Droideka_Moveable),
-			MACRO_NEW_UNIT(cisb2,332nd_CIS_HEAVY_B2),
+			MACRO_NEW_UNIT(cisb2,332nd_CIS_B2),
         };
         weapons[] = {
             MACRO_NEW_UNIFORM(cisb1,332nd_CIS_B1),
@@ -209,7 +209,7 @@ class CfgVehicles
 	//Heavy Droids
 	MACRO_NEW_CISDROIDEKA_UNIT(332nd_CIS_HEAVY_Droideka,Droideka (Static))
 	MACRO_NEW_CISDROIDEKA_MOVE_UNIT(332nd_CIS_HEAVY_Droideka_Moveable,Droideka (Moveable))
-	MACRO_NEW_CISB2_UNIT(332nd_CIS_HEAVY_B2,B2 Battle Droid,332nd_CIS_B2)
+	MACRO_NEW_CISB2_UNIT(332nd_CIS_B2,B2 Battle Droid,332nd_CIS_B2)
 };
 
 class CfgGroups

@@ -38,6 +38,19 @@ class cfgFunctions
 			}
 		}
 
+		class Keybinds_and_Functions
+		{
+			file = "\332nd_main\functions";
+			class keybinds
+			{
+				postInit = 1;
+			};
+			class resetAnimation
+			{
+
+			};
+		};
+
 		class user_actions 
 		{
 			class show_damage_report
@@ -58,14 +71,6 @@ class Extended_PreInit_EventHandlers
 		init="call compile preprocessFileLineNumbers '332nd_main\functions\XEH_preinit.sqf'";
 	};
 };
-
-//run once and after all the units and vehicles have had both their init event handlers and the code in the mission editor "init" lines processed
-// stuff like Scheduled environments
-// class Extended_PostInit_EventHandlers {
-//     class 332nd_aux_POSTINIT {
-//         init = "call compile preprocessFileLineNumbers '332nd_main\XEH_postinit.sqf'";
-//     };
-// };
 
 
 class CAWorld;

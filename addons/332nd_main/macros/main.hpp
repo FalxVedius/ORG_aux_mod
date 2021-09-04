@@ -100,6 +100,14 @@
 			displayName = [332nd] Recon Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arf\##texture};\
 		};
+	#define MACRO_NEW_SCENARIO_HELMET_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_HELMET(scenario,classname): MACRO_NEW_HELMET(scenario,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Scenario Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {##texture};\
+		};
 
 	// ---- Uniforms ---- 
 	#define MACRO_NEW_RECRUIT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
@@ -243,6 +251,17 @@
 				uniformClass = MACRO_NEW_UNIT(mech,uniformClassname); \
 			}; \
 		};
+	#define MACRO_NEW_SCENARIO_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(scenario,classname): MACRO_NEW_UNIFORM(scenario,base)\
+		{\
+			displayName = [332nd] Scenario Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(scenario,uniformClassname); \
+			}; \
+		};
 
 
 	// --- Opfor Uniforms ---
@@ -361,6 +380,8 @@
 		{\
 			displayName = [332nd] CIS B2 Battle droid ('##displayname##');\
 			scope = 2;\
+			JLTS_hasStunProtection = 1;\
+			JLTS_isDroid = 1;\
 			class ItemInfo: ItemInfo\
 			{\
 				uniformClass = MACRO_NEW_UNIT(cisb2,uniformClassname);\
@@ -561,6 +582,21 @@
 				MACRO_UNIFORM_TEXTURES_PATH\mechanized\uniforms\##upper,\
 				MACRO_UNIFORM_TEXTURES_PATH\mechanized\uniforms\##lower\
 			};\
+		}
+	#define MACRO_NEW_SCENARIO_UNIT(classname,displayname,uniformClassname,upper,lower,helmet)\
+		class MACRO_NEW_UNIT(scenario,classname): MACRO_NEW_UNIT(scenario,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(scenario,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				##upper,\
+				##lower\
+			};\
+			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" }; \
+			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" }; \
 		}
 
 
@@ -911,6 +947,20 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Airborne Vest ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture2};\
+		};
+	#define MACRO_NEW_MARSHAL_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(marshal,classname): MACRO_NEW_VEST(marshal,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_PURGE_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(purge,classname): MACRO_NEW_VEST(purge,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Scenario Vest ('##displayname##');\
 		};
 
 // ============================================================================== Macro Predefined Equipments
