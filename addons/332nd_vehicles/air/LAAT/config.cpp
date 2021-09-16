@@ -13,7 +13,6 @@ class CfgPatches
         requiredVersion = 0.1;
         units[] = {
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao),
             MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd),
 			MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_AB),
         };
@@ -72,16 +71,43 @@ class Extended_init_EventHandlers
 
 class CfgVehicles
 {
-    class Helicopter_Base_H;
-
-    class ls_laat_base : Helicopter_Base_H
+    class Helicopter;
+    class Helicopter_Base_F: Helicopter
+	{
+		class Turrets;
+		class HitPoints;
+	};
+	class Helicopter_Base_H: Helicopter_Base_F
+	{
+		class CargoTurret;
+		class ACE_selfActions;
+		class Turrets: Turrets
+		{
+			class MainTurret;
+		};
+		class AnimationSources;
+		class Eventhandlers;
+		class Viewoptics;
+		class ViewPilot;
+		class RotorLibHelicopterProperties;
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitHRotor;
+			class HitVRotor;
+			class HitAvionics;
+		};
+	};
+    class lsd_laat_base : Helicopter_Base_H
     {
 	    class Components;
         class Turrets;
         class Reflectors;
     };
 
-    class ls_laat : ls_laat_base
+    class lsd_heli_laati : lsd_laat_base
     {
         class Turrets : Turrets
         {
@@ -109,7 +135,7 @@ class CfgVehicles
         };
     };
 
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base): ls_laat
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base):  lsd_heli_laati
     {
         displayName = "LAAT Mk1 Base";
         scope = 0;

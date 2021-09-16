@@ -14,7 +14,7 @@ class CfgPatches
 			cba_patches ,//cba stuff
             MARCO_JLTS_PATCHES,
 			MARCO_3AS_PATCHES,
-			"ls_laat_2",
+			"lsd_vehicles_heli",
 			"SWLW_merc_mando_rifles_sniper",
 			"SWLW_merc_mando_pistols_Westar35SA",
 			"SWLW_clones_launchers_RPS6"
