@@ -31,6 +31,10 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Bugs),
 			MACRO_NEW_HELMET(infantry,Marshal),
 			MACRO_NEW_HELMET(infantry,Lasagna),
+			MACRO_NEW_HELMET(infantry,Aspect),
+			MACRO_NEW_HELMET(infantry,Beat),
+			MACRO_NEW_HELMET(infantry,Grass),
+			MACRO_NEW_HELMET(infantry,Dakka),
         };
 		weapons[] = {};
 	};
@@ -60,4 +64,8 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Bugs,Bugs,Bugs.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Marshal,Marshal,Marshal.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Lasagna,Lasagna,Lasagna.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Aspect,Aspect,Aspect.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Beat,Beat,Beat.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Grass,Grass,Grass.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Dakka,Dakka,Dakka.paa)
 };

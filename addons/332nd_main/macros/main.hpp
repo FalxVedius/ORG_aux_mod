@@ -100,6 +100,14 @@
 			displayName = [332nd] Recon Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arf\##texture};\
 		};
+		#define MACRO_NEW_BARC_HELMET_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_HELMET(barc,classname): MACRO_NEW_HELMET(barc,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Barc Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\barc\##texture};\
+		};
 	#define MACRO_NEW_SCENARIO_HELMET_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_HELMET(scenario,classname): MACRO_NEW_HELMET(scenario,base)\
 		{\
@@ -108,6 +116,7 @@
 			displayName = [332nd] Scenario Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {##texture};\
 		};
+	
 
 	// ---- Uniforms ---- 
 	#define MACRO_NEW_RECRUIT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
