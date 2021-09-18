@@ -47,6 +47,7 @@ class CfgPatches
             MACRO_NEW_UNIT(aviation,332nd_flight_cadet),
             MACRO_NEW_UNIT(aviation,332nd_flight_ensign),
             MACRO_NEW_UNIT(aviation,332nd_flight_senior_ensign),
+            MACRO_NEW_UNIT(aviation,332nd_flight_technician),
             MACRO_NEW_UNIT(aviation,332nd_flight_officer),
             MACRO_NEW_UNIT(aviation,332nd_flight_jr_lieutenant),
             MACRO_NEW_UNIT(aviation,332nd_flight_lieutenant),
@@ -144,6 +145,7 @@ class CfgPatches
             MACRO_NEW_UNIFORM(aviation,332nd_flight_cadet),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_ensign),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_senior_ensign),
+            MACRO_NEW_UNIFORM(aviation,332nd_flight_technician),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_officer),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_jr_lieutenant),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_lieutenant),
@@ -334,6 +336,7 @@ class CfgWeapons
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_cadet,Flight Cadet,332nd_flight_cadet)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_ensign,Flight Ensign,332nd_flight_ensign)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_senior_ensign,Flight Senior Ensign,332nd_flight_senior_ensign)
+    MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_technician,Flight Technician,332nd_flight_technician)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_officer,Flight Officer,332nd_flight_officer)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_jr_lieutenant,Flight Jr Lieutenant,332nd_flight_jr_lieutenant)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_lieutenant,Flight Lieutenant,332nd_flight_lieutenant)
@@ -473,6 +476,7 @@ class CfgVehicles
     MACRO_NEW_AVI_UNIT(332nd_flight_cadet,Flight Cadet,332nd_flight_cadet,flight_cadet\cadet_upper.paa,flight_cadet\cadet_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_ensign,Flight Ensign,332nd_flight_ensign,ensign\ensign_upper.paa,ensign\ensign_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_senior_ensign,Flight Senior Ensign,332nd_flight_senior_ensign,snr_ensign\senior_ensign_upper.paa,snr_ensign\senior_ensign_lower.paa)
+    MACRO_NEW_AVI_UNIT(332nd_flight_technician,Flight Technician,332nd_flight_technician,technician\technician_upper.paa,technician\technician_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_officer,Flight Officer,332nd_flight_officer,flight_officer\flight_officer_upper.paa,flight_officer\flight_officer_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_jr_lieutenant,Flight Jr Lieutenant,332nd_flight_jr_lieutenant,jr_lieutenant\jr_lieutenant_upper.paa,jr_lieutenant\jr_lieutenant_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_lieutenant,Flight Lieutenant,332nd_flight_lieutenant,lieutenant\lieutenant_upper.paa,lieutenant\lieutenant_lower.paa)
