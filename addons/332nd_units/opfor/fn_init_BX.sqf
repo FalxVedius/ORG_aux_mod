@@ -132,7 +132,6 @@ if (isServer) then {
 		
 		}, 30, [_unit]] call CBA_fnc_addPerFrameHandler;
 		
-		
 	
 		waitUntil {
 			sleep 0.5; 
