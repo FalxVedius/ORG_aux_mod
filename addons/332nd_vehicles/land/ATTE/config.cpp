@@ -96,6 +96,14 @@ class CfgVehicles
 		armor = 5000;
 		enginePower = 2500;
 		maxSpeed = 15;
+
+
+		class Eventhandlers
+		{
+			init = "_this execVM '332nd_vehicles\land\ATTE\fn_InitWalk.sqf';";
+		};
+
+
 		class Turrets : Turrets
 		 {
 		   class MainTurretTop : MainTurretTop
