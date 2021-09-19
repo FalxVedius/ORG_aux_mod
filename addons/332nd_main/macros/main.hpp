@@ -998,6 +998,7 @@
 			uniformClass = MACRO_NEW_UNIFORM(rebel_Breacher,uniformClassname);\
 		}
 
+
 	// ---- END REBEL ----
 
 	// ---- Vests ---- 

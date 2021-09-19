@@ -1627,16 +1627,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -1866,16 +1864,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -2104,16 +2100,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -2342,16 +2336,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -2580,16 +2572,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -2818,16 +2808,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3056,16 +3044,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3294,16 +3280,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3532,16 +3516,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3788,14 +3770,12 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -4022,14 +4002,12 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -10880,14 +10858,13 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_pack";
 		magazines[] =
 		{
-			mag_15(332nd_aux_magazine_E5Low_x50),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_15(332nd_aux_magazine_E5Low_x50)
+			
 
 		};
 		respawnMagazines[] =
 		{
-			mag_15(332nd_aux_magazine_E5Low_x50),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_15(332nd_aux_magazine_E5Low_x50)
 
 		};
 		items[] =
@@ -11100,13 +11077,13 @@ class CfgVehicles
 		{
 			mag_5(332nd_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+		
 		};
 		respawnMagazines[] =
 		{
 			mag_5(332nd_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1),
+			
 		};
 		items[] =
 		{
@@ -11570,31 +11547,11 @@ class CfgVehicles
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+
 		};
 
 		class HitPoints : HitPoints
@@ -12256,7 +12213,7 @@ class CfgVehicles
 		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_sqaud_lead_pack";
+		backpack = "TFAR_rt1523g_black";
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_DC_15s_x60),
@@ -12495,14 +12452,12 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_E5Low_x50),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_5(332nd_aux_magazine_E5Low_x50)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_E5Low_x50),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_5(332nd_aux_magazine_E5Low_x50)
 
 		};
 		items[] =
@@ -12970,12 +12925,12 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_DP23_x12Wide),
-			mag_10(332nd_aux_magazine_332_FLASH_x1)
+			mag_1(332nd_aux_magazine_332_FLASH_x1)
 		};
 		respawnMagazines[] =
 		{
 			mag_5(332nd_aux_magazine_DP23_x12Wide),
-			mag_10(332nd_aux_magazine_332_FLASH_x1)
+			mag_1(332nd_aux_magazine_332_FLASH_x1)
 		};
 		items[] =
 		{

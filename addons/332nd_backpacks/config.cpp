@@ -206,7 +206,7 @@ class CfgVehicles
 	//Rebel player bag
 
 	class JLTS_B1_backpack;
-	class B_Carryall_oli;
+	class TFAR_rt1523g_bwmod;
 
 	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_pack) : JLTS_B1_backpack
 	{
@@ -523,11 +523,6 @@ class CfgVehicles
 				count = 10;
 			};
 
-			class Frag_rebel
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 2;
-			};
 
 			class Smoke_Blue_rebel
 			{
@@ -563,78 +558,24 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class CableTie
-			{
-				name = "ACE_CableTie";
-				count = 3;
-			};
-
-			class Entrenching_Tool_rebel
-			{
-				namne = "ACE_EntrenchingTool";
-				count = 1;
-			};
-
-			class Flashlight_rebel
-			{
-				namne = "ACE_Flashlight_XL50";
-				count = 1;
-			};
-
-			class M26_Clacker_rebel
-			{
-				namne = "ACE_M26_Clacker";
-				count = 1;
-			};
-
-			class MineDetector_rebel
-			{
-				namne = "MineDetector";
-				count = 1;
-			};
-
-			class Wirecutter_rebel
-			{
-				name = "ACE_wirecutter";
-				count = 1;
-			};
-
-			class Earplugs_rebel
-			{
-				name = "ACE_EarPlugs";
-				count = 1;
-			};
-
-			class epinephrine_rebel
-			{
-				name = "ACE_epinephrine";
-				count = 2;
-			};
-
-			class PlasmaIV_500_rebel
-			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
-			};
-
-			class Pressure_Cuff_rebel
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 4;
-			};
-
-			class Plasti_Band_rebel
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 5;
-			};
 
 			class Bacta_Spray_rebel
 			{
 				name = "332nd_aux_medical_BactaSpray";
-				count = 10;
+				count = 4;
 			};
 
+			class Blood_Tank_rebel_medic
+			{
+				name = "332nd_aux_medical_Blood";
+				count = 1;
+			};
+
+			class Adhesive_Defib_Strip_medic
+			{
+				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				count = 5;
+			};
 		};
 
 		class TransportWeapons
@@ -656,11 +597,6 @@ class CfgVehicles
 				count = 10;
 			};
 
-			class Frag_rebel
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 2;
-			};
 
 			class Smoke_Blue_rebel
 			{
@@ -782,18 +718,13 @@ class CfgVehicles
 				magazine = "SWLW_LS150_mag";
 				count = 5;
 			};
-			class Frag_rebel
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 2;
-			};
 
 		};
 
 
 	}
 
-	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_sqaud_lead_pack) : B_Carryall_oli
+	class MACRO_NEW_BACKPACK(blufor,332nd_rebel_sqaud_lead_pack) : TFAR_rt1523g_bwmod
 	{
 		tf_dialog = "JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";

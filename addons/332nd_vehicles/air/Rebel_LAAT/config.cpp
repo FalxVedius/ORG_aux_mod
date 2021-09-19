@@ -74,7 +74,7 @@ class CfgVehicles
 	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel_base) : ls_laat
 	{
 		displayName = "Stolen LAAT Mk1 Base";
-		scope = 0;
+		scope = 2;
 
 		faction = "EdCat_332nd_Rebel";
 		editorSubcategory = "EdSubcat_332nd_AIR";
