@@ -51,11 +51,11 @@ class CfgMagazines
 
 	class MACRO_NEW_MAG(DC_15a_High,10): MACRO_NEW_MAG(DC_15a_Medium,30)//High Mag for DC15A | Not on the 15A UGL
 	{
-		count=10;
-		mass=20
+		count=15;
+		mass=20;
 		initspeed=1600;
-		displayName=MACRO_AMMO_DISPLAYNAME(15a High,10)
-		displayNameShort="High Power 10rnd";
+		displayName=MACRO_AMMO_DISPLAYNAME(15a High,15)
+		displayNameShort="High Power 15rnd";
 		descriptionShort="332nd High Power Round";
 		ammo="ls_ammo_127x108_green";
 	};
@@ -82,8 +82,8 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=125;
-		mass=75;
+		count=150;
+		mass=145;
 		initspeed=1500;
 		displayName=MACRO_AMMO_DISPLAYNAME(15L,125)
 		displayNameShort="High Power 125rnd";
@@ -319,7 +319,10 @@ class CfgAmmo
 	class ls_ammo_65_red;
 	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
 	{
-		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
+		//soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
+		supersonicCrackFar[] = {"",0,0};
+		supersonicCrackNear[] = {"",0,0};
+		soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,1,500};
 	};
 	class ls_ammo_408_blue;
 	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue

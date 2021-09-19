@@ -1,5 +1,6 @@
 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile", "_gunner"];
 
+systemChat "Fired Called";
 
 if (_muzzle == "332nd_FRAG_Muzzle" || _muzzle == "332nd_HEDP_Muzzle") then
 {
@@ -18,6 +19,7 @@ if (_muzzle == "332nd_FRAG_Muzzle" || _muzzle == "332nd_HEDP_Muzzle") then
 				case (_rndSound == 0): 
 				{
 					playSound3D ["332nd_units\opfor\VoiceSounds\ThrowingGrenade_03.wav", _obj, false, getPosASL _obj, 5, 1.2, 125];
+					
 				};
 				case (_rndSound == 1): 
 				{
@@ -30,16 +32,15 @@ if (_muzzle == "332nd_FRAG_Muzzle" || _muzzle == "332nd_HEDP_Muzzle") then
 			
 				default { playSound3D ["332nd_units\opfor\VoiceSounds\ThrowingGrenade_03.wav", _obj, false, getPosASL _obj, 5, 1.2, 125]; };
 			};
-	};
+			
+			deleteVehicle _obj;
+		};
 	
 
 		case (_rndNum >= 10): {};
 		default {};
 	};
-
-
-	deleteVehicle _obj;
-
+	
 }
 else
 {
@@ -75,14 +76,12 @@ else
 				
 				default { [_obj,["B1_shooting_1_332nd", 200, 1]] remoteExec ["say3D",0,true]; };
 			};
+			
+			deleteVehicle _obj;
 	
 		};
 		
-	
 		case (_rndNum >= 5): {};
 		default {};
 	};
-	
-	
-	deleteVehicle _obj;
 };

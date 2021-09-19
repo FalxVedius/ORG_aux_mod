@@ -61,8 +61,8 @@ class CfgAmmo
 	
 	class MACRO_NEW_AMMO(RPS6_AARocket): M_Titan_AA
 	{
-		cmImmunity=0.8;
-		hit=1400;
+		cmImmunity=1;
+		hit=1700;
 		effectsMissile = "332nd_aux_effects_missile_red";
 		missileLockMaxDistance = 3000;
 		manueuvrability = 25;

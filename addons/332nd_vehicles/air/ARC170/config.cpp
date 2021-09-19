@@ -198,7 +198,6 @@ class CfgVehicles
 		 MACRO_NEW_MAG(ARC170_Low,600),
 		 MACRO_NEW_MAG(ARC170_Low,600),
 		 MACRO_NEW_MAG(ARC170_High,16),
-		 MACRO_NEW_MAG(ARC170_High,16),
 		  "120Rnd_CMFlare_Chaff_Magazine",
 		  "Laserbatteries",
 		  "120Rnd_CMFlare_Chaff_Magazine",
@@ -243,8 +242,8 @@ class CfgVehicles
 		   armorStructured = 1;
 		   envelope[] = {0,0.01,0.2,4,6,7.6,8.4,9.2,9.4,9.6,9.7,9.8,8,1};
 		   draconicForceXCoef = 4.5;
-		   draconicForceYCoef = 2.5;
-		   draconicForceZCoef = 8.5;
+		   draconicForceYCoef = 3;
+		   draconicForceZCoef = 6;
 		   draconicTorqueXCoef = 2.0999999;
 		   draconicTorqueYCoef = -0.3;
 		   angleOfIndicence = 0;
@@ -254,16 +253,16 @@ class CfgVehicles
 		   altNoForce = 20000;
 		   altFullForce = 20000;
 		   //air physics
-		   elevatorCoef[] = {0, 0.80000001, 0.89999998, 1, 1.1, 1.2, 1.2, 1.3, 1.3, 1.3, 1.4, 1.4, 1.4};
-		   elevatorSensitivity = 1.5;
-		   elevatorControlsSensitivityCoef3 = 4;
+		   elevatorCoef[] = {1};
+		   elevatorSensitivity = 1;
+		   elevatorControlsSensitivityCoef = 4;
 		   aileronCoef[] = {2};
 		   aileronSensitivity = 1;
 		   aileronControlsSensitivityCoef = 5;
-		   rudderCoef[] = {2.6,2,2,2.9,2.8,2,2};
+		   rudderCoef[] = {3.5};
 		   rudderInfluence = 0.9;
 		   rudderControlsSensitivityCoef = 6;
-		   thrustCoef[] = {2,1.17,1.15,1.14,1.13,1.12,1.1,1.07,0.99,0.2,0,0,0};
+		   thrustCoef[] = {2,2.17,2.15,3.14,3.13,3.12,3.1,3.07,2.99,2.2,2,2};
 		   irScanRangeMin = 10;
 		   irScanRangeMax = 10000;
 		   irScanToEyeFactor = 8;

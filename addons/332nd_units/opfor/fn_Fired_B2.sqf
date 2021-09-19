@@ -45,4 +45,7 @@ switch (true) do {
 };
 
 
-deleteVehicle _obj;
+if (!isNull _obj) then
+{
+	deleteVehicle _obj;
+};

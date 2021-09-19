@@ -354,6 +354,18 @@ class CfgWeapons
 		};
 	};
 
+	class MACRO_NEW_UNIFORM(scenario,base) : JLTS_CloneArmor
+	{
+		displayName = "[332nd] Scenario Uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(scenario,base);
+			containerClass = "Supply140";
+			uniformType = "Neopren";
+		};
+	};
+
 	
 	// ---- End blufor Uniforms ----
 
@@ -533,7 +545,8 @@ class CfgWeapons
 	class MACRO_NEW_UNIFORM(cisb2,base) : lsd_cis_b2Droid_uniform
 	{
 		displayName = "[332nd] B2 droid uniform ('base')";
-		scope = 0;							
+		scope = 0;					
+
 		class ItemInfo : ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(cisb2,base);
@@ -1500,6 +1513,12 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_Z6_x200";
 				count = 200;
 			};
+
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
+            };
 
 			class Z6_ALT_332nd
 			{
@@ -4209,6 +4228,241 @@ class CfgVehicles
 		};
 
     };
+
+	class MACRO_NEW_UNIT(scenario,base) : JLTS_Clone_P2_DC15A
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Clone Scenario Base";
+
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+
+		uniformClass = MACRO_NEW_UNIFORM(scenario,base);
+		hiddenSelections[] = { "camo1","camo2","insignia" };
+
+		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		nakedUniform = "JLTS_CloneNaked_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		magazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		respawnMagazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 3;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 3;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 3;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 20;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 15;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 15;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 20;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2500;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 15;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 15;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 15;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2500;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 15;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 15;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
 	// ---- End Blufor Units for Uniforms ----
 
 	// ---- Opfor Units for Uniforms ----
@@ -10572,6 +10826,7 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
+		displayName = "[332nd] *WIP* B2 Battle Droid Base";
 
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_HEAVY";
@@ -10821,6 +11076,10 @@ class CfgVehicles
 		{
 			breath[] = {};
 		};
+
+
+		JLTS_hasStunProtection = 1;
+		JLTS_hasStunProtection = 1;
 
 	};
 
@@ -13602,103 +13861,6 @@ class Extended_Init_EventHandlers
 
 class Extended_Fired_EventHandlers
 {
-	//B1s
-	class MACRO_NEW_UNIT(cisb1,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1jumppack,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1breach,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1ar,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1at,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1sniper,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1crew,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1comm,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1marine,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1sec,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-	class MACRO_NEW_UNIT(cisb1pilot,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired;";
-	};
-
-
-	//BXs
-	class MACRO_NEW_UNIT(cisbx,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxcapt,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxsec,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxdiplo,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxassassin,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxmelee,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxmeleerush,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxar,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxat,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxbreach,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-	class MACRO_NEW_UNIT(cisbxhybrid,base)
-	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_BX;";
-	};
-
 	//Heavy Droids
 	class MACRO_NEW_UNIT(cisb2,base)
 	{

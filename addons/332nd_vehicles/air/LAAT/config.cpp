@@ -13,13 +13,13 @@ class CfgPatches
         requiredVersion = 0.1;
         units[] = {
             MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd),
-            MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_ahegao),
             MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd),
-			MACRO_NEW_VEHICLE(air,LAATle,mk1_332nd_AB),
+			MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_AB),
         };
         weapons[] = {};
     };
 };
+
 class SensorTemplatePassiveRadar;
 class DefaultVehicleSystemsDisplayManagerLeft
 {
@@ -29,11 +29,11 @@ class DefaultVehicleSystemsDisplayManagerRight
 {
 	class components;
 };
-class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+class VehicleSystemsTemplateLeftPilot : DefaultVehicleSystemsDisplayManagerLeft
 {
 	class components;
 };
-class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+class VehicleSystemsTemplateRightPilot : DefaultVehicleSystemsDisplayManagerRight
 {
 	class components;
 };
@@ -72,44 +72,251 @@ class Extended_init_EventHandlers
 
 class CfgVehicles
 {
-    class Helicopter_Base_H;
+	class Helicopter;
+	class Items_base_F;
+	class Wreck_base_F;
+	class Helicopter_Base_F : Helicopter
+	{
+		class Turrets;
+		class HitPoints;
+		class ViewPilot;
+	};
+	class Helicopter_Base_H : Helicopter_Base_F
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret;
+		};
+		class AnimationSources;
+		class Eventhandlers;
+		class Viewoptics;
+		class ViewPilot;
+		class RotorLibHelicopterProperties;
+		class HitPoints : HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitHRotor;
+			class HitVRotor;
+			class HitAvionics;
+		};
+	};
 
-    class ls_laat_base : Helicopter_Base_H
+    class lsd_laat_base : Helicopter_Base_H
     {
 	    class Components;
-        class Turrets;
-        class Reflectors;
+		class Reflectors;
+		class Turrets : Turrets
+		{
+			class MainTurret;
+			class cargoTurret_rearl;
+			class cargoTurret_rearr;
+			class cargoturret_left_1;
+			class cargoTurret_left_2;
+			class cargoTurret_left_3;
+			class cargoTurret_left_4;
+			class cargoTurret_left_5;
+			class cargoTurret_left_14;
+			class cargoturret_right_1;
+			class cargoTurret_right_2;
+			class cargoTurret_right_3;
+			class cargoTurret_right_4;
+			class cargoTurret_right_5;
+			class CargoTurret_right_13;
+			class CargoTurret_right_17;
+			class CargoTurret_right_18;
+			class CargoTurret_right_19;
+			class CargoTurret_left_20;
+			class CargoTurret_left_21;
+			class CargoTurret_left_22;
+
+		};
     };
 
-    class ls_laat : ls_laat_base
+    class lsd_heli_laati : lsd_laat_base
     {
-        class Turrets : Turrets
-        {
-            class MainTurret;
-        };
 		class Components;
-        class ACE_SelfActions;
+		class ACE_selfActions;
+		class Reflectors : Reflectors
+		{
+			class Left;
+			class Right;
+		};
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
 
-        class Reflectors : Reflectors
-        {
-            class Left;
-            class Right;
-        };
+			};
+			class cargoTurret_rearl : cargoTurret_rearl
+			{
+				
+			};
+			class cargoTurret_rearr : cargoTurret_rearr
+			{
 
-        class HitPoints
-        {
-            class HitHull;
-            class HitFuel;
-            class HitEngine;
-            class HitEngine_1;
-            class HitEngine_2;
-            class HitHRotor;
-            class HitVRotor;
-            class HitAvionics;
-        };
+			};
+			class cargoturret_left_1 : cargoturret_left_1
+			{
+
+			};
+			class cargoTurret_left_2 : cargoTurret_left_2
+			{
+
+			};
+			class cargoTurret_left_3 : cargoTurret_left_3
+			{
+
+			};
+			class cargoTurret_left_4 : cargoTurret_left_4
+			{
+
+			};
+			class cargoTurret_left_5 : cargoTurret_left_5
+			{
+
+			};
+			class cargoTurret_left_14 : cargoTurret_left_14
+			{
+
+			};
+			class cargoturret_right_1 : cargoturret_right_1
+			{
+
+			};
+			class cargoTurret_right_2 : cargoTurret_right_2
+			{
+
+			};
+			class cargoTurret_right_3 : cargoTurret_right_3
+			{
+
+			};
+			class cargoTurret_right_4 : cargoTurret_right_4
+			{
+
+			};
+			class cargoTurret_right_5 : cargoTurret_right_5
+			{
+
+			};
+			class CargoTurret_right_13 : CargoTurret_right_13
+			{
+
+			};
+			class CargoTurret_right_17 : CargoTurret_right_17
+			{
+
+			};
+			class CargoTurret_right_18 : CargoTurret_right_18
+			{
+
+			};
+			class CargoTurret_right_19 : CargoTurret_right_19
+			{
+
+			};
+			class CargoTurret_left_20 : CargoTurret_left_20
+			{
+
+			};
+			class CargoTurret_left_21 : CargoTurret_left_21
+			{
+
+			};
+			class CargoTurret_left_22 : CargoTurret_left_22
+			{
+
+			};
+		};
+
+		class HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitEngine_1;
+			class HitEngine_2;
+			class HitHRotor;
+			class HitVRotor;
+			class HitAvionics;
+		};
     };
 
-    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base): ls_laat
+	class ls_laatle_base : Helicopter_Base_H
+	{
+		class Components;
+		class Turrets : Turrets
+		{
+			class MainTurret;
+			class cargoTurret_pos7;
+			class cargoTurret_pos8;
+			class cargoTurret_pos9;
+			class cargotTurret_pos10;
+			class cargoTurret_pos11;
+			class cargoTurret_pos12;
+			class cargoTurret_leftDoor_pos13;
+			class cargoTurret_leftDoor_pos14;
+			class cargoTurret_rightDoor_pos15;
+			class cargoTurret_rightDoor_pos16;
+		};
+	};
+	class ls_heli_laatle : ls_laatle_base
+	{
+		class Components;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+
+			};
+			class cargoTurret_pos7 : cargoTurret_pos7
+			{
+
+			};
+			class cargoTurret_pos8 : cargoTurret_pos8
+			{
+
+			};
+			class cargoTurret_pos9 : cargoTurret_pos9
+			{
+
+			};
+			class cargotTurret_pos10 : cargotTurret_pos10
+			{
+
+			};
+			class cargoTurret_pos11 : cargoTurret_pos11
+			{
+
+			};
+			class cargoTurret_pos12 : cargoTurret_pos12
+			{
+
+			};
+			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
+			{
+
+			};
+			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
+			{
+
+			};
+			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
+			{
+
+			};
+			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
+			{
+
+			};
+		};
+
+
+	};
+
+    class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base):  lsd_heli_laati
     {
         displayName = "LAAT Mk1 Base";
         scope = 0;
@@ -145,11 +352,11 @@ class CfgVehicles
         };
 
         hiddenselectionstextures[] = {
-            MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-            MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
             MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-            "swlb_a_vehicle\laat\data\missiles_co.paa",
-            MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+            "lsd_vehicles_heli\laati\data\missiles_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
         };
 
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
@@ -259,21 +466,101 @@ class CfgVehicles
 			};
 		};
 
-        class Turrets : Turrets
-        {
-            class MainTurret : MainTurret
-            {
-                weapons[] = {
-                    MACRO_AIR_COMMON_WEAPS,
-                    "ParticleBeamCannon"
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] = {
+					MACRO_AIR_COMMON_WEAPS,
+					"ParticleBeamCannon"
 
-                };
-                magazines[] = {
-                    MACRO_AIR_COMMON_MAGS,
-                    "Laser_Battery_F","Laser_Battery_F"
-                };
-            }
-        }
+				};
+				magazines[] = {
+					MACRO_AIR_COMMON_MAGS,
+					"Laser_Battery_F","Laser_Battery_F"
+				};
+			};
+			class cargoTurret_rearl : cargoTurret_rearl
+			{
+
+			};
+			class cargoTurret_rearr : cargoTurret_rearr
+			{
+
+			};
+			class cargoturret_left_1 : cargoturret_left_1
+			{
+
+			};
+			class cargoTurret_left_2 : cargoTurret_left_2
+			{
+
+			};
+			class cargoTurret_left_3 : cargoTurret_left_3
+			{
+
+			};
+			class cargoTurret_left_4 : cargoTurret_left_4
+			{
+
+			};
+			class cargoTurret_left_5 : cargoTurret_left_5
+			{
+
+			};
+			class cargoTurret_left_14 : cargoTurret_left_14
+			{
+
+			};
+			class cargoturret_right_1 : cargoturret_right_1
+			{
+
+			};
+			class cargoTurret_right_2 : cargoTurret_right_2
+			{
+
+			};
+			class cargoTurret_right_3 : cargoTurret_right_3
+			{
+
+			};
+			class cargoTurret_right_4 : cargoTurret_right_4
+			{
+
+			};
+			class cargoTurret_right_5 : cargoTurret_right_5
+			{
+
+			};
+			class CargoTurret_right_13 : CargoTurret_right_13
+			{
+
+			};
+			class CargoTurret_right_17 : CargoTurret_right_17
+			{
+
+			};
+			class CargoTurret_right_18 : CargoTurret_right_18
+			{
+
+			};
+			class CargoTurret_right_19 : CargoTurret_right_19
+			{
+
+			};
+			class CargoTurret_left_20 : CargoTurret_left_20
+			{
+
+			};
+			class CargoTurret_left_21 : CargoTurret_left_21
+			{
+
+			};
+			class CargoTurret_left_22 : CargoTurret_left_22
+			{
+
+			};
+		};
 
         class UserActions
         {
@@ -2613,22 +2900,7 @@ class CfgVehicles
         };
     };
 	
-	class ls_laatle_base
-	{
-	  class Components;
-	  class Turrets
-		{
-			class MainTurret;
-		};
-	};
-	class ls_heli_laatle: ls_laatle_base
-	{
-	  class Components;
-	  class Turrets: Turrets
-		{
-			class MainTurret;
-		};
-	};
+
 
     class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): ls_heli_laatle
     {
@@ -2921,6 +3193,46 @@ class CfgVehicles
 				maxCamElev=90;
 				elevationMode=0;
 				memoryPointGunnerOptics="gunnerview";
+			};
+			class cargoTurret_pos7 : cargoTurret_pos7
+			{
+
+			};
+			class cargoTurret_pos8 : cargoTurret_pos8
+			{
+
+			};
+			class cargoTurret_pos9 : cargoTurret_pos9
+			{
+
+			};
+			class cargotTurret_pos10 : cargotTurret_pos10
+			{
+
+			};
+			class cargoTurret_pos11 : cargoTurret_pos11
+			{
+
+			};
+			class cargoTurret_pos12 : cargoTurret_pos12
+			{
+
+			};
+			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
+			{
+
+			};
+			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
+			{
+
+			};
+			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
+			{
+
+			};
+			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
+			{
+
 			};
 		};
         class TransportItems
@@ -3266,6 +3578,12 @@ class CfgVehicles
             {
                 magazine = "332nd_aux_magazine_Z6_x200";
                 count = 200;
+            };
+
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
             };
 
             class Z6_ALT_332nd
@@ -3707,6 +4025,12 @@ class CfgVehicles
                 count = 200;
             };
 
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
+            };
+			
             class Flash_332nd
             {
                 magazine = "332nd_aux_magazine_332_FLASH_x1";
@@ -3891,11 +4215,11 @@ class CfgVehicles
                 author = "Halligan";
                 textures[] =
                 {
-                      MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-                      MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-                     MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-                     "swlb_a_vehicle\laat\data\missiles_co.paa",
-                       MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+					MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
                 };
                 factions[] =
                 {
@@ -3908,11 +4232,11 @@ class CfgVehicles
                 author = "Halligan";
                 textures[] =
                 {
-                    MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
                     MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-                    "swlb_a_vehicle\laat\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
                 };
                 factions[] =
                 {
@@ -3925,11 +4249,11 @@ class CfgVehicles
                 author = "Halligan";
                 textures[] =
                 {
-                    MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
                     MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-                    "swlb_a_vehicle\laat\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
                 };
                 factions[] =
                 {
@@ -3945,8 +4269,8 @@ class CfgVehicles
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
                     MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
-                    "swlb_a_vehicle\laat\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
                 };
             };
         };
@@ -4294,6 +4618,12 @@ class CfgVehicles
                 count = 200;
             };
 
+			class Z6_Super_332nd
+            {
+                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                count = 250;
+            };
+
             class Z6_ALT_332nd
             {
                 magazine = "332nd_aux_magazine_Z6_x125";
@@ -4534,70 +4864,70 @@ class CfgVehicles
 
          class TextureSources
           {
-            class Standard
-            {
-                displayname = "332nd Standard";
-                author = "Halligan";
-                textures[] =
-                {
-                      MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-                      MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-                     MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-                     "swlb_a_vehicle\laat\data\missiles_co.paa",
-                       MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-                };
-                factions[] =
-                {
-                    "EdCat_332nd"
-                };
-            };
-            class Noseart_Verus
-            {
-                displayName = "332nd Verus Noseart";
-                author = "Halligan";
-                textures[] =
-                {
-                    MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-                    "swlb_a_vehicle\laat\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-                };
-                factions[] =
-                {
-                    "EdCat_332nd"
-                };
-            };
-            class Noseart_Chopper
-            {
-                displayName = "332nd Chopper Noseart";
-                author = "Halligan";
-                textures[] =
-                {
-                    MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-                    "swlb_a_vehicle\laat\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-                };
-                factions[] =
-                {
-                    "EdCat_332nd"
-                };
-            };
-            class Ahegao
-            {
-                displayName = "Transport Gunship (Ahegao)";
-                author = MACRO_AUTHOR;
-                factions[] = { "EdCat_332nd" };
-                textures[] = {
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
-                    "swlb_a_vehicle\laat\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-                };
-            };
+			 class Standard
+			 {
+				 displayname = "332nd Standard";
+				 author = "Halligan";
+				 textures[] =
+				 {
+					 MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				 };
+				 factions[] =
+				 {
+					 "EdCat_332nd"
+				 };
+			 };
+			 class Noseart_Verus
+			 {
+				 displayName = "332nd Verus Noseart";
+				 author = "Halligan";
+				 textures[] =
+				 {
+					 MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				 };
+				 factions[] =
+				 {
+					 "EdCat_332nd"
+				 };
+			 };
+			 class Noseart_Chopper
+			 {
+				 displayName = "332nd Chopper Noseart";
+				 author = "Halligan";
+				 textures[] =
+				 {
+					 MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
+					 MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				 };
+				 factions[] =
+				 {
+					 "EdCat_332nd"
+				 };
+			 };
+			 class Ahegao
+			 {
+				 displayName = "Transport Gunship (Ahegao)";
+				 author = MACRO_AUTHOR;
+				 factions[] = { "EdCat_332nd" };
+				 textures[] = {
+					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
+					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
+					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
+					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
+					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				 };
+			 };
           };
 	  };
    };

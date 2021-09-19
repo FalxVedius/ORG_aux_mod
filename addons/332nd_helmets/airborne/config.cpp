@@ -30,8 +30,8 @@ class CfgWeapons
 
     class MACRO_NEW_HELMET(airborne,base);
 
-    MACRO_NEW_AB_HELMET_ITEM(332nd_airborne,332nd Airborne,AB.paa)
-	MACRO_NEW_AB_HELMET_ITEM(332nd_airborne_veteran,332nd Airborne Veteran,AB_Vet_Helmet.paa)
+    MACRO_NEW_AB_HELMET_ITEM(332nd_airborne,Airborne,AB.paa)
+	MACRO_NEW_AB_HELMET_ITEM(332nd_airborne_veteran,Airborne Veteran,AB_Vet_Helmet.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Chronic,Chronic,Chronic.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Griif,Griif,Griif.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Sazi,Sazi,Sazi.paa)

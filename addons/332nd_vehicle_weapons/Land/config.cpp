@@ -23,7 +23,7 @@ class CfgAmmo
     soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
 	cartridge = "";
 	caliber=40;
-	model = "ls_weapons_core\effects\laser_heat";
+	model = "ls_weapons_core\effects\laser_blue.p3d";
 	effectfly = "SWLW_plasma_green";
 	hit=800;
 	explosionEffects = "ATRocketExplosion";
@@ -86,13 +86,29 @@ class CfgAmmo
 	indirectHit = 0;
 	indirectHitRange = 0;
 	};
-
+	
+	class MACRO_NEW_AMMO(BeamLaser_Full): ls_ammo_127x108_blue
+	{
+	cartridge = "";
+	caliber=3.2;
+	hit=200;
+	model = "ls_weapons_core\effects\green_beam1.p3d";
+	tracerScale = 10;
+	indirectHit = 0;
+	indirectHitRange = 0;
+	timetolive=0.5;
+	effectfly="332nd_aux_effects_RPS4_green";
+	};
+	
+	
+	
+	
 	class ls_50mm_laat_apfsds;
 	class MACRO_NEW_AMMO(BARC_40mm): ls_50mm_laat_apfsds
 	{
 	model="SWLW_main\Effects\laser_green.p3d";
 	flaresize=2;
-	caliber=10;
+	caliber=4;
 	explosionEffects = "GrenadeExplosion";
 	tracersEvery = 1;
 	indirectHit = 12;
@@ -111,6 +127,7 @@ class CfgAmmo
 	indirectHit = 8;
 	indirectHitRange = 0.2;
 	};
+
 	class B_40mm_GPR;
 	class MACRO_NEW_AMMO(40mmHEDP): B_40mm_GPR
 	{
@@ -156,13 +173,50 @@ class CfgMagazines
 		tracersevery = 1;
 		count=25;
 	};
+
+	class MACRO_NEW_MAG(MassDriver_AP,2): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Mass Driver AP";
+		ammo=MACRO_NEW_AMMO(MassDriver_AP)
+		initSpeed = 1000;
+		tracersevery = 1;
+		count=2;
+	};
+
 	class MACRO_NEW_MAG(MassDriver_HE,15): 12Rnd_120mm_APFSDS_shells
 	{
 		displayName="Mass Driver HE";
 		ammo=MACRO_NEW_AMMO(MassDriver_HE)
-		initSpeed = 2000;
+		initSpeed = 1000;
 		tracersevery = 1;
 		count=15;
+	};
+
+	class MACRO_NEW_MAG(Saber_AP,25): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Saber High AP";
+		ammo=MACRO_NEW_AMMO(MassDriver_AP)
+		initSpeed = 1000;
+		tracersevery = 1;
+		count=30;
+	};
+	class MACRO_NEW_MAG(Saber_HE,15): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Saber High HE";
+		ammo=MACRO_NEW_AMMO(MassDriver_HE)
+		initSpeed = 1200;
+		tracersevery = 1;
+		count=20;
+	};
+
+
+	class MACRO_NEW_MAG(LaserBeamFull,2000): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Laser beam";
+		ammo=MACRO_NEW_AMMO(BeamLaser_Full)
+		initSpeed = 1000;
+		tracersevery = 1;
+		count=2000;
 	};
 
 	class 3AS_9999Rnd_ATRT_Mag;
@@ -185,13 +239,33 @@ class CfgMagazines
 		count=1000;
 	};
 
-	class MACRO_NEW_MAG(BARC_MainCannon,1000): 12Rnd_120mm_APFSDS_shells
+	class 100Rnd_127x99_mag;
+	class MACRO_NEW_MAG(SuperSaber_40mm,140): 12Rnd_120mm_APFSDS_shells
+	{
+		displayName="Heavy Hmg 1000rnd";
+		ammo=MACRO_NEW_AMMO(40mmAP)
+		initSpeed = 1200;
+		tracersevery = 1;
+		count=140;
+	};
+
+	class MACRO_NEW_MAG(Saber_Low,500): 12Rnd_120mm_APFSDS_shells
+	{
+	    cartridge = "";
+		displayName="Heavy Hmg 1000rnd";
+		ammo=MACRO_NEW_AMMO(20mmHMG)
+		initSpeed = 800;
+		tracersevery = 1;
+		count=500;
+	};
+
+	class MACRO_NEW_MAG(BARC_MainCannon,300): 12Rnd_120mm_APFSDS_shells
 	{
 		displayName="40mm Cannon 1000rnd";
 		ammo=MACRO_NEW_AMMO(BARC_40mm)
-		initSpeed = 800;
+		initSpeed = 600;
 		tracersevery = 1;
-		count=1000;
+		count=300;
 	};
 
 	class MACRO_NEW_MAG(Heavy_HMG,150): 12Rnd_120mm_APFSDS_shells
@@ -248,7 +322,7 @@ class player;
 class manual;
 class CfgWeapons
 {
-  class cannon_125mm_advanced;
+    class cannon_125mm_advanced;
 	class MACRO_NEW_WEAPON(Mass_Driver): cannon_125mm_advanced
 	{
 	    ace_overpressure_angle =0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
@@ -429,9 +503,457 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 		};
 	};
-
-	};
 	
+
+	class MACRO_NEW_WEAPON(BeamLaser_Full): HMG_127
+	{
+	    ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+        ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+        ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = {"this"};
+		magazineWell[] = {};
+		cursoraim="332_DC17";
+		magazines[] = {
+			MACRO_NEW_MAG(LaserBeamFull,2000)
+		};
+		modes[] = {"manual","close","short","medium","far"};
+		displayName = "Beam Laser";
+		class manual: manual
+		{
+			magazineReloadTime = 5;
+			Burst=25;
+			displayname="Auto";
+			reloadTime=0.01;
+			dispersion=0;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\Land\sounds\Laserbeam1.wss",
+					0.9,
+					0.9,
+					6000
+				};
+				begin2[]=
+				{
+					"332nd_vehicle_weapons\Land\sounds\Laserbeam2.wss",
+					1,
+					1,
+					6000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1,
+					"begin2",
+					1,
+				};
+			};
+		};
+		class close: manual
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+		class Far: medium
+		{
+			burst=1;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=600;
+			minRange=510;
+			minRangeProbab=0.050000001;
+			midRange=700;
+			midRangeProbab=0.69999999;
+			maxRange=1200;
+			maxRangeProbab=0.1;
+		};
+	};
+
+
+	class SWLG_TX130_aa;
+	class MACRO_NEW_WEAPON(Saber_low): SWLG_TX130_aa
+	{
+	   	magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Saber_Low,500)
+		};
+		displayName = "Saber Low Energy";
+		modes[] = {"manual","close","short","medium"};
+		class manual:  manual
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\Land\sounds\SaberLowPower.wss",
+					2.3,
+					1,
+					6000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			burst=1;
+			reloadTime=0.04;
+			dispersion=0;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.050000001;
+		};
+		class close: manual
+		{
+			burst=40;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=40;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=40;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	class 3AS_Sabre_Cannons;
+	class MACRO_NEW_WEAPON(Saber_High): 3AS_Sabre_Cannons
+	{
+	   	magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Saber_AP,25),
+			MACRO_NEW_MAG(MassDriver_HE,15)
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName="CannonFired";
+				positionName="Usti hlavne";
+				directionName="Konec hlavne";
+			};
+			class SecondEffect
+			{
+				effectName="CannonFired";
+				positionName="Usti hlavne 2";
+				directionName="Konec hlavne 2";
+			};
+		};
+		displayName = "Saber High Energy";
+		modes[] = {"manual","close","short","medium"};
+		class manual: manual
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"swlg_clones_tanks\tx130\data\sounds\Saber_heavy_shot.wss",
+					2.3,
+					0.95,
+					10000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			burst=1;
+			reloadTime=2.5;
+			dispersion=0;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.050000001;
+		};
+		class close: manual
+		{
+			burst=2;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=2;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=2;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+
+	class MACRO_NEW_WEAPON(SuperSaber_High): 3AS_Sabre_Cannons
+	{
+	   	magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(MassDriver_AP,2)
+		};
+		class GunParticles
+		{
+			class FirstEffect
+			{
+				effectName="CannonFired";
+				positionName="Usti hlavne";
+				directionName="Konec hlavne";
+			};
+			class SecondEffect
+			{
+				effectName="CannonFired";
+				positionName="Usti hlavne 2";
+				directionName="Konec hlavne 2";
+			};
+		};
+		displayName = "Saber High Energy";
+		modes[] = {"manual","close","short","medium"};
+		class manual: manual
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"swlg_clones_tanks\tx130\data\sounds\Saber_heavy_shot.wss",
+					2.3,
+					0.95,
+					10000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			magazineReloadTime=2;
+			burst=2;
+			reloadTime=0.35;
+			dispersion=0;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.050000001;
+		};
+		class close: manual
+		{
+			burst=2;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=2;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=2;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(SuperSaber_40mm): 3AS_Sabre_Cannons
+	{
+	   	magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(SuperSaber_40mm,140)
+		};
+		displayName = "Saber Medium Energy";
+		modes[] = {"manual","close","short","medium"};
+		class manual: manual
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"3AS\3AS_Static\data\Sounds\FieldCannon\Fieldcannon.ogg",
+					25,
+					1,
+					10000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			burst=1;
+			reloadTime=0.25;
+			dispersion=0;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.050000001;
+		};
+		class close: manual
+		{
+			burst=2;
+			aiRateOfFire=0.3;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=2;
+			aiRateOfFire=3;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=2;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+
 	class BARC_Repeater;
 	class MACRO_NEW_WEAPON(BARC_40mm): BARC_Repeater
 	{
@@ -439,7 +961,7 @@ class CfgWeapons
 		magazines[] = {
 			MACRO_NEW_MAG(BARC_MainCannon,1000)
 		};
-		displayName = "BARC Cannon";
+		displayName = "Saber Low Power";
 		modes[] = {"manual","close","short","medium"};
 		class GunParticles
 		{
@@ -456,7 +978,7 @@ class CfgWeapons
 				{
 					"332nd_vehicle_weapons\air\sounds\LAAT_Nose.wss",
 					1,
-					1,
+					2,
 					6000
 				};
 				soundBegin[]=
@@ -465,7 +987,7 @@ class CfgWeapons
 					1
 				};
 			};
-			reloadTime=0.15;
+			reloadTime=0.2;
 			dispersion=0;
 			minRange=2;
 			minRangeProbab=0.30000001;
@@ -521,6 +1043,7 @@ class CfgWeapons
         ace_overpressure_damage = 0;  // Damage multiplier
 		muzzles[] = {"this"};
 		magazineWell[] = {};
+		recoil="";
 		magazines[] = {
 			MACRO_NEW_MAG(ATRT_30mm,9999)
 		};

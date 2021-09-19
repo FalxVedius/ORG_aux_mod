@@ -131,7 +131,7 @@ class cfgWeapons
 
 	class MACRO_NEW_WEAPON(DM_17) : optre_hgun_sas10_F
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DM 17 *WIP*)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DM 17 *Test*)
 
 		ACE_Overheating_mrbs = 300000;
 		canShootInWater=1;

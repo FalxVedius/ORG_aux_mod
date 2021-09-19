@@ -86,7 +86,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,Z,95) : 3as_Z95_base
 	{
-		displayName = "Z-95 *TEST*";
+		displayName = "Z-95 Starfighter";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";

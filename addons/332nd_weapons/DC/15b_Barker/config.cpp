@@ -65,7 +65,7 @@ class CfgWeapons
 		cursor="332_DOT";
         cursoraim="332_DC15A";
 		discreteDistanceInitIndex=0;
-		recoil="recoil_zafir";
+		recoil = "recoil_ak12";
 		recoilprone="recoil_spar";
 		maxRecoilSway=0.0125;
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
@@ -165,8 +165,8 @@ class CfgWeapons
 		flashSize=3;
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime=0.14 ;
-			dispersion=0.001;
+			reloadTime=0.12;
+			dispersion=0.0007;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=200;

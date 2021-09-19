@@ -16,6 +16,19 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+class Optics_Armored;
+class Optics_Commander_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
+class Optics_Gunner_MBT_01: Optics_Armored
+{
+	class Wide;
+	class Medium;
+	class Narrow;
+};
 class CfgVehicles
  {
 
@@ -83,10 +96,31 @@ class CfgVehicles
 		armor = 5000;
 		enginePower = 2500;
 		maxSpeed = 15;
+
+
+		class Eventhandlers
+		{
+			init = "_this execVM '332nd_vehicles\land\ATTE\fn_InitWalk.sqf';";
+		};
+
+
 		class Turrets : Turrets
 		 {
 		   class MainTurretTop : MainTurretTop
 		   {
+		   class OpticsIn: Optics_Gunner_MBT_01
+				{
+					class Wide: Wide
+					{
+					};
+					class Medium: Medium
+					{
+					};
+					class Narrow: Narrow
+					{
+					};
+				};
+			turretInfoType="RscOptics_MBT_01_gunner";
 			 weapons[] =
 			{
 				MACRO_NEW_WEAPON(Mass_Driver)
@@ -101,6 +135,19 @@ class CfgVehicles
 		   };
 		   class MainTurretFront : MainTurretFront
 		   {
+		   class OpticsIn: Optics_Commander_01
+						{
+							class Wide: Wide
+							{
+							};
+							class Medium: Medium
+							{
+							};
+							class Narrow: Narrow
+							{
+							};
+						};
+		   turretInfoType="RscOptics_MBT_01_commander";
 		   weapons[] =
 			{
 				MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -114,6 +161,19 @@ class CfgVehicles
 		   };
 		   class MainTurretBack : MainTurretBack
 		   {
+		   class OpticsIn: Optics_Commander_01
+						{
+							class Wide: Wide
+							{
+							};
+							class Medium: Medium
+							{
+							};
+							class Narrow: Narrow
+							{
+							};
+						};
+		   showCrewAim=0;
 		   weapons[] =
 			{
 				MACRO_NEW_WEAPON(Heavy_Hmg)
