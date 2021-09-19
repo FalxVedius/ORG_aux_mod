@@ -109,10 +109,28 @@ class CfgVehicles
 		class Reflectors;
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
-			{
+			class MainTurret;
+			class cargoTurret_rearl;
+			class cargoTurret_rearr;
+			class cargoturret_left_1;
+			class cargoTurret_left_2;
+			class cargoTurret_left_3;
+			class cargoTurret_left_4;
+			class cargoTurret_left_5;
+			class cargoTurret_left_14;
+			class cargoturret_right_1;
+			class cargoTurret_right_2;
+			class cargoTurret_right_3;
+			class cargoTurret_right_4;
+			class cargoTurret_right_5;
+			class CargoTurret_right_13;
+			class CargoTurret_right_17;
+			class CargoTurret_right_18;
+			class CargoTurret_right_19;
+			class CargoTurret_left_20;
+			class CargoTurret_left_21;
+			class CargoTurret_left_22;
 
-			};
 		};
     };
 
@@ -128,6 +146,86 @@ class CfgVehicles
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
+			{
+
+			};
+			class cargoTurret_rearl : cargoTurret_rearl
+			{
+				
+			};
+			class cargoTurret_rearr : cargoTurret_rearr
+			{
+
+			};
+			class cargoturret_left_1 : cargoturret_left_1
+			{
+
+			};
+			class cargoTurret_left_2 : cargoTurret_left_2
+			{
+
+			};
+			class cargoTurret_left_3 : cargoTurret_left_3
+			{
+
+			};
+			class cargoTurret_left_4 : cargoTurret_left_4
+			{
+
+			};
+			class cargoTurret_left_5 : cargoTurret_left_5
+			{
+
+			};
+			class cargoTurret_left_14 : cargoTurret_left_14
+			{
+
+			};
+			class cargoturret_right_1 : cargoturret_right_1
+			{
+
+			};
+			class cargoTurret_right_2 : cargoTurret_right_2
+			{
+
+			};
+			class cargoTurret_right_3 : cargoTurret_right_3
+			{
+
+			};
+			class cargoTurret_right_4 : cargoTurret_right_4
+			{
+
+			};
+			class cargoTurret_right_5 : cargoTurret_right_5
+			{
+
+			};
+			class CargoTurret_right_13 : CargoTurret_right_13
+			{
+
+			};
+			class CargoTurret_right_17 : CargoTurret_right_17
+			{
+
+			};
+			class CargoTurret_right_18 : CargoTurret_right_18
+			{
+
+			};
+			class CargoTurret_right_19 : CargoTurret_right_19
+			{
+
+			};
+			class CargoTurret_left_20 : CargoTurret_left_20
+			{
+
+			};
+			class CargoTurret_left_21 : CargoTurret_left_21
+			{
+
+			};
+			class CargoTurret_left_22 : CargoTurret_left_22
 			{
 
 			};
@@ -151,10 +249,17 @@ class CfgVehicles
 		class Components;
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
-			{
-
-			};
+			class MainTurret;
+			class cargoTurret_pos7;
+			class cargoTurret_pos8;
+			class cargoTurret_pos9;
+			class cargotTurret_pos10;
+			class cargoTurret_pos11;
+			class cargoTurret_pos12;
+			class cargoTurret_leftDoor_pos13;
+			class cargoTurret_leftDoor_pos14;
+			class cargoTurret_rightDoor_pos15;
+			class cargoTurret_rightDoor_pos16;
 		};
 	};
 	class ls_heli_laatle : ls_laatle_base
@@ -163,6 +268,46 @@ class CfgVehicles
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
+			{
+
+			};
+			class cargoTurret_pos7 : cargoTurret_pos7
+			{
+
+			};
+			class cargoTurret_pos8 : cargoTurret_pos8
+			{
+
+			};
+			class cargoTurret_pos9 : cargoTurret_pos9
+			{
+
+			};
+			class cargotTurret_pos10 : cargotTurret_pos10
+			{
+
+			};
+			class cargoTurret_pos11 : cargoTurret_pos11
+			{
+
+			};
+			class cargoTurret_pos12 : cargoTurret_pos12
+			{
+
+			};
+			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
+			{
+
+			};
+			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
+			{
+
+			};
+			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
+			{
+
+			};
+			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
 			{
 
 			};
@@ -321,21 +466,101 @@ class CfgVehicles
 			};
 		};
 
-        class Turrets : Turrets
-        {
-            class MainTurret : MainTurret
-            {
-                weapons[] = {
-                    MACRO_AIR_COMMON_WEAPS,
-                    "ParticleBeamCannon"
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] = {
+					MACRO_AIR_COMMON_WEAPS,
+					"ParticleBeamCannon"
 
-                };
-                magazines[] = {
-                    MACRO_AIR_COMMON_MAGS,
-                    "Laser_Battery_F","Laser_Battery_F"
-                };
-            }
-        }
+				};
+				magazines[] = {
+					MACRO_AIR_COMMON_MAGS,
+					"Laser_Battery_F","Laser_Battery_F"
+				};
+			};
+			class cargoTurret_rearl : cargoTurret_rearl
+			{
+
+			};
+			class cargoTurret_rearr : cargoTurret_rearr
+			{
+
+			};
+			class cargoturret_left_1 : cargoturret_left_1
+			{
+
+			};
+			class cargoTurret_left_2 : cargoTurret_left_2
+			{
+
+			};
+			class cargoTurret_left_3 : cargoTurret_left_3
+			{
+
+			};
+			class cargoTurret_left_4 : cargoTurret_left_4
+			{
+
+			};
+			class cargoTurret_left_5 : cargoTurret_left_5
+			{
+
+			};
+			class cargoTurret_left_14 : cargoTurret_left_14
+			{
+
+			};
+			class cargoturret_right_1 : cargoturret_right_1
+			{
+
+			};
+			class cargoTurret_right_2 : cargoTurret_right_2
+			{
+
+			};
+			class cargoTurret_right_3 : cargoTurret_right_3
+			{
+
+			};
+			class cargoTurret_right_4 : cargoTurret_right_4
+			{
+
+			};
+			class cargoTurret_right_5 : cargoTurret_right_5
+			{
+
+			};
+			class CargoTurret_right_13 : CargoTurret_right_13
+			{
+
+			};
+			class CargoTurret_right_17 : CargoTurret_right_17
+			{
+
+			};
+			class CargoTurret_right_18 : CargoTurret_right_18
+			{
+
+			};
+			class CargoTurret_right_19 : CargoTurret_right_19
+			{
+
+			};
+			class CargoTurret_left_20 : CargoTurret_left_20
+			{
+
+			};
+			class CargoTurret_left_21 : CargoTurret_left_21
+			{
+
+			};
+			class CargoTurret_left_22 : CargoTurret_left_22
+			{
+
+			};
+		};
 
         class UserActions
         {
@@ -2968,6 +3193,46 @@ class CfgVehicles
 				maxCamElev=90;
 				elevationMode=0;
 				memoryPointGunnerOptics="gunnerview";
+			};
+			class cargoTurret_pos7 : cargoTurret_pos7
+			{
+
+			};
+			class cargoTurret_pos8 : cargoTurret_pos8
+			{
+
+			};
+			class cargoTurret_pos9 : cargoTurret_pos9
+			{
+
+			};
+			class cargotTurret_pos10 : cargotTurret_pos10
+			{
+
+			};
+			class cargoTurret_pos11 : cargoTurret_pos11
+			{
+
+			};
+			class cargoTurret_pos12 : cargoTurret_pos12
+			{
+
+			};
+			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
+			{
+
+			};
+			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
+			{
+
+			};
+			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
+			{
+
+			};
+			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
+			{
+
 			};
 		};
         class TransportItems
