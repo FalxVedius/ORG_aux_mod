@@ -558,5 +558,5 @@ class CfgVehicles
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Purge,Clone (Purge),332nd_scenario_Purge,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Purge)
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Shadow,Clone (Shadow),332nd_scenario_Shadow,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Shadow)
 
-    MACRO_NEW_CAPTAIN_UNIT(332nd_captain,Clone Captain,332nd_captain,captain\Captain_Upper.paa,captain\Captain_Lower.paa)
+    MACRO_NEW_CAPTAIN_UNIT(332nd_captain,Clone Captain,332nd_captain,captain\Cadet_Upper.paa,captain\Cadet_Lower.paa)
 };
