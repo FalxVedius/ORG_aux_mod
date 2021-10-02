@@ -354,6 +354,7 @@ class CfgWeapons
 	{
 		displayName = "[332nd] Captain Uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
 		class ItemInfo : ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(captain,base);
@@ -4387,7 +4388,7 @@ class CfgVehicles
 		author = MACRO_AUTHOR;
 		scope = 0;
 		displayName = "[332nd] Clone Captain Base";
-
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_MEN";
 

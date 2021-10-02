@@ -216,10 +216,10 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=40;
-		mass=15;
+		count=35;
+		mass=10;
 		initspeed=800;
-		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Suppressed Medium,40)
+		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Suppressed Medium,35)
 		displayNameShort="Westar suppressed medium magazine";
 		descriptionShort="Westar suppressed medium magazine";
 		ammo=MACRO_NEW_AMMO(Medium_Westar);
@@ -232,12 +232,12 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=3;
-		mass=40;
+		count=2;
+		mass=50;
 		initspeed=5000;
-		displayName=MACRO_AMMO_DISPLAYNAME(15x Anti-Tank Magazine,3)
-		displayNameShort="3 rnd 15x AT Magazine";
-		descriptionShort="3 rnd 15x AT Magazine";
+		displayName=MACRO_AMMO_DISPLAYNAME(15x Anti-Tank Magazine,2)
+		displayNameShort="2 rnd 15x AT Magazine";
+		descriptionShort="2 rnd 15x AT Magazine";
 		ammo=MACRO_NEW_AMMO(DC_15xATR);
 		tracersEvery=1;
 	};
@@ -322,7 +322,7 @@ class CfgAmmo
 		//soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
 		supersonicCrackFar[] = {"",0,0};
 		supersonicCrackNear[] = {"",0,0};
-		soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,1,500};
+		soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
 	};
 	class ls_ammo_408_blue;
 	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue
@@ -349,7 +349,7 @@ class CfgAmmo
 		effectfly="332nd_aux_effects_RPS4_green";
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,0.9,1500};
 		caliber = 10;
-		hit = 500;
+		hit = 700;
 		typicalSpeed=5000;
 		explosionEffects = "ImpactPlasmaExpGreen";
 		tracerscale = 3;

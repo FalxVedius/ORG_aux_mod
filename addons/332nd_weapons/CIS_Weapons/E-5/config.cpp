@@ -96,8 +96,8 @@ class CfgWeapons
 			recoilProne="recoil_single_prone_mx";
 			dispersion=0.0020000001;
 			minRange=2;
-			aiDispersionCoefX=3.0
-			aiDispersionCoefY=3.0
+			aiDispersionCoefX=2.0
+			aiDispersionCoefY=2.0
 			minRangeProbab=0.5;
 			midRange=200;
 			midRangeProbab=0.69999999;
@@ -135,8 +135,8 @@ class CfgWeapons
 			};
 			reloadTime=0.14;
 			dispersion=0.005;
-			aiDispersionCoefX=4.0
-			aiDispersionCoefY=4.0
+			aiDispersionCoefX=2.0
+			aiDispersionCoefY=2.0
 			recoil="recoil_auto_mx";
 			recoilProne="recoil_auto_prone_mx";
 			minRange=0;
@@ -178,8 +178,8 @@ class CfgWeapons
 			};
 			showToPlayer=0;
 			burst=3;
-			aiDispersionCoefX=3.0
-			aiDispersionCoefY=3.0
+			aiDispersionCoefX=2.0
+			aiDispersionCoefY=2.0
 			aiBurstTerminable=1;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -266,8 +266,8 @@ class CfgWeapons
 			minRange=100;
 			minRangeProbab=0.1;
 			midRange=500;
-			aiDispersionCoefX=3.0
-			aiDispersionCoefY=3.0
+			aiDispersionCoefX=2.0
+			aiDispersionCoefY=2.0
 			midRangeProbab=0.60000002;
 			maxRange=700;
 			maxRangeProbab=0.050000001;

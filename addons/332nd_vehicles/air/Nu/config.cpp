@@ -125,7 +125,7 @@ class CfgVehicles
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
         ls_impulsor_boostSpeed_1=600;
-        ls_impulsor_boostSpeed_2=1200;
+        ls_impulsor_boostSpeed_2=1000;
         ls_hasImpulse=1;
 		soundEngineOnInt[]=
 		{

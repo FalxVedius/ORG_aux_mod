@@ -456,6 +456,7 @@ class CfgWeapons
 		FCSMaxLeadSpeed = 100.5556;
 		FCSZeroingDelay = 0.2;
 		displayName = "LAAT 40mm";
+		modes[] = {"FullAuto","Burst","close","short","medium"};
 		class GunParticles
 		{
 		};
@@ -488,6 +489,39 @@ class CfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=800;
 			maxRangeProbab=0.050000001;
+		};
+		class Burst:  FullAuto
+		{
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\LAAT_Nose.wss",
+					1,
+					1,
+					3000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			textureType="fastAuto";
+			reloadTime=0.02;
+			dispersion=0;
+			Burst=25;
+			minRange=2;
+			minRangeProbab=0.30000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=800;
+			maxRangeProbab=0.050000001;
+			
 		};
 		class close: FullAuto
 		{
