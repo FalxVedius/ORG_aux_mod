@@ -539,6 +539,8 @@ class ACE_Medical_Treatment_Actions
 	{
 		items[] = { "332nd_aux_medical_Bacta" };
 
+		allowedSelections[] = { "All" };
+
 		displayName = "Bacta Tank";
 		displayNameProgress = "Transfusing Bacta...";
 
@@ -548,12 +550,16 @@ class ACE_Medical_Treatment_Actions
 	{
 		items[] = { "332nd_aux_medical_Blood" };
 
+		allowedSelections[] = { "All" };
+
 		displayName = "Blood Tank";
 		displayNameProgress = "Transfusing Blood...";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Kolto) : BloodIV
 	{
 		items[] = { "332nd_aux_medical_Kolto" };
+
+		allowedSelections[] = { "All" };
 
 		displayName = "Kolto Tank";
 		displayNameProgress = "Transfusing Kolto...";
@@ -564,6 +570,8 @@ class ACE_Medical_Treatment_Actions
 	{
 		items[] = { "332nd_aux_medical_Adrenaline" };
 
+		allowedSelections[] = { "All" };
+
 		displayName = "Adrenaline Injector";
 		displayNameProgress = "Injecting Adrenaline...";
 	};
@@ -571,12 +579,16 @@ class ACE_Medical_Treatment_Actions
 	{
 		items[] = { "332nd_aux_medical_PainKiller" };
 
+		allowedSelections[] = { "All" };
+
 		displayName = "Pain Killer Stimulant";
 		displayNameProgress = "Injecting Stimulant...";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(PainKillerBottle) : Morphine
 	{
 		items[] = { "332nd_aux_medical_PainKillerBottle" };
+
+		allowedSelections[] = { "All" };
 
 		consumeItem = 0;
 		medicRequired = 1;
@@ -617,6 +629,8 @@ class ACE_Medical_Treatment_Actions
 	{
 		items[] = { "332nd_aux_medical_Bacta_Inj" };
 
+		allowedSelections[] = { "All" };
+
 		medicRequired = 1;
 		displayName = "Bacta Injector";
 		displayNameProgress = "Injecting Bacta...";
@@ -627,6 +641,8 @@ class ACE_Medical_Treatment_Actions
 	{
 		items[] = { "332nd_aux_medical_Kolto_Inj" };
 
+		allowedSelections[] = { "All" };
+
 		medicRequired = 1;
 		displayName = "Kolto Injector";
 		displayNameProgress = "Injecting Kolto...";
@@ -636,6 +652,8 @@ class ACE_Medical_Treatment_Actions
 	class MACRO_NEW_MEDICAL_ITEM(Combat) : Epinephrine
 	{
 		items[] = { "332nd_aux_medical_Combat" };
+
+		allowedSelections[] = { "All" };
 
 		displayName = "Combat Stimulant";
 		displayNameProgress = "Injecting Stimulant...";

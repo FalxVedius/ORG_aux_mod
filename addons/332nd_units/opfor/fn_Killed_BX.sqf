@@ -1,6 +1,25 @@
 params ["_unit", "_killer", "_instigator", "_useEffects"];
 
 
+_rndAnim = selectRandom ["B1_Droid_die_1","B1_Droid_die_2","B1_Droid_die_3", "NoAnim"];
+
+if (_rndAnim != "NoAnim") then {
+
+	[_unit, _rndAnim] remoteExec ["switchMove", 0];
+	
+	_unit playActionNow "Disable_Gesture";
+	
+	if (_rndAnim == "B1_Droid_die_2") then {
+	
+		[_unit, 0.8] remoteExec ["setAnimSpeedCoef", 0];
+	};
+	
+	if (_rndAnim == "B1_Droid_die_3") then {
+	
+		[_unit, 0.5] remoteExec ["setAnimSpeedCoef", 0];
+	};
+};
+
 _rndNum = floor(random 10);
 
 switch (true) do {

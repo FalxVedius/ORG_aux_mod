@@ -3669,6 +3669,30 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_DC_15x_x3";
                 count = 20;
             };
+
+			class Dm17HeartStarter_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				count = 50;
+			};
+
+			class Dm17Bacta_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				count = 25;
+			};
+
+			class Dm17Kolto_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				count = 25;
+			};
+
+			class Dm17CombatStim_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				count = 50;
+			};
         };
 
 		class EventHandlers
@@ -4108,6 +4132,30 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_DC_15x_x3";
                 count = 20;
             };
+
+			class Dm17HeartStarter_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				count = 50;
+			};
+
+			class Dm17Bacta_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				count = 25;
+			};
+
+			class Dm17Kolto_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				count = 25;
+			};
+
+			class Dm17CombatStim_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				count = 50;
+			};
         };
 
 
@@ -4707,6 +4755,30 @@ class CfgVehicles
                 magazine = "332nd_aux_magazine_DC_15x_x3";
                 count = 20;
             };
+
+			class Dm17HeartStarter_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				count = 50;
+			};
+
+			class Dm17Bacta_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				count = 25;
+			};
+
+			class Dm17Kolto_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				count = 25;
+			};
+
+			class Dm17CombatStim_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				count = 50;
+			};
         };
 
 		class Components: Components

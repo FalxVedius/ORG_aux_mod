@@ -1,0 +1,37 @@
+params ["_entity"];
+
+
+_obj = _this select 0;
+_unit = _obj select 0;
+
+_unit setVariable ["ShieldHealth",1300];
+
+_unit addEventHandler ["Hit",{
+
+	params ["_unit", "_source", "_damage", "_instigator"];
+	
+	
+	_ShieldHealth = _unit getVariable ["ShieldHealth",nil];
+	
+	if (_ShieldHealth > 0) then
+	{
+		_ShieldHealth = _unit getVariable ["ShieldHealth",nil];
+		
+		_magazineClass = currentMagazine _instigator;
+		_ammoClass = getText ( configFile >> "CfgMagazines" >> _magazineClass >> "ammo" );
+		_dmg = getNumber ( configFile >> "CfgAmmo" >> _ammoClass >> "hit" );
+		
+
+		_diff = _ShieldHealth - _dmg;
+		_unit setVariable ["ShieldHealth", _diff];
+		
+		_unit setDamage 0;
+		
+	};
+	
+	if (_ShieldHealth <= 0) then
+	{
+		deleteVehicle _unit;
+	};
+	
+}];
