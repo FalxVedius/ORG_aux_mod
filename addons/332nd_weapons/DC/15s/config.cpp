@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15s)
 	{
-		author = "332nd_aux_team";
+		author = "332nd_aux_team + Clock";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -33,16 +33,34 @@ class cfgRecoils
 };
 class cfgWeapons
 {
-	class arifle_MX_Base_F;
+	
+	class Rifle_Base_F;
+	class arifle_MX_Base_F: Rifle_Base_F {
+		class WeaponSlotsInfo;
+	};
+	
+	
 	class JLTS_DC15S: arifle_MX_Base_F
 	{
-	   class FullAuto;
-	   class Single;
-	   class Stun;
+		
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			class UnderBarrelSlot;
+		};
+
+		
+		class FullAuto;
+		class Single;
+		class Stun;
 	};
 	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_15s):JLTS_DC15S
 	{
+		
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			class UnderBarrelSlot: UnderBarrelSlot {};
+		};
+
+		
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15s)
 
 		canShootInWater=1;
@@ -219,6 +237,21 @@ class cfgWeapons
 	};
 	class MACRO_NEW_WEAPON(DC_15s_Shield): MACRO_NEW_WEAPON(DC_15s)
 	{
+		
+		class WeaponSlotsInfo: WeaponSlotsInfo {
+			class UnderBarrelSlot: UnderBarrelSlot {
+				compatibleItems[] = {
+					"JLTS_riot_shield_attachment",
+					"JLTS_riot_shield_212_attachment",
+					"JLTS_riot_shield_501_attachment",
+					"JLTS_riot_shield_101_attachment",
+					"JLTS_riot_shield_CG_attachment",
+					"JLTS_riot_shield_GD_attachment",
+					"JLTS_riot_shield_droid_attachment"
+				};
+			};
+		};
+		
 		displayName="332nd 15s Shield";
 		baseWeapon="332nd_aux_weapon_DC_15s_Shield";
 		scope=1;
