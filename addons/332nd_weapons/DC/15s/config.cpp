@@ -8,9 +8,11 @@ class CfgPatches
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(weapons),
+			"A3_Data_F",
+		    "A3_Weapons_F",
 			"JLTS_weapons_shield",
-			"JLTS_weapons_DC15S"
+			"JLTS_weapons_DC15S",
+			MACRO_PATCH_NAME(weapons)
 		};
 		requiredVersion = 0.1;
 		units[] = {};

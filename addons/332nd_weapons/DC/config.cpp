@@ -320,9 +320,9 @@ class CfgAmmo
 	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
 	{
 		//soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
-		supersonicCrackFar[] = {"",0,0};
-		supersonicCrackNear[] = {"",0,0};
-		soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
+		supersonicCrackFar[] = {"\332nd_weapons\sounds\WhizNear.wss",1,100};
+		supersonicCrackNear[] = {"\332nd_weapons\sounds\WhizNear.wss",1,500};
+		//soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
 	};
 	class ls_ammo_408_blue;
 	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue

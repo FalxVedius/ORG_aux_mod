@@ -4,12 +4,14 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15c)
 	{
-		author = "Namenai";
+		author = "332nd Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(weapons),
+			"A3_Data_F",
+		    "A3_Weapons_F",
 			"3AS_Weapons",
+			MACRO_PATCH_NAME(weapons)
 		};
 		requiredVersion = 0.1;
 		units[] = {};

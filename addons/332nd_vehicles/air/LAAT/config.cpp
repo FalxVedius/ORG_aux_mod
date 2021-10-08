@@ -320,7 +320,7 @@ class CfgVehicles
     {
         displayName = "LAAT Mk1 Base";
         scope = 0;
-
+		crewCrashProtection=1;
         faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
 
