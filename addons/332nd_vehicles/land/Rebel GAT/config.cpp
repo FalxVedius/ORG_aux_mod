@@ -12,7 +12,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-			MACRO_NEW_VEHICLE(Land,CIS,Light_GAT),
+			MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_GAT),
         };
 		weapons[] = {};
 	};
@@ -124,7 +124,7 @@ class CfgVehicles
 
 
 	
-    class MACRO_NEW_VEHICLE(Land,CIS,Light_GAT_Rebel): 3AS_GAT_Light
+    class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_GAT): 3AS_GAT_Light
     {
         displayName = "Stolen Light GAT";
         scope = 2;
@@ -145,4 +145,4 @@ class CfgVehicles
 	   };
 	};
 
-};
+};	

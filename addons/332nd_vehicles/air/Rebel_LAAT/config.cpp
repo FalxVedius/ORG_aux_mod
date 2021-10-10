@@ -12,8 +12,8 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-			MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd),
-			MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd),
+			MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel),
+			MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd_Rebel),
 		};
 		weapons[] = {};
 	};

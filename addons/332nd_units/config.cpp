@@ -11114,16 +11114,15 @@ class CfgVehicles
 		weapons[] = { "332nd_aux_weapon_E5_B1","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_E5_B1","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_pack";
 		magazines[] =
 		{
-			mag_15(332nd_aux_magazine_E5Low_x50)
+			mag_5(332nd_aux_magazine_E5Low_x50)
 			
 
 		};
 		respawnMagazines[] =
 		{
-			mag_15(332nd_aux_magazine_E5Low_x50)
+			mag_5(332nd_aux_magazine_E5Low_x50)
 
 		};
 		items[] =
@@ -12009,7 +12008,6 @@ class CfgVehicles
 		weapons[] = {"SWLW_LS150" ,"Throw","Put"};
 		respawnWeapons[] = { "SWLW_LS150","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Heavy_pack";
 		magazines[] =
 		{
 			mag_5(SWLW_LS150_mag)
