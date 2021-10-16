@@ -185,6 +185,22 @@ class CfgMagazines
 		tracersEvery=1;
 	};
 
+	class MACRO_NEW_MAG(Deka_MAG,30) : 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 30;
+		mass = 15;
+		initspeed = 1500;
+		displayName=MACRO_AMMO_DISPLAYNAME(Droideka Cannon,30)
+		displayNameShort = "Droideka Cannon Magazine x30";
+		descriptionShort = "Droideka Cannon Magazine x30";
+		ammo=MACRO_NEW_AMMO(338_Red);
+		tracersEvery = 1;
+	};
+
 	class MACRO_NEW_MAG(Valken38x,15): 30rnd_762x39_AK12_Mag_F
 	{
 		modelSpecial="";
@@ -285,6 +301,48 @@ class CfgAmmo
 	     hit = 20;
 		 effectfly="332nd_aux_effects_blue_bullet";
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
+	};
+	class ls_ammo_338_red;
+	class MACRO_NEW_AMMO(338_Red) : ls_ammo_338_red
+	{
+		hit = 20;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 40;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 14;
+		explosionSoundEffect = "DefaultExplosion";
+		explosioneffects = "ExploAmmoExplosion";
+		model = "kobra\442_turrets\Droideka\Doublelaserred.p3d";
+		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500 };
+
+		class CamShakeExplode
+		{
+			power = "(20*0.2)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((1 + 20^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power = 20;
+			duration = "((round (20^0.25))*0.2 max 0.2)";
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = "(20^0.25)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((20^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power = 0.0099999998;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
 	};
 	class ls_ammo_127x108_blue;
 	class MACRO_NEW_AMMO(127x108_Blue_T): ls_ammo_127x108_blue

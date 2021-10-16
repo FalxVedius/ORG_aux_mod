@@ -841,6 +841,20 @@
 			scope = 2;\
 			displayName = displayname;\
 		}
+	#define MACRO_NEW_CIS_SNIPER_DROIDEKA_UNIT(classname,displayname)\
+		class MACRO_NEW_UNIT(cissniperdroideka,classname): MACRO_NEW_UNIT(cissniperdroideka,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+		}
+	#define MACRO_NEW_CIS_SNIPER_DROIDEKA_MOVE_UNIT(classname,displayname)\
+		class MACRO_NEW_UNIT(cissniperdroidekamoveable,classname): MACRO_NEW_UNIT(cissniperdroidekamoveable,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+		}
 
 	// ---- Vests ---- 
 

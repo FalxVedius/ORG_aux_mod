@@ -150,10 +150,13 @@ switch (true) do {
 	default {};
 };
 
+_friendlyFoundFlag = false;
+
 {
 	if (!(_x == _unit) and (alive _x) and !(lifeState _x == "INCAPACITATED")) then {
 	
 		friendlyUnitPos = _x;
+		_friendlyFoundFlag = true;
 	};
 } forEach nearestObjects [_unit,
 [
@@ -174,35 +177,38 @@ switch (true) do {
 _rndNum = floor(random 10);
 _rndSound = floor(random 4);
 
-switch (true) do {
-
-	case (_rndNum <= 4): 
-	{ 
-		switch (true) do {
-		
-			case (_rndSound == 0): 
-			{
-				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
-			};
-			case (_rndSound == 1): 
-			{
-				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_05.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
-			};
-			case (_rndSound == 2): 
-			{
-				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_06.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
-			};
-			case (_rndSound == 3): 
-			{
-				playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_21.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
-			};
-		
-			default { playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125]; };
-		};
-	};
+if(_friendlyFoundFlag == true && alive friendlyUnitPos) then 
+{
+	switch (true) do {
 	
-	case (_rndNum >= 5): {};
-	default {};
+		case (_rndNum <= 4): 
+		{ 
+			switch (true) do {
+			
+				case (_rndSound == 0): 
+				{
+					playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+				};
+				case (_rndSound == 1): 
+				{
+					playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_05.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+				};
+				case (_rndSound == 2): 
+				{
+					playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_06.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+				};
+				case (_rndSound == 3): 
+				{
+					playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_21.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125];
+				};
+			
+				default { playSound3D ["332nd_units\opfor\VoiceSounds\FriendlyDown_03.wav", friendlyUnitPos, false, getPosASL friendlyUnitPos, 5, 1.2, 125]; };
+			};
+		};
+		
+		case (_rndNum >= 5): {};
+		default {};
+	};
 };
 
 

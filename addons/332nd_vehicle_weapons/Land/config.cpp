@@ -15,6 +15,8 @@ class CfgPatches
 	};
 };
 
+class Mode_FullAuto;
+
 class CfgAmmo
 {
     class Sh_125mm_APFSDS;
@@ -85,6 +87,50 @@ class CfgAmmo
 	tracerScale = 3.5;
 	indirectHit = 0;
 	indirectHitRange = 0;
+	};
+
+	class ls_ammo_127x108_red;
+	class MACRO_NEW_AMMO(20mm_DekaSniper) : ls_ammo_127x108_red
+	{
+		cartridge = "";
+		caliber = 3.2;
+		hit = 40;
+		tracerScale = 3.5;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 40;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 14;
+		explosionSoundEffect = "DefaultExplosion";
+		explosioneffects = "ExploAmmoExplosion";
+
+		class CamShakeExplode
+		{
+			power = "(20*0.2)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((1 + 20^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power = 20;
+			duration = "((round (20^0.25))*0.2 max 0.2)";
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = "(20^0.25)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((20^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power = 0.0099999998;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
 	};
 	
 	class MACRO_NEW_AMMO(BeamLaser_Full): ls_ammo_127x108_blue
@@ -237,6 +283,15 @@ class CfgMagazines
 		initSpeed = 1200;
 		tracersevery = 1;
 		count=1000;
+	};
+
+	class MACRO_NEW_MAG(SniperDeka_MAG,10) : 12Rnd_120mm_APFSDS_shells
+	{
+		displayName = "Heavy Sniper 10rnd";
+		ammo = MACRO_NEW_AMMO(20mm_DekaSniper)
+		initSpeed = 1200;
+		tracersevery = 1;
+		count = 10;
 	};
 
 	class 100Rnd_127x99_mag;
@@ -1074,6 +1129,535 @@ class CfgWeapons
 		//		};
 		//	};
 		//};
+	};
+
+	class 3AS_E5S_F;
+	class MACRO_NEW_WEAPON(20mm_SniperDeka) : 3AS_E5S_F
+	{
+		ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+		ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+		ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = { "this" };
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(SniperDeka_MAG,10)
+		};
+		modes[] = { "player","close","short","medium","far" };
+		displayName = "20mm Sniper Droideka Cannon";
+		class player : player
+		{
+			magazineReloadTime = 5;
+			displayname = "Full";
+			reloadTime = 3;
+			dispersion = 0.00005;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin2[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin3[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire2.wss",
+					1,
+					1,
+					2000
+				};
+				begin4[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin5[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire2.wss",
+					1,
+					1,
+					2000
+				};
+				begin6[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin7[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin8[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire2.wss",
+					1,
+					1,
+					2000
+				};
+				begin9[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin10[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					0.1,
+					"begin2",
+					0.1,
+					"begin3",
+					0.1,
+					"begin4",
+					0.1,
+					"begin5",
+					0.1,
+					"begin6",
+					0.1,
+					"begin7",
+					0.1,
+					"begin8",
+					0.1,
+					"begin9",
+					0.1,
+					"begin10",
+					0.1
+				};
+				class SoundTails
+				{
+					class TailForest
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_forest",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailHouses
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_houses",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+					class TailInterior
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_interior",
+							1.9952624,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailMeadows
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_meadows",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailTrees
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_trees",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+				};
+			};
+		};
+		class close : player
+		{
+			burst = 10;
+			aiRateOfFire = 0.1375;
+			aiRateOfFireDistance = 50;
+			minRange = 10;
+			minRangeProbab = 0.050000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 0;
+		};
+		class short : close
+		{
+			burst = 10;
+			aiRateOfFire = 0.1375;
+			aiRateOfFireDistance = 300;
+			minRange = 50;
+			minRangeProbab = 0.050000001;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.039999999;
+		};
+		class medium : close
+		{
+			burst = 10;
+			aiRateOfFire = 0.1375;
+			aiRateOfFireDistance = 600;
+			minRange = 200;
+			minRangeProbab = 0.050000001;
+			midRange = 300;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
+			maxRangeProbab = 0.1;
+		};
+		class Far : medium
+		{
+			burst = 10;
+			aiRateOfFire = 0.1375;
+			aiRateOfFireDistance = 600;
+			minRange = 510;
+			minRangeProbab = 0.050000001;
+			midRange = 700;
+			midRangeProbab = 0.69999999;
+			maxRange = 900;
+			maxRangeProbab = 0.1;
+		};
+	};
+
+	class Cannon_droideka;
+	class MACRO_NEW_WEAPON(338_Deka) : Cannon_droideka
+	{
+		ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+		ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+		ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = { "this" };
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Deka_MAG,30)
+		};
+		displayName = "338 Droideka Cannon";
+		scope = 1;
+		ballisticsComputer = 1;
+		autoFire = 1;
+		canLock = 2;
+		airLock = 1;
+		weaponInfoType = "RscWeaponZeroing";
+		cursor = "EmptyCursor";
+		cursorAim = "cannon";
+		nameSound = "cannon";
+		initSpeed = 310;
+		muzzlePos = "usti hlavne";
+		muzzleEnd = "konec hlavne";
+		selectionFireAnim = "";
+		reloadTime = 1;
+		reloadmagazinetime = 4;
+		magazinereloadtime = 4;
+		fireLightDuration = 0.029999999;
+		fireLightIntensity = 0.5;
+		fireLightDiffuse[] = { 0.1,0,0.0024999999 };
+		fireLightAmbient[] = { 0.1,0,0 };
+		soundBullet[] = {};
+		soundContinuous = 0;
+		reloadMagazineSound[] =
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		reloadSound[] =
+		{
+			"",
+			1,
+			1,
+			1
+		};
+		modes[] =
+		{
+			"manual",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		class manual : Mode_FullAuto
+		{
+			displayName = "Twin Blaster Cannon";
+			autoFire = 1;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin2[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin3[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire2.wss",
+					1,
+					1,
+					2000
+				};
+				begin4[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin5[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire2.wss",
+					1,
+					1,
+					2000
+				};
+				begin6[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin7[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin8[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire2.wss",
+					1,
+					1,
+					2000
+				};
+				begin9[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				begin10[] =
+				{
+					"kobra\442_turrets\droideka\sounds\droidekafire1.wss",
+					1,
+					1,
+					2000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					0.1,
+					"begin2",
+					0.1,
+					"begin3",
+					0.1,
+					"begin4",
+					0.1,
+					"begin5",
+					0.1,
+					"begin6",
+					0.1,
+					"begin7",
+					0.1,
+					"begin8",
+					0.1,
+					"begin9",
+					0.1,
+					"begin10",
+					0.1
+				};
+				class SoundTails
+				{
+					class TailForest
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_forest",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*forest";
+					};
+					class TailHouses
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_houses",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*houses";
+					};
+					class TailInterior
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_interior",
+							1.9952624,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "interior";
+					};
+					class TailMeadows
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_meadows",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*(meadows/2 max sea/2)";
+					};
+					class TailTrees
+					{
+						sound[] =
+						{
+							"A3\Sounds_F\arsenal\weapons\LongRangeRifles\GM6_Lynx\GM6_tail_trees",
+							1,
+							1,
+							2200
+						};
+						frequency = 1;
+						volume = "(1-interior/1.4)*trees";
+					};
+				};
+			};
+			recoil = "empty";
+			reloadTime = 0.18000001;
+			reloadmagazinetime = 4;
+			magazinereloadtime = 4;
+			soundBurst = 0;
+			dispersion = 0.0060000001;
+			showToPlayer = 1;
+			aiRateOfFireDistance = 50;
+			minRange = 1;
+			minRangeProbab = 0.0099999998;
+			midRange = 2;
+			midRangeProbab = 0.0099999998;
+			maxRange = 3;
+			maxRangeProbab = 0.0099999998;
+			textureType = "fullAuto";
+		};
+		class close : manual
+		{
+			showToPlayer = 0;
+			burst = 20;
+			aiBurstTerminable = 1;
+			aiRateOfFire = 0.15000001;
+			aiRateOfFireDistance = 400;
+			minRange = 0;
+			minRangeProbab = 0.050000001;
+			midRange = 200;
+			midRangeProbab = 0.57999998;
+			maxRange = 400;
+			maxRangeProbab = 0.2;
+		};
+		class short : close
+		{
+			burst = 20;
+			aiBurstTerminable = 1;
+			aiRateOfFire = 0.15000001;
+			aiRateOfFireDistance = 500;
+			minRange = 300;
+			minRangeProbab = 0.2;
+			midRange = 400;
+			midRangeProbab = 0.57999998;
+			maxRange = 500;
+			maxRangeProbab = 0.2;
+		};
+		class medium : close
+		{
+			burst = 15;
+			aiBurstTerminable = 1;
+			aiRateOfFire = 0.2;
+			aiRateOfFireDistance = 9000;
+			minRange = 400;
+			minRangeProbab = 0.2;
+			midRange = 700;
+			midRangeProbab = 0.57999998;
+			maxRange = 900;
+			maxRangeProbab = 0.2;
+		};
+		class far : close
+		{
+			burst = 10;
+			aiBurstTerminable = 1;
+			aiRateOfFire = 0.40000001;
+			aiRateOfFireDistance = 1500;
+			minRange = 800;
+			minRangeProbab = 0.2;
+			midRange = 1000;
+			midRangeProbab = 0.40000001;
+			maxRange = 1500;
+			maxRangeProbab = 0.0099999998;
+		};
+	};
 	};
 
 	class autocannon_40mm_CTWS;

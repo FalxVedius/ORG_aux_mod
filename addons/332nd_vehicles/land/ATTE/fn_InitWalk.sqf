@@ -16,25 +16,19 @@ if (!is3DEN) then {
 
                     if (_speed >= 0.1 or _speed <= -0.1) then {
                         
-                        // right leg forward, left leg back
-                           _v animateSource ["walk",2,0.5];
-                        waitUntil {
-                            sleep 0.001;
-                            if (!isEngineOn _v) exitWith {true};
-                            _v animationSourcePhase "walk" >=2;
-                        };
-                        
-						// reset
-                        _v animateSource ["walk",0,10000];
-                        waitUntil {
-                            sleep 0.001;
-                            if (!isEngineOn _v) exitWith {true};
-                            _v animationSourcePhase "walk" <=0;
-                        };
+						"Starting Animation" remoteExec ["hint"];
+                        _v animateSource ["Walk",2,2.7];
+
+						sleep 1.68;
+						
+                        "Reseting Animation" remoteExec ["hint"];
+
+                        _v animateSource ["Walk",0,10000];
+						"Animation Reset" remoteExec ["hint"];
 						
 						
                     } else {
-                        _v animateSource ["walk",0];// sets legs to starting position
+                        _v animateSource ["Walk",0];// sets legs to starting position
                         sleep 0.25;
                     };
                 };

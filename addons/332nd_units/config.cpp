@@ -953,7 +953,16 @@ class CfgFunctions
 			class initDroideka
 			{
 			};
+			class initSniperDroideka_Move
+			{
+			};
+			class initSniperDroideka
+			{
+			};
 			class init_DroidekaShield
+			{
+			};
+			class init_SniperDroidekaShield
 			{
 			};
 		};
@@ -4630,7 +4639,6 @@ class CfgVehicles
 	class O_Helipilot_F;
 	class lsd_cis_bxDroid_base;
 	class O_Soldier_base_F;
-	class k_CIS_Droideka;
 	class lsd_cis_b2Droid_base;
 
 	class JLTS_Droid_B1_E5 :O_Soldier_F
@@ -10962,6 +10970,119 @@ class CfgVehicles
 		};
 	};
 
+	class Droideka_Sniper_Shield : Full_Shield
+	{
+		displayName = "332nd Droideka Sniper Shield";
+
+		scope = 1;
+		scopecurator = 1;
+
+		armor = 50;
+
+		armorStructural = 1;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_init_SniperDroidekaShield;";
+		};
+	};
+
+	class land;
+	class LandVehicle : land
+	{
+		class NewTurret;
+	};
+	class StaticWeapon : LandVehicle
+	{
+		class Turrets;
+		class MainTurret : NewTurret
+		{
+		};
+		class HitPoints;
+	};
+	class StaticMGWeapon : StaticWeapon
+	{
+		class EventHandlers;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+				optics = 1;
+			};
+		};
+		class Components;
+		icon = "iconStaticMG";
+	};
+
+	class k_CIS_Droideka : StaticMGWeapon
+	{
+		class EventHandlers;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+
+			};
+		};
+		class Components;
+		icon = "iconStaticMG";
+	};
+
+	class LandVehicle;
+	class StaticWeapon : LandVehicle
+	{
+		class Turrets
+		{
+			class MainTurret;
+		};
+	};
+	class StaticMGWeapon : StaticWeapon
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+
+	class 3AS_Deka_Static_Base : StaticMGWeapon
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+
+	class 3as_Deka_Static_Sniper_Base : 3AS_Deka_Static_Base
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+
+	class 3as_Deka_Static_Sniper : 3as_Deka_Static_Sniper_Base
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics : ViewOptics
+				{
+
+				};
+			};
+		};
+	};
+
 	class MACRO_NEW_UNIT(cisdroideka,base) : k_CIS_Droideka
 	{
 		author = MACRO_AUTHOR;
@@ -10975,6 +11096,76 @@ class CfgVehicles
 
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka;";
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(338_Deka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)
+				};
+			};
+		};
+	};
+
+	class MACRO_NEW_UNIT(cissniperdroideka,base) : 3as_Deka_Static_Sniper
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Sniper Droideka Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+
+		armor = 150;
+		armorStructural = 1;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_initSniperDroideka;";
+		};
+
+		class HitPoints
+		{
+			class HitGun
+			{
+				armor = 0.89999998;
+				material = -1;
+				name = "gun";
+				visual = "autonomous_unhide";
+				passThrough = 0;
+				radius = 0.2;
+			};
+			class HitTurret : HitGun
+			{
+				armor = 0.30000001;
+			};
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(20mm_SniperDeka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10)
+				};
+			};
 		};
 	};
 
@@ -10991,6 +11182,76 @@ class CfgVehicles
 
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka_Move;";
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(338_Deka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)
+				};
+			};
+		};
+	};
+
+	class MACRO_NEW_UNIT(cissniperdroidekamoveable,base) : 3as_Deka_Static_Sniper
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Sniper Droideka Moveable Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+
+		armor = 150;
+		armorStructural = 1;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_initSniperDroideka_Move;";
+		};
+
+		class HitPoints
+		{
+			class HitGun
+			{
+				armor = 0.89999998;
+				material = -1;
+				name = "gun";
+				visual = "autonomous_unhide";
+				passThrough = 0;
+				radius = 0.2;
+			};
+			class HitTurret : HitGun
+			{
+				armor = 0.30000001;
+			};
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(20mm_SniperDeka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10)
+				};
+			};
 		};
 	};
 

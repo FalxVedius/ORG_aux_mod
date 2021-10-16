@@ -39,6 +39,8 @@ class CfgPatches
 
 			MACRO_NEW_UNIT(cisdroideka,332nd_CIS_HEAVY_Droideka),
 			MACRO_NEW_UNIT(cisdroidekamoveable,332nd_CIS_HEAVY_Droideka_Moveable),
+			MACRO_NEW_UNIT(cissniperdroideka,332nd_CIS_HEAVY_Sniper_Droideka),
+			MACRO_NEW_UNIT(cissniperdroidekamoveable,332nd_CIS_HEAVY_Sniper_Droideka_Moveable),
 			MACRO_NEW_UNIT(cisb2,332nd_CIS_B2),
         };
         weapons[] = {
@@ -177,6 +179,8 @@ class CfgVehicles
 
 	class MACRO_NEW_UNIT(cisdroideka,base);
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base);
+	class MACRO_NEW_UNIT(cissniperdroideka,base);
+	class MACRO_NEW_UNIT(cissniperdroidekamoveable,base);
 	class MACRO_NEW_UNIT(cisb2,base);
 
     //B1
@@ -209,6 +213,8 @@ class CfgVehicles
 	//Heavy Droids
 	MACRO_NEW_CISDROIDEKA_UNIT(332nd_CIS_HEAVY_Droideka,Droideka (Static))
 	MACRO_NEW_CISDROIDEKA_MOVE_UNIT(332nd_CIS_HEAVY_Droideka_Moveable,Droideka (Moveable))
+	MACRO_NEW_CIS_SNIPER_DROIDEKA_UNIT(332nd_CIS_HEAVY_Sniper_Droideka,Sniper Droideka(Static))
+	MACRO_NEW_CIS_SNIPER_DROIDEKA_MOVE_UNIT(332nd_CIS_HEAVY_Sniper_Droideka_Moveable,Sniper Droideka(Moveable))
 	MACRO_NEW_CISB2_UNIT(332nd_CIS_B2,B2 Battle Droid,332nd_CIS_B2)
 };
 
