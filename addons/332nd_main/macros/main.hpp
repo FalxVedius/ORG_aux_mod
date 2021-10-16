@@ -270,6 +270,17 @@
 				uniformClass = MACRO_NEW_UNIT(scenario,uniformClassname); \
 			}; \
 		};
+	#define MACRO_NEW_CAPTAIN_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(captain,classname): MACRO_NEW_UNIFORM(captain,base)\
+		{\
+			displayName = [332nd] Captain Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(captain,uniformClassname); \
+			}; \
+		};
 
 
 	// --- Opfor Uniforms ---
@@ -732,6 +743,20 @@
 			linkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" }; \
 			respawnLinkedItems[] = { helmet,"332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" }; \
 		}
+	#define MACRO_NEW_CAPTAIN_UNIT(classname,displayname,uniformClassname,upper,lower)\
+		class MACRO_NEW_UNIT(captain,classname): MACRO_NEW_UNIT(captain,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(captain,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","camo3"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##lower,\
+				"\MRC\JLTS\characters\CloneArmor\data\Clone_rank_co.paa"\
+			};\
+		}
 
 
 	// ----Opfor Units ----
@@ -936,6 +961,20 @@
 		}
 	#define MACRO_NEW_CISDROIDEKA_MOVE_UNIT(classname,displayname)\
 		class MACRO_NEW_UNIT(cisdroidekamoveable,classname): MACRO_NEW_UNIT(cisdroidekamoveable,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+		}
+	#define MACRO_NEW_CIS_SNIPER_DROIDEKA_UNIT(classname,displayname)\
+		class MACRO_NEW_UNIT(cissniperdroideka,classname): MACRO_NEW_UNIT(cissniperdroideka,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+		}
+	#define MACRO_NEW_CIS_SNIPER_DROIDEKA_MOVE_UNIT(classname,displayname)\
+		class MACRO_NEW_UNIT(cissniperdroidekamoveable,classname): MACRO_NEW_UNIT(cissniperdroidekamoveable,base)\
 		{\
 			author = MACRO_AUTHOR;\
 			scope = 2;\

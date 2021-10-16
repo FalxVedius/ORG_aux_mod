@@ -122,11 +122,11 @@ class CfgAmmo
 		submunitionConeType[]=
 		{
 			"poissondisc",
-			3
+			2
 		};
 		submunitionConeAngle=1;
 		triggerTime=0.01;
-		hit=10;
+		hit=5;
 		indirectHit=6.5;
 		indirectHitRange=2.5;
 		cartridge="";
@@ -154,8 +154,8 @@ class CfgAmmo
 	};
 	class 332_FlameRound_sub: BulletBase
 	{
-		hit=10;
-		indirectHit=5;
+		hit=5;
+		indirectHit=3;
 		indirectHitRange=1;
 		cartridge="";
 		cost=2;
@@ -165,7 +165,7 @@ class CfgAmmo
 		audibleFire=12;
 		visibleFireTime=20;
 		airFriction=0;
-		timetolive=4;
+		timetolive=10;
 		maxSpeed=25;
 		typicalSpeed=0.12;
 		coefGravity=0.25;

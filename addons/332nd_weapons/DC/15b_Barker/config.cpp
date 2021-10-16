@@ -4,9 +4,13 @@ class CfgPatches
 {
 	class  MACRO_PATCH_NAME(DC_15b)
 	{
+	    author = "332nd Aux Team";
 		addonRootClass=MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
+		    "A3_Data_F",
+		    "A3_Weapons_F",
+			"3AS_Weapons_DC15A",
 			MACRO_PATCH_NAME(weapons)
 		};
 		requiredVersion=0.1;
@@ -28,6 +32,7 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
+
 class CfgWeapons
 {
 	class rifle_Base_F;
@@ -65,7 +70,7 @@ class CfgWeapons
 		cursor="332_DOT";
         cursoraim="332_DC15A";
 		discreteDistanceInitIndex=0;
-		recoil = "recoil_ak12";
+		recoil = "recoil_spar";
 		recoilprone="recoil_spar";
 		maxRecoilSway=0.0125;
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
@@ -168,6 +173,7 @@ class CfgWeapons
 			reloadTime=0.12;
 			dispersion=0.0007;
 			minRange=2;
+			burst=2;
 			minRangeProbab=0.5;
 			midRange=200;
 			midRangeProbab=0.69999999;

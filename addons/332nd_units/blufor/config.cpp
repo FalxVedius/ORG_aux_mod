@@ -107,6 +107,8 @@ class CfgPatches
             MACRO_NEW_UNIT(scenario,332nd_scenario_OS),
             MACRO_NEW_UNIT(scenario,332nd_scenario_Purge),
             MACRO_NEW_UNIT(scenario,332nd_scenario_Shadow),
+
+            MACRO_NEW_UNIT(captain,332nd_captain),
 		};
 		weapons[] = {
             MACRO_NEW_UNIFORM(recruit,332nd_recruit),
@@ -206,6 +208,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(scenario,332nd_scenario_Purge),
             MACRO_NEW_UNIFORM(scenario,332nd_scenario_Shadow),
 
+            MACRO_NEW_UNIFORM(captain,332nd_captain),
+
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
 			 MACRO_NEW_NVG(Specialist_Visor_black),
@@ -224,6 +228,8 @@ class CfgPatches
 class CfgWeapons
 {
     class JLTS_CloneArmor;
+    class JLTS_CloneArmorMC;
+
     class MACRO_NEW_UNIFORM(recruit,base) : JLTS_CloneArmor
     {
         class ItemInfo;
@@ -289,6 +295,11 @@ class CfgWeapons
     };
 
     class MACRO_NEW_UNIFORM(scenario,base) : JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(captain,base) : JLTS_CloneArmorMC
     {
         class ItemInfo;
     };
@@ -405,6 +416,9 @@ class CfgWeapons
     MACRO_NEW_SCENARIO_UNIFORM_ITEM(332nd_scenario_Purge,Purge,332nd_scenario_Purge)
     MACRO_NEW_SCENARIO_UNIFORM_ITEM(332nd_scenario_Shadow,Shadow,332nd_scenario_Shadow)
 
+    //Captain Armor
+    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(332nd_captain,Captain,332nd_captain)
+
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -419,6 +433,7 @@ class CfgVehicles
     class MACRO_NEW_UNIT(cwo,base);
     class MACRO_NEW_UNIT(rto,base);
     class MACRO_NEW_UNIT(medic,base);
+    class MACRO_NEW_UNIT(captain,base);
 
     class MACRO_NEW_UNIT(arfbase,base);
     class MACRO_NEW_UNIT(arfdes,base);
@@ -542,4 +557,6 @@ class CfgVehicles
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_OS,Clone (OS),332nd_scenario_OS,\MRC\JLTS\characters\CloneArmor\data\Clone_eod_armor1_co.paa,\MRC\JLTS\characters\CloneArmor\data\Clone_eod_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_OS)
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Purge,Clone (Purge),332nd_scenario_Purge,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Purge)
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Shadow,Clone (Shadow),332nd_scenario_Shadow,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Shadow)
+
+    MACRO_NEW_CAPTAIN_UNIT(332nd_captain,Clone Captain,332nd_captain,captain\Captain_Upper.paa,captain\Captain_Lower.paa)
 };

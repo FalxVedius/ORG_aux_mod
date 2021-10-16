@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(IQA_11)
 	{
-		author="Halligan";
+		author="332nd Aux Team";
 		addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{

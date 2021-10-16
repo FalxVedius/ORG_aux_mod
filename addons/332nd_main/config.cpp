@@ -16,7 +16,9 @@ class CfgPatches
 			MARCO_3AS_PATCHES,
 			"SWLW_merc_mando_rifles_sniper",
 			"SWLW_merc_mando_pistols_Westar35SA",
-			"SWLW_clones_launchers_RPS6"
+			"SWLW_clones_launchers_RPS6",
+			"ace_medical_treatment"
+
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -71,6 +73,14 @@ class Extended_PreInit_EventHandlers
 	};
 };
 
+class Extended_PostInit_EventHandlers 
+{
+	class 332nd_aux_POSTINIT
+	{
+		init="call compile preprocessFileLineNumbers '332nd_main\functions\XEH_postinit.sqf'";
+	};
+};
+
 
 class CAWorld;
 class RscStandardDisplay;
@@ -103,7 +113,7 @@ class RscDisplayLoadMission : RscStandardDisplay
 			y = SafeZoneY;
 			h = SafeZoneH;
 			w = SafeZoneW;
-			text = "\332nd_main\332nd_Banner.paa";
+			text = "\332nd_main\images\332nd_Banner.paa";
 		};
 	};
 };
@@ -127,7 +137,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Banner.paa";
+					text = "\332nd_main\images\332nd_Banner.paa";
 				};
 			};
 		};
@@ -147,7 +157,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_1.paa";
+					text = "\332nd_main\images\332nd_Promo_1.paa";
 				};
 			};
 		};
@@ -167,7 +177,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_2.paa";
+					text = "\332nd_main\images\332nd_Promo_2.paa";
 				};
 			};
 		};
@@ -187,7 +197,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_3.paa";
+					text = "\332nd_main\images\332nd_Promo_3.paa";
 				};
 			};
 		};
@@ -207,7 +217,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_4.paa";
+					text = "\332nd_main\images\332nd_Promo_4.paa";
 				};
 			};
 		};
@@ -227,7 +237,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_5.paa";
+					text = "\332nd_main\images\332nd_Promo_5.paa";
 				};
 			};
 		};
@@ -247,7 +257,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_6.paa";
+					text = "\332nd_main\images\332nd_Promo_6.paa";
 				};
 			};
 		};
@@ -267,7 +277,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_7.paa";
+					text = "\332nd_main\images\332nd_Promo_7.paa";
 				};
 			};
 		};
@@ -287,7 +297,187 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\332nd_Promo_8.paa";
+					text = "\332nd_main\images\332nd_Promo_8.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V9 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_9.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V10 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_10_Tally.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V11 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_11.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V12 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_12.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V13 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_13.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V14 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_14.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V15 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_15.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V16 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_16.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V17 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_17.paa";
 				};
 			};
 		};
@@ -309,29 +499,11 @@ class RscDisplayLoadCustom : RscStandardDisplay
 			y = SafeZoneY;
 			h = SafeZoneH;
 			w = SafeZoneW;
-			text = "\332nd_main\332nd_Banner.paa";
+			text = "\332nd_main\images\332nd_Banner.paa";
 		};
 	};
 };
 
-
-
-//class RscDisplayStart : RscStandardDisplay 
-//{
-//	class controls 
-//	{
-//		class LoadingPicture_332nd : RscPicture 
-//		{
-//			idc = 1000;
-//
-//			x = SafeZoneX;
-//			y = SafeZoneY;
-//			h = SafeZoneH;
-//			w = SafeZoneW;
-//			text = "\332nd_main\332nd_Banner.paa";
-//		};
-//	};
-//};
 
 class RscDisplayMPPlayers;
 class RscDisplayClientWait : RscDisplayMPPlayers 
@@ -346,7 +518,7 @@ class RscDisplayClientWait : RscDisplayMPPlayers
 		y = SafeZoneY;
 		h = SafeZoneH;
 		w = SafeZoneW;
-		text = "\332nd_main\332nd_Banner.paa";
+		text = "\332nd_main\images\332nd_Banner.paa";
 	};
 };
 
@@ -364,7 +536,7 @@ class RscDisplayClient : RscStandardDisplay
 			y = SafeZoneY;
 			h = SafeZoneH;
 			w = SafeZoneW;
-			text = "\332nd_main\332nd_Banner.paa";
+			text = "\332nd_main\images\332nd_Banner.paa";
 		};
 	};
 };
@@ -373,112 +545,3 @@ class RscDisplayConfigure
 {
 	enableDisplay = 1;
 };
-
-
-//class RscDisplayMain : RscStandardDisplay 
-//{
-//	idd = 0;
-//	idc = 1;
-//	enableDisplay = 1;
-//
-//	text = "\332nd_main\332nd_Banner.paa";
-//
-//	class RscActiveText;
-//
-//	class RscActivePicture : RscActiveText
-//	{
-//		style = 48;
-//		color[] = 
-//		{
-//				1, 1, 1, 0.5
-//		};
-//		colorActive[] = 
-//		{
-//				1, 1, 1, 1
-//		};
-//	};
-//	class Spotlight {};
-//
-//	class controls {
-//		class Spotlight1 {};
-//		class Spotlight2 {};
-//		class Spotlight3 {};
-//		class BackgroundSpotlightRight {};
-//		class BackgroundSpotlightLeft {};
-//		class BackgroundSpotlight {};
-//
-//		class B_Credits {};
-//
-//		class ConnectServer : RscButton 
-//		{
-//			idc = -1;
-//			text = "Join the 332nd Legion Discord!";
-//			style = 2;
-//			url = "https://discord.gg/EYbu9QzfBN";
-//			colorBackground[] = { 0, 0, 0, 0.4 };
-//			colorBackgroundActive[] = { 1,0,0, 0,2 };
-//			soundEnter[] = { "\332nd_main\ui\Hover_Sound.ogg",0.3,1 };
-//			soundPush[] = { "\332nd_main\ui\Click_Sound.ogg",0.7,1 };
-//			borderSize = 0.054;
-//			colorBorder[] = { 0,0,0,0 };
-//			x = "SafeZoneXAbs + 0.425 * SafeZoneW";
-//			y = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
-//			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
-//			h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-//
-//		};
-//		class ConnectDiscord : RscButton 
-//		{
-//			idc = -1;
-//			text = "Join the 332nd Legion Discord!";
-//			style = 2;
-//			url = "https://discord.gg/EYbu9QzfBN";
-//			colorBackground[] = { 0, 0, 0, 0.4 };
-//			colorBackgroundActive[] = { 1,0,0, 0,2 };
-//			soundEnter[] = { "\332nd_main\ui\Hover_Sound.ogg",0.3,1 };
-//			soundPush[] = { "\332nd_main\ui\Click_Sound.ogg",0.7,1 };
-//			borderSize = 0.054;
-//			colorBorder[] = { 0,0,0,0 };
-//			x = "SafeZoneXAbs + 0.425 * SafeZoneW";
-//			y = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
-//			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
-//			h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-//
-//		};
-//		class ConnectVK : RscButton 
-//		{
-//			idc = -1;
-//			text = "Join the 332nd Legion Discord!";
-//			style = 2;
-//			url = "https://discord.gg/EYbu9QzfBN";
-//			colorBackground[] = { 0, 0, 0, 0.4 };
-//			colorBackgroundActive[] = { 1,0,0, 0,2 };
-//			soundEnter[] = { "\332nd_main\ui\Hover_Sound.ogg",0.3,1 };
-//			soundPush[] = { "\332nd_main\ui\Click_Sound.ogg",0.7,1 };
-//			borderSize = 0.054;
-//			colorBorder[] = { 0,0,0,0 };
-//			x = "SafeZoneXAbs + 0.425 * SafeZoneW";
-//			y = "1.5 * ((((safezoneW / safezoneH) min 1.2) / 1.2) / 25) + (safezoneY + safezoneH - (((safezoneW / safezoneH) min 1.2) / 1.2))";
-//			w = "12 * (((safezoneW / safezoneH) min 1.2) / 40)";
-//			h = "((((safezoneW / safezoneH) min 1.2) / 1.2) / 25)";
-//
-//		};
-//
-//	};
-//
-//	class controlsBackground 
-//	{
-//		class LoadingPicture_332nd : RscPicture
-//		{
-//			idc = 1;
-//
-//			colorText[] = { 1,1,1,1 };
-//
-//			x = SafeZoneX;
-//			y = SafeZoneY;
-//			h = SafeZoneH;
-//			w = SafeZoneW;
-//			text = "\332nd_main\332nd_Banner.paa";
-//		};
-//	};
-//};

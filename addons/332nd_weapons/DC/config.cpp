@@ -185,6 +185,22 @@ class CfgMagazines
 		tracersEvery=1;
 	};
 
+	class MACRO_NEW_MAG(Deka_MAG,30) : 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 30;
+		mass = 15;
+		initspeed = 1500;
+		displayName=MACRO_AMMO_DISPLAYNAME(Droideka Cannon,30)
+		displayNameShort = "Droideka Cannon Magazine x30";
+		descriptionShort = "Droideka Cannon Magazine x30";
+		ammo=MACRO_NEW_AMMO(338_Red);
+		tracersEvery = 1;
+	};
+
 	class MACRO_NEW_MAG(Valken38x,15): 30rnd_762x39_AK12_Mag_F
 	{
 		modelSpecial="";
@@ -216,10 +232,10 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=40;
-		mass=15;
+		count=35;
+		mass=10;
 		initspeed=800;
-		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Suppressed Medium,40)
+		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Suppressed Medium,35)
 		displayNameShort="Westar suppressed medium magazine";
 		descriptionShort="Westar suppressed medium magazine";
 		ammo=MACRO_NEW_AMMO(Medium_Westar);
@@ -232,12 +248,12 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=3;
-		mass=40;
+		count=2;
+		mass=50;
 		initspeed=5000;
-		displayName=MACRO_AMMO_DISPLAYNAME(15x Anti-Tank Magazine,3)
-		displayNameShort="3 rnd 15x AT Magazine";
-		descriptionShort="3 rnd 15x AT Magazine";
+		displayName=MACRO_AMMO_DISPLAYNAME(15x Anti-Tank Magazine,2)
+		displayNameShort="2 rnd 15x AT Magazine";
+		descriptionShort="2 rnd 15x AT Magazine";
 		ammo=MACRO_NEW_AMMO(DC_15xATR);
 		tracersEvery=1;
 	};
@@ -286,6 +302,48 @@ class CfgAmmo
 		 effectfly="332nd_aux_effects_blue_bullet";
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
 	};
+	class ls_ammo_338_red;
+	class MACRO_NEW_AMMO(338_Red) : ls_ammo_338_red
+	{
+		hit = 20;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 40;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 14;
+		explosionSoundEffect = "DefaultExplosion";
+		explosioneffects = "ExploAmmoExplosion";
+		model = "kobra\442_turrets\Droideka\Doublelaserred.p3d";
+		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500 };
+
+		class CamShakeExplode
+		{
+			power = "(20*0.2)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((1 + 20^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power = 20;
+			duration = "((round (20^0.25))*0.2 max 0.2)";
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = "(20^0.25)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((20^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power = 0.0099999998;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
+	};
 	class ls_ammo_127x108_blue;
 	class MACRO_NEW_AMMO(127x108_Blue_T): ls_ammo_127x108_blue
 	{
@@ -320,9 +378,9 @@ class CfgAmmo
 	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
 	{
 		//soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
-		supersonicCrackFar[] = {"",0,0};
-		supersonicCrackNear[] = {"",0,0};
-		soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,1,500};
+		supersonicCrackFar[] = {"\332nd_weapons\sounds\WhizNear.wss",1,100};
+		supersonicCrackNear[] = {"\332nd_weapons\sounds\WhizNear.wss",1,500};
+		//soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
 	};
 	class ls_ammo_408_blue;
 	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue
@@ -349,7 +407,7 @@ class CfgAmmo
 		effectfly="332nd_aux_effects_RPS4_green";
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,0.9,1500};
 		caliber = 10;
-		hit = 500;
+		hit = 700;
 		typicalSpeed=5000;
 		explosionEffects = "ImpactPlasmaExpGreen";
 		tracerscale = 3;

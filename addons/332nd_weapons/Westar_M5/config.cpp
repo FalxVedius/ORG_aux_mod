@@ -7,6 +7,9 @@ class CfgPatches
 		addonRootClass=MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
+			"A3_Data_F",
+		    "A3_Weapons_F",
+			"3AS_Weapons_WestarM5",
 			MACRO_PATCH_NAME(weapons)
 		};
 		requiredVersion=0.1;
@@ -26,6 +29,16 @@ class CowsSlot;
 class MuzzleSlot;
 class PointerSlot;
 class UnderBarrelSlot;
+class cfgRecoils
+{
+ class Westar_m5
+ {              //  x     y     a     b
+  muzzleOuter[]	= { 0,  0.65,  0,  0 };
+  kickBack[]	= { 0.02, 0.04 };
+  permanent	= 0;
+  temporary	= 1;
+ };
+};
 class CfgWeapons
 {
 	class Rifle_Base_F;
@@ -67,7 +80,7 @@ class CfgWeapons
 		reloadAction="GestureReloadMX";
 		magazineReloadSwitchPhase=0.40000001;
 		discreteDistanceInitIndex=0;
-		recoil="recoil_mx";
+		recoil="Westar_m5";
 		maxRecoilSway=0.0125;
 		swayDecaySpeed=1.25;
 		inertia=0.5;
@@ -139,7 +152,7 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
-			reloadTime=0.12;
+			reloadTime=0.115;
 			dispersion=0.0001;
 			minRange=2;
 			minRangeProbab=0.5;
@@ -176,7 +189,7 @@ class CfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime=0.12;
+			reloadTime=0.115;
 			dispersion=0.0001;
 			minRange=0;
 			minRangeProbab=0.89999998;

@@ -23,7 +23,7 @@ if (isServer) then {
 			{
 				case (_timer == 0): 
 				{ 
-					_shield = "Full_Shield" createVehicle getPos _unit;
+					_shield = "Droideka_Shield" createVehicle getPos _unit;
 					_shield attachTo [_unit, [-0.05, 0.06,-0.8]];
 					
 					playSound3D ["3AS\3AS_Shield\shield_grenade\enable.ogg", _unit, false, getPos _unit, 5, 0.7, 100];

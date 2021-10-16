@@ -23,12 +23,12 @@ class CfgPatches
 			MACRO_NEW_UNIT(aviation,base),
 			"EmptyBox_332nd",
 			"MedicalBox_332nd",
-			"AmmoBox_332nd"
+			"AmmoBox_332nd",
 
 		};
 		weapons[] = {
 		 	MACRO_NEW_UNIFORM(infantry,base),
-			MACRO_NEW_UNIFORM(aviation,base)
+			MACRO_NEW_UNIFORM(aviation,base),
 		};
 	};
 };
@@ -61,8 +61,7 @@ class CfgEditorCategories
 {
 	class EdCat_332nd_Props
 	{
-		displayName = "332nd Legion";
-		priority = 2;
+		displayName = "332nd Legion Supplies";
 	};
 };
 
@@ -141,7 +140,7 @@ class CfgEditorSubcategories
 	class EdSubcat_332nd_RESUPPLY
 	{
 		displayName = "Resupply";
-		priority = 13;
+		priority = 1;
 	};
 	class EdSubcat_332nd_TANK
 	{
@@ -189,7 +188,11 @@ class CfgWeapons
  	// ---- blufor Uniforms ----
 
     class U_I_CombatUniform;
-	class JLTS_CloneArmor: U_I_CombatUniform
+	class JLTS_CloneArmor : U_I_CombatUniform
+	{
+		class ItemInfo;
+	};
+	class JLTS_CloneArmorMC : U_I_CombatUniform
 	{
 		class ItemInfo;
 	};
@@ -361,6 +364,19 @@ class CfgWeapons
 		class ItemInfo : ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(scenario,base);
+			containerClass = "Supply140";
+			uniformType = "Neopren";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(captain,base) : JLTS_CloneArmorMC
+	{
+		displayName = "[332nd] Captain Uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(captain,base);
 			containerClass = "Supply140";
 			uniformType = "Neopren";
 		};
@@ -1082,6 +1098,18 @@ class CfgFunctions
 			class initDroideka
 			{
 			};
+			class initSniperDroideka_Move
+			{
+			};
+			class initSniperDroideka
+			{
+			};
+			class init_DroidekaShield
+			{
+			};
+			class init_SniperDroidekaShield
+			{
+			};
 		};
 
 		class Inits
@@ -1277,8 +1305,32 @@ class CfgVehicles
 
 		};
 
-		class TransportMagazines {
+		class TransportMagazines 
+		{
 
+			class Dm17HeartStarter_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				count = 50;
+			};
+
+			class Dm17Bacta_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				count = 25;
+			};
+
+			class Dm17Kolto_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				count = 25;
+			};
+			
+			class Dm17CombatStim_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				count = 50;
+			};
 		};
 
 		class EventHandlers
@@ -4463,6 +4515,241 @@ class CfgVehicles
 		};
 
 	};
+
+	class MACRO_NEW_UNIT(captain,base) : JLTS_Clone_P2_DC15A
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Clone Captain Base";
+		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+
+		uniformClass = MACRO_NEW_UNIFORM(captain,base);
+		hiddenSelections[] = { "camo1","camo2","insignia" };
+
+		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		nakedUniform = "JLTS_CloneNaked_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		magazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		respawnMagazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 3;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 3;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 3;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 20;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 15;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 15;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 20;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2500;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 15;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 15;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 15;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2500;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 15;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 15;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
 	// ---- End Blufor Units for Uniforms ----
 
 	// ---- Opfor Units for Uniforms ----
@@ -4476,7 +4763,6 @@ class CfgVehicles
 	class O_Helipilot_F;
 	class lsd_cis_bxDroid_base;
 	class O_Soldier_base_F;
-	class k_CIS_Droideka;
 	class lsd_cis_b2Droid_base;
 
 	class JLTS_Droid_B1_E5 :O_Soldier_F
@@ -10790,6 +11076,137 @@ class CfgVehicles
 
 
 	//Heavy Droids
+	class Full_Shield;
+
+	class Droideka_Shield : Full_Shield
+	{
+		displayName = "332nd Droideka Shield";
+
+		scope = 1;
+		scopecurator = 1;
+
+		armor = 50;
+
+		armorStructural = 1;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_init_DroidekaShield;";
+		};
+	};
+
+	class Droideka_Sniper_Shield : Full_Shield
+	{
+		displayName = "332nd Droideka Sniper Shield";
+
+		scope = 1;
+		scopecurator = 1;
+
+		armor = 50;
+
+		armorStructural = 1;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_init_SniperDroidekaShield;";
+		};
+	};
+
+	class land;
+	class LandVehicle : land
+	{
+		class NewTurret;
+	};
+	class StaticWeapon : LandVehicle
+	{
+		class Turrets;
+		class MainTurret : NewTurret
+		{
+		};
+		class HitPoints;
+	};
+	class StaticMGWeapon : StaticWeapon
+	{
+		class EventHandlers;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+				optics = 1;
+			};
+		};
+		class Components;
+		icon = "iconStaticMG";
+	};
+
+	class k_CIS_Droideka : StaticMGWeapon
+	{
+		class EventHandlers;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+
+			};
+		};
+		class Components;
+		icon = "iconStaticMG";
+	};
+
+	class LandVehicle;
+	class StaticWeapon : LandVehicle
+	{
+		class Turrets
+		{
+			class MainTurret;
+		};
+	};
+	class StaticMGWeapon : StaticWeapon
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+
+	class 3AS_Deka_Static_Base : StaticMGWeapon
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+
+	class 3as_Deka_Static_Sniper_Base : 3AS_Deka_Static_Base
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics;
+			};
+		};
+	};
+
+	class 3as_Deka_Static_Sniper : 3as_Deka_Static_Sniper_Base
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				class ViewOptics : ViewOptics
+				{
+
+				};
+			};
+		};
+	};
+
 	class MACRO_NEW_UNIT(cisdroideka,base) : k_CIS_Droideka
 	{
 		author = MACRO_AUTHOR;
@@ -10803,6 +11220,76 @@ class CfgVehicles
 
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka;";
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(338_Deka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)
+				};
+			};
+		};
+	};
+
+	class MACRO_NEW_UNIT(cissniperdroideka,base) : 3as_Deka_Static_Sniper
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Sniper Droideka Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+
+		armor = 150;
+		armorStructural = 1;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_initSniperDroideka;";
+		};
+
+		class HitPoints
+		{
+			class HitGun
+			{
+				armor = 0.89999998;
+				material = -1;
+				name = "gun";
+				visual = "autonomous_unhide";
+				passThrough = 0;
+				radius = 0.2;
+			};
+			class HitTurret : HitGun
+			{
+				armor = 0.30000001;
+			};
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(20mm_SniperDeka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10)
+				};
+			};
 		};
 	};
 
@@ -10819,6 +11306,76 @@ class CfgVehicles
 
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka_Move;";
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(338_Deka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30),
+					MACRO_NEW_MAG(Deka_MAG,30)
+				};
+			};
+		};
+	};
+
+	class MACRO_NEW_UNIT(cissniperdroidekamoveable,base) : 3as_Deka_Static_Sniper
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Sniper Droideka Moveable Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_HEAVY";
+
+		armor = 150;
+		armorStructural = 1;
+
+		class EventHandlers {
+			init = "[_this] spawn Aux332nd_fnc_initSniperDroideka_Move;";
+		};
+
+		class HitPoints
+		{
+			class HitGun
+			{
+				armor = 0.89999998;
+				material = -1;
+				name = "gun";
+				visual = "autonomous_unhide";
+				passThrough = 0;
+				radius = 0.2;
+			};
+			class HitTurret : HitGun
+			{
+				armor = 0.30000001;
+			};
+		};
+
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(20mm_SniperDeka)
+				};
+				magazines[] = {
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10),
+					MACRO_NEW_MAG(SniperDeka_MAG,10)
+				};
+			};
 		};
 	};
 
