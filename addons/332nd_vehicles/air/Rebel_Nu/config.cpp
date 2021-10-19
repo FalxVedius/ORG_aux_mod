@@ -111,7 +111,7 @@ class CfgVehicles
 		picture="3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
 		editorpreview="\3AS\3as_Laat\LAATI\data\editorpreview\3as_laat.jpg";
 		faction = "EdCat_332nd_Rebel";
-        editorSubcategory = "EdSubcat_332nd_AIR";
+        editorSubcategory = "EdSubcat_332nd_Rebel_PLANES";
 
 		crew = "332nd_aux_rebel_unit_332nd_indep_rebel";
 

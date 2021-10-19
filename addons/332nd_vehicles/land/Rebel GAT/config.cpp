@@ -131,7 +131,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		side = 2;
 		faction = "EdCat_332nd_Rebel";
-		editorSubcategory = "EdSubcat_332nd_AIR";
+		editorSubcategory = "EdSubcat_332nd_Rebel_TANKS";
 		crew = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
 		class Turrets : Turrets
 		 {

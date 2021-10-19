@@ -75,7 +75,7 @@ class CfgVehicles
 		  side = 2;
 		  scopeCurator = 2;
 		  faction = "EdCat_332nd_Rebel";
-		  editorSubcategory = "EdSubcat_332nd_AIR";
+		  editorSubcategory = "EdSubcat_332nd_Rebel_PLANES";
 		  armor = 25;
 		  crew = "332nd_aux_rebel_unit_332nd_indep_rebel";
 		  driverCanEject = 0;
@@ -295,7 +295,7 @@ class CfgVehicles
 		  armor = 25;
 		  scopeCurator = 2;
 		  faction = "EdCat_332nd_Rebel";
-		  editorSubcategory = "EdSubcat_332nd_AIR";
+		  editorSubcategory = "EdSubcat_332nd_Rebel_PLANES";
 		  driverCanEject = 0;
 		  crew = "332nd_aux_rebel_unit_332nd_indep_rebel";
 

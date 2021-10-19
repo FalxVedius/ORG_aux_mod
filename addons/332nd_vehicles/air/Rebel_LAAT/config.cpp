@@ -2,60 +2,232 @@
 #define MACRO_LAAT_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\air\LAAT
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(laat)
-	{
-		author = "Namenai";
-		addonRootClass = MACRO_PATCH_NAME(air_vehicles);
-		requiredAddons[] =
-		{
-			MACRO_PATCH_NAME(air_vehicles)
-		};
-		requiredVersion = 0.1;
-		units[] = {
-			MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel),
-			MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd_Rebel),
-		};
-		weapons[] = {};
-	};
+    class MACRO_PATCH_NAME(laat)
+    {
+        author = "Namenai";
+        addonRootClass = MACRO_PATCH_NAME(air_vehicles);
+        requiredAddons[] =
+        {
+            MACRO_PATCH_NAME(air_vehicles)
+        };
+        requiredVersion = 0.1;
+        units[] = {
+            MACRO_NEW_VEHICLE(air,LAAT,Rebel_mk1_332nd),
+            MACRO_NEW_VEHICLE(air,LAATle,Rebel_LAATle_332nd),
+        };
+        weapons[] = {};
+    };
+};
+
+class SensorTemplatePassiveRadar;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot : DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot : DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
 };
 
 class CfgFunctions
 {
-	class ResupplyAir
+    class ResupplyAir
+    {
+        class myCategory
+        {
+            class AddCratesToInventory
+            {
+                file = "332nd_vehicles\air\LAAT\fnc_spawnResupplyCrates.sqf";
+            };
+        };
+    };
+};
+
+class Extended_init_EventHandlers
+{
+	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd)
 	{
-		class myCategory
+		class laat_init_eh
 		{
-			class AddCratesToInventory
-			{
-				file = "332nd_vehicles\air\LAAT\fnc_spawnResupplyCrates.sqf";
-			};
+			init="if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle; }; (_this select 0) setVariable [""lockState"", 0, true]; (_this select 0) setVariable [""ls_traumaState"", 0, true]; (_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[15,16,17,18,19,20]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+		};
+	};
+	class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd)
+	{
+		class laat_init_eh
+		{
+			init="if (local (_this select 0)) then {[(_this select 0), """", [""hidedoor1"", 0, ""hidedoor4"",0], false] call bis_fnc_initVehicle; }; (_this select 0) setVariable [""lockState"", 0, true]; (_this select 0) setVariable [""ls_traumaState"", 0, true]; (_this) spawn ls_vehicle_fnc_ImpulsorMonitor; ";
 		};
 	};
 };
 
 class CfgVehicles
 {
-	class Helicopter_Base_H;
-
-	class ls_laat_base : Helicopter_Base_H
+	class Helicopter;
+	class Items_base_F;
+	class Wreck_base_F;
+	class Helicopter_Base_F : Helicopter
 	{
 		class Turrets;
-		class Reflectors;
+		class HitPoints;
+		class ViewPilot;
 	};
-
-	class ls_laat : ls_laat_base
+	class Helicopter_Base_H : Helicopter_Base_F
 	{
 		class Turrets : Turrets
 		{
 			class MainTurret;
 		};
+		class AnimationSources;
+		class Eventhandlers;
+		class Viewoptics;
+		class ViewPilot;
+		class RotorLibHelicopterProperties;
+		class HitPoints : HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitHRotor;
+			class HitVRotor;
+			class HitAvionics;
+		};
+	};
 
-		class ACE_SelfActions;
+    class lsd_laat_base : Helicopter_Base_H
+    {
+	    class Components;
+		class Reflectors;
+		class Turrets : Turrets
+		{
+			class MainTurret;
+			class cargoTurret_rearl;
+			class cargoTurret_rearr;
+			class cargoturret_left_1;
+			class cargoTurret_left_2;
+			class cargoTurret_left_3;
+			class cargoTurret_left_4;
+			class cargoTurret_left_5;
+			class cargoTurret_left_14;
+			class cargoturret_right_1;
+			class cargoTurret_right_2;
+			class cargoTurret_right_3;
+			class cargoTurret_right_4;
+			class cargoTurret_right_5;
+			class CargoTurret_right_13;
+			class CargoTurret_right_17;
+			class CargoTurret_right_18;
+			class CargoTurret_right_19;
+			class CargoTurret_left_20;
+			class CargoTurret_left_21;
+			class CargoTurret_left_22;
 
+		};
+    };
+
+    class lsd_heli_laati : lsd_laat_base
+    {
+		class Components;
+		class ACE_selfActions;
 		class Reflectors : Reflectors
 		{
 			class Left;
 			class Right;
+		};
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+
+			};
+			class cargoTurret_rearl : cargoTurret_rearl
+			{
+				
+			};
+			class cargoTurret_rearr : cargoTurret_rearr
+			{
+
+			};
+			class cargoturret_left_1 : cargoturret_left_1
+			{
+
+			};
+			class cargoTurret_left_2 : cargoTurret_left_2
+			{
+
+			};
+			class cargoTurret_left_3 : cargoTurret_left_3
+			{
+
+			};
+			class cargoTurret_left_4 : cargoTurret_left_4
+			{
+
+			};
+			class cargoTurret_left_5 : cargoTurret_left_5
+			{
+
+			};
+			class cargoTurret_left_14 : cargoTurret_left_14
+			{
+
+			};
+			class cargoturret_right_1 : cargoturret_right_1
+			{
+
+			};
+			class cargoTurret_right_2 : cargoTurret_right_2
+			{
+
+			};
+			class cargoTurret_right_3 : cargoTurret_right_3
+			{
+
+			};
+			class cargoTurret_right_4 : cargoTurret_right_4
+			{
+
+			};
+			class cargoTurret_right_5 : cargoTurret_right_5
+			{
+
+			};
+			class CargoTurret_right_13 : CargoTurret_right_13
+			{
+
+			};
+			class CargoTurret_right_17 : CargoTurret_right_17
+			{
+
+			};
+			class CargoTurret_right_18 : CargoTurret_right_18
+			{
+
+			};
+			class CargoTurret_right_19 : CargoTurret_right_19
+			{
+
+			};
+			class CargoTurret_left_20 : CargoTurret_left_20
+			{
+
+			};
+			class CargoTurret_left_21 : CargoTurret_left_21
+			{
+
+			};
+			class CargoTurret_left_22 : CargoTurret_left_22
+			{
+
+			};
 		};
 
 		class HitPoints
@@ -69,53 +241,228 @@ class CfgVehicles
 			class HitVRotor;
 			class HitAvionics;
 		};
+    };
+
+	class ls_laatle_base : Helicopter_Base_H
+	{
+		class Components;
+		class Turrets : Turrets
+		{
+			class MainTurret;
+			class cargoTurret_pos7;
+			class cargoTurret_pos8;
+			class cargoTurret_pos9;
+			class cargotTurret_pos10;
+			class cargoTurret_pos11;
+			class cargoTurret_pos12;
+			class cargoTurret_leftDoor_pos13;
+			class cargoTurret_leftDoor_pos14;
+			class cargoTurret_rightDoor_pos15;
+			class cargoTurret_rightDoor_pos16;
+		};
+	};
+	class ls_heli_laatle : ls_laatle_base
+	{
+		class Components;
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+
+			};
+			class cargoTurret_pos7 : cargoTurret_pos7
+			{
+
+			};
+			class cargoTurret_pos8 : cargoTurret_pos8
+			{
+
+			};
+			class cargoTurret_pos9 : cargoTurret_pos9
+			{
+
+			};
+			class cargotTurret_pos10 : cargotTurret_pos10
+			{
+
+			};
+			class cargoTurret_pos11 : cargoTurret_pos11
+			{
+
+			};
+			class cargoTurret_pos12 : cargoTurret_pos12
+			{
+
+			};
+			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
+			{
+
+			};
+			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
+			{
+
+			};
+			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
+			{
+
+			};
+			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
+			{
+
+			};
+		};
+
+
 	};
 
-	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel_base) : ls_laat
-	{
-		displayName = "Stolen LAAT Mk1 Base";
-		scope = 2;
+    class MACRO_NEW_VEHICLE(air,LAAT,Rebel_mk1_332nd_base):  lsd_heli_laati
+    {
+        displayName = "LAAT Mk1 Base";
+        scope = 0;
+		crewCrashProtection=1;
+        faction = "EdCat_332nd_Rebel";
+        editorSubcategory = "EdSubcat_332nd_Rebel_HEIL";
 
-		faction = "EdCat_332nd_Rebel";
-		editorSubcategory = "EdSubcat_332nd_AIR";
+        weapons[] = {
+            MACRO_NEW_WEAPON(LAAT_40mm),
+        };
+        magazines[] = {
+            MACRO_AIR_COMMON_MAGS,
+            MACRO_NEW_MAG(LAAT_40mm,600),
+            MACRO_NEW_MAG(Air_Dumb_rocket,24),
+			MACRO_NEW_MAG(Air_Dumb_rocket,24),
+        };
+        class EventHandlers
+        {
+            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
+        };
+        ls_impulsor_fuelDrain_1=0.00005;
+        ls_impulsor_fuelDrain_2=0.00005;
 
-		weapons[] = {
-			MACRO_AIR_COMMON_WEAPS,
-			"ls_laat_gun","ls_laat_gun_2","missiles_DAR"
-		};
-		magazines[] = {
-			MACRO_AIR_COMMON_MAGS,
-			"200rnd_laat_apfsds_mag","200rnd_laat_apfsds_mag",
-			"12rnd_missiles","12rnd_missiles","12rnd_missiles"
-		};
-		class EventHandlers
+        hiddenselections[] = {
+            "body","body_2",
+            "door_1","door_2","door_3",
+            "wings",
+            "missiles",
+            "cockpits","glass",
+            "clan",
+            "zasleh_l","zasleh_r","zasleh_b"
+        };
+
+        hiddenselectionstextures[] = {
+            MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+            "lsd_vehicles_heli\laati\data\missiles_co.paa",
+            MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+        };
+
+        crew = MACRO_NEW_UNIT(rebel, 332nd_indep_rebel);
+        typicalcargo[] = { MACRO_NEW_UNIT(rebel,332nd_indep_rebel) };
+
+		class Components: Components
 		{
-			init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
+			class TransportPylonsComponent
+			{
+				uiPicture="swlb_a_vehicle\laat\data\ui\laat_ui.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						priority=5;
+						hardpoints[]=
+						{
+							"332_A_Pylon"
+						};
+						turret[]={};
+						UIposition[]={0.059999999,0.40000001};
+					};
+					class PylonLeft2: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_Shrieker_x20";  
+						priority=4;
+						hardpoints[]=
+						{
+							"332_C_Pylon"
+						};
+						UIposition[]={0.079999998,0.34999999};
+					};
+					class PylonLeft3: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority=3;
+						hardpoints[]=
+						{
+							"332_B_Pylon"
+						};
+						UIposition[]={0.1,0.30000001};
+					};
+					class PylonRight3: PylonLeft3
+					{
+						mirroredMissilePos=3;
+						UIposition[]={0.58999997,0.30000001};
+					};
+					class PylonRight2: PylonLeft2
+					{
+						mirroredMissilePos=2;
+						UIposition[]={0.62,0.34999999};
+					};
+					class PylonRight1: PylonLeft1
+					{
+						mirroredMissilePos=1;
+						UIposition[]={0.63999999,0.40000001};
+					};
+				};
+			//	class Presets
+			//	{
+			//		class Empty
+			//		{
+			//			displayName="Empty";
+			//			attachment[]={};
+			//		};
+			//		class Default
+			//		{
+			//			displayName="Default";
+			//			attachment[]=
+			//			{
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles"
+			//			};
+			//		};
+			//		class AT
+			//		{
+			//			displayName="AT";
+			//			attachment[]=
+			//			{
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonMissile_1Rnd_LG_scalpel",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonRack_12Rnd_PG_missiles",
+			//				"PylonMissile_1Rnd_LG_scalpel",
+			//				"PylonRack_12Rnd_PG_missiles"
+			//			};
+			//		};
+			//		class CAS
+			//		{
+			//			displayName="CAS";
+			//			attachment[]=
+			//			{
+			//				"PylonRack_12Rnd_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonRack_12Rnd_missiles",
+			//				"PylonRack_12Rnd_missiles",
+			//				"PylonMissile_1Rnd_AAA_missiles",
+			//				"PylonRack_12Rnd_missiles"
+			//			};
+			//		};
+			//	};
+			};
 		};
-		ls_impulsor_fuelDrain_1 = 0.00005;
-		ls_impulsor_fuelDrain_2 = 0.00005;
-
-		hiddenselections[] = {
-			"body","body_2",
-			"door_1","door_2","door_3",
-			"wings",
-			"missiles",
-			"cockpits","glass",
-			"clan",
-			"zasleh_l","zasleh_r","zasleh_b"
-		};
-
-		hiddenselectionstextures[] = {
-			MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-			MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-			MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-			"swlb_a_vehicle\laat\data\missiles_co.paa",
-			MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-		};
-
-		crew = MACRO_NEW_UNIT(rebel,base);
-		typicalcargo[] = { MACRO_NEW_UNIT(rebel,base) };
-
 
 		class Turrets : Turrets
 		{
@@ -130,24 +477,104 @@ class CfgVehicles
 					MACRO_AIR_COMMON_MAGS,
 					"Laser_Battery_F","Laser_Battery_F"
 				};
-			}
-		}
-
-		class UserActions
-		{
-			class Damage_Report
+			};
+			class cargoTurret_rearl : cargoTurret_rearl
 			{
-				displayName = "<t color='#00FF00'>Damage Report :) </t>";
-				displayNameDefault = "<t color='#00FF00'>Damage Report</t>";
-				textToolTip = "<t color='#00FF00'>Damage Report</t>";
-				position = "pilotview";
-				radius = 10;
-				priority = 21;
-				onlyForPlayer = 1;
-				condition = "(alive this)";
-				statement = this call MACRO_FNC_NAME(show_damage_report);
+
+			};
+			class cargoTurret_rearr : cargoTurret_rearr
+			{
+
+			};
+			class cargoturret_left_1 : cargoturret_left_1
+			{
+
+			};
+			class cargoTurret_left_2 : cargoTurret_left_2
+			{
+
+			};
+			class cargoTurret_left_3 : cargoTurret_left_3
+			{
+
+			};
+			class cargoTurret_left_4 : cargoTurret_left_4
+			{
+
+			};
+			class cargoTurret_left_5 : cargoTurret_left_5
+			{
+
+			};
+			class cargoTurret_left_14 : cargoTurret_left_14
+			{
+
+			};
+			class cargoturret_right_1 : cargoturret_right_1
+			{
+
+			};
+			class cargoTurret_right_2 : cargoTurret_right_2
+			{
+
+			};
+			class cargoTurret_right_3 : cargoTurret_right_3
+			{
+
+			};
+			class cargoTurret_right_4 : cargoTurret_right_4
+			{
+
+			};
+			class cargoTurret_right_5 : cargoTurret_right_5
+			{
+
+			};
+			class CargoTurret_right_13 : CargoTurret_right_13
+			{
+
+			};
+			class CargoTurret_right_17 : CargoTurret_right_17
+			{
+
+			};
+			class CargoTurret_right_18 : CargoTurret_right_18
+			{
+
+			};
+			class CargoTurret_right_19 : CargoTurret_right_19
+			{
+
+			};
+			class CargoTurret_left_20 : CargoTurret_left_20
+			{
+
+			};
+			class CargoTurret_left_21 : CargoTurret_left_21
+			{
+
+			};
+			class CargoTurret_left_22 : CargoTurret_left_22
+			{
+
 			};
 		};
+
+        class UserActions
+        {
+            class Damage_Report
+            {
+                displayName = "<t color='#00FF00'>Damage Report :) </t>";
+                displayNameDefault = "<t color='#00FF00'>Damage Report</t>";
+                textToolTip = "<t color='#00FF00'>Damage Report</t>";
+                position = "pilotview";
+                radius = 10;
+                priority = 21;
+                onlyForPlayer = 1;
+                condition = "(alive this)";
+                statement = this call MACRO_FNC_NAME(show_damage_report);
+            };
+        };
 		class ACE_SelfActions :ACE_SelfActions
 		{
 
@@ -2428,1038 +2855,593 @@ class CfgVehicles
 
 		};
 
-		class Reflectors : Reflectors
-		{
-			class Left : Left
-			{
-				ambient[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
-				color[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
-				coneFadeCoef = 10;
-				dayLight = 0;
-				innerAngle = 5;
-				intensity = 200;//50
-				outerAngle = 75;
-				class Attenuation
-				{
-					constant = 0;
-					hardLimitEnd = 1000;
-					hardLimitStart = 700;
-					linear = 1;
-					quadratic = 0;
-					start = 0;
-				};
-			};
-			class Right : Right
-			{
-				ambient[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
-				color[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
-				coneFadeCoef = 10;
-				dayLight = 0;
-				innerAngle = 5;
-				intensity = 200;//50
-				outerAngle = 75;
-				class Attenuation
-				{
-					constant = 0;
-					hardLimitEnd = 1000;
-					hardLimitStart = 700;
-					linear = 1;
-					quadratic = 0;
-					start = 0;
-				};
-			};
-		};
-	};
+        class Reflectors : Reflectors
+        {
+            class Left : Left
+            {
+                ambient[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
+                color[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
+                coneFadeCoef = 10;
+                dayLight = 0;
+                innerAngle = 5;
+                intensity = 200;//50
+                outerAngle = 75;
+                class Attenuation
+                {
+                    constant = 0;
+                    hardLimitEnd = 1000;
+                    hardLimitStart = 700;
+                    linear = 1;
+                    quadratic = 0;
+                    start = 0;
+                };
+            };
+            class Right : Right
+            {
+                ambient[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
+                color[] = { (255 / 255) * 10000,(100 / 255) * 10000,(0 / 255) * 10000 };
+                coneFadeCoef = 10;
+                dayLight = 0;
+                innerAngle = 5;
+                intensity = 200;//50
+                outerAngle = 75;
+                class Attenuation
+                {
+                    constant = 0;
+                    hardLimitEnd = 1000;
+                    hardLimitStart = 700;
+                    linear = 1;
+                    quadratic = 0;
+                    start = 0;
+                };
+            };
+        };
+    };
+	
 
-	class ls_heli_laatle;
-	class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd_Rebel) :ls_heli_laatle
-	{
-		displayName = "Stolen LAAT/le Gunship";
-		scope = 2;
-		forceInGarage = 1;
-		maximumLoad = 10000;
 
-		side = 2;
+    class MACRO_NEW_VEHICLE(air,LAATle,Rebel_LAATle_332nd): ls_heli_laatle
+    {
+        displayName = "Stolen LAAT/le";
+        scope = 2;
+        forceInGarage = 1;
+        maximumLoad = 10000;
+
 		faction = "EdCat_332nd_Rebel";
-		editorSubcategory = "EdSubcat_332nd_AIR";
-
-		ls_impulsor_fuelDrain_1 = 0.00600;
-		ls_impulsor_fuelDrain_2 = 0.00600;
-		ls_impulsor_boostSpeed_1 = 33000;
-		ls_impulsor_boostSpeed_2 = 43000;
-		ls_hasImpulse = 1;
-
-		crew = MACRO_NEW_REBEL_UNIT(rebel,base);
-		typicalcargo[] = { MACRO_NEW_REBEL_UNIT(rebel,base) };
-
-		class TransportItems
+		editorSubcategory = "EdSubcat_332nd_Rebel_HEIL";
+		side = 2;
+		weapons[]=
+				{
+					 MACRO_NEW_WEAPON(air_dumb_rocketpod),
+					"CMFlareLauncher"
+				};
+				magazines[]=
+				{
+				   "240Rnd_CMFlare_Chaff_Magazine",
+			       "240Rnd_CMFlare_Chaff_Magazine",
+			       "240Rnd_CMFlare_Chaff_Magazine",
+					MACRO_NEW_MAG(Air_Dumb_rocket,24),
+					MACRO_NEW_MAG(Air_Dumb_rocket,24),
+					MACRO_NEW_MAG(Air_Dumb_rocket,24)
+				};
+        radarTargetSize = 0.3;
+		visualTargetSize = 0.3;
+		mainBladeRadius=0.1;
+		liftForceCoef=3;
+		cyclicAsideForceCoef=2.8;
+		backRotorForceCoef=1.8;
+		cyclicForwardForceCoef=2;
+		mainRotorSpeed=-1;
+		backRotorSpeed=1;
+        crew = MACRO_NEW_UNIT(rebel, 332nd_indep_rebel);
+        typicalcargo[] = { MACRO_NEW_UNIT(rebel,332nd_indep_rebel) };
+		//class RotorLibHelicopterProperties
+		//{
+		//	RTDconfig="\ls_vehicles_heli\laatle\RTD_heli_laatle.xml";
+		//};
+		class RotorLibHelicopterProperties
 		{
-
-			class BactaSprayx25_332nd
+			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
+			autoHoverCorrection[]={3.2,0,0};
+			defaultCollective=0.80500001;
+			retreatBladeStallWarningSpeed=83;
+			maxTorque=5800;
+			stressDamagePerSec=0.0099999998;
+			maxHorizontalStabilizerLeftStress=8000;
+			maxHorizontalStabilizerRightStress=8000;
+			maxVerticalStabilizerStress=4000;
+			horizontalWingsAngleCollMin=0;
+			horizontalWingsAngleCollMax=0;
+			maxMainRotorStress=225000;
+			maxTailRotorStress=225000;
+		};
+		ls_impulsor_fuelDrain_1=0.00020;
+        ls_impulsor_fuelDrain_2=0.00030;
+        ls_impulsor_boostSpeed_1=1200;
+        ls_impulsor_boostSpeed_2=2400;
+        ls_hasImpulse=1;
+		class Components: Components
+		{
+			class TransportPylonsComponent
 			{
-				name = "332nd_aux_medical_BactaSpray_x25";
-				count = 4;
-			};
-
-			class PlastiBandagex25_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage_x25";
-				count = 4;
-			};
-
-			class MedPatchx25_332nd
-			{
-				name = "332nd_aux_medical_MedPatch_x25";
-				count = 4;
-			};
-
-			class BactaSprayx10_332nd
-			{
-				name = "332nd_aux_medical_BactaSpray_x10";
-				count = 10;
-			};
-
-			class PlastiBandagex10_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage_x10";
-				count = 10;
-			};
-
-			class MedPatchx10_332nd
-			{
-				name = "332nd_aux_medical_MedPatch_x10";
-				count = 10;
-			};
-
-			class BactaSprayx5_332nd
-			{
-				name = "332nd_aux_medical_BactaSpray_x5";
-				count = 10;
-			};
-
-			class PlastiBandagex5_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage_x5";
-				count = 10;
-			};
-
-			class MedPatchx5_332nd
-			{
-				name = "332nd_aux_medical_MedPatch_x5";
-				count = 10;
-			};
-
-			class MediKit_332nd
-			{
-				name = "332nd_aux_medical_MediKit";
-				count = 10;
-			};
-
-			class BactaSpray_332nd
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 50;
-			};
-
-			class PlastiBandage_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 50;
-			};
-
-			class MedPatch_332nd
-			{
-				name = "332nd_aux_medical_MedPatch";
-				count = 50;
-			};
-
-			class Painkillers_332nd
-			{
-				name = "332nd_aux_medical_PainKiller";
-				count = 40;
-			};
-
-			class Adrenaline_332nd
-			{
-				name = "332nd_aux_medical_Adrenaline";
-				count = 40;
-			};
-
-			class Blood_332nd
-			{
-				name = "332nd_aux_medical_Blood";
-				count = 75;
-			};
-
-			class PressureCuff_332nd
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 30;
+				uiPicture="swlb_a_vehicle\laat\data\ui\laat_ui.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority=5;
+						hardpoints[]=
+						{
+							"332_C_Pylon"
+						};
+						turret[]={};
+						UIposition[]={0.059999999,0.40000001};
+					};
+				};
 			};
 		};
-
-		class TransportWeapons
+		class Turrets: Turrets
 		{
-			class DC15A_Weps_332nd
+			class MainTurret: MainTurret
 			{
-				weapon = "332nd_aux_weapon_DC_15a";
-				count = 10;
+				visionMode[]=
+				{
+					"Normal",
+					"NVG",
+					"Ti"
+				};
+				discreteDistance[]={100,200,300,400,500,600,700,800,1000,1200,1500,1800,2100,2400};
+				gunBeg="usti hlavne";
+				gunEnd="konec hlavne";
+				memoryPointGun[]=
+				{
+					"usti_hlavne_1",
+					"usti_hlavne_2"
+				};
+				class ViewGunner
+				{
+					visionMode[]=
+					{
+						"Normal",
+						"NVG"
+					};
+					gunnerOpticsEffect[]={};
+					stabilizedInAxes=0;
+					directionStabilized=0;
+					horizontallyStabilized=0;
+					initFov=1;
+					minFov=0.60000002;
+					maxFov=0.85000002;
+					initAngleX=180;
+					minAngleX=90;
+					maxAngleX=270;
+					initAngleY=-45;
+					minAngleY=-90;
+					maxAngleY=-30;
+					minMoveX=-0.1;
+					maxMoveX=0.1;
+					minMoveY=-0.025;
+					maxMoveY=0.1;
+					minMoveZ=-0.1;
+					maxMoveZ=0.1;
+					gunnerOpticsModel="";
+				};
+				class Viewoptics
+				{
+					visionMode[]=
+					{
+						"Normal",
+						"NVG",
+						"Ti"
+					};
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleX=0;
+					minAngleY=-15;
+					maxAngleY=15;
+					initAngleY=0;
+					initFov=0.75;
+					minFov=0.25;
+					maxFov=0.75;
+				};
+				class OpticsIn
+				{
+					class Wide
+					{
+						visionMode[]=
+						{
+							"Normal",
+							"NVG",
+							"Ti"
+						};
+						thermalMode[]={0,1};
+						initAngleX=0;
+						minAngleX=0;
+						maxAngleX=0;
+						initAngleY=0;
+						minAngleY=-15;
+						maxAngleY=15;
+						initFov=0.46599999;
+						minFov=0.46599999;
+						maxFov=0.46599999;
+						opticsDisplayName="W";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_wide_F";
+					};
+					class Medium: Wide
+					{
+						initFov=0.093000002;
+						minFov=0.093000002;
+						maxFov=0.093000002;
+						opticsDisplayName="M";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_medium_F";
+					};
+					class Narrow: Wide
+					{
+						initFov=0.028999999;
+						minFov=0.028999999;
+						maxFov=0.028999999;
+						opticsDisplayName="N";
+						gunnerOpticsModel="\A3\Weapons_F_Beta\Reticle\Heli_Attack_01_Optics_Gunner_narrow_F";
+					};
+				};
+				class OpticsOut
+				{
+					class Monocular
+					{
+						visionMode[]=
+						{
+							"Normal",
+							"NVG"
+						};
+						gunnerOpticsEffect[]={};
+						initAngleX=-10;
+						minAngleX=-30;
+						maxAngleX=30;
+						initAngleY=0;
+						minAngleY=-100;
+						maxAngleY=100;
+						minFov=0.25;
+						maxFov=1.25;
+						initFov=0.75;
+						gunnerOpticsModel="";
+					};
+				};
+				gunnerOpticsEffect[]=
+				{
+					"TankCommanderOptics1",
+					"BWTV"
+				};
+				primaryObserver=0;
+				primaryGunner=1;
+				animationSourceBody="mainTurret";
+				body="mainTurret";
+				gun="mainGun";
+				animationSourceGun="mainGun";
+				primary=1;
+				usePip=1;
+				turretFollowFreeLook=0;
+				gunnerCompartments="Compartment1";
+				gunnerLeftHandAnimName="";
+				gunnerRightHandAnimName="";
+				proxyindex=1;
+				isCopilot=1;
+				gunnerName="Co-Pilot";
+				showHMD=1;
+				castCargoShadow=0;
+				viewCargoShadow=0;
+				castDriverShadow=0;
+				viewDriverShadow=0;
+				CanEject=0;
+				hideWeaponsGunner=1;
+				memoryPointsGetInGunner="pos_gunner";
+				memoryPointsGetInGunnerDir="pos_gunner_dir";
+				memoryPointGunnerOutOptics="gunnerviewout";
+				discreteDistanceInitIndex=5;
+				gunnerAction="Driver_mid01";
+				gunnerInAction="Driver_mid01";
+				gunnerGetInAction="GetInLow";
+				gunnerGetOutAction="GetOutLow";
+				gunnerUsesPilotView=0;
+				commanding=-1;
+				startEngine=0;
+				stabilizedInAxes=3;
+				showAllTargets=4;
+				memoryPointLRocket="RocketL";
+				memoryPointRRocket="RocketR";
+				memoryPointLMissile="RocketL";
+				memoryPointRMissile="RocketR";
+				selectionFireAnim="zasleh";
+				weapons[]=
+				{
+					MACRO_NEW_WEAPON(LE_30mm)
+				};
+				magazines[]=
+				{
+					MACRO_NEW_MAG(LE_30mm,600),
+					MACRO_NEW_MAG(LE_30mm,600),
+					MACRO_NEW_MAG(LE_30mm,600)
+				};
+				outGunnerMayFire=1;
+				castGunnerShadow=0;
+				viewGunnerShadow=0;
+				gunnerOpticsModel="";
+				gunnerForceOptics=0;
+				turretInfoType="RscOptics_Heli_Attack_01_gunner";
+				soundServo[]=
+				{
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner",
+					0.31622776,
+					1,
+					30
+				};
+				soundServoVertical[]=
+				{
+					"A3\Sounds_F\vehicles\armor\APC\noises\servo_APC_gunner_vertical",
+					0.31622776,
+					1,
+					30
+				};
+				minElev=-30;
+				initElev=0;
+				maxElev=30;
+				minTurn=-60;
+				initTurn=0;
+				maxTurn=60;
+				minCamElev=-90;
+				maxCamElev=90;
+				elevationMode=0;
+				memoryPointGunnerOptics="gunnerview";
 			};
-
-			class DC15S_Weps_332nd
+			class cargoTurret_pos7 : cargoTurret_pos7
 			{
-				weapon = "332nd_aux_weapon_DC_15s";
-				count = 10;
+
 			};
-
-			class DC15C_Weps_332nd
+			class cargoTurret_pos8 : cargoTurret_pos8
 			{
-				weapon = "332nd_aux_weapon_DC_15c";
-				count = 10;
+
 			};
-
-			class DP23_Weps_332nd
+			class cargoTurret_pos9 : cargoTurret_pos9
 			{
-				weapon = "332nd_aux_weapon_DP_23";
-				count = 10;
+
 			};
-
-			class DW32S_Weps_332nd
+			class cargotTurret_pos10 : cargotTurret_pos10
 			{
-				weapon = "332nd_aux_weapon_DW_32S";
-				count = 10;
+
 			};
-
-			class Valken38x_Weps_332nd
+			class cargoTurret_pos11 : cargoTurret_pos11
 			{
-				weapon = "332nd_aux_weapon_Valken38x";
-				count = 10;
+
 			};
-
-			class Z6_Weps_332nd
+			class cargoTurret_pos12 : cargoTurret_pos12
 			{
-				weapon = "332nd_aux_weapon_Z6";
-				count = 10;
+
 			};
-
-			class DC15B_Weps_332nd
+			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
 			{
-				weapon = "332nd_aux_weapon_DC_15b";
-				count = 10;
+
 			};
-
-			class RPS1_Weps_332nd
+			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
 			{
-				weapon = "332nd_aux_weapon_RPS_1";
-				count = 5;
+
+			};
+			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
+			{
+
+			};
+			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
+			{
+
 			};
 		};
+        class TransportItems
+        {
 
-		class TransportMagazines
-		{
-			class DC15A_low_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
-				count = 300;
-			};
+        };
 
-			class DC15A_medium_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
-				count = 300;
-			};
+        class TransportWeapons
+        {
+   
+        };
 
-			class DC15A_High_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_High_x10";
-				count = 50;
-			};
-
-			class 332_Stun_332nd
-			{
-				magazine = "332nd_aux_magazine_Stun_x10";
-				count = 100;
-			};
-
-			class DC15A_UGLAP_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
-				count = 50;
-			};
-
-			class DC15A_UGLHE_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
-				count = 50;
-			};
-
-			class DC15s_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
-				count = 300;
-			};
-
-			class DC15c_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
-				count = 300;
-			};
-
-			class DC15b_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
-				count = 200;
-			};
-
-			class DC17_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_17_x15";
-				count = 50;
-			};
-
-			class SA35_332nd
-			{
-				magazine = "332nd_aux_magazine_35sa_low_x30";
-				count = 50;
-			};
-
-			class DC15L_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15L_x125";
-				count = 100;
-			};
-
-			class DC15L_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15L_T_x125";
-				count = 100;
-			};
-
-			class DP_23_332nd
-			{
-				magazine = "332nd_aux_magazine_DP23_x12";
-				count = 100;
-			};
-
-			class DP_23Wide_332nd
-			{
-				magazine = "332nd_aux_magazine_DP23_x12Wide";
-				count = 100;
-			};
-
-			class DW_32_HIGH_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_High_x5";
-				count = 50;
-			};
-
-			class DW_32_HIGH_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_High_T_x5";
-				count = 50;
-			};
-
-			class DW_32_CONCMED_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_Med_x20";
-				count = 100;
-			};
-
-			class DW_32_CONCMED_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
-				count = 100;
-			};
-
-			class Valken_38x_REFMED_332nd
-			{
-				magazine = "332nd_aux_magazine_Valken38x_x15";
-				count = 100;
-			};
-
-			class Valken_38x_REFMED_T_332nd
-			{
-				magazine = "332nd_aux_magazine_Valken38x_T_x15";
-				count = 100;
-			};
-
-			class IQA11_high_T_332nd
-			{
-				magazine = "332nd_aux_magazine_IQA_11_T_x8";
-				count = 100;
-			};
-
-			class IQA11_high_332nd
-			{
-				magazine = "332nd_aux_magazine_IQA_11_x8";
-				count = 100;
-			};
-
-			class Westar_m5_40rnd
-			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
-				count = 300;
-			};
-
-			class Z6_332nd
-			{
-				magazine = "332nd_aux_magazine_Z6_x200";
-				count = 200;
-			};
-
-			class Z6_ALT_332nd
-			{
-				magazine = "332nd_aux_magazine_Z6_x125";
-				count = 200;
-			};
-
-			class Flash_332nd
-			{
-				magazine = "332nd_aux_magazine_332_FLASH_x1";
-				count = 30;
-			};
-
-			class ATCharge_332nd
-			{
-				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
-				count = 30;
-			};
-
-			class HEDPImpact_332nd
-			{
-				magazine = "332nd_aux_magazine_332_HEDP_x1";
-				count = 30;
-			};
-
-			class SquadShield_332nd
-			{
-				magazine = "332nd_aux_magazine_332_SquadShield_x1";
-				count = 5;
-			};
-
-			class ThermalDet_332nd
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 30;
-			};
-
-			class PLXAA_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
-				count = 10;
-			};
-
-			class PLXAT_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
-				count = 10;
-			};
-
-			class PLXHE_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
-				count = 10;
-			};
-
-			class RPS6AT_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-				count = 20;
-			};
-
-			class RPS6AA_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-				count = 20;
-			};
-
-			class RPS4AT_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS4_AT_x1";
-				count = 20;
-			};
-
-			class RPS4HE_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS4_HE_x1";
-				count = 20;
-			};
-
-			class DC15xATR_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x3";
-				count = 20;
-			};
-		};
+        class TransportMagazines
+        {
+            
+        };
 
 		class EventHandlers
-		{
-			init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
-		};
-
+        {
+		    //init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
+            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory";
+        };
 	};
 
-	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel) : MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_Rebel_base)
-	{
-		scope = 2;
-		forceInGarage = 1;
-		displayName = "Stolen LAAT Mk1";
+    class MACRO_NEW_VEHICLE(air,LAAT,Rebel_mk1_332nd) :	MACRO_NEW_VEHICLE(air,LAAT,Rebel_mk1_332nd_base)
+    {
+        scope = 2;
+        forceInGarage = 1;
+        displayName = "Stolen LAAT";
+        armor = 70 * 0.5;
+        maximumLoad = 10000;
 		side = 2;
-		armor = 80 * 0.2;
-		maximumLoad = 10000;
 
-		class TransportItems
-		{
-
-			class BactaSprayx25_332nd
-			{
-				name = "332nd_aux_medical_BactaSpray_x25";
-				count = 4;
-			};
-
-			class PlastiBandagex25_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage_x25";
-				count = 4;
-			};
-
-			class MedPatchx25_332nd
-			{
-				name = "332nd_aux_medical_MedPatch_x25";
-				count = 4;
-			};
-
-			class BactaSprayx10_332nd
-			{
-				name = "332nd_aux_medical_BactaSpray_x10";
-				count = 10;
-			};
-
-			class PlastiBandagex10_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage_x10";
-				count = 10;
-			};
-
-			class MedPatchx10_332nd
-			{
-				name = "332nd_aux_medical_MedPatch_x10";
-				count = 10;
-			};
-
-			class BactaSprayx5_332nd
-			{
-				name = "332nd_aux_medical_BactaSpray_x5";
-				count = 10;
-			};
-
-			class PlastiBandagex5_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage_x5";
-				count = 10;
-			};
-
-			class MedPatchx5_332nd
-			{
-				name = "332nd_aux_medical_MedPatch_x5";
-				count = 10;
-			};
-
-			class MediKit_332nd
-			{
-				name = "332nd_aux_medical_MediKit";
-				count = 10;
-			};
-
-			class BactaSpray_332nd
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 50;
-			};
-
-			class PlastiBandage_332nd
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 50;
-			};
-
-			class MedPatch_332nd
-			{
-				name = "332nd_aux_medical_MedPatch";
-				count = 50;
-			};
-
-			class Painkillers_332nd
-			{
-				name = "332nd_aux_medical_PainKiller";
-				count = 40;
-			};
-
-			class Adrenaline_332nd
-			{
-				name = "332nd_aux_medical_Adrenaline";
-				count = 40;
-			};
-
-			class Blood_332nd
-			{
-				name = "332nd_aux_medical_Blood";
-				count = 75;
-			};
-
-			class PressureCuff_332nd
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 30;
-			};
-		};
-
-		class TransportWeapons
-		{
-			class DC15A_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DC_15a";
-				count = 10;
-			};
-
-			class DC15S_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DC_15s";
-				count = 10;
-			};
-
-			class DC15C_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DC_15c";
-				count = 10;
-			};
-
-			class DP23_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DP_23";
-				count = 10;
-			};
-
-			class DW32S_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DW_32S";
-				count = 10;
-			};
-
-			class Valken38x_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_Valken38x";
-				count = 10;
-			};
-
-			class Z6_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_Z6";
-				count = 10;
-			};
-
-			class DC15B_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_DC_15b";
-				count = 10;
-			};
-
-			class RPS1_Weps_332nd
-			{
-				weapon = "332nd_aux_weapon_RPS_1";
-				count = 5;
-			};
-		};
-
-		class TransportMagazines
-		{
-			class DC15A_low_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
-				count = 300;
-			};
-
-			class DC15A_medium_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
-				count = 300;
-			};
-
-			class DC15A_High_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_High_x10";
-				count = 50;
-			};
-
-			class 332_Stun_332nd
-			{
-				magazine = "332nd_aux_magazine_Stun_x10";
-				count = 100;
-			};
-
-			class DC15A_UGLAP_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
-				count = 50;
-			};
-
-			class DC15A_UGLHE_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
-				count = 50;
-			};
-
-			class DC15s_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
-				count = 300;
-			};
-
-			class DC15c_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
-				count = 300;
-			};
-
-			class DC15b_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
-				count = 200;
-			};
-
-			class DC17_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_17_x15";
-				count = 50;
-			};
-
-			class SA35_332nd
-			{
-				magazine = "332nd_aux_magazine_35sa_low_x30";
-				count = 50;
-			};
-
-			class DC15L_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15L_x125";
-				count = 100;
-			};
-
-			class DC15L_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15L_T_x125";
-				count = 100;
-			};
-
-			class DP_23_332nd
-			{
-				magazine = "332nd_aux_magazine_DP23_x12";
-				count = 100;
-			};
-
-			class DP_23Wide_332nd
-			{
-				magazine = "332nd_aux_magazine_DP23_x12Wide";
-				count = 100;
-			};
-
-			class DW_32_HIGH_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_High_x5";
-				count = 50;
-			};
-
-			class DW_32_HIGH_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_High_T_x5";
-				count = 50;
-			};
-
-			class DW_32_CONCMED_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_Med_x20";
-				count = 100;
-			};
-
-			class DW_32_CONCMED_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
-				count = 100;
-			};
-
-			class Valken_38x_REFMED_332nd
-			{
-				magazine = "332nd_aux_magazine_Valken38x_x15";
-				count = 100;
-			};
-
-			class Valken_38x_REFMED_T_332nd
-			{
-				magazine = "332nd_aux_magazine_Valken38x_T_x15";
-				count = 100;
-			};
-
-			class Westar_m5_40rnd
-			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
-				count = 300;
-			};
-
-			class Z6_332nd
-			{
-				magazine = "332nd_aux_magazine_Z6_x200";
-				count = 200;
-			};
-
-			class Z6_ALT_332nd
-			{
-				magazine = "332nd_aux_magazine_Z6_x125";
-				count = 200;
-			};
-
-			class Flash_332nd
-			{
-				magazine = "332nd_aux_magazine_332_FLASH_x1";
-				count = 30;
-			};
-
-			class ATCharge_332nd
-			{
-				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
-				count = 30;
-			};
-
-			class HEDPImpact_332nd
-			{
-				magazine = "332nd_aux_magazine_332_HEDP_x1";
-				count = 30;
-			};
-
-			class SquadShield_332nd
-			{
-				magazine = "332nd_aux_magazine_332_SquadShield_x1";
-				count = 5;
-			};
-
-			class ThermalDet_332nd
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 30;
-			};
-
-			class PLXAA_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
-				count = 10;
-			};
-
-			class PLXAT_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
-				count = 10;
-			};
-
-			class PLXHE_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
-				count = 10;
-			};
-
-			class RPS6AT_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-				count = 20;
-			};
-
-			class RPS6AA_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-				count = 20;
-			};
-
-			class RPS4AT_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS4_AT_x1";
-				count = 20;
-			};
-
-			class RPS4HE_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS4_HE_x1";
-				count = 20;
-			};
-
-			class DC15xATR_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x3";
-				count = 20;
-			};
-		};
-
-
-		class HitPoints : HitPoints
-		{
-			class HitHull : HitHull
-			{
-				armor = 999;
-				convexComponent = "hull_hit";
-				depends = "Total";
-				explosionShielding = 1;
-				material = 51;
-				name = "hull_hit";
-				passThrough = 1;
-				visual = "zbytek";
-				radius = 0.01;
-			};
-			class HitFuel : HitFuel
-			{
-				convexcomponent = "fuel_hit";
-				hitpoint = "fuel_hit";
-				name = "fuel_hit";
-				explosionShielding = 2;
-				radius = 0.1;
-				visual = "";
-				passthrough = 0.1;
-				minimalhit = 0.1;
-				material = -1;
-				armor = 0.6 * 5;
-			};
-			class HitEngine : HitEngine
-			{
-				armor = 1;
-				convexComponent = "engine_hit";
-				explosionShielding = 2;
-				material = 51;
-				name = "engine_hit";
-				hitpoint = "engine_hit";
-				passThrough = 1;
-				visual = "";
-				radius = 0.2 * 5;
-				minimalHit = 0.6;
-			};
-			class HitEngine_1 : HitEngine_1
-			{
-				armor = 1;
-				passThrough = 1;
-				explosionShielding = 2;
-				convexComponent = "engine_hit_1";
-				name = "engine_hit_1";
-				hitpoint = "engine_hit_1";
-				minimalHit = 0.6;
-			};
-			class HitEngine_2 : HitEngine_2
-			{
-				armor = 1;
-				passThrough = 1;
-				explosionShielding = 2;
-				convexComponent = "engine_hit_2";
-				name = "engine_hit_2";
-				hitpoint = "engine_hit_2";
-				minimalHit = 0.6;
-			};
-			class HitHRotor : HitHRotor
-			{
-				armor = 3 * 5;
-				convexComponent = "main_rotor_hit";
-				explosionShielding = 2.5;
-				material = 51;
-				name = "main_rotor_hit";
-				passThrough = 0.1;
-				visual = "";
-				radius = 0.01;
-			};
-			class HitVRotor : HitVRotor
-			{
-				armor = 3 * 5;
-				convexComponent = "tail_rotor_hit";
-				explosionShielding = 6;
-				material = 51;
-				name = "tail_rotor_hit";
-				passThrough = 0.3;
-				visual = "";
-				radius = 0.01;
-			};
-			class HitAvionics : HitAvionics
-			{
-				armor = 1 * 5;
-				convexComponent = "avionics_hit";
-				explosionShielding = 2;
-				material = 51;
-				name = "avionics_hit";
-				passThrough = 1;
-				visual = "";
-				radius = 0.5;
-				minimalHit = 0.6;
-			};
-		};
-
-		class TextureSources
-		{
-			class Standard
-			{
-				displayname = "332nd Standard";
-				author = "Halligan";
-				textures[] =
-				{
-					  MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-					  MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					 "swlb_a_vehicle\laat\data\missiles_co.paa",
-					   MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-			class Noseart_Verus
-			{
-				displayName = "332nd Verus Noseart";
-				author = "Halligan";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
+        class TransportItems
+        {
+
+        };
+
+        class TransportWeapons
+        {
+        };
+
+        class TransportMagazines
+        {
+        };
+
+        class HitPoints : HitPoints
+        {
+            class HitHull : HitHull
+            {
+                armor = 999;
+                convexComponent = "hull_hit";
+                depends = "Total";
+                explosionShielding = 1;
+                material = 51;
+                name = "hull_hit";
+                passThrough = 1;
+                visual = "zbytek";
+                radius = 0.01;
+            };
+            class HitFuel : HitFuel
+            {
+                convexcomponent = "fuel_hit";
+                hitpoint = "fuel_hit";
+                name = "fuel_hit";
+                explosionShielding = 2;
+                radius = 0.1;
+                visual = "";
+                passthrough = 0.1;
+                minimalhit = 0.1;
+                material = -1;
+                armor = 0.6 * 5;
+            };
+            class HitEngine : HitEngine
+            {
+                armor = 1;
+                convexComponent = "engine_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "engine_hit";
+                hitpoint = "engine_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.2 * 5;
+                minimalHit = 0.6;
+            };
+            class HitEngine_1 : HitEngine_1
+            {
+                armor = 1;
+                passThrough = 1;
+                explosionShielding = 2;
+                convexComponent = "engine_hit_1";
+                name = "engine_hit_1";
+                hitpoint = "engine_hit_1";
+                minimalHit = 0.6;
+            };
+            class HitEngine_2 : HitEngine_2
+            {
+                armor = 1;
+                passThrough = 1;
+                explosionShielding = 2;
+                convexComponent = "engine_hit_2";
+                name = "engine_hit_2";
+                hitpoint = "engine_hit_2";
+                minimalHit = 0.6;
+            };
+            class HitHRotor : HitHRotor
+            {
+                armor = 3 * 5;
+                convexComponent = "main_rotor_hit";
+                explosionShielding = 2.5;
+                material = 51;
+                name = "main_rotor_hit";
+                passThrough = 0.1;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitVRotor : HitVRotor
+            {
+                armor = 3 * 5;
+                convexComponent = "tail_rotor_hit";
+                explosionShielding = 6;
+                material = 51;
+                name = "tail_rotor_hit";
+                passThrough = 0.3;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitAvionics : HitAvionics
+            {
+                armor = 1 * 5;
+                convexComponent = "avionics_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "avionics_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.5;
+                minimalHit = 0.6;
+            };
+        };
+
+        class TextureSources
+        {
+            class Standard
+            {
+                displayname = "332nd Standard";
+                author = "Halligan";
+                textures[] =
+                {
+					MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
 					MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					"swlb_a_vehicle\laat\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-			class Noseart_Chopper
-			{
-				displayName = "332nd Chopper Noseart";
-				author = "Halligan";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"swlb_a_vehicle\laat\data\body2_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"swlb_a_vehicle\laat\data\door3_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					"swlb_a_vehicle\laat\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-			class Ahegao
-			{
-				displayName = "Transport Gunship (Ahegao)";
-				author = MACRO_AUTHOR;
-				factions[] = { "EdCat_332nd" };
-				textures[] = {
-					MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
-					MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
-					MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
-					"swlb_a_vehicle\laat\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"swlb_a_vehicle\laat\data\glass_ca.paa"
-				};
-			};
-		};
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+            class Noseart_Verus
+            {
+                displayName = "332nd Verus Noseart";
+                author = "Halligan";
+                textures[] =
+                {
+                    MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+            class Noseart_Chopper
+            {
+                displayName = "332nd Chopper Noseart";
+                author = "Halligan";
+                textures[] =
+                {
+                    MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+            class Ahegao
+            {
+                displayName = "Transport Gunship (Ahegao)";
+                author = MACRO_AUTHOR;
+                factions[] = { "EdCat_332nd" };
+                textures[] = {
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+            };
+        };
 	};
 
+   };
 };

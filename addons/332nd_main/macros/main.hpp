@@ -533,6 +533,22 @@
 
 // ---- END REBEL ----
 
+// ---- START REBEL HUMAN ----
+
+#define MACRO_NEW_REBEL_HUMAN_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Human,classname): MACRO_NEW_UNIFORM(rebel_Human,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Human,uniformClassname);\
+		}; \
+	};
+
+
+// ----- END REBEL HUMAN -----
+
 
 	//units for uniforms
 	#define MACRO_NEW_RECRUIT_UNIT(classname,displayname,uniformClassname)\
@@ -1084,6 +1100,18 @@
 
 
 	// ---- END REBEL ----
+
+#define MACRO_NEW_REBEL_HUMAN_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Human,classname): MACRO_NEW_UNIT(rebel_Human,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Human,uniformClassname);\
+		}
+
+
+	// ---- END REBEL HUMAN ----
 
 	// ---- Vests ---- 
 

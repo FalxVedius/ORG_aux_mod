@@ -25,6 +25,7 @@ class CfgPatches
 			MACRO_NEW_UNIT(rebel_Spotter,332nd_indep_rebel_Spotter),
 			MACRO_NEW_UNIT(rebel_Shocker,332nd_indep_rebel_Shocker),
 			MACRO_NEW_UNIT(rebel_Breacher,332nd_indep_rebel_Breacher),
+			MACRO_NEW_UNIT(rebel_Human,332nd_indep_rebel_Human),
         };
         weapons[] = {
 			MACRO_NEW_UNIFORM(rebel,332nd_indep_rebel),
@@ -38,14 +39,17 @@ class CfgPatches
 			MACRO_NEW_UNIFORM(rebel_Spotter,332nd_indep_rebel_Spotter),
 			MACRO_NEW_UNIFORM(rebel_Shocker,332nd_indep_rebel_Shocker),
 			MACRO_NEW_UNIFORM(rebel_Breacher,332nd_indep_rebel_Breacher),
+			MACRO_NEW_UNIFORM(rebel_Human,332nd_indep_rebel_Human),
         };
     };
 };
 
 class CfgWeapons
 {
+	class C_Man_casual_1_F;
 	class JLTS_DroidB1;
 	class I_rebel_human;
+	class I_rebel_human_base;
 	//Rebel
 	class MACRO_NEW_UNIFORM(rebel,base) : JLTS_DroidB1 //leave droid skin for now find where civil skins are
 	{
@@ -101,6 +105,13 @@ class CfgWeapons
 	{
 		class ItemInfo;
 	};
+
+	//Rebel Human
+	class MACRO_NEW_UNIFORM(rebel_Human,base) : I_rebel_human_base
+	{
+		class ItemInfo;
+	};
+
 	//Rebel
 	MACRO_NEW_REBEL_UNIFORM_ITEM(332nd_indep_rebel,Rebel,332nd_indep_rebel)//Class name, shown name, unit name
 	MACRO_NEW_REBEL_AT_UNIFORM_ITEM(332nd_indep_rebel_AT,AT Rebel,332nd_indep_rebel_AT)
@@ -113,6 +124,7 @@ class CfgWeapons
 	MACRO_NEW_REBEL_SPOTTER_UNIFORM_ITEM(332nd_indep_rebel_Spotter,Spotter Rebel,332nd_indep_rebel_Spotter)
 	MACRO_NEW_REBEL_SHOCKER_UNIFORM_ITEM(332nd_indep_rebel_Shocker,Shocker Rebel,332nd_indep_rebel_Shocker)
 	MACRO_NEW_REBEL_BREACHER_UNIFORM_ITEM(332nd_indep_rebel_Breacher,Breacher Rebel,332nd_indep_rebel_Breacher)
+	MACRO_NEW_REBEL_HUMAN_UNIFORM_ITEM(332nd_indep_rebel_Human,Human Rebel,332nd_indep_rebel_Human)
 
 
 };
@@ -130,6 +142,8 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(rebel_Spotter,base);
 	class MACRO_NEW_UNIT(rebel_Shocker,base);
 	class MACRO_NEW_UNIT(rebel_Breacher,base);
+	//Rebel Human
+	class MACRO_NEW_UNIT(rebel_Human,base);
 
 		//Rebels
 		MACRO_NEW_REBEL_UNIT(332nd_indep_rebel,Rebel,332nd_indep_rebel)//Added
@@ -143,6 +157,9 @@ class CfgVehicles
 		MACRO_NEW_REBEL_SPOTTER_UNIT(332nd_indep_rebel_Spotter,Spotter Rebel,332nd_indep_rebel_Spotter)
 		MACRO_NEW_REBEL_SHOCKER_UNIT(332nd_indep_rebel_Shocker,Shocker Rebel,332nd_indep_rebel_Shocker)
 		MACRO_NEW_REBEL_BREACHER_UNIT(332nd_indep_rebel_Breacher,Breacher Rebel,332nd_indep_rebel_Breacher)
+
+		//Rebel Human
+		MACRO_NEW_REBEL_HUMAN_UNIT(332nd_indep_rebel_Human,Human Rebel,332nd_indep_rebel_Human)
 };
 
 class CfgGroups
