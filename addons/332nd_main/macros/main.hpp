@@ -546,7 +546,60 @@
 		}; \
 	};
 
+#define MACRO_NEW_REBEL_HUMAN_AT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Human_AT,classname): MACRO_NEW_UNIFORM(rebel_Human_AT,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_AT,uniformClassname);\
+		}; \
+	};
 
+#define MACRO_NEW_REBEL_HUMAN_SNIPER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Human_Sniper,classname): MACRO_NEW_UNIFORM(rebel_Human_Sniper,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Sniper,uniformClassname);\
+		}; \
+	};
+
+#define MACRO_NEW_REBEL_HUMAN_MEDIC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Human_Medic,classname): MACRO_NEW_UNIFORM(rebel_Human_Medic,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Medic,uniformClassname);\
+		}; \
+	};
+
+#define MACRO_NEW_REBEL_HUMAN_HEAVY_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Human_Heavy,classname): MACRO_NEW_UNIFORM(rebel_Human_Heavy,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Heavy,uniformClassname);\
+		}; \
+	};
+
+#define MACRO_NEW_REBEL_HUMAN_SPOTTER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Human_Spotter,classname): MACRO_NEW_UNIFORM(rebel_Human_Spotter,base)\
+	{\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Spotter,uniformClassname);\
+		}; \
+	};
 // ----- END REBEL HUMAN -----
 
 
@@ -1110,7 +1163,50 @@
 			uniformClass = MACRO_NEW_UNIFORM(rebel_Human,uniformClassname);\
 		}
 
+#define MACRO_NEW_REBEL_HUMAN_AT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Human_AT,classname): MACRO_NEW_UNIT(rebel_Human_AT,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Human_AT,uniformClassname);\
+		}
 
+#define MACRO_NEW_REBEL_HUMAN_SNIPER_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Human_Sniper,classname): MACRO_NEW_UNIT(rebel_Human_Sniper,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Sniper,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_HUMAN_MEDIC_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Human_Medic,classname): MACRO_NEW_UNIT(rebel_Human_Medic,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Medic,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_HUMAN_HEAVY_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Human_Heavy,classname): MACRO_NEW_UNIT(rebel_Human_Heavy,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Heavy,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_HUMAN_SPOTTER_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Human_Spotter,classname): MACRO_NEW_UNIT(rebel_Human_Spotter,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Spotter,uniformClassname);\
+		}
 	// ---- END REBEL HUMAN ----
 
 	// ---- Vests ---- 
