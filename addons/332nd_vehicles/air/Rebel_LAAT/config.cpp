@@ -1,5 +1,5 @@
 #include "../../../332nd_main/macros/main.hpp" // my config macro lib
-#define MACRO_LAAT_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\air\LAAT
+#define MACRO_LAAT_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\air\Rebel_LAAT
 class CfgPatches
 {
     class MACRO_PATCH_NAME(laat)
@@ -350,11 +350,11 @@ class CfgVehicles
         };
 
         hiddenselectionstextures[] = {
-            MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
-            MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
-            MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+            MACRO_LAAT_TEXTURES\Rebel_Base\Rebel_Body\rebel_body1_test.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+            MACRO_LAAT_TEXTURES\Rebel_Base\Rebel_Doors\Rebel_Doors1\rebel_door1_test.paa,MACRO_LAAT_TEXTURES\Rebel_Base\Rebel_Doors\Rebel_Doors2\rebel_door2_test.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
+            MACRO_LAAT_TEXTURES\Rebel_Base\Rebel_Wings\rebel_wings_test.paa,
             "lsd_vehicles_heli\laati\data\missiles_co.paa",
-            MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+            MACRO_LAAT_TEXTURES\Rebel_Base\Rebel_Cockpit\Rebel_cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
         };
 
         crew = MACRO_NEW_UNIT(rebel, 332nd_indep_rebel);
