@@ -1,4 +1,5 @@
 #include "../../../332nd_main/macros/main.hpp" // my config macro lib
+#define MACRO_VULTURE_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\air\Rebel_Vulture
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(Vulture)
@@ -92,6 +93,14 @@ class CfgVehicles
 			  "120Rnd_CMFlare_Chaff_Magazine",
 			  "120Rnd_CMFlare_Chaff_Magazine",
 			  "120Rnd_CMFlare_Chaff_Magazine",
+		  };
+
+		  hiddenselections[] = {
+		   "camo1"
+		  };
+
+		  hiddenselectionstextures[] = {
+			 MACRO_VULTURE_TEXTURES\Base\Vulture_Droid_Attempt_1.paa,"3as_vulture\data\vulturedroid_color.paa"
 		  };
 		  class EjectionSystem
 		{
