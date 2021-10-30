@@ -180,6 +180,31 @@ class CfgWeapons
 		};
 	}
 
+	class MACRO_NEW_HELMET(arfcustom,base) : CloneARFHelmet_Base
+	{
+		scopeArsenal = 0;
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[332nd] ARF Custom Helmet ('base')";
+		subItems[] = { "Integrated_NVG_TI_1_F" };
+
+		ace_hearing_lowerVolume = 0.60000002;
+		ace_hearing_protection = 0.85000002;
+
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
+	}
+
 	class JLTS_CloneHelmetBARC;
 
 	class CloneBARCHelmet_Base :JLTS_CloneHelmetBARC

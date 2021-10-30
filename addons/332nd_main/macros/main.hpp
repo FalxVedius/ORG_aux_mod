@@ -100,6 +100,14 @@
 			displayName = [332nd] Recon Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arf\##texture};\
 		};
+		#define MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_HELMET(arfcustom,classname): MACRO_NEW_HELMET(arfcustom,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 0;\
+			displayName = [332nd] Recon Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arf\##texture};\
+		};
 		#define MACRO_NEW_BARC_HELMET_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_HELMET(barc,classname): MACRO_NEW_HELMET(barc,base)\
 		{\
