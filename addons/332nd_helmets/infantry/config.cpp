@@ -18,7 +18,6 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,332nd_Sergeant),
 			MACRO_NEW_HELMET(infantry,332nd_trooper_original),
 			MACRO_NEW_HELMET(infantry,george),
-            MACRO_NEW_HELMET(infantry,Halligan),
 			MACRO_NEW_HELMET(infantry,Riddle),
 			MACRO_NEW_HELMET(infantry,Hoggy),
 			MACRO_NEW_HELMET(infantry,Cross),
@@ -37,6 +36,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Dakka),
 			MACRO_NEW_HELMET(infantry,King),
 			MACRO_NEW_HELMET(infantry,Spacy),
+			MACRO_NEW_HELMET(infantry,Church),
+			MACRO_NEW_HELMET(infantry,Cutter),
         };
 		weapons[] = {};
 	};
@@ -54,7 +55,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(332nd_sergeant,Sergeant,332nd Sergeant Helmet.paa)
 	MACRO_NEW_INF_HELMET_ITEM(332nd_trooper_original,Original,332nd_Original_Helmet.paa)
 	MACRO_NEW_INF_HELMET_ITEM(george,George,George.paa)
-    MACRO_NEW_INF_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Riddle,Riddle,Riddle.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Hoggy,Hoggy,Hoggy.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Poseidon,Poseidon,Poseidon_V1.paa)
@@ -72,4 +72,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Dakka,Dakka,Dakka.paa)
 	MACRO_NEW_INF_HELMET_ITEM(King,King,King.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Spacy,Spacy,Spacy.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Church,Church,Church.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 };

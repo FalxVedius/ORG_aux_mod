@@ -105,10 +105,9 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "332_B_Pylon",
 							  "332_C_Pylon"
 						  };
-						  attachment = MACRO_NEW_MAG(Pylon_ProtonBomb,1)
+						  attachment = "332nd_aux_magazine_Pylon_AA_Med_x3";
 						  priority = 10;
 						  maxweight = 300;
 						  UIposition[] = { 0.5,0.25 };
