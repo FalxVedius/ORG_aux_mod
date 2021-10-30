@@ -2,6 +2,76 @@ class JLTS_CloneNVG;
 class JLTS_CloneNVG_black;
 class JLTS_CloneNVGCC;
 class JLTS_NVG_droid_chip_1;
+class JLTS_CloneNVGRange;
+class JLTS_CloneNVGRange_black;
+
+class MACRO_NEW_NVG(Leadership_Rangefinder) :JLTS_CloneNVGRange
+{
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Leadership Rangefinder (White)";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG","Ti" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(Leadership_Rangefinder_Black) :JLTS_CloneNVGRange_black
+{
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Leadership Rangefinder (Black)";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG","Ti" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(Rangefinder) :JLTS_CloneNVGRange
+{
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Rangefinder (White)";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(Rangefinder_Black) :JLTS_CloneNVGRange_black
+{
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Rangefinder (Black)";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
 
 class MACRO_NEW_NVG(Specialist_Visor):JLTS_CloneNVG
 {

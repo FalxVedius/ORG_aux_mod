@@ -2024,6 +2024,8 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(arfbase,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
+		camouflage = 0.6;
+
 		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
@@ -2261,6 +2263,8 @@ class CfgVehicles
 
 		uniformClass = MACRO_NEW_UNIFORM(arfdes,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
+
+		camouflage = 0.6;
 
 		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
@@ -2500,6 +2504,8 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(arfjung,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
+		camouflage = 0.6;
+
 		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
@@ -2737,6 +2743,8 @@ class CfgVehicles
 
 		uniformClass = MACRO_NEW_UNIFORM(arfsnow,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
+
+		camouflage = 0.6;
 
 		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
@@ -2976,6 +2984,8 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(arfurb,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
+		camouflage = 0.6;
+
 		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
@@ -3213,6 +3223,8 @@ class CfgVehicles
 
 		uniformClass = MACRO_NEW_UNIFORM(arfwood,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
+
+		camouflage = 0.6;
 
 		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
