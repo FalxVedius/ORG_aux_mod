@@ -950,6 +950,12 @@ class CfgSounds
 	};
 	class B1_Death_Sound_20
 	{
+		name = "B1-Death-Sound-20";
+		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-20.ogg", db + 250, 1.0, 125 };
+		titles[] = {};
+	};
+	class B1_Death_Sound_21
+	{
 		name = "B1-Death-Sound-21";
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-21.ogg", db + 250, 1.0, 125 };
 		titles[] = {};

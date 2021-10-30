@@ -12,8 +12,9 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            // helmets
-            //MACRO_NEW_HELMET(infantry,332nd_trooper),
+
+            MACRO_NEW_HELMET(arc,Arc),
+			MACRO_NEW_HELMET(arc,Sazi),
         };
 		weapons[] = {};
 	};
@@ -23,7 +24,8 @@ class CfgWeapons
 {
     // ---- Helmets ----
 
-    class MACRO_NEW_HELMET(infantry,base);
+    class MACRO_NEW_HELMET(arc,base);
 
-    //MACRO_NEW_INF_HELMET_ITEM(332nd_trooper,332nd Trooper,332nd Trooper Helmet.paa)
+	MACRO_NEW_ARC_HELMET_ITEM(Arc,Arc,Arc.paa)
+	MACRO_NEW_ARC_HELMET_ITEM(Sazi,Sazi,Sazi.paa)
 }
