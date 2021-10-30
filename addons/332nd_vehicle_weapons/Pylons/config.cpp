@@ -61,7 +61,7 @@ class CfgAmmo
 		typicalSpeed = 50;
 		thrustTime = 60;
 		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
-	  manualcontrol=0;
+	  manualcontrol=1;
 	  effectsMissile = "332nd_aux_effects_missile_Proton_Purple";
 	  proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
 	caliber=1;
@@ -73,10 +73,11 @@ class CfgAmmo
 	weaponLockSystem = "1 + 2 + 4 + 8 + 16";
 	missileKeepLockedCone = 360;
 	hit=3500;
-	indirectHit = 150;
+	indirectHit = 1000;
 	mass=2;
-	indirectHitRange = 8;
+	indirectHitRange = 10;
 	};
+
 	class Bo_GBU12_LGB;
 	class MACRO_NEW_AMMO(Proton_Bomb): Bo_GBU12_LGB
 	{
@@ -89,8 +90,6 @@ class CfgAmmo
 		};
     effectfly="332nd_aux_effects_purple_tracer_Bomb";
 	effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
-	model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
-	proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
 	maxSpeed = 100;
 		thrust = 50;
 		timeToLive = 60;
@@ -105,6 +104,30 @@ class CfgAmmo
 	indirectHitRange = 15;
 	};
 
+	class MACRO_NEW_AMMO(Plasma_Bomb): Bo_GBU12_LGB
+	{
+	soundFly[]=
+		{
+			"332nd_vehicle_weapons\air\sounds\V1.wss",
+			2,
+			15,
+			1000
+		};
+    effectfly="332nd_aux_effects_purple_tracer_Bomb";
+	effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
+	model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
+	proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
+	//thrust = 50;
+	timeToLive = 60;
+	//typicalSpeed = 50;
+	//thrustTime = 1.5;
+	explosionEffects = "MK82_Explode";
+	weaponLockSystem = "8";
+	missileKeepLockedCone = 360;
+	hit=5000;
+	indirectHit = 3000;
+	indirectHitRange = 30;
+	};
 	
 
     class M_Air_AA;
@@ -118,18 +141,37 @@ class CfgAmmo
 			2000
 		};
     manualcontrol=0;
+	missileLockMaxDistance = 2500;
+	missileLockMinDistance = 300;
+    effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
+	caliber=1;
+	weaponLockSystem = "1 + 2 + 16";
+	missileKeepLockedCone = 180;
+	missileLockCone = 360;
+	hit=600;
+    cmImmunity = 0.8;
+	};
 
-	missileLockMaxDistance = 2000;
+	class MACRO_NEW_AMMO(AA_Low): M_Air_AA
+	{
+	soundFly[]=
+		{
+			"swlw_rework\sounds\launcher\E60R_fly.wss",
+			3,
+			2,
+			2000
+		};
+    manualcontrol=0;
+	missileLockMaxDistance = 1500;
 	missileLockMinDistance = 0;
     effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
 	caliber=1;
 	weaponLockSystem = "1 + 2 + 16";
 	missileKeepLockedCone = 270;
 	missileLockCone = 360;
-	hit=500;
+	hit=150;
     cmImmunity = 0.7;
 	};
-
 };
 	
 
@@ -159,6 +201,19 @@ class CfgMagazines
 		displayNameShort="A2A Concussion Missiles";
 		ammo=MACRO_NEW_AMMO(AA_Med)
 	};
+
+	class PylonRack_12Rnd_missiles;
+    class MACRO_NEW_MAG(Pylon_AA_low,12): PylonRack_3Rnd_LG_scalpel
+	{
+	    hardpoints[]	= {"332_A_Pylon"};
+		displayName="Micro Concussion Missile AA";
+
+		descriptionshort="Air to Air micro Concussion Missile";
+		pylonWeapon = "332nd_aux_weapon_AA_Pylon";
+		displayNameShort="A2A Micro Concussion Missiles";
+		ammo=MACRO_NEW_AMMO(AA_Low)
+	};
+
 	class PylonRack_20Rnd_Rocket_03_HE_F;
 	class MACRO_NEW_MAG(Pylon_Shrieker,20): PylonRack_20Rnd_Rocket_03_HE_F
 	{
@@ -208,6 +263,17 @@ class CfgMagazines
 		initspeed=0;
 		ammo=MACRO_NEW_AMMO(Proton_Bomb)
 	};
+	class MACRO_NEW_MAG(Pylon_PlasmaBomb,1): PylonMissile_1Rnd_BombCluster_03_F
+	{
+	    hardpoints[]= {"332_B_Pylon"};
+		displayName="Plasna Bomb";
+		descriptionshort="Plasma Bomb";
+		pylonWeapon = "332nd_aux_weapon_ProtonBomb_Pylon";
+		displayNameShort="Plasma Bomb";
+		tracersEvery=1;
+		initspeed=0;
+		ammo=MACRO_NEW_AMMO(Plasma_Bomb)
+	};
 };
 
 
@@ -250,6 +316,17 @@ class CfgWeapons
 		lockAcquire = 1;
 		displayName = "AA";
 	};
+	class MACRO_NEW_WEAPON(AALow_Pylon):  missiles_ASRAAM
+	{
+		magazineWell[] = {};
+		weaponLockDelay = 0;
+		magazines[] = {
+			 MACRO_NEW_MAG(Pylon_AA_low,12)
+		};
+		lockAcquire = 1;
+		displayName = "Micro Concussion";
+	};
+
 	class  MACRO_NEW_WEAPON(air_dumb_rocketpod);
 	class MACRO_NEW_WEAPON(RocketPod_Pylon):   MACRO_NEW_WEAPON(air_dumb_rocketpod)
 	{
@@ -265,6 +342,14 @@ class CfgWeapons
 	displayName="Proton Bomb";
 	magazines[] = {
 			 MACRO_NEW_MAG(Pylon_ProtonBomb,1)
+		};
+	};
+
+	class MACRO_NEW_WEAPON(PlasmaBomb_Pylon): weapon_GBU12Launcher
+	{
+	displayName="Plasma Bomb";
+	magazines[] = {
+			 MACRO_NEW_MAG(Pylon_PlasmaBomb,1)
 		};
 	};
 

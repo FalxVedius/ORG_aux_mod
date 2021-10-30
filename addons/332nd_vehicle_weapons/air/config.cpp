@@ -73,12 +73,12 @@ class CfgAmmo
 	};
 	ExplosionEffects = "ATRocketExplosion";
     soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
-	hit=2500;
+	hit=3000;
 	caliber=15;
 	mass=20;
 	tracerScale = 15;
 	indirectHit = 2500;
-	indirectHitRange = 4;
+	indirectHitRange = 5;
 	};
 	
 	class M_Titan_AT_long;
@@ -171,10 +171,25 @@ class CfgAmmo
 	caliber=5;
 	tracersEvery = 1;
 	hit=150;
-	explosionEffects = "ATRocketExplosion";
+	explosionEffects = "ImpactPlasmaExpBlue";
 	indirectHit =25;
 	mass=2;
 	indirectHitRange = 2.5;
+	tracerscale=2;
+	};
+	class MACRO_NEW_AMMO(Ywing_30mm): ls_50mm_laat_he
+	{
+	model="SWLW_main\Effects\laser_blue.p3d";
+	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+	flaresize=4;
+	effectfly="332nd_aux_effects_blue_tracer_AVI";
+	caliber=8;
+	tracersEvery = 1;
+	hit=300;
+	explosionEffects = "ATRocketExplosion";
+	indirectHit =40;
+	mass=2;
+	indirectHitRange =3;
 	tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(Nu_75mm_he): ls_50mm_laat_he
@@ -291,6 +306,16 @@ class CfgMagazines
 		initSpeed = 1100;
 		displayNameShort="30mm Nose";
 		ammo=MACRO_NEW_AMMO(Z95_30mm)
+		tracersEvery = 1;
+		count=1200;
+	};
+	class MACRO_NEW_MAG(Ywing_30mm,1200): 1000Rnd_25mm_shells
+	{
+		displayName="YWing 30mm";
+		descriptionshort="30mm";
+		initSpeed = 800;
+		displayNameShort="30mm Nose";
+		ammo=MACRO_NEW_AMMO(Ywing_30mm)
 		tracersEvery = 1;
 		count=1200;
 	};
@@ -514,7 +539,7 @@ class CfgWeapons
 			textureType="fastAuto";
 			reloadTime=0.02;
 			dispersion=0;
-			Burst=25;
+			Burst=10;
 			minRange=2;
 			minRangeProbab=0.30000001;
 			midRange=300;
@@ -757,7 +782,7 @@ class CfgWeapons
 		class close: manual
 		{
 		    aiDispersionCoefX=2.0
-			aiDispersionCoefX=2.0
+			aiDispersionCoefY=2.0
 			burst=50;
 			aiRateOfFire=0.1;
 			aiRateOfFireDistance=50;
@@ -772,7 +797,7 @@ class CfgWeapons
 		class short: close
 		{
 		    aiDispersionCoefX=2.0
-			aiDispersionCoefX=2.0
+			aiDispersionCoefY=2.0
 			burst=30;
 			aiRateOfFire=0.1;
 			aiRateOfFireDistance=300;
@@ -786,7 +811,7 @@ class CfgWeapons
 		class medium: close
 		{
 		    aiDispersionCoefX=2.0
-			aiDispersionCoefX=2.0
+			aiDispersionCoefY=2.0
 			burst=30;
 			aiRateOfFire=0.1;
 			aiRateOfFireDistance=600;
@@ -814,7 +839,7 @@ class CfgWeapons
 			burst=1;
 			magazineReloadTime=6;
 			autoReload=1;
-			reloadTime=0.10;
+			reloadTime=0.15;
 			dispersion=0.0002;
 			sounds[]=
 			{
@@ -941,6 +966,82 @@ class CfgWeapons
 		{
 			burst=10;
 			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(YWing_30mm): 3as_ARC_Light_Canon
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Ywing_30mm,1200)
+		};
+		modes[] = {"manual"};
+		ballisticsComputer = 4;	
+		displayName = "Z95 30mm cannon";
+		class manual: LowROF
+		{
+			displayname="Full";
+			burst=5;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.04;
+			dispersion=0.0005;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
+					2,
+					0.95,
+					6000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class close: manual
+		{
+			burst=50;
+			aiRateOfFire=0.06;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.06;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.06;
 			aiRateOfFireDistance=600;
 			minRange=200;
 			minRangeProbab=0.050000001;
