@@ -26,7 +26,7 @@ class CfgPatches
 		};
 	};
 };
-class cfgAmmo
+class CfgAmmo
 {
     class ls_ammo_127x108_blue;
 	class MACRO_NEW_AMMO(Refined_high): ls_ammo_127x108_blue
