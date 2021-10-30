@@ -134,14 +134,14 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_PLANE";
 
 		weapons[] = {
-		  MACRO_NEW_WEAPON(ARC_Low),
+		  MACRO_NEW_WEAPON(YWing_30mm),
+		  MACRO_NEW_WEAPON(PlasmaBomb_Pylon),
 		  "CMFlareLauncher",
 		  "Laserdesignator_pilotCamera"
 		  };
 		  magazines[] = {
-		 MACRO_NEW_MAG(ARC170_Low,600),
-		 MACRO_NEW_MAG(ARC170_Low,600),
-		 MACRO_NEW_MAG(ARC170_High,16),
+		MACRO_NEW_MAG(Ywing_30mm,1200),
+		MACRO_NEW_MAG(Ywing_Plasma,20),
 		  "120Rnd_CMFlare_Chaff_Magazine",
 		  "Laserbatteries",
 		  "120Rnd_CMFlare_Chaff_Magazine",
@@ -153,10 +153,10 @@ class CfgVehicles
 
 
 		 acceleration = 2000;
-		   class EjectionSystem
-		   {
-			EjectionSeatEnabled = 0;										//enable advanced ejection system								
-		   };
+		 //  class EjectionSystem
+		 //  {
+			//EjectionSeatEnabled = 0;										//enable advanced ejection system								
+		 //  };
 		   armor = 400;
 		   VTOLPitchInfluence = 10;
 		   VTOLRollInfluence = 10;
@@ -175,7 +175,6 @@ class CfgVehicles
 		   landingSpeed = 215;			   // for AI to approach the runawy, the plane should be stable at this speed
 		   stallSpeed = 190;
 		   stallWarningTreshold = 0.1;
-		   armor = 100;
 		   armorStructured = 1;
 		   envelope[] = {0,0.01,0.2,4,6,7.6,8.4,9.2,9.4,9.6,9.7,9.8,8,1};
 		   draconicForceXCoef = 4.5;
@@ -218,8 +217,20 @@ class CfgVehicles
 
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
+			class RearTurret : MainTurret
 			{
+			    weapons[] = {
+		 MACRO_NEW_WEAPON(Y_wing_Turret)
+		  };
+		  magazines[] = {
+		MACRO_NEW_MAG(Z95_30mm,1000),
+		MACRO_NEW_MAG(Z95_30mm,1000),
+		MACRO_NEW_MAG(Z95_30mm,1000),
+		MACRO_NEW_MAG(Z95_30mm,1000),
+		MACRO_NEW_MAG(Z95_30mm,1000),
+		MACRO_NEW_MAG(Z95_30mm,1000),
+		MACRO_NEW_MAG(Z95_30mm,1000)
+		};      
 				gunnerType = "332nd_aux_aviation_unit_332nd_flight_ensign";
 			};
 		};

@@ -501,7 +501,7 @@ class 332nd_aux_effects_missile_Proton_Purple
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_pur-ple";
+        type = "332nd_aux_effects_rocket_purple";
     };
 
     class MissileEffect1

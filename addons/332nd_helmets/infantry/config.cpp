@@ -38,6 +38,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Spacy),
 			MACRO_NEW_HELMET(infantry,Church),
 			MACRO_NEW_HELMET(infantry,Cutter),
+			MACRO_NEW_HELMET(infantry,Sentinel),
+			MACRO_NEW_HELMET(infantry,Dark),
         };
 		weapons[] = {};
 	};
@@ -74,4 +76,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Spacy,Spacy,Spacy.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Church,Church,Church.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sentinel,Sentinel,Sentinel.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Dark,Dark,Dark.paa)
 };

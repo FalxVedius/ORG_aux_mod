@@ -65,7 +65,7 @@ class CfgAmmo
 	  effectsMissile = "332nd_aux_effects_missile_Proton_Purple";
 	  proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
 	caliber=1;
-	explosionEffects = "MK82_Explode";
+	explosionEffects = "HelicopterExplosionEffects2";
 	missileLockMaxDistance = 5000;
 	missileLockMinDistance = 0;
 	missileLockCone = 360;
@@ -95,7 +95,7 @@ class CfgAmmo
 		timeToLive = 60;
 		typicalSpeed = 50;
 		thrustTime = 1.5;
-	explosionEffects = "MK82_Explode";
+	explosionEffects = "HelicopterExplosionEffects2";
 
 	weaponLockSystem = "1 + 2 + 4 + 8 + 16";
 	missileKeepLockedCone = 360;
@@ -106,14 +106,6 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(Plasma_Bomb): Bo_GBU12_LGB
 	{
-	soundFly[]=
-		{
-			"332nd_vehicle_weapons\air\sounds\V1.wss",
-			2,
-			15,
-			1000
-		};
-    effectfly="332nd_aux_effects_purple_tracer_Bomb";
 	effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
 	model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
 	proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
@@ -209,7 +201,7 @@ class CfgMagazines
 		displayName="Micro Concussion Missile AA";
 
 		descriptionshort="Air to Air micro Concussion Missile";
-		pylonWeapon = "332nd_aux_weapon_AA_Pylon";
+		pylonWeapon = MACRO_NEW_WEAPON(AALow_Pylon);
 		displayNameShort="A2A Micro Concussion Missiles";
 		ammo=MACRO_NEW_AMMO(AA_Low)
 	};
@@ -266,9 +258,9 @@ class CfgMagazines
 	class MACRO_NEW_MAG(Pylon_PlasmaBomb,1): PylonMissile_1Rnd_BombCluster_03_F
 	{
 	    hardpoints[]= {"332_B_Pylon"};
-		displayName="Plasna Bomb";
+		displayName="Plasma Bomb";
 		descriptionshort="Plasma Bomb";
-		pylonWeapon = "332nd_aux_weapon_ProtonBomb_Pylon";
+		pylonWeapon = "332nd_aux_weapon_PlasmaBomb_Pylon";
 		displayNameShort="Plasma Bomb";
 		tracersEvery=1;
 		initspeed=0;
@@ -349,7 +341,8 @@ class CfgWeapons
 	{
 	displayName="Plasma Bomb";
 	magazines[] = {
-			 MACRO_NEW_MAG(Pylon_PlasmaBomb,1)
+			 MACRO_NEW_MAG(Pylon_PlasmaBomb,1),
+			 MACRO_NEW_MAG(Ywing_Plasma,20)
 		};
 	};
 

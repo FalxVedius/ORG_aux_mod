@@ -157,9 +157,9 @@ class CfgAmmo
 	tracersEvery = 1;
 	hit=150;
 	explosionEffects = "ImpactPlasmaExpgreen";
-	indirectHit =12;
+	indirectHit =50;
 	mass=2;
-	indirectHitRange = 2.5;
+	indirectHitRange = 4;
 	tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(Z95_30mm): ls_50mm_laat_he
@@ -182,7 +182,6 @@ class CfgAmmo
 	model="SWLW_main\Effects\laser_blue.p3d";
 	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 	flaresize=4;
-	effectfly="332nd_aux_effects_blue_tracer_AVI";
 	caliber=8;
 	tracersEvery = 1;
 	hit=300;
@@ -317,7 +316,7 @@ class CfgMagazines
 		displayNameShort="30mm Nose";
 		ammo=MACRO_NEW_AMMO(Ywing_30mm)
 		tracersEvery = 1;
-		count=1200;
+		count=1000;
 	};
 
 	class MACRO_NEW_MAG(LE_30mm,600): 1000Rnd_25mm_shells
@@ -369,6 +368,16 @@ class CfgMagazines
 		scope=1;
 		count=24;
 	};
+	class Bomb_04_Plane_CAS_01_F;
+	class MACRO_NEW_MAG(Ywing_Plasma,20): Bomb_04_Plane_CAS_01_F
+	{
+		displayName=MACRO_AMMO_DISPLAYNAME(Plasma Bomb);
+		ammo=MACRO_NEW_AMMO(Plasma_Bomb)
+		descriptionshort="Plasma Bomb";
+		displayNameShort="Plasma Bomb";
+		scope=1;
+		count=20;
+	};
 	class 120Rnd_CMFlare_Chaff_Magazine;
 	class MACRO_NEW_MAG(332_CM_Flare,120): 120Rnd_CMFlare_Chaff_Magazine
 	{
@@ -383,8 +392,8 @@ class player;
 class manual;
 class CfgWeapons
 {
-	class 3as_ARC_Light_Canon;
-	class MACRO_NEW_WEAPON(ARC_Low): 3as_ARC_Light_Canon
+	class Cannon_30mm_Plane_CAS_02_F;
+	class MACRO_NEW_WEAPON(ARC_Low): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -422,7 +431,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class MACRO_NEW_WEAPON(ARC_High): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(ARC_High): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -590,7 +599,7 @@ class CfgWeapons
 
 
 
-	class MACRO_NEW_WEAPON(Nu_20mm): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(Nu_20mm): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -666,7 +675,7 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(V19_25mm): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(V19_25mm): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -742,7 +751,7 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(Vulture_cannon): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(Vulture_cannon): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -824,7 +833,7 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(LE_30mm): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(LE_30mm): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -839,7 +848,7 @@ class CfgWeapons
 			burst=1;
 			magazineReloadTime=6;
 			autoReload=1;
-			reloadTime=0.15;
+			reloadTime=0.25;
 			dispersion=0.0002;
 			sounds[]=
 			{
@@ -900,7 +909,7 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(Z95_30mm): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(Z95_30mm): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -976,7 +985,83 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(YWing_30mm): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(Y_wing_Turret): Cannon_30mm_Plane_CAS_02_F
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Z95_30mm,1000)
+		};
+		modes[] = {"manual"};
+		ballisticsComputer = 4;	
+		displayName = "Z95 30mm cannon";
+		class manual: LowROF
+		{
+			displayname="Full";
+			burst=1;
+			magazineReloadTime=6;
+			autoReload=1;
+			reloadTime=0.06;
+			dispersion=0.00002;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"332nd_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
+					2,
+					0.7,
+					6000
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class close: manual
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=50;
+			minRange=10;
+			minRangeProbab=0.050000001;
+			midRange=20;
+			midRangeProbab=0.69999999;
+			maxRange=50;
+			maxRangeProbab=0.039999999;
+			showToPlayer=0;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=300;
+			minRange=50;
+			minRangeProbab=0.050000001;
+			midRange=150;
+			midRangeProbab=0.69999999;
+			maxRange=300;
+			maxRangeProbab=0.039999999;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=0.1375;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.050000001;
+			midRange=300;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.1;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(YWing_30mm): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {
@@ -991,8 +1076,8 @@ class CfgWeapons
 			burst=5;
 			magazineReloadTime=6;
 			autoReload=1;
-			reloadTime=0.04;
-			dispersion=0.0005;
+			reloadTime=0.025;
+			dispersion=0.02;
 			sounds[]=
 			{
 				"StandardSound"
@@ -1052,7 +1137,7 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(Nu_75mm): 3as_ARC_Light_Canon
+	class MACRO_NEW_WEAPON(Nu_75mm): Cannon_30mm_Plane_CAS_02_F
 	{
 		magazineWell[] = {};
 		magazines[] = {

@@ -15,7 +15,6 @@ class CfgPatches
             // helmets
             MACRO_NEW_HELMET(ab,332nd_airborne),
 			MACRO_NEW_HELMET(ab,332nd_airborne_veteran),
-			MACRO_NEW_HELMET(ab,Chronic),
 			MACRO_NEW_HELMET(ab,Griif),
 			MACRO_NEW_HELMET(ab,Sigma)
         };
@@ -31,7 +30,6 @@ class CfgWeapons
 
     MACRO_NEW_AB_HELMET_ITEM(332nd_airborne,Airborne,AB.paa)
 	MACRO_NEW_AB_HELMET_ITEM(332nd_airborne_veteran,Airborne Veteran,AB_Vet_Helmet.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Chronic,Chronic,Chronic.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Griif,Griif,Griif.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 };

@@ -80,7 +80,7 @@ class cfgWeapons
 		baseweapon="";
 		handling="2";
 		modes[]=  {
-		    "Single","FullAuto"
+		    "Single"
 		};
 		
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
@@ -203,46 +203,6 @@ class cfgWeapons
 			aiRateOfFireDistance=25;
 		};
 
-		class FullAuto: Mode_FullAuto
-		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_weapons\DP-23\sounds\DP23_shotgun.wss",
-					1.5,
-					1.1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
-			};
-			reloadTime=0.7;
-			dispersion=0.002;
-			minRange=5;
-			minRangeProbab=0.30000001;
-			midRange=25;
-			midRangeProbab=0.60000002;
-			maxRange=50;
-			maxRangeProbab=0.1;
-			aiRateOfFire=1;
-			aiRateOfFireDistance=25;
-		};
 
         class WeaponSlotsInfo: WeaponSlotsInfo
 		{
