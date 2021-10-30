@@ -116,6 +116,14 @@
 			displayName = [332nd] Scenario Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {##texture};\
 		};
+	#define MACRO_NEW_ARC_HELMET_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_HELMET(arc,classname): MACRO_NEW_HELMET(arc,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Arc Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arc\##texture};\
+		};
 	
 
 	// ---- Uniforms ---- 
@@ -954,6 +962,14 @@
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Reserve Officer Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
+		};
+	#define MACRO_NEW_CAPTAIN_VEST_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_VEST(captain,classname): MACRO_NEW_VEST(captain,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Infantry Vest ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
 		};
 	#define MACRO_NEW_INF_KAMA_ITEM(classname,displayname,texture)\

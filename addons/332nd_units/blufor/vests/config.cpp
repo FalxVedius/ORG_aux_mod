@@ -117,8 +117,8 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_INF_KAMA_ITEM(332nd_officer,2nd Lt,kama\Officer_accessories.paa)
-    MACRO_NEW_INF_KAMA_ITEM(332nd_1st_lt,1st Lt,kama\1st_lt.paa)
+    MACRO_NEW_INF_KAMA_ITEM(332nd_SergMaj_Vest,Sergeant Major,kama\Officer_accessories.paa)
+    MACRO_NEW_INF_KAMA_ITEM(332nd_lt,Lieutenant,kama\1st_lt.paa)
 
     
     class MACRO_NEW_VEST(arc,base): JLTS_CloneVestARC
@@ -156,7 +156,8 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_ARC_VEST_ITEM(332nd_arc,332nd,arc_vest.paa)
+    MACRO_NEW_ARC_VEST_ITEM(332nd_arc,Squad Arc,arc_vest.paa)
+    MACRO_NEW_ARC_VEST_ITEM(332nd_Marshal,Marshal,Marshal_vest.paa)
 
 
     class MACRO_NEW_VEST(trooper,base) : SWLB_clone_basic_armor
@@ -653,6 +654,43 @@ class CfgWeapons
     MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(332nd_ReserveOfficer_Vest,Reserve Officer,reserveOfficer\LeadershipKama_ca.paa)
 
 
+    class MACRO_NEW_VEST(captain,base) : JLTS_CloneVestOfficer2
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Infantry Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_CAPTAIN_VEST_ITEM(332nd_Captain_Vest,Captain,kama\1st_lt.paa)
+
     class MACRO_NEW_VEST(airborne,base) : JLTS_CloneVestAirborne
     {
         scopeArsenal = 0;
@@ -769,42 +807,42 @@ class CfgWeapons
     MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSPMEDIC_Vest,Medic Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistMedic_ca.paa)
 
 
-    class MACRO_NEW_VEST(marshal,base) : JLTS_CloneVestLieutenant
-    {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[332nd] Infantry Vest ('base')";
-
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply210";
-            vestType = "Rebreather";
-
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_MARSHAL_VEST_ITEM(332nd_Marshal_Vest,Marshal)
+    //class MACRO_NEW_VEST(marshal,base) : JLTS_CloneVestLieutenant
+    //{
+    //    scopeArsenal = 0;
+    //    scope = 0;
+    //    author = MACRO_AUTHOR;
+    //    displayName = "[332nd] Infantry Vest ('base')";
+    //
+    //    class ItemInfo : ItemInfo
+    //    {
+    //        containerClass = "Supply210";
+    //        vestType = "Rebreather";
+    //
+    //        class HitpointsProtectionInfo
+    //        {
+    //            class Chest
+    //            {
+    //                HitpointName = "HitChest";
+    //                armor = 0;
+    //                PassThrough = 1;
+    //            };
+    //            class Legs
+    //            {
+    //                hitpointName = "HitLegs";
+    //                armor = 0;
+    //                passThrough = 1;
+    //            };
+    //            class Arms
+    //            {
+    //                hitpointName = "HitArms";
+    //                armor = 0;
+    //                passThrough = 1;
+    //            };
+    //        };
+    //    };
+    //}
+    //MACRO_NEW_MARSHAL_VEST_ITEM(332nd_Marshal_Vest,Marshal)
 
 
     class MACRO_NEW_VEST(purge,base) : JLTS_CloneVestPurge

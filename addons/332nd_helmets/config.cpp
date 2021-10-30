@@ -20,8 +20,15 @@ class CfgWeapons
     // ---- Helmets ----
 
     class JLTS_CloneHelmetP2;
+	class JLTS_CloneHelmetARC;
 
 	class CloneHelmetP2_Base : JLTS_CloneHelmetP2
+	{
+		scopeArsenal = 0;
+		class ItemInfo;
+	};
+
+	class CloneHelmetARC_Base : JLTS_CloneHelmetARC
 	{
 		scopeArsenal = 0;
 		class ItemInfo;
@@ -49,6 +56,28 @@ class CfgWeapons
 			};
 		};
     }
+
+	class MACRO_NEW_HELMET(arc,base) : CloneHelmetARC_Base
+	{
+		scopeArsenal = 0;
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[332nd] Arc Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
+
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
+	}
 
 	class JLTS_CloneHelmetAB;
 
@@ -203,6 +232,28 @@ class CfgWeapons
 
 		ace_hearing_lowerVolume = 0.60000002;
 		ace_hearing_protection = 0.85000002;
+
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
+	}
+
+	class MACRO_NEW_HELMET(scenario,base) : CloneHelmetP2_Base
+	{
+		scopeArsenal = 0;
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[332nd] Scenario Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
 		{

@@ -35,6 +35,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Beat),
 			MACRO_NEW_HELMET(infantry,Grass),
 			MACRO_NEW_HELMET(infantry,Dakka),
+			MACRO_NEW_HELMET(infantry,King),
+			MACRO_NEW_HELMET(infantry,Spacy),
         };
 		weapons[] = {};
 	};
@@ -68,4 +70,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Beat,Beat,Beat.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Grass,Grass,Grass.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Dakka,Dakka,Dakka.paa)
+	MACRO_NEW_INF_HELMET_ITEM(King,King,King.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Spacy,Spacy,Spacy.paa)
 };
