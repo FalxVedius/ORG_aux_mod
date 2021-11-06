@@ -90,8 +90,8 @@ class CfgVehicles
 		};
 
 		hiddenselectionstextures[] = {
-		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Offroad.paa,"soft_f\Offroaf_01\Data\Offroad_01_ext_BASE01_CO.paa",
-		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Offroad.paa,"soft_f\Offroaf_01\Data\Offroad_01_ext_BASE01_CO.paa"
+		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Tech.paa,"soft_f\Offroaf_01\Data\Rebel_Tech.paa",
+		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Tech.paa,"soft_f\Offroaf_01\Data\Rebel_Tech.paa"
 		};
 
 		class Turrets : Turrets
@@ -104,7 +104,6 @@ class CfgVehicles
 				};
 				magazines[] =
 				{
-					"JLTS_E5C_mag",
 					"JLTS_E5C_mag",
 					"JLTS_E5C_mag",
 					"JLTS_E5C_mag",

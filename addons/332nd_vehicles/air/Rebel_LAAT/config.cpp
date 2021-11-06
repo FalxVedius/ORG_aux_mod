@@ -330,7 +330,6 @@ class CfgVehicles
             MACRO_AIR_COMMON_MAGS,
             MACRO_NEW_MAG(LAAT_40mm,600),
             MACRO_NEW_MAG(Air_Dumb_rocket,24),
-			MACRO_NEW_MAG(Air_Dumb_rocket,24),
         };
         class EventHandlers
         {
@@ -387,21 +386,6 @@ class CfgVehicles
 							"332_C_Pylon"
 						};
 						UIposition[]={0.079999998,0.34999999};
-					};
-					class PylonLeft3: PylonLeft1
-					{
-						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
-						priority=3;
-						hardpoints[]=
-						{
-							"332_B_Pylon"
-						};
-						UIposition[]={0.1,0.30000001};
-					};
-					class PylonRight3: PylonLeft3
-					{
-						mirroredMissilePos=3;
-						UIposition[]={0.58999997,0.30000001};
 					};
 					class PylonRight2: PylonLeft2
 					{
@@ -3261,7 +3245,7 @@ class CfgVehicles
         scope = 2;
         forceInGarage = 1;
         displayName = "Stolen LAAT";
-        armor = 70 * 0.5;
+        armor = 60 * 0.5;
         maximumLoad = 10000;
 		side = 2;
 

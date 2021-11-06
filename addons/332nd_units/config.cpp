@@ -11801,9 +11801,7 @@ class CfgVehicles
 	class I_rebel_human_base_v2 : ls_civ_randomNearHuman_m_polo6
 	{
 		class HitPoints;
-		faction = "EdCat_332nd_Rebel";
-		editorSubcategory = "EdSubcat_332nd_RHUMAN";
-		side = 2;
+
 	};
 
 	class I_rebel_human_base_v3 : C_man_p_fugitive_F
@@ -11819,9 +11817,7 @@ class CfgVehicles
 	class I_rebel_human_base_v5 : ls_civ_randomNearHuman_m_polo3
 	{
 		class HitPoints;
-		faction = "EdCat_332nd_Rebel";
-		editorSubcategory = "EdSubcat_332nd_RHUMAN";
-		side = 2;
+
 	};
 
 	class I_rebel_human_base_v6 : ls_civ_randomNearHuman_m_polo2
