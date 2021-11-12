@@ -11112,6 +11112,8 @@ class CfgVehicles
 
 		armor = 275;
 
+		damageEffect = "";
+
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka;";
 		};
@@ -11131,6 +11133,37 @@ class CfgVehicles
 					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30)
 				};
+			};
+		};
+
+		class DestructionEffects
+		{
+			class Dust
+			{
+				simulation = "particles";
+				type = "HousePartDust";
+				position = "destructionEffect2";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 0.0099999998;
+			};
+			class UAVCrashSmoke
+			{
+				simulation = "particles";
+				type = "UAVCrashSmoke";
+				position = "destructionEffect2";
+				intensity = 0.15000001;
+				interval = 1;
+				lifeTime = 0.012;
+			};
+			class sparks1
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSparks";
+				position = "destructionEffect2";
+				intensity = 0;
+				interval = 1;
+				lifeTime = 0;
 			};
 		};
 	};
@@ -11185,6 +11218,37 @@ class CfgVehicles
 				};
 			};
 		};
+
+		class DestructionEffects
+		{
+			class Dust
+			{
+				simulation = "particles";
+				type = "HousePartDust";
+				position = "destructionEffect2";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 0.0099999998;
+			};
+			class UAVCrashSmoke
+			{
+				simulation = "particles";
+				type = "UAVCrashSmoke";
+				position = "destructionEffect2";
+				intensity = 0.15000001;
+				interval = 1;
+				lifeTime = 0.012;
+			};
+			class sparks1
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSparks";
+				position = "destructionEffect2";
+				intensity = 0;
+				interval = 1;
+				lifeTime = 0;
+			};
+		};
 	};
 
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base) : k_CIS_Droideka
@@ -11197,6 +11261,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_HEAVY";
 
 		armor = 275;
+
+		damageEffect = "";
 
 		class EventHandlers {
 			init = "[_this] spawn Aux332nd_fnc_initDroideka_Move;";
@@ -11217,6 +11283,37 @@ class CfgVehicles
 					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30)
 				};
+			};
+		};
+
+		class DestructionEffects
+		{
+			class Dust
+			{
+				simulation = "particles";
+				type = "HousePartDust";
+				position = "destructionEffect2";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 0.0099999998;
+			};
+			class UAVCrashSmoke
+			{
+				simulation = "particles";
+				type = "UAVCrashSmoke";
+				position = "destructionEffect2";
+				intensity = 0.15000001;
+				interval = 1;
+				lifeTime = 0.012;
+			};
+			class sparks1
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSparks";
+				position = "destructionEffect2";
+				intensity = 0;
+				interval = 1;
+				lifeTime = 0;
 			};
 		};
 	};
@@ -11269,6 +11366,37 @@ class CfgVehicles
 					MACRO_NEW_MAG(SniperDeka_MAG,10),
 					MACRO_NEW_MAG(SniperDeka_MAG,10)
 				};
+			};
+		};
+
+		class DestructionEffects
+		{
+			class Dust
+			{
+				simulation = "particles";
+				type = "HousePartDust";
+				position = "destructionEffect2";
+				intensity = 1;
+				interval = 1;
+				lifeTime = 0.0099999998;
+			};
+			class UAVCrashSmoke
+			{
+				simulation = "particles";
+				type = "UAVCrashSmoke";
+				position = "destructionEffect2";
+				intensity = 0.15000001;
+				interval = 1;
+				lifeTime = 0.012;
+			};
+			class sparks1
+			{
+				simulation = "particles";
+				type = "ObjectDestructionSparks";
+				position = "destructionEffect2";
+				intensity = 0;
+				interval = 1;
+				lifeTime = 0;
 			};
 		};
 	};

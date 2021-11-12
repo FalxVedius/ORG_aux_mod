@@ -2900,8 +2900,6 @@ class CfgVehicles
         };
     };
 	
-
-
     class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): ls_heli_laatle
     {
         displayName = "LAAT/le Gunship";
@@ -4357,6 +4355,7 @@ class CfgVehicles
         maximumLoad = 10000;
 		model="\lsd_vehicles_heli\laati\lsd_heli_laati_ab";
 		displayName="LAAT MK1 (AB)";
+
 		 class TransportItems
         {
 
