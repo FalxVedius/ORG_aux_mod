@@ -225,6 +225,14 @@ class CfgWeapons
 		scope=2;
 		baseweapon = "";
 		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_ui.paa";
+
+		model = "332nd_weapons\IQA_11\CrossHair_Sniper.p3d";
+		handAnim[] =
+		{
+			"OFP2_ManSkeleton",
+			"\3AS\3AS_Weapons\WestarM5\Data\Anim\WestarM5_handanim.rtm"
+		};
+
 		magazines[]=
 		{
 	    MACRO_NEW_MAG(IQA_11,8),
@@ -319,6 +327,49 @@ class CfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=500;
 			maxRangeProbab=0.050000001;
+		};
+		class OpticsModes
+		{
+			class Snip
+			{
+				useModelOptics = 1;
+				opticsFlare = 1;
+				opticsID = 1;
+				cameraDir = "";
+				discreteDistance[] = { 300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400 };
+				discreteDistanceInitIndex = 1;
+				discreteInitIndex = 1;
+				discretefov[] =
+				{
+					".25/1",
+					".25/4",
+					".25/8",
+					".25/12",
+					".25/24"
+				};
+				discreteDistanceInitIndex = 2;
+				distanceZoomMin = 300;
+				distanceZoomMax = 2400;
+				memoryPointCamera = "eye";
+				modelOptics = "\A3\Weapons_F\acc\reticle_sniper_F";
+				opticsPPEffects[] =
+				{
+					"OpticsCHAbera1"
+				};
+				weaponInfoType = "RscWeaponRangeZeroingFOV";
+				opticsZoomMin = ".25/24";
+				opticsZoomMax = 0.25;
+				opticsZoomInit = 0.25;
+				thermalMode[] = { 0,5 };
+				visionMode[] =
+				{
+					"Normal",
+					"NVG",
+					"TI"
+				};
+				opticsDisplayName = "WFOV";
+				opticsDisablePeripherialVision = 0;
+			};
 		};
 		maxRecoilSway=0.0025;
 		swayDecaySpeed=1.25;
