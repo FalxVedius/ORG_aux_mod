@@ -931,12 +931,6 @@ class CfgFunctions
 		class FiredSounds
 		{
 			file = "\332nd_units\opfor";
-			class Fired
-			{
-			};
-			class Fired_BX
-			{
-			};
 			class Fired_B2
 			{
 			};

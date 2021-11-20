@@ -17,7 +17,7 @@ if (!is3DEN) then {
                     if (_speed >= 0.1 or _speed <= -0.1) then {
                         
 						"Starting Animation" remoteExec ["hint"];
-                        _v animateSource ["Walk",2,2.7];
+                        _v animateSource ["Walk",2,2.0];
 
 						sleep 1.68;
 						
