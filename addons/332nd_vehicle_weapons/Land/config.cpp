@@ -1134,6 +1134,7 @@ class CfgWeapons
 	class 3AS_E5S_F;
 	class MACRO_NEW_WEAPON(20mm_SniperDeka) : 3AS_E5S_F
 	{
+		scopeArsenal = 0;
 		ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
 		ace_overpressure_range = 0;  // Range in meters in which the damage is applied
 		ace_overpressure_damage = 0;  // Damage multiplier
@@ -1368,6 +1369,7 @@ class CfgWeapons
 	class Cannon_droideka;
 	class MACRO_NEW_WEAPON(338_Deka) : Cannon_droideka
 	{
+		scopeArsenal = 0;
 		ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
 		ace_overpressure_range = 0;  // Range in meters in which the damage is applied
 		ace_overpressure_damage = 0;  // Damage multiplier

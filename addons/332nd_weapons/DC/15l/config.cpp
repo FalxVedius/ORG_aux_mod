@@ -38,7 +38,7 @@ class cfgWeapons
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
 		recoil="recoil_zafir";
-		recoilProne = "assaultRifleBase";
+		recoilProne = "recoil_spar";
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws_mg";
 
 		magazines[] = {
