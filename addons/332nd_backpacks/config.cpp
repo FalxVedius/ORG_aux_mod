@@ -87,7 +87,7 @@ class CfgVehicles
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
         tf_encryptionCode="tf_west_radio_code";
         tf_hasLRradio=1;
-        tf_range=25000;
+        tf_range= 50000;
         tf_subtype="digital_lr";
 		maximumLoad = 393;
 
@@ -104,7 +104,7 @@ class CfgVehicles
         tf_dialogUpdate="call TFAR_fnc_updateLRDialogToChannel;";
         tf_encryptionCode="tf_west_radio_code";
         tf_hasLRradio=1;
-        tf_range=25000;
+        tf_range= 50000;
         tf_subtype="digital_lr";
 		displayName = "[332nd] Medic Pack (base)";
 		maximumLoad = 393;
@@ -117,6 +117,8 @@ class CfgVehicles
 	{
 		displayName = "[332nd] JTAC Pack";
 		maximumLoad = 450;
+
+		tf_range = 50000;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -135,7 +137,7 @@ class CfgVehicles
 	{
 		displayName = "[332nd] Leadership Pack";
 		maximumLoad = 271;
-		tf_range = 15000;
+		tf_range = 50000;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -145,6 +147,8 @@ class CfgVehicles
 	{
 		displayName = "[332nd] Pilot Radio Pack";
 		maximumLoad = 271;
+
+		tf_range = 50000;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
