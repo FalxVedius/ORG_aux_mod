@@ -20,13 +20,11 @@ class CfgPatches
 		weapons[]=
 		{
 			MACRO_NEW_WEAPON(IQA_11),
-			"332nd_IQA_11_scoped",
-			"332_IQA11_scope",
 			"332nd_IQA11_Suppressor"
 		};
 	};
 };
-class cfgAmmo
+class CfgAmmo
 {
     class ls_ammo_127x108_blue;
 	class MACRO_NEW_AMMO(Refined_high): ls_ammo_127x108_blue
@@ -119,57 +117,6 @@ class CfgWeapons
 		class GunParticles;
 		class AnimationSources;
 	};
-	class 332_IQA11_scope: SWLW_sniper_scope
-	{
-		displayName="IQA-11 Scope";
-		author="Halligan";
-		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_scope_ui.paa";
-		model="\SWLW_merc_mando\rifles\sniper\sniper_scope.p3d";
-		scope=2;
-		recoil = "recoil_dmr_05";
-		recoilProne="recoil_single_prone_ebr";
-		descriptionShort="";
-		weaponInfoType="RscWeaponZeroing";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=8;
-			opticType=1;
-			optics=1;
-			modelOptics = "\A3\Weapons_F_Mark\Acc\reticle_acco_khs_F";
-			class OpticsModes
-			{
-				class Scope
-				{
-					opticsID=1;
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera5",
-						"OpticsBlur5"
-					};
-					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin=0.0099999998;
-					opticsZoomMax=0.1;
-					opticsZoomInit=0.041999999;
-					discretefov[]={0.0625,0.041999999,0.0099999998};
-					discreteInitIndex=0;
-					distanceZoomMin=100;
-					distanceZoomMax=2500;
-					discreteDistance[]={300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2050,2100,2150,2200,2250,2300,2350,2400,2450,2500};
-					discreteDistanceInitIndex=0;
-					memoryPointCamera="opticView";
-					visionMode[]=
-					{
-						"Normal",
-						"NVG"
-					};
-					opticsFlare="true";
-					cameraDir="";
-				};
-			};
-		};
-		inertia=0.1;
-	};
 	class ItemCore;
 	class InventoryMuzzleItem_Base_F;	
 	class 332nd_IQA11_Suppressor: muzzle_snds_338_black
@@ -225,6 +172,14 @@ class CfgWeapons
 		scope=2;
 		baseweapon = "";
 		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_ui.paa";
+
+		model = "332nd_weapons\IQA_11\CrossHair_Sniper.p3d";
+		handAnim[] =
+		{
+			"OFP2_ManSkeleton",
+			"\3AS\3AS_Weapons\WestarM5\Data\Anim\WestarM5_handanim.rtm"
+		};
+
 		magazines[]=
 		{
 	    MACRO_NEW_MAG(IQA_11,8),
@@ -265,6 +220,8 @@ class CfgWeapons
 		fireLightIntensity=0.40000001;
 		fireLightDiffuse[]={0,0,0.0099999998};
 		fireLightAmbient[]={0,0,0};
+		weaponInfoType = "RscOptics_tws";
+		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
 		class Single: Mode_SemiAuto
 		{
 			sounds[]=
@@ -320,6 +277,48 @@ class CfgWeapons
 			maxRange=500;
 			maxRangeProbab=0.050000001;
 		};
+		class OpticsModes
+		{
+			class Snip
+			{
+				useModelOptics = 1;
+				opticsFlare = 1;
+				opticsID = 1;
+				cameraDir = "";
+				discreteDistance[] = { 300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400 };
+				discreteDistanceInitIndex = 1;
+				discreteInitIndex = 1;
+				discretefov[] =
+				{
+					".25/1",
+					".25/4",
+					".25/8",
+					".25/12",
+					".25/24"
+				};
+				discreteDistanceInitIndex = 2;
+				distanceZoomMin = 300;
+				distanceZoomMax = 2400;
+				memoryPointCamera = "eye";
+				modelOptics = "\A3\Weapons_F\acc\reticle_sniper_F";
+				opticsPPEffects[] =
+				{
+					"OpticsCHAbera1"
+				};
+				weaponInfoType = "RscWeaponRangeZeroingFOV";
+				opticsZoomMin = ".25/24";
+				opticsZoomMax = 0.25;
+				opticsZoomInit = 0.25;
+				thermalMode[] = { 0,5 };
+				visionMode[] =
+				{
+					"Normal",
+					"NVG"
+				};
+				opticsDisplayName = "WFOV";
+				opticsDisablePeripherialVision = 0;
+			};
+		};
 		maxRecoilSway=0.0025;
 		swayDecaySpeed=1.25;
 		dexterity=1.7;
@@ -331,51 +330,11 @@ class CfgWeapons
 				// class names with items supported by weapon
 				compatibleItems[] = {"332nd_IQA11_Suppressor"}; // moved to each weapon
 			};
-			mass=130;
-			class CowsSlot: CowsSlot
+			class CowsSlot : CowsSlot
 			{
-				compatibleItems[]=
-				{
-					"332_IQA11_scope"
-				};
+				compatibleItems[] = {};
 			};
-		};
-	};
-	class MACRO_NEW_WEAPON(IQA_11_Scoped): MACRO_NEW_WEAPON(IQA_11)
-	{
-		class LinkedItems
-		{
-			class LinkedItemsOptic
-			{
-				item="332_IQA11_scope";
-				slot="CowsSlot";
-			};
-		};
-	};
-};
-class CfgVehicles
-{
-	class Weapon_Base_F;
-	class 332nd_IQA_11_scoped: Weapon_Base_F
-	{
-		author="Halligan";
-		displayName="332nd IQA-11";
-		scope=2;
-		class TransportWeapons
-		{
-			class 332_sniper_scoped
-			{
-				count=1;
-				weapon=MACRO_NEW_WEAPON(IQA_11_Scoped);
-			};
-		};
-		class TransportMagazines
-		{
-			class 332_sniper_Mag
-			{
-				count=1;
-				magazine=MACRO_NEW_MAG(IQA_11,8);
-			};
+			mass = 130;
 		};
 	};
 };

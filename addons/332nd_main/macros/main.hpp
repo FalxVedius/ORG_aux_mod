@@ -99,6 +99,14 @@
 			displayName = [332nd] Recon Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arf\##texture};\
 		};
+		#define MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_HELMET(arfcustom,classname): MACRO_NEW_HELMET(arfcustom,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 0;\
+			displayName = [332nd] Recon Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arf\##texture};\
+		};
 		#define MACRO_NEW_BARC_HELMET_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_HELMET(barc,classname): MACRO_NEW_HELMET(barc,base)\
 		{\
@@ -145,6 +153,17 @@
 			class ItemInfo: ItemInfo\
 			{\
 				uniformClass = MACRO_NEW_UNIT(infantry,uniformClassname);\
+			};\
+		};
+
+	#define MACRO_NEW_AIRBORNE_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(airborne,classname): MACRO_NEW_UNIFORM(airborne,base)\
+		{\
+			displayName = [332nd] Airborne Uniform ('##displayname##');\
+			scope = 2;\
+			class ItemInfo: ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(airborne,uniformClassname);\
 			};\
 		};
 
@@ -632,6 +651,20 @@
 			hiddenSelectionsTextures[] = {\
 				MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##upper,\
 				MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##lower\
+			};\
+		}
+
+	#define MACRO_NEW_AIRBORNE_UNIT(classname,displayname,uniformClassname,upper,lower)\
+		class MACRO_NEW_UNIT(airborne,classname): MACRO_NEW_UNIT(airborne,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(airborne,uniformClassname);\
+			hiddenSelections[] = {"camo1","camo2","insignia"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\airborne\uniforms\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\airborne\uniforms\##lower\
 			};\
 		}
 

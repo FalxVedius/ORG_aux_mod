@@ -49,7 +49,7 @@ class CfgVehicles
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
         tf_encryptionCode = "tf_west_radio_code";
         tf_hasLRradio = 1;
-        tf_range = 25000;
+        tf_range = 50000;
         tf_subtype = "digital_lr";
 
         NSM_jumppack_spam_delay = 0;
@@ -70,7 +70,7 @@ class CfgVehicles
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
         tf_encryptionCode = "tf_west_radio_code";
         tf_hasLRradio = 1;
-        tf_range = 25000;
+        tf_range = 50000;
         tf_subtype = "digital_lr";
 
         NSM_jumppack_spam_delay = 0;

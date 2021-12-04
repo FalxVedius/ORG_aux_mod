@@ -89,6 +89,12 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_arfbase_unit_332nd_arfbase_trooper";
+
+		hiddenSelectionsTextures[] =
+		{
+			"332nd_vehicles\_textures\land\BARC\Barc_Body_co.paa"
+		};
+
 		weapons[] =
 				{
 				MACRO_NEW_WEAPON(BARC_40mm)
@@ -107,6 +113,13 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_arfbase_unit_332nd_arfbase_trooper";
+
+		hiddenSelectionsTextures[] =
+		{
+			"332nd_vehicles\_textures\land\BARC\Barc_Body_co.paa",
+			"332nd_vehicles\_textures\land\BARC\Barc_Sidercar_Body_co.paa"
+		};
+
 		weapons[] =
 				{
 				MACRO_NEW_WEAPON(BARC_40mm)

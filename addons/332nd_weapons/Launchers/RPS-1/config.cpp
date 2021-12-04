@@ -58,7 +58,7 @@ class CfgWeapons
 		ace_overpressure_angle=45;
 		ace_overpressure_damage=0.50999999;
 		ace_overpresssure_priority=1;
-		ace_overpressure_range=10;
+		ace_overpressure_range=3;
         canLock=0;
 		magazineReloadTime = 0.1;
 		airLock=0;

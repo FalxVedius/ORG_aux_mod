@@ -15,6 +15,7 @@ class CfgPatches
 
             MACRO_NEW_HELMET(arc,Arc),
 			MACRO_NEW_HELMET(arc,Sazi),
+			MACRO_NEW_HELMET(arc,Rev)
         };
 		weapons[] = {};
 	};
@@ -28,4 +29,5 @@ class CfgWeapons
 
 	MACRO_NEW_ARC_HELMET_ITEM(Arc,Arc,Arc.paa)
 	MACRO_NEW_ARC_HELMET_ITEM(Sazi,Sazi,Sazi.paa)
+	MACRO_NEW_ARC_HELMET_ITEM(Rev,Rev,Rev.paa)
 }

@@ -2900,8 +2900,6 @@ class CfgVehicles
         };
     };
 	
-
-
     class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): ls_heli_laatle
     {
         displayName = "LAAT/le Gunship";
@@ -2970,14 +2968,38 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
 						priority=5;
+						hardpoints[]=
+						{
+							"332_A_Pylon"
+						};
+						turret[]={};
+						UIposition[]={0.059999999,0.40000001};
+					};
+					class PylonLeft2: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";  
+						priority=4;
 						hardpoints[]=
 						{
 							"332_C_Pylon"
 						};
-						turret[]={};
-						UIposition[]={0.059999999,0.40000001};
+						UIposition[]={0.079999998,0.34999999};
+					};
+					class PylonLeft3: PylonLeft1
+					{
+						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority=3;
+						hardpoints[]=
+						{
+							"332_B_Pylon"
+						};
+						UIposition[]={0.1,0.30000001};
+					};
+					class PylonRight3: PylonLeft2
+					{
+						UIposition[]={0.58999997,0.30000001};
 					};
 				};
 			};
@@ -4333,6 +4355,7 @@ class CfgVehicles
         maximumLoad = 10000;
 		model="\lsd_vehicles_heli\laati\lsd_heli_laati_ab";
 		displayName="LAAT MK1 (AB)";
+
 		 class TransportItems
         {
 

@@ -160,7 +160,7 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment = "PylonRack_1Rnd_Missile_AGM_02_F";
+						attachment = "PylonRack_Missile_AGM_02_x1";
 						priority = 5;
 						hardpoints[] =
 						{
@@ -251,13 +251,12 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment = "PylonRack_Missile_AMRAAM_D_x1";
+						attachment = "PylonRack_Missile_BIM9X_x2";
 						priority = 5;
 						hardpoints[] =
 						{
 							"SCALPEL_1RND",
 							"B_ASRAAM",
-							"B_AMRAAM_D_DUAL_RAIL",
 							"B_SDB_QUAD_RAIL",
 							"B_GBU12",
 							"B_AGM65_RAIL"

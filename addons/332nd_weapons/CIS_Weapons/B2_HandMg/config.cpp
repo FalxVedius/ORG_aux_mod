@@ -45,6 +45,7 @@ class cfgWeapons
 	class WBK_B2_NormalMod;
 	class MACRO_NEW_WEAPON(B2_Handcannon): WBK_B2_NormalMod
 	{
+		scopeArsenal = 0;
 		displayName = "CIS B2 HandCannon"
 		magazines[] = {
 			MACRO_NEW_MAG(B2Low,1000)

@@ -2,16 +2,17 @@
   "ExpandedNodes": [
     "",
     "\\addons",
+    "\\addons\\332nd_helmets",
+    "\\addons\\332nd_helmets\\aviation",
+    "\\addons\\332nd_helmets\\infantry",
+    "\\addons\\332nd_helmets\\_textures",
+    "\\addons\\332nd_helmets\\_textures\\infantry",
+    "\\addons\\332nd_units\\_textures",
     "\\addons\\332nd_vehicles",
-    "\\addons\\332nd_vehicles\\air",
-    "\\addons\\332nd_vehicles\\air\\ARC170",
-    "\\addons\\332nd_weapons",
-    "\\addons\\332nd_weapons\\DC",
-    "\\addons\\332nd_weapons\\Launchers",
-    "\\addons\\332nd_weapons\\Launchers\\RPS-6",
-    "\\addons\\332nd_weapons\\Westar35SA_Mod",
-    "\\addons\\332nd_weapons\\Z6"
+    "\\addons\\332nd_vehicles\\land",
+    "\\addons\\332nd_vehicles\\land\\ATTE",
+    "\\addons\\332nd_vehicle_weapons"
   ],
-  "SelectedNode": "\\addons\\332nd_weapons\\Westar35SA_Mod\\config.cpp",
+  "SelectedNode": "\\addons\\332nd_helmets\\aviation\\config.cpp",
   "PreviewInSolutionExplorer": true
 }
