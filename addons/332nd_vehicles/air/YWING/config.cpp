@@ -18,111 +18,24 @@ class CfgPatches
 };
 
 
-class SensorTemplatePassiveRadar;
-class SensorTemplateAntiRadiation;
-class SensorTemplateActiveRadar;
-class SensorTemplateIR;
-class SensorTemplateVisual;
-class SensorTemplateMan;
-class SensorTemplateLaser;
-class SensorTemplateNV;
-class SensorTemplateDataLink;
-class DefaultVehicleSystemsDisplayManagerLeft
-{
-	class components;
-};
-class DefaultVehicleSystemsDisplayManagerRight
-{
-	class components;
-};
-class VehicleSystemsTemplateLeftPilot : DefaultVehicleSystemsDisplayManagerLeft
-{
-	class components;
-};
-class VehicleSystemsTemplateRightPilot : DefaultVehicleSystemsDisplayManagerRight
-{
-	class components;
-};
-
-
 class CfgVehicles
 {
-	class Air;
-	class Plane : Air
-	{
-		class NewTurret;
-		class ViewPilot;
-		class HitPoints
-		{
-			class HitHull;
-		};
-	};
-	class Plane_Base_F : Plane
-	{
-		class AnimationSources;
-		class Components;
-	};
-	class Plane_Fighter_03_base_F : Plane_Base_F
-	{
-		class Turrets
-		{
-			class MainTurret;
-		};
-	};
-	class Plane_Fighter_03_dynamicLoadout_base_F : Plane_Fighter_03_base_F
-	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-			};
-		};
-		class Components : Components
-		{
-			class TransportPylonsComponent
-			{
-				class Pylons;
-				class Presets;
-			};
-		};
-		class pilotCamera;
-	};
+
+	class Plane_Fighter_03_dynamicLoadout_base_F;
 
 	class BTL_Base : Plane_Fighter_03_dynamicLoadout_base_F
 	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-			};
-		};
-		class Components : Components
-		{
-			class TransportPylonsComponent
-			{
-				class Pylons;
-				class Presets;
-			};
-		};
+		class Turrets;
 	};
 
 	class 3AS_BTLB_Bomber : BTL_Base
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
-			{
+			class BubbleGun;
+		};
 
-			};
-		};
-		class Components : Components
-		{
-			class TransportPylonsComponent
-			{
-				class Pylons;
-				class Presets;
-			};
-		};
+		class Components;
 	};
 
 	class MACRO_NEW_VEHICLE(air,Y,WING) : 3AS_BTLB_Bomber
@@ -153,10 +66,10 @@ class CfgVehicles
 
 
 		 acceleration = 2000;
-		 //  class EjectionSystem
-		 //  {
-			//EjectionSeatEnabled = 0;										//enable advanced ejection system								
-		 //  };
+		 class EjectionSystem
+		 {
+			 EjectionSeatEnabled = 0;										//enable advanced ejection system								
+		 };
 		   armor = 400;
 		   VTOLPitchInfluence = 10;
 		   VTOLRollInfluence = 10;
@@ -217,21 +130,21 @@ class CfgVehicles
 
 		class Turrets : Turrets
 		{
-			class RearTurret : MainTurret
+			class BubbleGun : BubbleGun
 			{
 			    weapons[] = {
-		 MACRO_NEW_WEAPON(Y_wing_Turret)
-		  };
-		  magazines[] = {
-		MACRO_NEW_MAG(Z95_30mm,1000),
-		MACRO_NEW_MAG(Z95_30mm,1000),
-		MACRO_NEW_MAG(Z95_30mm,1000),
-		MACRO_NEW_MAG(Z95_30mm,1000),
-		MACRO_NEW_MAG(Z95_30mm,1000),
-		MACRO_NEW_MAG(Z95_30mm,1000),
-		MACRO_NEW_MAG(Z95_30mm,1000)
-		};      
-				gunnerType = "332nd_aux_aviation_unit_332nd_flight_ensign";
+					MACRO_NEW_WEAPON(Y_wing_Turret)
+				  };
+				  magazines[] = {
+
+						MACRO_NEW_MAG(Z95_30mm,1000),
+						MACRO_NEW_MAG(Z95_30mm,1000),
+						MACRO_NEW_MAG(Z95_30mm,1000),
+						MACRO_NEW_MAG(Z95_30mm,1000),
+						MACRO_NEW_MAG(Z95_30mm,1000),
+						MACRO_NEW_MAG(Z95_30mm,1000),
+						MACRO_NEW_MAG(Z95_30mm,1000)
+					};
 			};
 		};
 

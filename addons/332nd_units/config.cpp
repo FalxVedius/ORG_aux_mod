@@ -204,6 +204,18 @@ class CfgWeapons
 		};
 	};
 
+	class MACRO_NEW_UNIFORM(airborne,base) : JLTS_CloneArmor
+	{
+		displayName = "[332nd] Airborne Uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(airborne,base);
+			containerClass = "Supply140";
+			uniformType = "Neopren";
+		};
+	};
+
 	//RTO
     class MACRO_NEW_UNIFORM(rto,base): JLTS_CloneArmor
 	{
@@ -2005,6 +2017,245 @@ class CfgVehicles
         // armor, items, unit name
 
     };
+
+	//infantry
+	class MACRO_NEW_UNIT(airborne,base) : JLTS_Clone_P2_DC15A
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Airborne Clone Base";
+
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+
+		uniformClass = MACRO_NEW_UNIFORM(airborne,base);
+		hiddenSelections[] = { "camo1","camo2","insignia" };
+
+		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		nakedUniform = "JLTS_CloneNaked_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		magazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		respawnMagazines[] =
+		{
+			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
+			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
+			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_2(JLTS_stun_mag_long),
+			mag_2(332nd_aux_magazine_332_FRAG_x1)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(ACE_elasticBandage),
+			mag_5(ACE_packingBandage),
+			mag_5(ACE_quikclot),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_4(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter"
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 4;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 4;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 4;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 25;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 20;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 20;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 25;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2750;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 20;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 20;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 20;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2750;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 20;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 20;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+		// define stuff like
+		// armor, items, unit name
+
+	};
 
 	class MACRO_NEW_UNIT(arfbase,base) : JLTS_Clone_P2_DC15A
 	{
@@ -10998,100 +11249,32 @@ class CfgVehicles
 		};
 	};
 
-	class land;
-	class LandVehicle : land
-	{
-		class NewTurret;
-	};
-	class StaticWeapon : LandVehicle
-	{
-		class Turrets;
-		class MainTurret : NewTurret
-		{
-		};
-		class HitPoints;
-	};
+	class StaticWeapon;
 	class StaticMGWeapon : StaticWeapon
 	{
-		class EventHandlers;
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				class ViewOptics;
-				optics = 1;
-			};
-		};
-		class Components;
-		icon = "iconStaticMG";
+		class Turrets;
 	};
 
 	class k_CIS_Droideka : StaticMGWeapon
 	{
-		class EventHandlers;
 		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-
-			};
-		};
-		class Components;
-		icon = "iconStaticMG";
-	};
-
-	class LandVehicle;
-	class StaticWeapon : LandVehicle
-	{
-		class Turrets
 		{
 			class MainTurret;
 		};
 	};
-	class StaticMGWeapon : StaticWeapon
-	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				class ViewOptics;
-			};
-		};
-	};
 
-	class 3AS_Deka_Static_Base : StaticMGWeapon
-	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				class ViewOptics;
-			};
-		};
-	};
+	class 3AS_Deka_Static_Base;
 
 	class 3as_Deka_Static_Sniper_Base : 3AS_Deka_Static_Base
 	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				class ViewOptics;
-			};
-		};
+		class Turrets;
 	};
 
 	class 3as_Deka_Static_Sniper : 3as_Deka_Static_Sniper_Base
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
-			{
-				class ViewOptics : ViewOptics
-				{
-
-				};
-			};
+			class MainTurret;
 		};
 	};
 

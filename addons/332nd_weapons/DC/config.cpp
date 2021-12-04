@@ -187,6 +187,7 @@ class CfgMagazines
 
 	class MACRO_NEW_MAG(Deka_MAG,30) : 30rnd_762x39_AK12_Mag_F
 	{
+		scope = 1;
 		modelSpecial = "";
 		modelSpecialIsProxy = 0;
 		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";

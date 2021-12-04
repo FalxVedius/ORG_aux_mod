@@ -267,7 +267,7 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class Mainturret_super : Mainturret_top
+			class Mainturret_super : Mainturret_super
 			{
 
 			};
@@ -423,6 +423,12 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		hiddenSelectionsTextures[] =
+		{
+			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
+			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
+		};
+
 
 		class Turrets : Turrets
 		{
@@ -523,6 +529,12 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		hiddenSelectionsTextures[] =
+		{
+			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
+			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Grenade_Launcher_Variant.paa"
+		};
+
 
 		class Turrets : Turrets
 		{
@@ -622,6 +634,12 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		hiddenSelectionsTextures[] =
+		{
+			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
+			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Scout_Weapons.paa"
+		};
+
 
 		class Turrets : Turrets
 		{
@@ -661,13 +679,19 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		hiddenSelectionsTextures[] =
+		{
+			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
+			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
+		};
+
 
 		class Turrets : Turrets
 		{
-			class Mainturret_super : Mainturret_top
+			class Mainturret_super : Mainturret_super
 			{
-			turretInfoType="RscOptics_MBT_01_gunner";
-			class OpticsIn: Optics_Gunner_MBT_01
+				turretInfoType="RscOptics_MBT_01_gunner";
+				class OpticsIn: Optics_Gunner_MBT_01
 			  {
 					class Wide: Wide
 					{
@@ -679,81 +703,99 @@ class CfgVehicles
 					{
 					};
 			  };
-			  weapons[] =
-			  {
+				 weapons[] =
+				 {
 			    MACRO_NEW_WEAPON(SuperSaber_40mm),
 				MACRO_NEW_WEAPON(SuperSaber_High)
-			  };
-			  magazines[] =
-			  {
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-			   MACRO_NEW_MAG(MassDriver_AP,2),
-				MACRO_NEW_MAG(SuperSaber_40mm,140),
-				MACRO_NEW_MAG(SuperSaber_40mm,140),
-				MACRO_NEW_MAG(SuperSaber_40mm,140),
-                MACRO_NEW_MAG(SuperSaber_40mm,140),
-				MACRO_NEW_MAG(SuperSaber_40mm,140),
-			  };
+				 };
+				 magazines[] =
+				  {
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+					   MACRO_NEW_MAG(MassDriver_AP,2),
+						MACRO_NEW_MAG(SuperSaber_40mm,140),
+						MACRO_NEW_MAG(SuperSaber_40mm,140),
+						MACRO_NEW_MAG(SuperSaber_40mm,140),
+					    MACRO_NEW_MAG(SuperSaber_40mm,140),
+						MACRO_NEW_MAG(SuperSaber_40mm,140),
+				 };
 
+			};
+			class Mainturret_top : Mainturret_top
+			{
+				turretInfoType = "RscOptics_MBT_01_commander";
+				class OpticsIn : Optics_Commander_01
+				{
+					class Wide : Wide
+					{
+					};
+					class Medium : Medium
+					{
+					};
+					class Narrow : Narrow
+					{
+					};
+				};
+				outGunnerMayFire = 1;
+				inGunnerMayFire = 0;
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{

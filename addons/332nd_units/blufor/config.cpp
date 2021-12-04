@@ -24,19 +24,26 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,332nd_officer),
             MACRO_NEW_UNIT(infantry,332nd_deserter),
 
+            MACRO_NEW_UNIT(airborne,trooper),
+            MACRO_NEW_UNIT(airborne,senior_trooper),
+            MACRO_NEW_UNIT(airborne,veteran_trooper),
+            MACRO_NEW_UNIT(airborne,specialist),
+            MACRO_NEW_UNIT(airborne,corporal),
+            MACRO_NEW_UNIT(airborne,sergeant),
+
             MACRO_NEW_UNIT(rto,332nd_rto_cadet),
             MACRO_NEW_UNIT(rto,332nd_rto_trooper),
             MACRO_NEW_UNIT(rto,332nd_rto_senior_trooper),
             MACRO_NEW_UNIT(rto,332nd_rto_veteran_trooper),
             MACRO_NEW_UNIT(rto,332nd_rto_specialist),
-            MACRO_NEW_UNIT(rto,332nd_rto_corporal),
+            //MACRO_NEW_UNIT(rto,332nd_rto_corporal),
 
             MACRO_NEW_UNIT(medic,332nd_medic_cadet),
             MACRO_NEW_UNIT(medic,332nd_medic_trooper),
             MACRO_NEW_UNIT(medic,332nd_medic_senior_trooper),
             MACRO_NEW_UNIT(medic,332nd_medic_veteran_trooper),
             MACRO_NEW_UNIT(medic,332nd_medic_specialist),
-            MACRO_NEW_UNIT(medic,332nd_medic_corporal),
+            //MACRO_NEW_UNIT(medic,332nd_medic_corporal),
 
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_1),
@@ -109,6 +116,13 @@ class CfgPatches
             MACRO_NEW_UNIT(scenario,332nd_scenario_Shadow),
 
             MACRO_NEW_UNIT(captain,332nd_captain),
+
+
+            //Custom ------------------------
+
+            //Blast
+            MACRO_NEW_UNIT(aviation,Blast),
+
 		};
 		weapons[] = {
             MACRO_NEW_UNIFORM(recruit,332nd_recruit),
@@ -124,19 +138,26 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,332nd_original),
             MACRO_NEW_UNIFORM(infantry,332nd_deserter),
 
+            MACRO_NEW_UNIFORM(airborne,trooper),
+            MACRO_NEW_UNIFORM(airborne,senior_trooper),
+            MACRO_NEW_UNIFORM(airborne,veteran_trooper),
+            MACRO_NEW_UNIFORM(airborne,specialist),
+            MACRO_NEW_UNIFORM(airborne,corporal),
+            MACRO_NEW_UNIFORM(airborne,sergeant),
+
             MACRO_NEW_UNIFORM(rto,332nd_rto_cadet),
             MACRO_NEW_UNIFORM(rto,332nd_rto_trooper),
             MACRO_NEW_UNIFORM(rto,332nd_rto_senior_trooper),
             MACRO_NEW_UNIFORM(rto,332nd_rto_veteran_trooper),
             MACRO_NEW_UNIFORM(rto,332nd_rto_specialist),
-            MACRO_NEW_UNIFORM(rto,332nd_rto_corporal),
+            //MACRO_NEW_UNIFORM(rto,332nd_rto_corporal),
 
             MACRO_NEW_UNIFORM(medic,332nd_medic_cadet),
             MACRO_NEW_UNIFORM(medic,332nd_medic_trooper),
             MACRO_NEW_UNIFORM(medic,332nd_medic_senior_trooper),
             MACRO_NEW_UNIFORM(medic,332nd_medic_veteran_trooper),
             MACRO_NEW_UNIFORM(medic,332nd_medic_specialist),
-            MACRO_NEW_UNIFORM(medic,332nd_medic_corporal),
+            //MACRO_NEW_UNIFORM(medic,332nd_medic_corporal),
 
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer),
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_1),
@@ -210,6 +231,13 @@ class CfgPatches
 
             MACRO_NEW_UNIFORM(captain,332nd_captain),
 
+
+            //Custom ------------------------
+
+            //Blast
+            MACRO_NEW_UNIFORM(aviation,Blast),
+            
+
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
 			 MACRO_NEW_NVG(Specialist_Visor_black),
@@ -235,6 +263,11 @@ class CfgWeapons
         class ItemInfo;
     };
     class MACRO_NEW_UNIFORM(infantry,base): JLTS_CloneArmor
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(airborne,base) : JLTS_CloneArmor
     {
         class ItemInfo;
     };
@@ -320,13 +353,21 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_original,Original,332nd_original)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_deserter,Deserter,332nd_deserter)
 
+    //Airborne
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(trooper,Trooper,trooper)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(senior_trooper,Senior,senior_trooper)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(veteran_trooper,Veteran,veteran_trooper)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(specialist,Specialist,specialist)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(corporal,Corporal,corporal)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(sergeant,Sergeant,sergeant)
+
     //RTO
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_cadet,Cadet,332nd_rto_cadet)
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_trooper,Trooper,332nd_rto_trooper)
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_senior_trooper,Senior Trooper,332nd_rto_senior_trooper)
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_veteran_trooper,Veteran Trooper,332nd_rto_veteran_trooper)
     MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_specialist,Specialist,332nd_rto_specialist)
-    MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_corporal,Corporal,332nd_rto_corporal)
+    //MACRO_NEW_RTO_UNIFORM_ITEM(332nd_rto_corporal,Corporal,332nd_rto_corporal)
 
     //Medic
     MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_cadet,Cadet,332nd_medic_cadet)
@@ -334,7 +375,7 @@ class CfgWeapons
     MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_senior_trooper,Senior Trooper,332nd_medic_senior_trooper)
     MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_veteran_trooper,Veteran Trooper,332nd_medic_veteran_trooper)
     MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_specialist,Specialist,332nd_medic_specialist)
-    MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_corporal,Corporal,332nd_medic_corporal)
+    //MACRO_NEW_MEDIC_UNIFORM_ITEM(332nd_medic_corporal,Corporal,332nd_medic_corporal)
 
     //Warrant Officer
     MACRO_NEW_CWO_UNIFORM_ITEM(332nd_warrant_officer,CWO,332nd_warrant_officer)
@@ -420,6 +461,12 @@ class CfgWeapons
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(332nd_captain,Captain,332nd_captain)
 
 
+    //Custom ----------------------------------------
+
+    //Blast
+    MACRO_NEW_AVI_UNIFORM_ITEM(Blast,Blast,Blast)
+
+
     #include "_nvg.hpp"
     #include "_bino.hpp"
 };
@@ -428,6 +475,7 @@ class CfgVehicles
 {
     class MACRO_NEW_UNIT(recruit,base);
     class MACRO_NEW_UNIT(infantry,base);
+    class MACRO_NEW_UNIT(airborne,base);
     class MACRO_NEW_UNIT(aviation,base);
     class MACRO_NEW_UNIT(mech,base);
     class MACRO_NEW_UNIT(cwo,base);
@@ -460,13 +508,21 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(332nd_original,Clone Original Armor,332nd_original,trooper\332nd_Original_Upper_Armor.paa,trooper\332nd_Original_Lower_Armor.paa)
     MACRO_NEW_INF_UNIT(332nd_deserter,Clone Deserter,332nd_deserter,clone_deserter\332nd_Rebal_Armor_upper_ca.paa,clone_deserter\332nd_Rebal_lower_ca.paa)
 
+    //Airborne
+    MACRO_NEW_AIRBORNE_UNIT(trooper,Clone Trooper,trooper,trooper\Trooper_Upper.paa,trooper\Trooper_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(senior_trooper,Clone Senior Trooper,senior_trooper,senior_trooper\Senior_Trooper_Upper.paa,senior_trooper\Senior_Trooper_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(veteran_trooper,Clone Veteran Trooper,veteran_trooper,veteran_trooper\Veteran_Trooper_Upper.paa,veteran_trooper\Veteran_Trooper_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(specialist,Clone Specialist,specialist,specialist\csp1_Upper.paa,specialist\csp1_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(corporal,Clone Corporal,corporal,corporal\Corporal_Upper.paa,corporal\Corporal_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(sergeant,Clone Sergeant,sergeant,sergeant\Sergeant_Upper.paa,sergeant\Sergeant_Lower.paa)
+
     //RTO
     MACRO_NEW_RTO_UNIT(332nd_rto_cadet,RTO Cadet,332nd_rto_cadet,cadet\rto_cadet_upper.paa,cadet\rto_cadet_lower.paa)
     MACRO_NEW_RTO_UNIT(332nd_rto_trooper,RTO Trooper,332nd_rto_trooper,trooper\rto_trooper_upper.paa,trooper\rto_trooper_lower.paa)
     MACRO_NEW_RTO_UNIT(332nd_rto_senior_trooper,RTO Senior Trooper,332nd_rto_senior_trooper,senior_trooper\rto_senior_trooper_upper.paa,senior_trooper\rto_senior_trooper_lower.paa)
     MACRO_NEW_RTO_UNIT(332nd_rto_specialist,RTO Specialist,332nd_rto_specialist,specialist_four\rto_csp4_upper.paa,specialist_four\rto_csp4_lower.paa)
     MACRO_NEW_RTO_UNIT(332nd_rto_veteran_trooper,RTO Veteran Trooper,332nd_rto_veteran_trooper,veteran_trooper\rto_veteran_trooper_upper.paa,veteran_trooper\rto_veteran_trooper_lower.paa)
-    MACRO_NEW_RTO_UNIT(332nd_rto_corporal,RTO Corporal,332nd_rto_corporal,corporal\rto_corporal_upper.paa,corporal\rto_corporal_lower.paa)
+    //MACRO_NEW_RTO_UNIT(332nd_rto_corporal,RTO Corporal,332nd_rto_corporal,corporal\rto_corporal_upper.paa,corporal\rto_corporal_lower.paa)
 
 
     //Medic
@@ -475,7 +531,7 @@ class CfgVehicles
     MACRO_NEW_MEDIC_UNIT(332nd_medic_senior_trooper,Medic Senior Trooper,332nd_medic_senior_trooper,senior_trooper\medic_senior_trooper_upper.paa,senior_trooper\medic_senior_trooper_lower.paa)
     MACRO_NEW_MEDIC_UNIT(332nd_medic_veteran_trooper,Medic Veteran Trooper,332nd_medic_veteran_trooper,veteran_trooper\medic_veteran_trooper_upper.paa,veteran_trooper\medic_veteran_trooper_lower.paa)
     MACRO_NEW_MEDIC_UNIT(332nd_medic_specialist,Medic Specialist,332nd_medic_specialist,specialist_four\medic_csp4_upper.paa,specialist_four\medic_csp4_lower.paa)
-    MACRO_NEW_MEDIC_UNIT(332nd_medic_corporal,Medic Corporal,332nd_medic_corporal,corporal\medic_corporal_upper.paa,corporal\medic_corporal_lower.paa)
+    //MACRO_NEW_MEDIC_UNIT(332nd_medic_corporal,Medic Corporal,332nd_medic_corporal,corporal\medic_corporal_upper.paa,corporal\medic_corporal_lower.paa)
 
     //Warrant Officer
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer,CWO,332nd_warrant_officer,warrant_officer\cwo_top.paa,warrant_officer\cwo_bottom.paa)
@@ -559,4 +615,11 @@ class CfgVehicles
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Shadow,Clone (Shadow),332nd_scenario_Shadow,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Shadow)
 
     MACRO_NEW_CAPTAIN_UNIT(332nd_captain,Clone Captain,332nd_captain,captain\Captain_Upper.paa,captain\Captain_Lower.paa)
+
+
+    //Custom ----------------------------------------
+    
+    //Blast
+    MACRO_NEW_AVI_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\captain_lower.paa)
+
 };

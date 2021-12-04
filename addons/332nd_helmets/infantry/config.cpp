@@ -20,13 +20,11 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,george),
 			MACRO_NEW_HELMET(infantry,Riddle),
 			MACRO_NEW_HELMET(infantry,Hoggy),
-			MACRO_NEW_HELMET(infantry,Cross),
 			MACRO_NEW_HELMET(infantry,Falx),
 			MACRO_NEW_HELMET(infantry,Deserter),
 			MACRO_NEW_HELMET(infantry,Poseidon_V1),
 			MACRO_NEW_HELMET(infantry,Frost),
 			MACRO_NEW_HELMET(infantry,332nd_recruit),
-			MACRO_NEW_HELMET(infantry,Rev),
 			MACRO_NEW_HELMET(infantry,Bugs),
 			MACRO_NEW_HELMET(infantry,Marshal),
 			MACRO_NEW_HELMET(infantry,Lasagna),
@@ -40,6 +38,14 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Cutter),
 			MACRO_NEW_HELMET(infantry,Sentinel),
 			MACRO_NEW_HELMET(infantry,Dark),
+			MACRO_NEW_HELMET(infantry,Tidal),
+			MACRO_NEW_HELMET(infantry,Corporal),
+			MACRO_NEW_HELMET(infantry,Specialist),
+			MACRO_NEW_HELMET(infantry,Deva),
+			MACRO_NEW_HELMET(infantry,Vault),
+
+			//MACRO_NEW_HELMET(infantry,Cross),
+			//MACRO_NEW_HELMET(infantry,Rev),
         };
 		weapons[] = {};
 	};
@@ -59,15 +65,13 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(george,George,George.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Riddle,Riddle,Riddle.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Hoggy,Hoggy,Hoggy.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Poseidon,Poseidon,Poseidon_V1.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Cross,Cross,Cross.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Poseidon,Poseidon,Poseidon.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Falx,Falx,Falx.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Frost,Frost,Frost.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deserter,Deserter,332nd_Rebal_Helmet_phase_2_ca.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bugs,Bugs,Bugs.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Marshal,Marshal,Marshal.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Lasagna,Lasagna,Lasagna.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Lasagna,Webs,Lasagna.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Aspect,Aspect,Aspect.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Beat,Beat,Beat.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Grass,Grass,Grass.paa)
@@ -78,4 +82,12 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sentinel,Sentinel,Sentinel.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Dark,Dark,Dark.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Tidal,Tidal,Tidal.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Corporal,Corporal,Corporal.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Specialist,Specialist,Specialist.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Deva,Deva,Deva.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Vault,Vault,Vault.paa)
+
+	//MACRO_NEW_INF_HELMET_ITEM(Cross,Cross,Cross.paa)
+	//MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 };
