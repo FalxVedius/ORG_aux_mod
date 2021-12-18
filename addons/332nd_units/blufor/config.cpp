@@ -31,18 +31,18 @@ class CfgPatches
             MACRO_NEW_UNIT(airborne,corporal),
             MACRO_NEW_UNIT(airborne,sergeant),
 
-            MACRO_NEW_UNIT(rto,332nd_rto_cadet),
-            MACRO_NEW_UNIT(rto,332nd_rto_trooper),
-            MACRO_NEW_UNIT(rto,332nd_rto_senior_trooper),
-            MACRO_NEW_UNIT(rto,332nd_rto_veteran_trooper),
-            MACRO_NEW_UNIT(rto,332nd_rto_specialist),
+            //MACRO_NEW_UNIT(rto,332nd_rto_cadet),
+            //MACRO_NEW_UNIT(rto,332nd_rto_trooper),
+            //MACRO_NEW_UNIT(rto,332nd_rto_senior_trooper),
+            //MACRO_NEW_UNIT(rto,332nd_rto_veteran_trooper),
+            //MACRO_NEW_UNIT(rto,332nd_rto_specialist),
             //MACRO_NEW_UNIT(rto,332nd_rto_corporal),
 
-            MACRO_NEW_UNIT(medic,332nd_medic_cadet),
-            MACRO_NEW_UNIT(medic,332nd_medic_trooper),
-            MACRO_NEW_UNIT(medic,332nd_medic_senior_trooper),
-            MACRO_NEW_UNIT(medic,332nd_medic_veteran_trooper),
-            MACRO_NEW_UNIT(medic,332nd_medic_specialist),
+            //MACRO_NEW_UNIT(medic,332nd_medic_cadet),
+            //MACRO_NEW_UNIT(medic,332nd_medic_trooper),
+            //MACRO_NEW_UNIT(medic,332nd_medic_senior_trooper),
+            //MACRO_NEW_UNIT(medic,332nd_medic_veteran_trooper),
+            //MACRO_NEW_UNIT(medic,332nd_medic_specialist),
             //MACRO_NEW_UNIT(medic,332nd_medic_corporal),
 
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer),
@@ -50,6 +50,7 @@ class CfgPatches
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_2),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_3),
             MACRO_NEW_UNIT(cwo,332nd_warrant_officer_4),
+            MACRO_NEW_UNIT(cwo,332nd_warrant_officer_5),
 
             MACRO_NEW_UNIT(aviation,332nd_flight_cadet),
             MACRO_NEW_UNIT(aviation,332nd_flight_ensign),
@@ -122,6 +123,11 @@ class CfgPatches
 
             //Blast
             MACRO_NEW_UNIT(aviation,Blast),
+            //Falx
+            MACRO_NEW_UNIT(captain,Falx),
+            //Halligan
+            MACRO_NEW_UNIT(airborne,Halligan),
+
 
 		};
 		weapons[] = {
@@ -145,18 +151,18 @@ class CfgPatches
             MACRO_NEW_UNIFORM(airborne,corporal),
             MACRO_NEW_UNIFORM(airborne,sergeant),
 
-            MACRO_NEW_UNIFORM(rto,332nd_rto_cadet),
-            MACRO_NEW_UNIFORM(rto,332nd_rto_trooper),
-            MACRO_NEW_UNIFORM(rto,332nd_rto_senior_trooper),
-            MACRO_NEW_UNIFORM(rto,332nd_rto_veteran_trooper),
-            MACRO_NEW_UNIFORM(rto,332nd_rto_specialist),
+            //MACRO_NEW_UNIFORM(rto,332nd_rto_cadet),
+            //MACRO_NEW_UNIFORM(rto,332nd_rto_trooper),
+            //MACRO_NEW_UNIFORM(rto,332nd_rto_senior_trooper),
+            //MACRO_NEW_UNIFORM(rto,332nd_rto_veteran_trooper),
+            //MACRO_NEW_UNIFORM(rto,332nd_rto_specialist),
             //MACRO_NEW_UNIFORM(rto,332nd_rto_corporal),
 
-            MACRO_NEW_UNIFORM(medic,332nd_medic_cadet),
-            MACRO_NEW_UNIFORM(medic,332nd_medic_trooper),
-            MACRO_NEW_UNIFORM(medic,332nd_medic_senior_trooper),
-            MACRO_NEW_UNIFORM(medic,332nd_medic_veteran_trooper),
-            MACRO_NEW_UNIFORM(medic,332nd_medic_specialist),
+            //MACRO_NEW_UNIFORM(medic,332nd_medic_cadet),
+            //MACRO_NEW_UNIFORM(medic,332nd_medic_trooper),
+            //MACRO_NEW_UNIFORM(medic,332nd_medic_senior_trooper),
+            //MACRO_NEW_UNIFORM(medic,332nd_medic_veteran_trooper),
+            //MACRO_NEW_UNIFORM(medic,332nd_medic_specialist),
             //MACRO_NEW_UNIFORM(medic,332nd_medic_corporal),
 
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer),
@@ -164,6 +170,7 @@ class CfgPatches
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_2),
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_3),
             MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_4),
+            MACRO_NEW_UNIFORM(cwo,332nd_warrant_officer_5),
 
             MACRO_NEW_UNIFORM(aviation,332nd_flight_cadet),
             MACRO_NEW_UNIFORM(aviation,332nd_flight_ensign),
@@ -236,6 +243,10 @@ class CfgPatches
 
             //Blast
             MACRO_NEW_UNIFORM(aviation,Blast),
+            //Falx
+            MACRO_NEW_UNIFORM(captain,Falx),
+            //Halligan
+            MACRO_NEW_UNIFORM(airborne,Halligan),
             
 
             // ----- nvgs -----
@@ -383,6 +394,7 @@ class CfgWeapons
     MACRO_NEW_CWO_UNIFORM_ITEM(332nd_warrant_officer_2,CWO-2,332nd_warrant_officer_2)
     MACRO_NEW_CWO_UNIFORM_ITEM(332nd_warrant_officer_3,CWO-3,332nd_warrant_officer_3)
     MACRO_NEW_CWO_UNIFORM_ITEM(332nd_warrant_officer_4,CWO-4,332nd_warrant_officer_4)
+    MACRO_NEW_CWO_UNIFORM_ITEM(332nd_warrant_officer_5,CWO-5,332nd_warrant_officer_5)
 
     //Aviation
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_cadet,Flight Cadet,332nd_flight_cadet)
@@ -465,6 +477,10 @@ class CfgWeapons
 
     //Blast
     MACRO_NEW_AVI_UNIFORM_ITEM(Blast,Blast,Blast)
+    //Falx
+    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Falx,Falx,Falx)
+    //Halligan
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Halligan,Halligan,Halligan)
 
 
     #include "_nvg.hpp"
@@ -539,6 +555,7 @@ class CfgVehicles
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer_2,CWO 2,332nd_warrant_officer_2,warrant_officer_2\cwo2_top.paa,warrant_officer_2\cwo2_bottom.paa)
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer_3,CWO 3,332nd_warrant_officer_3,warrant_officer_3\cwo3_top.paa,warrant_officer_3\cwo3_bottom.paa)
     MACRO_NEW_CWO_UNIT(332nd_warrant_officer_4,CWO 4,332nd_warrant_officer_4,warrant_officer_4\cwo4_top.paa,warrant_officer_4\cwo4_bottom.paa)
+    MACRO_NEW_CWO_UNIT(332nd_warrant_officer_5,CWO 5,332nd_warrant_officer_5,warrant_officer_5\cwo5_top.paa,warrant_officer_5\cwo5_bottom.paa)
 
     //Mechanized
     MACRO_NEW_MECHANIZED_UNIT(332nd_mechanized_trooper,Trooper,332nd_mechanized_trooper,trooper\Mechanizedupper_ca.paa,trooper\Mechanizedlower_ca.paa)
@@ -621,5 +638,9 @@ class CfgVehicles
     
     //Blast
     MACRO_NEW_AVI_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\captain_lower.paa)
+    //Falx
+    MACRO_NEW_CAPTAIN_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Captain_Lower.paa)
+    //Halligan
+    MACRO_NEW_AIRBORNE_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Sergeant_Lower.paa)
 
 };
