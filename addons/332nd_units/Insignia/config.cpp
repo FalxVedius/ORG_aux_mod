@@ -95,4 +95,46 @@ class CfgUnitInsignia
 		texture = "\332nd_units\Insignia\data\Seraph_Roundel.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
+	class 332nd_GreyMedic
+	{
+		displayName = "[332nd] Medic Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\GreyMedic.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_GreyRTO
+	{
+		displayName = "[332nd] RTO Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\GreyRTO.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_Medic
+	{
+		displayName = "[332nd] Medic Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Medic.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_RTO
+	{
+		displayName = "[332nd] RTO Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\RTO.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_WhiteMedic
+	{
+		displayName = "[332nd] Medic Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\WhiteMedic.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_WhiteRTO
+	{
+		displayName = "[332nd] RTO Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\WhiteRTO.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
 };
