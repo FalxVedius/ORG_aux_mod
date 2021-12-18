@@ -37,13 +37,13 @@ class cfgWeapons
         cursoraim="332_Chevron";
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
-		recoil="recoil_zafir";
+		recoil="recoil_spar";
 		recoilProne = "recoil_spar";
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws_mg";
 
 		magazines[] = {
-			MACRO_NEW_MAG(DC_15L,125),
-			MACRO_NEW_MAG(DC_15L_T,125)
+			MACRO_NEW_MAG(DC_15L,200),
+			MACRO_NEW_MAG(DC_15L_T,200)
 		};
 
 		class WeaponSlotsInfo: WeaponSlotsInfo
@@ -138,14 +138,14 @@ class cfgWeapons
 				};
 			};
 			burst=2;
-			reloadTime=0.11;
-			dispersion=0.001;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=250;
-			midRangeProbab=0.69999999;
-			maxRange=450;
-			maxRangeProbab=0.30000001;
+			reloadTime=0.05;
+			dispersion = 0.0007;
+			minRange = 2;
+			minRangeProbab = 0.5;
+			midRange = 200;
+			midRangeProbab = 0.69999999;
+			maxRange = 400;
+			maxRangeProbab = 0.30000001;
 		};
 			
 			class WeaponSlotsInfo: WeaponSlotsInfo

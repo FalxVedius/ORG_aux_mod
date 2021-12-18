@@ -1660,7 +1660,6 @@ class CfgWeapons
 			maxRangeProbab = 0.0099999998;
 		};
 	};
-	};
 
 	class autocannon_40mm_CTWS;
 	class MACRO_NEW_WEAPON(RX200_40mm): autocannon_40mm_CTWS
