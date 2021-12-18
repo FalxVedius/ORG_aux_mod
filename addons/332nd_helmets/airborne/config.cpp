@@ -22,6 +22,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(ab,Corporal),
 			MACRO_NEW_HELMET(ab,Specialist),
 			MACRO_NEW_HELMET(ab,Sergeant),
+			MACRO_NEW_HELMET(ab,Halligan)
         };
 		weapons[] = {};
 	};
@@ -42,4 +43,5 @@ class CfgWeapons
 	MACRO_NEW_AB_HELMET_ITEM(Corporal,Corporal,Corporal.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Specialist,Specialist,Specialist.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Sergeant,Sergeant,Sergeant.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 };
