@@ -6,7 +6,7 @@ class CfgPatches
 {
     class MACRO_PATCH_NAME(indep_units)
     {
-        author = "Bugs";
+        author = "Bugs+Thunder";
         addonRootClass = MACRO_PATCH_NAME(units);
         requiredAddons[] =
         {
