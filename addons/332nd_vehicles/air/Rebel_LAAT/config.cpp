@@ -356,7 +356,7 @@ class CfgVehicles
             MACRO_LAAT_TEXTURES\Rebel_Base\Rebel_Cockpit\Rebel_cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
         };
 
-        crew = MACRO_NEW_UNIT(rebel, 332nd_indep_rebel);
+        crew = MACRO_NEW_UNIT(rebel,332nd_indep_rebel);
         typicalcargo[] = { MACRO_NEW_UNIT(rebel,332nd_indep_rebel) };
 
 		class Components: Components
@@ -387,6 +387,17 @@ class CfgVehicles
 						};
 						UIposition[]={0.079999998,0.34999999};
 					};
+					class PylonLeft3 : PylonLeft1
+					{
+						attachment = "332nd_aux_magazine_Pylon_AA_Med_x3";
+						priority = 5;
+						hardpoints[] =
+						{
+							"332_A_Pylon"
+						};
+						turret[] = {};
+						UIposition[] = { 0.059999999,0.40000001 };
+					};
 					class PylonRight2: PylonLeft2
 					{
 						mirroredMissilePos=2;
@@ -396,6 +407,11 @@ class CfgVehicles
 					{
 						mirroredMissilePos=1;
 						UIposition[]={0.63999999,0.40000001};
+					};
+					class PylonRight3 : PylonLeft3
+					{
+						mirroredMissilePos = 3;
+						UIposition[] = { 0.63999999,0.40000001 };
 					};
 				};
 			//	class Presets
@@ -454,13 +470,17 @@ class CfgVehicles
 			{
 				weapons[] = {
 					MACRO_AIR_COMMON_WEAPS,
+					MACRO_NEW_WEAPON(LAAT_40mm),
 					"ParticleBeamCannon"
 
 				};
 				magazines[] = {
 					MACRO_AIR_COMMON_MAGS,
+					MACRO_NEW_MAG(LAAT_40mm,600),
+					MACRO_NEW_MAG(Air_Dumb_rocket,24),
 					"Laser_Battery_F","Laser_Battery_F"
 				};
+
 			};
 			class cargoTurret_rearl : cargoTurret_rearl
 			{

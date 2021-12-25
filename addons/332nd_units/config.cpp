@@ -12834,7 +12834,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Medic_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
@@ -13052,7 +13052,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Heavy_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
@@ -13060,6 +13060,7 @@ class CfgVehicles
 		weapons[] = {"SWLW_LS150" ,"Throw","Put"};
 		respawnWeapons[] = { "SWLW_LS150","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Heavy_pack";
 		magazines[] =
 		{
 			mag_5(SWLW_LS150_mag)
@@ -13986,7 +13987,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Spotter_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic"};
@@ -14222,7 +14223,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Shocker_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
@@ -14458,7 +14459,7 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"\332nd_units\_textures\Indep\Reprogramed Driod\Reprogramed_Driod_Base.paa"
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Breacher_Redroid.paa"
 		};
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
@@ -14466,7 +14467,7 @@ class CfgVehicles
 		weapons[] = { "332nd_aux_weapon_DP_23" ,"Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_DP_23","Throw","Put"};
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_pack";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Breacher_pack";
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_DP23_x12Wide)
@@ -14910,7 +14911,7 @@ class CfgVehicles
 		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AT_pack";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_AT_pack";
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_DC_15s_x60),
@@ -15139,7 +15140,7 @@ class CfgVehicles
 		weapons[] = { "332nd_aux_weapon_Valken38x","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_Valken38x","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Sniper_pack";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_Sniper_pack";
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_DC_15x_x2)
@@ -15360,7 +15361,7 @@ class CfgVehicles
 		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Medic_pack";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_Medic_pack";
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_DC_15s_x60),
