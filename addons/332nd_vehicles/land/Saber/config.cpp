@@ -474,19 +474,19 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
-			turretInfoType="RscOptics_MBT_01_commander";
-			class OpticsIn: Optics_Commander_01
-						{
-							class Wide: Wide
-							{
-							};
-							class Medium: Medium
-							{
-							};
-							class Narrow: Narrow
-							{
-							};
-						};
+				turretInfoType="RscOptics_MBT_01_commander";
+				class OpticsIn: Optics_Commander_01
+				{
+					class Wide: Wide
+					{
+					};
+					class Medium: Medium
+					{
+					};
+					class Narrow: Narrow
+					{
+					};
+				};
 			weapons[] =
 			  {
 			    MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -705,7 +705,7 @@ class CfgVehicles
 			  };
 				 weapons[] =
 				 {
-			    MACRO_NEW_WEAPON(SuperSaber_40mm),
+			    //MACRO_NEW_WEAPON(SuperSaber_40mm),
 				MACRO_NEW_WEAPON(SuperSaber_High)
 				 };
 				 magazines[] =
@@ -779,7 +779,7 @@ class CfgVehicles
 				 };
 
 			};
-			class Mainturret_top : Mainturret_top
+			class Mainturret_top : Mainturret_super
 			{
 				turretInfoType = "RscOptics_MBT_01_commander";
 				class OpticsIn : Optics_Commander_01

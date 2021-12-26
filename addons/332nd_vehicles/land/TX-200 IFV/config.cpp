@@ -66,6 +66,7 @@ class CfgVehicles
 		// 	class HitRTrack;
 		// };
 	};
+
     class MACRO_NEW_VEHICLE(Land,TX,200):O_APC_Tracked_02_cannon_F
     {
         displayName = "[332nd] *WIP* TX-200";

@@ -122,6 +122,11 @@ class CfgVehicles
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		hiddenselectionstextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_JTAC.paa
+		};
 	}
 	class JLTS_Clone_belt_bag;
 	class MACRO_NEW_BACKPACK(blufor,332nd_belt_bag): JLTS_Clone_belt_bag
@@ -157,6 +162,12 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack): JLTS_Clone_backpack_eod
 	{
 		displayName = "[332nd] Demolition Pack";
+
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\EOD_backpack.paa
+		};
+
 		maximumLoad = 400;
 
 		editorCategory = "EdCat_332nd_Props";
@@ -166,6 +177,7 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_AT): ls_gar_rocket_backpack
 	{
 		displayName = "[332nd] AT Pack";
+
 		maximumLoad = 375;
 
 		editorCategory = "EdCat_332nd_Props";

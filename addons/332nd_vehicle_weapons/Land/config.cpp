@@ -835,8 +835,8 @@ class CfgWeapons
 		};
 	};
 
-
-	class MACRO_NEW_WEAPON(SuperSaber_High): 3AS_Sabre_Cannons
+	class 3AS_Sabre_Cannons_Super;
+	class MACRO_NEW_WEAPON(SuperSaber_High): 3AS_Sabre_Cannons_Super
 	{
 	   	magazineWell[] = {};
 		magazines[] = {
@@ -930,7 +930,7 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(SuperSaber_40mm): 3AS_Sabre_Cannons
+	class MACRO_NEW_WEAPON(SuperSaber_40mm): 3AS_Sabre_Cannons_Super
 	{
 	   	magazineWell[] = {};
 		magazines[] = {

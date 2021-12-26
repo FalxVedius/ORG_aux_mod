@@ -14,10 +14,10 @@ if (!is3DEN) then {
 
                     _speed = speed _v;// positive and negative speed to check if vehicle is going forwards or backwards
 
-                    if (_speed >= 0.1 or _speed <= -0.1) then {
+                    if (_speed >= 0.1 || _speed <= -0.1) then {
                         
 						"Starting Animation" remoteExec ["hint"];
-                        _v animateSource ["Walk",2,2.0];
+                        _v animateSource ["Walk",2,1.7];
 
 						sleep 1.68;
 						

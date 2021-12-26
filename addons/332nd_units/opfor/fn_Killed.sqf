@@ -213,3 +213,9 @@ if(_friendlyFoundFlag == true && alive friendlyUnitPos) then
 
 
 deleteVehicle _obj;
+
+if (isPlayer _killer) then {
+
+	_killer addPlayerScores [1, 0, 0, 0, 0];
+
+};
