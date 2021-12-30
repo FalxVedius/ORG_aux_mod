@@ -17,14 +17,16 @@ if (!is3DEN) then {
                     if (_speed >= 0.1 || _speed <= -0.1) then {
                         
 						"Starting Animation" remoteExec ["hint"];
-                        _v animateSource ["Walk",2,1.7];
+                        _v animateSource ["Walk",2,2.7];
 
-						sleep 1.68;
+						sleep 1.5;
 						
                         "Reseting Animation" remoteExec ["hint"];
 
                         _v animateSource ["Walk",0,10000];
 						"Animation Reset" remoteExec ["hint"];
+						
+						sleep 0.05;
 						
 						
                     } else {

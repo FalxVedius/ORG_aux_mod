@@ -75,12 +75,14 @@ class CfgVehicles
 	class Helicopter;
 	class Items_base_F;
 	class Wreck_base_F;
+
 	class Helicopter_Base_F : Helicopter
 	{
 		class Turrets;
 		class HitPoints;
 		class ViewPilot;
 	};
+
 	class Helicopter_Base_H : Helicopter_Base_F
 	{
 		class Turrets : Turrets
@@ -262,6 +264,7 @@ class CfgVehicles
 			class cargoTurret_rightDoor_pos16;
 		};
 	};
+
 	class ls_heli_laatle : ls_laatle_base
 	{
 		class Components;
@@ -323,6 +326,14 @@ class CfgVehicles
 		crewCrashProtection=1;
         faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
+
+		cargoAction[] = { "passenger_flatground_leanright","passenger_flatground_leanleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright" };
+
+
+		transportsoldier = 16;
+		memoryPointsGetInCargo[] = { "pos cargo 5", "pos cargo 18"};
+		memoryPointsGetInCargoDir[] = { "pos_cargo_dir" };
+		memoryPointsGetInCargoPrecise[] = { "" };
 
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
@@ -479,86 +490,6 @@ class CfgVehicles
 					MACRO_AIR_COMMON_MAGS,
 					"Laser_Battery_F","Laser_Battery_F"
 				};
-			};
-			class cargoTurret_rearl : cargoTurret_rearl
-			{
-
-			};
-			class cargoTurret_rearr : cargoTurret_rearr
-			{
-
-			};
-			class cargoturret_left_1 : cargoturret_left_1
-			{
-
-			};
-			class cargoTurret_left_2 : cargoTurret_left_2
-			{
-
-			};
-			class cargoTurret_left_3 : cargoTurret_left_3
-			{
-
-			};
-			class cargoTurret_left_4 : cargoTurret_left_4
-			{
-
-			};
-			class cargoTurret_left_5 : cargoTurret_left_5
-			{
-
-			};
-			class cargoTurret_left_14 : cargoTurret_left_14
-			{
-
-			};
-			class cargoturret_right_1 : cargoturret_right_1
-			{
-
-			};
-			class cargoTurret_right_2 : cargoTurret_right_2
-			{
-
-			};
-			class cargoTurret_right_3 : cargoTurret_right_3
-			{
-
-			};
-			class cargoTurret_right_4 : cargoTurret_right_4
-			{
-
-			};
-			class cargoTurret_right_5 : cargoTurret_right_5
-			{
-
-			};
-			class CargoTurret_right_13 : CargoTurret_right_13
-			{
-
-			};
-			class CargoTurret_right_17 : CargoTurret_right_17
-			{
-
-			};
-			class CargoTurret_right_18 : CargoTurret_right_18
-			{
-
-			};
-			class CargoTurret_right_19 : CargoTurret_right_19
-			{
-
-			};
-			class CargoTurret_left_20 : CargoTurret_left_20
-			{
-
-			};
-			class CargoTurret_left_21 : CargoTurret_left_21
-			{
-
-			};
-			class CargoTurret_left_22 : CargoTurret_left_22
-			{
-
 			};
 		};
 
@@ -3518,17 +3449,17 @@ class CfgVehicles
                 count = 50;
             };
 
-            class DC15L_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_x125";
-                count = 100;
-            };
+			class DC15L_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_x200";
+				count = 100;
+			};
 
-            class DC15L_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_T_x125";
-                count = 100;
-            };
+			class DC15L_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				count = 100;
+			};
 
             class DP_23_332nd
             {
@@ -3995,13 +3926,13 @@ class CfgVehicles
 
             class DC15L_332nd
             {
-                magazine = "332nd_aux_magazine_DC_15L_x125";
+                magazine = "332nd_aux_magazine_DC_15L_x200";
                 count = 100;
             };
 
             class DC15L_T_332nd
             {
-                magazine = "332nd_aux_magazine_DC_15L_T_x125";
+                magazine = "332nd_aux_magazine_DC_15L_T_x200";
                 count = 100;
             };
 
@@ -4617,17 +4548,17 @@ class CfgVehicles
                 count = 50;
             };
 
-            class DC15L_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_x125";
-                count = 100;
-            };
+			class DC15L_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_x200";
+				count = 100;
+			};
 
-            class DC15L_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_T_x125";
-                count = 100;
-            };
+			class DC15L_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				count = 100;
+			};
 
             class DP_23_332nd
             {
@@ -5024,6 +4955,5 @@ class CfgVehicles
 				 };
 			 };
           };
-	  };
-   };
+	};
 };
