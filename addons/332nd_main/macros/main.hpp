@@ -1059,6 +1059,14 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Scenario Vest ('##displayname##');\
 		};
+	#define MACRO_NEW_PURGE_CWO_VEST_ITEM(classname,displayname,texture,texture2)\
+		class MACRO_NEW_VEST(purgecwo,classname): MACRO_NEW_VEST(purgecwo,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] CWO Vest ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture2};\
+		};
 
 // ============================================================================== Macro Predefined Equipments
 
