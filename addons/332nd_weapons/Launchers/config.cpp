@@ -30,7 +30,7 @@ class CfgAmmo
 		aiAmmoUsageFlags="64 + 128 + 256 + 512";
 		irLock=0;
 		allowAgainstInfantry=1;
-		hit=900;
+		hit=750;
 		manualControl=1;
 		indirectHit=20;
 		indirectHitRange=8;
@@ -83,7 +83,7 @@ class CfgAmmo
 	  effectfly = "ls_plasma_blue";
 	  effectflare = "FlareShell";
 	  flaresize = 10;
-	  hit=950;
+	  hit=850;
 	  caliber = 30;
 	  tracerscale = 6;
 	  tracerstarttime = 0;

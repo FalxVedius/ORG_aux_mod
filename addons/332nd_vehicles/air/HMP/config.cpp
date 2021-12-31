@@ -18,6 +18,234 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+
+class CfgAmmo
+{
+	class ls_50mm_hmp_he;
+
+	class MACRO_NEW_AMMO(HMP_Cannon_Round) : ls_50mm_hmp_he
+	{
+		model = "SWLW_main\Effects\laser_red.p3d";
+		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1 };
+		flaresize = 4;
+		caliber = 3;
+		maxLeadSpeed = 2000;
+		allowAgainstInfantry = 1;
+		tracersEvery = 1;
+		cost = 5;
+		hit = 120;
+		explosionEffects = "ATRocketExplosion";
+		indirectHit = 6;
+		mass = 2;
+		indirectHitRange = 0.1;
+		tracerscale = 2;
+	};
+};
+
+class CfgMagazines
+{
+	class 200rnd_hmp_he_mag;
+
+	class MACRO_NEW_MAG(HMP_Cannon_Mag,200) : 200rnd_hmp_he_mag
+	{
+		displayName = "HMP Cannon Magazine";
+		ammo = MACRO_NEW_AMMO(HMP_Cannon_Round)
+	};
+};
+
+class CfgWeapons
+{
+	class ls_laat_gun;
+	class ls_laat_gun_2;
+
+	class ls_hmp_gun : ls_laat_gun
+	{
+		class manual;
+		class close;
+		class medium;
+		class short;
+		class far;
+		class FullAuto;
+	};
+	class ls_hmp_gun_2 : ls_laat_gun_2
+	{
+		class manual;
+		class close;
+		class medium;
+		class short;
+		class far;
+		class FullAuto;
+	};
+	class ls_hmp_gun_3 : ls_hmp_gun
+	{
+		class manual;
+		class close;
+		class medium;
+		class short;
+		class far;
+		class FullAuto;
+	};
+
+	class MACRO_NEW_WEAPON(HMP_Cannon1) : ls_hmp_gun
+	{
+		aiDispersionCoefX = 2;
+		aiDispersionCoefY = 2;
+
+		magazineWell[] = {};
+		magazines[] = {
+
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+		};
+
+		class manual : manual
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+		};
+		class close : close
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class medium : medium
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class short : short
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class far : far
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class FullAuto : FullAuto
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(HMP_Cannon2) : ls_hmp_gun_2
+	{
+		aiDispersionCoefX = 2;
+		aiDispersionCoefY = 2;
+
+		magazineWell[] = {};
+		magazines[] = {
+
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+		};
+
+		class manual : manual
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+		};
+		class close : close
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class medium : medium
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class short : short
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class far : far
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class FullAuto : FullAuto
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(HMP_Cannon3) : ls_hmp_gun_3
+	{
+		aiDispersionCoefX = 2;
+		aiDispersionCoefY = 2;
+
+		magazineWell[] = {};
+		magazines[] = {
+
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+		};
+
+		class manual : manual
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+		};
+		class close : close
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class medium : medium
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class short : short
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class far : far
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+		class FullAuto : FullAuto
+		{
+			aiDispersionCoefX = 2;
+			aiDispersionCoefY = 2;
+
+			dispersion = 0.03;
+		};
+	};
+};
+
 class CfgVehicles
 {
 	class Helicopter;
@@ -72,6 +300,7 @@ class CfgVehicles
 	class ls_cis_hmp : ls_hmp_base
 	{
 		class Components;
+		class sounds;
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
@@ -91,6 +320,7 @@ class CfgVehicles
 	class ls_cis_hmp_transport : ls_hmp_base
 	{
 		class Components;
+		class sounds;
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
@@ -123,27 +353,61 @@ class CfgVehicles
 			class MainTurret : MainTurret
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon1),
+					MACRO_NEW_WEAPON(HMP_Cannon2)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 			class MainTurret2 : MainTurret2
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon3)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 			class MainTurret3 : MainTurret3
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon3)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 		};
 
 		weapons[] =
 		{
-			"ls_hmp_gun",
+			MACRO_NEW_WEAPON(HMP_Cannon1),
 			"missiles_DAR",
 			"CMFlareLauncher"
 		};
 		magazines[] =
 		{
-			"200rnd_hmp_he_mag",
-			"200rnd_hmp_he_mag",
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200),
 			"12rnd_missiles",
 			"12rnd_missiles",
 			"240Rnd_CMFlare_Chaff_Magazine",
@@ -197,6 +461,16 @@ class CfgVehicles
 				};
 			};
 		};
+
+		class sounds : sounds
+		{
+			class EngineExt
+			{
+				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
+				sound[] = { "swlb_a_vehicle\hmp\sounds\hmp_engine_1.wss",1.25893,1,5000 };
+				volume = "camPos*((rotorSpeed-0.72)*8)";
+			};
+		};
 	};
 
 	class MACRO_NEW_VEHICLE(air,CIS,HMP_AA) : ls_cis_hmp
@@ -214,27 +488,61 @@ class CfgVehicles
 			class MainTurret : MainTurret
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon1),
+					MACRO_NEW_WEAPON(HMP_Cannon2)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 			class MainTurret2 : MainTurret2
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon3)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 			class MainTurret3 : MainTurret3
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon3)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 		};
 
 		weapons[] =
 		{
-			"ls_hmp_gun",
+			MACRO_NEW_WEAPON(HMP_Cannon1),
 			"missiles_DAR",
 			"CMFlareLauncher"
 		};
 		magazines[] =
 		{
-			"200rnd_hmp_he_mag",
-			"200rnd_hmp_he_mag",
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200),
 			"12rnd_missiles",
 			"12rnd_missiles",
 			"240Rnd_CMFlare_Chaff_Magazine",
@@ -289,6 +597,16 @@ class CfgVehicles
 				};
 			};
 		};
+
+		class sounds : sounds
+		{
+			class EngineExt
+			{
+				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
+				sound[] = { "swlb_a_vehicle\hmp\sounds\hmp_engine_1.wss",1.25893,1,5000 };
+				volume = "camPos*((rotorSpeed-0.72)*8)";
+			};
+		};
 	};
 
 	class MACRO_NEW_VEHICLE(air,CIS,HMP_Transport) : ls_cis_hmp_transport
@@ -306,32 +624,76 @@ class CfgVehicles
 			class MainTurret : MainTurret
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon1),
+					MACRO_NEW_WEAPON(HMP_Cannon2)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 			class MainTurret2 : MainTurret2
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon3)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 			class MainTurret3 : MainTurret3
 			{
 				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(HMP_Cannon3)
+				};
+
+				magazines[] =
+				{
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+					MACRO_NEW_MAG(HMP_Cannon_Mag,200)
+				};
 			};
 		};
 
 		weapons[] =
 		{
-			"ls_hmp_gun",
+			MACRO_NEW_WEAPON(HMP_Cannon1),
 			"missiles_DAR",
 			"CMFlareLauncher"
 		};
 		magazines[] =
 		{
-			"200rnd_hmp_he_mag",
-			"200rnd_hmp_he_mag",
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200),
+			MACRO_NEW_MAG(HMP_Cannon_Mag,200),
 			"12rnd_missiles",
 			"12rnd_missiles",
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine",
 			"240Rnd_CMFlare_Chaff_Magazine"
+		};
+
+		class sounds : sounds
+		{
+			class EngineExt
+			{
+				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
+				sound[] = { "swlb_a_vehicle\hmp\sounds\hmp_engine_1.wss",1.25893,1,5000 };
+				volume = "camPos*((rotorSpeed-0.72)*8)";
+			};
 		};
 	};
 };
