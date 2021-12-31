@@ -19,6 +19,20 @@ class CfgPatches
 class CfgGlasses
 {
 	class ls_misc_poncho_facewear;
+	class G_B_Diving;
+
+	class 332nd_Helmet_Visor : G_B_Diving
+	{
+		displayName = "[332nd] Helmet Visor";
+		model = "";
+		hiddenSelections[] = {"camo1"};
+		hiddenSelectionsTextures[] = {""};
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+
 	class 332_PonchoBase: ls_misc_poncho_facewear
 	{
 		displayName="[332nd] Base Poncho";

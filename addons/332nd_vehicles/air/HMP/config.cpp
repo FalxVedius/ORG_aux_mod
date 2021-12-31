@@ -107,12 +107,20 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class medium : medium
 		{
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
+
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
 		};
@@ -121,6 +129,10 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class far : far
@@ -128,12 +140,20 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class FullAuto : FullAuto
 		{
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
+
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
 		};
@@ -160,12 +180,20 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class medium : medium
 		{
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
+
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
 		};
@@ -174,6 +202,10 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class far : far
@@ -181,12 +213,20 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class FullAuto : FullAuto
 		{
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
+
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
 		};
@@ -213,12 +253,20 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class medium : medium
 		{
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
+
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
 		};
@@ -227,6 +275,10 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class far : far
@@ -234,12 +286,20 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
+
 			dispersion = 0.03;
 		};
 		class FullAuto : FullAuto
 		{
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
+
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
 		};
