@@ -12379,19 +12379,19 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AT_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 		
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 			
 		};
@@ -12839,19 +12839,19 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Medic_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_5(332nd_aux_magazine_35sa_low_x30)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_5(332nd_aux_magazine_35sa_low_x30)
 
 		};
@@ -13288,18 +13288,18 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_sqaud_lead_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 		};
 		items[] =
@@ -13330,6 +13330,26 @@ class CfgVehicles
 			"ACE_EarPlugs",
 			mag_4(332nd_aux_medical_PressureCuff),
 		};
+
+		/* ... */
+		/* [_headgearClass1, _probability1, _headgearClass2, _probability2, ...] */
+		headgearList[] =
+		{
+
+			"H_Cap_red", 0.7,
+			"H_Cap_tan", 0.7,
+			"H_Cap_blk", 0.7,
+		};
+
+
+		class EventHandlers;
+		class EventHandlers : EventHandlers 
+		{ 
+			init = ""; 
+		};
+		/* ... */
+		
+		
 
 		class HitPoints : HitPoints
 		{
@@ -13520,18 +13540,18 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "TFAR_rt1523g_black";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 		};
 		items[] =
@@ -14908,19 +14928,19 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_AT_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long),
 
 		};
@@ -15358,19 +15378,19 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_Medic_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_5(332nd_aux_magazine_35sa_low_x30)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15s_x60),
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
 			mag_5(332nd_aux_magazine_35sa_low_x30)
 
 		};
