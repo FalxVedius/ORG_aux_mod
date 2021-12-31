@@ -107,8 +107,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -118,8 +118,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -129,8 +129,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -140,8 +140,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -151,8 +151,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -180,8 +180,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -191,8 +191,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -202,8 +202,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -213,8 +213,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -224,8 +224,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -253,8 +253,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -264,8 +264,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -275,8 +275,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -286,8 +286,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
@@ -297,8 +297,8 @@ class CfgWeapons
 			aiDispersionCoefX = 2;
 			aiDispersionCoefY = 2;
 
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
+			aiRateOfFire = 2;
+			aiRateOfFireDispersion = 1;
 			aiRateOfFireDistance = 25;
 
 			dispersion = 0.03;
