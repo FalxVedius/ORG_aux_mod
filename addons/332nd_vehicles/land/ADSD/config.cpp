@@ -17,6 +17,67 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+
+class CfgAmmo
+{
+	class 3as_ATT_redPlasma_AT;
+	class 3as_ATT_redPlasma;
+
+	class MACRO_NEW_AMMO(ADSD_AP) : 3as_ATT_redPlasma_AT
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+
+	class MACRO_NEW_AMMO(ADSD_MMG) : 3as_ATT_redPlasma
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+};
+
+class CfgMagazines
+{
+	class 3as_24rnd_125mm_ADSD;
+	class 3as_500Rnd_ATT_RedPlasma;
+
+	class MACRO_NEW_MAG(ADSD_AP,24) : 3as_24rnd_125mm_ADSD
+	{
+		displayName = "ADSD AP";
+		ammo = MACRO_NEW_AMMO(ADSD_AP)
+	};
+
+	class MACRO_NEW_MAG(ADSD_MMG,500) : 3as_500Rnd_ATT_RedPlasma
+	{
+		displayName = "ADSD MMG";
+		ammo = MACRO_NEW_AMMO(ADSD_MMG)
+	};
+};
+
+class CfgWeapons
+{
+	class 3AS_ADSD_Cannon;
+	class 3AS_ADSD_Repeater;
+
+	class MACRO_NEW_WEAPON(ADSD_Cannon) : 3AS_ADSD_Cannon
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(ADSD_AP,24)
+		};
+	};
+
+	class MACRO_NEW_WEAPON(ADSD_MMG) : 3AS_ADSD_Repeater
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(ADSD_MMG,500)
+		};
+	};
+};
+
 class CfgVehicles
  {
 	class Land;
@@ -122,6 +183,21 @@ class CfgVehicles
 		{
 			class MainTurret : MainTurret
 			{
+				weapons[] =
+				{
+				  MACRO_NEW_WEAPON(ADSD_Cannon),
+				  MACRO_NEW_WEAPON(ADSD_MMG)
+				};
+				magazines[] =
+				{
+				  MACRO_NEW_MAG(ADSD_AP,24),
+				  MACRO_NEW_MAG(ADSD_AP,24),
+				  MACRO_NEW_MAG(ADSD_AP,24),
+				  MACRO_NEW_MAG(ADSD_MMG,500),
+				  MACRO_NEW_MAG(ADSD_MMG,500),
+				  MACRO_NEW_MAG(ADSD_MMG,500),
+				  MACRO_NEW_MAG(ADSD_MMG,500)
+				};
 				class Turrets : Turrets
 				{
 

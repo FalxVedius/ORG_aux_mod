@@ -22,16 +22,16 @@ class CfgAmmo
     class Sh_125mm_APFSDS;
 	class MACRO_NEW_AMMO(MassDriver_AP): Sh_125mm_APFSDS
 	{
-    soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
-	cartridge = "";
-	caliber=40;
-	model = "ls_weapons_core\effects\laser_blue.p3d";
-	effectfly = "SWLW_plasma_green";
-	hit=800;
-	explosionEffects = "ATRocketExplosion";
-	tracerScale = 5;
-	indirectHit = 35;
-	indirectHitRange = 0.5;
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
+		cartridge = "";
+		caliber=40;
+		model = "ls_weapons_core\effects\laser_blue.p3d";
+		effectfly = "SWLW_plasma_green";
+		hit=800;
+		explosionEffects = "ATRocketExplosion";
+		tracerScale = 5;
+		indirectHit = 35;
+		indirectHitRange = 0.5;
 	};
 	class Sh_125mm_HE;
 	class MACRO_NEW_AMMO(MassDriver_HE): Sh_125mm_HE
@@ -81,12 +81,12 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(20mmHMG): ls_ammo_127x108_blue
 	{
-	cartridge = "";
-	caliber=3.2;
-	hit=40;
-	tracerScale = 3.5;
-	indirectHit = 0;
-	indirectHitRange = 0;
+		cartridge = "FxCartridge_556";
+		caliber=3.2;
+		hit=40;
+		tracerScale = 3.5;
+		indirectHit = 0;
+		indirectHitRange = 0;
 	};
 
 	class ls_ammo_127x108_red;
@@ -165,13 +165,27 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(40mmAP): ls_ammo_127x108_blue
 	{
-    soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
-	cartridge = "";
-	effectsMissile = "332nd_aux_effects_RPS4_blue";
-	caliber=15;
-	hit=250;
-	indirectHit = 8;
-	indirectHitRange = 0.2;
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
+		cartridge = "FxCartridge_556";
+		effectsMissile = "332nd_aux_effects_RPS4_blue";
+		caliber=15;
+		hit=250;
+		indirectHit = 8;
+		indirectHitRange = 0.2;
+	};
+
+	class MACRO_NEW_AMMO(SuperSaber_AP) : ls_ammo_127x108_blue
+	{
+		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000 }; //Volume,Pitch,Distance
+		cartridge = "FxCartridge_556";
+		caliber = 40;
+		model = "ls_weapons_core\effects\laser_blue.p3d";
+		effectfly = "SWLW_plasma_green";
+		hit = 800;
+		explosionEffects = "ATRocketExplosion";
+		tracerScale = 5;
+		indirectHit = 35;
+		indirectHitRange = 0.5;
 	};
 
 	class B_40mm_GPR;
@@ -304,6 +318,15 @@ class CfgMagazines
 		count=140;
 	};
 
+	class MACRO_NEW_MAG(SuperSaber_AP,2) : 12Rnd_120mm_APFSDS_shells
+	{
+		displayName = "Mass Driver AP";
+		ammo = MACRO_NEW_AMMO(SuperSaber_AP)
+		initSpeed = 1000;
+		tracersevery = 1;
+		count = 2;
+	};
+
 	class MACRO_NEW_MAG(Saber_Low,500): 12Rnd_120mm_APFSDS_shells
 	{
 	    cartridge = "";
@@ -351,8 +374,9 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(40mmHEDP)
 		count=100;
 	};
-	class MACRO_NEW_MAG(DC_15L,125);
-	class MACRO_NEW_MAG(15L,500): MACRO_NEW_MAG(DC_15L,125)
+
+	class MACRO_NEW_MAG(DC_15L,200);
+	class MACRO_NEW_MAG(15L,500): MACRO_NEW_MAG(DC_15L,200)
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(Direct Energy HEDP,100)
 		descriptionshort="Concentrated Medium";
@@ -360,6 +384,7 @@ class CfgMagazines
 		scope=1;
 		count=500;
 	};
+
 	class 2Rnd_GAT_missiles_O;
 	class MACRO_NEW_MAG(ATGM,2): 2Rnd_GAT_missiles_O
 	{
@@ -374,6 +399,7 @@ class CfgMagazines
 
 class MGun;
 class player;
+class FullAuto;
 class manual;
 class CfgWeapons
 {
@@ -661,8 +687,8 @@ class CfgWeapons
 	};
 
 
-	class SWLG_TX130_aa;
-	class MACRO_NEW_WEAPON(Saber_low): SWLG_TX130_aa
+	class 3AS_Sabre_Cannons;
+	class MACRO_NEW_WEAPON(Saber_low): 3AS_Sabre_Cannons
 	{
 	   	magazineWell[] = {};
 		magazines[] = {
@@ -670,6 +696,9 @@ class CfgWeapons
 		};
 		displayName = "Saber Low Energy";
 		modes[] = {"manual","close","short","medium"};
+
+
+
 		class manual:  manual
 		{
 			sounds[]=
@@ -740,7 +769,7 @@ class CfgWeapons
 		};
 	};
 
-	class 3AS_Sabre_Cannons;
+	
 	class MACRO_NEW_WEAPON(Saber_High): 3AS_Sabre_Cannons
 	{
 	   	magazineWell[] = {};
@@ -835,12 +864,13 @@ class CfgWeapons
 		};
 	};
 
-
-	class MACRO_NEW_WEAPON(SuperSaber_High): 3AS_Sabre_Cannons
+	class 3AS_Sabre_Cannons_Super;
+	class MACRO_NEW_WEAPON(SuperSaber_High): 3AS_Sabre_Cannons_Super
 	{
 	   	magazineWell[] = {};
 		magazines[] = {
-			MACRO_NEW_MAG(MassDriver_AP,2)
+
+			MACRO_NEW_MAG(SuperSaber_AP,2)
 		};
 		class GunParticles
 		{
@@ -930,7 +960,7 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_WEAPON(SuperSaber_40mm): 3AS_Sabre_Cannons
+	class MACRO_NEW_WEAPON(SuperSaber_40mm): 3AS_Sabre_Cannons_Super
 	{
 	   	magazineWell[] = {};
 		magazines[] = {
@@ -1660,10 +1690,10 @@ class CfgWeapons
 			maxRangeProbab = 0.0099999998;
 		};
 	};
-	};
 
-	class autocannon_40mm_CTWS;
-	class MACRO_NEW_WEAPON(RX200_40mm): autocannon_40mm_CTWS
+
+	class OPTRE_M503_30mm_Autocannon;
+	class MACRO_NEW_WEAPON(RX200_40mm): OPTRE_M503_30mm_Autocannon
 	{
 	    ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
         ace_overpressure_range = 0;  // Range in meters in which the damage is applied
@@ -1675,6 +1705,17 @@ class CfgWeapons
 			MACRO_NEW_MAG(RX200_40mmHE,100)
 		};
 		displayName = "40mm Directed Energy Autocannon";
+
+		class GunParticles
+		{
+			class Effect
+			{
+				directionName = "Konec hlavne";
+				effectName = "MachineGun1";
+				positionName = "Usti hlavne";
+			};
+		};
+
 		class player: player
 		{
 			magazineReloadTime = 2;
@@ -1702,8 +1743,9 @@ class CfgWeapons
 			};
 		};
 	};
-    class LMG_coax_ext;
-	class MACRO_NEW_WEAPON(RX200_15L): LMG_coax_ext
+
+    class OPTRE_M247T_Coax;
+	class MACRO_NEW_WEAPON(RX200_15L): OPTRE_M247T_Coax
 	{
 		muzzles[] = {"this"};
 		magazineWell[] = {};
@@ -1711,7 +1753,8 @@ class CfgWeapons
              MACRO_NEW_MAG(15L,500)
 		};
 		displayName = "15L Coaxial";
-		class manual: manual
+
+		class FullAuto : FullAuto
 		{
 			magazineReloadTime = 2;
 			displayname="Full";
@@ -1725,7 +1768,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"MRC\JLTS\weapons\DC15X\sounds\dc15x_fire",
+					"MRC\JLTS\weapons\DC15X\sounds\dc15x_fire.wss",
 					8,
 					1.35,
 					2500
@@ -1738,8 +1781,9 @@ class CfgWeapons
 			};
 		};
 	};
-	class missiles_titan;
-	class MACRO_NEW_WEAPON(RX200_ATGM): missiles_titan
+
+	class OPTRE_M670_ATGM_Launcher;
+	class MACRO_NEW_WEAPON(RX200_ATGM): OPTRE_M670_ATGM_Launcher
 	{
 		muzzles[] = {"this"};
 		magazineWell[] = {};
@@ -1770,6 +1814,47 @@ class CfgWeapons
 				{
 					"begin1",
 					1
+				};
+			};
+		};
+	};
+
+	class MACRO_NEW_WEAPON(RX155_40mm) : OPTRE_M247T_Coax
+	{
+		ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+		ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+		ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = { "this" };
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(RX200_40mmAP,50),
+			MACRO_NEW_MAG(RX200_40mmHE,100)
+		};
+		displayName = "40mm Directed Energy Autocannon";
+
+		class FullAuto : FullAuto
+		{
+			magazineReloadTime = 2;
+			displayname = "Full";
+			reloadTime = 0.35;
+			dispersion = 0.00005;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"3AS\3AS_Static\data\Sounds\FieldCannon\Fieldcannon.ogg",
+					25,
+					2.5,
+					4000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1,
 				};
 			};
 		};

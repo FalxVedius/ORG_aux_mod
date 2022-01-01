@@ -500,7 +500,7 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_SERG_MAJ_VEST_ITEM(332nd_SergMaj_Vest,Sergeant Major,sgtmaj\LeadershipKama_ca.paa)
+    //MACRO_NEW_SERG_MAJ_VEST_ITEM(332nd_SergMaj_Vest,Sergeant Major,sgtmaj\LeadershipKama_ca.paa)
 
 
     class MACRO_NEW_VEST(seniorensign,base) : JLTS_CloneVestSuspender
@@ -881,6 +881,45 @@ class CfgWeapons
         };
     }
     MACRO_NEW_PURGE_VEST_ITEM(332nd_Purge_Vest,Purge)
+
+
+    class MACRO_NEW_VEST(purgecwo,base) : JLTS_CloneVestPurge
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] CWO Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_PURGE_CWO_VEST_ITEM(332nd_CWO5_Vest,CWO-5,cwo\LeadershipKama_ca.paa,cwo\cwo5_vest_upper.paa)
+    MACRO_NEW_PURGE_CWO_VEST_ITEM(332nd_CWO4_Vest,CWO-4,cwo\LeadershipKama_ca.paa,cwo\cwo4_vest_upper.paa)
 
     /// ---- End
 }

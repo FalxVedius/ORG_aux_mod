@@ -19,6 +19,132 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+
+class CfgAmmo
+{
+	class 3as_ATT_redPlasma_AT;
+	class 3as_ATT_redPlasma;
+	class ls_120mm_red_ap;
+	class ls_120mm_red_he;
+	class ls_127x99_red;
+
+	class MACRO_NEW_AMMO(AAT_AP) : 3as_ATT_redPlasma_AT
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+
+	class MACRO_NEW_AMMO(AAT_MMG) : 3as_ATT_redPlasma
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+
+	class MACRO_NEW_AMMO(Heavy_AAT_AP) : ls_120mm_red_ap
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+
+	class MACRO_NEW_AMMO(Heavy_AAT_HE) : ls_120mm_red_he
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+
+	class MACRO_NEW_AMMO(Heavy_AAT_MMG) : ls_127x99_red
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+};
+
+class CfgMagazines
+{
+	class 3as_24rnd_AAT_AP;
+	class 3as_500Rnd_ATT_RedPlasma;
+	class ls_30rnd_120mm_AP_mag_red;
+	class ls_30rnd_120mm_HE_mag_red;
+	class ls_500rnd_127x99_mag_red;
+
+	class MACRO_NEW_MAG(AAT_AP,24) : 3as_24rnd_AAT_AP
+	{
+		displayName = "AAT AP";
+		ammo = MACRO_NEW_AMMO(AAT_AP)
+	};
+
+	class MACRO_NEW_MAG(AAT_MMG,500) : 3as_500Rnd_ATT_RedPlasma
+	{
+		displayName = "AAT MMG";
+		ammo = MACRO_NEW_AMMO(AAT_MMG)
+	};
+
+	class MACRO_NEW_MAG(Heavy_AAT_AP,30) : ls_30rnd_120mm_AP_mag_red
+	{
+		displayName = "Heavy AAT AP";
+		ammo = MACRO_NEW_AMMO(Heavy_AAT_AP)
+	};
+
+	class MACRO_NEW_MAG(Heavy_AAT_HE,30) : ls_30rnd_120mm_HE_mag_red
+	{
+		displayName = "Heavy AAT HE";
+		ammo = MACRO_NEW_AMMO(Heavy_AAT_HE)
+	};
+
+	class MACRO_NEW_MAG(Heavy_AAT_MMG,500) : ls_500rnd_127x99_mag_red
+	{
+		displayName = "Heavy AAT MMG";
+		ammo = MACRO_NEW_AMMO(Heavy_AAT_MMG)
+	};
+};
+
+class CfgWeapons
+{
+	class 3AS_AATCannon;
+	class 3AS_AAT_Repeater;
+	class ls_aat_cannon_120mm;
+	class ls_aat_127;
+
+	class MACRO_NEW_WEAPON(AAT_Cannon) : 3AS_AATCannon
+	{
+		magazineWell[] = {};
+		magazines[] = 
+		{
+			MACRO_NEW_MAG(AAT_AP,24)
+		};
+	};
+
+	class MACRO_NEW_WEAPON(AAT_MMG) : 3AS_AAT_Repeater
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(AAT_MMG,500)
+		};
+	};
+
+	class MACRO_NEW_WEAPON(Heavy_AAT_Cannon) : ls_aat_cannon_120mm
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(Heavy_AAT_AP,30),
+			MACRO_NEW_MAG(Heavy_AAT_HE,30)
+		};
+	};
+
+	class MACRO_NEW_WEAPON(Heavy_AAT_MMG) : ls_aat_127
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(Heavy_AAT_MMG,500)
+		};
+	};
+};
+
+
+
 class CfgVehicles
 {
 	class LandVehicle;
@@ -254,11 +380,33 @@ class CfgVehicles
 		{
 			class MainTurret : MainTurret
 			{
+
+				weapons[] =
+				{
+				  MACRO_NEW_WEAPON(AAT_Cannon)
+				};
+				magazines[] =
+				{
+				  MACRO_NEW_MAG(AAT_AP,24),
+				  MACRO_NEW_MAG(AAT_AP,24),
+				  MACRO_NEW_MAG(AAT_AP,24)
+				};
 				class Turrets : Turrets
 				{
 					class CommanderOptics : CommanderOptics
 					{
-
+						weapons[] =
+						{
+						  MACRO_NEW_WEAPON(AAT_MMG)
+						};
+						magazines[] =
+						{
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500)
+						};
 					};
 				};
 			};
@@ -311,11 +459,33 @@ class CfgVehicles
 		{
 			class MainTurret : MainTurret
 			{
+
+				weapons[] =
+				{
+				  MACRO_NEW_WEAPON(AAT_Cannon)
+				};
+				magazines[] =
+				{
+				  MACRO_NEW_MAG(AAT_AP,24),
+				  MACRO_NEW_MAG(AAT_AP,24),
+				  MACRO_NEW_MAG(AAT_AP,24)
+				};
 				class Turrets : Turrets
 				{
 					class CommanderOptics : CommanderOptics
 					{
-
+						weapons[] =
+						{
+						  MACRO_NEW_WEAPON(AAT_MMG)
+						};
+						magazines[] =
+						{
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500),
+						  MACRO_NEW_MAG(AAT_MMG,500)
+						};
 					};
 				};
 			};
@@ -373,11 +543,34 @@ class CfgVehicles
 		{
 			class MainTurret : MainTurret
 			{
+
+				weapons[] =
+				{
+				  MACRO_NEW_WEAPON(Heavy_AAT_Cannon)
+				};
+				magazines[] =
+				{
+					MACRO_NEW_MAG(Heavy_AAT_AP,30),
+					MACRO_NEW_MAG(Heavy_AAT_HE,30),
+					MACRO_NEW_MAG(Heavy_AAT_AP,30),
+					MACRO_NEW_MAG(Heavy_AAT_HE,30)
+				};
 				class Turrets : Turrets
 				{
 					class CommanderOptics : CommanderOptics
 					{
-
+						weapons[] =
+						{
+						  MACRO_NEW_WEAPON(Heavy_AAT_MMG)
+						};
+						magazines[] =
+						{
+						  MACRO_NEW_MAG(Heavy_AAT_MMG,500),
+						  MACRO_NEW_MAG(Heavy_AAT_MMG,500),
+						  MACRO_NEW_MAG(Heavy_AAT_MMG,500),
+						  MACRO_NEW_MAG(Heavy_AAT_MMG,500),
+						  MACRO_NEW_MAG(Heavy_AAT_MMG,500)
+						};
 					};
 				};
 			};

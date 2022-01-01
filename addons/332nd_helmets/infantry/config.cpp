@@ -22,7 +22,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Hoggy),
 			MACRO_NEW_HELMET(infantry,Falx),
 			MACRO_NEW_HELMET(infantry,Deserter),
-			MACRO_NEW_HELMET(infantry,Poseidon_V1),
+			MACRO_NEW_HELMET(infantry,Poseidon),
 			MACRO_NEW_HELMET(infantry,Frost),
 			MACRO_NEW_HELMET(infantry,332nd_recruit),
 			MACRO_NEW_HELMET(infantry,Bugs),
@@ -36,16 +36,19 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Spacy),
 			MACRO_NEW_HELMET(infantry,Church),
 			MACRO_NEW_HELMET(infantry,Cutter),
-			MACRO_NEW_HELMET(infantry,Sentinel),
-			MACRO_NEW_HELMET(infantry,Dark),
 			MACRO_NEW_HELMET(infantry,Tidal),
 			MACRO_NEW_HELMET(infantry,Corporal),
 			MACRO_NEW_HELMET(infantry,Specialist),
 			MACRO_NEW_HELMET(infantry,Deva),
 			MACRO_NEW_HELMET(infantry,Vault),
+			MACRO_NEW_HELMET(infantry,Xander),
+			MACRO_NEW_HELMET(infantry,Sazi),
+			MACRO_NEW_HELMET(infantry,Zombie),
 
 			//MACRO_NEW_HELMET(infantry,Cross),
 			//MACRO_NEW_HELMET(infantry,Rev),
+			//MACRO_NEW_HELMET(infantry,Sentinel),
+			//MACRO_NEW_HELMET(infantry,Dark),
         };
 		weapons[] = {};
 	};
@@ -79,15 +82,18 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(King,King,King.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Spacy,Spacy,Spacy.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Church,Church,Church.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Sentinel,Sentinel,Sentinel.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Dark,Dark,Dark.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Tidal,Tidal,Tidal.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Corporal,Corporal,Corporal.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Specialist,Specialist,Specialist.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deva,Deva,Deva.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Vault,Vault,Vault.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sazi,Sazi,Sazi.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Xander,Xander,Xander.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Zombie,Zombie,Zombie.paa)
 
+	//MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 	//MACRO_NEW_INF_HELMET_ITEM(Cross,Cross,Cross.paa)
 	//MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
+	//MACRO_NEW_INF_HELMET_ITEM(Sentinel,Sentinel,Sentinel.paa)
+	//MACRO_NEW_INF_HELMET_ITEM(Dark,Dark,Dark.paa)
 };

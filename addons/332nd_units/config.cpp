@@ -1623,13 +1623,13 @@ class CfgVehicles
 
 			class DC15L_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_15L_x125";
+				magazine = "332nd_aux_magazine_DC_15L_x200";
 				count = 100;
 			};
 
 			class DC15L_T_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_15L_T_x125";
+				magazine = "332nd_aux_magazine_DC_15L_T_x200";
 				count = 100;
 			};
 

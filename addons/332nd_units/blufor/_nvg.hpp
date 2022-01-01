@@ -4,6 +4,41 @@ class JLTS_CloneNVGCC;
 class JLTS_NVG_droid_chip_1;
 class JLTS_CloneNVGRange;
 class JLTS_CloneNVGRange_black;
+class JLTS_CloneNVGMC;
+
+class MACRO_NEW_NVG(Leadership_MCNVG) :JLTS_CloneNVGMC
+{
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Leadership Marshal Commander Visor";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG","Ti" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(MCNVG) :JLTS_CloneNVGMC
+{
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Marshal Commander Visor";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
 
 class MACRO_NEW_NVG(Leadership_Rangefinder) :JLTS_CloneNVGRange
 {
@@ -164,7 +199,7 @@ class MACRO_NEW_NVG(Griff_Visor_332):JLTS_CloneNVG
     hiddenSelectionsTextures[] = {"\332nd_units\_textures\nvgs\GriffNVG_ca.paa"};
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Specialist Visor (Griff) (332nd)";
+    displayName = "[332nd] Griff Visor";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -183,13 +218,51 @@ class MACRO_NEW_NVG(Halligan_Visor_332):JLTS_CloneNVG
     hiddenSelectionsTextures[] = {"\332nd_units\_textures\nvgs\HalliganNVG_co.paa"};
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Halligan Visor (leadership) (332nd)";
+    displayName = "[332nd] Halligan Visor (Leadership)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
     author = "Halligan, Namenai,Falx ";
     visionMode[] = {"Normal","NVG","TI"};
     thermalMode[] = {0,1};
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(Spacy_Visor_332) :JLTS_CloneNVG
+{
+    hiddenSelections[] = { "camo1" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Spacy.paa" };
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Spacy Visor (Leadership)";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG","TI" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(Falx_Visor_332) :JLTS_CloneNVGMC
+{
+    hiddenSelections[] = { "camo1" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Falx.paa" };
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Falx Visor (Leadership)";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG","TI" };
+    thermalMode[] = { 0,1 };
 
     opticsZoomInit = 0.0625;
     opticsZoomMax = 1;

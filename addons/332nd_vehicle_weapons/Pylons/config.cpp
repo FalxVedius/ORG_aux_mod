@@ -141,7 +141,7 @@ class CfgAmmo
 	missileKeepLockedCone = 180;
 	missileLockCone = 360;
 	hit=600;
-    cmImmunity = 0.8;
+    cmImmunity = 0.9;
 	};
 
 	class MACRO_NEW_AMMO(AA_Low): M_Air_AA
@@ -162,7 +162,7 @@ class CfgAmmo
 	missileKeepLockedCone = 270;
 	missileLockCone = 360;
 	hit=150;
-    cmImmunity = 0.7;
+    cmImmunity = 0.8;
 	};
 };
 	
@@ -195,11 +195,11 @@ class CfgMagazines
 	};
 
 	class PylonRack_12Rnd_missiles;
-    class MACRO_NEW_MAG(Pylon_AA_low,12): PylonRack_3Rnd_LG_scalpel
+    class MACRO_NEW_MAG(Pylon_AA_low,12): PylonRack_12Rnd_missiles
 	{
 	    hardpoints[]	= {"332_A_Pylon"};
 		displayName="Micro Concussion Missile AA";
-
+		count=12;
 		descriptionshort="Air to Air micro Concussion Missile";
 		pylonWeapon = MACRO_NEW_WEAPON(AALow_Pylon);
 		displayNameShort="A2A Micro Concussion Missiles";

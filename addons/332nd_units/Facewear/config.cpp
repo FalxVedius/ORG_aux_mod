@@ -19,6 +19,32 @@ class CfgPatches
 class CfgGlasses
 {
 	class ls_misc_poncho_facewear;
+	class G_Tactical_Black;
+	class G_Diving;
+
+	class 332nd_Underwater_Helmet_Visor : G_Diving
+	{
+		displayName = "[332nd] Underwater Helmet Visor";
+		model = "\A3\characters_f\Heads\glasses\g_diving";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Helmet_Visor : G_Tactical_Black
+	{
+		displayName = "[332nd] Helmet Visor";
+		model = "\A3\characters_f_beta\heads\glasses\g_tactical_black";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+
 	class 332_PonchoBase: ls_misc_poncho_facewear
 	{
 		displayName="[332nd] Base Poncho";

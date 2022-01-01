@@ -19,6 +19,67 @@ class CfgPatches
 		weapons[] = {};
 	};
 };
+
+class CfgAmmo
+{
+	class 3as_GAT_redPlasma;
+	class 3as_GAT_redPlasma_AT;
+
+	class MACRO_NEW_AMMO(GAT_MMG) : 3as_GAT_redPlasma
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+
+	class MACRO_NEW_AMMO(GAT_AP) : 3as_GAT_redPlasma_AT
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+};
+
+class CfgMagazines
+{
+	class 3as_500rnd_GAT_redPlasma;
+	class 3as_24rnd_GAT_AP;
+
+	class MACRO_NEW_MAG(GAT_MMG,500) : 3as_500rnd_GAT_redPlasma
+	{
+		displayName = "GAT MMG";
+		ammo = MACRO_NEW_AMMO(GAT_MMG)
+	};
+
+	class MACRO_NEW_MAG(GAT_AP,24) : 3as_24rnd_GAT_AP
+	{
+		displayName = "GAT AP";
+		ammo = MACRO_NEW_AMMO(GAT_AP)
+	};
+};
+
+class CfgWeapons
+{
+	class 3AS_GATRepeater;
+	class 3AS_GATCannon;
+
+	class MACRO_NEW_WEAPON(GAT_MMG) : 3AS_GATRepeater
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(GAT_MMG,500)
+		};
+	};
+
+	class MACRO_NEW_WEAPON(GAT_AP) : 3AS_GATCannon
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(GAT_AP,24)
+		};
+	};
+};
+
 class CfgVehicles
  {
 	class LandVehicle;
@@ -165,6 +226,16 @@ class CfgVehicles
 		 {
 		   class MainTurret : MainTurret
 		   {
+			   weapons[] =
+			   {
+				 MACRO_NEW_WEAPON(GAT_MMG)
+			   };
+			   magazines[] =
+			   {
+				 MACRO_NEW_MAG(GAT_MMG,500),
+				 MACRO_NEW_MAG(GAT_MMG,500),
+				 MACRO_NEW_MAG(GAT_MMG,500)
+			   };
 			   class Turrets
 			   {
 			   };
@@ -185,6 +256,16 @@ class CfgVehicles
 		 {
 		   class MainTurret : MainTurret
 		   {
+			   weapons[] =
+			   {
+				 MACRO_NEW_WEAPON(GAT_MMG)
+			   };
+			   magazines[] =
+			   {
+				 MACRO_NEW_MAG(GAT_MMG,500),
+				 MACRO_NEW_MAG(GAT_MMG,500),
+				 MACRO_NEW_MAG(GAT_MMG,500)
+			   };
 			   class Turrets
 			   {
 			   };
@@ -205,6 +286,16 @@ class CfgVehicles
 		 {
 		   class MainTurret : MainTurret
 		   {
+			   weapons[] =
+			   {
+				 MACRO_NEW_WEAPON(GAT_AP)
+			   };
+			   magazines[] =
+			   {
+				 MACRO_NEW_MAG(GAT_AP,24),
+				 MACRO_NEW_MAG(GAT_AP,24),
+				 MACRO_NEW_MAG(GAT_AP,24)
+			   };
 			   class Turrets
 			   {
 			   };
@@ -225,6 +316,16 @@ class CfgVehicles
 		 {
 		   class MainTurret : MainTurret
 		   {
+			   weapons[] =
+			   {
+				 MACRO_NEW_WEAPON(GAT_AP)
+			   };
+			   magazines[] =
+			   {
+				 MACRO_NEW_MAG(GAT_AP,24),
+				 MACRO_NEW_MAG(GAT_AP,24),
+				 MACRO_NEW_MAG(GAT_AP,24)
+			   };
 			   class Turrets
 			   {
 			   };

@@ -32,11 +32,39 @@ class CfgUnitInsignia
 		texture = "\332nd_units\Insignia\data\Torrent1_1.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
+	class 332nd_Banshee1_4
+	{
+		displayName = "[332nd] Banshee 1-4";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Banshee1_4.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class Torrent2_1
+	{
+		displayName = "[332nd] Torrent 2-1";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Torrent2_1.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class Seraph2_3
+	{
+		displayName = "[332nd] Torrent 2-3";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Seraph2_3.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
 	class 332nd_Roundel
 	{
 		displayName = "[332nd] GAR Roundel";								// Name displayed in Arsenal
 		author = "Halligan";											// Author displayed in Arsenal
 		texture = "\332nd_units\Insignia\data\332_Roundel.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_Christmas_Roundel
+	{
+		displayName = "[332nd] Christmas";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\332_Christmas.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
 	class 332nd_Specialist_Roundel
@@ -65,6 +93,48 @@ class CfgUnitInsignia
 		displayName = "[332nd] Seraph Roundel";								// Name displayed in Arsenal
 		author = "Halligan";											// Author displayed in Arsenal
 		texture = "\332nd_units\Insignia\data\Seraph_Roundel.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_GreyMedic
+	{
+		displayName = "[332nd] Medic Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\GreyMedic.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_GreyRTO
+	{
+		displayName = "[332nd] RTO Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\GreyRTO.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_Medic
+	{
+		displayName = "[332nd] Medic Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Medic.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_RTO
+	{
+		displayName = "[332nd] RTO Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\RTO.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_WhiteMedic
+	{
+		displayName = "[332nd] Medic Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\WhiteMedic.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_WhiteRTO
+	{
+		displayName = "[332nd] RTO Roundel";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\WhiteRTO.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
 };

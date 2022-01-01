@@ -75,12 +75,14 @@ class CfgVehicles
 	class Helicopter;
 	class Items_base_F;
 	class Wreck_base_F;
+
 	class Helicopter_Base_F : Helicopter
 	{
 		class Turrets;
 		class HitPoints;
 		class ViewPilot;
 	};
+
 	class Helicopter_Base_H : Helicopter_Base_F
 	{
 		class Turrets : Turrets
@@ -138,6 +140,7 @@ class CfgVehicles
     {
 		class Components;
 		class ACE_selfActions;
+		class sounds;
 		class Reflectors : Reflectors
 		{
 			class Left;
@@ -262,6 +265,7 @@ class CfgVehicles
 			class cargoTurret_rightDoor_pos16;
 		};
 	};
+
 	class ls_heli_laatle : ls_laatle_base
 	{
 		class Components;
@@ -324,6 +328,14 @@ class CfgVehicles
         faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
 
+		cargoAction[] = { "passenger_flatground_leanright","passenger_flatground_leanleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright" };
+
+
+		transportsoldier = 16;
+		memoryPointsGetInCargo[] = { "pos cargo 5", "pos cargo 18"};
+		memoryPointsGetInCargoDir[] = { "pos_cargo_dir" };
+		memoryPointsGetInCargoPrecise[] = { "" };
+
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
             MACRO_NEW_WEAPON(LAAT_40mm), MACRO_NEW_WEAPON(air_dumb_rocketpod), 
@@ -361,6 +373,24 @@ class CfgVehicles
 
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
+
+
+		class sounds : sounds
+		{
+			class EngineInt
+			{
+				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
+				sound[] = { "3as\3as_laat\sounds\LAAT_Impulse.ogg",0.794328,1 };
+				volume = "2 * (1-camPos)*(rotorSpeed factor[0.4,1])";
+			};
+
+			class EngineExt
+			{
+				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
+				sound[] = { "lsd_sounds\vehicles\laat\engine\laat_engine.wss",1.25893,1,5000 };
+				volume = "camPos*((rotorSpeed-0.72)*4)";
+			};
+		};
 
 		class Components: Components
 		{
@@ -479,86 +509,6 @@ class CfgVehicles
 					MACRO_AIR_COMMON_MAGS,
 					"Laser_Battery_F","Laser_Battery_F"
 				};
-			};
-			class cargoTurret_rearl : cargoTurret_rearl
-			{
-
-			};
-			class cargoTurret_rearr : cargoTurret_rearr
-			{
-
-			};
-			class cargoturret_left_1 : cargoturret_left_1
-			{
-
-			};
-			class cargoTurret_left_2 : cargoTurret_left_2
-			{
-
-			};
-			class cargoTurret_left_3 : cargoTurret_left_3
-			{
-
-			};
-			class cargoTurret_left_4 : cargoTurret_left_4
-			{
-
-			};
-			class cargoTurret_left_5 : cargoTurret_left_5
-			{
-
-			};
-			class cargoTurret_left_14 : cargoTurret_left_14
-			{
-
-			};
-			class cargoturret_right_1 : cargoturret_right_1
-			{
-
-			};
-			class cargoTurret_right_2 : cargoTurret_right_2
-			{
-
-			};
-			class cargoTurret_right_3 : cargoTurret_right_3
-			{
-
-			};
-			class cargoTurret_right_4 : cargoTurret_right_4
-			{
-
-			};
-			class cargoTurret_right_5 : cargoTurret_right_5
-			{
-
-			};
-			class CargoTurret_right_13 : CargoTurret_right_13
-			{
-
-			};
-			class CargoTurret_right_17 : CargoTurret_right_17
-			{
-
-			};
-			class CargoTurret_right_18 : CargoTurret_right_18
-			{
-
-			};
-			class CargoTurret_right_19 : CargoTurret_right_19
-			{
-
-			};
-			class CargoTurret_left_20 : CargoTurret_left_20
-			{
-
-			};
-			class CargoTurret_left_21 : CargoTurret_left_21
-			{
-
-			};
-			class CargoTurret_left_22 : CargoTurret_left_22
-			{
-
 			};
 		};
 
@@ -3518,17 +3468,17 @@ class CfgVehicles
                 count = 50;
             };
 
-            class DC15L_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_x125";
-                count = 100;
-            };
+			class DC15L_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_x200";
+				count = 100;
+			};
 
-            class DC15L_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_T_x125";
-                count = 100;
-            };
+			class DC15L_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				count = 100;
+			};
 
             class DP_23_332nd
             {
@@ -3995,13 +3945,13 @@ class CfgVehicles
 
             class DC15L_332nd
             {
-                magazine = "332nd_aux_magazine_DC_15L_x125";
+                magazine = "332nd_aux_magazine_DC_15L_x200";
                 count = 100;
             };
 
             class DC15L_T_332nd
             {
-                magazine = "332nd_aux_magazine_DC_15L_T_x125";
+                magazine = "332nd_aux_magazine_DC_15L_T_x200";
                 count = 100;
             };
 
@@ -4210,7 +4160,7 @@ class CfgVehicles
             };
             class HitEngine : HitEngine
             {
-                armor = 1;
+                armor = 999;
                 convexComponent = "engine_hit";
                 explosionShielding = 2;
                 material = 51;
@@ -4223,7 +4173,7 @@ class CfgVehicles
             };
             class HitEngine_1 : HitEngine_1
             {
-                armor = 1;
+                armor = 999;
                 passThrough = 1;
                 explosionShielding = 2;
                 convexComponent = "engine_hit_1";
@@ -4233,7 +4183,7 @@ class CfgVehicles
             };
             class HitEngine_2 : HitEngine_2
             {
-                armor = 1;
+                armor = 999;
                 passThrough = 1;
                 explosionShielding = 2;
                 convexComponent = "engine_hit_2";
@@ -4243,7 +4193,7 @@ class CfgVehicles
             };
             class HitHRotor : HitHRotor
             {
-                armor = 3 * 5;
+                armor = 999;
                 convexComponent = "main_rotor_hit";
                 explosionShielding = 2.5;
                 material = 51;
@@ -4254,7 +4204,7 @@ class CfgVehicles
             };
             class HitVRotor : HitVRotor
             {
-                armor = 3 * 5;
+                armor = 999;
                 convexComponent = "tail_rotor_hit";
                 explosionShielding = 6;
                 material = 51;
@@ -4273,7 +4223,6 @@ class CfgVehicles
                 passThrough = 1;
                 visual = "";
                 radius = 0.5;
-                minimalHit = 0.6;
             };
         };
 
@@ -4617,17 +4566,17 @@ class CfgVehicles
                 count = 50;
             };
 
-            class DC15L_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_x125";
-                count = 100;
-            };
+			class DC15L_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_x200";
+				count = 100;
+			};
 
-            class DC15L_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_T_x125";
-                count = 100;
-            };
+			class DC15L_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				count = 100;
+			};
 
             class DP_23_332nd
             {
@@ -4861,101 +4810,100 @@ class CfgVehicles
 			};
 		};
 	
-        class HitPoints : HitPoints
-        {
-            class HitHull : HitHull
-            {
-                armor = 999;
-                convexComponent = "hull_hit";
-                depends = "Total";
-                explosionShielding = 1;
-                material = 51;
-                name = "hull_hit";
-                passThrough = 1;
-                visual = "zbytek";
-                radius = 0.01;
-            };
-            class HitFuel : HitFuel
-            {
-                convexcomponent = "fuel_hit";
-                hitpoint = "fuel_hit";
-                name = "fuel_hit";
-                explosionShielding = 2;
-                radius = 0.1;
-                visual = "";
-                passthrough = 0.1;
-                minimalhit = 0.1;
-                material = -1;
-                armor = 0.6 * 5;
-            };
-            class HitEngine : HitEngine
-            {
-                armor = 1;
-                convexComponent = "engine_hit";
-                explosionShielding = 2;
-                material = 51;
-                name = "engine_hit";
-                hitpoint = "engine_hit";
-                passThrough = 1;
-                visual = "";
-                radius = 0.2 * 5;
-                minimalHit = 0.6;
-            };
-            class HitEngine_1 : HitEngine_1
-            {
-                armor = 1;
-                passThrough = 1;
-                explosionShielding = 2;
-                convexComponent = "engine_hit_1";
-                name = "engine_hit_1";
-                hitpoint = "engine_hit_1";
-                minimalHit = 0.6;
-            };
-            class HitEngine_2 : HitEngine_2
-            {
-                armor = 1;
-                passThrough = 1;
-                explosionShielding = 2;
-                convexComponent = "engine_hit_2";
-                name = "engine_hit_2";
-                hitpoint = "engine_hit_2";
-                minimalHit = 0.6;
-            };
-            class HitHRotor : HitHRotor
-            {
-                armor = 3 * 5;
-                convexComponent = "main_rotor_hit";
-                explosionShielding = 2.5;
-                material = 51;
-                name = "main_rotor_hit";
-                passThrough = 0.1;
-                visual = "";
-                radius = 0.01;
-            };
-            class HitVRotor : HitVRotor
-            {
-                armor = 3 * 5;
-                convexComponent = "tail_rotor_hit";
-                explosionShielding = 6;
-                material = 51;
-                name = "tail_rotor_hit";
-                passThrough = 0.3;
-                visual = "";
-                radius = 0.01;
-            };
-            class HitAvionics : HitAvionics
-            {
-                armor = 1 * 5;
-                convexComponent = "avionics_hit";
-                explosionShielding = 2;
-                material = 51;
-                name = "avionics_hit";
-                passThrough = 1;
-                visual = "";
-                radius = 0.5;
-                minimalHit = 0.6;
-            };
-        };
+		class HitPoints : HitPoints
+		{
+			class HitHull : HitHull
+			{
+				armor = 999;
+				convexComponent = "hull_hit";
+				depends = "Total";
+				explosionShielding = 1;
+				material = 51;
+				name = "hull_hit";
+				passThrough = 1;
+				visual = "zbytek";
+				radius = 0.01;
+			};
+			class HitFuel : HitFuel
+			{
+				convexcomponent = "fuel_hit";
+				hitpoint = "fuel_hit";
+				name = "fuel_hit";
+				explosionShielding = 2;
+				radius = 0.1;
+				visual = "";
+				passthrough = 0.1;
+				minimalhit = 0.1;
+				material = -1;
+				armor = 0.6 * 5;
+			};
+			class HitEngine : HitEngine
+			{
+				armor = 999;
+				convexComponent = "engine_hit";
+				explosionShielding = 2;
+				material = 51;
+				name = "engine_hit";
+				hitpoint = "engine_hit";
+				passThrough = 1;
+				visual = "";
+				radius = 0.2 * 5;
+				minimalHit = 0.6;
+			};
+			class HitEngine_1 : HitEngine_1
+			{
+				armor = 999;
+				passThrough = 1;
+				explosionShielding = 2;
+				convexComponent = "engine_hit_1";
+				name = "engine_hit_1";
+				hitpoint = "engine_hit_1";
+				minimalHit = 0.6;
+			};
+			class HitEngine_2 : HitEngine_2
+			{
+				armor = 999;
+				passThrough = 1;
+				explosionShielding = 2;
+				convexComponent = "engine_hit_2";
+				name = "engine_hit_2";
+				hitpoint = "engine_hit_2";
+				minimalHit = 0.6;
+			};
+			class HitHRotor : HitHRotor
+			{
+				armor = 999;
+				convexComponent = "main_rotor_hit";
+				explosionShielding = 2.5;
+				material = 51;
+				name = "main_rotor_hit";
+				passThrough = 0.1;
+				visual = "";
+				radius = 0.01;
+			};
+			class HitVRotor : HitVRotor
+			{
+				armor = 999;
+				convexComponent = "tail_rotor_hit";
+				explosionShielding = 6;
+				material = 51;
+				name = "tail_rotor_hit";
+				passThrough = 0.3;
+				visual = "";
+				radius = 0.01;
+			};
+			class HitAvionics : HitAvionics
+			{
+				armor = 1 * 5;
+				convexComponent = "avionics_hit";
+				explosionShielding = 2;
+				material = 51;
+				name = "avionics_hit";
+				passThrough = 1;
+				visual = "";
+				radius = 0.5;
+			};
+		};
 
          class TextureSources
           {
@@ -5024,6 +4972,5 @@ class CfgVehicles
 				 };
 			 };
           };
-	  };
-   };
+	};
 };

@@ -49,6 +49,17 @@ class CfgMagazines
 		ammo="ls_ammo_556_blue";
 	};
 
+	class MACRO_NEW_MAG(DC_15P_Low,30) : MACRO_NEW_MAG(DC_15a_Medium,30) //Low Mag for DC15A
+	{
+		count = 30;
+		mass = 10;
+		initspeed = 1800;
+		displayName = MACRO_AMMO_DISPLAYNAME(15p Low,30)
+		displayNameShort = "Low Power 30rnd";
+		descriptionShort = "332nd Low Power Round";
+		ammo = "ls_ammo_556_blue";
+	};
+
 	class MACRO_NEW_MAG(DC_15a_High,10): MACRO_NEW_MAG(DC_15a_Medium,30)//High Mag for DC15A | Not on the 15A UGL
 	{
 		count=15;
@@ -76,28 +87,28 @@ class CfgMagazines
 		tracersEvery=1;
 	};
 
-	class MACRO_NEW_MAG(DC_15L,125): 30rnd_762x39_AK12_Mag_F //DC-15L
+	class MACRO_NEW_MAG(DC_15L,200): 30rnd_762x39_AK12_Mag_F //DC-15L
 	{
 		modelSpecial="";
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=150;
+		count=200;
 		mass=145;
 		initspeed=1500;
-		displayName=MACRO_AMMO_DISPLAYNAME(15L,125)
-		displayNameShort="High Power 125rnd";
+		displayName=MACRO_AMMO_DISPLAYNAME(15L,200)
+		displayNameShort="High Power 200rnd";
 		descriptionShort="332nd High Power Round";
 		ammo="ls_ammo_127x108_blue";
 		tracersEvery=1;
 	};
 
-	class MACRO_NEW_MAG(DC_15L_T,125): MACRO_NEW_MAG(DC_15L,125) //DC-15L
+	class MACRO_NEW_MAG(DC_15L_T,200): MACRO_NEW_MAG(DC_15L,200) //DC-15L
 	{
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		displayName=MACRO_AMMO_DISPLAYNAME(15L (T),125 Tracer)
-		displayNameShort="High Power Tracer 125rnd";
+		displayName=MACRO_AMMO_DISPLAYNAME(15L (T),200 Tracer)
+		displayNameShort="High Power Tracer 200rnd";
 		descriptionShort="332nd (T) High Power Round Tracer";
 		ammo=MACRO_NEW_AMMO(127x108_Blue_T);
 		tracersEvery=1;
@@ -243,7 +254,7 @@ class CfgMagazines
 		tracersEvery=1;
 	}; 
 	class JLTS_DC15X_mag;
-	class MACRO_NEW_MAG(DC_15x,3): JLTS_DC15X_mag
+	class MACRO_NEW_MAG(DC_15x,2): JLTS_DC15X_mag
 	{
 		modelSpecial="";
 		modelSpecialIsProxy=0;
@@ -408,7 +419,7 @@ class CfgAmmo
 		effectfly="332nd_aux_effects_RPS4_green";
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,0.9,1500};
 		caliber = 10;
-		hit = 700;
+		hit = 450;
 		typicalSpeed=5000;
 		explosionEffects = "ImpactPlasmaExpGreen";
 		tracerscale = 3;

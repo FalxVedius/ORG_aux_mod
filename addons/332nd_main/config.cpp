@@ -482,6 +482,126 @@ class RscDisplayLoading
 			};
 		};
 
+		class LoadingBackground_332nd_V18 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_18.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V19 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_19.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V20 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_20.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V21 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_21.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V22 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_22.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V23 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_23.paa";
+				};
+			};
+		};
+
 	};
 };
 

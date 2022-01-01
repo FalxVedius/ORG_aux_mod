@@ -124,3 +124,9 @@ switch (true) do {
 
 
 deleteVehicle _obj;
+
+if (isPlayer _killer) then {
+
+	_killer addPlayerScores [1, 0, 0, 0, 0];
+
+};
