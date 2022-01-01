@@ -17,9 +17,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {};
 		weapons[] = {
-			MACRO_NEW_WEAPON(DC_15x),
-			//MACRO_NEW_WEAPON(DC_15x_Scoped),
-			//"332nd_DC15X_scope"
+			MACRO_NEW_WEAPON(DC_15x)
 		};
 	};
 };
@@ -54,14 +52,12 @@ class PointerSlot;
 class mode_SemiAuto;
 class cfgWeapons
 {
-	class arifle_MX_Base_F;
-	class JLTS_DC15X: arifle_MX_Base_F
+
+	class OPTRE_M99A2S3;
+
+	class MACRO_NEW_WEAPON(DC_15x): OPTRE_M99A2S3
 	{
-		class WeaponSlotsInfo;
-	}
-	class MACRO_NEW_WEAPON(DC_15x): JLTS_DC15X
-	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(*TEST* DC 15x ATR)
+		displayName = MACRO_WEAPON_DISPLAYNAME(*WIP* DC 15x ATR)
 
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_m320";
@@ -70,24 +66,12 @@ class cfgWeapons
         baseWeapon=MACRO_NEW_WEAPON(DC_15x);
 		cursor="332_DOT";
         cursoraim="332_Chevron";
+		magazineWell[] = {};
 		magazines[] = {
-			MACRO_NEW_MAG(DC_15x,3)
+			MACRO_NEW_MAG(DC_15x,2)
 		};
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
-	 //   class GunClouds: GunClouds
-		//{
-		//	cloudletDuration = 0.3;
-		//	size = 0.5;
-		//	cloudletAccY = 0.4;
-		//	cloudletFadeIn = 0.01;
-		//	cloudletFadeOut = 1;
-		//	cloudletGrowUp = 1;
-		//	cloudletMaxYSpeed = 0.8;
-		//	cloudletMinYSpeed = 0.2;
-		//	cloudletAlpha = 1;
-		//	interval = -0.01;
-		//	sourceSize = 0.1;
-		//};
+
 		class Single: mode_SemiAuto
         {
 			sounds[]=
@@ -123,30 +107,7 @@ class cfgWeapons
 
 		class OpticsModes
         {
-            class sight
-            {
-                opticsID=2;
-                useModelOptics=0;
-                opticsPPEffects[]=
-                {
-                    "OpticsCHAbera5",
-                    "OpticsBlur5"
-                };
-                opticsDisablePeripherialVision=0.67000002;
-                opticsZoomMin=0.375;
-                opticsZoomMax=1.1;
-                opticsZoomInit=0.75;
-                discreteInitIndex=0;
-                distanceZoomMin=100;
-                distanceZoomMax=700;
-                discreteDistance[]={100};
-                discreteDistanceInitIndex=0;
-                memoryPointCamera="eye";
-                visionMode[]={};
-                opticsFlare="true";
-                cameraDir="";
-            };
-            class scope: sight
+            class scope
             {
                 opticsID=1;
                 useModelOptics=1;
@@ -178,83 +139,10 @@ class cfgWeapons
             };
         };
 
-      class WeaponSlotsInfo: WeaponSlotsInfo
-		{
-			class CowsSlot: CowsSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
-				compatibleItems[]=
-				{
-					""
-				};
-			};
-			class PointerSlot: PointerSlot
-			{
-				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
-				compatibleItems[]=
-				{
-					"acc_flashlight",
-					"acc_pointer_IR"
-				};
-			};
-		};
-
+      
 		class EventHandlers
 		{
 			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_DC15X_Sound;";
 		};
 	};
-
-	//class InventoryOpticsItem_Base_F;
-	//class JLTS_DC15X_scope;
-	//class 332nd_DC15X_scope: JLTS_DC15X_scope
-	//{
-	//    model="";
-	//	displayName="332nd Integrated DC-15X scope";
-	//	picture="\MRC\JLTS\weapons\DC15X\data\ui\DC15X_scope_ui_ca.paa";
-	//	descriptionShort="$STR_JLTS_descs_DC15X_scope";
-	//	class ItemInfo: InventoryOpticsItem_Base_F
-	//	{
-	//		mass=16;
-	//		opticType=2;
-	//		weaponInfoType="RscWeaponRangeZeroingFOV";
-	//		optics=1;
-	//		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
-	//		class OpticsModes
-	//		{
-	//			class Snip
-	//			{
-	//				opticsID=1;
-	//				opticsDisplayName="WFOV";
-	//				useModelOptics=1;
-	//				opticsPPEffects[]=
-	//				{
-	//					"OpticsCHAbera1",
-	//					"OpticsBlur1"
-	//				};
-	//				opticsZoomMin=0.125;
-	//				opticsZoomMax=0.04;
-	//				opticsZoomInit=0.0625;
-	//				discreteDistance[]={100};
-	//				discreteDistanceInitIndex=1;
-	//				distanceZoomMin=100;
-	//				distanceZoomMax=1000;
-	//				discreteFov[]={0.125};
-	//				discreteInitIndex=0;
-	//				memoryPointCamera="opticView";
-	//				modelOptics = "\A3\Weapons_f\acc\reticle_tws";
-	//				visionMode[]=
-	//				{
-	//					"Normal",
-	//					"NVG",
-	//					"TI"
-	//				};
-	//				thermalMode[] = {0, 1};
-	//				opticsFlare=1;
-	//				opticsDisablePeripherialVision=1;
-	//				cameraDir="";
-	//			};
-	//		};
-	//	};
-	//};
 };

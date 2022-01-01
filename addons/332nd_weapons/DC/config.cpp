@@ -49,6 +49,17 @@ class CfgMagazines
 		ammo="ls_ammo_556_blue";
 	};
 
+	class MACRO_NEW_MAG(DC_15P_Low,30) : MACRO_NEW_MAG(DC_15a_Medium,30) //Low Mag for DC15A
+	{
+		count = 30;
+		mass = 10;
+		initspeed = 1800;
+		displayName = MACRO_AMMO_DISPLAYNAME(15p Low,30)
+		displayNameShort = "Low Power 30rnd";
+		descriptionShort = "332nd Low Power Round";
+		ammo = "ls_ammo_556_blue";
+	};
+
 	class MACRO_NEW_MAG(DC_15a_High,10): MACRO_NEW_MAG(DC_15a_Medium,30)//High Mag for DC15A | Not on the 15A UGL
 	{
 		count=15;
@@ -243,7 +254,7 @@ class CfgMagazines
 		tracersEvery=1;
 	}; 
 	class JLTS_DC15X_mag;
-	class MACRO_NEW_MAG(DC_15x,3): JLTS_DC15X_mag
+	class MACRO_NEW_MAG(DC_15x,2): JLTS_DC15X_mag
 	{
 		modelSpecial="";
 		modelSpecialIsProxy=0;
@@ -408,7 +419,7 @@ class CfgAmmo
 		effectfly="332nd_aux_effects_RPS4_green";
         soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,0.9,1500};
 		caliber = 10;
-		hit = 700;
+		hit = 450;
 		typicalSpeed=5000;
 		explosionEffects = "ImpactPlasmaExpGreen";
 		tracerscale = 3;

@@ -20,25 +20,6 @@ class CfgPatches
 	};
 };
 
-
-
-
-
-
-
-class Optics_Armored;
-class Optics_Commander_01: Optics_Armored
-{
-	class Wide;
-	class Medium;
-	class Narrow;
-};
-class Optics_Gunner_MBT_01: Optics_Armored
-{
-	class Wide;
-	class Medium;
-	class Narrow;
-};
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -81,22 +62,9 @@ class VehicleSystemsTemplateRightGunner : DefaultVehicleSystemsDisplayManagerRig
 	class components;
 };
 
-class RCWSOptics;
-class Optics_Armored;
-class Optics_Gunner_APC_01 : Optics_Armored
-{
-	class Wide;
-	class Medium;
-	class Narrow;
-};
-class DefaultEventHandlers;
-class WeaponFireGun;
-class WeaponCloudsGun;
-class WeaponFireMGun;
-class WeaponCloudsMGun;
-
 class CfgVehicles
  {
+	class NewTurret;
 	class LandVehicle;
 	class Tank : LandVehicle
 	{
@@ -435,18 +403,6 @@ class CfgVehicles
 			class MainTurret_bottom : MainTurret_bottom
 			{
 			turretInfoType="RscOptics_MBT_01_gunner";
-			  class OpticsIn: Optics_Gunner_MBT_01
-			  {
-					class Wide: Wide
-					{
-					};
-					class Medium: Medium
-					{
-					};
-					class Narrow: Narrow
-					{
-					};
-			  };
 			  memoryPointGun[]=
 				{
 					"z_gunL_muzzle",
@@ -474,32 +430,17 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
-				turretInfoType="RscOptics_MBT_01_commander";
-				class OpticsIn: Optics_Commander_01
+				weapons[] =
 				{
-					class Wide: Wide
-					{
-					};
-					class Medium: Medium
-					{
-					};
-					class Narrow: Narrow
-					{
-					};
+					MACRO_NEW_WEAPON(Heavy_Hmg)
 				};
-			weapons[] =
-			  {
-			    MACRO_NEW_WEAPON(Heavy_Hmg)
-			  };
-			  magazines[] =
-			  {
-			   MACRO_NEW_MAG(Heavy_HMG,150),
-			   MACRO_NEW_MAG(Heavy_HMG,150),
-			   MACRO_NEW_MAG(Heavy_HMG,150),
-			   MACRO_NEW_MAG(Heavy_HMG,150)
-			  };
-			outGunnerMayFire=1;
-			inGunnerMayFire=0;
+				magazines[] =
+				{
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150)
+				};
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{
@@ -542,18 +483,6 @@ class CfgVehicles
 			class MainTurret_bottom : MainTurret_bottom
 			{
 			turretInfoType="RscOptics_MBT_01_gunner";
-			class OpticsIn: Optics_Gunner_MBT_01
-			  {
-					class Wide: Wide
-					{
-					};
-					class Medium: Medium
-					{
-					};
-					class Narrow: Narrow
-					{
-					};
-			  };
 			  memoryPointGun[]=
 				{
 					"z_gunL_muzzle",
@@ -582,29 +511,15 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
-			turretInfoType="RscOptics_MBT_01_commander";
-			class OpticsIn: Optics_Commander_01
-						{
-							class Wide: Wide
-							{
-							};
-							class Medium: Medium
-							{
-							};
-							class Narrow: Narrow
-							{
-							};
-						};
-			weapons[] =
-			  {
-			    MACRO_NEW_WEAPON(BeamLaser_Full)
-			  };
-			  magazines[] =
-			  {
-			  MACRO_NEW_MAG(LaserBeamFull,2000)
-			  };
-			outGunnerMayFire=1;
-			inGunnerMayFire=0;
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(BeamLaser_Full)
+				};
+				magazines[] =
+				{
+					MACRO_NEW_MAG(LaserBeamFull,2000)
+				};
+
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{
@@ -685,24 +600,62 @@ class CfgVehicles
 			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
 		};
 
+		class CommanderOptics : NewTurret
+		{
+			canEject = 1;
+			commanding = 2;
+			dontCreateAI = 0;
+			forceHideGunner = 0;
+			gunnerFireAlsoInInternalCamera = 1;
+			gunnerForceOptics = 1;
+
+			class ViewGunner
+			{
+				initAngleX = 5;
+				initAngleY = 0;
+				initFov = 0.75;
+				maxAngleX = 85;
+				maxAngleY = 150;
+				maxFov = 1.25;
+				maxMoveX = 0;
+				maxMoveY = 0;
+				maxMoveZ = 0;
+				minAngleX = -75;
+				minAngleY = -150;
+				minFov = 0.25;
+				minMoveX = 0;
+				minMoveY = 0;
+				minMoveZ = 0;
+				speedZoomMaxFOV = 0;
+				speedZoomMaxSpeed = 1e+010;
+			};
+			class ViewOptics
+			{
+				initAngleX = 0;
+				initAngleY = 0;
+				initFov = 0.3;
+				maxAngleX = 30;
+				maxAngleY = 100;
+				maxFov = 0.35;
+				maxMoveX = 0;
+				maxMoveY = 0;
+				maxMoveZ = 0;
+				minAngleX = -30;
+				minAngleY = -100;
+				minFov = 0.07;
+				minMoveX = 0;
+				minMoveY = 0;
+				minMoveZ = 0;
+				speedZoomMaxFOV = 0;
+				speedZoomMaxSpeed = 1e+010;
+			};
+		};
 
 		class Turrets : Turrets
 		{
 			class Mainturret_super : Mainturret_super
 			{
 				turretInfoType = "RscOptics_MBT_01_gunner";
-				class OpticsIn : Optics_Gunner_MBT_01
-				{
-					class Wide : Wide
-					{
-					};
-					class Medium : Medium
-					{
-					};
-					class Narrow : Narrow
-					{
-					};
-				};
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(SuperSaber_40mm),

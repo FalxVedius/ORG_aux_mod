@@ -1818,4 +1818,45 @@ class CfgWeapons
 			};
 		};
 	};
+
+	class MACRO_NEW_WEAPON(RX155_40mm) : OPTRE_M247T_Coax
+	{
+		ace_overpressure_angle = 0;  // Cone in which the damage is applied (in degrees from the muzzle of the cannon)
+		ace_overpressure_range = 0;  // Range in meters in which the damage is applied
+		ace_overpressure_damage = 0;  // Damage multiplier
+		muzzles[] = { "this" };
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(RX200_40mmAP,50),
+			MACRO_NEW_MAG(RX200_40mmHE,100)
+		};
+		displayName = "40mm Directed Energy Autocannon";
+
+		class FullAuto : FullAuto
+		{
+			magazineReloadTime = 2;
+			displayname = "Full";
+			reloadTime = 0.35;
+			dispersion = 0.00005;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"3AS\3AS_Static\data\Sounds\FieldCannon\Fieldcannon.ogg",
+					25,
+					2.5,
+					4000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1,
+				};
+			};
+		};
+	};
 };

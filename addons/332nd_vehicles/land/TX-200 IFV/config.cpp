@@ -60,7 +60,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(Land,TX,200) : OPTRE_M494
     {
-        displayName = "[332nd] *WIP* TX-200";
+        displayName = "[332nd] *WIP* TX-200 - 'Verax'";
         scope = 2;
 		side=1;
 		faction = "EdCat_332nd";
@@ -69,12 +69,12 @@ class CfgVehicles
 		//hiddenSelections[] = {"camo1","camo2","camo3","CamoNet","CamoSlat"};
 		//hiddenSelectionsTextures[] = {"\332nd_vehicles\_textures\land\TX200\MainBody_co.paa","\332nd_vehicles\_textures\land\TX200\LowerBody_co.paa","\332nd_vehicles\_textures\land\TX200\MainTurret_co.paa","",""};
 
-
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
 			{
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
+				turretInfoType = "RscOptics_MBT_01_gunner";
 
 				weapons[] =
 				{
@@ -110,6 +110,9 @@ class CfgVehicles
 				{
 					class CommanderOptics : CommanderOptics
 					{
+
+						turretInfoType = "RscOptics_MBT_01_commander";
+
 						weapons[] =
 						{
 							MACRO_NEW_WEAPON(RX200_15L)
