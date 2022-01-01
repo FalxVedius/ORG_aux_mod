@@ -12097,12 +12097,12 @@ class CfgVehicles
 	};
 
 	//Rebel
-	class C_Man_casual_1_F;
-	class C_man_p_fugitive_F;
-	class C_man_polo_5_F;
-	class ls_civ_randomNearHuman_m_polo3;
-	class ls_civ_randomNearHuman_m_polo2;
-	class ls_civ_randomNearHuman_m_polo6;
+	class C_Man_casual_6_F;
+	class U_I_C_Soldier_Para_1_F;
+	class U_C_ArtTShirt_01_v6_F;
+	class U_I_C_Soldier_Bandit_1_F;
+	class U_C_E_LooterJacket_01_F;
+	class U_C_Mechanic_01_F;
 
 	class I_G_Soldier_SL_F;
 	class I_rebel_human : I_G_Soldier_SL_F
@@ -12110,34 +12110,34 @@ class CfgVehicles
 		class HitPoints;
 	};
 
-	class I_rebel_human_base : C_Man_casual_1_F
+	class I_R_H_AT : C_Man_casual_6_F
 	{
 		class HitPoints;
 	};
 
-	class I_rebel_human_base_v2 : ls_civ_randomNearHuman_m_polo6
-	{
-		class HitPoints;
-
-	};
-
-	class I_rebel_human_base_v3 : C_man_p_fugitive_F
-	{
-		class HitPoints;
-	};
-
-	class I_rebel_human_base_v4 : C_man_polo_5_F
-	{
-		class HitPoints;
-	};
-
-	class I_rebel_human_base_v5 : ls_civ_randomNearHuman_m_polo3
+	class I_R_H_S : U_I_C_Soldier_Para_1_F
 	{
 		class HitPoints;
 
 	};
 
-	class I_rebel_human_base_v6 : ls_civ_randomNearHuman_m_polo2
+	class I_R_H_M : U_C_ArtTShirt_01_v6_F
+	{
+		class HitPoints;
+	};
+
+	class I_R_H_L : U_I_C_Soldier_Bandit_1_F
+	{
+		class HitPoints;
+	};
+
+	class I_R_H_H : U_C_E_LooterJacket_01_F
+	{
+		class HitPoints;
+
+	};
+
+	class I_R_H_B : U_C_Mechanic_01_F
 	{
 		class HitPoints;
 	};
@@ -12164,17 +12164,17 @@ class CfgVehicles
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		weapons[] = { "332nd_aux_weapon_E5_B1","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_E5_B1","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_E5_B1","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_E5Low_x50)
+			mag_5(332nd_aux_magazine_R_E5Low_x50)
 			
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_E5Low_x50)
+			mag_5(332nd_aux_magazine_R_E5Low_x50)
 
 		};
 		items[] =
@@ -12614,17 +12614,17 @@ class CfgVehicles
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		weapons[] = { "332nd_aux_weapon_Valken38x","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_Valken38x","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_Valken38x","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Sniper_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15x_x2)
+			mag_5(332nd_aux_magazine_R_DC_15x_x2)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DC_15x_x2)
+			mag_5(332nd_aux_magazine_R_DC_15x_x2)
 
 		};
 		items[] =
@@ -13777,17 +13777,17 @@ class CfgVehicles
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		weapons[] = { "332nd_aux_weapon_E5_B1","332nd_aux_weapon_RPS_6","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_E5_B1","332nd_aux_weapon_RPS_6","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_E5_B1","332nd_aux_weapon_RPS_6","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AA_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_E5Low_x50)
+			mag_5(332nd_aux_magazine_R_E5Low_x50)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_E5Low_x50)
+			mag_5(332nd_aux_magazine_R_E5Low_x50)
 
 		};
 		items[] =
@@ -14249,17 +14249,17 @@ class CfgVehicles
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		weapons[] = { "332nd_aux_weapon_DP_23","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DP_23","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DP_23","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Shocker_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DP23_x12Wide),
+			mag_5(332nd_aux_magazine_R_DP23_x12Wide),
 			mag_1(332nd_aux_magazine_332_FLASH_x1)
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DP23_x12Wide),
+			mag_5(332nd_aux_magazine_R_DP23_x12Wide),
 			mag_1(332nd_aux_magazine_332_FLASH_x1)
 		};
 		items[] =
@@ -14485,17 +14485,17 @@ class CfgVehicles
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		weapons[] = { "332nd_aux_weapon_DP_23" ,"Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DP_23","Throw","Put"};
+		respawnWeapons[] = { "332nd_aux_weapon_R_DP_23","Throw","Put"};
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Breacher_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_DP23_x12Wide)
+			mag_5(332nd_aux_magazine_R_DP23_x12Wide)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_DP23_x12Wide)
+			mag_5(332nd_aux_magazine_R_DP23_x12Wide)
 
 		};
 		items[] =
@@ -14701,7 +14701,7 @@ class CfgVehicles
 
 	//Rebel human var
 	
-	class MACRO_NEW_UNIT(rebel_Human,base) : I_rebel_human_base
+	class MACRO_NEW_UNIT(rebel_Human,base) : I_R_H_B
 	{
 
 		author = MACRO_AUTHOR;
@@ -14912,7 +14912,7 @@ class CfgVehicles
 
 	};//Added
 
-	class MACRO_NEW_UNIT(rebel_Human_AT,base) : I_rebel_human_base_v2
+	class MACRO_NEW_UNIT(rebel_Human_AT,base) : I_R_H_AT
 	{
 
 		author = MACRO_AUTHOR;
@@ -15141,7 +15141,7 @@ class CfgVehicles
 
 	};//Added
 
-	class MACRO_NEW_UNIT(rebel_Human_Sniper,base) : I_rebel_human_base_v3
+	class MACRO_NEW_UNIT(rebel_Human_Sniper,base) : I_R_H_S
 	{
 
 		author = MACRO_AUTHOR;
@@ -15362,7 +15362,7 @@ class CfgVehicles
 
 	};//Added
 
-	class MACRO_NEW_UNIT(rebel_Human_Medic,base) : I_rebel_human_base_v4
+	class MACRO_NEW_UNIT(rebel_Human_Medic,base) : I_R_H_M
 	{
 
 		author = MACRO_AUTHOR;
@@ -15575,7 +15575,7 @@ class CfgVehicles
 
 	};//Added
 
-	class MACRO_NEW_UNIT(rebel_Human_Heavy,base) : I_rebel_human_base_v5
+	class MACRO_NEW_UNIT(rebel_Human_Heavy,base) : I_R_H_H
 	{
 
 		author = MACRO_AUTHOR;
@@ -15803,7 +15803,7 @@ class CfgVehicles
 
 	};//Added
 
-	class MACRO_NEW_UNIT(rebel_Human_Spotter,base) : I_rebel_human_base_v6
+	class MACRO_NEW_UNIT(rebel_Human_Spotter,base) : I_R_H_L
 	{
 
 		author = MACRO_AUTHOR;

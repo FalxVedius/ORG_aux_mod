@@ -53,6 +53,21 @@ class CfgMagazines
 		tracersEvery = 1;
 	};
 
+	class MACRO_NEW_MAG(R_E5Low,50) : 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\MRC\JLTS\weapons\E5\data\ui\E5_mag_ui_ca.paa";
+		model = "\MRC\JLTS\weapons\E5\E5_mag.p3d";
+		count = 50;
+		mass = 10;
+		initspeed = 900;
+		displayName = "E5 50rnd Low";
+		descriptionShort = "50rnd Magazine for the E-5";
+		displayNameShort = "E5 50rnd Low ";
+		ammo = MACRO_NEW_AMMO(R_762_green);
+		tracersEvery = 1;
+	};
 
 	
 };

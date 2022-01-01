@@ -26,6 +26,11 @@ class CfgPatches
 			MACRO_NEW_UNIT(rebel_Shocker,332nd_indep_rebel_Shocker),
 			MACRO_NEW_UNIT(rebel_Breacher,332nd_indep_rebel_Breacher),
 			MACRO_NEW_UNIT(rebel_Human,332nd_indep_rebel_Human),
+			MACRO_NEW_UNIT(rebel_Human_AT,332nd_indep_rebel_AT),
+			MACRO_NEW_UNIT(rebel_Human_Sniper,332nd_indep_rebel_Sniper),
+			MACRO_NEW_UNIT(rebel_Human_Medic,332nd_indep_rebel_Medic),
+			MACRO_NEW_UNIT(rebel_Human_Heavy,332nd_indep_rebel_Heavy),
+			MACRO_NEW_UNIT(rebel_Human_Spotter,332nd_indep_rebel_Spotter),
         };
         weapons[] = {
 			MACRO_NEW_UNIFORM(rebel,332nd_indep_rebel),
@@ -40,21 +45,34 @@ class CfgPatches
 			MACRO_NEW_UNIFORM(rebel_Shocker,332nd_indep_rebel_Shocker),
 			MACRO_NEW_UNIFORM(rebel_Breacher,332nd_indep_rebel_Breacher),
 			MACRO_NEW_UNIFORM(rebel_Human,332nd_indep_rebel_Human),
+			MACRO_NEW_UNIFORM(rebel_Human_AT,332nd_indep_rebel_AT),
+			MACRO_NEW_UNIFORM(rebel_Human_Sniper,332nd_indep_rebel_Sniper),
+			MACRO_NEW_UNIFORM(rebel_Human_Medic,332nd_indep_rebel_Medic),
+			MACRO_NEW_UNIFORM(rebel_Human_Heavy,332nd_indep_rebel_Heavy),
+			MACRO_NEW_UNIFORM(rebel_Human_Spotter,332nd_indep_rebel_Spotter),
         };
     };
 };
 
 class CfgWeapons
 {
+	class C_Man_casual_6_F;
+	class U_I_C_Soldier_Para_1_F;
+	class U_C_ArtTShirt_01_v6_F;
+	class U_I_C_Soldier_Bandit_1_F;
+	class U_C_E_LooterJacket_01_F;
+	class U_C_Mechanic_01_F;
 	class C_Man_casual_1_F;
 	class JLTS_DroidB1;
 	class I_rebel_human;
-	class I_rebel_human_base;
-	class I_rebel_human_base_v2;
-	class I_rebel_human_base_v3;
-	class I_rebel_human_base_v4;
-	class I_rebel_human_base_v5;
-	class I_rebel_human_base_v6;
+
+	class I_R_H_AT;
+	class I_R_H_S;
+	class I_R_H_M;
+	class I_R_H_L;
+	class I_R_H_H;
+	class I_R_H_B;
+
 	//Rebel
 	class MACRO_NEW_UNIFORM(rebel,base) : JLTS_DroidB1 //leave droid skin for now find where civil skins are
 	{
@@ -113,32 +131,32 @@ class CfgWeapons
 
 
 	//Rebel Human
-	class MACRO_NEW_UNIFORM(rebel_Human,base) : I_rebel_human_base
+	class MACRO_NEW_UNIFORM(rebel_Human,base) : I_R_H_B
 	{
 		class ItemInfo;
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_Human_AT,base) : I_rebel_human_base_v2
+	class MACRO_NEW_UNIFORM(rebel_Human_AT,base) : I_R_H_AT
 	{
 		class ItemInfo;
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_Human_Sniper,base) : I_rebel_human_base_v3
+	class MACRO_NEW_UNIFORM(rebel_Human_Sniper,base) : I_R_H_S
 	{
 		class ItemInfo;
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_Human_Medic,base) : I_rebel_human_base_v4
+	class MACRO_NEW_UNIFORM(rebel_Human_Medic,base) : I_R_H_M
 	{
 		class ItemInfo;
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_Human_Heavy,base) : I_rebel_human_base_v5
+	class MACRO_NEW_UNIFORM(rebel_Human_Heavy,base) : I_R_H_H
 	{
 		class ItemInfo;
 	}; 
 	
-	class MACRO_NEW_UNIFORM(rebel_Human_Spotter,base) : I_rebel_human_base_v6
+	class MACRO_NEW_UNIFORM(rebel_Human_Spotter,base) : I_R_H_L
 	{
 		class ItemInfo;
 	};
@@ -201,11 +219,11 @@ class CfgVehicles
 
 		//Rebel Human
 		MACRO_NEW_REBEL_HUMAN_UNIT(332nd_indep_rebel_Human,Human Rebel,332nd_indep_rebel_Human)
-		MACRO_NEW_REBEL_HUMAN_AT_UNIT(332nd_indep_rebel_Human_AT, Human AT Rebel, 332nd_indep_rebel_Human_AT)
-		MACRO_NEW_REBEL_HUMAN_SNIPER_UNIT(332nd_indep_rebel_Human_Sniper, Human Sniper Rebel, 332nd_indep_rebel_Human_Sniper)
-		MACRO_NEW_REBEL_HUMAN_MEDIC_UNIT(332nd_indep_rebel_Human_Medic, Human Medic Rebel, 332nd_indep_rebel_Human_Medic)
-		MACRO_NEW_REBEL_HUMAN_HEAVY_UNIT(332nd_indep_rebel_Human_Heavy, Human Heavy Rebel, 332nd_indep_rebel_Human_Heavy)
-		MACRO_NEW_REBEL_HUMAN_SPOTTER_UNIT(332nd_indep_rebel_Human_Spotter, Human Spotter Rebel, 332nd_indep_rebel_Human_Spotter)
+		MACRO_NEW_REBEL_HUMAN_AT_UNIT(332nd_indep_rebel_Human_AT, Human AT Rebel,332nd_indep_rebel_Human_AT)
+		MACRO_NEW_REBEL_HUMAN_SNIPER_UNIT(332nd_indep_rebel_Human_Sniper, Human Sniper Rebel,332nd_indep_rebel_Human_Sniper)
+		MACRO_NEW_REBEL_HUMAN_MEDIC_UNIT(332nd_indep_rebel_Human_Medic, Human Medic Rebel,332nd_indep_rebel_Human_Medic)
+		MACRO_NEW_REBEL_HUMAN_HEAVY_UNIT(332nd_indep_rebel_Human_Heavy, Human Heavy Rebel,332nd_indep_rebel_Human_Heavy)
+		MACRO_NEW_REBEL_HUMAN_SPOTTER_UNIT(332nd_indep_rebel_Human_Spotter, Human Spotter Rebel,332nd_indep_rebel_Human_Spotter)
 };		
 
 class CfgGroups

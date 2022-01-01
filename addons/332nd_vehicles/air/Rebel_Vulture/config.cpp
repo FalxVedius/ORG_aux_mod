@@ -2,7 +2,7 @@
 #define MACRO_VULTURE_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\air\Rebel_Vulture
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(Vulture)
+	class MACRO_PATCH_NAME(R_Vulture)
 	{
 		author = "Falx";
         addonRootClass = MACRO_PATCH_NAME(air_vehicles);
