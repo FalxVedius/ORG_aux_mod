@@ -43,6 +43,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Vault),
 			MACRO_NEW_HELMET(infantry,Xander),
 			MACRO_NEW_HELMET(infantry,Sazi),
+			MACRO_NEW_HELMET(infantry,Zombie),
 
 			//MACRO_NEW_HELMET(infantry,Cross),
 			//MACRO_NEW_HELMET(infantry,Rev),
@@ -88,6 +89,7 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Vault,Vault,Vault.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sazi,Sazi,Sazi.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Xander,Xander,Xander.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Zombie,Zombie,Zombie.paa)
 
 	//MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 	//MACRO_NEW_INF_HELMET_ITEM(Cross,Cross,Cross.paa)
