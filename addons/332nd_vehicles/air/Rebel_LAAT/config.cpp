@@ -3253,12 +3253,30 @@ class CfgVehicles
             
         };
 
+		class Sounds
+		{
+			class Rebel_Laat_le
+			{
+				sound[] =
+				{
+					"332nd_vehicles\air\sounds\Rebel_Laat_Le\JericoRunning.wss",
+					1,
+					1,
+					2100
+				};
+				frequency = 1;
+				volume = "(1-camPos)*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
+			};
+			
+		};
+		
+
 		class EventHandlers
         {
 		    //init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
             init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory";
-        };
 	};
+        };
 
     class MACRO_NEW_VEHICLE(air,LAAT,Rebel_mk1_332nd) :	MACRO_NEW_VEHICLE(air,LAAT,Rebel_mk1_332nd_base)
     {
