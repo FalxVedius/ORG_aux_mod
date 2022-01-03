@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(R_Vulture)
 	{
-		author = "Falx";
+		author = "Bugs+Thunder";
         addonRootClass = MACRO_PATCH_NAME(air_vehicles);
 		requiredAddons[]=
 		{
@@ -100,7 +100,7 @@ class CfgVehicles
 		  };
 
 		  hiddenselectionstextures[] = {
-			 MACRO_VULTURE_TEXTURES\Base\Vulture_Droid_Attempt_1.paa,"3as_vulture\data\vulturedroid_color.paa"
+			 MACRO_VULTURE_TEXTURES\Base\Rebel_Vulture_Droid.paa,"3as_vulture\data\vulturedroid_color.paa"
 		  };
 		  class EjectionSystem
 		{

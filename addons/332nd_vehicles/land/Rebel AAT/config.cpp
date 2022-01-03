@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(AAT)
 	{
-		author = "Falx";
+		author = "Bugs+thunder";
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
 		requiredAddons[]=
 		{
