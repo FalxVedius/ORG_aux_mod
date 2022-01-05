@@ -137,6 +137,19 @@ class CfgCloudlets
 		volume = 15;
         weight=15;
 	};
+
+    class 332nd_aux_effects_smoke_Rocket_Green : Missile4 //Firefly
+    {
+        //	[0,0.8,0,1]
+        color[] = {{0,0.8,0,1},{0,0,0,0.5},{0,0,0,0.3},{0,0,0,0.1},{0,0,0,0.01}};
+        colorVar[] = {0,0,0,1};
+        colorCoef[] = {1,1,1,1};
+        interval = 0.001;
+        size[] = {1,2};
+        lifetime = 3;
+        volume = 15;
+        weight = 15;
+    };
 	
 	class ls_particle_hailfireRocketSparks;
 	class 332nd_aux_effects_sparks_blue: ls_particle_hailfireRocketSparks //PLX / RPS4
@@ -489,6 +502,30 @@ class 332nd_aux_effects_missile_Rocket_Red
     class MissileEffect2 : MissileEffect1
     {
         type = "332nd_aux_effects_sparks_Red_rocket";
+    };
+};
+
+class 332nd_aux_effects_missile_Rocket_Green
+{
+    class light1
+    {
+        intensity = 1;
+        interval = 1;
+        lifeTime = 4;
+        position[] = {0,0,0};
+        simulation = "light";
+        type = "332nd_aux_effects_rocket_Green";
+    };
+
+    class MissileEffect1
+    {
+        simulation = "particles";
+        type = "332nd_aux_effects_smoke_Rocket_Green";
+    };
+
+    class MissileEffect2 : MissileEffect1
+    {
+        type = "332nd_aux_effects_sparks_green";
     };
 };
 

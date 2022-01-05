@@ -70,7 +70,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAP) : 3as_Vulture_dynamicLoadout
 	{
-		  displayName = "Stolen CAP Vulture Droid";
+		  displayName = "Rebel Missile Vulture";
 		  scope = 2;
 		  side = 2;
 		  scopeCurator = 2;
@@ -223,9 +223,9 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "vulture_AA"
+							  "332_A_Pylon"
 						  };
-						  attachment = "332nd_aux_magazine_Pylon_Shrieker_x20";
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
 						  priority = 5;
 						  maxweight = 1200;
 						  UIposition[] = { 0.34999999,0.15000001 };
@@ -251,17 +251,17 @@ class CfgVehicles
 						  priority = 4;
 						  hardpoints[] =
 						  {
-							  "Vulture_Missile"
+							  "332_A_Pylon"
 						  };
-						  attachment = "3as_PylonMissle_Vulture_2Rnd_Missile_AA";
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
 					  };
 					  class Pylons6 : Pylons5
 					  {
 						  hardpoints[] = 
 						  {
-							  "332_B_Pylon"
+							  "332_A_Pylon"
 						  };
-						  attachment = "332nd_aux_magazine_Pylon_ProtonBomb_x1";
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
 						 
 						  UIposition[] = { 0.34999999,0.5 };
 						  mirroredMissilePos = 5;
@@ -290,11 +290,11 @@ class CfgVehicles
 						  displayName = "Default";
 						  attachment[] =
 						  {
-							  "332nd_aux_magazine_Pylon_Shrieker_x20",
-							  "332nd_aux_magazine_Pylon_Shrieker_x20",
-							  "332nd_aux_magazine_Pylon_Shrieker_x20",
-							  "332nd_aux_magazine_Pylon_Shrieker_x20",
-							  "332nd_aux_magazine_Pylon_ProtonBomb_x1",
+							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
+							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
+							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
+							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
+							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
 							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells"
 						  };
 					  };
