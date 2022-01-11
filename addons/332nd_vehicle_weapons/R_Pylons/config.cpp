@@ -23,24 +23,26 @@ class CfgAmmo
 	{
 		soundFly[] =
 		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
+			"332nd_weapons\sounds\Firefly\Firefly_fly_effect.wss",
 			3,
 			2,
 			2000
 		};
 		manualcontrol = 0;
-		missileLockMaxDistance = 2000;
+		missileLockMaxDistance = 8000;
 		missileLockMinDistance = 0;
 		effectsMissile = "332nd_aux_effects_missile_Rocket_Green";
 		caliber = 1;
 		weaponLockSystem = "1 + 2 + 4 + 16"; //Visual + Infra-red + laser_guided + Missile
-		missileKeepLockedCone = 270;
+		missileKeepLockedCone = 360;
 		missileLockCone = 360;
 		indirectHit = 15;
 		hit = 25;
 		cmImmunity = 0.2;
 		whistleOnFire = 1;
-		cost = 20000;
+		cost = 2000;
+		missileLockMaxSpeed = 7000;
+		maxSpeed = 8000;
 	};
 
 };
@@ -61,6 +63,7 @@ class CfgMagazines
 		pylonWeapon = MACRO_NEW_WEAPON(R_AALow_Pylon);
 		displayNameShort = "A2A Firefly Missiles";
 		ammo = MACRO_NEW_AMMO(R_AA_Low)
+		maxLeadSpeed = 800;
 	};
 
 };
@@ -75,13 +78,14 @@ class CfgWeapons
 	class MACRO_NEW_WEAPON(R_AALow_Pylon) : missiles_ASRAAM
 	{
 		magazineWell[] = {};
-		weaponLockDelay = 0;
 		magazines[] = {
 			MACRO_NEW_MAG(R_Pylon_AA_low,12)
 		};
 		lockAcquire = 1;
 		displayName = "Firefly";
 		weaponLockDelay = 0;
+		burst = 3;
+		aiRateOfFire = 5.0;
 		
 	};
 };

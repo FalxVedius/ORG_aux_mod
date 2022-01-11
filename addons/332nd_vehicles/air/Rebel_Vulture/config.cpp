@@ -70,7 +70,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAP) : 3as_Vulture_dynamicLoadout
 	{
-		  displayName = "Rebel Missile Vulture";
+		  displayName = "Hornet Droid";
 		  scope = 2;
 		  side = 2;
 		  scopeCurator = 2;
@@ -78,7 +78,7 @@ class CfgVehicles
 		  editorSubcategory = "EdSubcat_332nd_Rebel_PLANES";
 		  armor = 25;
 		  crew = "332nd_aux_rebel_unit_332nd_indep_rebel";
-		  driverCanEject = 0;
+		  driverCanEject = 1;
 		  weapons[] = 
 		  {
 			  MACRO_NEW_WEAPON(Vulture_cannon),
