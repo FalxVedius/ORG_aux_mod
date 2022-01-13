@@ -1,5 +1,4 @@
 #include "../332nd_main/macros/main.hpp" // my config macro lib
-
 #define mag_2(a) a, a
 #define mag_3(a) a, a, a
 #define mag_4(a) a, a, a, a
@@ -7,7 +6,6 @@
 #define mag_8(a) a, a, a, a, a, a, a, a
 #define mag_10(a) a, a, a, a, a, a, a, a, a, a
 #define mag_15(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(units)
@@ -32,7 +30,6 @@ class CfgPatches
 		};
 	};
 };
-
 class CfgFactionClasses
 {
 	class EdCat_332nd
@@ -56,7 +53,6 @@ class CfgFactionClasses
 		priority = 2;
 	};
 };
-
 class CfgEditorCategories
 {
 	class EdCat_332nd_Props
@@ -64,7 +60,6 @@ class CfgEditorCategories
 		displayName = "332nd Legion Supplies";
 	};
 };
-
 class CfgEditorSubcategories
 {
 	class EdSubcat_332nd_AA
@@ -193,8 +188,14 @@ class CfgEditorSubcategories
 		displayName = "Tanks";
 		proiority = 3;
 	};
-};
 
+	class EdSubcat_332nd_Rebel_CARS
+	{
+		displayName = "Cars";
+		side = 2;
+		proiority = 6;
+	};
+};
 class CfgMarkers
 {
 	class mil_dot;
@@ -206,7 +207,6 @@ class CfgMarkers
 		color[] = { 1, 1, 1, 1 };
 	};
 };
-
 class CfgWeapons
 {
  	// ---- blufor Uniforms ----
@@ -841,8 +841,7 @@ class CfgWeapons
 			containerClass = "Supply140";
 		};
 	};
-}
-
+};
 class CfgSounds
 {
 	sounds[] = {};
@@ -984,6 +983,8 @@ class CfgSounds
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
 		titles[] = {};
 	};
+
+
 	
 	//Redefine Webknights Sounds to be louder
 	class B1_shooting_1_332nd
@@ -1185,7 +1186,6 @@ class CfgSounds
 		titles[] = {};
 	};
 };
-
 class CfgFunctions
 {
 	class Resupply
@@ -1272,7 +1272,6 @@ class CfgFunctions
 		};
 	};
 };
-
 class CfgVehicles
 {
 
@@ -13339,6 +13338,7 @@ class CfgVehicles
 			"H_Cap_red", 0.7,
 			"H_Cap_tan", 0.7,
 			"H_Cap_blk", 0.7,
+			"H_PASGT_basic_black_F", 0.7,
 		};
 
 
@@ -16040,7 +16040,6 @@ class CfgVehicles
 
 	// ---- End Opfor Units for Uniforms ----
 };
-
 class Extended_Killed_EventHandlers
 {
 	//B1s
@@ -16155,7 +16154,6 @@ class Extended_Killed_EventHandlers
 		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy_B2;";
 	};
 };
-
 class Extended_Init_EventHandlers
 {
 	//B1s
@@ -16261,7 +16259,6 @@ class Extended_Init_EventHandlers
 		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B2;";
 	};
 };
-
 class Extended_Fired_EventHandlers
 {
 	//Heavy Droids
