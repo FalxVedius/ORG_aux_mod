@@ -35,7 +35,6 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,King),
 			MACRO_NEW_HELMET(infantry,Spacy),
 			MACRO_NEW_HELMET(infantry,Church),
-			MACRO_NEW_HELMET(infantry,Cutter),
 			MACRO_NEW_HELMET(infantry,Tidal),
 			MACRO_NEW_HELMET(infantry,Corporal),
 			MACRO_NEW_HELMET(infantry,Specialist),
@@ -44,11 +43,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Xander),
 			MACRO_NEW_HELMET(infantry,Sazi),
 			MACRO_NEW_HELMET(infantry,Zombie),
+			MACRO_NEW_HELMET(infantry,Brotha),
 
-			//MACRO_NEW_HELMET(infantry,Cross),
-			//MACRO_NEW_HELMET(infantry,Rev),
-			//MACRO_NEW_HELMET(infantry,Sentinel),
-			//MACRO_NEW_HELMET(infantry,Dark),
         };
 		weapons[] = {};
 	};
@@ -90,10 +86,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Sazi,Sazi,Sazi.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Xander,Xander,Xander.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Zombie,Zombie,Zombie.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
 
-	//MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
-	//MACRO_NEW_INF_HELMET_ITEM(Cross,Cross,Cross.paa)
-	//MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
-	//MACRO_NEW_INF_HELMET_ITEM(Sentinel,Sentinel,Sentinel.paa)
-	//MACRO_NEW_INF_HELMET_ITEM(Dark,Dark,Dark.paa)
 };

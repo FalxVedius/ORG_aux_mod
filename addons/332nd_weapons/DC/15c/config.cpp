@@ -136,6 +136,11 @@ class cfgWeapons
 			maxRangeProbab=0.30000001;
 		};
 
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 80;
+		};
+
 		class OpticsModes
         {
 
@@ -188,12 +193,7 @@ class cfgWeapons
             };
         };
 	};
-	//class 3AS_15CGL
-	//class 3AS_DC15C_GL: 3AS_DC15C_Base_F
-	//{
-	//	class Single;
-	//	class WeaponSlotsInfo;
-	//};
+
 	class UGL_F;
 	class MACRO_NEW_WEAPON(DC_15c_ugl): MACRO_NEW_WEAPON(DC_15c)
 	{
@@ -210,126 +210,6 @@ class cfgWeapons
 		};
 		weaponInfoType="RscWeaponZeroing";
 		model = "3AS\3AS_Weapons\DC15C\3AS_DC15C_GL.p3d";
-
-		//magazines[] = {
-		//	MACRO_NEW_MAG(DC_15c_Medium,45)
-		//};
-		//recoil="recoil_15c";
-		//recoilProne="recoil_15c";
-  //      modes[] = {"Burst"};
-		//modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-		//class Burst: Single
-		//{
-		//    burst=3;
-		//	displayName="Burst";
-		//	sounds[]=
-		//	{
-		//		"StandardSound";
-		//	};
-		//	class BaseSoundModeType
-		//	{
-		//		weaponSoundEffect="";
-		//		closure1[]={};
-		//		closure2[]={};
-		//		soundClosure[]={};
-		//	};
-		//	class StandardSound: BaseSoundModeType
-		//	{
-		//		weaponSoundEffect="";
-		//		begin1[]=
-		//		{
-		//			"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-		//			1,
-		//			0.97,
-		//			1800
-		//		};
-		//		begin2[]=
-		//		{
-		//			"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-		//			1,
-		//			0.97,
-		//			1800
-		//		};
-		//		begin3[]=
-		//		{
-		//			"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-		//			1,
-		//			1.03,
-		//			1800
-		//		};
-		//		soundBegin[]=
-		//		{
-		//			"begin1",
-		//			1,
-		//			"begin2",
-		//			1,
-		//			"begin3",
-		//			1
-		//		};
-		//	};
-		//	};
-		//	textureType = "burst";
-		//	multiplier = 1;
-		//	reloadTime=0.09;
-		//	dispersion=0.0005;
-		//	minRange=2;
-		//	minRangeProbab=0.5;
-		//	midRange=250;
-		//	midRangeProbab=0.69999999;
-		//	maxRange=450;
-		//	maxRangeProbab=0.30000001;
-		//};
-
-		//class OpticsModes
-  //      {
-  //          class sight
-  //          {
-  //              opticsID=2;
-  //              useModelOptics=0;
-  //              opticsPPEffects[]=
-  //              {
-  //                  "OpticsCHAbera5",
-  //                  "OpticsBlur5"
-  //              };
-  //              opticsDisablePeripherialVision=0.67000002;
-  //              opticsZoomMin=0.375;
-  //              opticsZoomMax=1.1;
-  //              opticsZoomInit=0.75;
-  //              discreteInitIndex=0;
-  //              distanceZoomMin=25;
-  //              distanceZoomMax=700;
-  //              discreteDistance[]={25,100,200,300,400,500,600,700};
-  //              discreteDistanceInitIndex=0;
-  //              memoryPointCamera="eye";
-  //              visionMode[]={};
-  //              opticsFlare="true";
-  //              cameraDir="";
-  //          };
-  //          class scope: sight
-  //          {
-  //              opticsID=1;
-  //              useModelOptics=1;
-  //              opticsPPEffects[]=
-  //              {
-  //                  "OpticsCHAbera2",
-  //                  "OpticsBlur3"
-  //              };
-  //              opticsZoomMin=0.0300;
-  //              opticsZoomMax=0.125;
-  //              opticsZoomInit=0.125;
-  //              memoryPointCamera="optic_view";
-  //              opticsFlare=1;
-  //              opticsDisablePeripherialVision=1;
-  //              visionMode[] = {"Normal", "NVG"};
-  //              discretefov[] = {0.125,0.0625,0.0310};
-  //              discreteInitIndex = 0;
-  //              discreteDistanceInitIndex = 0;
-  //              discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000};
-  //              distanceZoomMin=100;
-  //              distanceZoomMax=1000;
-  //              modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-  //          };
-  //      };
 
 		class 332UGL: UGL_F
 		{

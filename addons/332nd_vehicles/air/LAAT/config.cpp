@@ -4279,6 +4279,74 @@ class CfgVehicles
                     "EdCat_332nd"
                 };
             };
+			class Noseart_Blast
+			{
+				displayName = "332nd Blast Noseart";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Blast\body1.paa,MACRO_LAAT_TEXTURES\Variants\Blast\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Blast\door1.paa,MACRO_LAAT_TEXTURES\Variants\Blast\door2.paa,MACRO_LAAT_TEXTURES\Variants\Blast\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Blast\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Blast\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
+			};
+			class Commander_332nd
+			{
+				displayName = "332nd Flight Commander";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Commander\body1.paa,MACRO_LAAT_TEXTURES\Variants\Commander\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Commander\door1.paa,MACRO_LAAT_TEXTURES\Variants\Commander\door2.paa,MACRO_LAAT_TEXTURES\Variants\Commander\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Commander\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Commander\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
+			};
+			class Lead_332nd
+			{
+				displayName = "332nd Section Lead";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Lead\body1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Lead\door1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door2.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Lead\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Lead\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
+			};
+			class Tech_332nd
+			{
+				displayName = "332nd Flight Technician";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Tech\body1.paa,MACRO_LAAT_TEXTURES\Variants\Tech\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Tech\door1.paa,MACRO_LAAT_TEXTURES\Variants\Tech\door2.paa,MACRO_LAAT_TEXTURES\Variants\Tech\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Tech\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Tech\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
+			};
             class Ahegao
             {
                 displayName = "Transport Gunship (Ahegao)";

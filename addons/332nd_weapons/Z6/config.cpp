@@ -129,154 +129,43 @@ class cfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_weapons\Z6\sounds\Z1.wss",
+					"332nd_weapons\Z6\sounds\z6sound.ogg",
 					1,
 					1,
 					2000
 				};
 				begin2[]=
 				{
-					"332nd_weapons\Z6\sounds\Z2.wss",
+					"332nd_weapons\Z6\sounds\z6sound.ogg",
 					1,
-					1,
+					0.9,
 					2000
 				};
 				begin3[]=
 				{
-					"332nd_weapons\Z6\sounds\Z3.wss",
+					"332nd_weapons\Z6\sounds\z6sound.ogg",
 					1,
-					1,
+					1.1,
 					2000
 				};
-				begin4[]=
+				begin4[] =
 				{
-					"332nd_weapons\Z6\sounds\Z4.wss",
+					"332nd_weapons\Z6\sounds\z6sound.ogg",
 					1,
-					1,
+					1.2,
 					2000
 				};
-				begin5[]=
-				{
-					"332nd_weapons\Z6\sounds\Z5.wss",
-					1,
-					1,
-					2000
-				};
-				begin6[]=
-				{
-					"332nd_weapons\Z6\sounds\Z6.wss",
-					1,
-					1,
-					2000
-				};
-				begin7[]=
-				{
-					"332nd_weapons\Z6\sounds\Z7.wss",
-					1,
-					1,
-					2000
-				};
-				begin8[]=
-				{
-					"332nd_weapons\Z6\sounds\Z8.wss",
-					1,
-					1,
-					2000
-				};
-				begin9[]=
-				{
-					"332nd_weapons\Z6\sounds\Z9.wss",
-					1,
-					1,
-					2000
-				};
-				begin10[]=
-				{
-					"332nd_weapons\Z6\sounds\Z10.wss",
-					1,
-					1,
-					2000
-				};
-				begin11[]=
-				{
-					"332nd_weapons\Z6\sounds\Z11.wss",
-					1,
-					1,
-					2000
-				};
-				begin12[]=
-				{
-					"332nd_weapons\Z6\sounds\Z12.wss",
-					1,
-					1,
-					2000
-				};
-				begin13[]=
-				{
-					"332nd_weapons\Z6\sounds\Z13.wss",
-					1,
-					1,
-					2000
-				};
-				begin14[]=
-				{
-					"332nd_weapons\Z6\sounds\Z14.wss",
-					1,
-					1,
-					2000
-				};
-				begin15[]=
-				{
-					"332nd_weapons\Z6\sounds\Z15.wss",
-					1,
-					1,
-					2000
-				};
-				begin16[]=
-				{
-					"332nd_weapons\Z6\sounds\Z16.wss",
-					1,
-					1,
-					2000
-				};
+				
 				soundBegin[]=
 				{
 					"begin1",
-					1,
 					"begin2",
-					1,
 					"begin3",
-					1,
 					"begin4",
-					1,
-					"begin5",
-					1,
-					"begin6",
-					1,
-					"begin7",
-					1,
-					"begin8",
-					1,
-					"begin9",
-					1,
-					"begin10",
-					1,
-					"begin11",
-					1,
-					"begin12",
-					1,
-					"begin13",
-					1,
-					"begin14",
-					1,
-					"begin15",
-					1,
-					"begin16",
-					1,
 				};
 			};
 			displayname="FullAuto";
-			reloadTime=0.1;
+			reloadTime=0.05;
 			dispersion=0.001;
 			minRange=0;
 			minRangeProbab=0.89999998;
@@ -285,39 +174,7 @@ class cfgWeapons
 			maxRange=30;
 			maxRangeProbab=0.1;
 		};
-		//class Supercharge: Mode_FullAuto
-		//{
-		//	sounds[]=
-		//	{
-		//		"StandardSound"
-		//	};
-		//	class BaseSoundModeType;
-		//	class StandardSound: BaseSoundModeType
-		//	{
-		//		begin1[]=
-		//		{
-		//			"SWLW_clones\machineguns\z6\sounds\Z6_1.wss",
-		//			1.2,
-		//			1.2,
-		//			2000
-		//		};
-		//		soundBegin[]=
-		//		{
-		//			"begin1",
-		//			1
-		//		};
-		//	};
-		//	displayname="Supercharge";
-		//	reloadTime=0.05;
-		//	dispersion=0.01;
-		//	minRange=0;
-		//	minRangeProbab=0.89999998;
-		//	midRange=15;
-		//	midRangeProbab=0.69999999;
-		//	maxRange=30;
-		//	maxRangeProbab=0.1;
-		//	textureType="fastAuto";
-		//};
+		
         class 332_Z6Supercharge: JLTS_stun_muzzle
 		{
 			displayName="Supercharge";
@@ -430,18 +287,18 @@ class CfgMagazines
 		count=200;
 		mass=30;
 		initspeed=1200;
-		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Medium,200)
-		displayNameShort="Med Power 200rnd";
-		descriptionShort="332nd Medium Power Round";
-		ammo="ls_ammo_762_blue";
+		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Low,200)
+		displayNameShort="Low Power 200rnd";
+		descriptionShort="332nd Low Power Round";
+		ammo="ls_ammo_556_blue";
 		tracersEvery=1;
 	};
 	class MACRO_NEW_MAG(Z6,125): MACRO_NEW_MAG(Z6,200)
 	{
 		count=125;
 		mass=15;
-		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Medium,125)
-		displayNameShort="Med Power 125rnd";
+		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Low,125)
+		displayNameShort="Low Power 125rnd";
 	};
 
 	class MACRO_NEW_MAG(Z6_Supercharge,1): 30rnd_762x39_AK12_Mag_F //DW-32S

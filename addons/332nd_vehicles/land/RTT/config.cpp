@@ -93,6 +93,8 @@ class CfgVehicles
 
 	class 3as_RTT_Base : APC_Tracked_01_base_F
 	{
+		class Hitpoints;
+
 		class Turrets : Turrets
 		{
 			class CargoTurret_01 : NewTurret
@@ -117,6 +119,15 @@ class CfgVehicles
 
 	class 3as_RTT : 3as_RTT_Base
 	{
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine;
+			class HitFuel;
+			class HitHull;
+			class HitLTrack;
+			class HitRTrack;
+		};
+
 		class Turrets : Turrets
 		{
 			class CargoTurret_01 : CargoTurret_01
@@ -149,6 +160,9 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		armor = 200;
+		armorStructural = 4;
+
 		transportSoldier = 10;
 
 		hiddenSelectionsTextures[] =
@@ -175,6 +189,30 @@ class CfgVehicles
 
 			};
 		};
+
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine : HitEngine
+			{
+
+			};
+			class HitFuel : HitFuel
+			{
+
+			};
+			class HitHull : HitHull
+			{
+
+			};
+			class HitLTrack : HitLTrack
+			{
+
+			};
+			class HitRTrack : HitRTrack
+			{
+
+			};
+		};
 	};
 
 	class MACRO_NEW_VEHICLE(Land,RTT,Supply) : 3as_RTT
@@ -186,6 +224,9 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		armor = 200;
+		armorStructural = 4;
+
 		transportSoldier = 0;
 		attendant = true;
 		transportAmmo = 300000;
@@ -196,8 +237,6 @@ class CfgVehicles
 		{
 			"332nd_vehicles\_textures\land\RTT\RTT_Body_co.paa"
 		};
-
-		
 
 		class Turrets : Turrets
 		{
@@ -218,7 +257,29 @@ class CfgVehicles
 
 			};
 		};
-	};
 
-	
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine : HitEngine
+			{
+
+			};
+			class HitFuel : HitFuel
+			{
+
+			};
+			class HitHull : HitHull
+			{
+
+			};
+			class HitLTrack : HitLTrack
+			{
+
+			};
+			class HitRTrack : HitRTrack
+			{
+
+			};
+		};
+	};
 };

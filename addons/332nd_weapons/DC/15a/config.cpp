@@ -74,6 +74,7 @@ class cfgWeapons
 		ACE_Overheating_mrbs=300000;
 		cursor="332_DOT";
         cursoraim="332_DC15A";
+
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15a_Medium,30),
 			MACRO_NEW_MAG(DC_15a_Low,60),
@@ -164,7 +165,10 @@ class cfgWeapons
 			aiRateOfFireDistance=200;
 		};
 
-		
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 80;
+		};
 
 		class OpticsModes
         {
@@ -334,6 +338,11 @@ class cfgWeapons
 			aiRateOfFireDistance=200;
 		};
 
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 80;
+		};
+
 		class OpticsModes
         {
             class sight
@@ -459,5 +468,5 @@ class cfgWeapons
                 MACRO_NEW_MAG(DC_15_UGL_HE,4)
 			};
 		};
-	}
-}
+	};
+};
