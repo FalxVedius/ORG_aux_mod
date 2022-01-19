@@ -144,6 +144,8 @@ class CfgVehicles
 
 	class 3as_saber_Base : 3as_saber_01_Base
 	{
+		class HitPoints;
+
 		class Turrets : Turrets
 		{
 			class MainTurret_bottom : MainTurret_bottom
@@ -175,6 +177,15 @@ class CfgVehicles
 
 	class 3as_saber_m1 : 3as_saber_Base
 	{
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine;
+			class HitFuel;
+			class HitHull;
+			class HitLTrack;
+			class HitRTrack;
+		};
+
 		class Turrets : Turrets
 		{
 			class MainTurret_bottom : MainTurret_bottom
@@ -229,6 +240,8 @@ class CfgVehicles
 
 			};
 		};
+
+		class Hitpoints;
 	};
 
 	class 3as_saber_super : 3as_saber_super_base
@@ -255,6 +268,15 @@ class CfgVehicles
 			{
 
 			};
+		};
+
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine;
+			class HitFuel;
+			class HitHull;
+			class HitLTrack;
+			class HitRTrack;
 		};
 	};
 
@@ -287,6 +309,8 @@ class CfgVehicles
 
 			};
 		};
+
+		class Hitpoints;
 	};
 
 	class 3as_saber_m1G : 3as_saber_02_Base
@@ -317,6 +341,15 @@ class CfgVehicles
 			{
 
 			};
+		};
+
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine;
+			class HitFuel;
+			class HitHull;
+			class HitLTrack;
+			class HitRTrack;
 		};
 	};
 
@@ -349,6 +382,8 @@ class CfgVehicles
 
 			};
 		};
+
+		class Hitpoints;
 	};
 
 	class 3as_saber_m1Recon : 3as_saber_03_Base
@@ -380,6 +415,15 @@ class CfgVehicles
 
 			};
 		};
+
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine;
+			class HitFuel;
+			class HitHull;
+			class HitLTrack;
+			class HitRTrack;
+		};
 	};
 	
 	class MACRO_NEW_VEHICLE(Land,TX,130): 3as_saber_m1
@@ -391,12 +435,14 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		armor = 400;
+		armorStructural = 5;
+
 		hiddenSelectionsTextures[] =
 		{
 			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
 			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
 		};
-
 
 		class Turrets : Turrets
 		{
@@ -459,6 +505,30 @@ class CfgVehicles
 
 			};
 		};
+
+		class Hitpoints : Hitpoints
+		{
+			class HitEngine : HitEngine
+			{
+
+			};
+			class HitFuel : HitFuel
+			{
+
+			};
+			class HitHull : HitHull
+			{
+
+			};
+			class HitLTrack : HitLTrack
+			{
+
+			};
+			class HitRTrack : HitRTrack
+			{
+
+			};
+		};
 	};
 
 	class MACRO_NEW_VEHICLE(Land,TX,130_GL) : 3as_saber_m1G
@@ -470,12 +540,14 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		armor = 400;
+		armorStructural = 5;
+
 		hiddenSelectionsTextures[] =
 		{
 			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
 			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Grenade_Launcher_Variant.paa"
 		};
-
 
 		class Turrets : Turrets
 		{
@@ -549,12 +621,14 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		armor = 400;
+		armorStructural = 5;
+
 		hiddenSelectionsTextures[] =
 		{
 			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
 			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Scout_Weapons.paa"
 		};
-
 
 		class Turrets : Turrets
 		{
@@ -593,6 +667,9 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
+
+		armor = 400;
+		armorStructural = 5;
 
 		hiddenSelectionsTextures[] =
 		{

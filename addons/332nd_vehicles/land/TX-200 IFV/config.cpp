@@ -69,6 +69,9 @@ class CfgVehicles
 		//hiddenSelections[] = {"camo1","camo2","camo3","CamoNet","CamoSlat"};
 		//hiddenSelectionsTextures[] = {"\332nd_vehicles\_textures\land\TX200\MainBody_co.paa","\332nd_vehicles\_textures\land\TX200\LowerBody_co.paa","\332nd_vehicles\_textures\land\TX200\MainTurret_co.paa","",""};
 
+		armor = 350;
+		armorStructural = 4;
+
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
@@ -130,6 +133,43 @@ class CfgVehicles
 					};
 
 				};
+			};
+		};
+
+		class HitPoints
+		{
+			class HitHull
+			{
+				armor = 2.5;
+				explosionShielding = 0.4;
+				material = -1;
+				minimalHit = 0.2;
+				name = "telo";
+				passThrough = 1;
+				radius = 0.3;
+				visual = "hull";
+			};
+
+			class HitLTrack
+			{
+				armor = 2;
+				explosionShielding = 0.5;
+				material = -1;
+				minimalHit = 0.1;
+				name = "pasL";
+				passThrough = 0;
+				radius = 0.75;
+			};
+
+			class HitRTrack
+			{
+				armor = 2;
+				explosionShielding = 0.5;
+				material = -1;
+				minimalHit = 0.1;
+				name = "pasP";
+				passThrough = 0;
+				radius = 0.75;
 			};
 		};
 	};

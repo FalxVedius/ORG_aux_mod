@@ -24,11 +24,37 @@ class CfgVehicles
 
 	class SC_Saurus_Base : Car_F
 	{
+		class HitPoints;
 		class Turrets;
 	};
 
 	class SC_SaurusAPC_SE : SC_Saurus_Base
 	{
+
+		class HitPoints : HitPoints
+		{
+			class HitBody;
+			class HitEngine;
+			class HitFuel;
+			class HitGlass1;
+			class HitGlass2;
+			class HitGlass3;
+			class HitGlass4;
+			class HitGlass5;
+			class HitGlass6;
+			class HitHull;
+			class HitLBWheel;
+			class HitLF2Wheel;
+			class HitLFWheel;
+			class HitLGlass;
+			class HitLMWheel;
+			class HitRBWheel;
+			class HitRF2Wheel;
+			class HitRFWheel;
+			class HitRGlass;
+			class HitRMWheel;
+		};
+
 		class Turrets : Turrets
 		{
 			class MainTurret;
@@ -43,6 +69,9 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_APCS";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
+
+		armor = 400;
+		armorStructural = 6;
 
 		class CommanderOptics : NewTurret
 		{
@@ -95,7 +124,6 @@ class CfgVehicles
 			};
 		};
 		
-
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
@@ -130,12 +158,89 @@ class CfgVehicles
 				};
 			};
 		};
-	};
-}
-	
-			
-		
-	
 
-//TO DO
-// make tracks invulnerable, texture, investigate weapons, sounds, effects
+		class HitPoints : HitPoints
+		{
+			class HitBody : HitBody
+			{
+
+			};
+			class HitEngine : HitEngine
+			{
+
+			};
+			class HitFuel : HitFuel
+			{
+
+			};
+			class HitGlass1 : HitGlass1
+			{
+
+			};
+			class HitGlass2 : HitGlass2
+			{
+
+			};
+			class HitGlass3 : HitGlass3
+			{
+
+			};
+			class HitGlass4 : HitGlass4
+			{
+
+			};
+			class HitGlass5 : HitGlass5
+			{
+
+			};
+			class HitGlass6 : HitGlass6
+			{
+
+			};
+			class HitHull : HitHull
+			{
+
+			};
+			class HitLBWheel : HitLBWheel
+			{
+
+			};
+			class HitLF2Wheel : HitLF2Wheel
+			{
+
+			};
+			class HitLFWheel : HitLFWheel
+			{
+
+			};
+			class HitLGlass : HitLGlass
+			{
+
+			};
+			class HitLMWheel : HitLMWheel
+			{
+
+			};
+			class HitRBWheel : HitRBWheel
+			{
+
+			};
+			class HitRF2Wheel : HitRF2Wheel
+			{
+
+			};
+			class HitRFWheel : HitRFWheel
+			{
+
+			};
+			class HitRGlass : HitRGlass
+			{
+
+			};
+			class HitRMWheel : HitRMWheel
+			{
+
+			};
+		};
+	};
+};

@@ -31,9 +31,39 @@ class CfgVehicles
         maximumLoad = 260;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
 
+        NSM_jumppack_jump_types[]=
+		{
+			
+			{
+				"Foward",
+				{30,5,50,0,0,0}
+			},
+
+            {
+				"Short",
+				{12,7,30,0,1,1}
+			},
+			
+            {
+				"Vertical",
+				{4,30,50,0,0,0}
+			},
+
+            {
+				"Short",
+				{12,7,30,0,1,1}
+			},
+
+			{
+				"Emergency",
+				{40,20,80,0,0,0}
+			}
+		};
+
+
         NSM_jumppack_spam_delay = 1;
         NSM_jumppack_energy_capacity = 80;
-        NSM_jumppack_recharge = 4;
+        NSM_jumppack_recharge = 5;
 
         JLTS_isJumppack = 0;
     };

@@ -58,8 +58,14 @@ class cfgWeapons
 	class MACRO_NEW_WEAPON(DC_15s):JLTS_DC15S
 	{
 		
-		class WeaponSlotsInfo: WeaponSlotsInfo {
-			class UnderBarrelSlot: UnderBarrelSlot {};
+		class WeaponSlotsInfo: WeaponSlotsInfo 
+		{
+
+			mass = 80;
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+
+			};
 		};
 
 		
