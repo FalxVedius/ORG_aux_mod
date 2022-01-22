@@ -58,6 +58,12 @@ class CfgAmmo
 	{
 		irLock=1;
 	};
+
+	class MACRO_NEW_AMMO(E60R_ATRocket) : MACRO_NEW_AMMO(RPS6_ATRocket)
+	{
+		irLock = 0;
+		manualControl = 0;
+	};
 	
 	class MACRO_NEW_AMMO(RPS6_AARocket): M_Titan_AA
 	{
@@ -75,6 +81,12 @@ class CfgAmmo
 			1.5,
 			700
 		};
+	};
+
+	class MACRO_NEW_AMMO(E60R_AARocket) : MACRO_NEW_AMMO(RPS6_AARocket)
+	{
+		cmImmunity = 0.01;
+		hit = 450;
 	};
 	
 	class MACRO_NEW_AMMO(RPS4_AT): R_MRAAWS_HEAT_F

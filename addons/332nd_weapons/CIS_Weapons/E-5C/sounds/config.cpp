@@ -56,7 +56,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_E5c_Shot_SoundSet
 	{
 		soundShaders[] = {"332_E5c_Closure_SoundShader","332_E5c_closeShot_SoundShader","332_E5c_midShot_SoundShader","332_E5c_distShot_SoundShader"};
-		volumeFactor = 0.7;
+		volumeFactor = 1.1;
 		frequencyRandomizer = 1;
 		frequencyRandomizer = 0.35;
 		volumeCurve = "332_weapons_basic_volumecurve";
@@ -66,7 +66,6 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
         obstructionFactor=0.30000001;
 		spatial = 1;
 		doppler = 0;
-	
 		loop = 0;
 	};
 };

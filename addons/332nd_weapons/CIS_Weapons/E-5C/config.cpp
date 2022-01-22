@@ -109,7 +109,7 @@ class CfgWeapons
 		    sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_E5c_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"332_DC15a_Tail_SoundSet","332_E5c_Shot_SoundSet"};
 			};
 			reloadTime=0.075;
 			dispersion=0.002;

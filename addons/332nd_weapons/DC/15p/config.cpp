@@ -42,7 +42,7 @@ class cfgWeapons
 		recoil="DC_15s";
 		recoilprone="DC_15s";
 		canShootInWater=1;
-		modes[] = {"Single"};
+		modes[] = {"FullAuto"};
         baseWeapon=MACRO_NEW_WEAPON(DC_15p);
 		cursor = "332_DOT";
 		cursoraim = "332_DC15S";
@@ -51,7 +51,7 @@ class cfgWeapons
 
 			MACRO_NEW_MAG(DC_15P_Med,40)
 		};
-		modelOptics = "";
+		modelOptics = "-";
 
 		class FullAuto: Mode_FullAuto
         {
