@@ -122,11 +122,11 @@ class CfgPatches
             //Custom ------------------------
 
             //Blast
-            MACRO_NEW_UNIT(aviation,Blast),
+            MACRO_NEW_UNIT(captain,Blast),
             //Falx
             MACRO_NEW_UNIT(captain,Falx),
             //Halligan
-            MACRO_NEW_UNIT(airborne,Halligan),
+            MACRO_NEW_UNIT(cwo,Halligan),
 
 
 		};
@@ -242,11 +242,11 @@ class CfgPatches
             //Custom ------------------------
 
             //Blast
-            MACRO_NEW_UNIFORM(aviation,Blast),
+            MACRO_NEW_UNIFORM(captain,Blast),
             //Falx
             MACRO_NEW_UNIFORM(captain,Falx),
             //Halligan
-            MACRO_NEW_UNIFORM(airborne,Halligan),
+            MACRO_NEW_UNIFORM(cwo,Halligan),
             
 
             // ----- nvgs -----
@@ -476,11 +476,11 @@ class CfgWeapons
     //Custom ----------------------------------------
 
     //Blast
-    MACRO_NEW_AVI_UNIFORM_ITEM(Blast,Blast,Blast)
+    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Blast,Blast,Blast)
     //Falx
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Falx,Falx,Falx)
     //Halligan
-    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Halligan,Halligan,Halligan)
+    MACRO_NEW_CWO_UNIFORM_ITEM(Halligan,Halligan,Halligan)
 
 
     #include "_nvg.hpp"
@@ -641,6 +641,6 @@ class CfgVehicles
     //Falx
     MACRO_NEW_CAPTAIN_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
     //Halligan
-    MACRO_NEW_INF_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
+    MACRO_NEW_CWO_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
 
 };
