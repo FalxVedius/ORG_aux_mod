@@ -39,16 +39,17 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(*WIP* DC 15P)
 
 		ACE_Overheating_mrbs=300000;
-		//recoil="recoil_m320";
-		//recoilprone="recoil_m320";
+		recoil="DC_15s";
+		recoilprone="DC_15s";
 		canShootInWater=1;
+		modes[] = {"Single"};
         baseWeapon=MACRO_NEW_WEAPON(DC_15p);
 		cursor = "332_DOT";
 		cursoraim = "332_DC15S";
 		magazineWell[] = {};
 		magazines[] = {
 
-			MACRO_NEW_MAG(DC_15P_Low,30)
+			MACRO_NEW_MAG(DC_15P_Med,40)
 		};
 		modelOptics = "";
 
@@ -70,19 +71,46 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[] = 
 				{ 
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire.wss",
+					"332nd_weapons\DC\15p\sounds\DC15p.wss",
 					1.2,
-					0.95,
+					1,
+					1800 
+				};
+				begin2[] = 
+				{ 
+					"332nd_weapons\DC\15p\sounds\DC15p.wss",
+					1.2,
+					0.9,
+					1800 
+				};
+				begin3[] = 
+				{ 
+					"332nd_weapons\DC\15p\sounds\DC15p.wss",
+					1.2,
+					1,
+					1800 
+				};
+				begin4[] = 
+				{ 
+					"332nd_weapons\DC\15p\sounds\DC15p.wss",
+					1.2,
+					1,
 					1800 
 				};
 				soundBegin[]=
 				{
 					"begin1",
-					1
+					0.25,
+					"begin2",
+					0.25,
+					"begin3",
+					0.25,
+					"begin4",
+					0.25
 				};
 			};
-            reloadTime= 0.05;
-			dispersion= 0.0000004;
+            reloadTime= 0.055;
+			dispersion= 0.00000001;
         };
 
 		class Single : FullAuto

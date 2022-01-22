@@ -27,6 +27,7 @@ class Mode_FullAuto;
 
 class cfgWeapons
 {
+    class BaseSoundModeType;
 	class Rifle_Base_F;
 	class arifle_MX_Base_F:Rifle_Base_F
 	{
@@ -140,35 +141,10 @@ class cfgWeapons
 		
 		class Single: Mode_SemiAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_weapons\DW-32S\sounds\DW-32s.wss",
-					1,
-					1,
-					2000
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
+				soundSetShot[] = {"332_DW32_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
 			};
 			reloadTime=0.25;
 			dispersion=0.000000000005;

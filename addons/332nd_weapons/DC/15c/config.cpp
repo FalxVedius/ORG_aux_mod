@@ -36,7 +36,7 @@ class cfgRecoils
 
 
 class cfgWeapons
-{  
+{   class BaseSoundModeType;
 	class 3AS_DC15C_Base_F;
 	class 3AS_DC15C_F: 3AS_DC15C_Base_F
 	{
@@ -77,50 +77,10 @@ class cfgWeapons
 		{
 		    burst=3;
 			displayName="Burst";
-			sounds[]=
-			{
-				"StandardSound";
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					0.97,
-					1800
-				};
-				begin2[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					0.97,
-					1800
-				};
-				begin3[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1.03,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-					"begin2",
-					1,
-					"begin3",
-					1
-				};
+				soundSetShot[] = {"332_DC15c_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			textureType = "burst";
 			multiplier = 1;

@@ -49,15 +49,15 @@ class CfgMagazines
 		ammo="ls_ammo_556_blue";
 	};
 
-	class MACRO_NEW_MAG(DC_15P_Low,30) : MACRO_NEW_MAG(DC_15a_Medium,30) //Low Mag for DC15A
+	class MACRO_NEW_MAG(DC_15P_Med,40) : MACRO_NEW_MAG(DC_15a_Medium,30) //Low Mag for DC15A
 	{
-		count = 30;
-		mass = 10;
-		initspeed = 1800;
-		displayName = MACRO_AMMO_DISPLAYNAME(15p Low,30)
+		count = 40;
+		mass = 7.5;
+		initspeed = 800;
+		displayName = MACRO_AMMO_DISPLAYNAME(15p med,40)
 		displayNameShort = "Low Power 30rnd";
 		descriptionShort = "332nd Low Power Round";
-		ammo = "ls_ammo_556_blue";
+		ammo = "ls_ammo_762_blue";
 	};
 
 	class MACRO_NEW_MAG(DC_15a_High,10): MACRO_NEW_MAG(DC_15a_Medium,30)//High Mag for DC15A | Not on the 15A UGL
@@ -394,6 +394,15 @@ class CfgAmmo
 		supersonicCrackNear[] = {"\332nd_weapons\sounds\WhizNear.wss",1,500};
 		//soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
 	};
+	class ls_ammo_762_red;
+	class  MACRO_NEW_AMMO(762_Red): ls_ammo_762_red
+	{
+		//soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
+		supersonicCrackFar[] = {"\332nd_weapons\sounds\WhizNear.wss",1,100};
+		supersonicCrackNear[] = {"\332nd_weapons\sounds\WhizNear.wss",1,500};
+		//soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
+	};
+
 	class ls_ammo_408_blue;
 	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue
 	{

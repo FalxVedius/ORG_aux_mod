@@ -35,6 +35,7 @@ class UnderBarrelSlot;
 
 class CfgWeapons
 {
+    class BaseSoundModeType;
 	class rifle_Base_F;
 	class 3AS_DC15A_Base_F: rifle_Base_F
 	{
@@ -181,25 +182,10 @@ class CfgWeapons
 			maxRangeProbab=0.30000001;
 			soundContinuous=0;
 			soundBurst=0;
-			sounds[]=
-			{
-				"StandardSound",
-			};
-			class BaseSoundModeType;
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-			begin1[]=
-				{
-					"332nd_weapons\DC\15b_Barker\sounds\DC-15b.wss",
-					1,
-					1,
-					2200
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
+				soundSetShot[] = {"332_DC15b_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 		};
 	};
