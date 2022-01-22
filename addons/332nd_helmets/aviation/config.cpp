@@ -13,7 +13,6 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
             MACRO_NEW_HELMET(aviation,332nd_pilot),
-			MACRO_NEW_HELMET(warden,332nd_warden),
 			MACRO_NEW_HELMET(aviation,332nd_blast),
 			MACRO_NEW_HELMET(aviation,Dragneel),
 			MACRO_NEW_HELMET(aviation,Chopper),
@@ -25,6 +24,12 @@ class CfgPatches
 			MACRO_NEW_HELMET(aviation,Loyal),
 			MACRO_NEW_HELMET(aviation,Cutter),
 			MACRO_NEW_HELMET(aviation,Bugs),
+
+			MACRO_NEW_HELMET(warden,FlightEngi),
+			MACRO_NEW_HELMET(warden,FlightExpert),
+			MACRO_NEW_HELMET(warden,FlightTechiEngi),
+			MACRO_NEW_HELMET(warden,FlightOfficerEngi),
+			MACRO_NEW_HELMET(warden,Hammer),
         };
 		weapons[] = {};
 	};
@@ -52,5 +57,9 @@ class CfgWeapons
 	MACRO_NEW_AVIATION_HELMET_ITEM(Bugs,Bugs,Bugs.paa)
 	
 	//warden
-	MACRO_NEW_WARDEN_HELMET_ITEM(332nd_warden,Warden,warden.paa)
+	MACRO_NEW_WARDEN_HELMET_ITEM(FlightEngi,Engineer,Engineer_ca.paa)
+	MACRO_NEW_WARDEN_HELMET_ITEM(FlightExpert,Expert,Expert_ca.paa)
+	MACRO_NEW_WARDEN_HELMET_ITEM(FlightTechiEngi,Technician,Techi_ca.paa)
+	MACRO_NEW_WARDEN_HELMET_ITEM(FlightOfficerEngi,Officer,Officer_ca.paa)
+	MACRO_NEW_WARDEN_HELMET_ITEM(Hammer,Hammer,Hammer_ca.paa)
 }

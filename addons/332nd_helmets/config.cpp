@@ -253,6 +253,7 @@ class CfgWeapons
         scope = 0;
         author = MACRO_AUTHOR;
         displayName = "[332nd] Warden Helmet ('base')";
+		picture = "3AS\3AS_Characters\Clones\Headgear\ui\engineer_ui_ca.paa";
         subItems[] = {"Integrated_NVG_TI_1_F"};
 
 		ace_hearing_lowerVolume = 0.60000002;
