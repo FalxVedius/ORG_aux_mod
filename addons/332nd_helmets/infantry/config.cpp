@@ -44,6 +44,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Sazi),
 			MACRO_NEW_HELMET(infantry,Zombie),
 			MACRO_NEW_HELMET(infantry,Brotha),
+			MACRO_NEW_HELMET(infantry,Halligan),
 
         };
 		weapons[] = {};
@@ -87,5 +88,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Xander,Xander,Xander.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Zombie,Zombie,Zombie.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 
 };

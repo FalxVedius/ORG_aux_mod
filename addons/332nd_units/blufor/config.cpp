@@ -637,10 +637,10 @@ class CfgVehicles
     //Custom ----------------------------------------
     
     //Blast
-    MACRO_NEW_AVI_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\Blast_Lower.paa)
+    MACRO_NEW_CAPTAIN_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\Blast_Lower.paa)
     //Falx
     MACRO_NEW_CAPTAIN_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
     //Halligan
-    MACRO_NEW_AIRBORNE_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Sergeant_Lower.paa)
+    MACRO_NEW_INF_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
 
 };
