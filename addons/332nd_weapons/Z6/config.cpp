@@ -21,7 +21,7 @@ class CfgPatches
 	};
 };
 
-
+class BaseSoundModeType;
 class Mode_FullAuto;
 class mode_SemiAuto;
 class cfgWeapons
@@ -120,52 +120,14 @@ class cfgWeapons
 		
 		class FullAuto: Mode_FullAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType;
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				begin1[]=
-				{
-					"332nd_weapons\Z6\sounds\z6sound.ogg",
-					1,
-					1,
-					2000
-				};
-				begin2[]=
-				{
-					"332nd_weapons\Z6\sounds\z6sound.ogg",
-					1,
-					0.9,
-					2000
-				};
-				begin3[]=
-				{
-					"332nd_weapons\Z6\sounds\z6sound.ogg",
-					1,
-					1.1,
-					2000
-				};
-				begin4[] =
-				{
-					"332nd_weapons\Z6\sounds\z6sound.ogg",
-					1,
-					1.2,
-					2000
-				};
-				
-				soundBegin[]=
-				{
-					"begin1",
-					"begin2",
-					"begin3",
-					"begin4",
-				};
+				soundSetShot[] = {"332_Z6_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
+
 			displayname="FullAuto";
-			reloadTime=0.05;
+			reloadTime=0.06;
 			dispersion=0.001;
 			minRange=0;
 			minRangeProbab=0.89999998;
@@ -187,34 +149,13 @@ class cfgWeapons
 			discreteDistance[]={100,200,300,400};
 			memoryPointCamera="eye";
 			
+
 			class Single: mode_SemiAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+		    sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_Weapons\Z6\sounds\Z6Supercharge.wss",
-					1.5,
-					0.98,
-					1500
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_Z6_Supercharge_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 		};
 			

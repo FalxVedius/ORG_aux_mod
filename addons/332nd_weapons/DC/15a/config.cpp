@@ -34,6 +34,8 @@ class cfgRecoils
  };
 };
 
+class BaseSoundModeType;
+
 class cfgWeapons
 {
 	class arifle_MX_Base_F;
@@ -85,33 +87,12 @@ class cfgWeapons
 		modes[] = {"Single","FullAuto"};
 		class Single: Single
 		{
-			sounds[]=
+			sounds[] = {"StandardSound"};
+			class StandardSound: BaseSoundModeType 
 			{
-				"StandardSound";
+				soundSetShot[] = {"332_DC15a_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1.2,
-					0.95,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
+
 			reloadTime=0.14;
 			dispersion=0.00000009;
 			minRange=2;
@@ -123,32 +104,10 @@ class cfgWeapons
 		};
 		class FullAuto: FullAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1.2,
-					0.95,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_DC15a_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
