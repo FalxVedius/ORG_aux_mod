@@ -34,9 +34,10 @@ class cfgRecoils
  };
 };
 
-
+class BaseSoundModeType;
+class Mode_SemiAuto;
 class cfgWeapons
-{   class BaseSoundModeType;
+{   
 	class 3AS_DC15C_Base_F;
 	class 3AS_DC15C_F: 3AS_DC15C_Base_F
 	{
@@ -177,56 +178,41 @@ class cfgWeapons
 			descriptionShort="UGL";
 			reloadTime=1;
 			cursor="332_DOT";
+			modes[] = {"Single"};
+			recoil="recoil_15a";
 			cursorAim="332_UGL";
 			baseweapon="";
 			showtoplayer=1;
 			discreteDistance[]={25,50,100,200,300,400};
 			discreteDistanceCameraPoint[] = {"GL_EYE","OP_eye_50","OP_eye_100","OP_eye_200","OP_eye_300","OP_eye_400"};
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
+			class Single: Mode_SemiAuto
+		    {
+				class StandardSound: BaseSoundModeType
 				{
-					"SWLW_clones\rifles\gl\sounds\gl",
-					1,
-					1,
-					1500
+					soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
 				};
-				begin2[]=
+				sounds[]=
 				{
-					"SWLW_clones\rifles\gl\sounds\gl",
-					1,
-					1,
-					1500
+					"StandardSound"
 				};
-				begin3[]=
-				{
-					"SWLW_clones\rifles\gl\sounds\gl",
-					1,
-					1,
-					1500
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
-				};
-			};
+				reloadtime=0.5;
+				  multiplier = 1;
+				reloadtime=0.5;
+				showtoplayer=1;
+				burst=1;
+				dispersion=0.0000009;
+			    displayName="UGL";
+				textureType="fullAuto";
+				aiRateOfFire=5;
+				aiRateOfFireDistance=500;
+				aiRateOfFireDispersion=2;
+				minRange=10;
+				minRangeProbab=0.30000001;
+				midRange=40;
+				midRangeProbab=0.85000002;
+				maxRange=600;
+				maxRangeProbab=0.85000002;
+		    };
 			discreteDistanceInitIndex=0;
 			magazineWell[]={};
 			magazines[]= {

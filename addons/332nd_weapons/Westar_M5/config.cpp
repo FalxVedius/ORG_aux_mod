@@ -41,6 +41,7 @@ class cfgRecoils
 };
 class CfgWeapons
 {
+    class BaseSoundModeType;
 	class Rifle_Base_F;
 	class 3AS_WestarM5_Base_F: Rifle_Base_F
 	{
@@ -164,27 +165,10 @@ class CfgWeapons
 			soundBurst=0;
 			textureType = "semi";
 			displayName="Single";
-			sounds[]=
+			sounds[] = {"StandardSound"};
+			class StandardSound: BaseSoundModeType 
 			{
-				"StandardSound",
-				
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_weapons\Westar_M5\sounds\WestarM5.wss",
-					1,
-					1.05,
-					100
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
+				soundSetShot[] = {"332_Suppresed_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 		};
 		class FullAuto: Mode_FullAuto
@@ -200,26 +184,10 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 			aiRateOfFire=1e-006;
 			textureType = "fullAuto";
-			sounds[]=
+			sounds[] = {"StandardSound"};
+			class StandardSound: BaseSoundModeType 
 			{
-				"StandardSound"
-			};
-			class BaseSoundModeType;
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_weapons\Westar_M5\sounds\WestarM5.wss",
-					1,
-					1.05,
-					100
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
+				soundSetShot[] = {"332_Suppresed_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 		};
 			class OpticsModes
@@ -294,6 +262,7 @@ class CfgWeapons
 			cameraDir="OP_look";
 			cursor="332_DOT";
 			cursorAim="332_UGL";
+
 			discreteDistance[]={25,50,100,200,300,400};
 			discreteDistanceCameraPoint[]=
 			{
@@ -304,6 +273,34 @@ class CfgWeapons
 				"OP_eye_300",
 				"OP_eye_400"
 			};
+			class Single: Mode_SemiAuto
+		    {
+				class StandardSound: BaseSoundModeType
+				{
+					soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
+				};
+				sounds[]=
+				{
+					"StandardSound"
+				};
+			    multiplier = 1;
+				reloadtime=0.5;
+				showtoplayer=1;
+				burst=1;
+				recoil="recoil_15a";
+				dispersion=0.0000009;
+			    displayName="UGL";
+				textureType="fullAuto";
+				aiRateOfFire=5;
+				aiRateOfFireDistance=500;
+				aiRateOfFireDispersion=2;
+				minRange=10;
+				minRangeProbab=0.30000001;
+				midRange=40;
+				midRangeProbab=0.85000002;
+				maxRange=600;
+				maxRangeProbab=0.85000002;
+		    };
 			discreteDistanceInitIndex=1;
 			reloadAction="GestureReloadMXUGL";
 			reloadMagazineSound[]=

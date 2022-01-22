@@ -56,9 +56,9 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_DC15b_Shot_SoundSet
 	{
 		soundShaders[] = {"332_DC15b_Closure_SoundShader","332_DC15b_closeShot_SoundShader","332_DC15b_midShot_SoundShader","332_DC15b_distShot_SoundShader"};
-		volumeFactor = 1;
-		frequencyRandomizer = 1;
-		frequencyRandomizer = 0.35;
+		volumeFactor = 0.95;
+		frequencyRandomizer = 0.5;
+		frequencyRandomizer = 0.2;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";

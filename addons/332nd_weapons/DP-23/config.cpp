@@ -49,7 +49,7 @@ class CfgSounds
 
 class Mode_SemiAuto;
 class Mode_FullAuto;
-
+class BaseSoundModeType;
 class cfgWeapons
 {
     class Rifle_Base_F;
@@ -164,33 +164,11 @@ class cfgWeapons
 
         class Single: Mode_SemiAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_weapons\DP-23\sounds\DP-23Fire.wss",
-					1.5,
-					0.9,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
+				soundSetShot[] = {"332_DP23_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
 			};
+			sounds[] = {"StandardSound"};
 			reloadTime=0.7;
 			dispersion=0.00000000000000000000045;
 			minRange=5;

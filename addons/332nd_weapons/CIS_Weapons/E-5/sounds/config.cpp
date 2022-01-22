@@ -32,7 +32,7 @@ class cfgSoundShaders
 	class 332_E5_closeShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\CIS_Weapons\E-5\sounds\E5Close.wss",1}};
-		volume = 1.0;
+		volume = 0.9;
 		range = 20;
 		limitation= 0;
 		rangeCurve = "closeShotCurve";

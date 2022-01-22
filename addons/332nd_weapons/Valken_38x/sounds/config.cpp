@@ -58,9 +58,10 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_Valken38x_Shot_SoundSet
 	{
 		soundShaders[] = {"332_Valken38x_Closure_SoundShader","332_Valken38x_closeShot_SoundShader","332_Valken38x_midShot_SoundShader","332_Valken38x_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
-		volumeFactor = 0.9;
+		volumeFactor = 1.1;
 		frequencyRandomizer = 1;
 		frequencyRandomizermin = 0.35;
+		frequencyFactor = 0.95;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";

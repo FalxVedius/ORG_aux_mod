@@ -33,7 +33,7 @@ class cfgWeapons
 	}
 	class MACRO_NEW_WEAPON(DC_15l):3AS_DC15L_F
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L6)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L)
 		cursor="332_DOT";
         cursoraim="332_Chevron";
 		ACE_Overheating_mrbs=300000;

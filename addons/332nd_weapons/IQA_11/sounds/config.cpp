@@ -108,7 +108,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_Firepuncher_Shot_SoundSet
 	{
 		soundShaders[] = {"332_Firepuncher_Closure_SoundShader","332_Firepuncher_closeShot_SoundShader","332_Firepuncher_midShot_SoundShader","332_Firepuncher_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
-		volumeFactor = 0.9;
+		volumeFactor = 1;
 		frequencyRandomizer = 1;
 		frequencyRandomizermin = 0.35;
 		volumeCurve = "332_weapons_basic_volumecurve";
@@ -125,7 +125,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_Suppresed_Firepuncher_Shot_SoundSet
 	{
 		soundShaders[] = {"332_Suppressed_Firepuncher_SoundShader","332_Suppressed_Firepuncher_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
-		volumeFactor = 1.2;
+		volumeFactor = 1;
 		frequencyRandomizer = 1;
 		frequencyRandomizermin = 0.35;
 		volumeCurve = "332_weapons_basic_volumecurve";

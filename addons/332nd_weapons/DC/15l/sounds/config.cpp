@@ -25,20 +25,20 @@ class cfgSoundShaders
 	class 332_DC15l_Closure_SoundShader
 	{
 		samples[] = {{"332nd_weapons\DC\15l\sounds\DC15lClose.wss",1}}; 
-		volume = 0.4466836; 
+		volume = 0.35; 
 		range = 5;
 	};
 	class 332_DC15l_closeShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\DC\15l\sounds\DC15lClose.wss",1}};
-		volume = 1.0;
+		volume = 0.6;
 		range = 50;
 		rangeCurve = "closeShotCurve";
 	};
 	class 332_DC15l_midShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\DC\15l\sounds\DC15lClose.wss",1}};
-		volume = 0.7943282;
+		volume = 0.6943282;
 		range = 1800;
 		rangeCurve[] = {{0,0.2},{50,1},{300,0},{1800,0}};
 	};
