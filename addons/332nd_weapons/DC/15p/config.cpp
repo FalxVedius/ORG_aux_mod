@@ -20,7 +20,7 @@ class CfgPatches
 	};
 };
 
-
+class BaseSoundModeType;
 class CowsSlot;
 class PointerSlot;
 class mode_SemiAuto;
@@ -55,62 +55,13 @@ class cfgWeapons
 
 		class FullAuto: Mode_FullAuto
         {
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[] = 
-				{ 
-					"332nd_weapons\DC\15p\sounds\DC15p.wss",
-					1.2,
-					1,
-					1800 
-				};
-				begin2[] = 
-				{ 
-					"332nd_weapons\DC\15p\sounds\DC15p.wss",
-					1.2,
-					0.9,
-					1800 
-				};
-				begin3[] = 
-				{ 
-					"332nd_weapons\DC\15p\sounds\DC15p.wss",
-					1.2,
-					1,
-					1800 
-				};
-				begin4[] = 
-				{ 
-					"332nd_weapons\DC\15p\sounds\DC15p.wss",
-					1.2,
-					1,
-					1800 
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.25,
-					"begin2",
-					0.25,
-					"begin3",
-					0.25,
-					"begin4",
-					0.25
-				};
+				soundSetShot[] = {"332_DC15p_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
             reloadTime= 0.055;
-			dispersion= 0.00000001;
+			dispersion= 0.003;
         };
 
 		class Single : FullAuto

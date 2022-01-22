@@ -123,8 +123,8 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	{
 		soundShaders[] = {"332_Z6_Closure_SoundShader","332_Z6_closeShot_SoundShader","332_Z6_midShot_SoundShader","332_Z6_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
 		volumeFactor = 1;
-		frequencyRandomizer = 1;
-		frequencyRandomizermin = 0.35;
+		frequencyRandomizer = 0.75;
+		frequencyRandomizermin = 0.25;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";

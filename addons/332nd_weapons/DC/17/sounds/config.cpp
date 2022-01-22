@@ -31,7 +31,7 @@ class cfgSoundShaders
 	class 332_DC17_closeShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\DC\17\Sounds\DC17Close.wss",1}};
-		volume = 1.0;
+		volume = 1.1;
 		range = 50;
 		rangeCurve = "closeShotCurve";
 	};
@@ -56,9 +56,9 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_DC17_Shot_SoundSet
 	{
 		soundShaders[] = {"332_DC17_Closure_SoundShader","332_DC17_closeShot_SoundShader","332_DC17_midShot_SoundShader","332_DC17_distShot_SoundShader"};
-		volumeFactor = 1.3;
-		frequencyRandomizer = 1;
-		frequencyRandomizer = 0.35;
+		volumeFactor = 1;
+		frequencyRandomizer = 0.5;
+		frequencyRandomizer = 0.15;
 		frequencyFactor = 0.95;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";

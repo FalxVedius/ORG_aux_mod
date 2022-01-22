@@ -31,7 +31,7 @@ class cfgSoundShaders
 	class 332_E5c_closeShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\CIS_Weapons\E-5C\sounds\E5cClose.wss",1}};
-		volume = 0.9;
+		volume = 0.8;
 		range = 20;
 		rangeCurve = "closeShotCurve";
 	};
@@ -57,8 +57,8 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	{
 		soundShaders[] = {"332_E5c_Closure_SoundShader","332_E5c_closeShot_SoundShader","332_E5c_midShot_SoundShader","332_E5c_distShot_SoundShader"};
 		volumeFactor = 1.1;
-		frequencyRandomizer = 1;
-		frequencyRandomizer = 0.35;
+		frequencyRandomizer = 0.75;
+		frequencyRandomizer = 0.30;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";

@@ -110,7 +110,7 @@ class cfgWeapons
 			};
 			displayname="FullAuto";
 			reloadTime=0.08;
-			dispersion=0.006;
+			dispersion=0.003;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;

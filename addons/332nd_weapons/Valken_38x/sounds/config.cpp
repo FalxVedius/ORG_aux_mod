@@ -33,7 +33,7 @@ class cfgSoundShaders
 	class 332_Valken38x_closeShot_SoundShader 
 	{
 		samples[] = {{"332nd_weapons\Valken_38x\sounds\Valken38xClose.wss",1}};
-		volume = 1.0;
+		volume = 0.9;
 		range = 50;
 		rangeCurve = "closeShotCurve";
 	};
@@ -58,7 +58,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_Valken38x_Shot_SoundSet
 	{
 		soundShaders[] = {"332_Valken38x_Closure_SoundShader","332_Valken38x_closeShot_SoundShader","332_Valken38x_midShot_SoundShader","332_Valken38x_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
-		volumeFactor = 1.1;
+		volumeFactor = 1;
 		frequencyRandomizer = 1;
 		frequencyRandomizermin = 0.35;
 		frequencyFactor = 0.95;

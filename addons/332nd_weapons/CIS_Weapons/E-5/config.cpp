@@ -68,7 +68,7 @@ class CfgWeapons
 			sounds[] = {"StandardSound"}; /*332_E5_Shot_SoundSet*/
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15a_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"332_E5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.096000001;
 			recoil="recoil_single_mx";
@@ -86,32 +86,10 @@ class CfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"}; 
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"\SWLW_droids\smgs\e5\sounds\e5",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_E5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.14;
 			dispersion=0.005;

@@ -25,13 +25,13 @@ class cfgSoundShaders
 	class 332_RPS4_Closure_SoundShader
 	{
 		samples[] = {{"332nd_weapons\Launchers\RPS-4\Sounds\RPS4Close.wss",1}}; 
-		volume = 0.4466836; 
+		volume = 0.6466836; 
 		range = 5;
 	};
 	class 332_RPS4_closeShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\Launchers\RPS-4\Sounds\RPS4Close.wss",1}};
-		volume = 1.0;
+		volume = 1.5;
 		range = 50;
 		rangeCurve = "closeShotCurve";
 	};
@@ -107,7 +107,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_Rocket_Tail_SoundSet
 	{
 		soundShaders[] = {"332_RPS4_tailTrees_SoundShader","332_RPS4_tailForest_SoundShader","332_RPS4_tailMeadows_SoundShader","332_RPS4_tailHouses_SoundShader"};
-		volumeFactor = 1.4;
+		volumeFactor = 1;
 		volumeCurve = "332_wpn_vl_sin";
 		frequencyRandomizer = 1;
 		sound3DProcessingType = "332_weapons_tails_3dprocessor";
