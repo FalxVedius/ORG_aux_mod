@@ -137,4 +137,18 @@ class CfgUnitInsignia
 		texture = "\332nd_units\Insignia\data\WhiteRTO.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
+	class 332nd_1stPlt
+	{
+		displayName = "[332nd] Torrent 1";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\1st_Plt.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
+	class 332nd_2ndPlt
+	{
+		displayName = "[332nd] Torrent 2";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\2nd_Plt.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
 };

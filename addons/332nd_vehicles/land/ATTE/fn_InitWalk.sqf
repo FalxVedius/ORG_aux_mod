@@ -1,5 +1,4 @@
 if (!is3DEN) then {
-    if (isServer) then {
 
         private ["_v", "_speed","_fr","_fl","_mr","_ml","_br","_bl"];
 
@@ -177,5 +176,4 @@ if (!is3DEN) then {
                 sleep 2;
             };
         };
-    };
 };

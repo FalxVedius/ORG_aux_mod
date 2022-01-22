@@ -24,6 +24,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(aviation,Raven),
 			MACRO_NEW_HELMET(aviation,Loyal),
 			MACRO_NEW_HELMET(aviation,Cutter),
+			MACRO_NEW_HELMET(aviation,Bugs),
         };
 		weapons[] = {};
 	};
@@ -48,6 +49,7 @@ class CfgWeapons
 	MACRO_NEW_AVIATION_HELMET_ITEM(Raven,Raven,Raven.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Loyal,Loyal,Loyal.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
+	MACRO_NEW_AVIATION_HELMET_ITEM(Bugs,Bugs,Bugs.paa)
 	
 	//warden
 	MACRO_NEW_WARDEN_HELMET_ITEM(332nd_warden,Warden,warden.paa)
