@@ -48,7 +48,7 @@ class cfgSoundShaders
 	class 332_E5_distShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\CIS_Weapons\E-5\sounds\E5Far.wss",1}};
-		volume = 1.0;
+		volume = 0.85;
 		range = 4000;
 		limitation= 0;
 		rangeCurve[] = {{0,0},{50,0},{300,1},{4000,1}};
@@ -60,13 +60,13 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_E5_Shot_SoundSet
 	{
 		soundShaders[] = {"332_E5_Closure_SoundShader","332_E5_closeShot_SoundShader","332_E5_midShot_SoundShader","332_DC15a_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
-		volumeFactor = 0.7;
+		volumeFactor = 1.1;
 		frequencyRandomizer = 1;
 		frequencyRandomizer = 0.35;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";
-		occlusionFactor=0.25;
+		occlusionFactor=0.15;
         obstructionFactor=0.30000001;
 		spatial = 1;
 		doppler = 0;

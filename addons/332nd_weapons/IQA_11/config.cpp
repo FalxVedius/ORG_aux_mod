@@ -51,7 +51,7 @@ class CfgAmmo
 class CfgMagazines
 {
 	class  SWLW_sniper_Mag;
-	class MACRO_NEW_MAG(Firepuncher_T,8): SWLW_sniper_Mag
+	class 332nd_aux_magazine_IQA_11_T_x8: SWLW_sniper_Mag
 	{
 		scope=2;
 		displayname="Firepuncher Refined Tracer High mag (8rnd)";
@@ -72,7 +72,7 @@ class CfgMagazines
 			"\SWLW_merc_mando\rifles\sniper\data\sniper_mag_co.paa"
 		};
 	};
-	class MACRO_NEW_MAG(Firepuncher,8): SWLW_sniper_Mag
+	class 332nd_aux_magazine_IQA_11_x8: SWLW_sniper_Mag
 	{
 		scope=2;
 		displayname="Firepuncher Refined High mag (8rnd)";

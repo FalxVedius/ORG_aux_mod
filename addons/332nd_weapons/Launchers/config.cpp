@@ -242,7 +242,8 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(PLX1_HE)
 		model = "\MRC\JLTS\weapons\PLX1\PLX1_mag.p3d";
 		mass=124;
-		displayName=MACRO_AMMO_DISPLAYNAME(PLX1-HE,2)
+		count=1;
+		displayName=MACRO_AMMO_DISPLAYNAME(PLX1-HE,1)
 	};
 	
 	class MACRO_NEW_MAG(PLX1_AAMag,2): SWLW_plx1_at_mag

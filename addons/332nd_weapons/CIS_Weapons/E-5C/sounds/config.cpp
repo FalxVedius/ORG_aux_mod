@@ -62,7 +62,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";
-		occlusionFactor=0.25;
+		occlusionFactor=0.15;
         obstructionFactor=0.30000001;
 		spatial = 1;
 		doppler = 0;
