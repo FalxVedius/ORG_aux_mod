@@ -29,7 +29,7 @@ class CfgVehicles
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Trooper)
         scope = 2;
         maximumLoad = 260;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12_Trooper_co.paa};
 
         NSM_jumppack_jump_types[]=
 		{
@@ -68,7 +68,7 @@ class CfgVehicles
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Radio Pack)
         scope = 2;
         maximumLoad = 260;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12_NCO_co.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
@@ -111,7 +111,7 @@ class CfgVehicles
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Medic Pack)
         scope = 2;
         maximumLoad = 400;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12_Medic_co.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
