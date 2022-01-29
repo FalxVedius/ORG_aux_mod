@@ -3530,7 +3530,7 @@ class CfgVehicles
 
             class IQA11_high_T_332nd
             {
-                magazine = "332nd_aux_magazine_IQA_11_T_x8";
+                magazine = "332nd_aux_magazine_Firepuncher_T_x8";
                 count = 100;
             };
 

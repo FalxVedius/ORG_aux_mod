@@ -29,12 +29,12 @@ while {alive _unit} do {
 			
 		};
 		
-		_rndNum = selectRandom [0.5,0.6,0.7,0.8,0.9,1];
+		_rndNum = selectRandom [2.0,2.2,2.4,2.6,2.8,3];
 		
 		sleep _rndNum;
 	};
 	
-	_rndNum2 = selectRandom [0.5,0.6,0.7,0.8,0.9,1];
+	_rndNum2 = selectRandom [2.0,2.2,2.4,2.6,2.8,3];
 	
 	sleep _rndNum2;	
 };

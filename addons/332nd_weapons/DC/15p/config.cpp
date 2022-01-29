@@ -20,107 +20,111 @@ class CfgPatches
 	};
 };
 
-
+class BaseSoundModeType;
 class CowsSlot;
 class PointerSlot;
 class mode_SemiAuto;
 class Mode_FullAuto;
 class cfgWeapons
 {
-	class OPTRE_SubMachineGun_Base;
+	class LSI_E11_base;
 
-	class OPTRE_M7 : OPTRE_SubMachineGun_Base
+	class lsi_weapon_e11 : LSI_E11_base
 	{
 		class WeaponSlotsInfo;
 	};
 
-	class MACRO_NEW_WEAPON(DC_15p): OPTRE_M7
+	class MACRO_NEW_WEAPON(DC_15p): lsi_weapon_e11
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(*WIP* DC 15P)
 
 		ACE_Overheating_mrbs=300000;
-		//recoil="recoil_m320";
-		//recoilprone="recoil_m320";
+		recoil="DC_15s";
+		recoilprone="DC_15s";
 		canShootInWater=1;
+		modes[] = {"FullAuto"};
         baseWeapon=MACRO_NEW_WEAPON(DC_15p);
 		cursor = "332_DOT";
 		cursoraim = "332_DC15S";
 		magazineWell[] = {};
 		magazines[] = {
 
-			MACRO_NEW_MAG(DC_15P_Low,30)
+			MACRO_NEW_MAG(DC_15P_Med,40)
 		};
-		modelOptics = "";
+		modelOptics = "-";
 
-		class Single: Mode_FullAuto
+		class FullAuto: Mode_FullAuto
         {
-			sounds[]=
+			sounds[] = {"StandardSound"};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"332_DC15p_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+			};
+            reloadTime= 0.055;
+			dispersion= 0.003;
+        };
+
+		class Single : FullAuto
+		{
+
+		};
+
+		class fullauto_medium : FullAuto
+		{
+			sounds[] =
 			{
 				"StandardSound"
 			};
 			class BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
+				weaponSoundEffect = "";
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {};
 			};
-			class StandardSound: BaseSoundModeType
+			class StandardSound : BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[] = 
-				{ 
+				weaponSoundEffect = "";
+				begin1[] =
+				{
 					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire.wss",
 					1.2,
 					0.95,
-					1800 
+					1800
 				};
-				soundBegin[]=
+				soundBegin[] =
 				{
 					"begin1",
 					1
 				};
 			};
-            reloadTime= 0.05;
-			dispersion= 0.0000004;
-        };
+			reloadTime = 0.05;
+			dispersion = 0.0000004;
+		};
 
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{
 			class CowsSlot
 			{
-				compatibleitems[] = { "OPTRE_M7_Sight" };
+				compatibleItems[] = { "lsi_acc_eSeries_Optics" };
 				displayName = "Optics Slot";
 				iconPicture = "\a3\weapons_f\Data\ui\attachment_top";
 				iconPinpoint = "Bottom";
-				iconPosition[] = { 0.4,0.3 };
-				iconScale = 0.2;
+				iconPosition[] = { 0,0 };
+				iconScale = 0;
 				linkProxy = "\a3\data_f\proxies\weapon_slots\TOP";
 				scope = 0;
 			};
 			
 			class MuzzleSlot
 			{
-				compatibleitems[] = { "" };
+				compatibleItems[] = { "lsi_acc_E11_Coils"};
 				displayName = "$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
 				iconPicture = "\a3\weapons_f\Data\ui\attachment_muzzle";
 				iconPinpoint = "Center";
-				iconPosition[] = { 0.1,0.4 };
-				iconScale = 0.2;
+				iconPosition[] = { 0,0 };
+				iconScale = 0;
 				linkProxy = "\a3\data_f\proxies\weapon_slots\MUZZLE";
-				scope = 0;
-			};
-
-			class PointerSlot
-			{
-				access = 1;
-				compatibleitems[] = { "" };
-				displayName = "Pointer Slot";
-				iconPicture = "\A3\Weapons_F\Data\UI\attachment_side.paa";
-				iconPinpoint = "Center";
-				iconPosition[] = { 0.1,0.4 };
-				iconScale = 0.2;
-				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
 				scope = 0;
 			};
 		};

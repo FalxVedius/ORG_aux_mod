@@ -5256,7 +5256,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO"};
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -5530,7 +5530,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1jumppack,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -5809,7 +5809,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		magazines[] =
 		{
@@ -6083,11 +6083,14 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
+
+		weapons[] = { MACRO_NEW_WEAPON(E5c),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5c),"JLTS_RG4D","Throw","Put" };
 
 		magazines[] =
 		{
-			mag_10(JLTS_E5C_mag),
+			mag_10(332nd_aux_magazine_E5cLow_x300),
 			mag_2(JLTS_RG4D_mag),
 			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
@@ -6095,7 +6098,7 @@ class CfgVehicles
 		};
 		respawnMagazines[] =
 		{
-			mag_10(JLTS_E5C_mag),
+			mag_10(332nd_aux_magazine_E5cLow_x300),
 			mag_2(JLTS_RG4D_mag),
 			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
@@ -6356,7 +6359,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
@@ -6632,7 +6635,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		class HitPoints : HitPoints
 		{
@@ -6888,7 +6891,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1crew,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -7162,7 +7165,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1comm,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -7436,7 +7439,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1marine,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_E60R_AT","Throw","Put" };
@@ -7712,7 +7715,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1sec,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
@@ -7988,7 +7991,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1pilot,base);
 
-		identityTypes[] = { "LanguageENG_F","Head_NATO" };
+		identityTypes[] = { "lsd_voice_b1Droid" };
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","Throw","Put" };

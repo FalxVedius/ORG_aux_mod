@@ -23,6 +23,7 @@ class CfgPatches
 
 class cfgWeapons
 {
+    class BaseSoundModeType;
 	class 3AS_DC15L_Base_F;
 	class 3AS_DC15L_F:3AS_DC15L_Base_F
 	{
@@ -107,39 +108,18 @@ class cfgWeapons
                
             };
         };
-		
 		class FullAuto: FullAuto
 		{
-           sounds[]=
+         sounds[] = {"StandardSound"};
+			class StandardSound: BaseSoundModeType 
 			{
-				"StandardSound" 
+				soundSetShot[] = {"332_Sniper_Tail_SoundSet","332_DC15l_Shot_SoundSet"};
 			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15X\sounds\dc15x_fire",
-					4,
-					0.98,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
-			};
+
+        
 			burst=2;
 			reloadTime=0.05;
-			dispersion = 0.0007;
+			dispersion = 0.0003;
 			minRange = 2;
 			minRangeProbab = 0.5;
 			midRange = 200;

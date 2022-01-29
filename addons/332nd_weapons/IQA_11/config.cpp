@@ -1,7 +1,7 @@
 #include "../../332nd_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(IQA_11)
+	class MACRO_PATCH_NAME(Firepuncher)
 	{
 		author="332nd Aux Team";
 		addonRootClass = MACRO_PATCH_NAME(weapons);
@@ -19,8 +19,8 @@ class CfgPatches
 		{};
 		weapons[]=
 		{
-			MACRO_NEW_WEAPON(IQA_11),
-			"332nd_IQA11_Suppressor"
+			MACRO_NEW_WEAPON(Firepuncher),
+			"332nd_Firepuncher_Suppressor"
 		};
 	};
 };
@@ -51,10 +51,10 @@ class CfgAmmo
 class CfgMagazines
 {
 	class  SWLW_sniper_Mag;
-	class MACRO_NEW_MAG(IQA_11_T,8): SWLW_sniper_Mag
+	class 332nd_aux_magazine_IQA_11_T_x8: SWLW_sniper_Mag
 	{
 		scope=2;
-		displayname="IQA-11 Refined Tracer High mag (8rnd)";
+		displayname="Firepuncher Refined Tracer High mag (8rnd)";
 		initspeed=2500;
 		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_mag_ui.paa";
 		ammo=MACRO_NEW_AMMO(Refined_high_T);
@@ -72,10 +72,10 @@ class CfgMagazines
 			"\SWLW_merc_mando\rifles\sniper\data\sniper_mag_co.paa"
 		};
 	};
-	class MACRO_NEW_MAG(IQA_11,8): SWLW_sniper_Mag
+	class 332nd_aux_magazine_IQA_11_x8: SWLW_sniper_Mag
 	{
 		scope=2;
-		displayname="IQA-11 Refined High mag (8rnd)";
+		displayname="Firepuncher Refined High mag (8rnd)";
 		initspeed=2500;
 		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_mag_ui.paa";
 		ammo=MACRO_NEW_AMMO(Refined_high);
@@ -94,6 +94,7 @@ class CfgMagazines
 		};
 	};
 };
+class BaseSoundModeType;
 class Mode_SemiAuto;
 class Mode_FullAuto;
 class SlotInfo;
@@ -119,11 +120,10 @@ class CfgWeapons
 	};
 	class ItemCore;
 	class InventoryMuzzleItem_Base_F;	
-	class 332nd_IQA11_Suppressor: muzzle_snds_338_black
+	class 332nd_Firepuncher_Suppressor: muzzle_snds_338_black
 	{
 		scope = 2;
-		displayName = "332nd IQA-11 Suppressor";
-
+		displayName = "332nd Firepuncher Suppressor";
 		picture = "\a3\Weapons_F_Mark\Data\UI\icon_muzzle_snds_338_black_ca.paa";
 		model = "\A3\Weapons_F\Acc\acca_snds_338_black_F";	
 		
@@ -167,7 +167,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class MACRO_NEW_WEAPON(IQA_11): SWLW_sniper
+	class MACRO_NEW_WEAPON(Firepuncher): SWLW_sniper
 	{
 		scope=2;
 		baseweapon = "";
@@ -180,12 +180,21 @@ class CfgWeapons
 			"\3AS\3AS_Weapons\WestarM5\Data\Anim\WestarM5_handanim.rtm"
 		};
 
+		//hiddenSelections[]=
+		//{
+		//	"camo1","camo2"
+		//};
+		//hiddenSelectionsTextures[]=
+		//{
+		//	"\332nd_weapons\Firepuncher\data\UV1_co.paa","\332nd_weapons\Firepuncher\data\UV2_co.paa"
+		//};
+
 		magazines[]=
 		{
-	    MACRO_NEW_MAG(IQA_11,8),
-		MACRO_NEW_MAG(IQA_11_T,8)
+	    MACRO_NEW_MAG(Firepuncher,8),
+		MACRO_NEW_MAG(Firepuncher_T,8)
 		};
-		displayName = MACRO_WEAPON_DISPLAYNAME(*TEST* IQA-11)
+		displayName = MACRO_WEAPON_DISPLAYNAME(*TEST* Firepuncher)
 		descriptionShort="";
 		maxZeroing=2500;
 		initspeed=2500;
@@ -216,6 +225,7 @@ class CfgWeapons
 			"short",
 			"medium"
 		};
+
 		fireLightDuration=0.050000001;
 		fireLightIntensity=0.40000001;
 		fireLightDiffuse[]={0,0,0.0099999998};
@@ -224,49 +234,14 @@ class CfgWeapons
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
 		class Single: Mode_SemiAuto
 		{
-			sounds[]=
-			{
-				"StandardSound",
-				"SilencedSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound","SilencedSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_Weapons\IQA_11\sounds\IQA_11_Fire.wss",
-					1.9,
-					0.98,
-					3000
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_Firepuncher_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_Weapons\IQA_11\sounds\IQA_11_Suppressed.wss",
-					45,
-					2,
-					300
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_Suppresed_Firepuncher_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
 			};
 			reloadTime=0.40;
 			dispersion=0.000001;
@@ -328,7 +303,7 @@ class CfgWeapons
 		    class MuzzleSlot : SlotInfo
 			{
 				// class names with items supported by weapon
-				compatibleItems[] = {"332nd_IQA11_Suppressor"}; // moved to each weapon
+				compatibleItems[] = {"332nd_Firepuncher_Suppressor"}; // moved to each weapon
 			};
 			class CowsSlot : CowsSlot
 			{

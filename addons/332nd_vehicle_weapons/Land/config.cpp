@@ -27,7 +27,7 @@ class CfgAmmo
 		caliber=40;
 		model = "ls_weapons_core\effects\laser_blue.p3d";
 		effectfly = "SWLW_plasma_green";
-		hit=800;
+		hit=2400;
 		explosionEffects = "ATRocketExplosion";
 		tracerScale = 5;
 		indirectHit = 35;
@@ -36,16 +36,16 @@ class CfgAmmo
 	class Sh_125mm_HE;
 	class MACRO_NEW_AMMO(MassDriver_HE): Sh_125mm_HE
 	{
-    soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
-	cartridge = "";
-	caliber=10;
-	explosionEffects = "ATRocketExplosion";
-	model = "ls_weapons_core\effects\laser_heat";
-	effectfly = "SWLW_plasma_green";
-	hit=300;
-	tracerScale = 5;
-	indirectHit = 80;
-	indirectHitRange = 6;
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
+		cartridge = "";
+		caliber=10;
+		explosionEffects = "ATRocketExplosion";
+		model = "ls_weapons_core\effects\laser_heat";
+		effectfly = "SWLW_plasma_green";
+		hit=600;
+		tracerScale = 5;
+		indirectHit = 80;
+		indirectHitRange = 6;
 	};
 
 	class ls_ammo_127x108_blue;
@@ -174,6 +174,17 @@ class CfgAmmo
 		indirectHitRange = 0.2;
 	};
 
+	class MACRO_NEW_AMMO(20mmAP) : ls_ammo_127x108_blue
+	{
+		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000 };
+		cartridge = "FxCartridge_556";
+		effectsMissile = "332nd_aux_effects_RPS4_blue";
+		caliber = 15;
+		hit = 125;
+		indirectHit = 8;
+		indirectHitRange = 0.2;
+	};
+
 	class MACRO_NEW_AMMO(SuperSaber_AP) : ls_ammo_127x108_blue
 	{
 		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000 }; //Volume,Pitch,Distance
@@ -181,7 +192,21 @@ class CfgAmmo
 		caliber = 40;
 		model = "ls_weapons_core\effects\laser_blue.p3d";
 		effectfly = "SWLW_plasma_green";
-		hit = 800;
+		hit = 1600;
+		explosionEffects = "ATRocketExplosion";
+		tracerScale = 5;
+		indirectHit = 35;
+		indirectHitRange = 0.5;
+	};
+
+	class MACRO_NEW_AMMO(Saber_AP) : ls_ammo_127x108_blue
+	{
+		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000 }; //Volume,Pitch,Distance
+		cartridge = "FxCartridge_556";
+		caliber = 40;
+		model = "ls_weapons_core\effects\laser_blue.p3d";
+		effectfly = "SWLW_plasma_green";
+		hit = 1100;
 		explosionEffects = "ATRocketExplosion";
 		tracerScale = 5;
 		indirectHit = 35;
@@ -215,7 +240,7 @@ class CfgAmmo
 	manualcontrol=1;
 	caliber=5;
 	effectsMissile = "332nd_aux_effects_missile_plx_blue";
-	hit=200;
+	hit=1250;
 	thrusttime = 12;
 	indirectHit = 35;
 	indirectHitRange = 3;
@@ -255,10 +280,10 @@ class CfgMagazines
 	class MACRO_NEW_MAG(Saber_AP,25): 12Rnd_120mm_APFSDS_shells
 	{
 		displayName="Saber High AP";
-		ammo=MACRO_NEW_AMMO(MassDriver_AP)
+		ammo=MACRO_NEW_AMMO(Saber_AP)
 		initSpeed = 1000;
 		tracersevery = 1;
-		count=30;
+		count=25;
 	};
 	class MACRO_NEW_MAG(Saber_HE,15): 12Rnd_120mm_APFSDS_shells
 	{
@@ -364,6 +389,13 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(40mmAP)
 		initSpeed = 1500;
 		count=50;
+	};
+	class MACRO_NEW_MAG(20mmAP,1200) : 40Rnd_40mm_APFSDS_shells
+	{
+		displayName = MACRO_AMMO_DISPLAYNAME(Direct Energy AP,1200)
+		ammo = MACRO_NEW_AMMO(20mmAP)
+		initSpeed = 1500;
+		count = 1200;
 	};
 	class MACRO_NEW_MAG(RX200_40mmHE,100): 40Rnd_40mm_APFSDS_shells
 	{
@@ -861,6 +893,86 @@ class CfgWeapons
 			midRangeProbab=0.69999999;
 			maxRange=500;
 			maxRangeProbab=0.1;
+		};
+	};
+
+	class MACRO_NEW_WEAPON(Saber_20mm) : 3AS_Sabre_Cannons
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(20mmAP,1200)
+		};
+
+
+		displayName = "Saber Medium Energy";
+		modes[] = {"manual","close","short","medium"};
+		class manual : manual
+		{
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"3AS\3AS_Static\data\Sounds\FieldCannon\Fieldcannon.ogg",
+					25,
+					2.5,
+					4000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1,
+				};
+			};
+			burst = 1;
+			reloadTime = 0.05;
+			dispersion = 0;
+			minRange = 2;
+			minRangeProbab = 0.30000001;
+			midRange = 300;
+			midRangeProbab = 0.69999999;
+			maxRange = 800;
+			maxRangeProbab = 0.050000001;
+		};
+		class close : manual
+		{
+			burst = 2;
+			aiRateOfFire = 0.3;
+			aiRateOfFireDistance = 50;
+			minRange = 10;
+			minRangeProbab = 0.050000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 0;
+		};
+		class short : close
+		{
+			burst = 2;
+			aiRateOfFire = 3;
+			aiRateOfFireDistance = 300;
+			minRange = 50;
+			minRangeProbab = 0.050000001;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.039999999;
+		};
+		class medium : close
+		{
+			burst = 2;
+			aiRateOfFire = 0.1375;
+			aiRateOfFireDistance = 600;
+			minRange = 200;
+			minRangeProbab = 0.050000001;
+			midRange = 300;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
+			maxRangeProbab = 0.1;
 		};
 	};
 
@@ -1720,7 +1832,7 @@ class CfgWeapons
 		{
 			magazineReloadTime = 2;
 			displayname="Full";
-			reloadTime=0.35;
+			reloadTime=0.30;
 			dispersion=0.00005;
 			sounds[]=
 			{

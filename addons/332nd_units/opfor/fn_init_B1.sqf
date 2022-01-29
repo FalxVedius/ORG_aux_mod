@@ -12,7 +12,5 @@ if (isServer) then {
 	_unit disableAI "MINEDETECTION";
 	_unit disableAI "SUPPRESSION";
 	_unit disableAI "COVER";
-	_unit setSpeaker "NoVoice";
-	
-	
+
 };

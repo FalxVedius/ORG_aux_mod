@@ -58,6 +58,7 @@ class PointerSlot;
 class UnderBarrelSlot;
 class CfgWeapons
 {
+    class BaseSoundModeType;
 	class 3AS_Valken38X_Base_F;
 	class 3AS_Valken38X_F: 3AS_Valken38X_Base_F
 	{
@@ -101,35 +102,10 @@ class CfgWeapons
 		};
 		class Single: Mode_SemiAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"332nd_weapons\Valken_38x\sounds\ValkenFire.wss",
-					1,
-					1,
-					2200
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1,
-				};
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
+				soundSetShot[] = {"332_Valken38x_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
 			};
 			reloadTime=0.7;
 			dispersion=0.000000000005;

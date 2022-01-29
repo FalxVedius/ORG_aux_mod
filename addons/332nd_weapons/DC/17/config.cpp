@@ -24,6 +24,7 @@ class CfgPatches
 
 class cfgWeapons
 {
+    class BaseSoundModeType;
 	class hgun_P07_F;
 	class JLTS_DC17SA:hgun_P07_F
 	{
@@ -116,32 +117,10 @@ class cfgWeapons
 
         class Single: Single
 		{
-			sounds[]=
-			{
-				"StandardSound";
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1.1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_DC17_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.10;
 			displayname="SemiAuto";

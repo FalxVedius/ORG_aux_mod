@@ -35,7 +35,7 @@ class cfgRecoils
 };
 class cfgWeapons
 {
-	
+	class BaseSoundModeType;
 	class Rifle_Base_F;
 	class arifle_MX_Base_F: Rifle_Base_F {
 		class WeaponSlotsInfo;
@@ -102,36 +102,15 @@ class cfgWeapons
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		class FullAuto: FullAuto
 		{
-			sounds[]=
-			{
-				"StandardSound";
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+		    
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1.2,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_DC15s_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			displayname="FullAuto";
 			reloadTime=0.08;
-			dispersion=0.006;
+			dispersion=0.003;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -149,32 +128,10 @@ class cfgWeapons
 
 		class Single: FullAuto
 		{
-			sounds[]=
-			{
-				"StandardSound";
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"MRC\JLTS\weapons\DC15A\sounds\dc15a_fire",
-					1,
-					1,
-					1800
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = {"332_DC15s_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.14;
 			displayname="SlowAuto";

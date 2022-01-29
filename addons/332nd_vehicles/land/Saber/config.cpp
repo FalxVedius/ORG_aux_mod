@@ -634,7 +634,20 @@ class CfgVehicles
 		{
 			class MainTurret_bottom : MainTurret_bottom
 			{
-			    
+				turretInfoType = "RscOptics_MBT_01_gunner";
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(Saber_20mm)
+				};
+				magazines[] =
+				{
+					 MACRO_NEW_MAG(20mmAP,1200),
+					 MACRO_NEW_MAG(20mmAP,1200),
+					 MACRO_NEW_MAG(20mmAP,1200),
+					 MACRO_NEW_MAG(20mmAP,1200),
+					 MACRO_NEW_MAG(20mmAP,1200),
+					 MACRO_NEW_MAG(20mmAP,1200)
+				};
 			};
 			class Mainturret_top : Mainturret_top
 			{

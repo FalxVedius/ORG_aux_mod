@@ -29,24 +29,19 @@ class CfgVehicles
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Trooper)
         scope = 2;
         maximumLoad = 260;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12_Trooper_co.paa};
 
         NSM_jumppack_jump_types[]=
 		{
 			
 			{
 				"Foward",
-				{30,5,50,0,0,0}
-			},
-
-            {
-				"Short",
-				{12,7,30,0,1,1}
+				{20,5,50,0,1,0}
 			},
 			
             {
 				"Vertical",
-				{4,30,50,0,0,0}
+				{4,15,40,0,0,0}
 			},
 
             {
@@ -56,12 +51,12 @@ class CfgVehicles
 
 			{
 				"Emergency",
-				{40,20,80,0,0,0}
+				{30,15,80,0,0,0}
 			}
 		};
 
 
-        NSM_jumppack_spam_delay = 1;
+        NSM_jumppack_spam_delay = 0;
         NSM_jumppack_energy_capacity = 80;
         NSM_jumppack_recharge = 5;
 
@@ -73,7 +68,7 @@ class CfgVehicles
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Radio Pack)
         scope = 2;
         maximumLoad = 260;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12_NCO_co.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
@@ -84,8 +79,30 @@ class CfgVehicles
 
         NSM_jumppack_spam_delay = 0;
         NSM_jumppack_energy_capacity = 80;
-        NSM_jumppack_recharge = 4;
+        NSM_jumppack_recharge = 5;
+       NSM_jumppack_jump_types[]=
+		{
+			
+			{
+				"Foward",
+				{20,5,50,0,1,0}
+			},
+			
+            {
+				"Vertical",
+				{4,15,40,0,0,0}
+			},
 
+            {
+				"Short",
+				{12,7,30,0,1,1}
+			},
+
+			{
+				"Emergency",
+				{30,15,80,0,0,0}
+			}
+		};
         JLTS_isJumppack = 0;
     };
 
@@ -94,7 +111,7 @@ class CfgVehicles
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Medic Pack)
         scope = 2;
         maximumLoad = 400;
-        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12.paa};
+        hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12_Medic_co.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";
         tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
@@ -102,10 +119,32 @@ class CfgVehicles
         tf_hasLRradio = 1;
         tf_range = 50000;
         tf_subtype = "digital_lr";
+        NSM_jumppack_jump_types[]=
+		{
+			
+			{
+				"Foward",
+				{20,5,50,0,1,0}
+			},
+			
+            {
+				"Vertical",
+				{4,15,40,0,0,0}
+			},
 
+            {
+				"Short",
+				{12,7,30,0,1,1}
+			},
+
+			{
+				"Emergency",
+				{30,15,80,0,0,0}
+			}
+		};
         NSM_jumppack_spam_delay = 0;
         NSM_jumppack_energy_capacity = 80;
-        NSM_jumppack_recharge = 4;
+        NSM_jumppack_recharge = 5;
 
         JLTS_isJumppack = 0;
     };

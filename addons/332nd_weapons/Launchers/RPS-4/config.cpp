@@ -20,7 +20,7 @@ class CfgPatches
 };
 
 class Mode_SemiAuto;
-
+class BaseSoundModeType;
 class CfgWeapons
 {
 	class launch_MRAWS_base_F; //external class reference
@@ -94,46 +94,10 @@ class CfgWeapons
 
         class Single: Mode_SemiAuto
 		{
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
+			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"SWLW_clones\rifles\gl\sounds\gl",
-					1,
-					1,
-					1500
-				};
-				begin2[]=
-				{
-					"SWLW_clones\rifles\gl\sounds\gl",
-					1,
-					1,
-					2500
-				};
-				begin3[]=
-				{
-					"SWLW_clones\rifles\gl\sounds\gl",
-					1,
-					1,
-					3500
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					0.33000001,
-					"begin2",
-					0.33000001,
-					"begin3",
-					0.33000001
-				};
+				soundSetShot[] = {"332_RPS4_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
 			};
 			sounds[]=
 			{

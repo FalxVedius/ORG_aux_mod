@@ -58,6 +58,12 @@ class CfgAmmo
 	{
 		irLock=1;
 	};
+
+	class MACRO_NEW_AMMO(E60R_ATRocket) : MACRO_NEW_AMMO(RPS6_ATRocket)
+	{
+		irLock = 0;
+		manualControl = 0;
+	};
 	
 	class MACRO_NEW_AMMO(RPS6_AARocket): M_Titan_AA
 	{
@@ -75,6 +81,12 @@ class CfgAmmo
 			1.5,
 			700
 		};
+	};
+
+	class MACRO_NEW_AMMO(E60R_AARocket) : MACRO_NEW_AMMO(RPS6_AARocket)
+	{
+		cmImmunity = 0.01;
+		hit = 450;
 	};
 	
 	class MACRO_NEW_AMMO(RPS4_AT): R_MRAAWS_HEAT_F
@@ -230,7 +242,8 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(PLX1_HE)
 		model = "\MRC\JLTS\weapons\PLX1\PLX1_mag.p3d";
 		mass=124;
-		displayName=MACRO_AMMO_DISPLAYNAME(PLX1-HE,2)
+		count=1;
+		displayName=MACRO_AMMO_DISPLAYNAME(PLX1-HE,1)
 	};
 	
 	class MACRO_NEW_MAG(PLX1_AAMag,2): SWLW_plx1_at_mag
