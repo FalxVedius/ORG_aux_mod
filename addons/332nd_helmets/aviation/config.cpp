@@ -20,7 +20,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(aviation,FlightOfficer),
 			MACRO_NEW_HELMET(aviation,FlightTechi),
 			MACRO_NEW_HELMET(aviation,SeniorEnsign),
-			MACRO_NEW_HELMET(aviation,Raven),
+			//MACRO_NEW_HELMET(aviation,Raven),
 			MACRO_NEW_HELMET(aviation,Loyal),
 			MACRO_NEW_HELMET(aviation,Cutter),
 			MACRO_NEW_HELMET(aviation,Bugs),
@@ -51,7 +51,7 @@ class CfgWeapons
 	MACRO_NEW_AVIATION_HELMET_ITEM(FlightOfficer,Officer,FlightOfficer.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(FlightTechi,Technician,FlightTechi.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(SeniorEnsign,Senior Ensign,SeniorEnsign.paa)
-	MACRO_NEW_AVIATION_HELMET_ITEM(Raven,Raven,Raven.paa)
+	//MACRO_NEW_AVIATION_HELMET_ITEM(Raven,Raven,Raven.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Loyal,Loyal,Loyal.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Bugs,Bugs,Bugs.paa)
