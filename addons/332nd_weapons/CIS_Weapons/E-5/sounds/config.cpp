@@ -40,7 +40,7 @@ class cfgSoundShaders
 	class 332_E5_midShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\CIS_Weapons\E-5\sounds\E5Distant.wss",1}};
-		volume = 0.7943282;
+		volume = 0.65;
 		range = 1800;
 		limitation= 0;
 		rangeCurve[] = {{0,0.2},{20,1},{50,1},{300,0},{1800,0}};

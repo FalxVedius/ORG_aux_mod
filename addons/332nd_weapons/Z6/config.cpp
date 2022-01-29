@@ -205,7 +205,7 @@ class cfgAmmo
   class ls_ammo_127x108_blue;
   class MACRO_NEW_AMMO(Z6_Supercharge): ls_ammo_127x108_blue
     {
-    hit = 90;
+    hit = 120;
 	indirecthit=8;
 	indirectHitRange = 1;
 	caliber=20;

@@ -31,14 +31,14 @@ class cfgSoundShaders
 	class 332_E5c_closeShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\CIS_Weapons\E-5C\sounds\E5cClose.wss",1}};
-		volume = 0.8;
+		volume = 0.7;
 		range = 20;
 		rangeCurve = "closeShotCurve";
 	};
 	class 332_E5c_midShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\CIS_Weapons\E-5C\sounds\E5cDistant.wss",1}};
-		volume = 0.7943282;
+		volume = 0.6;
 		range = 1800;
 		rangeCurve[] = {{0,0.2},{20,1},{50,1},{300,0},{1800,0}};
 	};
