@@ -33,7 +33,7 @@ class cfgSoundShaders
 	class 332_DP23_closeShot_SoundShader 
 	{
 		samples[] = {{"332nd_weapons\DP-23\sounds\DP23Close.wss",1}};
-		volume = 1.0;
+		volume = 0.9;
 		range = 50;
 		rangeCurve = "closeShotCurve";
 	};

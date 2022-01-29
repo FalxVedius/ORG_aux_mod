@@ -36,12 +36,12 @@ class CfgVehicles
 			
 			{
 				"Foward",
-				{30,5,50,0,0,0}
+				{20,5,50,0,1,0}
 			},
 			
             {
 				"Vertical",
-				{4,30,50,0,0,0}
+				{4,15,40,0,0,0}
 			},
 
             {
@@ -51,7 +51,7 @@ class CfgVehicles
 
 			{
 				"Emergency",
-				{40,20,80,0,0,0}
+				{30,15,80,0,0,0}
 			}
 		};
 
@@ -80,17 +80,17 @@ class CfgVehicles
         NSM_jumppack_spam_delay = 0;
         NSM_jumppack_energy_capacity = 80;
         NSM_jumppack_recharge = 5;
-        NSM_jumppack_jump_types[]=
+       NSM_jumppack_jump_types[]=
 		{
 			
 			{
 				"Foward",
-				{30,5,50,0,0,0}
+				{20,5,50,0,1,0}
 			},
 			
             {
 				"Vertical",
-				{4,30,50,0,0,0}
+				{4,15,40,0,0,0}
 			},
 
             {
@@ -100,7 +100,7 @@ class CfgVehicles
 
 			{
 				"Emergency",
-				{40,20,80,0,0,0}
+				{30,15,80,0,0,0}
 			}
 		};
         JLTS_isJumppack = 0;
@@ -121,14 +121,15 @@ class CfgVehicles
         tf_subtype = "digital_lr";
         NSM_jumppack_jump_types[]=
 		{
+			
 			{
 				"Foward",
-				{30,5,50,0,0,0}
+				{20,5,50,0,1,0}
 			},
 			
             {
 				"Vertical",
-				{4,30,50,0,0,0}
+				{4,15,40,0,0,0}
 			},
 
             {
@@ -138,7 +139,7 @@ class CfgVehicles
 
 			{
 				"Emergency",
-				{40,20,80,0,0,0}
+				{30,15,80,0,0,0}
 			}
 		};
         NSM_jumppack_spam_delay = 0;
