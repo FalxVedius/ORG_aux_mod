@@ -1409,15 +1409,15 @@ class CfgVehicles
 				count = 100;
 			};
 			 
-			class IQA11_high_T_332nd
+			class Firepuncher_high_T_332nd
 			{
-				magazine = "332nd_aux_magazine_IQA_11_T_x8";
+				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
 				count = 100;
 			};
 
-			class IQA11_high_332nd
+			class Firepuncher_high_332nd
 			{
-				magazine = "332nd_aux_magazine_IQA_11_x8";
+				magazine = "332nd_aux_magazine_Firepuncher_x8";
 				count = 100;
 			};
 			
@@ -1519,7 +1519,7 @@ class CfgVehicles
 
 			class DC15xATR_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x3";
+				magazine = "332nd_aux_magazine_DC_15x_x2";
 				count = 20;
 			};
 		};

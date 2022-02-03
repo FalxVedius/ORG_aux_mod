@@ -74,6 +74,9 @@ class CfgWeapons
 		ace_reloadlaunchers_enabled = 1;
 
 		canLock = 0;
+		airLock = 0;
+
+		weaponInfoType = "RscOpticsRangeFinderMRAWS";
 
 		magazineWell[] = {};
 		magazines[] = {
@@ -96,6 +99,9 @@ class CfgWeapons
 		ace_overpresssure_priority = 1;
 		ace_overpressure_range = 10;
 		ace_reloadlaunchers_enabled = 1;
+
+		canLock = 2;
+		airLock = 2;
 
 		magazineWell[] = {};
 		magazines[] = {
