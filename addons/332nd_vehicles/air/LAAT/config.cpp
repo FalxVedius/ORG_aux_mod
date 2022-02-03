@@ -141,6 +141,8 @@ class CfgVehicles
 		class Components;
 		class ACE_selfActions;
 		class sounds;
+		class SoundsExt;
+		class SoundEvents;
 		class Reflectors : Reflectors
 		{
 			class Left;
@@ -317,7 +319,6 @@ class CfgVehicles
 			};
 		};
 
-
 	};
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base):  lsd_heli_laati
@@ -374,21 +375,416 @@ class CfgVehicles
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
 
-
-		class sounds : sounds
+		soundengineonint[]=
 		{
-			class EngineInt
+			"332nd_weapons\sounds\vehicles\LAAT\int_start.wss",
+			1,
+			1
+		};
+		soundengineonext[]=
+		{
+			"332nd_weapons\sounds\vehicles\LAAT\ext_start.wss",
+			1,
+			1,
+			300
+		};
+		soundengineoffint[]=
+		{
+			"\332nd_weapons\sounds\vehicles\LAAT\Int_Off.wss",
+			1,
+			1
+		};
+		soundengineoffext[]=
+		{
+			"\332nd_weapons\sounds\vehicles\LAAT\Ext_Off.wss",
+			1,
+			1,
+			300
+		};
+		//soundincommingmissile[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\opfor_lock_2.ogg",
+		//	0.75,
+		//	1
+		//};
+		//rotordamageint[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_rotor_int.ogg",
+		//	0.75,
+		//	1
+		//};
+		//rotordamageout[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_rotor_ext.ogg",
+		//	2,
+		//	1,
+		//	300
+		//};
+		//rotordamage[]=
+		//{
+		//	"rotordamageint",
+		//	"rotordamageout"
+		//};
+		//taildamageint[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_tail.ogg",
+		//	0.75,
+		//	1
+		//};
+		//taildamageout[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_tail.ogg",
+		//	2,
+		//	1,
+		//	300
+		//};
+		//taildamage[]=
+		//{
+		//	"taildamageint",
+		//	"taildamageout"
+		//};
+		
+		
+		class sounds
+		{
+			class engineext
 			{
-				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
-				sound[] = { "3as\3as_laat\sounds\LAAT_Impulse.ogg",0.794328,1 };
-				volume = "2 * (1-camPos)*(rotorSpeed factor[0.4,1])";
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					1.5,
+					1,
+					300
+				};
+				frequency="rotorspeed";
+				volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 			};
-
-			class EngineExt
+			class rotorext
 			{
-				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
-				sound[] = { "lsd_sounds\vehicles\laat\engine\laat_engine.wss",1.25893,1,5000 };
-				volume = "camPos*((rotorSpeed-0.72)*4)";
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_close.wss",
+					1.6,
+					1,
+					300
+				};
+				frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+			};
+			class rotorswist
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					1,
+					1,
+					400
+				};
+				frequency=1;
+				volume="campos * (rotorthrust factor [0.7, 0.9])";
+			};
+			class engineint
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+					1,
+					1
+				};
+				frequency="rotorspeed";
+				volume="1*(1-campos)*(0 max (rotorspeed-0.4))";
+			};
+			class rotorint
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Int_rotor.wss",
+					1,
+					1
+				};
+				frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume="(1 - campos) * (rotorspeed factor [0.3, 0.7]) * (1 + rotorthrust) * 0.7";
+			};
+			class rotorbench
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.75,
+					1
+				};
+				frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume="(playerpos factor [3.9, 4]) * (1 - campos) * (rotorspeed factor [0.3, 1]) * (1 + rotorthrust) * 0.4";
+				cone[]={1.6,3.1400001,1.6,0.94999999};
+			};
+			class enginebench
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.75,
+					1
+				};
+				frequency="rotorspeed";
+				volume="(playerpos factor [3.9, 4]) * (1 - campos) * (0 max (rotorspeed-0.4))";
+			};
+			class rotornoiseext
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.5,
+					1,
+					200
+				};
+				frequency=1;
+				volume="(campos*(rotorspeed factor [0.6, 0.85]))";
+				cone[]={1.6,3.1400001,2,0.94999999};
+			};
+			class distance
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
+					1,
+					1,
+					1500
+				};
+				frequency="rotorspeed";
+				volume="2 * campos * (0 max (rotorspeed-0.4))";
+			};
+			class fardistance
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+					1.25,
+					1,
+					8000
+				};
+				frequency="rotorspeed";
+				volume="campos *3* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+			};
+			//class damagealarmint
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+			//		0.75,
+			//		1
+			//	};
+			//	frequency=1;
+			//	volume="engineon * (1 - campos) * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0.0, 0.001])";
+			//};
+			//class damagealarmext
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+			//		1,
+			//		1,
+			//		100
+			//	};
+			//	frequency=1;
+			//	volume="engineon * campos * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0, 0.001])";
+			//};
+			//class rotorlowalarmint
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+			//		0.75,
+			//		1
+			//	};
+			//	frequency=1;
+			//	volume="engineon * (1 - campos) * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			//};
+			//class rotorlowalarmext
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+			//		1,
+			//		1,
+			//		75
+			//	};
+			//	frequency=1;
+			//	volume="engineon * campos * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			//};
+			
+		};
+		class SoundsExt: SoundsExt
+		{
+			class SoundEvents: SoundEvents
+			{
+			};
+			class Sounds: Sounds
+			{
+				class EngineExt
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Engine_Close.wss",
+						1.5,
+						1,
+						300
+					};
+					frequency="rotorspeed";
+					volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+				};
+				class rotorext
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						1.6,
+						1,
+						300
+					};
+					frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+				};
+				class rotorswist
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+						1,
+						1,
+						200
+					};
+					frequency=1;
+					volume="campos * (rotorthrust factor [0.7, 0.9])";
+				};
+				class engineint
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+						1,
+						1
+					};
+					frequency="rotorspeed";
+					volume="1*(1-campos)*(0 max (rotorspeed-0.4))";
+				};
+				class rotorint
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Int_Rotor.wss",
+						1,
+						1
+					};
+					frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume="(1 - campos) * (rotorspeed factor [0.3, 0.7]) * (1 + rotorthrust) * 0.7";
+				};
+				class rotorbench
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.75,
+						1
+					};
+					frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume="(playerpos factor [3.9, 4]) * (1 - campos) * (rotorspeed factor [0.3, 1]) * (1 + rotorthrust) * 0.4";
+					cone[]={1.6,3.1400001,1.6,0.94999999};
+				};
+				class enginebench
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.75,
+						1
+					};
+					frequency="rotorspeed";
+					volume="(playerpos factor [3.9, 4]) * (1 - campos) * (0 max (rotorspeed-0.4))";
+				};
+				
+				class rotornoiseext
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.5,
+						1,
+						200
+					};
+					frequency=1;
+					volume="(campos*(rotorspeed factor [0.6, 0.85]))";
+					cone[]={1.6,3.1400001,2,0.94999999};
+				};
+				class distance
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
+						1,
+						1,
+						2500
+					};
+					frequency="rotorspeed";
+					volume="2 * campos * (0 max (rotorspeed-0.4))";
+				};
+				class fardistance
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+						1.25,
+						1,
+						8000
+					};
+					frequency="rotorspeed";
+					volume="campos *3* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+				};
+				//class damagealarmint
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+				//		0.75,
+				//		1
+				//	};
+				//	frequency=1;
+				//	volume="engineon * (1 - campos) * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0.0, 0.001])";
+				//};
+				//class damagealarmext
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+				//		1,
+				//		1,
+				//		100
+				//	};
+				//	frequency=1;
+				//	volume="engineon * campos * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0, 0.001])";
+				//};
+				//class rotorlowalarmint
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+				//		0.75,
+				//		1
+				//	};
+				//	frequency=1;
+				//	volume="engineon * (1 - campos) * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				//};
+				//class rotorlowalarmext
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+				//		1,
+				//		1,
+				//		75
+				//	};
+				//	frequency=1;
+				//	volume="engineon * campos * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				//};
 			};
 		};
 
