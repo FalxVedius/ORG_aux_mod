@@ -6381,6 +6381,20 @@ class CfgVehicles
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
 
+		weapons[] = { MACRO_NEW_WEAPON(E5S_B1),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5S_B1),"JLTS_RG4D","Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_2(JLTS_RG4D_mag),
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_2(JLTS_RG4D_mag),
+		};
+
 		class HitPoints : HitPoints
 		{
 			class HitFace
@@ -8013,16 +8027,16 @@ class CfgVehicles
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
-		weapons[] = { "JLTS_E5","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 
 		class HitPoints : HitPoints
@@ -8281,16 +8295,24 @@ class CfgVehicles
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
-		weapons[] = { "JLTS_E5C","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5C","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5c),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5c),"JLTS_RG4D","Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5C_mag),
+			mag_10(332nd_aux_magazine_E5cLow_x300),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5C_mag),
+			mag_10(332nd_aux_magazine_E5cLow_x300),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
 		};
 
 		class HitPoints : HitPoints
@@ -8550,16 +8572,16 @@ class CfgVehicles
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
-		weapons[] = { "JLTS_E5","JLTS_RPS6", "Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5","JLTS_RPS6","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5X),"JLTS_RPS6", "Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5X),"JLTS_RPS6","Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 
 		class HitPoints : HitPoints
@@ -9086,16 +9108,16 @@ class CfgVehicles
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
-		weapons[] = { "JLTS_E5","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 
 		class HitPoints : HitPoints
@@ -9354,16 +9376,16 @@ class CfgVehicles
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
-		weapons[] = { "JLTS_E5","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 
 		class HitPoints : HitPoints
@@ -9622,16 +9644,16 @@ class CfgVehicles
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
-		weapons[] = { "JLTS_E5","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5X),"Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 		};
 
 		class HitPoints : HitPoints
@@ -9890,16 +9912,18 @@ class CfgVehicles
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
 
-		weapons[] = { "JLTS_E5S","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5S","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5S_BX),"JLTS_RG4D","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5S_BX),"JLTS_RG4D","Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5S_mag),
+			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_2(JLTS_RG4D_mag),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5S_mag),
+			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_2(JLTS_RG4D_mag),
 		};
 
 		class HitPoints : HitPoints
@@ -10685,17 +10709,17 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
-		weapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5X),"WBK_Dutch_Vibro","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5X),"WBK_Dutch_Vibro","Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 
@@ -10958,17 +10982,17 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
-		weapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
-		respawnWeapons[] = { "JLTS_E5","WBK_Dutch_Vibro","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5X),"WBK_Dutch_Vibro","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5X),"WBK_Dutch_Vibro","Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 
@@ -11596,16 +11620,16 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
 		respawnLinkedItems[] = { "ItemMap","SWLB_comlink_droid","ItemCompass","ItemWatch","ls_mandalorian_rangefinder_nvg" };
-		weapons[] = { "WBK_B2_NormalMod","Throw","Put" };
-		respawnWeapons[] = { "WBK_B2_NormalMod","Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(B2_Handcannon),"Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(B2_Handcannon),"Throw","Put" };
 
 		magazines[] =
 		{
-			mag_8(SWLW_ZH73_Mag),
+			mag_8(332nd_aux_magazine_B2Low_x1000),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(JLTS_E5_mag),
+			mag_8(332nd_aux_magazine_B2Low_x1000),
 		};
 
 		class HitPoints : HitPoints

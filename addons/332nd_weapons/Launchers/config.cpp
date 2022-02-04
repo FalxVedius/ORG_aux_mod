@@ -202,6 +202,7 @@ class CfgAmmo
 			1000
 		};
 	};
+
 	class MACRO_NEW_AMMO(PLX1_AA): M_Titan_AA
 	{
 		cmImmunity=1.0;
