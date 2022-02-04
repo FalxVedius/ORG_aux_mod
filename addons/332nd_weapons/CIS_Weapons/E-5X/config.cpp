@@ -79,17 +79,18 @@ class CfgWeapons
 
 		class manual : Mode_FullAuto
 		{
+			burst = 3;
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
 				soundSetShot[] = { "332_DC15a_Tail_SoundSet","332_E5c_Shot_SoundSet" };
 			};
-			reloadTime = 0.055;
+			reloadTime = 0.15;
 			dispersion = 0.002;
 			soundContinuous = 0;
 			soundBurst = 0;
 			minRange = 0;
-			aiBurstTerminable = 1;
+			aiBurstTerminable = 0;
 			minRangeProbab = 0.30000001;
 			midRange = 5;
 			midRangeProbab = 0.69999999;
@@ -99,8 +100,8 @@ class CfgWeapons
 		};
 		class close : manual
 		{
-			burst = 40;
-			aiRateOfFire = 0.055;
+			burst = 3;
+			aiRateOfFire = 0.15;
 			aiRateOfFireDistance = 50;
 			minRange = 10;
 			minRangeProbab = 0.050000001;
@@ -112,8 +113,8 @@ class CfgWeapons
 		};
 		class short : close
 		{
-			burst = 40;
-			aiRateOfFire = 0.055;
+			burst = 3;
+			aiRateOfFire = 0.15;
 			aiRateOfFireDistance = 300;
 			minRange = 50;
 			minRangeProbab = 0.050000001;
@@ -124,8 +125,8 @@ class CfgWeapons
 		};
 		class medium : close
 		{
-			burst = 40;
-			aiRateOfFire = 0.055;
+			burst = 3;
+			aiRateOfFire = 0.15;
 			aiRateOfFireDistance = 600;
 			minRange = 200;
 			minRangeProbab = 0.050000001;
@@ -138,8 +139,8 @@ class CfgWeapons
 		{
 			requiredOpticType = 1;
 			showToPlayer = 0;
-			burst = 40;
-			aiRateOfFire = 0.055;
+			burst = 3;
+			aiRateOfFire = 0.15;
 			aiRateOfFireDistance = 1000;
 			minRange = 300;
 			minRangeProbab = 0.050000001;
@@ -150,7 +151,7 @@ class CfgWeapons
 		};
 		class far_optic2 : far_optic1
 		{
-			burst = 40;
+			burst = 3;
 			requiredOpticType = 2;
 			minRange = 400;
 			minRangeProbab = 0.050000001;
@@ -158,7 +159,7 @@ class CfgWeapons
 			midRangeProbab = 0.69999999;
 			maxRange = 900;
 			maxRangeProbab = 0.0099999998;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 0.15;
 			aiRateOfFireDistance = 900;
 		};
 
