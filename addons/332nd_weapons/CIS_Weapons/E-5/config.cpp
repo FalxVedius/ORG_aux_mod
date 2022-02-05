@@ -76,8 +76,8 @@ class CfgWeapons
 			aiBurstTerminable = 1;
 			dispersion=0.0020000001;
 			minRange=2;
-			aiDispersionCoefX=2.0
-			aiDispersionCoefY=2.0
+			aiDispersionCoefX=2.0;
+			aiDispersionCoefY=2.0;
 			minRangeProbab=0.5;
 			midRange=200;
 			midRangeProbab=0.69999999;
@@ -94,8 +94,8 @@ class CfgWeapons
 			reloadTime=0.14;
 			dispersion=0.005;
 			aiBurstTerminable = 1;
-			aiDispersionCoefX=2.0
-			aiDispersionCoefY=2.0
+			aiDispersionCoefX=2.0;
+			aiDispersionCoefY=2.0;
 			recoil="recoil_auto_mx";
 			recoilProne="recoil_auto_prone_mx";
 			minRange=0;
@@ -178,7 +178,6 @@ class CfgWeapons
 					1
 				};
 			};
-			requiredOpticType=1;
 			showToPlayer=0;
 			aiDispersionCoefX=2.0
 			aiDispersionCoefY=2.0

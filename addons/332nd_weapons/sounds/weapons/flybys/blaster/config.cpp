@@ -119,7 +119,7 @@ class cfgSoundShaders
 			}
 			
 		};
-		volume=0.5;
+		volume=0.4;
 		range=200;
 	};
 };

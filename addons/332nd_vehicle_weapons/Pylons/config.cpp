@@ -20,12 +20,23 @@ class CfgAmmo
     class Missile_AGM_02_F;
 	class MACRO_NEW_AMMO(AGM_Med): Missile_AGM_02_F
 	{
-	soundFly[]=
+	soundengine[]=
 		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			3,
-			2,
-			2000
+			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
+			1,
+			1,
+			750
+		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			1,
+			1.5,
+			200
+		};
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
 		};
 		model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
 	  manualcontrol=0;
@@ -47,14 +58,24 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(Proton_Torpedo): Missile_AGM_02_F
 	{
-	soundFly[]=
+	soundengine[]=
 		{
-			"332nd_vehicle_weapons\air\sounds\V1.wss",
-			2,
+			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
 			1,
-			4000
+			1,
+			750
 		};
-
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			1,
+			1.5,
+			200
+		};
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
+		};
 		maxSpeed = 50;
 		thrust = 50;
 		timeToLive = 60;
@@ -125,12 +146,23 @@ class CfgAmmo
     class M_Air_AA;
 	class MACRO_NEW_AMMO(AA_Med): M_Air_AA
 	{
-	soundFly[]=
+	soundengine[]=
 		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			3,
-			2,
-			2000
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			1,
+			1,
+			750
+		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			1,
+			1.5,
+			200
+		};
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
 		};
     manualcontrol=0;
 	missileLockMaxDistance = 2500;
@@ -146,12 +178,23 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(AA_Low): M_Air_AA
 	{
-	soundFly[]=
+	soundengine[]=
 		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			3,
-			2,
-			2000
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			1,
+			1,
+			750
+		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			1,
+			1.5,
+			200
+		};
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
 		};
     manualcontrol=0;
 	missileLockMaxDistance = 1500;

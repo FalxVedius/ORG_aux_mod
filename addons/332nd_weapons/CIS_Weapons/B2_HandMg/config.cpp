@@ -33,15 +33,15 @@ class CfgMagazines
 		displayName="E5 50rnd Low";
 		descriptionShort="50rnd Magazine for the E-5";
 		displayNameShort="E5 50rnd Low ";
-		ammo=MACRO_NEW_AMMO(556_Red);
+		ammo=MACRO_NEW_AMMO(338_Red);
 		tracersEvery=1;
 	};
 };
-
-
+class mode_FullAuto;
+class BaseSoundModeType;
 class cfgWeapons
 {
-	class FullAuto;
+	
 	class WBK_B2_NormalMod;
 	class MACRO_NEW_WEAPON(B2_Handcannon): WBK_B2_NormalMod
 	{
@@ -53,45 +53,22 @@ class cfgWeapons
 		canShootInWater=1;
 		recoil="recoil_spar";
 		recoilprone="recoil_spar";
-		modes[] = {"FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
+		modes[] = {"FullAuto","close","short","medium","far_optic1",""};
 		
 		muzzles[]=
 		{
 			"this"
 		};
-		class FullAuto: FullAuto
+		class FullAuto: mode_FullAuto
 		{
-			sounds[]=
+			sounds[] = { "StandardSound" };
+			class StandardSound : BaseSoundModeType
 			{
-				"StandardSound";
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				begin1[]=
-				{
-					"\332nd_weapons\CIS_Weapons\B2_HandMg\sounds\B2Autocannon.wss",
-					1,
-					1.2,
-					4000
-				};
-				soundBegin[]=
-				{
-					"begin1",
-					1
-				};
+				soundSetShot[] = { "332_Sniper_Tail_SoundSet","332_B2_Shot_SoundSet" };
 			};
 			displayname="FullAuto";
-			burst=25
-			reloadTime=0.05;
-			dispersion=0.01;
+			reloadTime=0.25;
+			dispersion=0.005;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -100,68 +77,63 @@ class cfgWeapons
 			maxRangeProbab=0.1;
 			textureType="fastAuto";
 		};
-		class fullauto_medium: FullAuto
+		class close : FullAuto
 		{
-			sounds[]=
-			{
-				"StandardSound"
-			};
-			class BaseSoundModeType
-			{
-				weaponSoundEffect="";
-				closure1[]={};
-				closure2[]={};
-				soundClosure[]={};
-			};
-			class StandardSound: BaseSoundModeType
-			{
-			showToPlayer=0;
-			burst=50;
-			aiDispersionCoefX=2.0
-			aiDispersionCoefY=2.0
-			aiBurstTerminable=1;
-			minRange=2;
-			minRangeProbab=0.5;
-			midRange=75;
-			midRangeProbab=0.69999999;
-			maxRange=150;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=2;
-			aiRateOfFireDistance=200;
+			aiRateOfFire = 0.25;
+			aiRateOfFireDistance = 50;
+			minRange = 10;
+			minRangeProbab = 0.050000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 0;
 		};
-		class single_medium_optics1: FullAuto
+		class short : close
 		{
-		
-			burst=50;
-			requiredOpticType=1;
-			showToPlayer=0;
-			aiDispersionCoefX=3.0
-			aiDispersionCoefY=3.0
-			minRange=2;
-			minRangeProbab=0.2;
-			midRange=450;
-			midRangeProbab=0.69999999;
-			maxRange=600;
-			maxRangeProbab=0.2;
-			aiRateOfFire=6;
-			aiRateOfFireDistance=600;
+			aiRateOfFire = 0.25;
+			aiRateOfFireDistance = 300;
+			minRange = 50;
+			minRangeProbab = 0.050000001;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.039999999;
 		};
-		class single_far_optics2: single_medium_optics1
+		class medium : close
 		{
-			burst=100;
-			showToPlayer=0;
-			minRange=100;
-			minRangeProbab=0.1;
-			midRange=500;
-			aiDispersionCoefX=3.0
-			aiDispersionCoefY=3.0
-			midRangeProbab=0.60000002;
-			maxRange=700;
-			maxRangeProbab=0.050000001;
-			aiRateOfFire=8;
-			aiRateOfFireDistance=700;
-	    };
-        
+			aiRateOfFire = 0.25;
+			aiRateOfFireDistance = 600;
+			minRange = 200;
+			minRangeProbab = 0.050000001;
+			midRange = 300;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
+			maxRangeProbab = 0.1;
+		};
+		class far_optic1 : medium
+		{
+			showToPlayer = 0;
+			aiRateOfFire = 0.25;
+			aiRateOfFireDistance = 1000;
+			minRange = 300;
+			minRangeProbab = 0.050000001;
+			midRange = 500;
+			midRangeProbab = 0.40000001;
+			maxRange = 650;
+			maxRangeProbab = 0.0099999998;
+		};
+		class far_optic2 : far_optic1
+		{
+			aiRateOfFire = 0.25;
+			minRange = 400;
+			minRangeProbab = 0.050000001;
+			midRange = 750;
+			midRangeProbab = 0.69999999;
+			maxRange = 900;
+			maxRangeProbab = 0.0099999998;
+			aiRateOfFireDistance = 900;
+		};
 	};
 };
 };

@@ -175,7 +175,32 @@ class CfgVehicles
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"120Rnd_CMFlare_Chaff_Magazine"
 		};
-
+		  soundengineonint[]=
+		{
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_start_int.wss",
+			1,
+			1
+		};
+		soundengineonext[]=
+		{
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_start_ext.wss",
+			1,
+			1,
+			300
+		};
+		soundengineoffint[]=
+		{
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_shut_ext.wss",
+			1,
+			1
+		};
+		soundengineoffext[]=
+		{
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_shut_int.wss",
+			1,
+			1,
+			300
+		};
 		class sounds: sounds
 		{
 			soundSets[]=

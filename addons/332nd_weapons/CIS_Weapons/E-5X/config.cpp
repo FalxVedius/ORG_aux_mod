@@ -41,7 +41,7 @@ class CfgMagazines
 		displayName = "E5X Magazine";
 		displayNameShort = "E5X rnd";
 		descriptionShort = "332nd E5X Round";
-		ammo = "ls_ammo_762_red";
+		ammo = MACRO_NEW_AMMO(762_Red);
 		tracersEvery = 1;
 	};
 };
@@ -66,7 +66,8 @@ class CfgWeapons
 		descriptionShort="Special Blaster of the CIS";
 
 		baseWeapon = "";
-
+		recoil="recoil_15c";
+		recoilProne="recoil_15c";
 		magazines[]=
 		{
 			MACRO_NEW_MAG(E5X_Mag,51)
@@ -77,20 +78,20 @@ class CfgWeapons
 
 		modes[] = { "manual","close","short","medium","far_optic1","far_optic2" };
 
-		class manual : Mode_FullAuto
+		class manual : Mode_SemiAuto
 		{
 			burst = 3;
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_DC15a_Tail_SoundSet","332_E5c_Shot_SoundSet" };
+				soundSetShot[] = { "332_DC15a_Tail_SoundSet","332_E5X_Shot_SoundSet" };
 			};
-			reloadTime = 0.15;
-			dispersion = 0.002;
+			reloadTime = 0.1;
+			dispersion = 0.0002;
 			soundContinuous = 0;
 			soundBurst = 0;
 			minRange = 0;
-			aiBurstTerminable = 0;
+			aiBurstTerminable = 1;
 			minRangeProbab = 0.30000001;
 			midRange = 5;
 			midRangeProbab = 0.69999999;
@@ -101,7 +102,7 @@ class CfgWeapons
 		class close : manual
 		{
 			burst = 3;
-			aiRateOfFire = 0.15;
+			aiRateOfFire = 0.1;
 			aiRateOfFireDistance = 50;
 			minRange = 10;
 			minRangeProbab = 0.050000001;
@@ -114,7 +115,7 @@ class CfgWeapons
 		class short : close
 		{
 			burst = 3;
-			aiRateOfFire = 0.15;
+			aiRateOfFire = 0.1;
 			aiRateOfFireDistance = 300;
 			minRange = 50;
 			minRangeProbab = 0.050000001;
@@ -126,7 +127,7 @@ class CfgWeapons
 		class medium : close
 		{
 			burst = 3;
-			aiRateOfFire = 0.15;
+			aiRateOfFire = 0.1;
 			aiRateOfFireDistance = 600;
 			minRange = 200;
 			minRangeProbab = 0.050000001;
@@ -137,10 +138,9 @@ class CfgWeapons
 		};
 		class far_optic1 : medium
 		{
-			requiredOpticType = 1;
 			showToPlayer = 0;
 			burst = 3;
-			aiRateOfFire = 0.15;
+			aiRateOfFire = 0.1;
 			aiRateOfFireDistance = 1000;
 			minRange = 300;
 			minRangeProbab = 0.050000001;
@@ -152,14 +152,13 @@ class CfgWeapons
 		class far_optic2 : far_optic1
 		{
 			burst = 3;
-			requiredOpticType = 2;
 			minRange = 400;
 			minRangeProbab = 0.050000001;
 			midRange = 750;
 			midRangeProbab = 0.69999999;
 			maxRange = 900;
 			maxRangeProbab = 0.0099999998;
-			aiRateOfFire = 0.15;
+			aiRateOfFire = 0.1;
 			aiRateOfFireDistance = 900;
 		};
 

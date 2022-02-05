@@ -231,7 +231,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Low,200)
 		displayNameShort="Low Power 200rnd";
 		descriptionShort="332nd Low Power Round";
-		ammo="ls_ammo_556_blue";
+		ammo=MACRO_NEW_AMMO(65_Blue);
 		tracersEvery=1;
 	};
 	class MACRO_NEW_MAG(Z6,125): MACRO_NEW_MAG(Z6,200)

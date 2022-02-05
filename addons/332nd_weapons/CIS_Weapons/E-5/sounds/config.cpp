@@ -59,7 +59,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 {
 	class 332_E5_Shot_SoundSet
 	{
-		soundShaders[] = {"332_E5_Closure_SoundShader","332_E5_closeShot_SoundShader","332_E5_midShot_SoundShader","332_DC15a_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
+		soundShaders[] = {"332_E5_Closure_SoundShader","332_E5_closeShot_SoundShader","332_E5_midShot_SoundShader","332_E5_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
 		volumeFactor = 1.1;
 		frequencyRandomizer = 1;
 		frequencyRandomizer = 0.35;

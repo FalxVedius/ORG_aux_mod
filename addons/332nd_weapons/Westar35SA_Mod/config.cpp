@@ -207,7 +207,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(35SA Low,45)
 		displayNameShort="low Power 30rnd";
 		descriptionShort="332nd Low Power Round";
-		ammo="ls_ammo_65_blue";
+		ammo=MACRO_NEW_AMMO(65_Blue);
 		tracersEvery=1;
 	};
 }

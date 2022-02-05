@@ -43,7 +43,10 @@ class CfgAmmo
 		suppressionRadiusHit = 14;
 		explosionSoundEffect = "DefaultExplosion";
 		explosioneffects = "ExploAmmoExplosion";
-
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 		class CamShakeExplode
 		{
 			power = "(20*0.2)";
@@ -131,10 +134,10 @@ class CfgWeapons
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_DC15a_Tail_SoundSet","332_E5c_Shot_SoundSet" };
+				soundSetShot[] = { "332_Sniper_Tail_SoundSet","332_E5S_Shot_SoundSet" };
 			};
-			reloadTime = 2;
-			dispersion = 0.002;
+			reloadTime = 1;
+			dispersion = 0.001;
 			soundContinuous = 0;
 			soundBurst = 0;
 			minRange = 0;
@@ -145,10 +148,11 @@ class CfgWeapons
 			maxRange = 10;
 			maxRangeProbab = 0.039999999;
 			showToPlayer = 1;
+			aiDispersionCoefX=2.0;
+			aiDispersionCoefY=2.0;
 		};
 		class close : manual
 		{
-			burst = 1;
 			aiRateOfFire = 2;
 			aiRateOfFireDistance = 50;
 			minRange = 10;
@@ -161,7 +165,6 @@ class CfgWeapons
 		};
 		class short : close
 		{
-			burst = 1;
 			aiRateOfFire = 2;
 			aiRateOfFireDistance = 300;
 			minRange = 50;
@@ -173,7 +176,6 @@ class CfgWeapons
 		};
 		class medium : close
 		{
-			burst = 1;
 			aiRateOfFire = 2;
 			aiRateOfFireDistance = 600;
 			minRange = 200;
@@ -185,9 +187,7 @@ class CfgWeapons
 		};
 		class far_optic1 : medium
 		{
-			requiredOpticType = 1;
 			showToPlayer = 0;
-			burst = 1;
 			aiRateOfFire = 2;
 			aiRateOfFireDistance = 1000;
 			minRange = 300;
@@ -199,8 +199,6 @@ class CfgWeapons
 		};
 		class far_optic2 : far_optic1
 		{
-			burst = 1;
-			requiredOpticType = 2;
 			minRange = 400;
 			minRangeProbab = 0.050000001;
 			midRange = 750;
@@ -267,13 +265,15 @@ class CfgWeapons
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_DC15a_Tail_SoundSet","332_E5c_Shot_SoundSet" };
+				soundSetShot[] = { "332_Sniper_Tail_SoundSet","332_E5S_Shot_SoundSet" };
 			};
-			reloadTime = 0.055;
-			dispersion = 0.002;
+			reloadTime = 1;
+			dispersion = 0.001;
 			soundContinuous = 0;
 			soundBurst = 0;
 			minRange = 0;
+			aiDispersionCoefX=0.5;
+			aiDispersionCoefY=0.5;
 			aiBurstTerminable = 1;
 			minRangeProbab = 0.30000001;
 			midRange = 5;
@@ -284,8 +284,7 @@ class CfgWeapons
 		};
 		class close : manual
 		{
-			burst = 40;
-			aiRateOfFire = 0.055;
+			aiRateOfFire = 1;
 			aiRateOfFireDistance = 50;
 			minRange = 10;
 			minRangeProbab = 0.050000001;
@@ -297,8 +296,7 @@ class CfgWeapons
 		};
 		class short : close
 		{
-			burst = 40;
-			aiRateOfFire = 0.055;
+			aiRateOfFire = 1;
 			aiRateOfFireDistance = 300;
 			minRange = 50;
 			minRangeProbab = 0.050000001;
@@ -309,8 +307,7 @@ class CfgWeapons
 		};
 		class medium : close
 		{
-			burst = 40;
-			aiRateOfFire = 0.055;
+			aiRateOfFire = 1;
 			aiRateOfFireDistance = 600;
 			minRange = 200;
 			minRangeProbab = 0.050000001;
@@ -321,10 +318,8 @@ class CfgWeapons
 		};
 		class far_optic1 : medium
 		{
-			requiredOpticType = 1;
 			showToPlayer = 0;
-			burst = 40;
-			aiRateOfFire = 0.055;
+			aiRateOfFire = 1;
 			aiRateOfFireDistance = 1000;
 			minRange = 300;
 			minRangeProbab = 0.050000001;
@@ -335,15 +330,13 @@ class CfgWeapons
 		};
 		class far_optic2 : far_optic1
 		{
-			burst = 40;
-			requiredOpticType = 2;
 			minRange = 400;
 			minRangeProbab = 0.050000001;
 			midRange = 750;
 			midRangeProbab = 0.69999999;
 			maxRange = 900;
 			maxRangeProbab = 0.0099999998;
-			aiRateOfFire = 0.75;
+			aiRateOfFire = 1;
 			aiRateOfFireDistance = 900;
 		};
 
