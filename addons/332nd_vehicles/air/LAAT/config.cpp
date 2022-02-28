@@ -268,55 +268,21 @@ class CfgVehicles
 		};
 	};
 
-	class ls_heli_laatle : ls_laatle_base
+	class Heli_Attack_01_base_F;
+
+	class 3AS_Patrol_LAAT_Base : Heli_Attack_01_base_F
+	{
+		class Turrets;
+	};
+
+	class 3AS_Patrol_LAAT_Republic : 3AS_Patrol_LAAT_Base
 	{
 		class Components;
+
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
-			{
-
-			};
-			class cargoTurret_pos7 : cargoTurret_pos7
-			{
-
-			};
-			class cargoTurret_pos8 : cargoTurret_pos8
-			{
-
-			};
-			class cargoTurret_pos9 : cargoTurret_pos9
-			{
-
-			};
-			class cargotTurret_pos10 : cargotTurret_pos10
-			{
-
-			};
-			class cargoTurret_pos11 : cargoTurret_pos11
-			{
-
-			};
-			class cargoTurret_pos12 : cargoTurret_pos12
-			{
-
-			};
-			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
-			{
-
-			};
-			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
-			{
-
-			};
-			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
-			{
-
-			};
-			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
-			{
-
-			};
+			class MainTurret;
+			class Copilot;
 		};
 
 	};
@@ -3246,7 +3212,7 @@ class CfgVehicles
         };
     };
 	
-    class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): ls_heli_laatle
+    class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): 3AS_Patrol_LAAT_Republic
     {
         displayName = "LAAT/le Gunship";
         scope = 2;
@@ -3280,10 +3246,8 @@ class CfgVehicles
 		backRotorSpeed=1;
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
-		//class RotorLibHelicopterProperties
-		//{
-		//	RTDconfig="\ls_vehicles_heli\laatle\RTD_heli_laatle.xml";
-		//};
+
+
 		class RotorLibHelicopterProperties
 		{
 			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
@@ -3300,11 +3264,14 @@ class CfgVehicles
 			maxMainRotorStress=225000;
 			maxTailRotorStress=225000;
 		};
+
+
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
         ls_impulsor_boostSpeed_1=600;
         ls_impulsor_boostSpeed_2=900;
         ls_hasImpulse=1;
+
 		class Components: Components
 		{
 			class TransportPylonsComponent
@@ -3350,6 +3317,7 @@ class CfgVehicles
 				};
 			};
 		};
+
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -3562,47 +3530,8 @@ class CfgVehicles
 				elevationMode=0;
 				memoryPointGunnerOptics="gunnerview";
 			};
-			class cargoTurret_pos7 : cargoTurret_pos7
-			{
-
-			};
-			class cargoTurret_pos8 : cargoTurret_pos8
-			{
-
-			};
-			class cargoTurret_pos9 : cargoTurret_pos9
-			{
-
-			};
-			class cargotTurret_pos10 : cargotTurret_pos10
-			{
-
-			};
-			class cargoTurret_pos11 : cargoTurret_pos11
-			{
-
-			};
-			class cargoTurret_pos12 : cargoTurret_pos12
-			{
-
-			};
-			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
-			{
-
-			};
-			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
-			{
-
-			};
-			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
-			{
-
-			};
-			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
-			{
-
-			};
 		};
+
         class TransportItems
         {
 

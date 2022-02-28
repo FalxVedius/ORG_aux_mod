@@ -135,6 +135,17 @@ class CfgVehicles
 		peakTorque = 40000;
 		//engineMOI = 0.01;
 
+		class VehicleTransport
+		{
+			class Cargo
+			{
+				parachuteClass = B_Parachute_02_F;
+				parachuteHeightLimit = 40;
+				canBeTransported = 1;
+				dimensions[] = { "ftr_muzzle", "btl_muzzle" };
+			};
+		};
+
 
 		class Wheels
 		{

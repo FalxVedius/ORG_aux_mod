@@ -66,11 +66,14 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_APCS";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
-		//hiddenSelections[] = {"camo1","camo2","camo3","CamoNet","CamoSlat"};
-		//hiddenSelectionsTextures[] = {"\332nd_vehicles\_textures\land\TX200\MainBody_co.paa","\332nd_vehicles\_textures\land\TX200\LowerBody_co.paa","\332nd_vehicles\_textures\land\TX200\MainTurret_co.paa","",""};
+		
 
 		armor = 350;
 		armorStructural = 4;
+
+		antiRollbarForceCoef = 48;
+		antiRollbarForceLimit = 106;
+		antiRollbarSpeedMax = 160;
 
 		class Turrets : Turrets
 		{
@@ -173,11 +176,4 @@ class CfgVehicles
 			};
 		};
 	};
-}
-	
-			
-		
-	
-
-//TO DO
-// make tracks invulnerable, texture, investigate weapons, sounds, effects
+};

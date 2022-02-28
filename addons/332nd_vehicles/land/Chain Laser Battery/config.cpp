@@ -24,6 +24,9 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(CLB_Laser) : OPTRE_B_20mm_HEIAP
 	{
 		model = "ls_weapons_core\Effects\laser_red.p3d";
+
+		allowAgainstInfantry = 0;
+		aiAmmoUsageFlags = "256 + 512";
 	};
 };
 

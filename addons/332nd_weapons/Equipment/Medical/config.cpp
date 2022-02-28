@@ -359,6 +359,10 @@ class ACE_Medical_Treatment
 		{
 
 		};
+		class MACRO_NEW_MEDICAL_ITEM(Blood_Phial) : BloodIV
+		{
+			volume = 500;
+		};
 		class MACRO_NEW_MEDICAL_ITEM(Bacta) : BloodIV
 		{
 			volume = 0;
@@ -553,6 +557,15 @@ class ACE_Medical_Treatment_Actions
 		allowedSelections[] = { "All" };
 
 		displayName = "Blood Tank";
+		displayNameProgress = "Transfusing Blood...";
+	};
+	class MACRO_NEW_MEDICAL_ITEM(Blood_Phial) : BloodIV
+	{
+		items[] = { "332nd_aux_medical_Blood_Phial" };
+
+		allowedSelections[] = { "All" };
+
+		displayName = "Blood Phial";
 		displayNameProgress = "Transfusing Blood...";
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Kolto) : BloodIV
@@ -782,6 +795,33 @@ class CfgWeapons
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 5;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(Blood_Phial) : ACE_bloodIV
+	{
+		scope = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Blood Phial)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Injecting 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\bacta_red_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\bacta.p3d";
+
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"\MRC\JLTS\contraband\Drugs\data\bacta_co.paa",
+			"#(argb,8,8,3)color(1,0,0,0.8,co)"
+		};
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 2.5;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(Bacta) : ACE_bloodIV

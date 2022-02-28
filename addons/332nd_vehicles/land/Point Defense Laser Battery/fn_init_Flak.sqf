@@ -25,16 +25,16 @@ while {alive _unit} do {
 		
 			private _flakExplosion = _currentTarget getPos [random 200, random 360];
 			_flakExplosion set [2, (getPos _currentTarget # 2) - 100 + random (2*100)];
-			"Flak_Round_332nd" createVehicle _flakExplosion;	
+			"Flak_Round_332nd" createVehicle _flakExplosion;
 			
 		};
 		
-		_rndNum = selectRandom [2.0,2.2,2.4,2.6,2.8,3];
+		_rndNum = selectRandom [4.0,4.2,4.4,4.6,4.8,5];
 		
 		sleep _rndNum;
 	};
 	
-	_rndNum2 = selectRandom [2.0,2.2,2.4,2.6,2.8,3];
+	_rndNum2 = selectRandom [4.0,4.2,4.4,4.6,4.8,5];
 	
 	sleep _rndNum2;	
 };
