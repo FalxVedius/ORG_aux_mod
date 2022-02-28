@@ -245,6 +245,7 @@ class CfgAmmo
 	indirectHit = 35;
 	indirectHitRange = 3;
 	};
+
 };
 
 class CfgMagazines
@@ -379,6 +380,7 @@ class CfgMagazines
 		tracersevery = 1;
 		count=1000;
 	};
+
 
 
 
@@ -1149,7 +1151,6 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 		};
 	};
-
 
 	class BARC_Repeater;
 	class MACRO_NEW_WEAPON(BARC_40mm): BARC_Repeater

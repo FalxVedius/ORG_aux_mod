@@ -12848,13 +12848,13 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_5(332nd_aux_magazine_35sa_low_x30)
+			mag_5(332nd_aux_magazine_35sa_low_x30),
 
 		};
 		respawnMagazines[] =
 		{
 			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_5(332nd_aux_magazine_35sa_low_x30)
+			mag_5(332nd_aux_magazine_35sa_low_x30),
 
 		};
 		items[] =
@@ -13332,9 +13332,6 @@ class CfgVehicles
 			"ACE_EarPlugs",
 			mag_4(332nd_aux_medical_PressureCuff),
 		};
-
-		/* ... */
-		/* [_headgearClass1, _probability1, _headgearClass2, _probability2, ...] */
 		headgearList[] =
 		{
 
@@ -13342,6 +13339,12 @@ class CfgVehicles
 			"H_Cap_tan", 0.7,
 			"H_Cap_blk", 0.7,
 			"H_PASGT_basic_black_F", 0.7,
+			"H_Hat_grey", 0.7,
+			"H_Cap_marshal", 0.7,
+			"H_Construction_basic_white_F", 0.7,
+			"H_Construction_headset_black_F", 0.7,
+			"H_HeadSet_red_F", 0.7,
+
 		};
 
 
@@ -13350,8 +13353,6 @@ class CfgVehicles
 		{ 
 			init = ""; 
 		};
-		/* ... */
-		
 		
 
 		class HitPoints : HitPoints
@@ -14258,12 +14259,12 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_5(332nd_aux_magazine_R_DP23_x12Wide),
-			mag_1(332nd_aux_magazine_332_FLASH_x1)
+			mag_1(332nd_aux_magazine_332_FLASH_x1),
 		};
 		respawnMagazines[] =
 		{
 			mag_5(332nd_aux_magazine_R_DP23_x12Wide),
-			mag_1(332nd_aux_magazine_332_FLASH_x1)
+			mag_1(332nd_aux_magazine_332_FLASH_x1),
 		};
 		items[] =
 		{
@@ -16043,6 +16044,7 @@ class CfgVehicles
 
 	// ---- End Opfor Units for Uniforms ----
 };
+
 class Extended_Killed_EventHandlers
 {
 	//B1s

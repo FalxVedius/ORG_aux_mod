@@ -17,7 +17,6 @@ class CfgPatches
 
 class CfgAmmo
 {   
-    
 	class M_Air_AA;
 	class MACRO_NEW_AMMO(R_AA_Low) : M_Air_AA
 	{
@@ -88,4 +87,5 @@ class CfgWeapons
 		aiRateOfFire = 5.0;
 		
 	};
+
 };

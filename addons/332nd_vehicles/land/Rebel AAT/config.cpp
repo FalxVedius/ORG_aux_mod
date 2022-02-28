@@ -230,18 +230,28 @@ class CfgVehicles
 		crew = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
 		side = 2;
 
+		
+
 		armor = 300;
 		armorStructural = 2;
 
 		hiddenselectionstextures[] = {
 		   MACRO_AAT_TEXTURES\Rebel_AAT.paa,
 		};
-		//Rebel_AAT.paa
 
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
 			{
+
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(R_AAT_Cannon)
+				};
+				magazines[] =
+				{
+					MACRO_NEW_MAG(R_AAT,24)
+				};
 				class Turrets : Turrets
 				{
 					class CommanderOptics : CommanderOptics
