@@ -250,7 +250,8 @@ class MACRO_NEW_NVG(Spacy_Visor_332) :JLTS_CloneNVG
     opticsZoomMin = 1;
 };
 
-class MACRO_NEW_NVG(Falx_Visor_332) :JLTS_CloneNVGMC
+//JLTS_CloneNVGMC
+class MACRO_NEW_NVG(Falx_Visor_332) :JLTS_CloneNVGCC
 {
     hiddenSelections[] = { "camo1" };
     hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Falx.paa" };

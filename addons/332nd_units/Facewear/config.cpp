@@ -33,6 +33,72 @@ class CfgGlasses
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 	};
 
+	class 332nd_RangeFinder : G_Tactical_Black
+	{
+		displayName = "[332nd] Rangefinder (White)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVGRange_off.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_range_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_RangeFinder_Black : G_Tactical_Black
+	{
+		displayName = "[332nd] Rangefinder (Black)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVGRange_off.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_rangefinder_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_CC_Visor : G_Tactical_Black
+	{
+		displayName = "[332nd] Commander Visor";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVGCC.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_visor_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_NVG_Visor: G_Tactical_Black
+	{
+		displayName = "[332nd] NVG Visor (White)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_NVG_Visor_Black : G_Tactical_Black
+	{
+		displayName = "[332nd] NVG Visor (Black)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_nvg_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_MC_Visor : G_Tactical_Black
+	{
+		displayName = "[332nd] Marshal Commander Visor";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_visor_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
 	class 332nd_Helmet_Visor : G_Tactical_Black
 	{
 		displayName = "[332nd] Helmet Visor";
