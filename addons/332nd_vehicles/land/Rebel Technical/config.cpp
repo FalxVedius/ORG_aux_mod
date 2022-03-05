@@ -12,8 +12,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-			MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6),
-			MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_E5C)
+			MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6)
         };
 		weapons[] = {};
 	};
@@ -31,13 +30,13 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6): I_G_Offroad_01_armed_F
     {
-        displayName = "Rebel Technical Z6";
+        displayName = "Rebel Technical Z90";
         scope = 2;
 		scopeCurator = 2;
 		side = 2;
 		faction = "EdCat_332nd_Rebel";
 		editorSubcategory = "EdSubcat_332nd_Rebel_TANKS";
-		crew = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
+		crew = "332nd_aux_rebel_unit_332nd_indep_rebel";
 		hiddenselections[] = {
 			 "camo1"
 		};
@@ -57,62 +56,19 @@ class CfgVehicles
 			{
 				weapons[] =
 				{
-					"332nd_aux_weapon_Z6"
+					"332nd_aux_weapon_R_Z90"
 				};
 				magazines[] =
 				{
-					"332nd_aux_magazine_Z6_x200",
-					"332nd_aux_magazine_Z6_x200",
-					"332nd_aux_magazine_Z6_x200"
+					"332nd_aux_magazine_R_Z90_x150",
+					"332nd_aux_magazine_R_Z90_x150",
+					"332nd_aux_magazine_R_Z90_x150",
+					"332nd_aux_magazine_R_Z90_x150"
 					
 				};
 			};
 			   
 	   };
-
-	};
-
-	class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_E5C) : I_G_Offroad_01_armed_F
-	{
-		displayName = "Rebel Technical E5C";
-		scope = 2;
-		scopeCurator = 2;
-		side = 2;
-		faction = "EdCat_332nd_Rebel";
-		editorSubcategory = "EdSubcat_332nd_Rebel_TANKS";
-		crew = "332nd_aux_rebel_AT_unit_332nd_indep_rebel_AT";
-		hiddenselections[] = {
-			 "camo1"
-		};
-		class EventHandlers
-		{
-			init = "(_this select 0) setVariable [""BIS_enableRandomization"",false];";
-		};
-
-		hiddenselectionstextures[] = {
-		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Tech.paa,"soft_f\Offroaf_01\Data\Rebel_Tech.paa",
-		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Tech.paa,"soft_f\Offroaf_01\Data\Rebel_Tech.paa"
-		};
-
-		class Turrets : Turrets
-		{
-			class I_E5C_Turret : M2_Turret
-			{
-				weapons[] =
-				{
-					"JLTS_E5C_stock"
-				};
-				magazines[] =
-				{
-					"JLTS_E5C_mag",
-					"JLTS_E5C_mag",
-					"JLTS_E5C_mag",
-					"JLTS_E5C_mag"
-
-				};
-			};
-
-		};
 
 	};
 

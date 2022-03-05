@@ -75,8 +75,8 @@ class CfgMagazines
 
 class CfgAmmo
 {
-	class JLTS_bullet_carbine_green;
-	class MACRO_NEW_AMMO(R_762_green) :JLTS_bullet_carbine_green
+	class ls_ammo_762_green;
+	class MACRO_NEW_AMMO(R_762_green) :ls_ammo_762_green
 	{
 
 	}
