@@ -11,7 +11,8 @@ class CfgPatches
 		    "A3_Data_F",
 		    "A3_Weapons_F",
 			"3AS_Weapons_DC15A",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion=0.1;
 		units[]={};
@@ -381,4 +382,47 @@ class CfgWeapons
 			};
 		};
 	};
+};
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(DC_15b,60): 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=60;
+		mass=15;
+		initspeed=1500;
+		displayName=MACRO_AMMO_DISPLAYNAME(DC-15b "barker",60)
+		displayNameShort="Refined Medium Magazine x15";
+		descriptionShort="Refined Medium Magazine x15";
+		ammo=MACRO_NEW_AMMO(338_Blue);
+		tracersEvery=1;
+	};
+};
+
+class CfgAmmo
+{
+	class ls_ammo_338_blue;
+	class MACRO_NEW_AMMO(338_Blue): ls_ammo_338_blue
+	{
+	     hit = 20;
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	class MACRO_NEW_AMMO(338_Blue_T): ls_ammo_338_blue
+	{
+	     hit = 20;
+		 effectfly="332nd_aux_effects_blue_bullet";
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	
 };

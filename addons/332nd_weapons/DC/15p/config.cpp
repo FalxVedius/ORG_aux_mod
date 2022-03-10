@@ -10,7 +10,8 @@ class CfgPatches
 		    
 			"A3_Data_F",
 		    "A3_Weapons_F",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -129,5 +130,20 @@ class cfgWeapons
 				scope = 0;
 			};
 		};
+	};
+};
+
+class CfgMagazines
+{
+	class MACRO_NEW_MAG(DC_15a_Medium,30);
+	class MACRO_NEW_MAG(DC_15P_Med,40) : MACRO_NEW_MAG(DC_15a_Medium,30) //Low Mag for DC15A
+	{
+		count = 40;
+		mass = 7.5;
+		initspeed = 800;
+		displayName = MACRO_AMMO_DISPLAYNAME(15p med,40)
+		displayNameShort = "Low Power 30rnd";
+		descriptionShort = "332nd Low Power Round";
+		ammo = MACRO_NEW_AMMO(762_blue);
 	};
 };

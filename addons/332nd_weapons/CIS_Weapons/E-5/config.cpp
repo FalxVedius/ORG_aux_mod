@@ -8,7 +8,8 @@ class CfgPatches
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -260,6 +261,40 @@ class CfgWeapons
 				effectName="RifleAssaultCloud";
 				positionName="Usti hlavne";
 			};
+		};
+	};
+};
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(E5Low,50): 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\E5\data\ui\E5_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\E5\E5_mag.p3d";
+		count=50;
+		mass=10;
+		initspeed=900;
+		displayName="E5 50rnd Low";
+		descriptionShort="50rnd Magazine for the E-5";
+		displayNameShort="E5 50rnd Low ";
+		ammo=MACRO_NEW_AMMO(556_Red);
+		tracersEvery=1;
+	};
+};
+class CfgAmmo
+{
+	class ls_ammo_65_red;
+	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
+	{
+		//soundsetbulletfly[]=
+		//{
+		//	"332nd_blaster_flyby_soundset"
+		//};
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
 		};
 	};
 };
