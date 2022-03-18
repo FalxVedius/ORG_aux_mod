@@ -11,7 +11,8 @@ class CfgPatches
 			"A3_Data_F",
 		    "A3_Weapons_F",
 			"3AS_Weapons",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -235,5 +236,24 @@ class cfgWeapons
 				10
 			};
 		};
+	};
+};
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(DC_15c_Medium,45): 30rnd_762x39_AK12_Mag_F //Medium Mag for DC15A/UGL
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=45;
+		mass=10;
+		initspeed=1600;
+		displayName=MACRO_AMMO_DISPLAYNAME(15C Medium,45)
+		displayNameShort="Med Power rnd";
+		descriptionShort="332nd Medium Power Round";
+		ammo=MACRO_NEW_AMMO(762_blue);
+		tracersEvery=1;
 	};
 };

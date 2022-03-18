@@ -7,7 +7,8 @@ class CfgPatches
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -216,6 +217,17 @@ class CfgWeapons
 				effectName="RifleAssaultCloud";
 				positionName="Usti hlavne";
 			};
+		};
+	};
+};
+class CfgAmmo
+{
+	class ls_ammo_762_red;
+	class  MACRO_NEW_AMMO(762_Red): ls_ammo_762_red
+	{
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
 		};
 	};
 };

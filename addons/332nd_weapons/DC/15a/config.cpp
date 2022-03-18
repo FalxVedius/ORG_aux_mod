@@ -11,7 +11,8 @@ class CfgPatches
 		    "A3_Data_F",
 		    "A3_Weapons_F",
 			"JLTS_weapons_DC15A",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -375,5 +376,157 @@ class cfgWeapons
                 MACRO_NEW_MAG(DC_15_UGL_HE,4)
 			};
 		};
+	};
+};
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(DC_15a_Medium,30): 30rnd_762x39_AK12_Mag_F //Medium Mag for DC15A/UGL
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=30;
+		mass=10;
+		initspeed=1800;
+		displayName=MACRO_AMMO_DISPLAYNAME(15a Medium,30)
+		displayNameShort="Med Power rnd";
+		descriptionShort="332nd Medium Power Round";
+		ammo=MACRO_NEW_AMMO(762_blue);
+		tracersEvery=1;
+	};
+
+	class MACRO_NEW_MAG(DC_15a_Low,60): MACRO_NEW_MAG(DC_15a_Medium,30) //Low Mag for DC15A
+	{
+		count=60;
+		mass=10;
+		initspeed=1800;
+		displayName=MACRO_AMMO_DISPLAYNAME(15a Low,60)
+		displayNameShort="Low Power 60rnd";
+		descriptionShort="332nd Low Power Round";
+		ammo=MACRO_NEW_AMMO(65_Blue);
+	};
+
+	class MACRO_NEW_MAG(DC_15a_High,10): MACRO_NEW_MAG(DC_15a_Medium,30)//High Mag for DC15A | Not on the 15A UGL
+	{
+		count=15;
+		mass=20;
+		initspeed=1600;
+		displayName=MACRO_AMMO_DISPLAYNAME(15a High,15)
+		displayNameShort="High Power 15rnd";
+		descriptionShort="332nd High Power Round";
+		ammo=MACRO_NEW_AMMO(127x108_green);
+	};
+
+	class SWLW_mag_40mm_1rnd;
+	class MACRO_NEW_MAG(DC_15_UGL_AP,2): SWLW_mag_40mm_1rnd //15A UGL - 40mm
+	{
+		scope=2;
+		displayName=MACRO_AMMO_DISPLAYNAME(AP Plasma Cell ,2)
+		ammo=MACRO_NEW_AMMO(40mm_AP)
+		count=2;
+		mass=12
+		initspeed=80;
+	};
+
+	class MACRO_NEW_MAG(DC_15_UGL_HE,4): SWLW_mag_40mm_1rnd //15A UGL - 40mm
+	{
+		scope=2;
+		ammo=MACRO_NEW_AMMO(40mm_HE)
+		displayName=MACRO_AMMO_DISPLAYNAME(HE Plasma Cell ,4)
+		count=4;
+		mass=12
+		initspeed=80;
+	};
+
+	class JLTS_stun_mag_long;
+	class MACRO_NEW_MAG(Stun,10): 30rnd_762x39_AK12_Mag_F
+	{
+		count=10;
+		mass=6;
+		JLTS_stunDuration = 30;
+		initspeed=250;
+		ammo = MACRO_NEW_AMMO(Stun);
+		displayName=MACRO_AMMO_DISPLAYNAME(10rnd Stun (30sec) Magazine,10)
+		displayNameShort="332nd 30 sec stun magazine";
+		descriptionShort="332nd 30 sec stun magazine";
+		model = "\MRC\JLTS\weapons\Core\stun_mag.p3d";
+		picture = "\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
+		tracersEvery=1;
+	};
+};
+
+class CfgAmmo
+{
+	class ls_ammo_762_blue;
+	class  MACRO_NEW_AMMO(762_blue): ls_ammo_762_blue
+	{
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	
+	class ls_ammo_65_blue;
+	class  MACRO_NEW_AMMO(65_Blue): ls_ammo_65_blue
+	{
+		
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+
+	class ls_ammo_127x108_blue;
+	class MACRO_NEW_AMMO(127x108_Blue_T): ls_ammo_127x108_blue
+	{
+	     effectfly="332nd_aux_effects_blue_bullet";
+		 soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	class MACRO_NEW_AMMO(127x108_Blue): ls_ammo_127x108_blue
+	{
+		 soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+
+	class SWLW_ammo_40mm_green;
+	class MACRO_NEW_AMMO(40mm_HE): SWLW_ammo_40mm_green
+	{
+		hit=25;
+		indirecthit=20;
+		fuseDistance=15;
+		indirectHitRange=6;
+		//effectfly="332nd_aux_effects_RPS4_green";
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	class SWLW_ammo_40mm_at;
+	class MACRO_NEW_AMMO(40mm_AP): SWLW_ammo_40mm_at
+	{
+		 //effectfly="332nd_aux_effects_RPS4_blue";
+		 fuseDistance=15;
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+
+	class JLTS_bullet_stun;
+	class MACRO_NEW_AMMO(Stun): JLTS_bullet_stun
+	{
+	   JLTS_isStunAmmo = 1;
+       audibleFire = 2;
+       visibleFireTime = 3;
+	   visibleFire = 1;
+	   cartridge = "";
 	};
 };
