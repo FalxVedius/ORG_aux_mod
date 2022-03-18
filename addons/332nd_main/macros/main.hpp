@@ -716,6 +716,14 @@
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
 		}
+	#define MACRO_NEW_CISB1AA_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(cisb1aa,classname): MACRO_NEW_UNIT(cisb1aa,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(cisb1,uniformClassname);\
+		}
 	#define MACRO_NEW_CISB1SNIPER_UNIT(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIT(cisb1sniper,classname): MACRO_NEW_UNIT(cisb1sniper,base)\
 		{\
