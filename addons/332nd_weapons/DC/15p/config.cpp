@@ -47,6 +47,7 @@ class cfgWeapons
 		cursor = "332_DOT";
 		cursoraim = "332_DC15S";
 		magazineWell[] = {};
+		fireLightDiffuse[]={0,0,1};
 		magazines[] = {
 
 			MACRO_NEW_MAG(DC_15P_Med,40)

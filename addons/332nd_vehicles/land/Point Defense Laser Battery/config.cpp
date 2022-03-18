@@ -64,6 +64,9 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(PDLB_Laser) : OPTRE_B_50mm
 	{
 		model = "ls_weapons_core\Effects\laser_red.p3d";
+
+		allowAgainstInfantry = 0;
+		aiAmmoUsageFlags = "256 + 512";
 	};
 };
 

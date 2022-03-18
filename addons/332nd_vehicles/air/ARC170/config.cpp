@@ -78,9 +78,56 @@ class CfgVehicles
 		  scopeCurator = 2;
 		  faction = "EdCat_332nd";
 		  editorSubcategory = "EdSubcat_332nd_PLANE";
-
+		  //"332nd_ARC170_WindNoiseExt_SoundSet"  "332nd_ARC170_WindNoiseInt_SoundSet" "332nd_ARC170_VelocityInt_SoundSet"
+		 
+		
 		  crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
-
+		//  soundengineonint[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\plane_cas_01\plane_cas_01_engine_start_int.ogg",
+		//	1,
+		//	1
+		//};
+		//soundengineonext[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\plane_cas_01\plane_cas_01_engine_start_ext.ogg",
+		//	1,
+		//	1,
+		//	300
+		//};
+		//soundengineoffint[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\plane_cas_01\plane_cas_01_engine_shut_int.ogg",
+		//	1,
+		//	1
+		//};
+		//soundengineoffext[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\plane_cas_01\plane_cas_01_engine_shut_ext.ogg",
+		//	1,
+		//	1,
+		//	300
+		//};
+		//soundSetSonicBoom[]=
+		//{
+		//	"jsrs_plane_fighter_sonicboom_soundset"
+		//};
+		class sounds
+		{
+			soundSets[]=
+			{
+				"332nd_ARC170_EngineLowExt_SoundSet",
+				"332nd_ARC170_EngineHighExt_SoundSet",
+				"332nd_ARC170_ForsageExt_SoundSet",
+				"332nd_ARC170_EngineExt_Dist_Front_SoundSet",
+				"332nd_ARC170_EngineExt_Middle_SoundSet",
+				"332nd_ARC170_EngineExt_Dist_Rear_SoundSet",
+				"332nd_ARC170_EngineLowInt_SoundSet",
+				"332nd_ARC170_EngineHighInt_SoundSet",
+				"332nd_ARC170_ForsageInt_SoundSet",
+				
+			};
+		};
 
 		  class Turrets : Turrets
 		  {

@@ -141,6 +141,8 @@ class CfgVehicles
 		class Components;
 		class ACE_selfActions;
 		class sounds;
+		class SoundsExt;
+		class SoundEvents;
 		class Reflectors : Reflectors
 		{
 			class Left;
@@ -266,57 +268,22 @@ class CfgVehicles
 		};
 	};
 
-	class ls_heli_laatle : ls_laatle_base
+	class Heli_Attack_01_base_F;
+
+	class 3AS_Patrol_LAAT_Base : Heli_Attack_01_base_F
+	{
+		class Turrets;
+	};
+
+	class 3AS_Patrol_LAAT_Republic : 3AS_Patrol_LAAT_Base
 	{
 		class Components;
+
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
-			{
-
-			};
-			class cargoTurret_pos7 : cargoTurret_pos7
-			{
-
-			};
-			class cargoTurret_pos8 : cargoTurret_pos8
-			{
-
-			};
-			class cargoTurret_pos9 : cargoTurret_pos9
-			{
-
-			};
-			class cargotTurret_pos10 : cargotTurret_pos10
-			{
-
-			};
-			class cargoTurret_pos11 : cargoTurret_pos11
-			{
-
-			};
-			class cargoTurret_pos12 : cargoTurret_pos12
-			{
-
-			};
-			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
-			{
-
-			};
-			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
-			{
-
-			};
-			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
-			{
-
-			};
-			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
-			{
-
-			};
+			class MainTurret;
+			class Copilot;
 		};
-
 
 	};
 
@@ -374,21 +341,413 @@ class CfgVehicles
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
 
-
-		class sounds : sounds
+		soundengineonint[]=
 		{
-			class EngineInt
+			"332nd_weapons\sounds\vehicles\LAAT\int_start.wss",
+			1,
+			1
+		};
+		soundengineonext[]=
+		{
+			"332nd_weapons\sounds\vehicles\LAAT\ext_start.wss",
+			1,
+			1,
+			300
+		};
+		soundengineoffint[]=
+		{
+			"\332nd_weapons\sounds\vehicles\LAAT\Int_Off.wss",
+			1,
+			1
+		};
+		soundengineoffext[]=
+		{
+			"\332nd_weapons\sounds\vehicles\LAAT\Ext_Off.wss",
+			1,
+			1,
+			300
+		};
+		//soundincommingmissile[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\opfor_lock_2.ogg",
+		//	0.75,
+		//	1
+		//};
+		//rotordamageint[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_rotor_int.ogg",
+		//	0.75,
+		//	1
+		//};
+		//rotordamageout[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_rotor_ext.ogg",
+		//	2,
+		//	1,
+		//	300
+		//};
+		//rotordamage[]=
+		//{
+		//	"rotordamageint",
+		//	"rotordamageout"
+		//};
+		//taildamageint[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_tail.ogg",
+		//	0.75,
+		//	1
+		//};
+		//taildamageout[]=
+		//{
+		//	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\heli_damage_tail.ogg",
+		//	2,
+		//	1,
+		//	300
+		//};
+		//taildamage[]=
+		//{
+		//	"taildamageint",
+		//	"taildamageout"
+		//};
+		
+		
+		class sounds
+		{
+			class engineext
 			{
-				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
-				sound[] = { "3as\3as_laat\sounds\LAAT_Impulse.ogg",0.794328,1 };
-				volume = "2 * (1-camPos)*(rotorSpeed factor[0.4,1])";
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					1.5,
+					1,
+					300
+				};
+				frequency="rotorspeed";
+				volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 			};
-
-			class EngineExt
+			class rotorext
 			{
-				frequency = "rotorSpeed*(1+rotorThrust/6)*0.8";
-				sound[] = { "lsd_sounds\vehicles\laat\engine\laat_engine.wss",1.25893,1,5000 };
-				volume = "camPos*((rotorSpeed-0.72)*4)";
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_close.wss",
+					1.6,
+					1,
+					300
+				};
+				frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+			};
+			class rotorswist
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					1,
+					1,
+					400
+				};
+				frequency=1;
+				volume="campos * (rotorthrust factor [0.7, 0.9])";
+			};
+			class engineint
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+					1,
+					1
+				};
+				frequency="rotorspeed";
+				volume="1*(1-campos)*(0 max (rotorspeed-0.4))";
+			};
+			class rotorint
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Int_rotor.wss",
+					1,
+					1
+				};
+				frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume="(1 - campos) * (rotorspeed factor [0.3, 0.7]) * (1 + rotorthrust) * 0.7";
+			};
+			class rotorbench
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.75,
+					1
+				};
+				frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume="(playerpos factor [3.9, 4]) * (1 - campos) * (rotorspeed factor [0.3, 1]) * (1 + rotorthrust) * 0.4";
+				cone[]={1.6,3.1400001,1.6,0.94999999};
+			};
+			class enginebench
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.75,
+					1
+				};
+				frequency="rotorspeed";
+				volume="(playerpos factor [3.9, 4]) * (1 - campos) * (0 max (rotorspeed-0.4))";
+			};
+			class rotornoiseext
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.5,
+					1,
+					200
+				};
+				frequency=1;
+				volume="(campos*(rotorspeed factor [0.6, 0.85]))";
+				cone[]={1.6,3.1400001,2,0.94999999};
+			};
+			class distance
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
+					1,
+					1,
+					1500
+				};
+				frequency="rotorspeed";
+				volume="2 * campos * (0 max (rotorspeed-0.4))";
+			};
+			class fardistance
+			{
+				sound[]=
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+					1.25,
+					1,
+					8000
+				};
+				frequency="rotorspeed";
+				volume="campos *3* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+			};
+			//class damagealarmint
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+			//		0.75,
+			//		1
+			//	};
+			//	frequency=1;
+			//	volume="engineon * (1 - campos) * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0.0, 0.001])";
+			//};
+			//class damagealarmext
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+			//		1,
+			//		1,
+			//		100
+			//	};
+			//	frequency=1;
+			//	volume="engineon * campos * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0, 0.001])";
+			//};
+			//class rotorlowalarmint
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+			//		0.75,
+			//		1
+			//	};
+			//	frequency=1;
+			//	volume="engineon * (1 - campos) * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			//};
+			//class rotorlowalarmext
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+			//		1,
+			//		1,
+			//		75
+			//	};
+			//	frequency=1;
+			//	volume="engineon * campos * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			//};
+			
+		};
+		class SoundsExt: SoundsExt
+		{
+			class Sounds: Sounds
+			{
+				class EngineExt
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Engine_Close.wss",
+						1.5,
+						1,
+						300
+					};
+					frequency="rotorspeed";
+					volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+				};
+				class rotorext
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						1.6,
+						1,
+						300
+					};
+					frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume="campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+				};
+				class rotorswist
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+						1,
+						1,
+						200
+					};
+					frequency=1;
+					volume="campos * (rotorthrust factor [0.7, 0.9])";
+				};
+				class engineint
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+						1,
+						1
+					};
+					frequency="rotorspeed";
+					volume="1*(1-campos)*(0 max (rotorspeed-0.4))";
+				};
+				class rotorint
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Int_Rotor.wss",
+						1,
+						1
+					};
+					frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume="(1 - campos) * (rotorspeed factor [0.3, 0.7]) * (1 + rotorthrust) * 0.7";
+				};
+				class rotorbench
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.75,
+						1
+					};
+					frequency="(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume="(playerpos factor [3.9, 4]) * (1 - campos) * (rotorspeed factor [0.3, 1]) * (1 + rotorthrust) * 0.4";
+					cone[]={1.6,3.1400001,1.6,0.94999999};
+				};
+				class enginebench
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.75,
+						1
+					};
+					frequency="rotorspeed";
+					volume="(playerpos factor [3.9, 4]) * (1 - campos) * (0 max (rotorspeed-0.4))";
+				};
+				
+				class rotornoiseext
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.5,
+						1,
+						200
+					};
+					frequency=1;
+					volume="(campos*(rotorspeed factor [0.6, 0.85]))";
+					cone[]={1.6,3.1400001,2,0.94999999};
+				};
+				class distance
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
+						1,
+						1,
+						2500
+					};
+					frequency="rotorspeed";
+					volume="2 * campos * (0 max (rotorspeed-0.4))";
+				};
+				class fardistance
+				{
+					sound[]=
+					{
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+						1.25,
+						1,
+						8000
+					};
+					frequency="rotorspeed";
+					volume="campos *3* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
+				};
+				//class damagealarmint
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+				//		0.75,
+				//		1
+				//	};
+				//	frequency=1;
+				//	volume="engineon * (1 - campos) * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0.0, 0.001])";
+				//};
+				//class damagealarmext
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+				//		1,
+				//		1,
+				//		100
+				//	};
+				//	frequency=1;
+				//	volume="engineon * campos * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0, 0.001])";
+				//};
+				//class rotorlowalarmint
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+				//		0.75,
+				//		1
+				//	};
+				//	frequency=1;
+				//	volume="engineon * (1 - campos) * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				//};
+				//class rotorlowalarmext
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+				//		1,
+				//		1,
+				//		75
+				//	};
+				//	frequency=1;
+				//	volume="engineon * campos * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				//};
 			};
 		};
 
@@ -2850,7 +3209,7 @@ class CfgVehicles
         };
     };
 	
-    class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): ls_heli_laatle
+    class MACRO_NEW_VEHICLE(air,LAATle,LAATle_332nd): 3AS_Patrol_LAAT_Republic
     {
         displayName = "LAAT/le Gunship";
         scope = 2;
@@ -2884,10 +3243,8 @@ class CfgVehicles
 		backRotorSpeed=1;
         crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
         typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
-		//class RotorLibHelicopterProperties
-		//{
-		//	RTDconfig="\ls_vehicles_heli\laatle\RTD_heli_laatle.xml";
-		//};
+
+
 		class RotorLibHelicopterProperties
 		{
 			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
@@ -2904,11 +3261,14 @@ class CfgVehicles
 			maxMainRotorStress=225000;
 			maxTailRotorStress=225000;
 		};
+
+
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
         ls_impulsor_boostSpeed_1=600;
         ls_impulsor_boostSpeed_2=900;
         ls_hasImpulse=1;
+
 		class Components: Components
 		{
 			class TransportPylonsComponent
@@ -2954,6 +3314,7 @@ class CfgVehicles
 				};
 			};
 		};
+
 		class Turrets: Turrets
 		{
 			class MainTurret: MainTurret
@@ -3166,47 +3527,8 @@ class CfgVehicles
 				elevationMode=0;
 				memoryPointGunnerOptics="gunnerview";
 			};
-			class cargoTurret_pos7 : cargoTurret_pos7
-			{
-
-			};
-			class cargoTurret_pos8 : cargoTurret_pos8
-			{
-
-			};
-			class cargoTurret_pos9 : cargoTurret_pos9
-			{
-
-			};
-			class cargotTurret_pos10 : cargotTurret_pos10
-			{
-
-			};
-			class cargoTurret_pos11 : cargoTurret_pos11
-			{
-
-			};
-			class cargoTurret_pos12 : cargoTurret_pos12
-			{
-
-			};
-			class cargoTurret_leftDoor_pos13 : cargoTurret_leftDoor_pos13
-			{
-
-			};
-			class cargoTurret_leftDoor_pos14 : cargoTurret_leftDoor_pos14
-			{
-
-			};
-			class cargoTurret_rightDoor_pos15 : cargoTurret_rightDoor_pos15
-			{
-
-			};
-			class cargoTurret_rightDoor_pos16 : cargoTurret_rightDoor_pos16
-			{
-
-			};
 		};
+
         class TransportItems
         {
 
@@ -3400,73 +3722,73 @@ class CfgVehicles
             };
         };
 
-        class TransportMagazines
-        {
-            class DC15A_low_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Low_x60";
-                count = 300;
-            };
+		class TransportMagazines
+		{
+			class DC15A_low_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
+				count = 300;
+			};
 
-            class DC15A_medium_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
-                count = 300;
-            };
+			class DC15A_medium_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
+				count = 300;
+			};
 
-            class DC15A_High_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_High_x10";
-                count = 50;
-            };
+			class DC15A_High_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_High_x10";
+				count = 50;
+			};
 
-            class 332_Stun_332nd
-            {
-                magazine = "332nd_aux_magazine_Stun_x10";
-                count = 100;
-            };
+			class 332_Stun_332nd
+			{
+				magazine = "332nd_aux_magazine_Stun_x10";
+				count = 100;
+			};
 
-            class DC15A_UGLAP_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
-                count = 50;
-            };
+			class DC15A_UGLAP_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
+				count = 50;
+			};
 
-            class DC15A_UGLHE_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
-                count = 50;
-            };
+			class DC15A_UGLHE_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
+				count = 50;
+			};
 
-            class DC15s_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15s_x60";
-                count = 300;
-            };
+			class DC15s_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15s_x60";
+				count = 300;
+			};
 
-            class DC15c_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
-                count = 300;
-            };
+			class DC15c_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
+				count = 300;
+			};
 
-            class DC15b_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15b_x60";
-                count = 200;
-            };
+			class DC15b_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15b_x60";
+				count = 200;
+			};
 
-            class DC17_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_17_x15";
-                count = 50;
-            };
+			class DC17_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17_x15";
+				count = 50;
+			};
 
-            class SA35_332nd
-            {
-                magazine = "332nd_aux_magazine_35sa_low_x30";
-                count = 50;
-            };
+			class SA35_332nd
+			{
+				magazine = "332nd_aux_magazine_35sa_low_x30";
+				count = 50;
+			};
 
 			class DC15L_332nd
 			{
@@ -3480,167 +3802,173 @@ class CfgVehicles
 				count = 100;
 			};
 
-            class DP_23_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12";
-                count = 100;
-            };
+			class DP_23_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12";
+				count = 100;
+			};
 
-            class DP_23Wide_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12Wide";
-                count = 100;
-            };
+			class DP_23Wide_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12Wide";
+				count = 100;
+			};
 
-            class DW_32_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_x5";
-                count = 50;
-            };
+			class DW_32_HIGH_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_x5";
+				count = 50;
+			};
 
-            class DW_32_HIGH_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_T_x5";
-                count = 50;
-            };
+			class DW_32_HIGH_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_T_x5";
+				count = 50;
+			};
 
-            class DW_32_CONCMED_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_x20";
-                count = 100;
-            };
+			class DW_32_CONCMED_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				count = 100;
+			};
 
-            class DW_32_CONCMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_T_x20";
-                count = 100;
-            };
+			class DW_32_CONCMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_x15";
-                count = 100;
-            };
+			class Valken_38x_REFMED_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_x15";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_T_x15";
-                count = 100;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class IQA11_high_T_332nd
-            {
-                magazine = "332nd_aux_magazine_Firepuncher_T_x8";
-                count = 100;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class IQA11_high_332nd
-            {
-                magazine = "332nd_aux_magazine_IQA_11_x8";
-                count = 100;
-            };
+			class Firepuncher_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
+				count = 100;
+			};
 
-            class Westar_m5_40rnd
-            {
-                magazine = "332nd_aux_magazine_Westar_M5_x40";
-                count = 300;
-            };
+			class Firepuncher_high_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_x8";
+				count = 100;
+			};
 
-            class Z6_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x200";
-                count = 200;
-            };
+			class Westar_m5_40rnd
+			{
+				magazine = "332nd_aux_magazine_Westar_M5_x40";
+				count = 300;
+			};
+
+			class Z6_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x200";
+				count = 200;
+			};
 
 			class Z6_Super_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
-                count = 250;
-            };
+			{
+				magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+				count = 250;
+			};
 
-            class Z6_ALT_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x125";
-                count = 200;
-            };
+			class Z6_ALT_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x125";
+				count = 200;
+			};
 
-            class Flash_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FLASH_x1";
-                count = 30;
-            };
+			class Flash_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FLASH_x1";
+				count = 30;
+			};
 
-            class ATCharge_332nd
-            {
-                magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
-                count = 30;
-            };
+			class ATCharge_332nd
+			{
+				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
+				count = 30;
+			};
 
-            class HEDPImpact_332nd
-            {
-                magazine = "332nd_aux_magazine_332_HEDP_x1";
-                count = 30;
-            };
+			class HEDPImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_HEDP_x1";
+				count = 30;
+			};
 
-            class SquadShield_332nd
-            {
-                magazine = "332nd_aux_magazine_332_SquadShield_x1";
-                count = 5;
-            };
+			class SquadShield_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SquadShield_x1";
+				count = 5;
+			};
 
-            class ThermalDet_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FRAG_x1";
-                count = 30;
-            };
+			class ThermalDet_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 30;
+			};
 
-            class PLXAA_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
-                count = 10;
-            };
+			class PLXAA_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
+				count = 10;
+			};
 
-            class PLXAT_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
-                count = 10;
-            };
+			class PLXAT_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
+				count = 10;
+			};
 
-            class PLXHE_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
-                count = 10;
-            };
+			class PLXHE_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
+				count = 10;
+			};
 
-            class RPS6AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-                count = 20;
-            };
+			class RPS6AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				count = 20;
+			};
 
-            class RPS6AA_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-                count = 20;
-            };
+			class RPS6AA_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
+				count = 20;
+			};
 
-            class RPS4AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_AT_x1";
-                count = 20;
-            };
+			class RPS4AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_AT_x1";
+				count = 20;
+			};
 
-            class RPS4HE_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_HE_x1";
-                count = 20;
-            };
+			class RPS4HE_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				count = 20;
+			};
 
-            class DC15xATR_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x3";
-                count = 20;
-            };
+			class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x2";
+				count = 20;
+			};
 
 			class Dm17HeartStarter_332nd
 			{
@@ -3665,7 +3993,7 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
 				count = 50;
 			};
-        };
+		};
 
 		class EventHandlers
         {
@@ -3877,233 +4205,251 @@ class CfgVehicles
 
         class TransportMagazines
         {
-            class DC15A_low_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Low_x60";
-                count = 300;
-            };
+			class DC15A_low_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
+				count = 300;
+			};
 
-            class DC15A_medium_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
-                count = 300;
-            };
+			class DC15A_medium_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
+				count = 300;
+			};
 
-            class DC15A_High_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_High_x10";
-                count = 50;
-            };
+			class DC15A_High_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_High_x10";
+				count = 50;
+			};
 
-            class 332_Stun_332nd
-            {
-                magazine = "332nd_aux_magazine_Stun_x10";
-                count = 100;
-            };
+			class 332_Stun_332nd
+			{
+				magazine = "332nd_aux_magazine_Stun_x10";
+				count = 100;
+			};
 
-            class DC15A_UGLAP_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
-                count = 50;
-            };
+			class DC15A_UGLAP_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
+				count = 50;
+			};
 
-            class DC15A_UGLHE_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
-                count = 50;
-            };
+			class DC15A_UGLHE_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
+				count = 50;
+			};
 
-            class DC15s_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15s_x60";
-                count = 300;
-            };
+			class DC15s_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15s_x60";
+				count = 300;
+			};
 
-            class DC15c_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
-                count = 300;
-            };
+			class DC15c_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
+				count = 300;
+			};
 
-            class DC15b_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15b_x60";
-                count = 200;
-            };
+			class DC15b_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15b_x60";
+				count = 200;
+			};
 
-            class DC17_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_17_x15";
-                count = 50;
-            };
+			class DC17_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17_x15";
+				count = 50;
+			};
 
-            class SA35_332nd
-            {
-                magazine = "332nd_aux_magazine_35sa_low_x30";
-                count = 50;
-            };
+			class SA35_332nd
+			{
+				magazine = "332nd_aux_magazine_35sa_low_x30";
+				count = 50;
+			};
 
-            class DC15L_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_x200";
-                count = 100;
-            };
+			class DC15L_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_x200";
+				count = 100;
+			};
 
-            class DC15L_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_T_x200";
-                count = 100;
-            };
+			class DC15L_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				count = 100;
+			};
 
-            class DP_23_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12";
-                count = 100;
-            };
+			class DP_23_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12";
+				count = 100;
+			};
 
-            class DP_23Wide_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12Wide";
-                count = 100;
-            };
+			class DP_23Wide_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12Wide";
+				count = 100;
+			};
 
-            class DW_32_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_x5";
-                count = 50;
-            };
+			class DW_32_HIGH_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_x5";
+				count = 50;
+			};
 
-            class DW_32_HIGH_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_T_x5";
-                count = 50;
-            };
+			class DW_32_HIGH_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_T_x5";
+				count = 50;
+			};
 
-            class DW_32_CONCMED_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_x20";
-                count = 100;
-            };
+			class DW_32_CONCMED_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				count = 100;
+			};
 
-            class DW_32_CONCMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_T_x20";
-                count = 100;
-            };
+			class DW_32_CONCMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_x15";
-                count = 100;
-            };
+			class Valken_38x_REFMED_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_x15";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_T_x15";
-                count = 100;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class Westar_m5_40rnd
-            {
-                magazine = "332nd_aux_magazine_Westar_M5_x40";
-                count = 300;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class Z6_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x200";
-                count = 200;
-            };
+			class Firepuncher_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
+				count = 100;
+			};
 
-            class Z6_ALT_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x125";
-                count = 200;
-            };
+			class Firepuncher_high_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_x8";
+				count = 100;
+			};
+
+			class Westar_m5_40rnd
+			{
+				magazine = "332nd_aux_magazine_Westar_M5_x40";
+				count = 300;
+			};
+
+			class Z6_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x200";
+				count = 200;
+			};
 
 			class Z6_Super_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
-                count = 250;
-            };
-			
-            class Flash_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FLASH_x1";
-                count = 30;
-            };
+			{
+				magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+				count = 250;
+			};
 
-            class ATCharge_332nd
-            {
-                magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
-                count = 30;
-            };
+			class Z6_ALT_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x125";
+				count = 200;
+			};
 
-            class HEDPImpact_332nd
-            {
-                magazine = "332nd_aux_magazine_332_HEDP_x1";
-                count = 30;
-            };
+			class Flash_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FLASH_x1";
+				count = 30;
+			};
 
-            class SquadShield_332nd
-            {
-                magazine = "332nd_aux_magazine_332_SquadShield_x1";
-                count = 5;
-            };
+			class ATCharge_332nd
+			{
+				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
+				count = 30;
+			};
 
-            class ThermalDet_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FRAG_x1";
-                count = 30;
-            };
+			class HEDPImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_HEDP_x1";
+				count = 30;
+			};
 
-            class PLXAA_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
-                count = 10;
-            };
+			class SquadShield_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SquadShield_x1";
+				count = 5;
+			};
 
-            class PLXAT_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
-                count = 10;
-            };
+			class ThermalDet_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 30;
+			};
 
-            class PLXHE_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
-                count = 10;
-            };
+			class PLXAA_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
+				count = 10;
+			};
 
-            class RPS6AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-                count = 20;
-            };
+			class PLXAT_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
+				count = 10;
+			};
 
-            class RPS6AA_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-                count = 20;
-            };
+			class PLXHE_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
+				count = 10;
+			};
 
-            class RPS4AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_AT_x1";
-                count = 20;
-            };
+			class RPS6AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				count = 20;
+			};
 
-            class RPS4HE_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_HE_x1";
-                count = 20;
-            };
+			class RPS6AA_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
+				count = 20;
+			};
 
-            class DC15xATR_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x3";
-                count = 20;
-            };
+			class RPS4AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_AT_x1";
+				count = 20;
+			};
+
+			class RPS4HE_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				count = 20;
+			};
+
+			class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x2";
+				count = 20;
+			};
 
 			class Dm17HeartStarter_332nd
 			{
@@ -4566,73 +4912,73 @@ class CfgVehicles
             };
         };
 
-        class TransportMagazines
-        {
-            class DC15A_low_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Low_x60";
-                count = 300;
-            };
+		class TransportMagazines
+		{
+			class DC15A_low_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
+				count = 300;
+			};
 
-            class DC15A_medium_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
-                count = 300;
-            };
+			class DC15A_medium_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
+				count = 300;
+			};
 
-            class DC15A_High_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_High_x10";
-                count = 50;
-            };
+			class DC15A_High_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_High_x10";
+				count = 50;
+			};
 
-            class 332_Stun_332nd
-            {
-                magazine = "332nd_aux_magazine_Stun_x10";
-                count = 100;
-            };
+			class 332_Stun_332nd
+			{
+				magazine = "332nd_aux_magazine_Stun_x10";
+				count = 100;
+			};
 
-            class DC15A_UGLAP_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
-                count = 50;
-            };
+			class DC15A_UGLAP_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
+				count = 50;
+			};
 
-            class DC15A_UGLHE_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
-                count = 50;
-            };
+			class DC15A_UGLHE_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
+				count = 50;
+			};
 
-            class DC15s_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15s_x60";
-                count = 300;
-            };
+			class DC15s_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15s_x60";
+				count = 300;
+			};
 
-            class DC15c_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
-                count = 300;
-            };
+			class DC15c_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
+				count = 300;
+			};
 
-            class DC15b_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15b_x60";
-                count = 200;
-            };
+			class DC15b_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15b_x60";
+				count = 200;
+			};
 
-            class DC17_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_17_x15";
-                count = 50;
-            };
+			class DC17_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17_x15";
+				count = 50;
+			};
 
-            class SA35_332nd
-            {
-                magazine = "332nd_aux_magazine_35sa_low_x30";
-                count = 50;
-            };
+			class SA35_332nd
+			{
+				magazine = "332nd_aux_magazine_35sa_low_x30";
+				count = 50;
+			};
 
 			class DC15L_332nd
 			{
@@ -4646,155 +4992,173 @@ class CfgVehicles
 				count = 100;
 			};
 
-            class DP_23_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12";
-                count = 100;
-            };
+			class DP_23_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12";
+				count = 100;
+			};
 
-            class DP_23Wide_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12Wide";
-                count = 100;
-            };
+			class DP_23Wide_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12Wide";
+				count = 100;
+			};
 
-            class DW_32_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_x5";
-                count = 50;
-            };
+			class DW_32_HIGH_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_x5";
+				count = 50;
+			};
 
-            class DW_32_HIGH_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_T_x5";
-                count = 50;
-            };
+			class DW_32_HIGH_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_T_x5";
+				count = 50;
+			};
 
-            class DW_32_CONCMED_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_x20";
-                count = 100;
-            };
+			class DW_32_CONCMED_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				count = 100;
+			};
 
-            class DW_32_CONCMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_T_x20";
-                count = 100;
-            };
+			class DW_32_CONCMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_x15";
-                count = 100;
-            };
+			class Valken_38x_REFMED_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_x15";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_T_x15";
-                count = 100;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class Westar_m5_40rnd
-            {
-                magazine = "332nd_aux_magazine_Westar_M5_x40";
-                count = 300;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class Z6_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x200";
-                count = 200;
-            };
+			class Firepuncher_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
+				count = 100;
+			};
+
+			class Firepuncher_high_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_x8";
+				count = 100;
+			};
+
+			class Westar_m5_40rnd
+			{
+				magazine = "332nd_aux_magazine_Westar_M5_x40";
+				count = 300;
+			};
+
+			class Z6_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x200";
+				count = 200;
+			};
 
 			class Z6_Super_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
-                count = 250;
-            };
+			{
+				magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+				count = 250;
+			};
 
-            class Z6_ALT_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x125";
-                count = 200;
-            };
+			class Z6_ALT_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x125";
+				count = 200;
+			};
 
-            class Flash_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FLASH_x1";
-                count = 30;
-            };
+			class Flash_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FLASH_x1";
+				count = 30;
+			};
 
-            class ATCharge_332nd
-            {
-                magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
-                count = 30;
-            };
+			class ATCharge_332nd
+			{
+				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
+				count = 30;
+			};
 
-            class HEDPImpact_332nd
-            {
-                magazine = "332nd_aux_magazine_332_HEDP_x1";
-                count = 30;
-            };
+			class HEDPImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_HEDP_x1";
+				count = 30;
+			};
 
-            class SquadShield_332nd
-            {
-                magazine = "332nd_aux_magazine_332_SquadShield_x1";
-                count = 5;
-            };
+			class SquadShield_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SquadShield_x1";
+				count = 5;
+			};
 
-            class ThermalDet_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FRAG_x1";
-                count = 30;
-            };
+			class ThermalDet_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 30;
+			};
 
-            class PLXAA_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
-                count = 10;
-            };
+			class PLXAA_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
+				count = 10;
+			};
 
-            class PLXAT_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
-                count = 10;
-            };
+			class PLXAT_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
+				count = 10;
+			};
 
-            class PLXHE_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
-                count = 10;
-            };
+			class PLXHE_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
+				count = 10;
+			};
 
-            class RPS6AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-                count = 20;
-            };
+			class RPS6AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				count = 20;
+			};
 
-            class RPS6AA_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-                count = 20;
-            };
+			class RPS6AA_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
+				count = 20;
+			};
 
-            class RPS4AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_AT_x1";
-                count = 20;
-            };
+			class RPS4AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_AT_x1";
+				count = 20;
+			};
 
-            class RPS4HE_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_HE_x1";
-                count = 20;
-            };
+			class RPS4HE_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				count = 20;
+			};
 
-            class DC15xATR_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x3";
-                count = 20;
-            };
+			class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x2";
+				count = 20;
+			};
 
 			class Dm17HeartStarter_332nd
 			{
@@ -4819,7 +5183,7 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
 				count = 50;
 			};
-        };
+		};
 
 		class Components: Components
 		{

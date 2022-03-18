@@ -163,7 +163,6 @@ class CfgWeapons
 		};
 		class far_optic1: medium
 		{
-			requiredOpticType=1;
 			showToPlayer=0;
 			burst=40;
 			aiRateOfFire= 0.055;
@@ -178,7 +177,6 @@ class CfgWeapons
 		class far_optic2: far_optic1
 		{
 			burst=40;
-			requiredOpticType=2;
 			minRange=400;
 			minRangeProbab=0.050000001;
 			midRange=750;

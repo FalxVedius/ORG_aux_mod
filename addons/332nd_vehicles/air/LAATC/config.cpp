@@ -141,7 +141,7 @@ class CfgVehicles
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
         ls_impulsor_boostSpeed_1=400;
-        ls_impulsor_boostSpeed_2=6000;
+        ls_impulsor_boostSpeed_2=600;
         ls_hasImpulse=1;
 		forceInGarage = 1;
 		armor = 500 * 0.5;

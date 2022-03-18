@@ -111,7 +111,7 @@ class CfgMagazines
 	class SWLW_clones_spec_demo_mag;
 	class MACRO_NEW_MAG(332_DemoCharge,1): SWLW_clones_spec_demo_mag
 	{
-		displayName="[332nd] Demolition Charge";
+		displayName="[332nd] Demo Charge";
 		mass=40;
 		ammo=MACRO_NEW_AMMO(Demo_charge)
     };
@@ -146,8 +146,8 @@ class CfgMagazines
 	class 3AS_SonicDet;
 	class MACRO_NEW_MAG(332_FLASH,1): 3AS_SonicDet
 	{
-		displayName="[332nd] 4-flash sonic detonator";
-		displayNameShort="4-bang sonic det";
+		displayName="[332nd] 4-flash Sonic Detonator";
+		displayNameShort="Sonic Det";
 		picture = "\332nd_weapons\equipment\data\3324Flashbang.paa";
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_FLASH)
@@ -156,7 +156,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(332_SMOKE_IMPACT_WHITE,1): 3AS_Smoke_Base
 	{
 		displayName="[332nd] Impact Smk White";
-		displayNameShort="Impact Smoke Grenade (white)";
+		displayNameShort="White Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332WhiteSmoke.paa";
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_Impact_white)
@@ -165,7 +165,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(332_SMOKE_IMPACT_BLUE,1): 3AS_SmokeBlue
 	{
 		displayName="[332nd] Impact Smk Blue";
-		displayNameShort="Impact Smoke Grenade (blue)";
+		displayNameShort="Blue Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332BlueSmoke.paa";
 		mass=4;
 		ammo= MACRO_NEW_AMMO(332_Impact_blue)
@@ -174,7 +174,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(332_SMOKE_IMPACT_GREEN,1): 3AS_SmokeGreen
 	{
 		displayName="[332nd] Impact Smk Green";
-		displayNameShort="Impact Smoke Grenade (green)";
+		displayNameShort="Green Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332GreenSmoke.paa";
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_Impact_green)
@@ -183,7 +183,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(332_SMOKE_IMPACT_RED,1): 3AS_SmokeRed
 	{
 		displayName="[332nd] Impact Smk Red";
-		displayNameShort="Impact Smoke Grenade (red)";
+		displayNameShort="Red Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332RedSmoke.paa";
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_Impact_red)
@@ -192,7 +192,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(332_SMOKE_IMPACT_PURPLE,1): 3AS_SmokePurple
 	{
 		displayName="[332nd] Impact Smk Purple";
-		displayNameShort="Impact Smoke Grenade (purple)";
+		displayNameShort="Purple Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332PurpleSmoke.paa";
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_Impact_purple)
@@ -201,7 +201,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(332_SMOKE_IMPACT_YELLOW,1): 3AS_SmokeYellow
 	{
 		displayName="[332nd] Impact Smk Yellow";
-		displayNameShort="Impact Smoke Grenade (Yellow)";
+		displayNameShort="Yellow Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332YellowSmoke.paa";
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_Impact_yellow)
@@ -210,7 +210,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(332_SMOKE_IMPACT_ORANGE,1): 3AS_SmokeOrange
 	{
 		displayName="[332nd] Impact Smk Orange";
-		displayNameShort="Impact Smoke Grenade (Orange)";
+		displayNameShort="Orange Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332OrangeSmoke.paa";
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_Impact_orange)

@@ -47,7 +47,7 @@ class cfgSoundShaders
 		samples[] = {{"332nd_weapons\DC\15a\Sounds\DC15aFar1.wss",1}};
 		volume = 1.0;
 		range = 4000;
-		rangeCurve[] = {{0,0},{50,0},{300,1},{4000,1}};
+		rangeCurve[] = {{0,0},{50,0},{300,1},{4000,0}};
 	};
 	//###################################### TAILS ######################################
 	class 332_DC15a_tailInterior_SoundShader
@@ -94,7 +94,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 		soundShaders[] = {"332_DC15a_Closure_SoundShader","332_DC15a_closeShot_SoundShader","332_DC15a_midShot_SoundShader","332_DC15a_distShot_SoundShader"};
 		volumeFactor = 1;
 		frequencyRandomizer = 1;
-		frequencyRandomizer = 0.35;
+		frequencyRandomizermin = 0.35;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";
@@ -131,7 +131,7 @@ class Cfgsound3dprocessors
         rangecurve="332_weapons_processorcurve";
     };
 
-    class j332_weapons_tails_3dprocessor
+    class 332_weapons_tails_3dprocessor
     {
         type="panner";
         innerrange=0;

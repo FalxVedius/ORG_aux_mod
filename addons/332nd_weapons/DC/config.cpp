@@ -34,7 +34,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(15a Medium,30)
 		displayNameShort="Med Power rnd";
 		descriptionShort="332nd Medium Power Round";
-		ammo="ls_ammo_762_blue";
+		ammo=MACRO_NEW_AMMO(762_blue);
 		tracersEvery=1;
 	};
 
@@ -46,7 +46,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(15a Low,60)
 		displayNameShort="Low Power 60rnd";
 		descriptionShort="332nd Low Power Round";
-		ammo="ls_ammo_556_blue";
+		ammo=MACRO_NEW_AMMO(65_Blue);
 	};
 
 	class MACRO_NEW_MAG(DC_15P_Med,40) : MACRO_NEW_MAG(DC_15a_Medium,30) //Low Mag for DC15A
@@ -57,7 +57,7 @@ class CfgMagazines
 		displayName = MACRO_AMMO_DISPLAYNAME(15p med,40)
 		displayNameShort = "Low Power 30rnd";
 		descriptionShort = "332nd Low Power Round";
-		ammo = "ls_ammo_762_blue";
+		ammo = MACRO_NEW_AMMO(762_blue);
 	};
 
 	class MACRO_NEW_MAG(DC_15a_High,10): MACRO_NEW_MAG(DC_15a_Medium,30)//High Mag for DC15A | Not on the 15A UGL
@@ -68,7 +68,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(15a High,15)
 		displayNameShort="High Power 15rnd";
 		descriptionShort="332nd High Power Round";
-		ammo="ls_ammo_127x108_green";
+		ammo=MACRO_NEW_AMMO(127x108_green);
 	};
 	
 	class MACRO_NEW_MAG(DC_15s,60): 30rnd_762x39_AK12_Mag_F //15S
@@ -83,7 +83,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(15s,60)
 		displayNameShort="Med Power 60rnd";
 		descriptionShort="332nd Medium Power Round";
-		ammo="ls_ammo_762_blue";
+		ammo=MACRO_NEW_AMMO(762_blue);
 		tracersEvery=1;
 	};
 
@@ -99,7 +99,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(15L,200)
 		displayNameShort="High Power 200rnd";
 		descriptionShort="332nd High Power Round";
-		ammo="ls_ammo_127x108_blue";
+		ammo=MACRO_NEW_AMMO(127x108_Blue);
 		tracersEvery=1;
 	};
 
@@ -126,7 +126,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(17 ,15)
 		displayNameShort="Med Power 15rnd";
 		descriptionShort="332nd Medium Power Round";
-		ammo="ls_ammo_762_blue";
+		ammo=MACRO_NEW_AMMO(762_blue);
 		tracersEvery=1;
 	};
 
@@ -160,7 +160,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(15C Medium,45)
 		displayNameShort="Med Power rnd";
 		descriptionShort="332nd Medium Power Round";
-		ammo="ls_ammo_762_blue";
+		ammo=MACRO_NEW_AMMO(762_blue);
 		tracersEvery=1;
 	};
 
@@ -298,21 +298,30 @@ class CfgAmmo
 		fuseDistance=15;
 		indirectHitRange=6;
 		//effectfly="332nd_aux_effects_RPS4_green";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class SWLW_ammo_40mm_at;
 	class MACRO_NEW_AMMO(40mm_AP): SWLW_ammo_40mm_at
 	{
 		 //effectfly="332nd_aux_effects_RPS4_blue";
 		 fuseDistance=15;
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class ls_ammo_338_blue;
 	class MACRO_NEW_AMMO(338_Blue_T): ls_ammo_338_blue
 	{
 	     hit = 20;
 		 effectfly="332nd_aux_effects_blue_bullet";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class ls_ammo_338_red;
 	class MACRO_NEW_AMMO(338_Red) : ls_ammo_338_red
@@ -323,9 +332,11 @@ class CfgAmmo
 		suppressionRadiusBulletClose = 10;
 		suppressionRadiusHit = 14;
 		explosionSoundEffect = "DefaultExplosion";
-		explosioneffects = "ExploAmmoExplosion";
 		model = "kobra\442_turrets\Droideka\Doublelaserred.p3d";
-		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500 };
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 
 		class CamShakeExplode
 		{
@@ -359,63 +370,125 @@ class CfgAmmo
 	class ls_ammo_127x108_blue;
 	class MACRO_NEW_AMMO(127x108_Blue_T): ls_ammo_127x108_blue
 	{
-		 effectfly="332nd_aux_effects_blue_bullet";
+	     effectfly="332nd_aux_effects_blue_bullet";
+		 soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	class MACRO_NEW_AMMO(127x108_Blue): ls_ammo_127x108_blue
+	{
+		 soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class ls_ammo_338_green;
 	class MACRO_NEW_AMMO(338_Green_T):  ls_ammo_338_green
 	{
 	    hit = 20;
 	    effectfly="332nd_aux_effects_green_bullet";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	}
 
 	class MACRO_NEW_AMMO(338_Green):  ls_ammo_338_green
 	{
 	    hit = 20;
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	}
 
 	class MACRO_NEW_AMMO(338_Blue): ls_ammo_338_blue
 	{
 	     hit = 20;
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class ls_ammo_127x108_green;
     class MACRO_NEW_AMMO(127x108_green_T): ls_ammo_127x108_green
 	{
 		 effectfly="332nd_aux_effects_green_bullet";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,2,500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	class MACRO_NEW_AMMO(127x108_green): ls_ammo_127x108_green
+	{
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class ls_ammo_65_red;
 	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
 	{
-		//soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
-		supersonicCrackFar[] = {"\332nd_weapons\sounds\WhizNear.wss",1,100};
-		supersonicCrackNear[] = {"\332nd_weapons\sounds\WhizNear.wss",1,500};
-		//soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
+		//soundsetbulletfly[]=
+		//{
+		//	"332nd_blaster_flyby_soundset"
+		//};
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+	class ls_ammo_65_blue;
+	class  MACRO_NEW_AMMO(65_Blue): ls_ammo_65_blue
+	{
+		
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class ls_ammo_762_red;
 	class  MACRO_NEW_AMMO(762_Red): ls_ammo_762_red
 	{
-		//soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,100};
-		supersonicCrackFar[] = {"\332nd_weapons\sounds\WhizNear.wss",1,100};
-		supersonicCrackNear[] = {"\332nd_weapons\sounds\WhizNear.wss",1,500};
-		//soundFly[] = {"\332nd_weapons\sounds\WhizNear.wss",1.5,0.3,300};
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
+	class ls_ammo_762_blue;
+	class  MACRO_NEW_AMMO(762_blue): ls_ammo_762_blue
+	{
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+
 
 	class ls_ammo_408_blue;
 	class  MACRO_NEW_AMMO(408_Blue): ls_ammo_408_blue
 	{
-		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200};
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class  MACRO_NEW_AMMO(408_Blue_T): ls_ammo_408_blue
 	{
 	    effectfly="332nd_aux_effects_blue_bullet";
-		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200};
+		soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 	};
 	class ls_ammo_762_blue;
 	class MACRO_NEW_AMMO(Medium_Westar): ls_ammo_762_blue
 	{
+	   soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
        audibleFire = 2;
        ACE_bulletMass = 3;
        visibleFireTime = 3;
@@ -426,7 +499,10 @@ class CfgAmmo
     class MACRO_NEW_AMMO(DC_15xATR): ls_ammo_127x108_green
 	{
 		effectfly="332nd_aux_effects_RPS4_green";
-        soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",1,0.9,1500};
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
 		caliber = 10;
 		hit = 450;
 		typicalSpeed=5000;

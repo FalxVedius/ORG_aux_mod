@@ -31,38 +31,83 @@ class CfgAmmo
 		irLock=0;
 		allowAgainstInfantry=1;
 		hit=750;
-		manualControl=1;
+		manualControl=0;
 		indirectHit=20;
 		indirectHitRange=8;
 		maxControlRange = 2500;
-		maxSpeed = 150;
+		maxSpeed = 700;
 		effectsMissile = "332nd_aux_effects_missile_blue";
 		manueuvrability = 26;
-		thrust = 100;
+		thrust = 700;
 		thrustTime = 15;
 		timeToLive = 20;
 		missileManualControlCone = 90;
 		fuseDistance = 2;
 		initTime = 0;
-		typicalSpeed = 100;
-		soundFly[]=
+		typicalSpeed = 700;
+		soundfly[]=
 		{
-			"swlw_rework\sounds\launcher\PLX_fly.wss",
-			6,
+			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			2,
 			1.5,
-			700
+			200
 		};
 	};
 	
 	class MACRO_NEW_AMMO(RPS6_ATRocket): MACRO_NEW_AMMO(RPS1_Rocket)
 	{
 		irLock=1;
+		manualControl=1;
+		typicalSpeed = 100;
+		thrust = 100;
+		flightProfiles[] = {Direct};
+		maxSpeed = 150;
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
+		};
+		soundengine[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss", //try OGG
+			2,
+			1,
+			750
+		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			2,
+			1.5,
+			200
+		};
+		//soundsetexplosion[]=
+		//{
+		//	"jsrs_rocket_explosion_soundset",
+		//	"jsrs_shell_explosion_stereo_soundset",
+		//	"jsrs_shell_explosion_reverb_soundset"
+		//};
 	};
 
 	class MACRO_NEW_AMMO(E60R_ATRocket) : MACRO_NEW_AMMO(RPS6_ATRocket)
 	{
+		hit = 40;
 		irLock = 0;
+		flightProfiles[] = {Direct};
 		manualControl = 0;
+		soundengine[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			2,
+			1,
+			750
+		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			1,
+			1.5,
+			200
+		};
 	};
 	
 	class MACRO_NEW_AMMO(RPS6_AARocket): M_Titan_AA
@@ -73,14 +118,26 @@ class CfgAmmo
 		missileLockMaxDistance = 3000;
 		manueuvrability = 25;
 		sideAirFriction = 0.02;
-		missileKeepLockedCone = 360;
-		soundFly[]=
+		soundsetsoniccrack[]=
 		{
-			"swlw_rework\sounds\launcher\PLX_fly.wss",
-			6,
-			1.5,
-			700
+			"332nd_genericrocket_flyby_soundset"
 		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			2,
+			1.5,
+			200
+		};
+		missileKeepLockedCone = 360;
+		soundengine[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			2,
+			1,
+			750
+		};
+
 	};
 
 	class MACRO_NEW_AMMO(E60R_AARocket) : MACRO_NEW_AMMO(RPS6_AARocket)
@@ -96,6 +153,7 @@ class CfgAmmo
 	  effectflare = "FlareShell";
 	  flaresize = 10;
 	  hit=850;
+
 	  caliber = 30;
 	  tracerscale = 6;
 	  tracerstarttime = 0;
@@ -103,7 +161,7 @@ class CfgAmmo
 	  tracerendtime = 10;
 	  tracerColor[] = {0.7,0.7,0.5,0.04};
 	  tracerColorR[] = {0.7,0.7,0.5,0.04};
-	  soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",3,1,250};
+	  
 	  class CamShakeFire
 	  {
 		  
@@ -155,6 +213,10 @@ class CfgAmmo
 		flightProfiles[] = {Direct, TopDown};
 		sideAirFriction = 0.02;
 		indirectHit=20;
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
+		};
 		manualControl=1;
 		missileManualControlCone = 90;
 		weaponLockSystem = "1 + 2 + 16";
@@ -169,12 +231,19 @@ class CfgAmmo
 		initTime = 0;
 		typicalSpeed = 100;
 		missileKeepLockedCone = 360;
-		soundFly[]=
+soundengine[]=
 		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			6,
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			2,
+			1,
+			750
+		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			2,
 			1.5,
-			700
+			200
 		};
 	};
 	
@@ -184,6 +253,17 @@ class CfgAmmo
 		manueuvrability=25;
 		manualControl=1;
 		indirectHit=500;
+		soundengine[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			1,
+			1,
+			750
+		};
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
+		};
 		indirectHitRange=30;
 		effectsMissile = "332nd_aux_effects_missile_plx_green";
 		explosionEffects = "BombExplosion";
@@ -194,14 +274,8 @@ class CfgAmmo
 		typicalSpeed = 40;
 		thrustTime = 20;
 		maxControlRange = 2500;
-		soundFly[]=
-		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			6,
-			0.9,
-			1000
-		};
 	};
+
 	class MACRO_NEW_AMMO(PLX1_AA): M_Titan_AA
 	{
 		cmImmunity=1.0;
@@ -209,14 +283,25 @@ class CfgAmmo
 		missileLockMaxDistance = 3000;
 		manueuvrability = 30;
 		sideAirFriction = 0.02;
-		missileKeepLockedCone = 360;
-		soundFly[]=
+		soundengine[]=
 		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			6,
-			1.5,
-			1000
+			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			1,
+			1,
+			750
 		};
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			1,
+			1.5,
+			200
+		};
+		soundsetsoniccrack[]=
+		{
+			"332nd_genericrocket_flyby_soundset"
+		};
+		missileKeepLockedCone = 360;
 		effectsMissile = "332nd_aux_effects_missile_plx_red";
 	};
 };

@@ -64,6 +64,7 @@ class CfgVehicles
 	};
 	class Plane_Fighter_03_base_F : Plane_Base_F
 	{
+	  class sounds;
 	};
 	class Plane_Fighter_03_dynamicLoadout_base_F : Plane_Fighter_03_base_F
 	{
@@ -174,160 +175,49 @@ class CfgVehicles
 			"120Rnd_CMFlare_Chaff_Magazine",
 			"120Rnd_CMFlare_Chaff_Magazine"
 		};
-
-		class Sounds
+		  soundengineonint[]=
 		{
-			class TurbineOut
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_start_int.wss",
+			1,
+			1
+		};
+		soundengineonext[]=
+		{
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_start_ext.wss",
+			1,
+			1,
+			300
+		};
+		soundengineoffint[]=
+		{
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_shut_ext.wss",
+			1,
+			1
+		};
+		soundengineoffext[]=
+		{
+			"332nd_weapons\sounds\vehicles\Z95\Z95_engine_shut_int.wss",
+			1,
+			1,
+			300
+		};
+		class sounds: sounds
+		{
+			soundSets[]=
 			{
-				sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineExt.wss",
-					1,
-					0.5,
-					1000
-				};
-				frequency = "rpm * (thrust/4 + 0.5)";
-				volume = "camPos * 2 * rpm * thrust * (rpm factor[0, 0.4])";
-			};
-			class TurbineHighInt
-			{
-				sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighInt.wss",
-					0.1,
-					1,
-					2500
-				};
-				frequency = "1.7 * (rpm factor[-5,1])";
-				volume = "0.8 * (1-camPos) * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
-			};
-			class TurbineHighOut
-			{
-				sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighExt.wss",
-					1,
-					1,
-					4000
-				};
-				frequency = "1.7 * (rpm factor[-5,1])";
-				volume = "0.8 * camPos * (rpm factor[-1,1]) * (rpm factor[0, 0.4])";
-			};
-			class TurbineInt
-			{
-				sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineInt.wss",
-					0.1,
-					1,
-					2100
-				};
-				frequency = "rpm * (thrust/4 + 0.5)";
-				volume = "(1-camPos) * 2 * rpm * thrust * (rpm factor[0, 0.4])";
-			};
-			
-			class EngineHighInt
-			{
-			sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95EngineHighInt.wss",
-					3,
-					1,
-					2100
-				};
-				frequency = 1;
-				volume = "(1-camPos)*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
-			};
-			class EngineHighOut
-			{
-			sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95EngineHighExt.wss",
-					4,
-					1,
-					4000
-				};
-				frequency = 1;
-				volume = "camPos*4*(rpm factor[0.5, 1.1])*(rpm factor[1.1, 0.5])";
-			};
-			class EngineLowInt
-			{
-			sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95EngineLowInt.wss",
-					1,
-					2,
-					1200
-				};
-				frequency = "1.0 min (rpm + 0.5)";
-				volume = "(1-camPos)*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
-			};
-			class EngineLowOut
-			{
-			sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95EngineLowExt.wss",
-					2,
-					1,
-					1000
-				};
-				frequency = "1.0 min (rpm + 0.5)";
-				volume = "camPos*2*(rpm factor[0.95, 0])*(rpm factor[0, 0.95])";
-			};
-			
-			class ForsageIn
-			{
-			sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95ForsageInt.wss",
-					0.5,
-					1,
-					2000
-				};
-				frequency = "1";
-				volume = "(1-camPos)*(engineOn*(thrust factor[0.6, 1.0]))";
-			};
-
-			class ForsageOut
-			{
-			cone[] = {20,15,5,3};
-			sound[]=
-				{
-					"332nd_vehicles\air\sounds\Z95\Z95ForsageExt.wss",
-					3.5,
-					0.95,
-				};
-				frequency = "1";
-				volume = "engineOn*camPos*(thrust factor[0.6, 1.0])";
-			};
-			
-		
-			
-			class RainExt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\rain1_ext",
-					1.77828,
-					1,
-					100
-				};
-				frequency=1;
-				volume="camPos * rain * (speed factor[50, 0])";
-			};
-			class RainInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\rain1_int",
-					1,
-					1,
-					100
-				};
-				frequency=1;
-				volume="(1-camPos) * rain * (speed factor[50, 0])";
+				"332nd_Z95_EngineLowExt_SoundSet",
+				"332nd_Z95_EngineHighExt_SoundSet",
+				"332nd_Z95_ForsageExt_SoundSet",
+				"332nd_Z95_EngineExt_Dist_Front_SoundSet",
+				"332nd_Z95_EngineExt_Middle_SoundSet",
+				"332nd_Z95_EngineExt_Dist_Rear_SoundSet",
+				"332nd_Z95_EngineLowInt_SoundSet",
+				"332nd_Z95_EngineHighInt_SoundSet",
+				"332nd_Z95_ForsageInt_SoundSet",
+				
 			};
 		};
+
 		class Components : Components
 		{
 			class TransportPylonsComponent

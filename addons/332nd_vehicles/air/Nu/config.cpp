@@ -124,8 +124,8 @@ class CfgVehicles
 		side=1;
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
-        ls_impulsor_boostSpeed_1=600;
-        ls_impulsor_boostSpeed_2=1000;
+        ls_impulsor_boostSpeed_1=400;
+        ls_impulsor_boostSpeed_2=600;
         ls_hasImpulse=1;
 		soundEngineOnInt[]=
 		{
@@ -11274,6 +11274,8 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
+					MACRO_NEW_MAG(Nu_20mm,2400),
+					MACRO_NEW_MAG(Nu_20mm,2400),
 					"Laser_Battery_F",
 					"Laser_Battery_F"
 				};
@@ -21139,392 +21141,472 @@ class CfgVehicles
 			   };
 			};
 		};
-	    class TransportItems
-        {
 
-            class BactaSprayx25_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray_x25";
-                count = 4;
-            };
 
-            class PlastiBandagex25_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage_x25";
-                count = 4;
-            };
+		class TransportItems
+		{
 
-            class MedPatchx25_332nd
-            {
-                name = "332nd_aux_medical_MedPatch_x25";
-                count = 4;
-            };
+			class BactaSprayx25_332nd
+			{
+				name = "332nd_aux_medical_BactaSpray_x25";
+				count = 4;
+			};
 
-            class BactaSprayx10_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray_x10";
-                count = 10;
-            };
+			class PlastiBandagex25_332nd
+			{
+				name = "332nd_aux_medical_PlastiBandage_x25";
+				count = 4;
+			};
 
-            class PlastiBandagex10_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage_x10";
-                count = 10;
-            };
+			class MedPatchx25_332nd
+			{
+				name = "332nd_aux_medical_MedPatch_x25";
+				count = 4;
+			};
 
-            class MedPatchx10_332nd
-            {
-                name = "332nd_aux_medical_MedPatch_x10";
-                count = 10;
-            };
+			class BactaSprayx10_332nd
+			{
+				name = "332nd_aux_medical_BactaSpray_x10";
+				count = 10;
+			};
 
-            class BactaSprayx5_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray_x5";
-                count = 10;
-            };
+			class PlastiBandagex10_332nd
+			{
+				name = "332nd_aux_medical_PlastiBandage_x10";
+				count = 10;
+			};
 
-            class PlastiBandagex5_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage_x5";
-                count = 10;
-            };
+			class MedPatchx10_332nd
+			{
+				name = "332nd_aux_medical_MedPatch_x10";
+				count = 10;
+			};
 
-            class MedPatchx5_332nd
-            {
-                name = "332nd_aux_medical_MedPatch_x5";
-                count = 10;
-            };
+			class BactaSprayx5_332nd
+			{
+				name = "332nd_aux_medical_BactaSpray_x5";
+				count = 10;
+			};
 
-            class MediKit_332nd
-            {
-                name = "332nd_aux_medical_MediKit";
-                count = 10;
-            };
+			class PlastiBandagex5_332nd
+			{
+				name = "332nd_aux_medical_PlastiBandage_x5";
+				count = 10;
+			};
 
-            class BactaSpray_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray";
-                count = 50;
-            };
+			class MedPatchx5_332nd
+			{
+				name = "332nd_aux_medical_MedPatch_x5";
+				count = 10;
+			};
 
-            class PlastiBandage_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage";
-                count = 50;
-            };
+			class MediKit_332nd
+			{
+				name = "332nd_aux_medical_MediKit";
+				count = 10;
+			};
 
-            class MedPatch_332nd
-            {
-                name = "332nd_aux_medical_MedPatch";
-                count = 50;
-            };
+			class BactaSpray_332nd
+			{
+				name = "332nd_aux_medical_BactaSpray";
+				count = 50;
+			};
 
-            class Painkillers_332nd
-            {
-                name = "332nd_aux_medical_PainKiller";
-                count = 40;
-            };
+			class PlastiBandage_332nd
+			{
+				name = "332nd_aux_medical_PlastiBandage";
+				count = 50;
+			};
 
-            class Adrenaline_332nd
-            {
-                name = "332nd_aux_medical_Adrenaline";
-                count = 40;
-            };
+			class MedPatch_332nd
+			{
+				name = "332nd_aux_medical_MedPatch";
+				count = 50;
+			};
 
-            class Blood_332nd
-            {
-                name = "332nd_aux_medical_Blood";
-                count = 75;
-            };
+			class Painkillers_332nd
+			{
+				name = "332nd_aux_medical_PainKiller";
+				count = 40;
+			};
 
-            class PressureCuff_332nd
-            {
-                name = "332nd_aux_medical_PressureCuff";
-                count = 30;
-            };
-        };
+			class Adrenaline_332nd
+			{
+				name = "332nd_aux_medical_Adrenaline";
+				count = 40;
+			};
 
-        class TransportWeapons
-        {
-            class DC15A_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15a";
-                count = 10;
-            };
+			class Blood_332nd
+			{
+				name = "332nd_aux_medical_Blood";
+				count = 75;
+			};
 
-            class DC15S_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15s";
-                count = 10;
-            };
+			class Bacta_332nd
+			{
+				name = "332nd_aux_medical_Bacta";
+				count = 25;
+			};
 
-            class DC15C_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15c";
-                count = 10;
-            };
+			class Kolto_332nd
+			{
+				name = "332nd_aux_medical_Kolto";
+				count = 25;
+			};
 
-            class DP23_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DP_23";
-                count = 10;
-            };
+			class BactaInj_332nd
+			{
+				name = "332nd_aux_medical_Bacta_Inj";
+				count = 25;
+			};
 
-            class DW32S_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DW_32S";
-                count = 10;
-            };
+			class KoltoInj_332nd
+			{
+				name = "332nd_aux_medical_Kolto_Inj";
+				count = 25;
+			};
 
-            class Valken38x_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_Valken38x";
-                count = 10;
-            };
+			class DefibStrips_332nd
+			{
+				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				count = 100;
+			};
 
-            class Z6_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_Z6";
-                count = 10;
-            };
+			class PressureCuff_332nd
+			{
+				name = "332nd_aux_medical_PressureCuff";
+				count = 30;
+			};
+		};
 
-            class DC15B_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15b";
-                count = 10;
-            };
+		class TransportWeapons
+		{
+			class DC15A_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15a";
+				count = 10;
+			};
 
-            class RPS1_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_RPS_1";
-                count = 5;
-            };
-        };
+			class DC15S_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15s";
+				count = 10;
+			};
 
-        class TransportMagazines
-        {
-            class DC15A_low_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Low_x60";
-                count = 300;
-            };
+			class DC15C_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15c";
+				count = 10;
+			};
 
-            class DC15A_medium_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
-                count = 300;
-            };
+			class DP23_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DP_23";
+				count = 10;
+			};
 
-            class DC15A_High_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15a_High_x10";
-                count = 50;
-            };
+			class DW32S_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DW_32S";
+				count = 10;
+			};
 
-            class 332_Stun_332nd
-            {
-                magazine = "332nd_aux_magazine_Stun_x10";
-                count = 100;
-            };
+			class Valken38x_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_Valken38x";
+				count = 10;
+			};
 
-            class DC15A_UGLAP_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
-                count = 50;
-            };
+			class Z6_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_Z6";
+				count = 10;
+			};
 
-            class DC15A_UGLHE_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
-                count = 50;
-            };
+			class DC15B_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_DC_15b";
+				count = 10;
+			};
 
-            class DC15s_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15s_x60";
-                count = 300;
-            };
+			class RPS1_Weps_332nd
+			{
+				weapon = "332nd_aux_weapon_RPS_1";
+				count = 5;
+			};
+		};
 
-            class DC15c_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
-                count = 300;
-            };
+		class TransportMagazines
+		{
+			class DC15A_low_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
+				count = 300;
+			};
 
-            class DC15b_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15b_x60";
-                count = 200;
-            };
+			class DC15A_medium_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
+				count = 300;
+			};
 
-            class DC17_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_17_x15";
-                count = 50;
-            };
+			class DC15A_High_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15a_High_x10";
+				count = 50;
+			};
 
-            class SA35_332nd
-            {
-                magazine = "332nd_aux_magazine_35sa_low_x30";
-                count = 50;
-            };
+			class 332_Stun_332nd
+			{
+				magazine = "332nd_aux_magazine_Stun_x10";
+				count = 100;
+			};
 
-            class DC15L_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_x125";
-                count = 100;
-            };
+			class DC15A_UGLAP_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
+				count = 50;
+			};
 
-            class DC15L_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15L_T_x125";
-                count = 100;
-            };
+			class DC15A_UGLHE_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
+				count = 50;
+			};
 
-            class DP_23_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12";
-                count = 100;
-            };
+			class DC15s_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15s_x60";
+				count = 300;
+			};
 
-            class DP_23Wide_332nd
-            {
-                magazine = "332nd_aux_magazine_DP23_x12Wide";
-                count = 100;
-            };
+			class DC15c_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
+				count = 300;
+			};
 
-            class DW_32_HIGH_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_x5";
-                count = 50;
-            };
+			class DC15b_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15b_x60";
+				count = 200;
+			};
 
-            class DW_32_HIGH_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_High_T_x5";
-                count = 50;
-            };
+			class DC17_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17_x15";
+				count = 50;
+			};
 
-            class DW_32_CONCMED_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_x20";
-                count = 100;
-            };
+			class SA35_332nd
+			{
+				magazine = "332nd_aux_magazine_35sa_low_x30";
+				count = 50;
+			};
 
-            class DW_32_CONCMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_DW32_Med_T_x20";
-                count = 100;
-            };
+			class DC15L_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_x200";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_x15";
-                count = 100;
-            };
+			class DC15L_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				count = 100;
+			};
 
-            class Valken_38x_REFMED_T_332nd
-            {
-                magazine = "332nd_aux_magazine_Valken38x_T_x15";
-                count = 100;
-            };
+			class DP_23_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12";
+				count = 100;
+			};
 
-            class Westar_m5_40rnd
-            {
-                magazine = "332nd_aux_magazine_Westar_M5_x40";
-                count = 300;
-            };
+			class DP_23Wide_332nd
+			{
+				magazine = "332nd_aux_magazine_DP23_x12Wide";
+				count = 100;
+			};
 
-            class Z6_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x200";
-                count = 200;
-            };
+			class DW_32_HIGH_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_x5";
+				count = 50;
+			};
 
-            class Z6_ALT_332nd
-            {
-                magazine = "332nd_aux_magazine_Z6_x125";
-                count = 200;
-            };
+			class DW_32_HIGH_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_High_T_x5";
+				count = 50;
+			};
 
-            class Flash_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FLASH_x1";
-                count = 30;
-            };
+			class DW_32_CONCMED_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				count = 100;
+			};
 
-            class ATCharge_332nd
-            {
-                magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
-                count = 30;
-            };
+			class DW_32_CONCMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
+				count = 100;
+			};
 
-            class HEDPImpact_332nd
-            {
-                magazine = "332nd_aux_magazine_332_HEDP_x1";
-                count = 30;
-            };
+			class Valken_38x_REFMED_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_x15";
+				count = 100;
+			};
 
-            class SquadShield_332nd
-            {
-                magazine = "332nd_aux_magazine_332_SquadShield_x1";
-                count = 5;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class ThermalDet_332nd
-            {
-                magazine = "332nd_aux_magazine_332_FRAG_x1";
-                count = 30;
-            };
+			class Valken_38x_REFMED_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				count = 100;
+			};
 
-            class PLXAA_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
-                count = 10;
-            };
+			class Firepuncher_high_T_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
+				count = 100;
+			};
 
-            class PLXAT_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
-                count = 10;
-            };
+			class Firepuncher_high_332nd
+			{
+				magazine = "332nd_aux_magazine_Firepuncher_x8";
+				count = 100;
+			};
 
-            class PLXHE_332nd
-            {
-                magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
-                count = 10;
-            };
+			class Westar_m5_40rnd
+			{
+				magazine = "332nd_aux_magazine_Westar_M5_x40";
+				count = 300;
+			};
 
-            class RPS6AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-                count = 20;
-            };
+			class Z6_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x200";
+				count = 200;
+			};
 
-            class RPS6AA_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-                count = 20;
-            };
+			class Z6_Super_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+				count = 250;
+			};
 
-            class RPS4AT_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_AT_x1";
-                count = 20;
-            };
+			class Z6_ALT_332nd
+			{
+				magazine = "332nd_aux_magazine_Z6_x125";
+				count = 200;
+			};
 
-            class RPS4HE_332nd
-            {
-                magazine = "332nd_aux_magazine_RPS4_HE_x1";
-                count = 20;
-            };
+			class Flash_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FLASH_x1";
+				count = 30;
+			};
 
-            class DC15xATR_332nd
-            {
-                magazine = "332nd_aux_magazine_DC_15x_x3";
-                count = 20;
-            };
-        };
+			class ATCharge_332nd
+			{
+				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
+				count = 30;
+			};
+
+			class HEDPImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_HEDP_x1";
+				count = 30;
+			};
+
+			class SquadShield_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SquadShield_x1";
+				count = 5;
+			};
+
+			class ThermalDet_332nd
+			{
+				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				count = 30;
+			};
+
+			class PLXAA_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
+				count = 10;
+			};
+
+			class PLXAT_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
+				count = 10;
+			};
+
+			class PLXHE_332nd
+			{
+				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
+				count = 10;
+			};
+
+			class RPS6AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				count = 20;
+			};
+
+			class RPS6AA_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
+				count = 20;
+			};
+
+			class RPS4AT_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_AT_x1";
+				count = 20;
+			};
+
+			class RPS4HE_332nd
+			{
+				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				count = 20;
+			};
+
+			class DC15xATR_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15x_x2";
+				count = 20;
+			};
+
+			class Dm17HeartStarter_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				count = 50;
+			};
+
+			class Dm17Bacta_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				count = 25;
+			};
+
+			class Dm17Kolto_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				count = 25;
+			};
+
+			class Dm17CombatStim_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				count = 50;
+			};
+		};
     };
 };

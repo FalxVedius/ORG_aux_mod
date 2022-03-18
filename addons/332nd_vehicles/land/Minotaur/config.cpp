@@ -72,57 +72,6 @@ class CfgVehicles
 
 		armor = 400;
 		armorStructural = 6;
-
-		class CommanderOptics : NewTurret
-		{
-			canEject = 1;
-			commanding = 2;
-			dontCreateAI = 0;
-			forceHideGunner = 0;
-			gunnerFireAlsoInInternalCamera = 1;
-			gunnerForceOptics = 1;
-
-			class ViewGunner
-			{
-				initAngleX = 5;
-				initAngleY = 0;
-				initFov = 0.75;
-				maxAngleX = 85;
-				maxAngleY = 150;
-				maxFov = 1.25;
-				maxMoveX = 0;
-				maxMoveY = 0;
-				maxMoveZ = 0;
-				minAngleX = -75;
-				minAngleY = -150;
-				minFov = 0.25;
-				minMoveX = 0;
-				minMoveY = 0;
-				minMoveZ = 0;
-				speedZoomMaxFOV = 0;
-				speedZoomMaxSpeed = 1e+010;
-			};
-			class ViewOptics
-			{
-				initAngleX = 0;
-				initAngleY = 0;
-				initFov = 0.3;
-				maxAngleX = 30;
-				maxAngleY = 100;
-				maxFov = 0.35;
-				maxMoveX = 0;
-				maxMoveY = 0;
-				maxMoveZ = 0;
-				minAngleX = -30;
-				minAngleY = -100;
-				minFov = 0.07;
-				minMoveX = 0;
-				minMoveY = 0;
-				minMoveZ = 0;
-				speedZoomMaxFOV = 0;
-				speedZoomMaxSpeed = 1e+010;
-			};
-		};
 		
 		class Turrets : Turrets
 		{

@@ -58,8 +58,14 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 	};
 
+	class Launcher_Base_F;
+	class launch_RPG32_F : Launcher_Base_F
+	{
+		class WeaponSlotsInfo;
+	};
 
-	class MACRO_NEW_WEAPON(E60R_AT): JLTS_E60R_AT
+
+	class MACRO_NEW_WEAPON(E60R_AT): launch_RPG32_F
 	{
 		scope=2;
 		displayName="CIS E60R AT";
@@ -73,7 +79,24 @@ class CfgWeapons
 		ace_overpressure_range = 2;
 		ace_reloadlaunchers_enabled = 1;
 
+		modes[] = 
+		{
+			"Single"
+		};
+
 		canLock = 0;
+		airLock = 0;
+
+		weaponInfoType = "RscOptics_titan";
+		modelOptics[] = { "\A3\Weapons_F_Beta\acc\reticle_titan.p3d" };
+		model = "\MRC\JLTS\weapons\E60R\E60R.p3d";
+
+		handAnim[] = { "OFP2_ManSkeleton","\MRC\JLTS\weapons\E60R\anims\E60R_handanim.rtm" };
+		hiddenSelections[] = { "camo1","illum" };
+		hiddenSelectionsMaterials[] = { "","\a3\characters_f_bootcamp\common\data\vrarmoremmisive.rvmat" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\weapons\E60R\data\E60R_co.paa" };
+
+		picture = "\MRC\JLTS\weapons\E60R\data\ui\E60R_ui_ca.paa";
 
 		magazineWell[] = {};
 		magazines[] = {
@@ -81,6 +104,77 @@ class CfgWeapons
 			MACRO_NEW_MAG(E60R_ATMag,1)
 		};
 
+		class OpticsModes
+		{
+			class sight
+			{
+				opticsID = 1;
+				useModelOptics = 1;
+				opticsPPEffects[] =
+				{
+					"OpticsCHAbera2",
+					"OpticsBlur3"
+				};
+				opticsZoomMin = 0.0300;
+				opticsZoomMax = 0.125;
+				opticsZoomInit = 0.125;
+				memoryPointCamera = "optic_view";
+				opticsFlare = 1;
+				opticsDisablePeripherialVision = 1;
+				visionMode[] =
+				{
+					"Normal",
+					"NVG",
+					"Ti"
+				};
+				thermalMode[] = { 0, 1 };
+				discreteInitIndex = 0;
+				discreteDistanceInitIndex = 0;
+				discretefov[] = { 0.125,0.0625,0.0310 };
+				distanceZoomMin = 100;
+				distanceZoomMax = 500;
+				cameraDir = "";
+			};
+		};
+
+		class Single : Mode_SemiAuto
+		{
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "";
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {};
+			};
+			class StandardSound : BaseSoundModeType
+			{
+				begin1[] =
+				{
+					"swlw_rework\sounds\launcher\PLX_shot.wss",
+					10,
+					1,
+					500
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1
+				};
+			};
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			aiRateOfFire = 5;
+			aiRateOfFireDistance = 500;
+			aiRateOfFireDispersion = 2;
+			minRange = 10;
+			minRangeProbab = 0.30000001;
+			midRange = 40;
+			midRangeProbab = 0.85000002;
+			maxRange = 600;
+			maxRangeProbab = 0.85000002;
+		};
 	};
 
 	class MACRO_NEW_WEAPON(E60R_AA) : JLTS_E60R_AT
@@ -97,11 +191,107 @@ class CfgWeapons
 		ace_overpressure_range = 10;
 		ace_reloadlaunchers_enabled = 1;
 
+		modes[] =
+		{
+			"Single"
+		};
+
+		canLock = 2;
+		airLock = 2;
+
+		cmImmunity = 0.01;
+
+
+		weaponInfoType = "RscOptics_titan";
+		modelOptics[] = { "\A3\Weapons_F_Beta\acc\reticle_titan.p3d" };
+		model = "\MRC\JLTS\weapons\E60R\E60R.p3d";
+
+		cartridgePos = "nabojnicestart";
+		cartridgeVel = "nabojniceend";
+
+		handAnim[] = { "OFP2_ManSkeleton","\MRC\JLTS\weapons\E60R\anims\E60R_handanim.rtm" };
+		hiddenSelections[] = { "camo1","illum" };
+		hiddenSelectionsMaterials[] = { "","\a3\characters_f_bootcamp\common\data\vrarmoremmisive.rvmat" };
+		hiddenSelectionsTextures[] = { "\MRC\JLTS\weapons\E60R\data\E60R_co.paa" };
+
+		picture = "\MRC\JLTS\weapons\E60R\data\ui\E60R_ui_ca.paa";
+
 		magazineWell[] = {};
 		magazines[] = {
 
 			MACRO_NEW_MAG(E60R_AAMag,1)
 		};
 
+		class OpticsModes
+		{
+			class sight
+			{
+				opticsID = 1;
+				useModelOptics = 1;
+				opticsPPEffects[] =
+				{
+					"OpticsCHAbera2",
+					"OpticsBlur3"
+				};
+				opticsZoomMin = 0.0300;
+				opticsZoomMax = 0.125;
+				opticsZoomInit = 0.125;
+				memoryPointCamera = "optic_view";
+				opticsFlare = 1;
+				opticsDisablePeripherialVision = 1;
+				visionMode[] =
+				{
+					"Normal",
+					"NVG",
+					"Ti"
+				};
+				thermalMode[] = { 0, 1 };
+				discreteInitIndex = 0;
+				discreteDistanceInitIndex = 0;
+				discretefov[] = { 0.125,0.0625,0.0310 };
+				distanceZoomMin = 100;
+				distanceZoomMax = 500;
+				cameraDir = "";
+			};
+		};
+
+		class Single : Mode_SemiAuto
+		{
+			class BaseSoundModeType
+			{
+				weaponSoundEffect = "";
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {};
+			};
+			class StandardSound : BaseSoundModeType
+			{
+				begin1[] =
+				{
+					"swlw_rework\sounds\launcher\PLX_shot.wss",
+					10,
+					1,
+					500
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1
+				};
+			};
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			aiRateOfFire = 5;
+			aiRateOfFireDistance = 500;
+			aiRateOfFireDispersion = 2;
+			minRange = 10;
+			minRangeProbab = 0.30000001;
+			midRange = 40;
+			midRangeProbab = 0.85000002;
+			maxRange = 600;
+			maxRangeProbab = 0.85000002;
+		};
 	};
 };

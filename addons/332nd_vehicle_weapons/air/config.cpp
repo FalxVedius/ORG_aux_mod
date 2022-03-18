@@ -216,12 +216,12 @@ class CfgAmmo
 	  flaresize=10;
 	  proxyShape = "";
 	  thrustTime = 5;
-	  soundFly[]=
+	  soundfly[]=
 		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			3,
-			10,
-			2000
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			1,
+			1.5,
+			200
 		};
 	  manualcontrol=0;
 	  effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
