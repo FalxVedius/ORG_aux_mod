@@ -581,9 +581,6 @@ class CfgVehicles
 		};
 		class SoundsExt: SoundsExt
 		{
-			class SoundEvents: SoundEvents
-			{
-			};
 			class Sounds: Sounds
 			{
 				class EngineExt

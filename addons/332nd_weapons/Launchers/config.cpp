@@ -90,6 +90,7 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(E60R_ATRocket) : MACRO_NEW_AMMO(RPS6_ATRocket)
 	{
+		hit = 40;
 		irLock = 0;
 		flightProfiles[] = {Direct};
 		manualControl = 0;

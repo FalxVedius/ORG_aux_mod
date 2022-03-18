@@ -6105,13 +6105,16 @@ class CfgVehicles
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
 
-		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
-		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
+		backpack = MACRO_NEW_BACKPACK(opfor,332nd_b1_at_bp);
+
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AT),"Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AT),"Throw","Put" };
 
 		magazines[] =
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_E60R_ATMag_x1",
 			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -6120,6 +6123,287 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_E60R_ATMag_x1",
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 1;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 1;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 8;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 6;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 6;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 8;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 6;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 6;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 6;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 1000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 6;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 6;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		canBleed = 0;
+		class SoundEnvironExt {
+			generic[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundEquipment {
+			soldier[] = {
+			 {"run", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 30}},
+			 {"run", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 30}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"walk", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 45}},
+			 {"sprint", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 45}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt1.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt2.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt3.wav", 2, 1, 15}},
+			 {"Tactical", {"\WebKnightsRobotics\sounds\dirt4.wav", 2, 1, 15}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+		};
+		class SoundInjured
+		{
+			breath[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundBurning
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+		};
+		class SoundRecovered
+		{
+			breath[] = {};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(cisb1aa,base) : JLTS_Droid_B1_AT
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] B1 Anti-Tank Battle Droid Base";
+
+		faction = "EdCat_332ndCIS";
+		editorSubcategory = "EdSubcat_332nd_B1";
+		uniformClass = MACRO_NEW_UNIFORM(cisb1, base);
+
+		identityTypes[] = { "lsd_voice_b1Droid" };
+
+		backpack = MACRO_NEW_BACKPACK(opfor,332nd_b1_aa_bp);
+
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AA),"Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AA),"Throw","Put" };
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_E60R_AAMag_x1",
+			"332nd_aux_magazine_332_FRAG_x1",
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			"332nd_aux_magazine_E60R_AAMag_x1",
 			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
