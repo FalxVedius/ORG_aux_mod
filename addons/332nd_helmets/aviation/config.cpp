@@ -20,16 +20,10 @@ class CfgPatches
 			MACRO_NEW_HELMET(aviation,FlightOfficer),
 			MACRO_NEW_HELMET(aviation,FlightTechi),
 			MACRO_NEW_HELMET(aviation,SeniorEnsign),
-			//MACRO_NEW_HELMET(aviation,Raven),
 			MACRO_NEW_HELMET(aviation,Loyal),
 			MACRO_NEW_HELMET(aviation,Cutter),
 			MACRO_NEW_HELMET(aviation,Bugs),
-
-			MACRO_NEW_HELMET(warden,FlightEngi),
-			MACRO_NEW_HELMET(warden,FlightExpert),
-			MACRO_NEW_HELMET(warden,FlightTechiEngi),
-			MACRO_NEW_HELMET(warden,FlightOfficerEngi),
-			MACRO_NEW_HELMET(warden,Hammer),
+			MACRO_NEW_HELMET(aviation,Recruit),
         };
 		weapons[] = {};
 	};
@@ -40,7 +34,6 @@ class CfgWeapons
     // ---- Helmets ----
 
     class MACRO_NEW_HELMET(aviation,base);
-	class MACRO_NEW_HELMET(warden,base);
 
 	//pilots
     MACRO_NEW_AVIATION_HELMET_ITEM(332nd_pilot,Ensign,Pilot.paa)
@@ -51,15 +44,9 @@ class CfgWeapons
 	MACRO_NEW_AVIATION_HELMET_ITEM(FlightOfficer,Officer,FlightOfficer.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(FlightTechi,Technician,FlightTechi.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(SeniorEnsign,Senior Ensign,SeniorEnsign.paa)
-	//MACRO_NEW_AVIATION_HELMET_ITEM(Raven,Raven,Raven.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Loyal,Loyal,Loyal.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Bugs,Bugs,Bugs.paa)
+	MACRO_NEW_AVIATION_HELMET_ITEM(Recruit,Recruit,Recruit.paa)
 	
-	//warden
-	MACRO_NEW_WARDEN_HELMET_ITEM(FlightEngi,Engineer,Engineer_ca.paa)
-	MACRO_NEW_WARDEN_HELMET_ITEM(FlightExpert,Expert,Expert_ca.paa)
-	MACRO_NEW_WARDEN_HELMET_ITEM(FlightTechiEngi,Technician,Techi_ca.paa)
-	MACRO_NEW_WARDEN_HELMET_ITEM(FlightOfficerEngi,Officer,Officer_ca.paa)
-	MACRO_NEW_WARDEN_HELMET_ITEM(Hammer,Hammer,Hammer_ca.paa)
 }

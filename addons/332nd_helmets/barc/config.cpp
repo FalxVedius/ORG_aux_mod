@@ -13,7 +13,11 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
             // helmets
-            MACRO_NEW_HELMET(barc,332nd_barc),
+            MACRO_NEW_HELMET(barc,Trooper),
+			MACRO_NEW_HELMET(barc,Veteran),
+			MACRO_NEW_HELMET(barc,Specialist),
+			MACRO_NEW_HELMET(barc,Corporal),
+			MACRO_NEW_HELMET(barc,Sergeant),
         };
 		weapons[] = {};
 	};
@@ -25,5 +29,10 @@ class CfgWeapons
 
     class MACRO_NEW_HELMET(barc,base);
 	
-    MACRO_NEW_BARC_HELMET_ITEM(332nd_barc,barc,BARCTrooper_co.paa)
+    MACRO_NEW_BARC_HELMET_ITEM(Trooper,Trooper,Trooper.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Veteran,Veteran,Veteran.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Specialist,Specialist,Specialist.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Corporal,Corporal,Corporal.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Sergeant,Sergeant,Sergeant.paa)
+
 }
