@@ -78,7 +78,7 @@
 //	{
 //		author = "Falx";
 //		scope = 2;
-//		displayName = "MPS-5 60mm Mortar";
+//		displayName = "[332nd] MPS-5 60mm Mortar";
 //		displayNameShort = "MPS-5";
 //		model = "\z\potato\addons\vz99\data\vz99_carry";
 //		picture = "\z\potato\addons\vz99\ui\weaponSide_ca.paa";
