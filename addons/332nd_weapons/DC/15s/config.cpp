@@ -12,7 +12,8 @@ class CfgPatches
 		    "A3_Weapons_F",
 			"JLTS_weapons_shield",
 			"JLTS_weapons_DC15S",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -240,5 +241,25 @@ class cfgWeapons
 		};
 		reloadAction="GestureReload";
 		inertia=0.80000001;
+	};
+};
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(DC_15s,60): 30rnd_762x39_AK12_Mag_F //15S
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=60;
+		mass=15;
+		initspeed=1400;
+		displayName=MACRO_AMMO_DISPLAYNAME(15s,60)
+		displayNameShort="Med Power 60rnd";
+		descriptionShort="332nd Medium Power Round";
+		ammo=MACRO_NEW_AMMO(762_blue);
+		tracersEvery=1;
 	};
 };

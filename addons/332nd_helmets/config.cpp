@@ -238,27 +238,14 @@ class CfgWeapons
 		};
 	}
 
-	class 3as_Engineer_Helmet;
-
-	class CloneHelmetWarden_Base : 3as_Engineer_Helmet
+	//Base Engineer helmet
+	class MACRO_NEW_HELMET(engineer,base): CloneHelmetP2_Base
 	{
 		scopeArsenal = 0;
-		class ItemInfo;
-	};
-
-	//Base Warden helmet
-	class MACRO_NEW_HELMET(warden,base): CloneHelmetWarden_Base
-	{
-		scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[332nd] Warden Helmet ('base')";
-		picture = "\3AS\3AS_Characters\Clones\Headgear\ui\engineer_ui_ca.paa";
-		uiPicture = "\3AS\3AS_Characters\Clones\Headgear\ui\engineer_ui_ca.paa";
-        subItems[] = {"Integrated_NVG_TI_1_F"};
-
-		ace_hearing_lowerVolume = 0.60000002;
-		ace_hearing_protection = 0.85000002;
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[332nd] Engineer Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
 		{

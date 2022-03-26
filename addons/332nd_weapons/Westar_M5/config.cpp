@@ -10,7 +10,8 @@ class CfgPatches
 			"A3_Data_F",
 		    "A3_Weapons_F",
 			"3AS_Weapons_WestarM5",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion=0.1;
 		units[]={};
@@ -436,5 +437,42 @@ class CfgWeapons
 				};
 			};
 		};
+	};
+};
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(Westar_M5,40): 30rnd_762x39_AK12_Mag_F
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=35;
+		mass=10;
+		initspeed=800;
+		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Suppressed Medium,35)
+		displayNameShort="Westar suppressed medium magazine";
+		descriptionShort="Westar suppressed medium magazine";
+		ammo=MACRO_NEW_AMMO(Medium_Westar);
+		tracersEvery=1;
+	}; 
+};
+
+class CfgAmmo
+{
+	class ls_ammo_762_blue;
+	class MACRO_NEW_AMMO(Medium_Westar): ls_ammo_762_blue
+	{
+	   soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+       audibleFire = 2;
+       ACE_bulletMass = 3;
+       visibleFireTime = 3;
+	   visibleFire = 1;
+	   cartridge = "";
 	};
 };

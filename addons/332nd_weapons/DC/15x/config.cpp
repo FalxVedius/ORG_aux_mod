@@ -12,7 +12,8 @@ class CfgPatches
 			"A3_Data_F",
 		    "A3_Weapons_F",
 			"JLTS_weapons_DC15X",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -139,10 +140,84 @@ class cfgWeapons
             };
         };
 
-      
 		class EventHandlers
 		{
 			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_DC15X_Sound;";
+		};
+	};
+};
+
+class CfgMagazines
+{
+	class JLTS_DC15X_mag;
+	class MACRO_NEW_MAG(DC_15x,2): JLTS_DC15X_mag
+	{
+		modelSpecial="";
+		modelSpecialIsProxy=0;
+		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count=2;
+		mass=50;
+		initspeed=5000;
+		displayName=MACRO_AMMO_DISPLAYNAME(15x Anti-Tank Magazine,2)
+		displayNameShort="2 rnd 15x AT Magazine";
+		descriptionShort="2 rnd 15x AT Magazine";
+		ammo=MACRO_NEW_AMMO(DC_15xATR);
+		tracersEvery=1;
+	};
+};
+
+class CfgAmmo
+{
+	class ls_ammo_127x108_green;
+    class MACRO_NEW_AMMO(127x108_green_T): ls_ammo_127x108_green
+	{
+		 effectfly="332nd_aux_effects_green_bullet";
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+
+	class MACRO_NEW_AMMO(127x108_green): ls_ammo_127x108_green
+	{
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+	};
+
+	class MACRO_NEW_AMMO(DC_15xATR): ls_ammo_127x108_green
+	{
+		effectfly="332nd_aux_effects_RPS4_green";
+        soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+		caliber = 10;
+		hit = 450;
+		typicalSpeed=5000;
+		explosionEffects = "ImpactPlasmaExpGreen";
+		tracerscale = 3;
+		airFriction = -0.000005;
+			class CamShakeFire
+		{
+			power = 15;
+			duration = 0.5;
+			frequency = 20;
+			distance = 10;
+		};
+		class CamShakePlayerFire
+		{
+			power = 0.06;
+			duration = 0.1;
+			frequency = 20;
+		};
+		class CamShakeHit
+		{
+			power = 100;
+			duration = 1;
+			frequency = 20;
 		};
 	};
 };
