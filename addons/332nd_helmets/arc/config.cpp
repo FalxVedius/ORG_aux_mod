@@ -14,7 +14,6 @@ class CfgPatches
 		units[] = {
 
             MACRO_NEW_HELMET(arc,Arc),
-			MACRO_NEW_HELMET(arc,Rev),
 
         };
 		weapons[] = {};
@@ -28,6 +27,5 @@ class CfgWeapons
 	class MACRO_NEW_HELMET(arc,base);
 
 	MACRO_NEW_ARC_HELMET_ITEM(Arc,Arc,Arc.paa)
-	MACRO_NEW_ARC_HELMET_ITEM(Rev,Rev,Rev.paa)
 
 }

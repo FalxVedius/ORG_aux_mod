@@ -123,7 +123,8 @@ class CfgPatches
             MACRO_NEW_UNIT(captain,Falx),
             //Halligan
             MACRO_NEW_UNIT(cwo,Halligan),
-
+            //Cutter
+            MACRO_NEW_UNIT(aviation,Cutter),
 
 		};
 		weapons[] = {
@@ -239,7 +240,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(captain,Falx),
             //Halligan
             MACRO_NEW_UNIFORM(cwo,Halligan),
-            
+            //Cutter
+            MACRO_NEW_UNIFORM(aviation,Cutter),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -456,6 +458,8 @@ class CfgWeapons
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Falx,Falx,Falx)
     //Halligan
     MACRO_NEW_CWO_UNIFORM_ITEM(Halligan,Halligan,Halligan)
+    //Cutter
+    MACRO_NEW_AVI_UNIFORM_ITEM(Cutter,Cutter,Cutter)
 
 
     #include "_nvg.hpp"
@@ -608,5 +612,7 @@ class CfgVehicles
     MACRO_NEW_CAPTAIN_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
     //Halligan
     MACRO_NEW_CWO_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
+    //Cutter
+    MACRO_NEW_AVI_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
 
 };

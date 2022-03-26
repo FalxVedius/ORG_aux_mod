@@ -51,6 +51,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Halligan),
 			MACRO_NEW_HELMET(infantry,Knight),
 			MACRO_NEW_HELMET(infantry,Sigma),
+			MACRO_NEW_HELMET(infantry,Rev),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -108,6 +109,7 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Knight,Knight,Knight.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Engineer,Engineer,CE.paa)
