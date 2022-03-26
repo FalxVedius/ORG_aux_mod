@@ -82,15 +82,15 @@
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Pilot Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\##texture};\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\##texture, "","3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",MACRO_HELMET_TEXTURES_PATH##\aviation\##texture,""};\
 		};
-	#define MACRO_NEW_WARDEN_HELMET_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_HELMET(warden,classname): MACRO_NEW_HELMET(warden,base)\
+	#define MACRO_NEW_ENGINEER_HELMET_ITEM(classname,displayname,texture)\
+		class MACRO_NEW_HELMET(engineer,classname): MACRO_NEW_HELMET(engineer,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [332nd] Warden Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\warden\##texture};\
+			displayName = [332nd] Engineer Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\infantry\##texture};\
 		};
 		#define MACRO_NEW_ARF_HELMET_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_HELMET(arf,classname): MACRO_NEW_HELMET(arf,base)\
@@ -113,7 +113,7 @@
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [332nd] Barc Helmet ('##displayname##');\
+			displayName = [332nd] Crewman Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\barc\##texture};\
 		};
 	#define MACRO_NEW_SCENARIO_HELMET_ITEM(classname,displayname,texture)\
@@ -268,7 +268,7 @@
 	#define MACRO_NEW_ARF_WOODLAND_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(arfwood,classname): MACRO_NEW_UNIFORM(arfwood,base)\
 		{\
-			displayName = [332nd] Recon Woodland Uniform ('##displayname##');\
+			displayName = [332nd] Recon Multi-cam Uniform ('##displayname##');\
 			scope = 2;\
 			scopeArsenal = 2;\
 			class ItemInfo : ItemInfo\
@@ -279,7 +279,7 @@
 	#define MACRO_NEW_MECHANIZED_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIFORM(mech,classname): MACRO_NEW_UNIFORM(mech,base)\
 		{\
-			displayName = [332nd] Mechanized Uniform ('##displayname##');\
+			displayName = [332nd] Crewman Uniform ('##displayname##');\
 			scope = 2;\
 			scopeArsenal = 2;\
 			class ItemInfo : ItemInfo\
