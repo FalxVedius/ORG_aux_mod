@@ -1214,9 +1214,9 @@ class CfgVehicles
 				textToolTip="Load Vehicle";
 				position="pilotview";
 				showWindow=1;
-				radius=5;
+				radius=15;
 				priority=1;
-				onlyForPlayer=0;
+				onlyForPlayer=1;
 				condition="((speed this < 5) AND (player == currentPilot vehicle player))";
 				statement="0 = [this] spawn TAS_fnc_Maglift;";
 			};
@@ -1230,7 +1230,7 @@ class CfgVehicles
 				showWindow=1;
 				radius=15;
 				priority=3;
-				onlyForPlayer=0;
+				onlyForPlayer=1;
 				condition="(count(this getVariable [""TAS_Loaded"",[]]) > 0)";
 				statement="0 = [this] spawn TAS_fnc_MagDrop;";
 			};
