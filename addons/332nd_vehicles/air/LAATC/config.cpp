@@ -1213,7 +1213,7 @@ class CfgVehicles
 				displayNameDefault="Load Vehicle";
 				textToolTip="Load Vehicle";
 				position="pilotview";
-				showWindow=0;
+				showWindow=1;
 				radius=5;
 				priority=1;
 				onlyForPlayer=0;
@@ -1227,7 +1227,7 @@ class CfgVehicles
 				displayNameDefault="Unload Vehicles";
 				textToolTip="Unload Vehicles";
 				position="pilotview";
-				showWindow=0;
+				showWindow=1;
 				radius=15;
 				priority=3;
 				onlyForPlayer=0;
