@@ -1213,10 +1213,10 @@ class CfgVehicles
 				displayNameDefault="Load Vehicle";
 				textToolTip="Load Vehicle";
 				position="pilotview";
-				showWindow=1;
-				radius=15;
+				showWindow=0;
+				radius=105;
 				priority=1;
-				onlyForPlayer=1;
+				onlyForPlayer=0;
 				condition="((speed this < 5) AND (player == currentPilot vehicle player))";
 				statement="0 = [this] spawn TAS_fnc_Maglift;";
 			};
@@ -1227,10 +1227,10 @@ class CfgVehicles
 				displayNameDefault="Unload Vehicles";
 				textToolTip="Unload Vehicles";
 				position="pilotview";
-				showWindow=1;
-				radius=15;
+				showWindow=0;
+				radius=105;
 				priority=3;
-				onlyForPlayer=1;
+				onlyForPlayer=0;
 				condition="(count(this getVariable [""TAS_Loaded"",[]]) > 0)";
 				statement="0 = [this] spawn TAS_fnc_MagDrop;";
 			};
