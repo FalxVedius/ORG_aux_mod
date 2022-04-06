@@ -126,7 +126,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_GAT): 3AS_GAT_Light
     {
-        displayName = "Stolen Light GAT";
+        displayName = "Stolen Light GAT (Experimental)";
         scope = 2;
 		scopeCurator = 2;
 		side = 2;

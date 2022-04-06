@@ -2906,7 +2906,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(air,LAATle,Rebel_LAATle_332nd): ls_heli_laatle
     {
-        displayName = "Stolen LAAT/le";
+        displayName = "Stolen LAAT/le (Experimental)";
         scope = 2;
         forceInGarage = 1;
         maximumLoad = 10000;
@@ -3282,7 +3282,7 @@ class CfgVehicles
     {
         scope = 2;
         forceInGarage = 1;
-        displayName = "Stolen LAAT";
+        displayName = "Stolen LAAT (Experimental)";
         armor = 60 * 0.5;
         maximumLoad = 10000;
 		side = 2;
@@ -3465,5 +3465,4 @@ class CfgVehicles
         };
 	};
 
-   };
 };

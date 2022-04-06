@@ -78,6 +78,7 @@ class CfgAmmo
 	class ls_ammo_762_green;
 	class MACRO_NEW_AMMO(R_762_green) :ls_ammo_762_green
 	{
+		lightcolor[] = {0, 188, 0};
 
 	}
 

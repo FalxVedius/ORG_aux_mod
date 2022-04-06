@@ -30,7 +30,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6): I_G_Offroad_01_armed_F
     {
-        displayName = "Rebel Technical Z90";
+        displayName = "Rebel Technical Z90 (Experimental)";
         scope = 2;
 		scopeCurator = 2;
 		side = 2;

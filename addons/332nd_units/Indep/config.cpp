@@ -20,10 +20,8 @@ class CfgPatches
 			MACRO_NEW_UNIT(rebel_Medic,332nd_indep_rebel_Medic),
 			MACRO_NEW_UNIT(rebel_Heavy,332nd_indep_rebel_Heavy),
 			MACRO_NEW_UNIT(rebel_SL,332nd_indep_rebel_SL),
-			MACRO_NEW_UNIT(rebel_FL,332nd_indep_rebel_FL),
 			MACRO_NEW_UNIT(rebel_AA,332nd_indep_rebel_AA),
 			MACRO_NEW_UNIT(rebel_Spotter,332nd_indep_rebel_Spotter),
-			MACRO_NEW_UNIT(rebel_Shocker,332nd_indep_rebel_Shocker),
 			MACRO_NEW_UNIT(rebel_Breacher,332nd_indep_rebel_Breacher),
 			MACRO_NEW_UNIT(rebel_Human,332nd_indep_rebel_Human),
 			MACRO_NEW_UNIT(rebel_Human_AT,332nd_indep_rebel_AT),
@@ -39,10 +37,8 @@ class CfgPatches
 			MACRO_NEW_UNIFORM(rebel_Medic,332nd_indep_rebel_Medic),
 			MACRO_NEW_UNIFORM(rebel_Heavy,332nd_indep_rebel_Heavy),
 			MACRO_NEW_UNIFORM(rebel_SL,332nd_indep_rebel_SL),
-			MACRO_NEW_UNIFORM(rebel_FL,332nd_indep_rebel_FL),
 			MACRO_NEW_UNIFORM(rebel_AA,332nd_indep_rebel_AA),
 			MACRO_NEW_UNIFORM(rebel_Spotter,332nd_indep_rebel_Spotter),
-			MACRO_NEW_UNIFORM(rebel_Shocker,332nd_indep_rebel_Shocker),
 			MACRO_NEW_UNIFORM(rebel_Breacher,332nd_indep_rebel_Breacher),
 			MACRO_NEW_UNIFORM(rebel_Human,332nd_indep_rebel_Human),
 			MACRO_NEW_UNIFORM(rebel_Human_AT,332nd_indep_rebel_AT),
@@ -109,11 +105,6 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_Shocker,base) : JLTS_DroidB1
-	{
-		class ItemInfo;
-	};
-
 	class MACRO_NEW_UNIFORM(rebel_Breacher,base) : JLTS_DroidB1
 	{
 		class ItemInfo;
@@ -124,10 +115,6 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_FL,base) : I_rebel_human
-	{
-		class ItemInfo;
-	};
 
 
 	//Rebel Human
@@ -168,10 +155,8 @@ class CfgWeapons
 	MACRO_NEW_REBEL_MEDIC_UNIFORM_ITEM(332nd_indep_rebel_Medic,Medical Rebel,332nd_indep_rebel_Medic)
 	MACRO_NEW_REBEL_HEAVY_UNIFORM_ITEM(332nd_indep_rebel_Heavy,Heavy Rebel,332nd_indep_rebel_Heavy)
 	MACRO_NEW_REBEL_SL_UNIFORM_ITEM(332nd_indep_rebel_SL,Squad Leader Rebel,332nd_indep_rebel_SL)
-	MACRO_NEW_REBEL_FL_UNIFORM_ITEM(332nd_indep_rebel_FL,Fireteam Leader Rebel,332nd_indep_rebel_FL)
 	MACRO_NEW_REBEL_AA_UNIFORM_ITEM(332nd_indep_rebel_AA,AA Rebel,332nd_indep_rebel_AA)
 	MACRO_NEW_REBEL_SPOTTER_UNIFORM_ITEM(332nd_indep_rebel_Spotter,Spotter Rebel,332nd_indep_rebel_Spotter)
-	MACRO_NEW_REBEL_SHOCKER_UNIFORM_ITEM(332nd_indep_rebel_Shocker,Shocker Rebel,332nd_indep_rebel_Shocker)
 	MACRO_NEW_REBEL_BREACHER_UNIFORM_ITEM(332nd_indep_rebel_Breacher,Breacher Rebel,332nd_indep_rebel_Breacher)
 	MACRO_NEW_REBEL_HUMAN_UNIFORM_ITEM(332nd_indep_rebel_Human,Human Rebel,332nd_indep_rebel_Human)
 	MACRO_NEW_REBEL_HUMAN_AT_UNIFORM_ITEM(332nd_indep_rebel_Human_AT,Human AT Rebel,332nd_indep_rebel_Human_AT)
@@ -191,10 +176,8 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(rebel_Medic,base);
 	class MACRO_NEW_UNIT(rebel_Heavy,base);
 	class MACRO_NEW_UNIT(rebel_SL,base);
-	class MACRO_NEW_UNIT(rebel_FL,base);
 	class MACRO_NEW_UNIT(rebel_AA,base);
 	class MACRO_NEW_UNIT(rebel_Spotter,base);
-	class MACRO_NEW_UNIT(rebel_Shocker,base);
 	class MACRO_NEW_UNIT(rebel_Breacher,base);
 	//Rebel Human
 	class MACRO_NEW_UNIT(rebel_Human,base);
@@ -211,10 +194,8 @@ class CfgVehicles
 		MACRO_NEW_REBEL_MEDIC_UNIT(332nd_indep_rebel_Medic,Medical Rebel,332nd_indep_rebel_Medic)
 		MACRO_NEW_REBEL_HEAVY_UNIT(332nd_indep_rebel_Heavy,Heavy Rebel,332nd_indep_rebel_Heavy)
 		MACRO_NEW_REBEL_SL_UNIT(332nd_indep_rebel_SL,Sqaud Leader Rebel,332nd_indep_rebel_SL)
-		MACRO_NEW_REBEL_FL_UNIT(332nd_indep_rebel_FL,Fireteam Leader Rebel,332nd_indep_rebel_FL)
 		MACRO_NEW_REBEL_AA_UNIT(332nd_indep_rebel_AA,AA Rebel,332nd_indep_rebel_AA)
 		MACRO_NEW_REBEL_SPOTTER_UNIT(332nd_indep_rebel_Spotter,Spotter Rebel,332nd_indep_rebel_Spotter)
-		MACRO_NEW_REBEL_SHOCKER_UNIT(332nd_indep_rebel_Shocker,Shocker Rebel,332nd_indep_rebel_Shocker)
 		MACRO_NEW_REBEL_BREACHER_UNIT(332nd_indep_rebel_Breacher,Breacher Rebel,332nd_indep_rebel_Breacher)
 
 		//Rebel Human
@@ -236,6 +217,41 @@ class CfgGroups
 			side = 2;
 			name = "332nd Rebels";
 
+			class RebelTeams
+			{
+				name = "Rebel Teams";
+
+				class rebelSinperteam
+				{
+					name = "Marksman Team"
+						side = 2;
+					faction = "EdCat_332nd_Rebel";
+					class Unit0
+					{
+						side = 2;
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
+						rank = "CORPORAL";
+						position[] = { 0,0,0 };
+					};
+					class Unit1
+					{
+						side = 2;
+						vehicle = "332nd_aux_rebel_Sniper_unit_332nd_indep_rebel_Sniper";
+						rank = "PRIVATE";
+						position[] = { 0,1,0 };
+					};
+					class Unit2
+					{
+						side = 2;
+						vehicle = "332nd_aux_rebel_Spotter_unit_332nd_indep_rebel_Spotter";
+						rank = "PRIVATE";
+						position[] = { 1,0,0 };
+					};
+
+
+				};
+			};
+
 			class RebelFireteams
 			{
 
@@ -244,12 +260,12 @@ class CfgGroups
 				class rebelFireteamBasic
 				{
 					name = "Rifeteam"
-						side = 2;
+					side = 2;
 					faction = "EdCat_332nd_Rebel";
 					class Unit0
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
@@ -293,7 +309,7 @@ class CfgGroups
 					class Unit0
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
@@ -328,7 +344,7 @@ class CfgGroups
 					class Unit0
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
@@ -371,7 +387,7 @@ class CfgGroups
 					class Unit0
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
@@ -392,14 +408,14 @@ class CfgGroups
 					class Unit3
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel";
+						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel_AA";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel";
+						vehicle = "332nd_aux_rebel_AA_unit_332nd_indep_rebel_AA";
 						rank = "PRIVATE";
 						position[] = { -1,0,0 };
 					};
@@ -426,7 +442,7 @@ class CfgGroups
 					class Unit1
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
@@ -491,7 +507,7 @@ class CfgGroups
 					class Unit1
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
@@ -556,7 +572,7 @@ class CfgGroups
 					class Unit1
 					{
 						side = 2;
-						vehicle = "332nd_aux_rebel_FL_unit_332nd_indep_rebel_FL";
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};

@@ -62,6 +62,154 @@ class CfgWeapons
 		};
 		magazineWell[]={};
 		fireLightDiffuse[]={1,0,0};
+		class WeaponFireGun;
+		class Table;
+		class maxT;
+		class GunFire : WeaponFireGun //Here we go 
+		{
+			class Table
+			{
+				class T0
+				{
+					color[] = {0.23,0.94,0.28,1};
+					maxT = 0;
+				};
+
+				class T1
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 200;
+				};
+
+				class T10
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2600;
+				};
+
+				class T11
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2650;
+				};
+
+				class T12
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2700;
+				};
+
+				class T13
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2750;
+				};
+
+				class T14
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2800;
+				};
+
+				class T15
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2850;
+				};
+
+				class T16
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2900;
+				};
+
+				class T17
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2950;
+				};
+
+				class T18
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 3000;
+				};
+
+				class T19
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 3100;
+				};
+
+				class T2
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 400;
+				};
+
+				class T20
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 3300;
+				};
+
+				class T21
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 3600;
+				};
+
+				class T22
+				{
+					color[] = { 1,1,1,1 };
+					maxT = 4200;
+				};
+
+				class T3
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 600;
+				};
+
+				class T4
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 800;
+				};
+
+				class T5
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 1000;
+				};
+
+				class T6
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 1500;
+				};
+
+				class T7
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2000;
+				};
+
+				class T8
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2300;
+				};
+
+				class T9
+				{
+					color[] = { 0.23,0.94,0.28,1 };
+					maxT = 2500;
+				};
+			};
+		}
+		flash = "GunFire";
+
 		class Single: Mode_SemiAuto
 		{
 			sounds[]=

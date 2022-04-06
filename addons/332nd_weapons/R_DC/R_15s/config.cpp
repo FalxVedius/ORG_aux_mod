@@ -56,7 +56,6 @@ class cfgWeapons
 	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(R_DC_15s): JLTS_DC15S
 	{
-		//No errors are returned but will not show up in game
 		
 		class WeaponSlotsInfo : WeaponSlotsInfo 
 		{

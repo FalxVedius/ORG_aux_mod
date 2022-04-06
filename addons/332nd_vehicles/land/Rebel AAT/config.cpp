@@ -222,7 +222,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(Land,CIS,AAT_Rebel) : 3AS_AAT_CIS
 	{
-		displayName = "AAT (Rebel)";
+		displayName = "AAT (Rebel) (Experimental)";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd_Rebel";

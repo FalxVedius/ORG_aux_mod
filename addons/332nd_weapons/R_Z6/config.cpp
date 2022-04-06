@@ -24,7 +24,6 @@ class CfgPatches
 class BaseSoundModeType;
 class Mode_FullAuto;
 class mode_SemiAuto;
-
 class cfgWeapons
 {
 	class Rifle_Long_Base_F;
@@ -112,12 +111,10 @@ class cfgWeapons
 				modelOptics[] = { "\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F" };
 			};
 		};
-
 		magazines[] =
 		{
 			MACRO_NEW_MAG(R_Z90,150)
 		};
-
 		class FullAuto : Mode_FullAuto
 		{
 			sounds[] = { "StandardSound" };
@@ -136,7 +133,6 @@ class cfgWeapons
 			maxRange = 30;
 			maxRangeProbab = 0.1;
 		};
-
 		class 332_Z90Supercharge : JLTS_stun_muzzle
 		{
 			displayName = "Supercharge";
@@ -196,10 +192,6 @@ class cfgWeapons
 		};
 	};
 };
-
-
-
-
 class cfgAmmo
 {
   class ls_ammo_127x108_blue;
@@ -213,9 +205,6 @@ class cfgAmmo
 	explosionEffects = "ImpactPlasmaExpBlue";
 	};
 };
-
-
-
 class CfgMagazines
 {
 	class 30rnd_762x39_AK12_Mag_F;

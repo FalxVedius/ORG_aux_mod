@@ -25,7 +25,7 @@ class CfgVehicles
 	class C_Truck_02_covered_F;
 	class MACRO_NEW_VEHICLE(land,Rebel,Zamak) : C_Truck_02_covered_F
 	{
-		displayName = "Rebel Zamak";
+		displayName = "Rebel Zamak (Experimental)";
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;

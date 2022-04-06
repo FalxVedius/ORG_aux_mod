@@ -70,7 +70,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAP) : 3as_Vulture_dynamicLoadout
 	{
-		  displayName = "Hornet Droid";
+		  displayName = "Hornet Droid (Experimental)";
 		  scope = 2;
 		  side = 2;
 		  scopeCurator = 2;
@@ -268,14 +268,14 @@ class CfgVehicles
 					  };
 					  class Pylons7 : Pylons1
 					  {
-						  priority = 10;
-						  attachment = "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells";
-						  maxweight = 1200;
-						  UIposition[] = { 0.1,0.27000001 };
 						  hardpoints[] =
 						  {
-							  "3as_Vulture_AOE_Cannon"
+							  "332_A_Pylon"
 						  };
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
+
+						  UIposition[] = { 0.34999999,0.5 };
+						  mirroredMissilePos = 5;
 					  };
 				  };
 				  class Presets
