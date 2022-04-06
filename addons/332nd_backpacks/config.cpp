@@ -37,6 +37,8 @@ class CfgVehicles
 		displayName = "[332nd] Ammo Bearer Pack (base)";
 		maximumLoad = 450;
 
+		scope = 0;
+
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
@@ -73,6 +75,8 @@ class CfgVehicles
 		displayName = "[332nd] Support Pack (Base)";
 		maximumLoad = 290;
 
+		scope = 0;
+
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
@@ -108,6 +112,8 @@ class CfgVehicles
         tf_subtype="digital_lr";
 		displayName = "[332nd] Medic Pack (base)";
 		maximumLoad = 393;
+
+		scope = 0;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
