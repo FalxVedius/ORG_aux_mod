@@ -9,7 +9,7 @@ params[
 	if(((configFile >> "CfgVehicles" >> (typeOf (vehicle JLTS_playerControlled)) >> "tas_canLift") call BIS_fnc_getCfgDataBool) AND (speed vehicle JLTS_playerControlled < 5) AND (JLTS_playerControlled == currentPilot vehicle JLTS_playerControlled)) then {
 		[vehicle JLTS_playerControlled] spawn TAS_fnc_Maglift;
 	};
-] call ace_common_fnc_displayTextStructured
+},{},[DIK_C, [false, true, false]], false] call cba_fnc_addKeybind;
 
 [["3AS Mod","LAAT/C Lift"],"TAS_liftDrop",["Drop Loaded Vehicles","Drop Loaded Vehicles"],{
 	if(count(vehicle JLTS_playerControlled getVariable ["TAS_Loaded",[]]) > 0) then {
