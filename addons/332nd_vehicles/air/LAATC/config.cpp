@@ -1206,6 +1206,34 @@ class CfgVehicles
 				condition="(alive this) AND ((speed this) > 50) AND (player == driver this)";
 				statement="0 = this spawn tcw_fnc_afterburnerMK1_turn_off;";
 			};
+			class LoadCargo
+			{
+				userActionID=6;
+				displayName="Load Vehicle";
+				displayNameDefault="Load Vehicle";
+				textToolTip="Load Vehicle";
+				position="pilotview";
+				showWindow=0;
+				radius=5;
+				priority=1;
+				onlyForPlayer=0;
+				condition="((speed this < 5) AND (player == currentPilot vehicle player))";
+				statement="0 = [this] spawn TAS_fnc_Maglift;";
+			};
+			class UnLoadCargo
+			{
+				userActionID=7;
+				displayName="Unload Vehicles";
+				displayNameDefault="Unload Vehicles";
+				textToolTip="Unload Vehicles";
+				position="pilotview";
+				showWindow=0;
+				radius=15;
+				priority=3;
+				onlyForPlayer=0;
+				condition="(count(this getVariable [""TAS_Loaded"",[]]) > 0)";
+				statement="0 = [this] spawn TAS_fnc_MagDrop;";
+			};
 		};
 		ace_fastroping_enabled=1;
 		ace_fastroping_ropeOrigins[]=
