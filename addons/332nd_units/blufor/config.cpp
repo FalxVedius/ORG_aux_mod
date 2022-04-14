@@ -487,7 +487,7 @@ class CfgVehicles
 
 
     //Recruit
-    MACRO_NEW_INF_UNIT(332nd_recruit,Clone Recruit,332nd_recruit,recruit\Recruit_Upper.paa,recruit\Recruit_Lower.paa)
+    MACRO_NEW_INF_UNIT(332nd_recruit,Clone Recruit,332nd_cadet,cadet\Cadet_Upper.paa,cadet\Cadet_Lower.paa)
 
     //Infantry
     MACRO_NEW_INF_UNIT(332nd_cadet,Clone Cadet,332nd_cadet,cadet\Cadet_Upper.paa,cadet\Cadet_Lower.paa)
