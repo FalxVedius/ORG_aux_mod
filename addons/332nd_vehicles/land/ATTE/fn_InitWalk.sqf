@@ -27,62 +27,32 @@ if (!is3DEN) then {
 	
 							sleep 0.75;
 							
-							//Front Right
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _fr];
-							_footprint setdamage 1;
-							detach _footprint;
-							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fr)), 2,1,800];
 							};
-							
-							//Middle Right
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _mr];
-							_footprint setdamage 1;
-							detach _footprint;
-							
+						
+						
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _mr)), 2,1,800];
 							};
-							
-							//Back Left
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _bl];
-							_footprint setdamage 1;
-							detach _footprint;
+		
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _bl)), 2,1,800];
 							};
 							
 							sleep 0.75;
-							
-							//Front Left
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _fl];
-							_footprint setdamage 1;
-							detach _footprint;
+						
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fl)), 2,1,800];
 							};
-							//Middle Left
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _ml];
-							_footprint setdamage 1;
-							detach _footprint;
+
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _ml)), 2,1,800];
 							};
 							
-							//Back Right
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _br];
-							_footprint setdamage 1;
-							detach _footprint;
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _br)), 2,1,800];
@@ -102,31 +72,17 @@ if (!is3DEN) then {
 							_v animateSource ["Walk",0,2.7];
 	
 							sleep 0.75;
-							
-							//Front Left
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _fl];
-							_footprint setdamage 1;
-							detach _footprint;
+
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fl)), 2,1,800];
 							};
-							//Middle Left
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _ml];
-							_footprint setdamage 1;
-							detach _footprint;
+
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _ml)), 2,1,800];
 							};
 							
-							//Back Right
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _br];
-							_footprint setdamage 1;
-							detach _footprint;
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _br)), 2,1,800];
@@ -134,31 +90,16 @@ if (!is3DEN) then {
 							
 							sleep 0.75;
 							
-							//Front Right
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _fr];
-							_footprint setdamage 1;
-							detach _footprint;
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fr)), 2,1,800];
 							};
 							
-							//Middle Right
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _mr];
-							_footprint setdamage 1;
-							detach _footprint;
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _mr)), 2,1,800];
 							};
 							
-							//Back Left
-							_footprint = "3as_ATTE_Footprint" createVehicleLocal (position _v);
-							_footprint attachTo [_v, [0,0,0], _bl];
-							_footprint setdamage 1;
-							detach _footprint;
 							
 							if (isServer) then {
 								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _bl)), 2,1,800];

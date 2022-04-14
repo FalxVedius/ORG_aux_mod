@@ -37,6 +37,8 @@ class CfgVehicles
 		displayName = "[332nd] Ammo Bearer Pack (base)";
 		maximumLoad = 450;
 
+		scope = 0;
+
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
@@ -47,6 +49,66 @@ class CfgVehicles
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_co.paa
 		};
 		displayName = "[332nd] Ammo Bearer Pack";
+		maximumLoad = 450;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Des) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_Des.paa
+		};
+		displayName = "[332nd] Ammo Bearer Pack (Desert)";
+		maximumLoad = 450;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Dig) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_Dig.paa
+		};
+		displayName = "[332nd] Ammo Bearer Pack (Digital)";
+		maximumLoad = 450;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Jung) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_Jung.paa
+		};
+		displayName = "[332nd] Ammo Bearer Pack (Jungle)";
+		maximumLoad = 450;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Snow) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_Snow.paa
+		};
+		displayName = "[332nd] Ammo Bearer Pack (Snow)";
+		maximumLoad = 450;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Wood) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_Wood.paa
+		};
+		displayName = "[332nd] Ammo Bearer Pack (Wood)";
 		maximumLoad = 450;
 
 		editorCategory = "EdCat_332nd_Props";
@@ -64,6 +126,66 @@ class CfgVehicles
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_support_Des) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_Des.paa
+		};
+		displayName = "[332nd] Support Pack (Desert)";
+		maximumLoad = 290;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_support_Dig) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_Dig.paa
+		};
+		displayName = "[332nd] Support Pack (Digital)";
+		maximumLoad = 290;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_support_Jung) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_Jung.paa
+		};
+		displayName = "[332nd] Support Pack (Jungle)";
+		maximumLoad = 290;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_support_Snow) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_Snow.paa
+		};
+		displayName = "[332nd] Support Pack (Snow)";
+		maximumLoad = 290;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_support_Wood) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_Wood.paa
+		};
+		displayName = "[332nd] Support Pack (Wood)";
+		maximumLoad = 290;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_support_base): JLTS_Clone_backpack
 	{
 		hiddenSelectionsTextures[]=
@@ -72,6 +194,8 @@ class CfgVehicles
 		};
 		displayName = "[332nd] Support Pack (Base)";
 		maximumLoad = 290;
+
+		scope = 0;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -94,6 +218,96 @@ class CfgVehicles
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_medic_Des) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_Des.paa
+		};
+		displayName = "[332nd] Medic Pack (Desert)";
+		tf_dialog = "JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 50000;
+		tf_subtype = "digital_lr";
+		maximumLoad = 393;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_medic_Dig) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_Dig.paa
+		};
+		displayName = "[332nd] Medic Pack (Digital)";
+		tf_dialog = "JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 50000;
+		tf_subtype = "digital_lr";
+		maximumLoad = 393;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_medic_Jung) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_Jung.paa
+		};
+		displayName = "[332nd] Medic Pack (Jungle)";
+		tf_dialog = "JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 50000;
+		tf_subtype = "digital_lr";
+		maximumLoad = 393;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_medic_Snow) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_Snow.paa
+		};
+		displayName = "[332nd] Medic Pack (Snow)";
+		tf_dialog = "JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 50000;
+		tf_subtype = "digital_lr";
+		maximumLoad = 393;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_medic_Wood) : JLTS_Clone_backpack
+	{
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_Wood.paa
+		};
+		displayName = "[332nd] Medic Pack (Wood)";
+		tf_dialog = "JLTS_clone_rto_radio_dialog";
+		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
+		tf_encryptionCode = "tf_west_radio_code";
+		tf_hasLRradio = 1;
+		tf_range = 50000;
+		tf_subtype = "digital_lr";
+		maximumLoad = 393;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_medic_base): JLTS_Clone_backpack
 	{
 		hiddenSelectionsTextures[]=
@@ -108,6 +322,8 @@ class CfgVehicles
         tf_subtype="digital_lr";
 		displayName = "[332nd] Medic Pack (base)";
 		maximumLoad = 393;
+
+		scope = 0;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -126,6 +342,81 @@ class CfgVehicles
 		hiddenselectionstextures[] =
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_JTAC.paa
+		};
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Des) : JLTS_Clone_backpack_RTO
+	{
+		displayName = "[332nd] JTAC Pack (Desert)";
+		maximumLoad = 450;
+
+		tf_range = 50000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		hiddenselectionstextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_JTAC_Des.paa
+		};
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Dig) : JLTS_Clone_backpack_RTO
+	{
+		displayName = "[332nd] JTAC Pack (Digital)";
+		maximumLoad = 450;
+
+		tf_range = 50000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		hiddenselectionstextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_JTAC_Dig.paa
+		};
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Jung) : JLTS_Clone_backpack_RTO
+	{
+		displayName = "[332nd] JTAC Pack (Jungle)";
+		maximumLoad = 450;
+
+		tf_range = 50000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		hiddenselectionstextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_JTAC_Jung.paa
+		};
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Snow) : JLTS_Clone_backpack_RTO
+	{
+		displayName = "[332nd] JTAC Pack (Snow)";
+		maximumLoad = 450;
+
+		tf_range = 50000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		hiddenselectionstextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_JTAC_Snow.paa
+		};
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Wood) : JLTS_Clone_backpack_RTO
+	{
+		displayName = "[332nd] JTAC Pack (Wood)";
+		maximumLoad = 450;
+
+		tf_range = 50000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		hiddenselectionstextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_JTAC_Wood.paa
 		};
 	}
 	class JLTS_Clone_belt_bag;
@@ -172,7 +463,77 @@ class CfgVehicles
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
-	}	
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Des) : JLTS_Clone_backpack_eod
+	{
+		displayName = "[332nd] Demolition Pack (Desert)";
+
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\EOD_backpack_Des.paa
+		};
+
+		maximumLoad = 400;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Dig) : JLTS_Clone_backpack_eod
+	{
+		displayName = "[332nd] Demolition Pack (Digital)";
+
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\EOD_backpack_Dig.paa
+		};
+
+		maximumLoad = 400;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Jung) : JLTS_Clone_backpack_eod
+	{
+		displayName = "[332nd] Demolition Pack (Jungle)";
+
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\EOD_backpack_Jung.paa
+		};
+
+		maximumLoad = 400;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Snow) : JLTS_Clone_backpack_eod
+	{
+		displayName = "[332nd] Demolition Pack (Snow)";
+
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\EOD_backpack_Snow.paa
+		};
+
+		maximumLoad = 400;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Wood) : JLTS_Clone_backpack_eod
+	{
+		displayName = "[332nd] Demolition Pack (Wood)";
+
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\EOD_backpack_Wood.paa
+		};
+
+		maximumLoad = 400;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
 	class ls_gar_rocket_backpack;
 	class MACRO_NEW_BACKPACK(blufor,332nd_AT): ls_gar_rocket_backpack
 	{
