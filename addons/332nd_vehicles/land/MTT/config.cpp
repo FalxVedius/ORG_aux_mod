@@ -94,50 +94,35 @@ class CfgVehicles
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
         armor = 6000;
         armorStructural = 6;
-
-        class Turrets : Turrets
+        class TextureSources
         {
-            class MainTurret : MainTurret
+           	class Standard
             {
-                weapons[] =
+            displayName= "CIS MTT";
+			author= MACRO_AUTHOR;
+			textures[]=
                 {
-                    MACRO_NEW_WEAPON(MTT_Cannon)
+                    "3as\3as_MTT\data\MTT_Main_CO.paa",
+                    "3as\3as_MTT\data\MTT_Rack_CO.paa"
                 };
-                magazines[] =
+                factions[]=
                 {
-                    MACRO_NEW_MAG(MTT_MMG,40)
+                    "EdCat_332ndCIS"
+                };
+            };
+            class CIS
+            {
+                displayName = "CIS";
+                author = MACRO_AUTHOR;
+                textures[] =
+                {
+                    "3AS\3AS_AAT\data\CIS_AAT_CO.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332ndCIS"
                 };
             };
         };
-        class TextureSources
-		{
-			class Tan
-			{
-				displayName="Desert";
-				author="$STR_3as_Studio";
-				textures[]=
-				{
-					"3as\3as_MTT\data\MTT_Main_Blue_CO.paa",
-					"3as\3as_MTT\data\MTT_Rack_CO.paa"
-				};
-				factions[]=
-				{
-					"3AS_CIS"
-				};
-			};
-			class CIS
-			{
-				displayName="Trade Federation";
-				author="$STR_3as_Studio";
-				textures[]=
-				{
-					"3as\3as_MTT\data\MTT_Main_CO.paa",
-					"3as\3as_MTT\data\MTT_Rack_CO.paa"
-				};
-				factions[]=
-				{
-					"3AS_CIS"
-				};
-			};
     };
 };
