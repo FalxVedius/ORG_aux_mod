@@ -71,19 +71,48 @@ class CfgWeapons
 
 class CfgVehicles
 {
-	class Tank;
-	class Tank_F : Tank
+	class LandVehicle;
+	class Tank: LandVehicle
 	{
-        class Turrets;
+		class NewTurret;
+		class Sounds;
+		class HitPoints;
 	};
-    class 3as_MTT_Base: Tank_F
-    {
-        class Turrets: Turrets 
-        {
-            class MainTurret;
-        };
-    };
-
+	class Tank_F: Tank
+	{
+		class Turrets
+		{
+			class MainTurret: NewTurret
+			{
+				class Turrets
+				{
+					class CommanderOptics;
+				};
+			};
+		};
+		class AnimationSources;
+		class ViewPilot;
+		class CargoTurret;
+		class ViewOptics;
+		class RCWSOptics;
+		class ViewGunner;
+		class ViewCargo;
+		class HeadLimits;
+		class HitPoints: HitPoints
+		{
+			class HitHull;
+			class HitEngine;
+			class HitLTrack;
+			class HitRTrack;
+			class HitFuel;
+		};
+		class Sounds: Sounds
+		{
+			class Engine;
+			class Movement;
+		};
+	};
+    
 	class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT_Base
     {
         displayName = "MTT (CIS)";
