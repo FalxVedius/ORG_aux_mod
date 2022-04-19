@@ -111,7 +111,6 @@ class CfgVehicles
                 };
             };
         };
-
         class TextureSources
         {
            	class Standard
