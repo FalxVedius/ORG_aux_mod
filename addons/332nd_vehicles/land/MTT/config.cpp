@@ -73,49 +73,6 @@ class CfgWeapons
     };
 };
 
-class CfgMovesBasic
-{
-	class DefaultDie;
-	class ManActions
-	{
-		MTT_Cargo="MTT_Cargo";
-	};
-};
-    class CfgMovesMaleSdr: CfgMovesBasic
-    {
-        skeletonName="OFP2_ManSkeleton";
-        gestures="CfgGesturesMale";
-        class States
-        {
-            class Crew;
-            class MTT_Cargo_Kia: DefaultDie
-            {
-                actions="DeadActions";
-                file="3as\3as_UTAT\data\Anim\UTATDriver_KIA.rtm";
-                speed=0.5;
-                looped=0;
-                terminal=1;
-                soundEnabled=0;
-                connectTo[]=
-                {
-                    "Unconscious",
-                    0.1
-                };
-            };
-            class MTT_Cargo: Crew
-            {
-                file="3as\3as_Anims\anims\MTT_Cargo.rtm";
-                interpolateTo[]=
-                {
-                    "",
-                    1
-                };
-                leftHandIKCurve[]={1};
-                rightHandIKCurve[]={1};
-            };
-        };
-    };
-
 class DefaultEventHandlers;
 class WeaponFireGun;
 class WeaponCloudsGun;
@@ -166,14 +123,14 @@ class CfgVehicles
 		};
 	};
 	
-    class Tank_F;
-    class Wreck_base_F : Tank_F;
+    class Wreck_base_F;
     class 3as_MTT_wreck_static : Wreck_base_F
     {
         displayName="MTT (Destroyed)"
     }
 
-	 class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3AS_MTT_CIS
+    class 3AS_MTT_Base: Tank_F 
+	class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT_Base
     {
         displayName = "MTT (CIS)";
         scope = 2;
@@ -201,7 +158,9 @@ class CfgVehicles
 
         class TextureSources
         {
-           	displayName= "CIS MTT";
+           	class Standard
+            {
+            displayName= "CIS MTT";
 			author= MACRO_AUTHOR;
 			textures[]=
 			{
@@ -212,91 +171,19 @@ class CfgVehicles
 			{
 				"EdCat_332ndCIS"
 			};
-		};
-		class CIS
-		{
-			displayName = "CIS";
-			author = MACRO_AUTHOR;
-			textures[] =
-			{
-				"3AS\3AS_AAT\data\CIS_AAT_CO.paa"
-			};
-			factions[] =
-			{
-				"EdCat_332ndCIS"
-			};
-		};
-    };
-
-	class MACRO_NEW_VEHICLE(Land,CIS,MTT_Tan) : 3AS_MTT_tan
-	{
-		displayname="MTT (Tan)";
-        scope=2;
-		scopeCurator=2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-        armor = 6000;
-        armorStructural = 6;
-
-        class Turrets : Turrets
-        {
-            class MainTurret : MainTurret
+            class CIS
             {
-                weapons[] =
+                displayName = "CIS";
+                author = MACRO_AUTHOR;
+                textures[] =
                 {
-                    MACRO_NEW_WEAPON(MTT_Cannon)
+                    "3AS\3AS_AAT\data\CIS_AAT_CO.paa"
                 };
-                magazines[] =
+                factions[] =
                 {
-                    MACRO_NEW_MAG(MTT_MMG,40)
+                    "EdCat_332ndCIS"
                 };
             };
         };
-
-        class TextureSources
-		{
-			{
-			class Tan
-			{
-				displayName="MTT (Tan)";
-				author = MACRO_AUTHOR;
-				textures[]=
-				{
-					"3as\3as_MTT\data\MTT_Main_Blue_CO.paa",
-					"3as\3as_MTT\data\MTT_Rack_CO.paa"
-				};
-				factions[]=
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-			class CIS
-			{
-				displayName = "CIS";
-				author = MACRO_AUTHOR;
-				textures[]=
-				{
-					"3as\3as_MTT\data\MTT_Main_CO.paa",
-					"3as\3as_MTT\data\MTT_Rack_CO.paa"
-				};
-				factions[]=
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-		};
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2"
-		};
-		hiddenSelectionsTextures[]=
-		{
-			"3as\3as_MTT\data\MTT_Main_Blue_CO.paa",
-			"3as\3as_MTT\data\MTT_Rack_CO.paa"
-		};
-		editorPreview="\3as\3as_mtt\images\3as_MTT.jpg";
-		accuracy=1000;
-	};
+    };
 };
