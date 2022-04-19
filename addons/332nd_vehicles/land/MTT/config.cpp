@@ -14,7 +14,6 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
             MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS),
-			MACRO_NEW_VEHICLE(Land,CIS,MTT_Tan),
             MACRO_NEW_VEHICLE(Land,CIS,MTT_wreck_static)
         };
 		weapons[] = {
@@ -81,7 +80,7 @@ class CfgVehicles
         class Turrets;
 	};
 	
-    class 3AS_MTT_Base: Tank_F
+    class 3as_MTT_Base: Tank_F
     {
         class Turrets: Turrets 
         {
