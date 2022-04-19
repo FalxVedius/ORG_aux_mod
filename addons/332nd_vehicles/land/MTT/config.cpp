@@ -84,45 +84,5 @@ class CfgVehicles
         };
     };
 
-	class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT_Base
-    {
-        displayName = "MTT (CIS)";
-        scope = 2;
-		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-        armor = 6000;
-        armorStructural = 6;
-        class TextureSources
-        {
-           	class Standard
-            {
-            displayName= "CIS MTT";
-			author= MACRO_AUTHOR;
-			textures[]=
-                {
-                    "3as\3as_MTT\data\MTT_Main_CO.paa",
-                    "3as\3as_MTT\data\MTT_Rack_CO.paa"
-                };
-                factions[]=
-                {
-                    "EdCat_332ndCIS"
-                };
-            };
-            class CIS
-            {
-                displayName = "CIS";
-                author = MACRO_AUTHOR;
-                textures[] =
-                {
-                    "3AS\3AS_AAT\data\CIS_AAT_CO.paa"
-                };
-                factions[] =
-                {
-                    "EdCat_332ndCIS"
-                };
-            };
-        };
-    };
+
 };
