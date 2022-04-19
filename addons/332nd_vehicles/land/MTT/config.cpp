@@ -81,12 +81,6 @@ class CfgVehicles
         class Turrets;
 	};
 	
-    class Wreck_base_F;
-    class 3as_MTT_wreck_static : Wreck_base_F
-    {
-        displayName="MTT (Destroyed)"
-    };
-
     class 3AS_MTT_Base: Tank_F
     {
         class Turrets: Turrets 
