@@ -8,7 +8,6 @@ class CfgPatches
 		requiredAddons[]=
 		{
 			MACRO_PATCH_NAME(land_vehicles),
-            "A3_Armor_F_Beta"
 		};
 		requiredVersion = 0.1;
 		units[] = {
