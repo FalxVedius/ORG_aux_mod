@@ -1,5 +1,4 @@
 #include "../../../332nd_main/macros/main.hpp" // my config macro lib
-#define MACRO_TX200_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\land\MTT
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(MTT)
@@ -75,7 +74,7 @@ class CfgWeapons
 class CfgVehicles
 {
 	class Tank;
-	class Tank_F: Tank
+	class Tank_F : Tank
 	{
         class Turrets;
 	};
@@ -121,14 +120,15 @@ class CfgVehicles
             displayName= "CIS MTT";
 			author= MACRO_AUTHOR;
 			textures[]=
-			{
-				"3as\3as_MTT\data\MTT_Main_CO.paa",
-				"3as\3as_MTT\data\MTT_Rack_CO.paa"
-			};
-			factions[]=
-			{
-				"EdCat_332ndCIS"
-			};
+                {
+                    "3as\3as_MTT\data\MTT_Main_CO.paa",
+                    "3as\3as_MTT\data\MTT_Rack_CO.paa"
+                };
+                factions[]=
+                {
+                    "EdCat_332ndCIS"
+                };
+            };
             class CIS
             {
                 displayName = "CIS";
