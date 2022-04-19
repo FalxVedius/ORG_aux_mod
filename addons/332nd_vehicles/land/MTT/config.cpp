@@ -53,7 +53,7 @@ class CfgMagazines
     class MACRO_NEW_MAG(MTT_MMG,40): 3AS_40Rnd_MTT_HEAT
     {
         displayName = "MTT HE";
-        ammo = MACRO_NEW_AMMO(MTT_MMG)
+        ammo = MACRO_NEW_AMMO(MTT_MMG);
     };
 };
 
@@ -61,9 +61,9 @@ class CfgWeapons
 {
     class 3AS_MTTCannon;
 
-    class MACRO_NEW_WEAPON(MTT_MMG)
+    class MACRO_NEW_WEAPON(MTT_MMG): 3AS_MTTCannon
     {
-        displayName = "MTT Heavy Cannon"
+        displayName = "MTT Heavy Cannon";
         magazine[] = 
         {
             MACRO_NEW_AMMO(MTT_MMG,40)
