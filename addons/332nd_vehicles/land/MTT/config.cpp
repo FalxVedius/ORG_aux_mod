@@ -78,7 +78,6 @@ class CfgVehicles
 	{
         class Turrets;
 	};
-	
     class 3as_MTT_Base: Tank_F
     {
         class Turrets: Turrets 
