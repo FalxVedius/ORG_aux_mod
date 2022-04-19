@@ -73,63 +73,28 @@ class CfgWeapons
     };
 };
 
-class DefaultEventHandlers;
-class WeaponFireGun;
-class WeaponCloudsGun;
-class WeaponFireMGun;
-class WeaponCloudsMGun;
-
 class CfgVehicles
 {
-	class LandVehicle;
-	class Tank : LandVehicle
-	{
-		class NewTurret;
-		class Sounds;
-		class HitPoints;
-	};
+	class Tank;
 	class Tank_F: Tank
 	{
-		class Turrets
-		{
-			class MainTurret: NewTurret
-			{
-				class Turrets
-				{
-					class CommanderOptics;
-				};
-			};
-		};
-		class AnimationSources;
-		class ViewPilot;
-		class CargoTurret;
-		class ViewOptics;
-		class RCWSOptics;
-		class ViewGunner;
-		class ViewCargo;
-		class HeadLimits;
-		class HitPoints: HitPoints
-		{
-			class HitHull;
-			class HitEngine;
-			class HitLTrack;
-			class HitRTrack;
-			class HitFuel;
-		};
-		class Sounds: Sounds
-		{
-			class Engine;
-			class Movement;
-		};
+        class Turrets;
 	};
 	
     class Wreck_base_F;
     class 3as_MTT_wreck_static : Wreck_base_F
     {
         displayName="MTT (Destroyed)"
-    }
+    };
 
-    class 3AS_MTT_Base: Tank_F 
+    class 3AS_MTT_Base: Tank_F
+    {
+        class Turrets: Turrets 
+        {
+            class MainTurret;
+        };
+    };
+
 	class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT_Base
     {
         displayName = "MTT (CIS)";
