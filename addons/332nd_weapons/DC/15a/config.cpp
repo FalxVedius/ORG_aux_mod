@@ -427,7 +427,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(AP Plasma Cell ,2)
 		ammo=MACRO_NEW_AMMO(40mm_AP)
 		count=2;
-		mass=12
+		mass = 12;
 		initspeed=80;
 	};
 
@@ -437,7 +437,7 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(40mm_HE)
 		displayName=MACRO_AMMO_DISPLAYNAME(HE Plasma Cell ,4)
 		count=4;
-		mass=12
+		mass = 12;
 		initspeed=80;
 	};
 

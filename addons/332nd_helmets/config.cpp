@@ -283,12 +283,19 @@ class CfgWeapons
 		};
 	}
 
-	class MACRO_NEW_HELMET(scenario,base) : CloneHelmetP2_Base
+	class 3AS_H_Katarn_Helmet;
+	class AssaultHelmet_Base : 3AS_H_Katarn_Helmet
+	{
+		scopeArsenal = 0;
+		class ItemInfo;
+	};
+
+	class MACRO_NEW_HELMET(assault,base) : AssaultHelmet_Base
 	{
 		scopeArsenal = 0;
 		scope = 0;
 		author = MACRO_AUTHOR;
-		displayName = "[332nd] Scenario Helmet ('base')";
+		displayName = "[332nd] Assault Helmet ('base')";
 		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo

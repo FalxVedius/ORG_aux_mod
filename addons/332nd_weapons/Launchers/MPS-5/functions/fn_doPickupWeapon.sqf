@@ -20,9 +20,8 @@ params ["_target", "_player"];
 {
     _x params ["_xClassname", "_xAmmo"];
     if (_xAmmo > 0) then {
-        private _baseMag = getText (configFile >> "CfgMagazines" >> _xClassname >> "Aux332nd_MPS_5_base");
-
-        [_player, _baseMag, "", _xAmmo] call ACEFUNC(common,addToInventory);
+	
+        [_player, _xClassname, "", _xAmmo] call ACEFUNC(common,addToInventory);
     };
 } forEach (magazinesAmmoFull _target);
 

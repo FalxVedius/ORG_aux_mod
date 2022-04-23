@@ -44,6 +44,40 @@ class CfgGlasses
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 	};
 
+	class 332nd_Sniper : G_Tactical_Black
+	{
+		displayName = "[332nd] Sniper Attachment";
+		model = "\SWLB_clones_spec\SWLB_clone_commando_sniper_armor.p3d";
+		hiddenSelections[] = { "illum","camo1" };
+		hiddenSelectionsMaterials[] = { "a3\characters_f_bootcamp\common\data\vrarmoremmisive.rvmat" };
+		hiddenSelectionsTextures[] = { "\SWLB_clones_spec\data\camo2_co.paa","\SWLB_clones_spec\data\camo2_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Omega : G_Tactical_Black
+	{
+		displayName = "[332nd] Shoulder Attachment";
+		model = "\SWLB_clones_spec\SWLB_clone_commando_tech_armor.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\SWLB_units_spec\data\SWLB_Omega_Armor2_Co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_EOD : G_Tactical_Black
+	{
+		displayName = "[332nd] EOD Bag";
+		model = "\SWLB_clones_spec\SWLB_clone_commando_eod_armor.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
 	class 332nd_RangeFinder_Black : G_Tactical_Black
 	{
 		displayName = "[332nd] Rangefinder (Black)";

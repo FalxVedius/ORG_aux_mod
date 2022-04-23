@@ -82,6 +82,8 @@ class CfgVehicles
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
 				turretInfoType = "RscOptics_MBT_01_gunner";
 
+				stabilizedInAxes = 3;
+
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(RX200_40mm),
@@ -118,6 +120,8 @@ class CfgVehicles
 					{
 
 						turretInfoType = "RscOptics_MBT_01_commander";
+
+						stabilizedInAxes = 3;
 
 						weapons[] =
 						{

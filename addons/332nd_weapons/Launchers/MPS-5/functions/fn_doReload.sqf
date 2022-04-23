@@ -25,27 +25,16 @@ if (!(_loadedFull isEqualTo [])) exitWith {};
 //Make sure empty mag is removed so it "autoloads"
 private _loadedEmpty = _mortarVeh magazinesTurret [0];
 if (!(_loadedEmpty isEqualTo [])) then {
-
     _mortarVeh removeMagazinesTurret [(_loadedEmpty select 0), [0]];
 };
 
 private _magToLoad = GVAR(nextReload);
 if (_magToLoad == "") exitWith {};
 
-private _baseMag = getText (configFile >> "CfgMagazines" >> _magToLoad >> "Aux332nd_MPS_5_base");
-
-//HE - Impact can be done by basic HE shells or the multi-fuze, only use multi if we have no basic
-if ((_baseMag == "332nd_aux_magazine_MPS_5_HE_1x") && {!(_baseMag in (magazines _player))}) then {
-    _baseMag = "332nd_aux_magazine_MPS_5_HE_multi_1x";
-    _magToLoad = if (_magToLoad == "332nd_aux_magazine_MPS_5_HE_1x") then {"332nd_aux_magazine_MPS_5_HE_multi_1x"} else {"332nd_aux_magazine_MPS_5_HE_multi_Charge0_1x"};
-};
-
-if (!(_baseMag in (magazines _player))) exitWith {
-
+if (!(_magToLoad in (magazines _player))) exitWith {
     ["No Ammo"] call ACEFUNC(common,displayTextStructured);
 };
 
-_player removeMagazine _baseMag;
-
+_player removeMagazine _magToLoad;
 
 _mortarVeh addMagazineTurret [_magToLoad, [0]];

@@ -114,6 +114,8 @@ class CfgPatches
 
             MACRO_NEW_UNIT(captain,332nd_captain),
 
+            MACRO_NEW_UNIT(assault,332nd_assault_trooper),
+
 
             //Custom ------------------------
 
@@ -231,6 +233,8 @@ class CfgPatches
 
             MACRO_NEW_UNIFORM(captain,332nd_captain),
 
+            MACRO_NEW_UNIFORM(assault,332nd_assault_trooper),
+
 
             //Custom ------------------------
 
@@ -262,6 +266,7 @@ class CfgWeapons
 {
     class JLTS_CloneArmor;
     class JLTS_CloneArmorMC;
+    class 3as_U_rep_katarn_armor;
 
     class MACRO_NEW_UNIFORM(recruit,base) : JLTS_CloneArmor
     {
@@ -328,6 +333,11 @@ class CfgWeapons
     };
 
     class MACRO_NEW_UNIFORM(captain,base) : JLTS_CloneArmorMC
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(assault,base) : 3as_U_rep_katarn_armor
     {
         class ItemInfo;
     };
@@ -449,6 +459,9 @@ class CfgWeapons
     //Captain Armor
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(332nd_captain,Captain,332nd_captain)
 
+    //Assault Armor
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_trooper,Trooper *WIP*,332nd_assault_trooper)
+
 
     //Custom ----------------------------------------
 
@@ -484,6 +497,8 @@ class CfgVehicles
     class MACRO_NEW_UNIT(arfwood,base);
 
     class MACRO_NEW_UNIT(scenario,base);
+
+    class MACRO_NEW_UNIT(assault,base);
 
 
     //Recruit
@@ -601,7 +616,11 @@ class CfgVehicles
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Purge,Clone (Purge),332nd_scenario_Purge,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Purge)
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Shadow,Clone (Shadow),332nd_scenario_Shadow,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Shadow)
 
+    //Captain
     MACRO_NEW_CAPTAIN_UNIT(332nd_captain,Clone Captain,332nd_captain,captain\Captain_Upper.paa,captain\Captain_Lower.paa)
+
+    //Assault
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_trooper,Assault Trooper,332nd_assault_trooper)
 
 
     //Custom ----------------------------------------

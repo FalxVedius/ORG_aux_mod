@@ -81,6 +81,8 @@ class CfgVehicles
 
 				turretInfoType = "RscOptics_MBT_01_gunner";
 
+				stabilizedInAxes = 3;
+
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(RX155_40mm),

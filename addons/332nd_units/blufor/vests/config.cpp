@@ -25,6 +25,10 @@ class CfgWeapons
     /// ---- Vests ----
 
     class V_PlateCarrier1_rgr;
+    class 3AS_Katarn_Vest_Demo_Base;
+    class 3AS_Katarn_Vest_Tech_Base;
+    class SWLB_clone_commando_tech_armor_k1;
+
     class JLTS_CloneVestOfficer : V_PlateCarrier1_rgr
     {
         class ItemInfo;
@@ -78,6 +82,14 @@ class CfgWeapons
         class ItemInfo;
     };
     class JLTS_CloneVestPurge : V_PlateCarrier1_rgr
+    {
+        class ItemInfo;
+    };
+    class 3AS_V_Katarn_Vest_Demo : 3AS_Katarn_Vest_Demo_Base
+    {
+        class ItemInfo;
+    };
+    class 3AS_V_Katarn_Vest_Tech : 3AS_Katarn_Vest_Tech_Base
     {
         class ItemInfo;
     };
@@ -807,44 +819,6 @@ class CfgWeapons
     MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(332nd_Airborne_CSPMEDIC_Vest,Medic Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistMedic_ca.paa)
 
 
-    //class MACRO_NEW_VEST(marshal,base) : JLTS_CloneVestLieutenant
-    //{
-    //    scopeArsenal = 0;
-    //    scope = 0;
-    //    author = MACRO_AUTHOR;
-    //    displayName = "[332nd] Infantry Vest ('base')";
-    //
-    //    class ItemInfo : ItemInfo
-    //    {
-    //        containerClass = "Supply210";
-    //        vestType = "Rebreather";
-    //
-    //        class HitpointsProtectionInfo
-    //        {
-    //            class Chest
-    //            {
-    //                HitpointName = "HitChest";
-    //                armor = 0;
-    //                PassThrough = 1;
-    //            };
-    //            class Legs
-    //            {
-    //                hitpointName = "HitLegs";
-    //                armor = 0;
-    //                passThrough = 1;
-    //            };
-    //            class Arms
-    //            {
-    //                hitpointName = "HitArms";
-    //                armor = 0;
-    //                passThrough = 1;
-    //            };
-    //        };
-    //    };
-    //}
-    //MACRO_NEW_MARSHAL_VEST_ITEM(332nd_Marshal_Vest,Marshal)
-
-
     class MACRO_NEW_VEST(purge,base) : JLTS_CloneVestPurge
     {
         scopeArsenal = 0;
@@ -920,6 +894,82 @@ class CfgWeapons
     }
     MACRO_NEW_PURGE_CWO_VEST_ITEM(332nd_CWO5_Vest,CWO-5,cwo\LeadershipKama_ca.paa,cwo\cwo5_vest_upper.paa)
     MACRO_NEW_PURGE_CWO_VEST_ITEM(332nd_CWO4_Vest,CWO-4,cwo\LeadershipKama_ca.paa,cwo\cwo4_vest_upper.paa)
+
+
+    class MACRO_NEW_VEST(assault_demo,base) : 3as_v_katarn_vest_demo
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Assault Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_ASSAULT_DEMO_VEST_ITEM(332nd_Assault_Demo_Vest,Demo *WIP*)
+
+
+    class MACRO_NEW_VEST(assault_tech,base) : 3as_v_katarn_vest_tech
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Assault Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_ASSAULT_TECH_VEST_ITEM(332nd_Assault_Tech_Vest,Tech *WIP*)
 
     /// ---- End
 }

@@ -454,6 +454,7 @@ class CfgVehicles
 					"z_gunL_muzzle",
 					"z_gunR_muzzle"
 				};
+			  stabilizedInAxes = 3;
 			  weapons[] =
 			  {
 			    MACRO_NEW_WEAPON(Saber_High),
@@ -476,6 +477,7 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -554,12 +556,14 @@ class CfgVehicles
 		    
 			class MainTurret_bottom : MainTurret_bottom
 			{
+
 			turretInfoType="RscOptics_MBT_01_gunner";
 			  memoryPointGun[]=
 				{
 					"z_gunL_muzzle",
 					"z_gunR_muzzle"
 				};
+			  stabilizedInAxes = 3;
 			  weapons[] =
 			  {
 			    MACRO_NEW_WEAPON(Saber_High),
@@ -583,6 +587,7 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(BeamLaser_Full)
@@ -659,6 +664,7 @@ class CfgVehicles
 			class MainTurret_bottom : MainTurret_bottom
 			{
 				turretInfoType = "RscOptics_MBT_01_gunner";
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(Saber_20mm)
@@ -743,6 +749,7 @@ class CfgVehicles
 			class Mainturret_super : Mainturret_super
 			{
 				turretInfoType = "RscOptics_MBT_01_gunner";
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(SuperSaber_40mm),

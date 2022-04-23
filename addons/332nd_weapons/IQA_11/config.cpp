@@ -129,7 +129,7 @@ class CfgWeapons
 		
 		class ItemInfo: InventoryMuzzleItem_Base_F
 		{	
-			soundTypeIndex = 1; // index of sound in sounds[] in weapon modes (inherited 1 from parent class)
+			soundTypeIndex = 1; // index of sound in sounds[] in weapon modes (inherited 1 from parent class) READ DIS, DIS BE COOL
 
 			class MagazineCoef
 			{
