@@ -44,6 +44,44 @@ class CfgAmmo
 		maxSpeed = 8000;
 	};
 
+	class Missile_AGM_02_F;
+	class MACRO_NEW_AMMO(R_AGM_Med) : Missile_AGM_02_F
+	{
+		soundengine[] =
+		{
+			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
+			1,
+			1,
+			750
+		};
+		soundfly[] =
+		{
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			1,
+			1.5,
+			200
+		};
+		soundsetsoniccrack[] =
+		{
+			"332nd_genericrocket_flyby_soundset"
+		};
+		model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
+		manualcontrol = 0;
+		effectsMissile = "332nd_aux_effects_missile_Rocket_Dark_Green";
+		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
+		caliber = 1;
+		missileLockMaxDistance = 3000;
+		missileLockMinDistance = 0;
+		missileLockCone = 180;
+		airlock = 0;
+		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
+		missileKeepLockedCone = 180;
+		hit = 85;
+		indirectHit = 35;
+		mass = 2;
+		indirectHitRange = 8;
+	};
+
 };
 	
 
@@ -63,6 +101,18 @@ class CfgMagazines
 		displayNameShort = "A2A Firefly Missiles";
 		ammo = MACRO_NEW_AMMO(R_AA_Low)
 		maxLeadSpeed = 800;
+	};
+
+	class PylonRack_12Rnd_missiles;
+	class MACRO_NEW_MAG(R_Pylon_AGM_Med,12) : PylonRack_12Rnd_missiles
+	{
+		hardpoints[] = { "332_A_Pylon" };
+		displayName = "Micro Missile AGM";
+		count = 12;
+		descriptionshort = "Air to Ground micro Concussion Missile";
+		pylonWeapon = MACRO_NEW_WEAPON(R_AGM_Pylon);
+		displayNameShort = "A2G Micro Missiles";
+		ammo = MACRO_NEW_AMMO(R_AGM_Med)
 	};
 
 };
@@ -88,4 +138,15 @@ class CfgWeapons
 		
 	};
 
+	class Missile_AGM_02_Plane_CAS_01_F;
+	class MACRO_NEW_WEAPON(R_AGM_Pylon) : Missile_AGM_02_Plane_CAS_01_F
+	{
+		magazineWell[] = {};
+		weaponLockDelay = 0.5;
+		magazines[] = {
+			 MACRO_NEW_MAG(R_Pylon_AGM_Med,12),
+		};
+		displayName = "AGMM";
+		lockAcquire = 1;
+	};
 };

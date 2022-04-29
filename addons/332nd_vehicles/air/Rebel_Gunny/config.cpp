@@ -22,83 +22,12 @@ class CfgPatches
 	};
 };
 
-class GunParticles;
-
-class CfgWeapons
-{
-	/*
-	class autocannon_35mm;
-	class gatling_20mm_VTOL_01;
-	class SC_autocannon_35mm: autocannon_35mm
-	{
-		class WeaponSlotsInfo
-		{
-			class SlotInfo;
-		};
-		class GunParticles: GunParticles
-		{
-			class SmokeEffect1
-			{
-				positionName="usti hlavne";
-				directionName="usti hlavne";
-				effectName="MachineGun1";
-			};
-			class SmokeEffect2
-			{
-				positionName="usti hlavne1";
-				directionName="usti hlavne1";
-				effectName="MachineGun1";
-			};
-		};
-		class AnimationSources;
-	};
-	class SC_gatling_20mm_VTOL_01: gatling_20mm_VTOL_01
-	{
-		class WeaponSlotsInfo
-		{
-			class SlotInfo;
-		};
-		class GunParticles: GunParticles
-		{
-			class SmokeEffect1
-			{
-				positionName="usti hlavne";
-				directionName="usti hlavne";
-				effectName="MachineGun1";
-			};
-			class SmokeEffect2
-			{
-				positionName="usti hlavne1";
-				directionName="usti hlavne1";
-				effectName="MachineGun1";
-			};
-		};
-		class AnimationSources;
-	};
-	class Rocket_04_AP_Plane_CAS_01_F;
-	class SC_Rocket_AP_CAS: Rocket_04_AP_Plane_CAS_01_F
-	{
-		magazines[]=
-		{
-			"SC_8Rnd_Rocket_04_AP_F"
-		};
-	};*/
-};
-class CfgMagazines
-{
-	/*
-	class 7Rnd_Rocket_04_AP_F;
-	class SC_8Rnd_Rocket_04_AP_F: 7Rnd_Rocket_04_AP_F
-	{
-		count=8;
-	};*/
-};
 class CfgVehicles
 {
 	class SC_VTOL_X42S_AC;
 	class MACRO_NEW_VEHICLE(air,Gunship,Rebel_mk1_332nd_base) :SC_VTOL_X42S_AC
 	{
-		displayName = "X-42/S Redroid Dropship";
+		displayName = "Dragon Fly";
 		side = 2;
 		faction = "EdCat_332nd_Rebel";
 		editorSubcategory = "EdSubcat_332nd_Rebel_HEIL";
@@ -106,19 +35,16 @@ class CfgVehicles
 		typicalcargo[] = { MACRO_NEW_UNIT(rebel,332nd_indep_rebel) };
 		weapons[] =
 		{
-			"SC_gatling_20mm_VTOL_01",
-			"missiles_DAGR",
-			"missiles_SCALPEL",
-			"missiles_ASRAAM",
+			 MACRO_NEW_WEAPON(Rebel_repeater),
+			 MACRO_NEW_WEAPON(R_AGM_Pylon),
 			"CMFlareLauncher"
 		};
 		magazines[] =
 		{
-			"1000Rnd_20mm_shells",
-			"12Rnd_PG_missiles",
-			"2Rnd_LG_scalpel",
-			"2Rnd_LG_scalpel",
-			"2Rnd_AAA_missiles",
+			 MACRO_NEW_MAG(Rebel_30mm,1000),
+			 MACRO_NEW_MAG(Rebel_30mm,1000),
+			 MACRO_NEW_MAG(Rebel_30mm,1000),
+			 MACRO_NEW_MAG(R_Pylon_AGM_Med,12), //give AGM Dragonflies
 			"120Rnd_CMFlare_Chaff_Magazine"
 		};
 
@@ -137,3 +63,138 @@ class CfgVehicles
 	};
 		
 };
+
+class CfgAmmo
+{
+	class ls_50mm_laat_he;
+	class MACRO_NEW_AMMO(Rebel_30mm) : ls_50mm_laat_he
+	{
+
+		model = "SWLW_main\Effects\laser_red.p3d";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,500};
+		flaresize = 4;
+		caliber = 3;
+		maxLeadSpeed = 2000;
+		allowAgainstInfantry = 1;
+		tracersEvery = 1;
+		cost = 30;
+		hit = 120;
+		explosionEffects = "ATRocketExplosion";
+		indirectHit = 6;
+		mass = 2;
+		indirectHitRange = 0.1;
+		tracerscale = 2;
+
+	}
+
+};
+
+class CfgMagazines
+{
+	class 1000Rnd_25mm_shells;
+	class MACRO_NEW_MAG(Rebel_30mm,1000) : 1000Rnd_25mm_shells
+	{
+		displayName = MACRO_AMMO_DISPLAYNAME(ARC LOW)
+		descriptionshort = "Dragon Fly Repeater";
+		initSpeed = 80;
+		displayNameShort = "Dragon Repeater";
+		ammo = MACRO_NEW_AMMO(Rebel_30mm)
+		tracersEvery = 1;
+		count = 1000;
+	}
+
+};
+
+class CfgWeapons
+{
+	class LowROF;
+	class player;
+	class manual;
+	class Cannon_30mm_Plane_CAS_02_F;
+	class MACRO_NEW_WEAPON(Rebel_repeater) : Cannon_30mm_Plane_CAS_02_F
+	{
+		magazineWell[] = {};
+		magazines[] = {
+			MACRO_NEW_MAG(Rebel_30mm,1000)
+		};
+		modes[] = { "manual","close","short","medium" };
+		ballisticsComputer = 1;
+		displayName = "Dragon Fly Repeater";
+		class manual : LowROF
+		{
+			displayname = "Full";
+			burst = 1;
+			magazineReloadTime = 6;
+			autoReload = 1;
+			reloadTime = 0.1;
+			dispersion = 0.002;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"332nd_vehicle_weapons\air\sounds\Vulture_Cannon.wss",
+					1.5,
+					0.95,
+					6000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1
+				};
+			};
+		};
+		class close : manual
+		{
+			aiDispersionCoefX = 2.0
+				aiDispersionCoefY = 2.0
+				burst = 50;
+			aiRateOfFire = 0.1;
+			aiRateOfFireDistance = 50;
+			minRange = 10;
+			minRangeProbab = 0.050000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 0;
+		};
+		class short : close
+		{
+			aiDispersionCoefX = 2.0
+			aiDispersionCoefY = 2.0
+			burst = 30;
+			aiRateOfFire = 0.1;
+			aiRateOfFireDistance = 300;
+			minRange = 50;
+			minRangeProbab = 0.050000001;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.039999999;
+		};
+		class medium : close
+		{
+			aiDispersionCoefX = 2.0
+				aiDispersionCoefY = 2.0
+				burst = 30;
+			aiRateOfFire = 0.1;
+			aiRateOfFireDistance = 600;
+			minRange = 200;
+			minRangeProbab = 0.050000001;
+			midRange = 300;
+			midRangeProbab = 0.69999999;
+			maxRange = 2000;
+			maxRangeProbab = 0.1;
+		};
+	};
+
+};
+
+
+	
+

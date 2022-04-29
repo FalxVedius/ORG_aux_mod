@@ -56,7 +56,8 @@ class CfgVehicles
 			{
 				weapons[] =
 				{
-					"332nd_aux_weapon_R_Z90"
+					"332nd_aux_weapon_R_Z90",
+					
 				};
 				magazines[] =
 				{
@@ -69,6 +70,53 @@ class CfgVehicles
 			};
 			   
 	   };
+
+		class Components;
+		class Components : Components
+		{
+			class TransportPylonsComponent
+			{
+				uiPicture = "a3\air_f_gamma\plane_fighter_03\data\ui\plane_a143_3den_ca.paa";
+				class Pylons
+				{
+					class Pylons1
+					{
+						hardpoints[] =
+						{
+							"332_A_Pylon"
+						};
+						attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
+						priority = 5;
+						maxweight = 1200;
+						UIposition[] = { 0.34999999,0.15000001 };
+					};
+					class Pylons2 : Pylons1
+					{
+						maxweight = 1200;
+						UIposition[] = { 0.34999999,-0.15000001 };
+					};
+					
+				};
+				class Presets
+				{
+					class Empty
+					{
+						displayName = "Empty";
+						attachment[] = {};
+					};
+					class Default
+					{
+						displayName = "Default";
+						attachment[] =
+						{
+							"332nd_aux_magazine_R_Pylon_AA_low_x12",
+							"332nd_aux_magazine_R_Pylon_AA_low_x12"
+						};
+					};
+				};
+			};
+		};
+
 
 	};
 

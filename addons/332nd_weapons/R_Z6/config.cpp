@@ -42,7 +42,7 @@ class cfgWeapons
 	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(R_Z90) : JLTS_Z6
 	{
-		scope = 2;
+		scope = 0;
 		displayName = MACRO_WEAPON_DISPLAYNAME(Z90)
 		reloadTime = 0.1;
 		ACE_Overheating_mrbs = 300000;
