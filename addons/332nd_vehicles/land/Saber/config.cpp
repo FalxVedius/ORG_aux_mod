@@ -819,9 +819,6 @@ class CfgVehicles
 					 MACRO_NEW_MAG(SuperSaber_AP,2),
 					 MACRO_NEW_MAG(SuperSaber_AP,2),
 					 MACRO_NEW_MAG(SuperSaber_40mm,140),
-					 MACRO_NEW_MAG(SuperSaber_40mm,140),
-					 MACRO_NEW_MAG(SuperSaber_40mm,140),
-					 MACRO_NEW_MAG(SuperSaber_40mm,140),
 					 MACRO_NEW_MAG(SuperSaber_40mm,140)
 				};
 			};

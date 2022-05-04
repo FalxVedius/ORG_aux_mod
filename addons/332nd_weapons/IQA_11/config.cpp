@@ -48,6 +48,7 @@ class CfgAmmo
 	};
 };
 
+
 class CfgMagazines
 {
 	class  SWLW_sniper_Mag;
@@ -94,6 +95,34 @@ class CfgMagazines
 		};
 	};
 };
+
+
+class CfgFunctions
+{
+	class Aux332nd
+	{
+		class FirePuncher_Sounds
+		{
+			file = "\332nd_weapons\IQA_11";
+			class Fired_FirePuncher_Sound
+			{
+			};
+		};
+	};
+};
+
+
+class CfgSounds
+{
+	sounds[] = {};
+	class FirePuncher_Bolt_Sound
+	{
+		name = "FirePuncher-Bolt-Sound";
+		sound[] = { "\sounds\FirePuncherBolt.ogg", db + 250, 1.0, 20 };
+	};
+};
+
+
 class BaseSoundModeType;
 class Mode_SemiAuto;
 class Mode_FullAuto;
@@ -180,21 +209,15 @@ class CfgWeapons
 			"\3AS\3AS_Weapons\WestarM5\Data\Anim\WestarM5_handanim.rtm"
 		};
 
-		//hiddenSelections[]=
-		//{
-		//	"camo1","camo2"
-		//};
-		//hiddenSelectionsTextures[]=
-		//{
-		//	"\332nd_weapons\Firepuncher\data\UV1_co.paa","\332nd_weapons\Firepuncher\data\UV2_co.paa"
-		//};
+		recoil = "recoil_dmr_05";
+		recoilprone = "recoil_prone_dmr_05";
 
 		magazines[]=
 		{
 			MACRO_NEW_MAG(Firepuncher,8),
 			MACRO_NEW_MAG(Firepuncher_T,8)
 		};
-		displayName = MACRO_WEAPON_DISPLAYNAME(*TEST* Firepuncher)
+		displayName = MACRO_WEAPON_DISPLAYNAME(Firepuncher)
 		descriptionShort="";
 		maxZeroing=2500;
 		initspeed=2500;
@@ -243,7 +266,7 @@ class CfgWeapons
 			{
 				soundSetShot[] = {"332_Suppresed_Firepuncher_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
 			};
-			reloadTime=0.40;
+			reloadTime=1.2;
 			dispersion=0.000001;
 			minRange=2;
 			minRangeProbab=0.30000001;
@@ -310,6 +333,11 @@ class CfgWeapons
 				compatibleItems[] = {};
 			};
 			mass = 130;
+		};
+
+		class EventHandlers
+		{
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_FirePuncher_Sound;";
 		};
 	};
 };

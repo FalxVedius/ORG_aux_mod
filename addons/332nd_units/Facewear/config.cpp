@@ -78,6 +78,175 @@ class CfgGlasses
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 	};
 
+	class 332nd_LowProfile : G_Tactical_Black
+	{
+		displayName = "[332nd] Low Profile";
+		model = "\A3\characters_f_beta\heads\glasses\g_lowprofile";
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "\a3\characters_f\heads\glasses\data\lowprofile_black_ca.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Scarf : G_Tactical_Black
+	{
+		displayName = "[332nd] Scarf";
+		model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\SWLB_CEE\data\SWLB_CEE_Scarf_Co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Scarf_blue : G_Tactical_Black
+	{
+		displayName = "[332nd] Scarf (Blue)";
+		model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "SWLB_CEE\data\SWLB_CEE_Scarf_Blue.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Scarf_green : G_Tactical_Black
+	{
+		displayName = "[332nd] Scarf (Green)";
+		model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "SWLB_CEE\data\SWLB_CEE_Scarf_Green.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Scarf_orange : G_Tactical_Black
+	{
+		displayName = "[332nd] Scarf (Orange)";
+		model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "SWLB_CEE\data\SWLB_CEE_Scarf_Orange.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Scarf_red : G_Tactical_Black
+	{
+		displayName = "[332nd] Scarf (Red)";
+		model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "SWLB_CEE\data\SWLB_CEE_Scarf_Red.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Scarf_white : G_Tactical_Black
+	{
+		displayName = "[332nd] Scarf (White)";
+		model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "SWLB_CEE\data\SWLB_CEE_Scarf_White.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class lsd_gar_republicCommando_hud;
+	class 332nd_Commando_HUD : lsd_gar_republicCommando_hud
+	{
+		displayName = "[332nd] Republic Commando HUD";
+		model = "\A3\Weapons_f\DummyNVG";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		ACE_Overlay = "\SWLB_equipment\facewears\data\RC_HUD_ca.paa";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_OverlayCracked = "\SWLB_equipment\facewears\data\RC_HUD_cracked_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class lsd_gar_p2Interior_hud;
+	class 332nd_P2_HUD : lsd_gar_p2Interior_hud
+	{
+		displayName = "[332nd] P2 HUD";
+		model = "\A3\Weapons_f\DummyNVG";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		ACE_Overlay = "\SWLB_equipment\facewears\data\P2_HUD_ca.paa";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_OverlayCracked = "\SWLB_equipment\facewears\data\P2_HUD_cracked_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_RangeFinder_ls : G_Tactical_Black
+	{
+		displayName = "[332nd] Rangefinder";
+		model = "\SWLB_clones\SWLB_clone_rangefinder_off.p3d";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_assault_Ant : G_Tactical_Black
+	{
+		displayName = "[332nd] Antenna";
+		model = "\SWLB_clones_spec\SWLB_clone_commando_nvg_antenna.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "SWLB_clones_spec\data\helmet_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_mando_rangefinder : G_Tactical_Black
+	{
+		displayName = "[332nd] Mando Rangefinder";
+		model = "\ls_equipment_greenfor\nvg\mandalorian\rangefinder\ls_mandalorian_rangefinder_nvg_off.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\ls_armor_greenfor\helmet\mandalorian\original\data\original_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_LowVisor : G_Tactical_Black
+	{
+		displayName = "[332nd] Lowered Visor (White)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\White_nvg.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_LowVisor_Orange : G_Tactical_Black
+	{
+		displayName = "[332nd] Lowered Visor (Orange)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Orange_nvg.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_LowVisor_Grey : G_Tactical_Black
+	{
+		displayName = "[332nd] Lowered Visor (Grey)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_on.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Grey_nvg.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
 	class 332nd_RangeFinder_Black : G_Tactical_Black
 	{
 		displayName = "[332nd] Rangefinder (Black)";
@@ -91,7 +260,7 @@ class CfgGlasses
 
 	class 332nd_CC_Visor : G_Tactical_Black
 	{
-		displayName = "[332nd] Commander Visor";
+		displayName = "[332nd] Sun Visor";
 		model = "\MRC\JLTS\characters\CloneArmor\CloneNVGCC.p3d";
 		hiddenSelections[] = { "camo1" };
 		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_visor_co.paa" };
@@ -105,29 +274,29 @@ class CfgGlasses
 		displayName = "[332nd] NVG Visor (White)";
 		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
 		hiddenSelections[] = { "camo1" };
-		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\White_nvg.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 	};
 
-	class 332nd_NVG_Visor_Black : G_Tactical_Black
+	class 332nd_NVG_Visor_Orange : G_Tactical_Black
 	{
 		displayName = "[332nd] NVG Visor (Black)";
 		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
 		hiddenSelections[] = { "camo1" };
-		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_nvg_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Orange_nvg.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 	};
 
-	class 332nd_MC_Visor : G_Tactical_Black
+	class 332nd_NVG_Visor_Grey : G_Tactical_Black
 	{
-		displayName = "[332nd] Marshal Commander Visor";
-		model = "\MRC\JLTS\characters\CloneArmor\CloneNVGMC.p3d";
+		displayName = "[332nd] NVG Visor (Black)";
+		model = "\MRC\JLTS\characters\CloneArmor\CloneNVG_off.p3d";
 		hiddenSelections[] = { "camo1" };
-		hiddenSelectionsTextures[] = { "\MRC\JLTS\characters\CloneArmor\data\Clone_nvg_visor_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Grey_nvg.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
@@ -153,62 +322,5 @@ class CfgGlasses
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
-	};
-
-	class 332_PonchoBase: ls_misc_poncho_facewear
-	{
-		displayName="[332nd] Base Poncho";
-		model="\ls_equipment_bluefor\_misc\poncho\ls_misc_poncho.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\ls_armor_greenfor\vest\misc\poncho\data\base_co.paa"};
-		ACE_Overlay="";
-	};
-	class 332_PatternV1Blue: ls_misc_poncho_facewear
-	{
-		displayName="[332nd] Pattern 1 (Blue) Poncho";
-		model="\ls_equipment_bluefor\_misc\poncho\ls_misc_poncho.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\ls_armor_greenfor\vest\misc\poncho\data\peace_blue_co.paa"};
-		ACE_Overlay="";
-	};
-	class 332_PatternV1Green: ls_misc_poncho_facewear
-	{
-		displayName="[332nd] Pattern 1 (Green) Poncho";
-		model="\ls_equipment_bluefor\_misc\poncho\ls_misc_poncho.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\ls_armor_greenfor\vest\misc\poncho\data\peace_green_co.paa"};
-		ACE_Overlay="";
-	};
-	class 332_PatternV1Red: ls_misc_poncho_facewear
-	{
-		displayName="[332nd] Pattern 1 (Red) Poncho";
-		model="\ls_equipment_bluefor\_misc\poncho\ls_misc_poncho.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\ls_armor_greenfor\vest\misc\poncho\data\peace_red_co.paa"};
-		ACE_Overlay="";
-	};
-	class 332_PatternV2Blue: ls_misc_poncho_facewear
-	{
-		displayName="[332nd] Pattern 2 (Blue) Poncho";
-		model="\ls_equipment_bluefor\_misc\poncho\ls_misc_poncho.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\ls_armor_greenfor\vest\misc\poncho\data\sidestripe_blue_co.paa"};
-		ACE_Overlay="";
-	};
-	class 332_PatternV2Brown: ls_misc_poncho_facewear
-	{
-		displayName="[332nd] Pattern 2 (Brown) Poncho";
-		model="\ls_equipment_bluefor\_misc\poncho\ls_misc_poncho.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\ls_armor_greenfor\vest\misc\poncho\data\sidestripe_brown_co.paa"};
-		ACE_Overlay="";
-	};
-	class 332_PatternV2White: ls_misc_poncho_facewear
-	{
-		displayName="[332nd] Pattern 2 (White) Poncho";
-		model="\ls_equipment_bluefor\_misc\poncho\ls_misc_poncho.p3d";
-		hiddenSelections[] = {"camo1"};
-		hiddenSelectionsTextures[] = {"\ls_armor_greenfor\vest\misc\poncho\data\sidestripe_white_co.paa"};
-		ACE_Overlay="";
 	};
 };

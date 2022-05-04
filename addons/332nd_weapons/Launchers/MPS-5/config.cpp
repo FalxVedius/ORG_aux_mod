@@ -484,7 +484,7 @@ class CfgMagazines
 		descriptionShort = "60mm HE Shell<br/>For use in the MPS-5 mortar";
 		displayNameShort = "HE";
 		count = 1;
-		mass = 30;
+		mass = 20;
 		initSpeed = 110;
 		ammo = MACRO_NEW_AMMO(MPS_HE);
 		picture = "\z\potato\addons\vz99\ui\shell_ca.paa";
