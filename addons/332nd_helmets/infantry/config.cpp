@@ -34,7 +34,6 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Poseidon),
 			MACRO_NEW_HELMET(infantry,Frost),
 			MACRO_NEW_HELMET(infantry,Marshal),
-			MACRO_NEW_HELMET(infantry,Lasagna),
 			MACRO_NEW_HELMET(infantry,Aspect),
 			MACRO_NEW_HELMET(infantry,Beat),
 			MACRO_NEW_HELMET(infantry,Grass),
@@ -92,7 +91,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Frost,Frost,Frost.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deserter,Deserter,332nd_Rebal_Helmet_phase_2_ca.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Marshal,Marshal,Marshal.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Lasagna,Webs,Lasagna.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Aspect,Aspect,Aspect.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Beat,Beat,Beat.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Grass,Grass,Grass.paa)

@@ -127,6 +127,8 @@ class CfgPatches
             MACRO_NEW_UNIT(cwo,Halligan),
             //Cutter
             MACRO_NEW_UNIT(aviation,Cutter),
+            //Riddle
+            MACRO_NEW_UNIT(captain,Riddle),
 
 		};
 		weapons[] = {
@@ -246,6 +248,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(cwo,Halligan),
             //Cutter
             MACRO_NEW_UNIFORM(aviation,Cutter),
+            //Riddle
+            MACRO_NEW_UNIFORM(captain,Riddle),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -473,6 +477,8 @@ class CfgWeapons
     MACRO_NEW_CWO_UNIFORM_ITEM(Halligan,Halligan,Halligan)
     //Cutter
     MACRO_NEW_AVI_UNIFORM_ITEM(Cutter,Cutter,Cutter)
+    //Riddle
+    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Riddle,Riddle,Riddle)
 
 
     #include "_nvg.hpp"
@@ -633,5 +639,7 @@ class CfgVehicles
     MACRO_NEW_CWO_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
     //Cutter
     MACRO_NEW_AVI_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
+    //Riddle
+    MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Captain_Lower.paa)
 
 };
