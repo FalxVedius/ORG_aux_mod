@@ -438,12 +438,6 @@ class CfgVehicles
 		armor = 400;
 		armorStructural = 5;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
-		};
-
 		class Turrets : Turrets
 		{
 			class MainTurret_bottom : MainTurret_bottom
@@ -544,12 +538,6 @@ class CfgVehicles
 
 		armor = 400;
 		armorStructural = 5;
-
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Grenade_Launcher_Variant.paa"
-		};
 
 		class Turrets : Turrets
 		{
@@ -653,12 +641,6 @@ class CfgVehicles
 		armor = 400;
 		armorStructural = 5;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Scout_Weapons.paa"
-		};
-
 		class Turrets : Turrets
 		{
 			class MainTurret_bottom : MainTurret_bottom
@@ -737,12 +719,6 @@ class CfgVehicles
 
 		armor = 400;
 		armorStructural = 5;
-
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
-		};
 
 		class Turrets : Turrets
 		{

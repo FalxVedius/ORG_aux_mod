@@ -165,11 +165,6 @@ class CfgVehicles
 
 		transportSoldier = 10;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\RTT\RTT_Body_co.paa"
-		};
-
 		accelAidForceYOffset = -1;
 		antiRollbarForceCoef = 48;
 		antiRollbarForceLimit = 106;
@@ -282,11 +277,6 @@ class CfgVehicles
 		ace_refuel_fuelCapacity = 1400;
 		ace_refuel_flowRate = 4;
 		ace_refuel_canReceive = 1;
-
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\RTT\RTT_Body_co.paa"
-		};
 
 		accelAidForceYOffset = -1;
 		antiRollbarForceCoef = 48;
