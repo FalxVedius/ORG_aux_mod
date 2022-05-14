@@ -132,6 +132,13 @@
 			displayName = [332nd] Arc Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arc\##texture};\
 		};
+	#define MACRO_NEW_ASSAULT_HELMET_ITEM(classname,displayname)\
+		class MACRO_NEW_HELMET(assault,classname): MACRO_NEW_HELMET(assault,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Assault Helmet ('##displayname##');\
+		};
 	
 
 	// ---- Uniforms ---- 
@@ -307,6 +314,17 @@
 			class ItemInfo : ItemInfo\
 			{\
 				uniformClass = MACRO_NEW_UNIT(captain,uniformClassname); \
+			}; \
+		};
+	#define MACRO_NEW_ASSAULT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIFORM(assault,classname): MACRO_NEW_UNIFORM(assault,base)\
+		{\
+			displayName = [332nd] Assault Uniform ('##displayname##');\
+			scope = 2;\
+			scopeArsenal = 2;\
+			class ItemInfo : ItemInfo\
+			{\
+				uniformClass = MACRO_NEW_UNIT(assault,uniformClassname); \
 			}; \
 		};
 
@@ -672,6 +690,16 @@
 				MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##lower,\
 				"\MRC\JLTS\characters\CloneArmor\data\Clone_rank_co.paa"\
 			};\
+		}
+	#define MACRO_NEW_ASSAULT_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(assault,classname): MACRO_NEW_UNIT(assault,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(assault,uniformClassname);\
+			hiddenSelections[] = {"camo","camo1"};\
 		}
 
 
@@ -1074,6 +1102,20 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] CWO Vest ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture2};\
+		};
+	#define MACRO_NEW_ASSAULT_DEMO_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(assault_demo,classname): MACRO_NEW_VEST(assault_demo,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Assault Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_ASSAULT_TECH_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(assault_tech,classname): MACRO_NEW_VEST(assault_tech,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Assault Vest ('##displayname##');\
 		};
 
 // ============================================================================== Macro Predefined Equipments

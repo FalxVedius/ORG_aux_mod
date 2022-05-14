@@ -165,10 +165,50 @@ class CfgVehicles
 
 		transportSoldier = 10;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\RTT\RTT_Body_co.paa"
-		};
+		accelAidForceYOffset = -1;
+		antiRollbarForceCoef = 48;
+		antiRollbarForceLimit = 106;
+		antiRollbarSpeedMax = 160;
+		antiRollbarSpeedMin = 0;
+		brakeDistance = 10;
+		brakeIdleSpeed = 1.78;
+		brakeTorque = 6000;
+		clutchStrength = 55;
+		centreBias = 1.3;
+		coefInside = 2;
+		coefInsideHeur = 2;
+		coefSpeedInside = 1;
+		damperDamping = 1;
+		damperForce = 1;
+		dampersBumpCoef = 6;
+		damperSize = 0.1;
+		dampingRateFullThrottle = 0.08;
+		dampingRateZeroThrottleClutchDisengaged = 0.35;
+		dampingRateZeroThrottleClutchEngaged = 2;
+		enginePower = 200;
+		peakTorque = 1450;
+		engineStartSpeed = 1.5;
+		epeImpulseDamageCoef = 15;
+		frontBias = 1.3;
+		frontRearSplit = 0.5;
+		impactEffectSpeedLimit = 8;
+		limitedSpeedCoef = 0.5;
+		longStiff = 15000;
+		maxGForce = 3;
+		maxSpeed = 60;
+		maxOmega = 320;
+		maxFordingDepth = 0.5;
+		normalSpeedForwardCoef = 0.85;
+		numberPhysicalWheels = 6;
+		rearBias = 1.3;
+		slowSpeedForwardCoef = 0.3;
+		steerAheadPlan = 0.35;
+		steerAheadSimul = 0.5;
+		tracksSpeed = 0;
+		thrustDelay = 0.5;
+		turnCoef = 4;
+
+
 
 		class Turrets : Turrets
 		{
@@ -213,6 +253,8 @@ class CfgVehicles
 
 			};
 		};
+
+		
 	};
 
 	class MACRO_NEW_VEHICLE(Land,RTT,Supply) : 3as_RTT
@@ -229,14 +271,58 @@ class CfgVehicles
 
 		transportSoldier = 0;
 		attendant = true;
-		transportAmmo = 300000;
-		transportFuel = 3000;
-		transportRepair = 200000000;
+		ace_rearm_defaultSupply = 300000;
+		ace_refuel_fuelCargo = 3000;
+		ace_repair_canRepair = 1;
+		ace_refuel_fuelCapacity = 1400;
+		ace_refuel_flowRate = 4;
+		ace_refuel_canReceive = 1;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\RTT\RTT_Body_co.paa"
-		};
+		accelAidForceYOffset = -1;
+		antiRollbarForceCoef = 48;
+		antiRollbarForceLimit = 106;
+		antiRollbarSpeedMax = 160;
+		antiRollbarSpeedMin = 0;
+		brakeDistance = 10;
+		brakeIdleSpeed = 1.78;
+		brakeTorque = 6000;
+		clutchStrength = 55;
+		centreBias = 1.3;
+		coefInside = 2;
+		coefInsideHeur = 2;
+		coefSpeedInside = 1;
+		damperDamping = 1;
+		damperForce = 1;
+		dampersBumpCoef = 6;
+		damperSize = 0.1;
+		dampingRateFullThrottle = 0.08;
+		dampingRateZeroThrottleClutchDisengaged = 0.35;
+		dampingRateZeroThrottleClutchEngaged = 2;
+		enginePower = 200;
+		peakTorque = 1450;
+		engineStartSpeed = 1.5;
+		epeImpulseDamageCoef = 15;
+		frontBias = 1.3;
+		frontRearSplit = 0.5;
+		idleRpm = 600;
+		impactEffectSpeedLimit = 8;
+		limitedSpeedCoef = 0.5;
+		longStiff = 15000;
+		maxGForce = 3;
+		maxSpeed = 60;
+		maxOmega = 320;
+		maxFordingDepth = 0.5;
+		normalSpeedForwardCoef = 0.85;
+		numberPhysicalWheels = 6;
+		redRpm = 3000;
+		rearBias = 1.3;
+		slowSpeedForwardCoef = 0.3;
+		steerAheadPlan = 0.35;
+		steerAheadSimul = 0.5;
+		tracksSpeed = 0;
+		thrustDelay = 0.5;
+		turnCoef = 4;
+
 
 		class Turrets : Turrets
 		{

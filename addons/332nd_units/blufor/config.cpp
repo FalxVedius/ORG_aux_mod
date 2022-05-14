@@ -114,6 +114,8 @@ class CfgPatches
 
             MACRO_NEW_UNIT(captain,332nd_captain),
 
+            MACRO_NEW_UNIT(assault,332nd_assault_trooper),
+
 
             //Custom ------------------------
 
@@ -125,6 +127,10 @@ class CfgPatches
             MACRO_NEW_UNIT(cwo,Halligan),
             //Cutter
             MACRO_NEW_UNIT(aviation,Cutter),
+            //Riddle
+            MACRO_NEW_UNIT(captain,Riddle),
+            //Hoggy
+            MACRO_NEW_UNIT(infantry,Hoggy),
 
 		};
 		weapons[] = {
@@ -231,6 +237,8 @@ class CfgPatches
 
             MACRO_NEW_UNIFORM(captain,332nd_captain),
 
+            MACRO_NEW_UNIFORM(assault,332nd_assault_trooper),
+
 
             //Custom ------------------------
 
@@ -242,6 +250,10 @@ class CfgPatches
             MACRO_NEW_UNIFORM(cwo,Halligan),
             //Cutter
             MACRO_NEW_UNIFORM(aviation,Cutter),
+            //Riddle
+            MACRO_NEW_UNIFORM(captain,Riddle),
+            //Hoggy
+            MACRO_NEW_UNIFORM(infantry,Hoggy),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -262,6 +274,7 @@ class CfgWeapons
 {
     class JLTS_CloneArmor;
     class JLTS_CloneArmorMC;
+    class 3as_U_rep_katarn_armor;
 
     class MACRO_NEW_UNIFORM(recruit,base) : JLTS_CloneArmor
     {
@@ -328,6 +341,11 @@ class CfgWeapons
     };
 
     class MACRO_NEW_UNIFORM(captain,base) : JLTS_CloneArmorMC
+    {
+        class ItemInfo;
+    };
+
+    class MACRO_NEW_UNIFORM(assault,base) : 3as_U_rep_katarn_armor
     {
         class ItemInfo;
     };
@@ -449,6 +467,9 @@ class CfgWeapons
     //Captain Armor
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(332nd_captain,Captain,332nd_captain)
 
+    //Assault Armor
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_trooper,Trooper *WIP*,332nd_assault_trooper)
+
 
     //Custom ----------------------------------------
 
@@ -460,7 +481,10 @@ class CfgWeapons
     MACRO_NEW_CWO_UNIFORM_ITEM(Halligan,Halligan,Halligan)
     //Cutter
     MACRO_NEW_AVI_UNIFORM_ITEM(Cutter,Cutter,Cutter)
-
+    //Riddle
+    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Riddle,Riddle,Riddle)
+    //Hoggy
+    MACRO_NEW_INF_UNIFORM_ITEM(Hoggy,Hoggy,Hoggy)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -484,6 +508,8 @@ class CfgVehicles
     class MACRO_NEW_UNIT(arfwood,base);
 
     class MACRO_NEW_UNIT(scenario,base);
+
+    class MACRO_NEW_UNIT(assault,base);
 
 
     //Recruit
@@ -601,7 +627,11 @@ class CfgVehicles
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Purge,Clone (Purge),332nd_scenario_Purge,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneArmor2\data\Clone_PurgeTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Purge)
     MACRO_NEW_SCENARIO_UNIT(332nd_scenario_Shadow,Clone (Shadow),332nd_scenario_Shadow,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor1_co.paa,\MRC\JLTS\characters\CloneLegions\data\Clone_ShadowTrooper_armor2_co.paa,332nd_aux_scenario_helmet_332nd_scenario_Shadow)
 
+    //Captain
     MACRO_NEW_CAPTAIN_UNIT(332nd_captain,Clone Captain,332nd_captain,captain\Captain_Upper.paa,captain\Captain_Lower.paa)
+
+    //Assault
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_trooper,Assault Trooper,332nd_assault_trooper)
 
 
     //Custom ----------------------------------------
@@ -614,5 +644,9 @@ class CfgVehicles
     MACRO_NEW_CWO_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
     //Cutter
     MACRO_NEW_AVI_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
+    //Riddle
+    MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Captain_Lower.paa)
+    //Hoggy
+    MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,officer\Officer_Lower.paa)
 
 };

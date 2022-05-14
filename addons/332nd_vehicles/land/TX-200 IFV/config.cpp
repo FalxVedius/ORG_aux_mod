@@ -75,12 +75,18 @@ class CfgVehicles
 		antiRollbarForceLimit = 106;
 		antiRollbarSpeedMax = 160;
 
+		transportSoldier = 12;
+
+		cargoAction[] = { "passenger_apc_narrow_generic02","passenger_apc_narrow_generic03","passenger_apc_generic02","passenger_apc_generic04","passenger_apc_narrow_generic01","passenger_generic01_foldhands","passenger_generic01_leanleft","passenger_generic01_leanright", "passenger_apc_narrow_generic02","passenger_apc_narrow_generic03","passenger_apc_generic02","passenger_apc_generic04","passenger_apc_narrow_generic01","passenger_generic01_foldhands","passenger_generic01_leanleft","passenger_generic01_leanright" };
+
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
 			{
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
 				turretInfoType = "RscOptics_MBT_01_gunner";
+
+				stabilizedInAxes = 3;
 
 				weapons[] =
 				{
@@ -118,6 +124,8 @@ class CfgVehicles
 					{
 
 						turretInfoType = "RscOptics_MBT_01_commander";
+
+						stabilizedInAxes = 3;
 
 						weapons[] =
 						{

@@ -17,36 +17,6 @@ class CfgPatches
 		weapons[]={};
 	};
 };
-class CfgSounds
-{
-	class TAS_Clamps
-	{
-		name="$STR_A3_FIRING_DRILLS_SFX_FINISH";
-		sound[]=
-		{
-			"3AS\3AS_LAATC\data\SFX\clamp.wss",
-			1,
-			1
-		};
-		titles[]={};
-	};
-};
-class CfgFunctions
-{
-	class TAS
-	{
-		class CargoLift
-		{
-			file="3AS\3AS_LAATC\fnc";
-			class MagLift
-			{
-			};
-			class MagDrop
-			{
-			};
-		};
-	};
-};
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
 class SensorTemplateActiveRadar;
@@ -116,6 +86,14 @@ class CfgVehicles
 		author="332nd Aux Team";
 		_generalMacro="332_laat_C";
 		scope=2;
+
+		attendant = true;
+		ace_rearm_defaultSupply = 300000;
+		ace_refuel_fuelCargo = 3000;
+		ace_repair_canRepair = 1;
+		ace_refuel_fuelCapacity = 1400;
+		ace_refuel_flowRate = 4;
+		ace_refuel_canReceive = 1;
 
 
 		hiddenSelections[] = 
@@ -229,709 +207,371 @@ class CfgVehicles
 		crewCrashProtection=1;
 		explosionShielding=0.33000001;
 		epeImpulseDamageCoef=0;
-		soundEngineOnInt[]=
+		soundengineonint[] =
 		{
-			"3as\3as_laat\sounds\LAAT_Start.ogg",
-			"1/2",
+			"332nd_weapons\sounds\vehicles\LAAT\int_start.wss",
+			1,
 			1
 		};
-		soundEngineOnExt[]=
+		soundengineonext[] =
 		{
-			"3as\3as_laat\sounds\LAAT_Start.ogg",
-			"1*1.5",
+			"332nd_weapons\sounds\vehicles\LAAT\ext_start.wss",
+			1,
 			1,
 			300
 		};
-		soundEngineOffInt[]=
+		soundengineoffint[] =
 		{
-			"3as\3as_laat\sounds\LAAT_End.ogg",
-			"1/2",
+			"\332nd_weapons\sounds\vehicles\LAAT\Int_Off.wss",
+			1,
 			1
 		};
-		soundEngineOffExt[]=
+		soundengineoffext[] =
 		{
-			"3as\3as_laat\sounds\LAAT_End.ogg",
-			"1*1.5",
+			"\332nd_weapons\sounds\vehicles\LAAT\Ext_Off.wss",
+			1,
 			1,
 			300
 		};
-		class Sounds
+
+
+		class sounds
 		{
-			class EngineExt
+			class engineext
 			{
-				sound[]=
+				sound[] =
 				{
-					"3as\3as_laat\sounds\LAAT_Idle.ogg",
-					1.7782794,
+					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					1.5,
 					1,
-					800
+					300
 				};
-				frequency="rotorSpeed";
-				volume="2 * camPos * (0 max (rotorSpeed-0.4))";
+				frequency = "rotorspeed";
+				volume = "campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 			};
-			class RotorExt
+			class rotorext
 			{
-				sound[]=
+				sound[] =
 				{
-					"3as\3as_laat\sounds\LAAT_Idle.ogg",
-					1.4125376,
-					0.80000001,
-					2000
-				};
-				frequency="rotorSpeed*1.1";
-				volume="camPos*(((((-speed*3.6) max speed*3.6)/ 900) factor[(((-0) max 0)/ 900),(((-150) max 500)/ 900)]) * ((((-speed*3.6) max speed*3.6)/ 900) factor[(((-250) max 500)/ 900),(((-200) max 500)/ 900)])) / 3";
-				cone[]={1.6,3.1400001,1.6,0.94999999};
-			};
-			class RotorSwistExt
-			{
-				sound[]=
-				{
-					"3as\3as_laat\sounds\LAAT_Impulse.ogg",
-					2,
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_close.wss",
+					1.6,
 					1,
-					2000
+					300
 				};
-				frequency=1;
-				volume="2 * camPos*(((((-speed*3.6) max speed*3.6)/ 900) factor[(((-0) max 300)/ 900),(((-150) max 900)/ 900)]) * ((((-speed*3.6) max speed*3.6)/ 900) factor[(((-250) max 900)/ 900),(((-200) max 900)/ 900)]))";
-				cone[]={1,1.4,1,0};
+				frequency = "(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume = "campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 			};
-			class EngineInt
+			class rotorswist
 			{
-				sound[]=
+				sound[] =
 				{
-					"3as\3as_laat\sounds\\LAAT_Impulse.ogg",
-					0.79432821,
+					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					1,
+					1,
+					400
+				};
+				frequency = 1;
+				volume = "campos * (rotorthrust factor [0.7, 0.9])";
+			};
+			class engineint
+			{
+				sound[] =
+				{
+					"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+					1,
 					1
 				};
-				frequency="rotorSpeed";
-				volume="(1-camPos)*(rotorSpeed factor[0.4,1])";
+				frequency = "rotorspeed";
+				volume = "1*(1-campos)*(0 max (rotorspeed-0.4))";
 			};
-			class RotorInt
+			class rotorint
 			{
-				sound[]=
+				sound[] =
 				{
-					"3as\3as_laat\sounds\LAAT_Idle.ogg",
+					"332nd_weapons\sounds\vehicles\LAAT\Int_rotor.wss",
 					1,
-					0.80000001
-				};
-				frequency="rotorSpeed*1.1";
-				volume="(1-camPos)*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
-			};
-			class TransmissionDamageExt_phase1
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
-					1,
-					1,
-					150
-				};
-				frequency="0.66 + rotorSpeed / 3";
-				volume="camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class TransmissionDamageExt_phase2
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
-					1,
-					1,
-					150
-				};
-				frequency="0.66 + rotorSpeed / 3";
-				volume="camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class TransmissionDamageInt_phase1
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
-					1,
-					1,
-					150
-				};
-				frequency="0.66 + rotorSpeed / 3";
-				volume="(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class TransmissionDamageInt_phase2
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
-					1,
-					1,
-					150
-				};
-				frequency="0.66 + rotorSpeed / 3";
-				volume="(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class damageAlarmInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
-					0.31622776,
 					1
 				};
-				frequency=1;
-				volume="engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
+				frequency = "(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume = "(1 - campos) * (rotorspeed factor [0.3, 0.7]) * (1 + rotorthrust) * 0.7";
 			};
-			class damageAlarmExt
+			class rotorbench
 			{
-				sound[]=
+				sound[] =
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
-					0.22387211,
-					1,
-					20
-				};
-				frequency=1;
-				volume="engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
-			};
-			class rotorLowAlarmInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-					0.31622776,
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.75,
 					1
 				};
-				frequency=1;
-				volume="engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				frequency = "(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+				volume = "(playerpos factor [3.9, 4]) * (1 - campos) * (rotorspeed factor [0.3, 1]) * (1 + rotorthrust) * 0.4";
+				cone[] = { 1.6,3.1400001,1.6,0.94999999 };
 			};
-			class rotorLowAlarmExt
+			class enginebench
 			{
-				sound[]=
+				sound[] =
 				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-					0.22387211,
-					1,
-					20
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.75,
+					1
 				};
-				frequency=1;
-				volume="engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				frequency = "rotorspeed";
+				volume = "(playerpos factor [3.9, 4]) * (1 - campos) * (0 max (rotorspeed-0.4))";
 			};
-			class scrubLandInt
+			class rotornoiseext
 			{
-				sound[]=
+				sound[] =
 				{
-					"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					0.5,
 					1,
-					1,
-					100
+					200
 				};
-				frequency=1;
-				volume="2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+				frequency = 1;
+				volume = "(campos*(rotorspeed factor [0.6, 0.85]))";
+				cone[] = { 1.6,3.1400001,2,0.94999999 };
 			};
-			class scrubLandExt
+			class distance
 			{
-				sound[]=
+				sound[] =
 				{
-					"",
+					"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
 					1,
 					1,
-					100
+					1500
 				};
-				frequency=1;
-				volume="camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+				frequency = "rotorspeed";
+				volume = "2 * campos * (0 max (rotorspeed-0.4))";
 			};
-			class scrubBuildingInt
+			class fardistance
 			{
-				sound[]=
+				sound[] =
 				{
-					"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+					1.25,
 					1,
-					1,
-					100
+					8000
 				};
-				frequency=1;
-				volume="(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+				frequency = "rotorspeed";
+				volume = "campos *3* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 			};
-			class scrubBuildingExt
-			{
-				sound[]=
-				{
-					"",
-					1,
-					1,
-					100
-				};
-				frequency=1;
-				volume="camPos * (scrubBuilding factor[0.02, 0.05])";
-			};
-			class scrubTreeInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
-					1,
-					1,
-					100
-				};
-				frequency=1;
-				volume="(1 - camPos) * ((scrubTree) factor [0, 0.01])";
-			};
-			class scrubTreeExt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
-					1,
-					1,
-					100
-				};
-				frequency=1;
-				volume="camPos * ((scrubTree) factor [0, 0.01])";
-			};
-			class RainExt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\rain1_ext",
-					1,
-					1,
-					100
-				};
-				frequency=1;
-				volume="camPos * (rain - rotorSpeed/2) * 2";
-			};
-			class RainInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\rain1_int",
-					1,
-					1,
-					100
-				};
-				frequency=1;
-				volume="(1-camPos)*(rain - rotorSpeed/2)*2";
-			};
-			class SlingLoadDownExt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
-					1.2589254,
-					1,
-					500
-				};
-				frequency=1;
-				volume="camPos*(slingLoadActive factor [0,-1])";
-			};
-			class SlingLoadUpExt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
-					1.2589254,
-					1,
-					500
-				};
-				frequency=1;
-				volume="camPos*(slingLoadActive factor [0,1])";
-			};
-			class SlingLoadDownInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
-					1,
-					1,
-					500
-				};
-				frequency=1;
-				volume="(1-camPos)*(slingLoadActive factor [0,-1])";
-			};
-			class SlingLoadUpInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
-					1,
-					1,
-					500
-				};
-				frequency=1;
-				volume="(1-camPos)*(slingLoadActive factor [0,1])";
-			};
-			class WindInt
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\air\noises\wind_closed",
-					0.33095738,
-					1,
-					50
-				};
-				frequency=1;
-				volume="(1-camPos)*(speed factor[5, 60])*(speed factor[5, 60])";
-			};
-			class GStress
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\vehicle_stress2c",
-					1.1220185,
-					1,
-					50
-				};
-				frequency=1;
-				volume="engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
-			};
-			class SpeedStress
-			{
-				sound[]=
-				{
-					"A3\Sounds_F\vehicles\noises\vehicle_stress3",
-					1,
-					1,
-					50
-				};
-				frequency=1;
-				volume="(1-camPos)*(speed factor[50,80])";
-			};
+			//class damagealarmint
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+			//		0.75,
+			//		1
+			//	};
+			//	frequency=1;
+			//	volume="engineon * (1 - campos) * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0.0, 0.001])";
+			//};
+			//class damagealarmext
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+			//		1,
+			//		1,
+			//		100
+			//	};
+			//	frequency=1;
+			//	volume="engineon * campos * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0, 0.001])";
+			//};
+			//class rotorlowalarmint
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+			//		0.75,
+			//		1
+			//	};
+			//	frequency=1;
+			//	volume="engineon * (1 - campos) * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			//};
+			//class rotorlowalarmext
+			//{
+			//	sound[]=
+			//	{
+			//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+			//		1,
+			//		1,
+			//		75
+			//	};
+			//	frequency=1;
+			//	volume="engineon * campos * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+			//};
+
 		};
 		class SoundsExt
 		{
-			class SoundEvents
-			{
-			};
-			class Sounds
+			class Sounds : Sounds
 			{
 				class EngineExt
 				{
-					sound[]=
+					sound[] =
 					{
-						"3as\3as_laat\sounds\LAAT_Idle.ogg",
-						1.7782794,
+						"332nd_weapons\sounds\vehicles\LAAT\Engine_Close.wss",
+						1.5,
 						1,
-						800
+						300
 					};
-					frequency="rotorSpeed";
-					volume="2 * camPos * (0 max (rotorSpeed-0.4))";
+					frequency = "rotorspeed";
+					volume = "campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 				};
-				class RotorExt
+				class rotorext
 				{
-					sound[]=
+					sound[] =
 					{
-						"3as\3as_laat\sounds\LAAT_Idle.ogg",
-						1.4125376,
-						0.80000001,
-						2000
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						1.6,
+						1,
+						300
 					};
-					frequency="rotorSpeed*1.1";
-					volume="camPos**(((((-speed*3.6) max speed*3.6)/ 900) factor[(((-0) max 300)/ 900),(((-150) max 900)/ 900)]) * ((((-speed*3.6) max speed*3.6)/ 900) factor[(((-250) max 900)/ 900),(((-200) max 900)/ 900)]))";
-					cone[]={1.6,3.1400001,1.6,0.94999999};
+					frequency = "(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume = "campos *1.5* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 				};
-				class RotorSwistExt
+				class rotorswist
 				{
-					sound[]=
+					sound[] =
 					{
-						"3as\3as_laat\sounds\LAAT_Impulse.ogg",
+						"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
 						1,
 						1,
-						2000
+						200
 					};
-					frequency=1;
-					volume="2 * camPos*(((((-speed*3.6) max speed*3.6)/ 900) factor[(((-0) max 300)/ 900),(((-150) max 900)/ 900)]) * ((((-speed*3.6) max speed*3.6)/ 900) factor[(((-250) max 900)/ 900),(((-200) max 900)/ 900)]))";
-					cone[]={1,1.4,1,0};
+					frequency = 1;
+					volume = "campos * (rotorthrust factor [0.7, 0.9])";
 				};
-				class EngineInt
+				class engineint
 				{
-					sound[]=
+					sound[] =
 					{
-						"3as\3as_laat\sounds\LAAT_Idle.ogg",
-						0.79432821,
+						"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+						1,
 						1
 					};
-					frequency="rotorSpeed";
-					volume="(1-camPos)*(rotorSpeed factor[0.4,1])";
+					frequency = "rotorspeed";
+					volume = "1*(1-campos)*(0 max (rotorspeed-0.4))";
 				};
-				class RotorInt
+				class rotorint
 				{
-					sound[]=
+					sound[] =
 					{
-						"3as\3as_laat\sounds\LAAT_Idle.ogg",
+						"332nd_weapons\sounds\vehicles\LAAT\Int_Rotor.wss",
 						1,
-						0.80000001
-					};
-					frequency="rotorSpeed*1.1";
-					volume="(1-camPos)*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
-				};
-				class TransmissionDamageExt_phase1
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
-						1,
-						1,
-						150
-					};
-					frequency="0.66 + rotorSpeed / 3";
-					volume="camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageExt_phase2
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
-						1,
-						1,
-						150
-					};
-					frequency="0.66 + rotorSpeed / 3";
-					volume="camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageInt_phase1
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
-						1,
-						1,
-						150
-					};
-					frequency="0.66 + rotorSpeed / 3";
-					volume="(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageInt_phase2
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
-						1,
-						1,
-						150
-					};
-					frequency="0.66 + rotorSpeed / 3";
-					volume="(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class damageAlarmInt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
-						0.31622776,
 						1
 					};
-					frequency=1;
-					volume="engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
+					frequency = "(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume = "(1 - campos) * (rotorspeed factor [0.3, 0.7]) * (1 + rotorthrust) * 0.7";
 				};
-				class damageAlarmExt
+				class rotorbench
 				{
-					sound[]=
+					sound[] =
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_bluefor",
-						0.22387211,
-						1,
-						20
-					};
-					frequency=1;
-					volume="engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
-				};
-				class rotorLowAlarmInt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-						0.31622776,
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.75,
 						1
 					};
-					frequency=1;
-					volume="engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+					frequency = "(rotorspeed factor [0.3, 0.7]) * (rotorspeed factor [0.3, 1]) * (1 - rotorthrust/4)";
+					volume = "(playerpos factor [3.9, 4]) * (1 - campos) * (rotorspeed factor [0.3, 1]) * (1 + rotorthrust) * 0.4";
+					cone[] = { 1.6,3.1400001,1.6,0.94999999 };
 				};
-				class rotorLowAlarmExt
+				class enginebench
 				{
-					sound[]=
+					sound[] =
 					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-						0.22387211,
-						1,
-						20
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.75,
+						1
 					};
-					frequency=1;
-					volume="engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+					frequency = "rotorspeed";
+					volume = "(playerpos factor [3.9, 4]) * (1 - campos) * (0 max (rotorspeed-0.4))";
 				};
-				class scrubLandInt
+
+				class rotornoiseext
 				{
-					sound[]=
+					sound[] =
 					{
-						"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						0.5,
 						1,
-						1,
-						100
+						200
 					};
-					frequency=1;
-					volume="2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+					frequency = 1;
+					volume = "(campos*(rotorspeed factor [0.6, 0.85]))";
+					cone[] = { 1.6,3.1400001,2,0.94999999 };
 				};
-				class scrubLandExt
+				class distance
 				{
-					sound[]=
+					sound[] =
 					{
-						"",
+						"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
 						1,
-						100
+						1,
+						2500
 					};
-					frequency=1;
-					volume="camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+					frequency = "rotorspeed";
+					volume = "2 * campos * (0 max (rotorspeed-0.4))";
 				};
-				class scrubBuildingInt
+				class fardistance
 				{
-					sound[]=
+					sound[] =
 					{
-						"A3\Sounds_F\vehicles\air\noises\wheelsInt",
+						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+						1.25,
 						1,
-						1,
-						100
+						8000
 					};
-					frequency=1;
-					volume="(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
+					frequency = "rotorspeed";
+					volume = "campos *3* (rotorspeed factor [0.6, 1]) * (1 + rotorthrust)";
 				};
-				class scrubBuildingExt
-				{
-					sound[]=
-					{
-						"",
-						1,
-						1,
-						100
-					};
-					frequency=1;
-					volume="camPos * (scrubBuilding factor[0.02, 0.05])";
-				};
-				class scrubTreeInt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
-						1,
-						1,
-						100
-					};
-					frequency=1;
-					volume="(1 - camPos) * ((scrubTree) factor [0, 0.01])";
-				};
-				class scrubTreeExt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
-						1,
-						1,
-						100
-					};
-					frequency=1;
-					volume="camPos * ((scrubTree) factor [0, 0.01])";
-				};
-				class RainExt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\rain1_ext",
-						1,
-						1,
-						100
-					};
-					frequency=1;
-					volume="camPos * (rain - rotorSpeed/2) * 2";
-				};
-				class RainInt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\rain1_int",
-						1,
-						1,
-						100
-					};
-					frequency=1;
-					volume="(1-camPos)*(rain - rotorSpeed/2)*2";
-				};
-				class SlingLoadDownExt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
-						1,
-						1,
-						500
-					};
-					frequency=1;
-					volume="camPos*(slingLoadActive factor [0,-1])";
-				};
-				class SlingLoadUpExt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
-						1,
-						1,
-						500
-					};
-					frequency=1;
-					volume="camPos*(slingLoadActive factor [0,1])";
-				};
-				class SlingLoadDownInt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
-						1,
-						1,
-						500
-					};
-					frequency=1;
-					volume="(1-camPos)*(slingLoadActive factor [0,-1])";
-				};
-				class SlingLoadUpInt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
-						1,
-						1,
-						500
-					};
-					frequency=1;
-					volume="(1-camPos)*(slingLoadActive factor [0,1])";
-				};
-				class WindInt
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\air\noises\wind_closed",
-						0.33095738,
-						1,
-						50
-					};
-					frequency=1;
-					volume="(1-camPos)*(speed factor[5, 60])*(speed factor[5, 60])";
-				};
-				class GStress
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\vehicle_stress2c",
-						1.1220185,
-						1,
-						50
-					};
-					frequency=1;
-					volume="engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
-				};
-				class SpeedStress
-				{
-					sound[]=
-					{
-						"A3\Sounds_F\vehicles\noises\vehicle_stress3",
-						1,
-						1,
-						50
-					};
-					frequency=1;
-					volume="(1-camPos)*(speed factor[50,80])";
-				};
+				//class damagealarmint
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+				//		0.75,
+				//		1
+				//	};
+				//	frequency=1;
+				//	volume="engineon * (1 - campos) * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0.0, 0.001])";
+				//};
+				//class damagealarmext
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\damagealarm.ogg",
+				//		1,
+				//		1,
+				//		100
+				//	};
+				//	frequency=1;
+				//	volume="engineon * campos * ( 1 - ((transmissiondamage factor [0.61, 0.60]) * (motordamage factor [0.61, 0.60]) * (rotordamage factor [0.51, 0.50]))) * (rotorspeed factor [0, 0.001])";
+				//};
+				//class rotorlowalarmint
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+				//		0.75,
+				//		1
+				//	};
+				//	frequency=1;
+				//	volume="engineon * (1 - campos) * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				//};
+				//class rotorlowalarmext
+				//{
+				//	sound[]=
+				//	{
+				//		"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\shared\lowrotoralarmint.ogg",
+				//		1,
+				//		1,
+				//		75
+				//	};
+				//	frequency=1;
+				//	volume="engineon * campos * (rotorspeed factor [0.9, 0.8999]) * (rotorspeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
+				//};
 			};
 		};
 		class ACE_SelfActions :ACE_SelfActions
@@ -1180,59 +820,33 @@ class CfgVehicles
 		};
 		class UserActions
 		{
-			class afterburnerMk1_turn_on
-			{
-				showWindow=0;
-				hideOnUse=0;
-				priority=9;
-				role=0;
-				displayName="Activate Impulse";
-				position="pilotview";
-				radius=6;
-				onlyforplayer=1;
-				condition="(alive this) AND (player == driver this) AND (isEngineOn this)";
-				statement="0 = this spawn tcw_fnc_afterburnerMK1_turn_on;";
-			};
-			class afterburnerMk1_turn_off
-			{
-				showWindow=0;
-				hideOnUse=0;
-				priority=9;
-				role=0;
-				displayName="Deactivate Impulse";
-				position="pilotview";
-				radius=6;
-				onlyforplayer=1;
-				condition="(alive this) AND ((speed this) > 50) AND (player == driver this)";
-				statement="0 = this spawn tcw_fnc_afterburnerMK1_turn_off;";
-			};
 			class LoadCargo
 			{
-				userActionID=6;
-				displayName="Load Vehicle";
-				displayNameDefault="Load Vehicle";
-				textToolTip="Load Vehicle";
-				position="pilotview";
-				showWindow=0;
-				radius=105;
-				priority=1;
-				onlyForPlayer=0;
-				condition="((speed this < 5) AND (player == currentPilot vehicle player))";
-				statement="0 = [this] spawn TAS_fnc_Maglift;";
+				userActionID = 6;
+				displayName = "Load Vehicle";
+				displayNameDefault = "Load Vehicle";
+				textToolTip = "Load Vehicle";
+				position = "pilotview";
+				showWindow = 0;
+				radius = 5;
+				priority = 1;
+				onlyForPlayer = 0;
+				condition = "((speed this < 5) AND (player == currentPilot vehicle player))";
+				statement = "0 = [this] spawn TAS_fnc_Maglift;";
 			};
 			class UnLoadCargo
 			{
-				userActionID=7;
-				displayName="Unload Vehicles";
-				displayNameDefault="Unload Vehicles";
-				textToolTip="Unload Vehicles";
-				position="pilotview";
-				showWindow=0;
-				radius=105;
-				priority=3;
-				onlyForPlayer=0;
-				condition="(count(this getVariable [""TAS_Loaded"",[]]) > 0)";
-				statement="0 = [this] spawn TAS_fnc_MagDrop;";
+				userActionID = 7;
+				displayName = "Unload Vehicles";
+				displayNameDefault = "Unload Vehicles";
+				textToolTip = "Unload Vehicles";
+				position = "pilotview";
+				showWindow = 0;
+				radius = 15;
+				priority = 3;
+				onlyForPlayer = 0;
+				condition = "(count(this getVariable [""TAS_Loaded"",[]]) > 0)";
+				statement = "0 = [this] spawn TAS_fnc_MagDrop;";
 			};
 		};
 		ace_fastroping_enabled=1;
@@ -1407,9 +1021,6 @@ class CfgVehicles
 		};
 		scopeCurator=2;
 		transportsoldier=0;
-		class Turrets: Turrets
-		{
-		};
 		class VehicleTransport
 		{
 			class Carrier

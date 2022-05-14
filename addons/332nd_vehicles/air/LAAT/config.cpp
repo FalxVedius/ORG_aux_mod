@@ -4591,6 +4591,23 @@ class CfgVehicles
                     "EdCat_332nd"
                 };
             };
+			class Test
+			{
+				displayname = "332nd Test";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Test\body1.paa,MACRO_LAAT_TEXTURES\Variants\Test\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Test\door1.paa,MACRO_LAAT_TEXTURES\Variants\Test\door2.paa,MACRO_LAAT_TEXTURES\Variants\Test\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Test\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Test\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
+			};
             class Noseart_Verus
             {
                 displayName = "332nd Verus Noseart";

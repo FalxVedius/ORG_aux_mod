@@ -165,12 +165,12 @@ class CfgAmmo
 			"332nd_genericrocket_flyby_soundset"
 		};
     manualcontrol=0;
-	missileLockMaxDistance = 2500;
-	missileLockMinDistance = 300;
+	missileLockMaxDistance = 5000;
+	missileLockMinDistance = 0;
     effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
 	caliber=1;
 	weaponLockSystem = "1 + 2 + 16";
-	missileKeepLockedCone = 180;
+	missileKeepLockedCone = 270;
 	missileLockCone = 360;
 	hit=600;
     cmImmunity = 0.9;

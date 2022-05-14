@@ -34,7 +34,6 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Poseidon),
 			MACRO_NEW_HELMET(infantry,Frost),
 			MACRO_NEW_HELMET(infantry,Marshal),
-			MACRO_NEW_HELMET(infantry,Lasagna),
 			MACRO_NEW_HELMET(infantry,Aspect),
 			MACRO_NEW_HELMET(infantry,Beat),
 			MACRO_NEW_HELMET(infantry,Grass),
@@ -52,6 +51,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Knight),
 			MACRO_NEW_HELMET(infantry,Sigma),
 			MACRO_NEW_HELMET(infantry,Rev),
+			MACRO_NEW_HELMET(infantry,Bob),
+			MACRO_NEW_HELMET(infantry,Ukrainian),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -59,6 +60,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(engineer,Tech),
 			MACRO_NEW_HELMET(engineer,Corporal),
 			MACRO_NEW_HELMET(engineer,Sergeant),
+			MACRO_NEW_HELMET(engineer,Hammer),
         };
 		weapons[] = {};
 	};
@@ -92,7 +94,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Frost,Frost,Frost.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deserter,Deserter,332nd_Rebal_Helmet_phase_2_ca.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Marshal,Marshal,Marshal.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Lasagna,Webs,Lasagna.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Aspect,Aspect,Aspect.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Beat,Beat,Beat.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Grass,Grass,Grass.paa)
@@ -110,6 +111,8 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Knight,Knight,Knight.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Bob,Bob,Bob.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Ukrainian,Ukrainian,Ukrainian.paa)
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Engineer,Engineer,CE.paa)
@@ -117,4 +120,5 @@ class CfgWeapons
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Tech,Tech,CE-T.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Corporal,Corporal,CE-P.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Sergeant,Sergeant,CE-S.paa)
+	MACRO_NEW_ENGINEER_HELMET_ITEM(Hammer,Hammer,Hammer.paa)
 };
