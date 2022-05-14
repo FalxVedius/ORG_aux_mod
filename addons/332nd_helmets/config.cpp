@@ -219,7 +219,6 @@ class CfgWeapons
         scope = 0;
         author = MACRO_AUTHOR;
         displayName = "[332nd] barc Helmet ('base')";
-        subItems[] = {"Integrated_NVG_TI_1_F"};
 
 		ace_hearing_lowerVolume = 0.60000002;
 		ace_hearing_protection = 0.85000002;

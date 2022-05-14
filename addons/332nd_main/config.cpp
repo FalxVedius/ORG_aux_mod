@@ -962,6 +962,206 @@ class RscDisplayLoading
 			};
 		};
 
+		class LoadingBackground_332nd_V42 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_42.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V43 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_43.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V44 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_44.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V45 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_45.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V46 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_46.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V47 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_47.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V48 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_48.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V49 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_49.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V50 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_50.paa";
+				};
+			};
+		};
+
+		class LoadingBackground_332nd_V51 : RscDisplayLoadMission
+		{
+
+			class controlsBackground : controlsBackground
+			{
+				class LoadingPicture_332nd : RscPicture
+				{
+					idc = 1000;
+
+					colorText[] = { 1,1,1,0.42 };
+
+					x = SafeZoneX;
+					y = SafeZoneY;
+					h = SafeZoneH;
+					w = SafeZoneW;
+					text = "\332nd_main\images\332nd_Promo_51.paa";
+				};
+			};
+		};
+
 	};
 };
 

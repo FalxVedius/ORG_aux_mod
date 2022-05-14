@@ -51,6 +51,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Knight),
 			MACRO_NEW_HELMET(infantry,Sigma),
 			MACRO_NEW_HELMET(infantry,Rev),
+			MACRO_NEW_HELMET(infantry,Bob),
+			MACRO_NEW_HELMET(infantry,Ukrainian),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -58,6 +60,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(engineer,Tech),
 			MACRO_NEW_HELMET(engineer,Corporal),
 			MACRO_NEW_HELMET(engineer,Sergeant),
+			MACRO_NEW_HELMET(engineer,Hammer),
         };
 		weapons[] = {};
 	};
@@ -108,6 +111,8 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Knight,Knight,Knight.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Bob,Bob,Bob.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Ukrainian,Ukrainian,Ukrainian.paa)
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Engineer,Engineer,CE.paa)
@@ -115,4 +120,5 @@ class CfgWeapons
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Tech,Tech,CE-T.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Corporal,Corporal,CE-P.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Sergeant,Sergeant,CE-S.paa)
+	MACRO_NEW_ENGINEER_HELMET_ITEM(Hammer,Hammer,Hammer.paa)
 };
