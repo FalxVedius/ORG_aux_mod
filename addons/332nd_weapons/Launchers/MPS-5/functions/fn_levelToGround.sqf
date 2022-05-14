@@ -26,6 +26,7 @@ private _vUp = vectorUp _mortarVeh;
 private _angleDiff = ((_dir - (getDir _mortarVeh)) + 180) % 360 - 180;
 
 if (abs(_angleDiff) > 1) then {
+	
     _mortarVeh setDir _dir;
     _mortarVeh setVectorUp _vUp;
 };

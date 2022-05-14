@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(Land,TX,155),
+            //MACRO_NEW_VEHICLE(Land,TX,155),
         };
 		weapons[] = {};
 	};
@@ -61,7 +61,7 @@ class CfgVehicles
 		};
 	};
 
-    class MACRO_NEW_VEHICLE(Land,TX,155) : SC_SaurusAPC_SE
+    /*class MACRO_NEW_VEHICLE(Land,TX,155) : SC_SaurusAPC_SE
     {
         displayName = "[332nd] *WIP* TX-155 - 'Minotaur'";
         scope = 2;
@@ -80,6 +80,8 @@ class CfgVehicles
 				gunnerOpticsModel = "\A3\weapons_f\reticle\Optics_Commander_02_F";
 
 				turretInfoType = "RscOptics_MBT_01_gunner";
+
+				stabilizedInAxes = 3;
 
 				weapons[] =
 				{
@@ -191,5 +193,5 @@ class CfgVehicles
 
 			};
 		};
-	};
+	};*/
 };

@@ -438,12 +438,6 @@ class CfgVehicles
 		armor = 400;
 		armorStructural = 5;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
-		};
-
 		class Turrets : Turrets
 		{
 			class MainTurret_bottom : MainTurret_bottom
@@ -454,6 +448,7 @@ class CfgVehicles
 					"z_gunL_muzzle",
 					"z_gunR_muzzle"
 				};
+			  stabilizedInAxes = 3;
 			  weapons[] =
 			  {
 			    MACRO_NEW_WEAPON(Saber_High),
@@ -476,6 +471,7 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -543,23 +539,19 @@ class CfgVehicles
 		armor = 400;
 		armorStructural = 5;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Grenade_Launcher_Variant.paa"
-		};
-
 		class Turrets : Turrets
 		{
 		    
 			class MainTurret_bottom : MainTurret_bottom
 			{
+
 			turretInfoType="RscOptics_MBT_01_gunner";
 			  memoryPointGun[]=
 				{
 					"z_gunL_muzzle",
 					"z_gunR_muzzle"
 				};
+			  stabilizedInAxes = 3;
 			  weapons[] =
 			  {
 			    MACRO_NEW_WEAPON(Saber_High),
@@ -583,6 +575,7 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(BeamLaser_Full)
@@ -648,17 +641,12 @@ class CfgVehicles
 		armor = 400;
 		armorStructural = 5;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Scout_Weapons.paa"
-		};
-
 		class Turrets : Turrets
 		{
 			class MainTurret_bottom : MainTurret_bottom
 			{
 				turretInfoType = "RscOptics_MBT_01_gunner";
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(Saber_20mm)
@@ -732,17 +720,12 @@ class CfgVehicles
 		armor = 400;
 		armorStructural = 5;
 
-		hiddenSelectionsTextures[] =
-		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Standard_Saber_Weapons.paa"
-		};
-
 		class Turrets : Turrets
 		{
 			class Mainturret_super : Mainturret_super
 			{
 				turretInfoType = "RscOptics_MBT_01_gunner";
+				stabilizedInAxes = 3;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(SuperSaber_40mm),
@@ -811,9 +794,6 @@ class CfgVehicles
 					 MACRO_NEW_MAG(SuperSaber_AP,2),
 					 MACRO_NEW_MAG(SuperSaber_AP,2),
 					 MACRO_NEW_MAG(SuperSaber_AP,2),
-					 MACRO_NEW_MAG(SuperSaber_40mm,140),
-					 MACRO_NEW_MAG(SuperSaber_40mm,140),
-					 MACRO_NEW_MAG(SuperSaber_40mm,140),
 					 MACRO_NEW_MAG(SuperSaber_40mm,140),
 					 MACRO_NEW_MAG(SuperSaber_40mm,140)
 				};

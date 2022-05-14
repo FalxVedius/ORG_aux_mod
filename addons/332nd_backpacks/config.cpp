@@ -332,7 +332,7 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_base): JLTS_Clone_backpack_RTO
 	{
 		displayName = "[332nd] JTAC Pack";
-		maximumLoad = 450;
+		maximumLoad = 375;
 
 		tf_range = 50000;
 
@@ -347,7 +347,7 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Des) : JLTS_Clone_backpack_RTO
 	{
 		displayName = "[332nd] JTAC Pack (Desert)";
-		maximumLoad = 450;
+		maximumLoad = 375;
 
 		tf_range = 50000;
 
@@ -362,7 +362,7 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Dig) : JLTS_Clone_backpack_RTO
 	{
 		displayName = "[332nd] JTAC Pack (Digital)";
-		maximumLoad = 450;
+		maximumLoad = 375;
 
 		tf_range = 50000;
 
@@ -377,7 +377,7 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Jung) : JLTS_Clone_backpack_RTO
 	{
 		displayName = "[332nd] JTAC Pack (Jungle)";
-		maximumLoad = 450;
+		maximumLoad = 375;
 
 		tf_range = 50000;
 
@@ -392,7 +392,7 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Snow) : JLTS_Clone_backpack_RTO
 	{
 		displayName = "[332nd] JTAC Pack (Snow)";
-		maximumLoad = 450;
+		maximumLoad = 375;
 
 		tf_range = 50000;
 
@@ -407,7 +407,7 @@ class CfgVehicles
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Wood) : JLTS_Clone_backpack_RTO
 	{
 		displayName = "[332nd] JTAC Pack (Wood)";
-		maximumLoad = 450;
+		maximumLoad = 375;
 
 		tf_range = 50000;
 
@@ -452,7 +452,7 @@ class CfgVehicles
 	class JLTS_Clone_backpack_eod;
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack): JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] Demolition Pack";
+		displayName = "[332nd] EOD Pack";
 
 		hiddenSelectionsTextures[] =
 		{
@@ -466,7 +466,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Des) : JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] Demolition Pack (Desert)";
+		displayName = "[332nd] EOD Pack (Desert)";
 
 		hiddenSelectionsTextures[] =
 		{
@@ -480,7 +480,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Dig) : JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] Demolition Pack (Digital)";
+		displayName = "[332nd] EOD Pack (Digital)";
 
 		hiddenSelectionsTextures[] =
 		{
@@ -494,7 +494,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Jung) : JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] Demolition Pack (Jungle)";
+		displayName = "[332nd] EOD Pack (Jungle)";
 
 		hiddenSelectionsTextures[] =
 		{
@@ -508,7 +508,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Snow) : JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] Demolition Pack (Snow)";
+		displayName = "[332nd] EOD Pack (Snow)";
 
 		hiddenSelectionsTextures[] =
 		{
@@ -522,7 +522,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Wood) : JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] Demolition Pack (Wood)";
+		displayName = "[332nd] EOD Pack (Wood)";
 
 		hiddenSelectionsTextures[] =
 		{
@@ -562,6 +562,16 @@ class CfgVehicles
 		{
 			""
 		};
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class 3AS_B_Katarn_Backpack;
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack";
+		maximumLoad = 260;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";

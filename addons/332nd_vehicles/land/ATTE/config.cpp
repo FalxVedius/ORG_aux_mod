@@ -310,6 +310,7 @@ class CfgVehicles
 					};
 				};
 			turretInfoType="RscOptics_MBT_01_gunner";
+			stabilizedInAxes = 3;
 			 weapons[] =
 			{
 				MACRO_NEW_WEAPON(Mass_Driver)
@@ -337,6 +338,7 @@ class CfgVehicles
 							};
 						};
 		   turretInfoType="RscOptics_MBT_01_commander";
+		   stabilizedInAxes = 3;
 		   weapons[] =
 			{
 				MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -363,6 +365,7 @@ class CfgVehicles
 							};
 						};
 		   showCrewAim=0;
+		   stabilizedInAxes = 3;
 		   weapons[] =
 			{
 				MACRO_NEW_WEAPON(Heavy_Hmg)
