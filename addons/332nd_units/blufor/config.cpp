@@ -131,6 +131,8 @@ class CfgPatches
             MACRO_NEW_UNIT(captain,Riddle),
             //Hoggy
             MACRO_NEW_UNIT(infantry,Hoggy),
+            //Griif
+            MACRO_NEW_UNIT(infantry,Griif),
 
 		};
 		weapons[] = {
@@ -254,6 +256,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(captain,Riddle),
             //Hoggy
             MACRO_NEW_UNIFORM(infantry,Hoggy),
+            //Griif
+            MACRO_NEW_UNIFORM(infantry,Griif),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -485,6 +489,8 @@ class CfgWeapons
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Riddle,Riddle,Riddle)
     //Hoggy
     MACRO_NEW_INF_UNIFORM_ITEM(Hoggy,Hoggy,Hoggy)
+    //Griif
+    MACRO_NEW_INF_UNIFORM_ITEM(Griif,Griif,Griif)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -648,5 +654,7 @@ class CfgVehicles
     MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Captain_Lower.paa)
     //Hoggy
     MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,officer\Officer_Lower.paa)
+    //Griif
+    MACRO_NEW_INF_UNIT(Griif,Griif,Griif,custom\Griif_Upper.paa,custom\Griif_Lower.paa)
 
 };

@@ -70,11 +70,19 @@ class CfgWeapons
 	{
 		author = "Falx";
 		scope = 2;
-		displayName = "[332nd] MPS-5 60mm Mortar *WIP*";
+		displayName = "[332nd] MPS-5 60mm Mortar *WIP* [Heavy Grenadier]";
 		displayNameShort = "MPS-5";
 		model = "\z\potato\addons\vz99\data\vz99_carry";
 		picture = "\z\potato\addons\vz99\ui\weaponSide_ca.paa";
 		modes[] = {};
+
+		magazines[] =
+		{
+			MACRO_NEW_MAG(MPS_HE,1),
+			MACRO_NEW_MAG(MPS_Smoke,1),
+			MACRO_NEW_MAG(MPS_Smoke_Red,1),
+			MACRO_NEW_MAG(MPS_Flare,1)
+		};
 	};
 
 	class CannonCore;

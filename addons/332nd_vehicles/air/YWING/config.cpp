@@ -132,6 +132,7 @@ class CfgVehicles
 		{
 			class BubbleGun : BubbleGun
 			{
+				stabilizedInAxes = 3;
 			    weapons[] = {
 					MACRO_NEW_WEAPON(Y_wing_Turret)
 				  };

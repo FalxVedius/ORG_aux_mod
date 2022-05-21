@@ -43,7 +43,7 @@ class cfgWeapons
 	class MACRO_NEW_WEAPON(Z6): JLTS_Z6
 	{
 		scope=2;
-	    displayName=MACRO_WEAPON_DISPLAYNAME(Z6)
+	    displayName=MACRO_WEAPON_DISPLAYNAME(Z6 [Support])
 		reloadTime=0.1;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_lim";

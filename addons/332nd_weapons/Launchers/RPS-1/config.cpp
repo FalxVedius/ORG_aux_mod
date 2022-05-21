@@ -41,7 +41,7 @@ class CfgWeapons
     {
 		scope=1;
 		scopeArsenal=1;
-	    displayName=MACRO_WEAPON_DISPLAYNAME(RPS-1 Disposable Launcher)
+	    displayName=MACRO_WEAPON_DISPLAYNAME(RPS-1 Disposable Launcher [Rifleman])
 		reloadTime=0;
 		baseweapon="MACRO_NEW_WEAPON(RPS_1)";
 		handling="4";

@@ -48,7 +48,7 @@ class cfgWeapons
 	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_15c): 3AS_DC15C_F
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15c)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15c [Rifleman])
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_15c";
@@ -159,7 +159,7 @@ class cfgWeapons
 	class UGL_F;
 	class MACRO_NEW_WEAPON(DC_15c_ugl): MACRO_NEW_WEAPON(DC_15c)
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15c UGL)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15c UGL [Grenadier])
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
 		cursor="332_DOT";

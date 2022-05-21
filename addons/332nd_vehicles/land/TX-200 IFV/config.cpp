@@ -60,12 +60,24 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(Land,TX,200) : OPTRE_M494
     {
-        displayName = "[332nd] *WIP* TX-200 - 'Verax'";
+        displayName = "*WIP* TX-200 - 'Verax'";
         scope = 2;
 		side=1;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_APCS";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
+
+		hiddenSelectionsTextures[] = 
+		{ 
+			"332nd_vehicles\_textures\land\TX200\armor_co.paa",
+			"332nd_vehicles\_textures\land\TX200\main_co.paa",
+			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
+			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
+			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
+			"332nd_vehicles\_textures\land\TX200\turret_co.paa",
+			"332nd_vehicles\_textures\land\TX200\mg_co.paa",
+			"" 
+		};
 		
 
 		armor = 350;

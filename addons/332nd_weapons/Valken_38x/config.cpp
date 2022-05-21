@@ -120,7 +120,7 @@ class CfgWeapons
 			aiRateOfFireDistance=25;
 		};		
 		scope=2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(Valken 38x)
+		displayName = MACRO_WEAPON_DISPLAYNAME(Valken 38x [Marksman])
 		weaponInfoType="RscWeaponZeroing";
 		magazines[]=
 		{
