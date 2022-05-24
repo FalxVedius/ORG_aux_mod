@@ -217,7 +217,7 @@ class CfgWeapons
 			MACRO_NEW_MAG(Firepuncher,8),
 			MACRO_NEW_MAG(Firepuncher_T,8)
 		};
-		displayName = MACRO_WEAPON_DISPLAYNAME(Firepuncher)
+		displayName = MACRO_WEAPON_DISPLAYNAME(Firepuncher [Heavy Marksman])
 		descriptionShort="";
 		maxZeroing=2500;
 		initspeed=2500;

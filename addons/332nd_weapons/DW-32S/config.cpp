@@ -46,7 +46,7 @@ class cfgWeapons
 	class MACRO_NEW_WEAPON(DW_32S): JLTS_DW32S
     {
 		scope=2;
-	    displayName=MACRO_WEAPON_DISPLAYNAME(DW-32S)
+	    displayName=MACRO_WEAPON_DISPLAYNAME(DW-32S [Marksman])
 		reloadTime=0.1;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_dmr_02";

@@ -32,7 +32,7 @@ class CfgWeapons
     class MACRO_NEW_WEAPON(RPS_4): launch_MRAWS_olive_F
     {
 		scope=2;
-	    displayName=MACRO_WEAPON_DISPLAYNAME(RPS-4 Recoiless Rifle)
+	    displayName=MACRO_WEAPON_DISPLAYNAME(RPS-4 Recoiless Rifle [AT])
 		reloadTime=0;
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;

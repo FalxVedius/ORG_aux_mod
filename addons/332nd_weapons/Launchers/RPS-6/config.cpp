@@ -33,7 +33,7 @@ class CfgWeapons
     class MACRO_NEW_WEAPON(RPS_6): JLTS_RPS6
     {
 		scope=2;
-	    displayName=MACRO_WEAPON_DISPLAYNAME(RPS-6 Rocket Launcher)
+	    displayName=MACRO_WEAPON_DISPLAYNAME(RPS-6 Rocket Launcher [AT])
 		reloadTime=0;
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;

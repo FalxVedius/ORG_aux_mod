@@ -53,6 +53,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Rev),
 			MACRO_NEW_HELMET(infantry,Bob),
 			MACRO_NEW_HELMET(infantry,Ukrainian),
+			MACRO_NEW_HELMET(infantry,Griif),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -113,6 +114,7 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bob,Bob,Bob.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Ukrainian,Ukrainian,Ukrainian.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Griif,Griif,Griif.paa)
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Engineer,Engineer,CE.paa)
