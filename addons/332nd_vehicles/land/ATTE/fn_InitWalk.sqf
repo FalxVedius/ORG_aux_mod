@@ -1,4 +1,5 @@
-if (!is3DEN) then {
+if (!is3DEN) then 
+{
 
 	if(isServer) then
 	{
@@ -12,111 +13,129 @@ if (!is3DEN) then {
 		_br = "BR";
 		_bl = "BL";
 	
-		while {alive _v && local _v} do {
+		if (count crew _v > 0 and canMove _v) then 
+		{
 	
-			if (count crew _v > 0 and canMove _v) then {
+			while {isEngineOn _v} do 
+			{
 	
-				while {isEngineOn _v} do {
+				_speed = speed _v;// positive and negative speed to check if vehicle is going forwards or backwards
 	
-					_speed = speed _v;// positive and negative speed to check if vehicle is going forwards or backwards
-	
-					if (_speed >= 0.1 || _speed <= -0.1) then {
-						
-						if(_speed >= 0.1) then {
-						
-							_v animateSource ["Walk",2,2.7];
+				if (_speed >= 0.1 || _speed <= -0.1) then 
+				{
+					
+					if(_speed >= 0.1) then 
+					{
+					
+						_v animateSource ["Walk",2,2.7];
 		
-							sleep 0.75;
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fr)), 2,1,800];
-							};
+						sleep 0.75;
 						
-						
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _mr)), 2,1,800];
-							};
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fr)), 2,1,800];
+						};
+					
+					
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _mr)), 2,1,800];
+						};
 		
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _bl)), 2,1,800];
-							};
-							
-							sleep 0.75;
 						
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fl)), 2,1,800];
-							};
-	
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _ml)), 2,1,800];
-							};
-							
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _br)), 2,1,800];
-							};
-		
-							_v animateSource ["Walk",0,10000];
-							
-							sleep 0.05;
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _bl)), 2,1,800];
 						};
 						
-						if(_speed <= -0.1) then {
+						sleep 0.75;
+					
 						
-							_v animateSource ["Walk",2,10000];
-							
-							sleep 0.05;
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fl)), 2,1,800];
+						};
+	
 						
-							_v animateSource ["Walk",0,2.7];
-		
-							sleep 0.75;
-	
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fl)), 2,1,800];
-							};
-	
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _ml)), 2,1,800];
-							};
-							
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _br)), 2,1,800];
-							};
-							
-							sleep 0.75;
-							
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fr)), 2,1,800];
-							};
-							
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _mr)), 2,1,800];
-							};
-							
-							
-							if (isServer) then {
-								playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _bl)), 2,1,800];
-							};
-							
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _ml)), 2,1,800];
 						};
 						
-					} else {
-						_v animateSource ["Walk",0];// sets legs to starting position
-						sleep 0.25;
+						
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _br)), 2,1,800];
+						};
+		
+						_v animateSource ["Walk",0,10000];
+						
+						sleep 0.05;
 					};
+					
+					if(_speed <= -0.1) then 
+					{
+					
+						_v animateSource ["Walk",2,10000];
+						
+						sleep 0.05;
+					
+						_v animateSource ["Walk",0,2.7];
+		
+						sleep 0.75;
+	
+						
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fl)), 2,1,800];
+						};
+	
+						
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _ml)), 2,1,800];
+						};
+						
+						
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _br)), 2,1,800];
+						};
+						
+						sleep 0.75;
+						
+						
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS1a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _fr)), 2,1,800];
+						};
+						
+						
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS2a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _mr)), 2,1,800];
+						};
+						
+						
+						if (isServer) then 
+						{
+							playSound3D ["3AS\3as_ATTE\Sounds\ATTE_FS3a.ogg", _v, false, (_v modelToWorld (_v selectionPosition _bl)), 2,1,800];
+						};
+						
+					};
+					
+				} 
+				else 
+				{
+					_v animateSource ["Walk",0];// sets legs to starting position
+					sleep 0.25;
 				};
-				sleep 0.5;
-			} else {
-				sleep 2;
 			};
+			sleep 0.5;
+		} 
+		else 
+		{
+			sleep 2;
 		};
-	};
+		
 };
