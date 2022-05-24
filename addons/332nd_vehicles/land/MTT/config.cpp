@@ -85,6 +85,7 @@ class CfgVehicles
             class MainTurret;
         };
     };
+     Test
 
 	class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT_Base
     {
