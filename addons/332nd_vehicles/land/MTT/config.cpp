@@ -19,14 +19,14 @@ class CfgPatches
 
 class CfgVehicles
 {
-    class Tank_F;
+    class 3as_MTT_Base;
        
-    class 3as_MTT_Base : Tank_F
+    class 3as_MTT_01_Base : 3as_MTT_Base
     {
         class Turrets;
     };
     
-    class 3as_MTT_01_Base : 3as_MTT_Base
+    class 3as_MTT : 3as_MTT_01_Base
     {
         class Turrets : Turrets
         {
@@ -36,7 +36,7 @@ class CfgVehicles
         };
     };
 
-    class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT_01_Base
+    class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT
     {
 
         displayName = "MTT (CIS)";
