@@ -82,6 +82,24 @@ class CfgAmmo
 		indirectHitRange = 8;
 	};
 
+	class Bo_GBU12_LGB;
+	class MACRO_NEW_AMMO(R_Plasma_Bomb) : Bo_GBU12_LGB
+	{
+		effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
+		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
+		proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
+		//thrust = 50;
+		timeToLive = 60;
+		//typicalSpeed = 50;
+		//thrustTime = 1.5;
+		explosionEffects = "MK82_Explode";
+		weaponLockSystem = "8";
+		missileKeepLockedCone = 360;
+		hit = 5000;
+		indirectHit = 3000;
+		indirectHitRange = 30;
+	};
+
 };
 	
 
@@ -115,6 +133,19 @@ class CfgMagazines
 		ammo = MACRO_NEW_AMMO(R_AGM_Med)
 	};
 
+	class PylonMissile_1Rnd_BombCluster_03_F;
+	class MACRO_NEW_MAG(Pylon_PlasmaBomb,3) : PylonMissile_1Rnd_BombCluster_03_F
+	{
+		hardpoints[] = { "332_B_Pylon"};
+		displayName = "Rebel Plasma Bomb";
+		descriptionshort = "Rebel Plasma Bomb";
+		pylonWeapon = "332nd_aux_weapon_Rebel_PlasmaBomb_Pylon";
+		displayNameShort = "R_Plasma Bomb";
+		tracersEvery = 1;
+		count = 3;
+		initspeed = 0;
+		ammo = MACRO_NEW_AMMO(R_Plasma_Bomb)
+	};
 };
 
 
@@ -148,5 +179,15 @@ class CfgWeapons
 		};
 		displayName = "AGMM";
 		lockAcquire = 1;
+	};
+
+	class weapon_GBU12Launcher;
+	class MACRO_NEW_WEAPON(R_PlasmaBomb_Pylon) : weapon_GBU12Launcher
+	{
+		displayName = "R_Plasma_Bomb";
+		magazines[] = 
+		{
+		 MACRO_NEW_MAG(R_Pylon_PlasmaBomb,3)	 
+		};
 	};
 };
