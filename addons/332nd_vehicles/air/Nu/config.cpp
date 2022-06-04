@@ -20805,244 +20805,7 @@ class CfgVehicles
 				}
 			};
 		};
-		//scope=2;
-		//displayName="Nu-Class Attack Shuttle";
-		//armor=2300;
-  //      forceInGarage = 1;
-		//faction = "EdCat_332nd";
-  //      editorSubcategory = "EdSubcat_332nd_HELI";
-		//transportSoldier=35;
-  //      tas_can_impulse=0;
-  //      ls_impulsor_fuelDrain_1=0.00005;
-  //      ls_impulsor_fuelDrain_2=0.00005;
-  //      ls_impulsor_boostSpeed_1=600;
-  //      ls_impulsor_boostSpeed_2=1200;
-  //      ls_hasImpulse=1;
-  //      class EventHandlers
-  //      {
-	 //       init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor;";
-  //      };
-		//class pilotCamera
-		//{
-		//	class OpticsIn
-		//	{
-		//		class Wide
-		//		{
-		//			opticsDisplayName="WFOV";
-		//			initAngleX=0;
-		//			minAngleX=-10;
-		//			maxAngleX=90;
-		//			initAngleY=0;
-		//			minAngleY=-90;
-		//			maxAngleY=90;
-		//			initFov=0.42500001;
-		//			minFov=0.42500001;
-		//			maxFov=0.42500001;
-		//			thermalMode[]={0,1,2,3,4,5};
-		//			visionMode[]=
-		//			{
-		//				"Normal",
-		//				"NVG",
-		//				"Ti"
-		//			};
-		//			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-		//			opticsPPEffects[]=
-		//			{
-		//				"OpticsCHAbera2",
-		//				"OpticsBlur2"
-		//			};
-		//		};
-		//		class zoomx4: Wide
-		//		{
-		//			opticsDisplayName="NFOV";
-		//			initFov="(0.425/4)";
-		//			minFov="(0.425/4)";
-		//			maxFov="(0.425/4)";
-		//			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		//		};
-		//		class zoomX8: Wide
-		//		{
-		//			opticsDisplayName="NFOV";
-		//			initFov="(0.42/8)";
-		//			minFov="(0.42/8)";
-		//			maxFov="(0.42/8)";
-		//			gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
-		//		};
-		//		showMiniMapInOptics=1;
-		//		showUAVViewInOptics=0;
-		//		showSlingLoadManagerInOptics=1;
-		//	};
-		//	minTurn=-180;
-		//	maxTurn=180;
-		//	initTurn=0;
-		//	minElev=-10;
-		//	maxElev=90;
-		//	initElev=-10;
-		//	maxXRotSpeed=0.30000001;
-		//	maxYRotSpeed=0.30000001;
-		//	pilotOpticsShowCursor=1;
-		//	controllable=1;
-		//};
-		//weapons[]=
-		//{
-		//	"ParticleBeamCannon_Nu",
-		//	"CMFlareLauncher",
-		//	MACRO_NEW_WEAPON(Nu_75mm),
-		//	"Laserdesignator_pilotCamera"
-		//};
-		//magazines[]=
-		//{
-		//	"240Rnd_CMFlare_Chaff_Magazine",
-		//	"240Rnd_CMFlare_Chaff_Magazine",
-		//	"240Rnd_CMFlare_Chaff_Magazine",
-		//	"240Rnd_CMFlare_Chaff_Magazine",
-		//	"Laser_Battery_F",
-		//	"Laser_Battery_F",
-		//	"Laser_Battery_F",
-		//	MACRO_NEW_MAG(Nu_75mm,80),
-		//	MACRO_NEW_MAG(Nu_75mm,80),
-  //          MACRO_NEW_MAG(Nu_75mm,80),
-  //          MACRO_NEW_MAG(Nu_75mm,80),
-		//	"Laserbatteries"
-		//};
-  //      class Turrets: Turrets
-		//{
-		//	class Copilot: Copilot
-		//	{
-		//		gunneropticseffect[]=
-		//		{
-		//			"TankCommanderOptics1",
-		//			"BWTV"
-		//		};
-		//		gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Transport_01_Optics_Gunner_F";
-		//		initelev=0;
-		//		initturn=-15;
-		//		iscopilot=1;
-		//		maxelev=45;
-		//		maxturn=-10;
-		//		minelev=-45;
-		//		minturn=-45;
-		//		turretinfotype="RscOptics_Heli_Attack_01_gunner";
-		//		weapons[]=
-		//		{
-		//			MACRO_NEW_AMMO(Nu_20mm)
-		//		};
-		//		magazines[]=
-		//		{ 
-  //                  MACRO_NEW_MAG(Nu_20mm,2400),
-  //                  MACRO_NEW_MAG(Nu_20mm,2400),
-		//			"Laser_Battery_F",
-		//			"Laser_Battery_F"
-		//		};
-  //          };
-  //      };
-  //      class Copilot2: Copilot2
-		//	{
-		//	    gunBeg="z_gunl_muzzle";
-		//		gunEnd="z_gunl_chamber";
-		//		proxyindex=2;
-		//		commanding=-2;
-		//		viewGunnerShadow=0;
-		//		castGunnerShadow=0;
-		//		gunnername="CoPilot 2";
-		//		proxytype="CPGunner";
-		//		gunnerforceoptics=0;
-		//		LodTurnedin=1100;
-		//		LodOpticsin=1100;
-		//		gunnergetinaction="Heli_Attack_01_Gunner_Enter";
-		//		gunnergetoutaction="Heli_Attack_01_Gunner_Exit";
-		//		gunnerinaction="Nu_CoPilot";
-		//		gunneraction="Nu_CoPilot";
-		//		gunnerlefthandanimname="";
-		//		gunnerrighthandanimname="";
-		//		gunneropticseffect[]=
-		//		{
-		//			"TankCommanderOptics1",
-		//			"BWTV"
-		//		};
-		//		gunneropticsmodel="\A3\Weapons_F_Beta\Reticle\Heli_Transport_01_Optics_Gunner_F";
-		//		initelev=0;
-		//		initturn=15;
-		//		maxturn=30;
-		//		minturn=5;
-		//		maxelev=30;
-		//		minelev=-30;
-		//		memorypointgunneroptics="gunnerview2";
-		//		animationSourceBody="mainturret2";
-		//		animationsourcegun="maingun2";
-		//		body="mainturret2";
-		//		gun="maingun2";
-		//		memorypointsgetingunner="getindriver";
-		//		memorypointsgetingunnerdir="getindriver_dir";
-		//		turretinfotype="RscOptics_Heli_Attack_01_gunner";
-		//		weapons[]=
-		//		{
-		//			"ParticleBeamCannon_Nu"
-		//		};
-		//		magazines[]=
-		//		{
-		//			"Laser_Battery_F",
-		//			"Laser_Battery_F"
-		//		};
-		//		primaryGunner=0;
-		//		isCopilot=0;
-		//		animationsourcehatch="";
-		//		memoryPointGun="laser_l_chamber";
-		//		gunnercompartments="Compartment2";
-		//		gunnerdoor="";
-		//		gunneropticsshowcursor=1;
-		//		gunneroutopticsshowcursor=1;
-		//		iscopilot=0;
-		//		selectionfireanim="";
-		//		soundServo[]=
-		//		{
-		//			"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner",
-		//			0.36234099,
-		//			1,
-		//			20
-		//		};
-		//		soundServoVertical[]=
-		//		{
-		//			"A3\Sounds_F\vehicles\armor\noises\servo_armor_gunner_vertical",
-		//			0.36234099,
-		//			1,
-		//			30
-		//		};
-		//		stabilizedinaxes=0;
-		//		class ViewOptics
-		//		{
-		//			initanglex=0;
-		//			initangley=0;
-		//			initfov=0.60000002;
-		//			maxanglex=30;
-		//			maxangley=100;
-		//			maxfov=0.75;
-		//			minanglex=-30;
-		//			minangley=-100;
-		//			minfov=0.30000001;
-		//		};
-		//	};
-  //      };
-		//class UserActions: UserActions
-		//{
-			
-		//	class rampOpen: rampOpen
-		//	{
-		//		condition="(this animationSourcePhase 'ramp' == 0) AND (alive this) AND (player in [gunner this, driver this])";
-		//	};
-		//	class rampClose: rampClose
-		//	{
-		//		condition="(this animationSourcePhase 'ramp' == 1) AND (alive this) AND (player in [gunner this, driver this])";
-		//	};
-		//	class frontrampOpen: frontrampOpen
-		//	{
-		//		condition="(this animationSourcePhase 'rampfront' == 0) AND (alive this) AND (player in [gunner this, driver this])";
-		//	};
-		//	class frontrampClose: frontrampClose
-		//	{
-		//		condition="(this animationSourcePhase 'rampfront' == 1) AND (alive this) AND (player in [gunner this, driver this])";
-		//	};
-		//};
+
 		class ACE_SelfActions
 		{
 			class ACE_Passengers
@@ -21416,6 +21179,60 @@ class CfgVehicles
 				count = 100;
 			};
 
+			class DC17M_Rifle_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				count = 300;
+			};
+
+			class DC17M_Marks_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				count = 300;
+			};
+
+			class DC17M_Grend_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				count = 50;
+			};
+
+			class DC_44h_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_44h_x6";
+				count = 300;
+			};
+
+			class DC_15k_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15k_x15";
+				count = 300;
+			};
+
+			class MPS_HE_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_Red_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				count = 15;
+			};
+
+			class MPS_Flare_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				count = 15;
+			};
+
 			class DP_23_332nd
 			{
 				magazine = "332nd_aux_magazine_DP23_x12";
@@ -21582,30 +21399,6 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_DC_15x_x2";
 				count = 20;
-			};
-
-			class Dm17HeartStarter_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
-				count = 50;
-			};
-
-			class Dm17Bacta_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
-				count = 25;
-			};
-
-			class Dm17Kolto_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
-				count = 25;
-			};
-
-			class Dm17CombatStim_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
-				count = 50;
 			};
 		};
     };

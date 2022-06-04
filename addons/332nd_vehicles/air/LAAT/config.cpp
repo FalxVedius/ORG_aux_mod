@@ -303,6 +303,8 @@ class CfgVehicles
 		memoryPointsGetInCargoDir[] = { "pos_cargo_dir" };
 		memoryPointsGetInCargoPrecise[] = { "" };
 
+		maximumLoad = 10000;
+
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
             MACRO_NEW_WEAPON(LAAT_40mm), MACRO_NEW_WEAPON(air_dumb_rocketpod), 
@@ -3804,6 +3806,60 @@ class CfgVehicles
 				count = 100;
 			};
 
+			class DC17M_Rifle_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				count = 300;
+			};
+
+			class DC17M_Marks_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				count = 300;
+			};
+
+			class DC17M_Grend_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				count = 50;
+			};
+
+			class DC_44h_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_44h_x6";
+				count = 300;
+			};
+
+			class DC_15k_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15k_x15";
+				count = 300;
+			};
+
+			class MPS_HE_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_Red_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				count = 15;
+			};
+
+			class MPS_Flare_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				count = 15;
+			};
+
 			class DP_23_332nd
 			{
 				magazine = "332nd_aux_magazine_DP23_x12";
@@ -3970,30 +4026,6 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_DC_15x_x2";
 				count = 20;
-			};
-
-			class Dm17HeartStarter_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
-				count = 50;
-			};
-
-			class Dm17Bacta_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
-				count = 25;
-			};
-
-			class Dm17Kolto_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
-				count = 25;
-			};
-
-			class Dm17CombatStim_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
-				count = 50;
 			};
 		};
 
@@ -4205,8 +4237,8 @@ class CfgVehicles
             };
         };
 
-        class TransportMagazines
-        {
+		class TransportMagazines
+		{
 			class DC15A_low_332nd
 			{
 				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
@@ -4283,6 +4315,60 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_DC_15L_T_x200";
 				count = 100;
+			};
+
+			class DC17M_Rifle_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				count = 300;
+			};
+
+			class DC17M_Marks_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				count = 300;
+			};
+
+			class DC17M_Grend_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				count = 50;
+			};
+
+			class DC_44h_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_44h_x6";
+				count = 300;
+			};
+
+			class DC_15k_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15k_x15";
+				count = 300;
+			};
+
+			class MPS_HE_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_Red_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				count = 15;
+			};
+
+			class MPS_Flare_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				count = 15;
 			};
 
 			class DP_23_332nd
@@ -4452,31 +4538,7 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_DC_15x_x2";
 				count = 20;
 			};
-
-			class Dm17HeartStarter_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
-				count = 50;
-			};
-
-			class Dm17Bacta_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
-				count = 25;
-			};
-
-			class Dm17Kolto_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
-				count = 25;
-			};
-
-			class Dm17CombatStim_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
-				count = 50;
-			};
-        };
+		};
 
 
         class HitPoints : HitPoints

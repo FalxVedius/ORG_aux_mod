@@ -1380,6 +1380,60 @@ class CfgVehicles
 				count = 100;
 			};
 
+			class DC17M_Rifle_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				count = 300;
+			};
+
+			class DC17M_Marks_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				count = 300;
+			};
+
+			class DC17M_Grend_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				count = 50;
+			};
+
+			class DC_44h_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_44h_x6";
+				count = 300;
+			};
+
+			class DC_15k_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15k_x15";
+				count = 300;
+			};
+
+			class MPS_HE_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_Red_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				count = 15;
+			};
+
+			class MPS_Flare_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				count = 15;
+			};
+
 			class DP_23_332nd
 			{
 				magazine = "332nd_aux_magazine_DP23_x12";
