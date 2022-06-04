@@ -4661,26 +4661,9 @@ class CfgVehicles
 					"EdCat_332nd"
 				};
 			};
-			class Commander_332nd
-			{
-				displayName = "332nd Flight Commander";
-				author = "Falx";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Commander\body1.paa,MACRO_LAAT_TEXTURES\Variants\Commander\body2.paa,
-					MACRO_LAAT_TEXTURES\Variants\Commander\door1.paa,MACRO_LAAT_TEXTURES\Variants\Commander\door2.paa,MACRO_LAAT_TEXTURES\Variants\Commander\door3.paa,
-					MACRO_LAAT_TEXTURES\Variants\Commander\wings.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Variants\Commander\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
 			class Lead_332nd
 			{
-				displayName = "332nd Section Lead";
+				displayName = "332nd Leadership";
 				author = "Falx";
 				textures[] =
 				{
