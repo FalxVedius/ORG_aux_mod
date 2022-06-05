@@ -713,7 +713,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\z\ace\addons\tagging\UI\items\itemSpraypaintBlack.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BactaSpray.paa";
 		model = "\z\ace\addons\tagging\data\SprayCan.p3d";
 		
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -746,7 +746,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\electrolit_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\PlastiBandage.paa";
 		model = "\MRC\JLTS\contraband\Drugs\electrolit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -762,7 +762,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\deathstick_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\MedPatch.paa";
 		model = "\MRC\JLTS\contraband\Drugs\deathstick.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -778,7 +778,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\bacta_red_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BloodTank2.paa";
 		model = "\MRC\JLTS\contraband\Drugs\bacta.p3d";
 
 		hiddenSelections[] =
@@ -805,7 +805,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\bacta_red_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BloodTank2.paa";
 		model = "\MRC\JLTS\contraband\Drugs\bacta.p3d";
 
 		hiddenSelections[] =
@@ -829,11 +829,11 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Tank *WIP*)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Tank)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\bacta_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BactaTank.paa";
 		model = "\MRC\JLTS\contraband\Drugs\bacta.p3d";
 
 		hiddenSelections[] =
@@ -857,11 +857,11 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Tank *WIP*)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Tank)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\bacta_kolto_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\KoltoTank.paa";
 		model = "\MRC\JLTS\contraband\Drugs\bacta.p3d";
 
 		hiddenSelections[] =
@@ -888,7 +888,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\stimulant_echani_battle_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\AdrenalineStim.paa";
 		model = "\MRC\JLTS\contraband\Drugs\stimulant.p3d";
 
 		hiddenSelections[] =
@@ -910,11 +910,11 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Injector *WIP*)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Bacta Injector)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\stimulant_echani_battle_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BactaInjector.paa";
 		model = "\MRC\JLTS\contraband\Drugs\stimulant.p3d";
 
 		hiddenSelections[] =
@@ -936,11 +936,11 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Injector *WIP*)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Kolto Injector)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\stimulant_echani_battle_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\KoltoInjector.paa";
 		model = "\MRC\JLTS\contraband\Drugs\stimulant.p3d";
 
 		hiddenSelections[] =
@@ -962,11 +962,11 @@ class CfgWeapons
 		scope = 2;
 		scopeArsenal = 2;
 		author = MACRO_AUTHOR;
-		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Combat Stimulant *WIP*)
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Combat Stimulant)
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\stimulant_echani_battle_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\CombatStim.paa";
 		model = "\MRC\JLTS\contraband\Drugs\stimulant.p3d";
 
 		hiddenSelections[] =
@@ -991,7 +991,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Drugs\data\ui\stimulant_battle_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\PainkillerStim.paa";
 		model = "\MRC\JLTS\contraband\Drugs\stimulant.p3d";
 
 		hiddenSelections[] =
@@ -1016,7 +1016,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "";
+		picture = "\332nd_weapons\Equipment\Medical\data\PainkillerBottle.paa";
 		model = "LS_statics_props\bottle\bottle.p3d";
 
 		hiddenSelections[] =
@@ -1041,7 +1041,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\MRC\JLTS\contraband\Intel\data\ui\briefcase_ui_ca.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\StitchKit.paa";
 		model = "\MRC\JLTS\contraband\Intel\briefcase.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1057,6 +1057,8 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
+		picture = "\332nd_weapons\Equipment\Medical\data\GravCuff.paa";
+
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 1;
@@ -1071,7 +1073,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BactaSpray.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1088,7 +1090,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BactaSpray.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1105,7 +1107,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\BactaSpray.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1122,7 +1124,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\PlastiBandage.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1139,7 +1141,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\PlastiBandage.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1156,7 +1158,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\PlastiBandage.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1173,7 +1175,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\MedPatch.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1190,7 +1192,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\MedPatch.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
@@ -1207,7 +1209,7 @@ class CfgWeapons
 		descriptionShort = "332nd Healing";
 		descriptionUse = "Injecting 332nd";
 
-		picture = "\A3\Weapons_F\Items\data\UI\gear_FirstAidKit_CA.paa";
+		picture = "\332nd_weapons\Equipment\Medical\data\MedPatch.paa";
 		model = "\a3\Weapons_F\Ammo\mag_FirstAidkit.p3d";
 
 		class ItemInfo : CBA_MiscItem_ItemInfo

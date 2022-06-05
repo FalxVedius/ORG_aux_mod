@@ -28,6 +28,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(ab,Sentinel),
 			MACRO_NEW_HELMET(ab,Raven),
 			MACRO_NEW_HELMET(ab,Veta),
+			MACRO_NEW_HELMET(ab,Grey),
+			MACRO_NEW_HELMET(ab,Shock),
         };
 		weapons[] = {};
 	};
@@ -54,4 +56,6 @@ class CfgWeapons
 	MACRO_NEW_AB_HELMET_ITEM(Sentinel,Sentinel,Sentinel.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Raven,Raven,Raven.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Veta,Veta,Veta.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Grey,Grey,Grey.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Shock,Shock,Shock.paa)
 };
