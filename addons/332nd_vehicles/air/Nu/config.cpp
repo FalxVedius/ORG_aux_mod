@@ -644,20 +644,16 @@ class CfgVehicles
 			1,
 			300
 		};
-		hiddenSelections[]=
-		{
-			"camo1",
-			"camo2",
-			"camo3",
-			"camo4"
+
+		hiddenSelections[] = { "camo1","camo2","camo3","camo4" };
+		hiddenSelectionsTextures[] = 
+		{ 
+			"3AS\3as_nu\data\exterior_CO.paa",
+			"3AS\3as_nu\data\wings_CO.paa",
+			"3as\3as_Nu\data\interior_co.paa",
+			"3as\3as_Nu\data\cockpit_doors_co.paa"
 		};
-		hiddenSelectionsTextures[]=
-		{
-			"3as\3as_Nu\data\Charger\exterior_CO.paa",
-			"3as\3as_Nu\data\Charger\wings_CO.paa",
-			"3as\3as_Nu\data\Charger\interior_co.paa",
-			"3as\3as_Nu\data\Charger\cockpit_doors_co.paa"
-		};
+
 		class UserActions //nu
 		{
 		    class lock_doors

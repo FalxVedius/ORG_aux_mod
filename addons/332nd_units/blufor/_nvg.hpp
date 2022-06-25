@@ -7,6 +7,7 @@ class JLTS_CloneNVGRange_black;
 class JLTS_CloneNVGMC;
 class ls_mandalorian_rangefinder_nvg;
 
+
 class MACRO_NEW_NVG(Leadership_MCNVG) :JLTS_CloneNVGMC
 {
     descriptionShort = "Night Vision Goggles";
