@@ -57,6 +57,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Caboose),
 			MACRO_NEW_HELMET(infantry,Inverse),
 			MACRO_NEW_HELMET(infantry,Mod),
+			MACRO_NEW_HELMET(infantry,Preacher),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -121,6 +122,7 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Caboose,Caboose,Caboose.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Inverse,Inverse,Inverse.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Mod,Mod,Mod.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Preacher,Preacher,Preacher.paa)
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Engineer,Engineer,CE.paa)

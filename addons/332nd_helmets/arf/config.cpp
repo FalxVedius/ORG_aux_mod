@@ -103,4 +103,11 @@ class CfgWeapons
 	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Fuzzy_Jung,Fuzzy Jungle,Fuzzy_Jung.paa)
 	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Fuzzy_Snow,Fuzzy Snow,Fuzzy_Snow.paa)
 	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Fuzzy_Urb,Fuzzy Urban,Fuzzy_Urb.paa)
+
+	MACRO_NEW_ARF_HELMET_ITEM(Undead,Undead,Undead.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Wood,Undead Multi-cam,Undead_Wood.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Des,Undead Desert,Undead_Des.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Jung,Undead Jungle,Undead_Jung.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Snow,Undead Snow,Undead_Snow.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Urb,Undead Urban,Undead_Urb.paa)
 }
