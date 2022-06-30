@@ -26,7 +26,7 @@ class CfgVehicles
 
     } 
 
-    class MACRO_NEW_VEHICLE(Land,CIS,TT_CIS) : 3as_MTT
+    class MACRO_NEW_VEHICLE(Land,CIS,TT_CIS) : 3AS_Assualt_Base
     {
 
         displayName = "Troop Transporter (CIS)";
