@@ -95,7 +95,7 @@ class CfgAmmo
 	};
 }
 
-class CfgMagazine
+class CfgMagazines
 {
     class 3AS_40Rnd_MTT_HEAT;
 
