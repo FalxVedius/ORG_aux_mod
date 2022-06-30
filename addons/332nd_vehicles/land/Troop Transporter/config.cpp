@@ -19,8 +19,16 @@ class CfgPatches
 class CfgVehicles
 {
 	class LandVehicle;
-	class Tank : LandVehicle;
-    class Tank_F : Tank;
+	class Tank : LandVehicle
+    {
+
+    }
+    
+    class Tank_F : Tank
+    {
+        
+    }
+    
     class 3AS_Assualt_Base : Tank_F
     {
 
