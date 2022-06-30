@@ -303,6 +303,8 @@ class CfgVehicles
 		memoryPointsGetInCargoDir[] = { "pos_cargo_dir" };
 		memoryPointsGetInCargoPrecise[] = { "" };
 
+		maximumLoad = 10000;
+
         weapons[] = {
             MACRO_AIR_COMMON_WEAPS,
             MACRO_NEW_WEAPON(LAAT_40mm), MACRO_NEW_WEAPON(air_dumb_rocketpod), 
@@ -859,14 +861,16 @@ class CfgVehicles
 		{
 			class MainTurret : MainTurret
 			{
+				stabilizedInAxes = 3;
 				weapons[] = {
 					MACRO_AIR_COMMON_WEAPS,
-					"ParticleBeamCannon"
+					MACRO_NEW_WEAPON(LAAT_40mm)
 
 				};
 				magazines[] = {
 					MACRO_AIR_COMMON_MAGS,
-					"Laser_Battery_F","Laser_Battery_F"
+					MACRO_NEW_MAG(LAAT_40mm,600),
+					MACRO_NEW_MAG(LAAT_40mm,600),
 				};
 			};
 		};
@@ -3802,6 +3806,60 @@ class CfgVehicles
 				count = 100;
 			};
 
+			class DC17M_Rifle_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				count = 300;
+			};
+
+			class DC17M_Marks_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				count = 300;
+			};
+
+			class DC17M_Grend_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				count = 50;
+			};
+
+			class DC_44h_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_44h_x6";
+				count = 300;
+			};
+
+			class DC_15k_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15k_x15";
+				count = 300;
+			};
+
+			class MPS_HE_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_Red_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				count = 15;
+			};
+
+			class MPS_Flare_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				count = 15;
+			};
+
 			class DP_23_332nd
 			{
 				magazine = "332nd_aux_magazine_DP23_x12";
@@ -3968,30 +4026,6 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_DC_15x_x2";
 				count = 20;
-			};
-
-			class Dm17HeartStarter_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
-				count = 50;
-			};
-
-			class Dm17Bacta_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
-				count = 25;
-			};
-
-			class Dm17Kolto_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
-				count = 25;
-			};
-
-			class Dm17CombatStim_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
-				count = 50;
 			};
 		};
 
@@ -4011,732 +4045,6 @@ class CfgVehicles
         maximumLoad = 10000;
 
         class TransportItems
-        {
-
-            class BactaSprayx25_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray_x25";
-                count = 4;
-            };
-
-            class PlastiBandagex25_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage_x25";
-                count = 4;
-            };
-
-            class MedPatchx25_332nd
-            {
-                name = "332nd_aux_medical_MedPatch_x25";
-                count = 4;
-            };
-
-            class BactaSprayx10_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray_x10";
-                count = 10;
-            };
-
-            class PlastiBandagex10_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage_x10";
-                count = 10;
-            };
-
-            class MedPatchx10_332nd
-            {
-                name = "332nd_aux_medical_MedPatch_x10";
-                count = 10;
-            };
-
-            class BactaSprayx5_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray_x5";
-                count = 10;
-            };
-
-            class PlastiBandagex5_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage_x5";
-                count = 10;
-            };
-
-            class MedPatchx5_332nd
-            {
-                name = "332nd_aux_medical_MedPatch_x5";
-                count = 10;
-            };
-
-            class MediKit_332nd
-            {
-                name = "332nd_aux_medical_MediKit";
-                count = 10;
-            };
-
-            class BactaSpray_332nd
-            {
-                name = "332nd_aux_medical_BactaSpray";
-                count = 50;
-            };
-
-            class PlastiBandage_332nd
-            {
-                name = "332nd_aux_medical_PlastiBandage";
-                count = 50;
-            };
-
-            class MedPatch_332nd
-            {
-                name = "332nd_aux_medical_MedPatch";
-                count = 50;
-            };
-
-            class Painkillers_332nd
-            {
-                name = "332nd_aux_medical_PainKiller";
-                count = 40;
-            };
-
-            class Adrenaline_332nd
-            {
-                name = "332nd_aux_medical_Adrenaline";
-                count = 40;
-            };
-
-            class Blood_332nd
-            {
-                name = "332nd_aux_medical_Blood";
-                count = 75;
-            };
-
-			class Bacta_332nd
-			{
-				name = "332nd_aux_medical_Bacta";
-				count = 25;
-			};
-
-			class Kolto_332nd
-			{
-				name = "332nd_aux_medical_Kolto";
-				count = 25;
-			};
-
-			class BactaInj_332nd
-			{
-				name = "332nd_aux_medical_Bacta_Inj";
-				count = 25;
-			};
-
-			class KoltoInj_332nd
-			{
-				name = "332nd_aux_medical_Kolto_Inj";
-				count = 25;
-			};
-
-			class DefibStrips_332nd
-			{
-				name = "332nd_aux_medical_AdhesiveDefibStrip";
-				count = 100;
-			};
-
-            class PressureCuff_332nd
-            {
-                name = "332nd_aux_medical_PressureCuff";
-                count = 30;
-            };
-        };
-
-        class TransportWeapons
-        {
-            class DC15A_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15a";
-                count = 10;
-            };
-
-            class DC15S_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15s";
-                count = 10;
-            };
-
-            class DC15C_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15c";
-                count = 10;
-            };
-
-            class DP23_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DP_23";
-                count = 10;
-            };
-
-            class DW32S_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DW_32S";
-                count = 10;
-            };
-
-            class Valken38x_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_Valken38x";
-                count = 10;
-            };
-
-            class Z6_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_Z6";
-                count = 10;
-            };
-
-            class DC15B_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_DC_15b";
-                count = 10;
-            };
-
-            class RPS1_Weps_332nd
-            {
-                weapon = "332nd_aux_weapon_RPS_1";
-                count = 5;
-            };
-        };
-
-        class TransportMagazines
-        {
-			class DC15A_low_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
-				count = 300;
-			};
-
-			class DC15A_medium_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
-				count = 300;
-			};
-
-			class DC15A_High_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15a_High_x10";
-				count = 50;
-			};
-
-			class 332_Stun_332nd
-			{
-				magazine = "332nd_aux_magazine_Stun_x10";
-				count = 100;
-			};
-
-			class DC15A_UGLAP_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
-				count = 50;
-			};
-
-			class DC15A_UGLHE_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
-				count = 50;
-			};
-
-			class DC15s_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
-				count = 300;
-			};
-
-			class DC15c_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
-				count = 300;
-			};
-
-			class DC15b_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
-				count = 200;
-			};
-
-			class DC17_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_17_x15";
-				count = 50;
-			};
-
-			class SA35_332nd
-			{
-				magazine = "332nd_aux_magazine_35sa_low_x30";
-				count = 50;
-			};
-
-			class DC15L_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15L_x200";
-				count = 100;
-			};
-
-			class DC15L_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15L_T_x200";
-				count = 100;
-			};
-
-			class DP_23_332nd
-			{
-				magazine = "332nd_aux_magazine_DP23_x12";
-				count = 100;
-			};
-
-			class DP_23Wide_332nd
-			{
-				magazine = "332nd_aux_magazine_DP23_x12Wide";
-				count = 100;
-			};
-
-			class DW_32_HIGH_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_High_x5";
-				count = 50;
-			};
-
-			class DW_32_HIGH_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_High_T_x5";
-				count = 50;
-			};
-
-			class DW_32_CONCMED_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_Med_x20";
-				count = 100;
-			};
-
-			class DW_32_CONCMED_T_332nd
-			{
-				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
-				count = 100;
-			};
-
-			class Valken_38x_REFMED_332nd
-			{
-				magazine = "332nd_aux_magazine_Valken38x_x15";
-				count = 100;
-			};
-
-			class Valken_38x_REFMED_T_332nd
-			{
-				magazine = "332nd_aux_magazine_Valken38x_T_x15";
-				count = 100;
-			};
-
-			class Valken_38x_REFMED_T_332nd
-			{
-				magazine = "332nd_aux_magazine_Valken38x_T_x15";
-				count = 100;
-			};
-
-			class Firepuncher_high_T_332nd
-			{
-				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
-				count = 100;
-			};
-
-			class Firepuncher_high_332nd
-			{
-				magazine = "332nd_aux_magazine_Firepuncher_x8";
-				count = 100;
-			};
-
-			class Westar_m5_40rnd
-			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
-				count = 300;
-			};
-
-			class Z6_332nd
-			{
-				magazine = "332nd_aux_magazine_Z6_x200";
-				count = 200;
-			};
-
-			class Z6_Super_332nd
-			{
-				magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
-				count = 250;
-			};
-
-			class Z6_ALT_332nd
-			{
-				magazine = "332nd_aux_magazine_Z6_x125";
-				count = 200;
-			};
-
-			class Flash_332nd
-			{
-				magazine = "332nd_aux_magazine_332_FLASH_x1";
-				count = 30;
-			};
-
-			class ATCharge_332nd
-			{
-				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
-				count = 30;
-			};
-
-			class HEDPImpact_332nd
-			{
-				magazine = "332nd_aux_magazine_332_HEDP_x1";
-				count = 30;
-			};
-
-			class SquadShield_332nd
-			{
-				magazine = "332nd_aux_magazine_332_SquadShield_x1";
-				count = 5;
-			};
-
-			class ThermalDet_332nd
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 30;
-			};
-
-			class PLXAA_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
-				count = 10;
-			};
-
-			class PLXAT_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
-				count = 10;
-			};
-
-			class PLXHE_332nd
-			{
-				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
-				count = 10;
-			};
-
-			class RPS6AT_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-				count = 20;
-			};
-
-			class RPS6AA_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-				count = 20;
-			};
-
-			class RPS4AT_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS4_AT_x1";
-				count = 20;
-			};
-
-			class RPS4HE_332nd
-			{
-				magazine = "332nd_aux_magazine_RPS4_HE_x1";
-				count = 20;
-			};
-
-			class DC15xATR_332nd
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
-				count = 20;
-			};
-
-			class Dm17HeartStarter_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
-				count = 50;
-			};
-
-			class Dm17Bacta_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
-				count = 25;
-			};
-
-			class Dm17Kolto_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
-				count = 25;
-			};
-
-			class Dm17CombatStim_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
-				count = 50;
-			};
-        };
-
-
-        class HitPoints : HitPoints
-        {
-            class HitHull : HitHull
-            {
-                armor = 999;
-                convexComponent = "hull_hit";
-                depends = "Total";
-                explosionShielding = 1;
-                material = 51;
-                name = "hull_hit";
-                passThrough = 1;
-                visual = "zbytek";
-                radius = 0.01;
-            };
-            class HitFuel : HitFuel
-            {
-                convexcomponent = "fuel_hit";
-                hitpoint = "fuel_hit";
-                name = "fuel_hit";
-                explosionShielding = 2;
-                radius = 0.1;
-                visual = "";
-                passthrough = 0.1;
-                minimalhit = 0.1;
-                material = -1;
-                armor = 0.6 * 5;
-            };
-            class HitEngine : HitEngine
-            {
-                armor = 999;
-                convexComponent = "engine_hit";
-                explosionShielding = 2;
-                material = 51;
-                name = "engine_hit";
-                hitpoint = "engine_hit";
-                passThrough = 1;
-                visual = "";
-                radius = 0.2 * 5;
-                minimalHit = 0.6;
-            };
-            class HitEngine_1 : HitEngine_1
-            {
-                armor = 999;
-                passThrough = 1;
-                explosionShielding = 2;
-                convexComponent = "engine_hit_1";
-                name = "engine_hit_1";
-                hitpoint = "engine_hit_1";
-                minimalHit = 0.6;
-            };
-            class HitEngine_2 : HitEngine_2
-            {
-                armor = 999;
-                passThrough = 1;
-                explosionShielding = 2;
-                convexComponent = "engine_hit_2";
-                name = "engine_hit_2";
-                hitpoint = "engine_hit_2";
-                minimalHit = 0.6;
-            };
-            class HitHRotor : HitHRotor
-            {
-                armor = 999;
-                convexComponent = "main_rotor_hit";
-                explosionShielding = 2.5;
-                material = 51;
-                name = "main_rotor_hit";
-                passThrough = 0.1;
-                visual = "";
-                radius = 0.01;
-            };
-            class HitVRotor : HitVRotor
-            {
-                armor = 999;
-                convexComponent = "tail_rotor_hit";
-                explosionShielding = 6;
-                material = 51;
-                name = "tail_rotor_hit";
-                passThrough = 0.3;
-                visual = "";
-                radius = 0.01;
-            };
-            class HitAvionics : HitAvionics
-            {
-                armor = 1 * 5;
-                convexComponent = "avionics_hit";
-                explosionShielding = 2;
-                material = 51;
-                name = "avionics_hit";
-                passThrough = 1;
-                visual = "";
-                radius = 0.5;
-            };
-        };
-
-        class TextureSources
-        {
-            class Standard
-            {
-                displayname = "332nd Standard";
-                author = "Halligan";
-                textures[] =
-                {
-					MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-                };
-                factions[] =
-                {
-                    "EdCat_332nd"
-                };
-            };
-			class Test
-			{
-				displayname = "332nd Test";
-				author = "Falx";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Test\body1.paa,MACRO_LAAT_TEXTURES\Variants\Test\body2.paa,
-					MACRO_LAAT_TEXTURES\Variants\Test\door1.paa,MACRO_LAAT_TEXTURES\Variants\Test\door2.paa,MACRO_LAAT_TEXTURES\Variants\Test\door3.paa,
-					MACRO_LAAT_TEXTURES\Variants\Test\wings.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Variants\Test\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-            class Noseart_Verus
-            {
-                displayName = "332nd Verus Noseart";
-                author = "Halligan";
-                textures[] =
-                {
-                    MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-                };
-                factions[] =
-                {
-                    "EdCat_332nd"
-                };
-            };
-            class Noseart_Chopper
-            {
-                displayName = "332nd Chopper Noseart";
-                author = "Halligan";
-                textures[] =
-                {
-                    MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-                };
-                factions[] =
-                {
-                    "EdCat_332nd"
-                };
-            };
-			class Noseart_Blast
-			{
-				displayName = "332nd Blast Noseart";
-				author = "Falx";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Blast\body1.paa,MACRO_LAAT_TEXTURES\Variants\Blast\body2.paa,
-					MACRO_LAAT_TEXTURES\Variants\Blast\door1.paa,MACRO_LAAT_TEXTURES\Variants\Blast\door2.paa,MACRO_LAAT_TEXTURES\Variants\Blast\door3.paa,
-					MACRO_LAAT_TEXTURES\Variants\Blast\wings.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Variants\Blast\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-			class Commander_332nd
-			{
-				displayName = "332nd Flight Commander";
-				author = "Falx";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Commander\body1.paa,MACRO_LAAT_TEXTURES\Variants\Commander\body2.paa,
-					MACRO_LAAT_TEXTURES\Variants\Commander\door1.paa,MACRO_LAAT_TEXTURES\Variants\Commander\door2.paa,MACRO_LAAT_TEXTURES\Variants\Commander\door3.paa,
-					MACRO_LAAT_TEXTURES\Variants\Commander\wings.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Variants\Commander\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-			class Lead_332nd
-			{
-				displayName = "332nd Section Lead";
-				author = "Falx";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Lead\body1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\body2.paa,
-					MACRO_LAAT_TEXTURES\Variants\Lead\door1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door2.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door3.paa,
-					MACRO_LAAT_TEXTURES\Variants\Lead\wings.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Variants\Lead\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-			class Tech_332nd
-			{
-				displayName = "332nd Flight Technician";
-				author = "Falx";
-				textures[] =
-				{
-					MACRO_LAAT_TEXTURES\Variants\Tech\body1.paa,MACRO_LAAT_TEXTURES\Variants\Tech\body2.paa,
-					MACRO_LAAT_TEXTURES\Variants\Tech\door1.paa,MACRO_LAAT_TEXTURES\Variants\Tech\door2.paa,MACRO_LAAT_TEXTURES\Variants\Tech\door3.paa,
-					MACRO_LAAT_TEXTURES\Variants\Tech\wings.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-					MACRO_LAAT_TEXTURES\Variants\Tech\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332nd"
-				};
-			};
-            class Ahegao
-            {
-                displayName = "Transport Gunship (Ahegao)";
-                author = MACRO_AUTHOR;
-                factions[] = { "EdCat_332nd" };
-                textures[] = {
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
-					"lsd_vehicles_heli\laati\data\missiles_co.paa",
-                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-                };
-            };
-        };
-	};
-
-	class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_AB): MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)
-	{
-	    scope = 2;
-	    scopeCurator = 2;
-        forceInGarage = 1;
-        armor = 100 * 0.5;
-        maximumLoad = 10000;
-		model="\lsd_vehicles_heli\laati\lsd_heli_laati_ab";
-		displayName="LAAT MK1 (AB)";
-
-		 class TransportItems
         {
 
             class BactaSprayx25_332nd
@@ -5009,6 +4317,60 @@ class CfgVehicles
 				count = 100;
 			};
 
+			class DC17M_Rifle_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				count = 300;
+			};
+
+			class DC17M_Marks_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				count = 300;
+			};
+
+			class DC17M_Grend_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				count = 50;
+			};
+
+			class DC_44h_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_44h_x6";
+				count = 300;
+			};
+
+			class DC_15k_332nd
+			{
+				magazine = "332nd_aux_magazine_DC_15k_x15";
+				count = 300;
+			};
+
+			class MPS_HE_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				count = 15;
+			};
+
+			class MPS_Smoke_Red_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				count = 15;
+			};
+
+			class MPS_Flare_332nd
+			{
+				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				count = 15;
+			};
+
 			class DP_23_332nd
 			{
 				magazine = "332nd_aux_magazine_DP23_x12";
@@ -5176,250 +4538,238 @@ class CfgVehicles
 				magazine = "332nd_aux_magazine_DC_15x_x2";
 				count = 20;
 			};
-
-			class Dm17HeartStarter_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
-				count = 50;
-			};
-
-			class Dm17Bacta_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
-				count = 25;
-			};
-
-			class Dm17Kolto_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
-				count = 25;
-			};
-
-			class Dm17CombatStim_332nd
-			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
-				count = 50;
-			};
 		};
 
-		class Components: Components
-		{
-			class TransportPylonsComponent
+
+        class HitPoints : HitPoints
+        {
+            class HitHull : HitHull
+            {
+                armor = 999;
+                convexComponent = "hull_hit";
+                depends = "Total";
+                explosionShielding = 1;
+                material = 51;
+                name = "hull_hit";
+                passThrough = 1;
+                visual = "zbytek";
+                radius = 0.01;
+            };
+            class HitFuel : HitFuel
+            {
+                convexcomponent = "fuel_hit";
+                hitpoint = "fuel_hit";
+                name = "fuel_hit";
+                explosionShielding = 2;
+                radius = 0.1;
+                visual = "";
+                passthrough = 0.1;
+                minimalhit = 0.1;
+                material = -1;
+                armor = 0.6 * 5;
+            };
+            class HitEngine : HitEngine
+            {
+                armor = 999;
+                convexComponent = "engine_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "engine_hit";
+                hitpoint = "engine_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.2 * 5;
+                minimalHit = 0.6;
+            };
+            class HitEngine_1 : HitEngine_1
+            {
+                armor = 999;
+                passThrough = 1;
+                explosionShielding = 2;
+                convexComponent = "engine_hit_1";
+                name = "engine_hit_1";
+                hitpoint = "engine_hit_1";
+                minimalHit = 0.6;
+            };
+            class HitEngine_2 : HitEngine_2
+            {
+                armor = 999;
+                passThrough = 1;
+                explosionShielding = 2;
+                convexComponent = "engine_hit_2";
+                name = "engine_hit_2";
+                hitpoint = "engine_hit_2";
+                minimalHit = 0.6;
+            };
+            class HitHRotor : HitHRotor
+            {
+                armor = 999;
+                convexComponent = "main_rotor_hit";
+                explosionShielding = 2.5;
+                material = 51;
+                name = "main_rotor_hit";
+                passThrough = 0.1;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitVRotor : HitVRotor
+            {
+                armor = 999;
+                convexComponent = "tail_rotor_hit";
+                explosionShielding = 6;
+                material = 51;
+                name = "tail_rotor_hit";
+                passThrough = 0.3;
+                visual = "";
+                radius = 0.01;
+            };
+            class HitAvionics : HitAvionics
+            {
+                armor = 1 * 5;
+                convexComponent = "avionics_hit";
+                explosionShielding = 2;
+                material = 51;
+                name = "avionics_hit";
+                passThrough = 1;
+                visual = "";
+                radius = 0.5;
+            };
+        };
+
+        class TextureSources
+        {
+            class Standard
+            {
+                displayname = "332nd Standard";
+                author = "Halligan";
+                textures[] =
+                {
+					MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+			class Test
 			{
-				uiPicture="swlb_a_vehicle\laat\data\ui\laat_ui.paa";
-				class Pylons
+				displayname = "332nd Test";
+				author = "Falx";
+				textures[] =
 				{
-					class PylonLeft1
-					{
-						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
-						priority=5;
-						hardpoints[]=
-						{
-							"332_A_Pylon"
-						};
-						turret[]={};
-						UIposition[]={0.059999999,0.40000001};
-					};
-					class PylonLeft2: PylonLeft1
-					{
-						attachment="332nd_aux_magazine_Pylon_Shrieker_x20";  
-						priority=4;
-						hardpoints[]=
-						{
-							"332_C_Pylon"
-						};
-						UIposition[]={0.079999998,0.34999999};
-					};
-					class PylonLeft3: PylonLeft1
-					{
-						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
-						priority=3;
-						hardpoints[]=
-						{
-							"332_B_Pylon"
-						};
-						UIposition[]={0.1,0.30000001};
-					};
-					class PylonRight3: PylonLeft3
-					{
-						mirroredMissilePos=3;
-						UIposition[]={0.58999997,0.30000001};
-					};
-					class PylonRight2: PylonLeft2
-					{
-						mirroredMissilePos=2;
-						UIposition[]={0.62,0.34999999};
-					};
-					class PylonRight1: PylonLeft1
-					{
-						mirroredMissilePos=1;
-						UIposition[]={0.63999999,0.40000001};
-					};
+					MACRO_LAAT_TEXTURES\Variants\Test\body1.paa,MACRO_LAAT_TEXTURES\Variants\Test\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Test\door1.paa,MACRO_LAAT_TEXTURES\Variants\Test\door2.paa,MACRO_LAAT_TEXTURES\Variants\Test\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Test\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Test\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
 				};
 			};
-		};
-	
-		class HitPoints : HitPoints
-		{
-			class HitHull : HitHull
+            class Noseart_Verus
+            {
+                displayName = "332nd Verus Noseart";
+                author = "Halligan";
+                textures[] =
+                {
+                    MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+            class Noseart_Chopper
+            {
+                displayName = "332nd Chopper Noseart";
+                author = "Halligan";
+                textures[] =
+                {
+                    MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+                factions[] =
+                {
+                    "EdCat_332nd"
+                };
+            };
+			class Noseart_Blast
 			{
-				armor = 999;
-				convexComponent = "hull_hit";
-				depends = "Total";
-				explosionShielding = 1;
-				material = 51;
-				name = "hull_hit";
-				passThrough = 1;
-				visual = "zbytek";
-				radius = 0.01;
+				displayName = "332nd Blast Noseart";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Blast\body1.paa,MACRO_LAAT_TEXTURES\Variants\Blast\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Blast\door1.paa,MACRO_LAAT_TEXTURES\Variants\Blast\door2.paa,MACRO_LAAT_TEXTURES\Variants\Blast\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Blast\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Blast\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
 			};
-			class HitFuel : HitFuel
+			class Lead_332nd
 			{
-				convexcomponent = "fuel_hit";
-				hitpoint = "fuel_hit";
-				name = "fuel_hit";
-				explosionShielding = 2;
-				radius = 0.1;
-				visual = "";
-				passthrough = 0.1;
-				minimalhit = 0.1;
-				material = -1;
-				armor = 0.6 * 5;
+				displayName = "332nd Leadership";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Lead\body1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Lead\door1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door2.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Lead\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Lead\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
 			};
-			class HitEngine : HitEngine
+			class Tech_332nd
 			{
-				armor = 999;
-				convexComponent = "engine_hit";
-				explosionShielding = 2;
-				material = 51;
-				name = "engine_hit";
-				hitpoint = "engine_hit";
-				passThrough = 1;
-				visual = "";
-				radius = 0.2 * 5;
-				minimalHit = 0.6;
+				displayName = "332nd Flight Technician";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Tech\body1.paa,MACRO_LAAT_TEXTURES\Variants\Tech\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Tech\door1.paa,MACRO_LAAT_TEXTURES\Variants\Tech\door2.paa,MACRO_LAAT_TEXTURES\Variants\Tech\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Tech\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Tech\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
 			};
-			class HitEngine_1 : HitEngine_1
-			{
-				armor = 999;
-				passThrough = 1;
-				explosionShielding = 2;
-				convexComponent = "engine_hit_1";
-				name = "engine_hit_1";
-				hitpoint = "engine_hit_1";
-				minimalHit = 0.6;
-			};
-			class HitEngine_2 : HitEngine_2
-			{
-				armor = 999;
-				passThrough = 1;
-				explosionShielding = 2;
-				convexComponent = "engine_hit_2";
-				name = "engine_hit_2";
-				hitpoint = "engine_hit_2";
-				minimalHit = 0.6;
-			};
-			class HitHRotor : HitHRotor
-			{
-				armor = 999;
-				convexComponent = "main_rotor_hit";
-				explosionShielding = 2.5;
-				material = 51;
-				name = "main_rotor_hit";
-				passThrough = 0.1;
-				visual = "";
-				radius = 0.01;
-			};
-			class HitVRotor : HitVRotor
-			{
-				armor = 999;
-				convexComponent = "tail_rotor_hit";
-				explosionShielding = 6;
-				material = 51;
-				name = "tail_rotor_hit";
-				passThrough = 0.3;
-				visual = "";
-				radius = 0.01;
-			};
-			class HitAvionics : HitAvionics
-			{
-				armor = 1 * 5;
-				convexComponent = "avionics_hit";
-				explosionShielding = 2;
-				material = 51;
-				name = "avionics_hit";
-				passThrough = 1;
-				visual = "";
-				radius = 0.5;
-			};
-		};
-
-         class TextureSources
-          {
-			 class Standard
-			 {
-				 displayname = "332nd Standard";
-				 author = "Halligan";
-				 textures[] =
-				 {
-					 MACRO_LAAT_TEXTURES\Base\Body\body1_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa,"lsd_vehicles_heli\laati\data\door3_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				 };
-				 factions[] =
-				 {
-					 "EdCat_332nd"
-				 };
-			 };
-			 class Noseart_Verus
-			 {
-				 displayName = "332nd Verus Noseart";
-				 author = "Halligan";
-				 textures[] =
-				 {
-					 MACRO_LAAT_TEXTURES\Variants\Verus\Verus_ca.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				 };
-				 factions[] =
-				 {
-					 "EdCat_332nd"
-				 };
-			 };
-			 class Noseart_Chopper
-			 {
-				 displayName = "332nd Chopper Noseart";
-				 author = "Halligan";
-				 textures[] =
-				 {
-					 MACRO_LAAT_TEXTURES\Variants\Chopper\Chopper_co.paa,"lsd_vehicles_heli\laati\data\body2_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Doors\Doors1\door1_co.paa,MACRO_LAAT_TEXTURES\Base\Doors\Doors2\door2_co.paa, "lsd_vehicles_heli\laati\data\door3_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Wings\wings_co.paa,
-					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
-					 MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				 };
-				 factions[] =
-				 {
-					 "EdCat_332nd"
-				 };
-			 };
-			 class Ahegao
-			 {
-				 displayName = "Transport Gunship (Ahegao)";
-				 author = MACRO_AUTHOR;
-				 factions[] = { "EdCat_332nd" };
-				 textures[] = {
-					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
-					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
-					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
-					 "lsd_vehicles_heli\laati\data\missiles_co.paa",
-					 MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
-				 };
-			 };
-          };
+            class Ahegao
+            {
+                displayName = "Transport Gunship (Ahegao)";
+                author = MACRO_AUTHOR;
+                factions[] = { "EdCat_332nd" };
+                textures[] = {
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Body1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Body2.paa,
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Door1.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door2.paa,MACRO_LAAT_TEXTURES\Variants\Ahegao\Door3.paa,
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+                    MACRO_LAAT_TEXTURES\Variants\Ahegao\Cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+                };
+            };
+        };
 	};
 };

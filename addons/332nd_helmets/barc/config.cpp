@@ -19,6 +19,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(barc,Corporal),
 			MACRO_NEW_HELMET(barc,Sergeant),
 			MACRO_NEW_HELMET(barc,Lasagna),
+			MACRO_NEW_HELMET(barc,Qrow),
         };
 		weapons[] = {};
 	};
@@ -36,5 +37,6 @@ class CfgWeapons
 	MACRO_NEW_BARC_HELMET_ITEM(Corporal,Corporal,Corporal.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Sergeant,Sergeant,Sergeant.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Lasagna,Lasagna,Lasagna.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Qrow,Qrow,Qrow.paa)
 
 }

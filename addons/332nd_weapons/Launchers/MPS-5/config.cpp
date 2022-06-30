@@ -70,7 +70,7 @@ class CfgWeapons
 	{
 		author = "Falx";
 		scope = 2;
-		displayName = "[332nd] MPS-5 60mm Mortar *WIP*";
+		displayName = "[332nd] MPS-5 60mm Mortar *WIP* [Heavy Grenadier]";
 		displayNameShort = "MPS-5";
 		model = "\z\potato\addons\vz99\data\vz99_carry";
 		picture = "\z\potato\addons\vz99\ui\weaponSide_ca.paa";

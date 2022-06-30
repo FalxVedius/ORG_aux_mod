@@ -131,12 +131,14 @@
 			displayName = [332nd] Arc Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arc\##texture};\
 		};
-	#define MACRO_NEW_ASSAULT_HELMET_ITEM(classname,displayname)\
+	#define MACRO_NEW_ASSAULT_HELMET_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_HELMET(assault,classname): MACRO_NEW_HELMET(assault,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Assault Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,"\3AS\3AS_Characters\Commando\data\Katarn_Helmet_Glass_CO.paa"};\
+			hiddenSelectionsMaterials[] = {"\332nd_helmets\assault\Assault_Helmet.rvmat","\3AS\3AS_Characters\Commando\data\Katarn_Visor.rvmat"};\
 		};
 	
 
@@ -885,7 +887,7 @@
 				"\MRC\JLTS\characters\CloneArmor\data\Clone_rank_co.paa"\
 			};\
 		}
-	#define MACRO_NEW_ASSAULT_UNIT(classname,displayname,uniformClassname)\
+	#define MACRO_NEW_ASSAULT_UNIT(classname,displayname,uniformClassname,uniclass)\
 		class MACRO_NEW_UNIT(assault,classname): MACRO_NEW_UNIT(assault,base)\
 		{\
 			author = MACRO_AUTHOR;\
@@ -894,6 +896,11 @@
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(assault,uniformClassname);\
 			hiddenSelections[] = {"camo","camo1"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\assault\uniforms\##uniclass,\
+				"\3AS\3AS_Characters\Commando\data\Katarn_Armor_Standard_CO.paa"\
+			};\
+			hiddenSelectionsMaterials[] = {"\332nd_units\_textures\assault\uniforms\Assault_Uniform.rvmat","\3AS\3AS_Characters\Commando\data\Katarn_Undersuit.rvmat"};\
 		}
 
 

@@ -47,12 +47,17 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Xander),
 			MACRO_NEW_HELMET(infantry,Zombie),
 			MACRO_NEW_HELMET(infantry,Brotha),
-			MACRO_NEW_HELMET(infantry,Halligan),
 			MACRO_NEW_HELMET(infantry,Knight),
 			MACRO_NEW_HELMET(infantry,Sigma),
 			MACRO_NEW_HELMET(infantry,Rev),
 			MACRO_NEW_HELMET(infantry,Bob),
 			MACRO_NEW_HELMET(infantry,Ukrainian),
+			MACRO_NEW_HELMET(infantry,Griif),
+			MACRO_NEW_HELMET(infantry,Noodles),
+			MACRO_NEW_HELMET(infantry,Caboose),
+			MACRO_NEW_HELMET(infantry,Inverse),
+			MACRO_NEW_HELMET(infantry,Mod),
+			MACRO_NEW_HELMET(infantry,Preacher),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -107,12 +112,17 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Xander,Xander,Xander.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Zombie,Zombie,Zombie.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Knight,Knight,Knight.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bob,Bob,Bob.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Ukrainian,Ukrainian,Ukrainian.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Griif,Griif,Griif.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Noodles,Noodles,Noodles.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Caboose,Caboose,Caboose.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Inverse,Inverse,Inverse.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Mod,Mod,Mod.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Preacher,Preacher,Preacher.paa)
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Engineer,Engineer,CE.paa)

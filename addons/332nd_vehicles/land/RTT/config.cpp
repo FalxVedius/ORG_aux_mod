@@ -11,8 +11,8 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(Land,RTT,Transport),
-			MACRO_NEW_VEHICLE(Land,RTT,Supply),
+            //MACRO_NEW_VEHICLE(Land,RTT,Transport),
+			//MACRO_NEW_VEHICLE(Land,RTT,Supply),
         };
 		weapons[] = {};
 	};
@@ -151,7 +151,7 @@ class CfgVehicles
 	};
 
 	
-    class MACRO_NEW_VEHICLE(Land,RTT,Transport): 3as_RTT
+    /*class MACRO_NEW_VEHICLE(Land, RTT, Transport) : 3as_RTT
     {
         displayName = "RTT Transport";
         scope = 2;
@@ -368,4 +368,5 @@ class CfgVehicles
 			};
 		};
 	};
+	*/
 };

@@ -70,7 +70,7 @@ class cfgWeapons
 		};
 
 		
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15s)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15s [Rifleman])
 
 		canShootInWater=1;
 		baseWeapon="332nd_aux_weapon_DC_15s";

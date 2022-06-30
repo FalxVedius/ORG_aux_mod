@@ -69,7 +69,7 @@ class cfgWeapons
     class MACRO_NEW_WEAPON(DP_23): JLTS_DP23
     {
 		scope=2;
-	    displayName=MACRO_WEAPON_DISPLAYNAME(DP-23 Shotgun)
+	    displayName=MACRO_WEAPON_DISPLAYNAME(DP-23 Shotgun [Rifleman])
 		reloadTime=0.20;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_smg_03";

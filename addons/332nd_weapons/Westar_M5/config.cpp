@@ -55,7 +55,7 @@ class CfgWeapons
 	{
 		author="Halligan";
 		scope=2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5)
+		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5 [Mission/Banshee])
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_F.p3d";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		weaponInfoType="RscWeaponZeroing";
@@ -344,7 +344,7 @@ class CfgWeapons
 	class MACRO_NEW_WEAPON(Westar_M5_GL): MACRO_NEW_WEAPON(Westar_M5)
 	{
 		scope=2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5 UGL)
+		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5 UGL [Mission/Banshee Grenadier])
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_GL.p3d";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		weaponInfoType="RscWeaponZeroing";

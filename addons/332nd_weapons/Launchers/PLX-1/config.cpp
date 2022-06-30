@@ -30,7 +30,7 @@ class CfgWeapons
     };
 	class MACRO_NEW_WEAPON(PLX_1): SWLW_PLX1
     {
-	    displayName=MACRO_WEAPON_DISPLAYNAME(PLX-1 Missile Launcher)
+	    displayName=MACRO_WEAPON_DISPLAYNAME(PLX-1 Missile Launcher [Heavy AT])
 		author="Halligan";
 		scope=2;
 		scopeCurator=2;
