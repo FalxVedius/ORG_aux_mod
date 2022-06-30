@@ -86,6 +86,8 @@ class CfgVehicles
 
 class CfgAmmo
 {
+    class 3AS_MTT_redPlasma_HEAT;
+
     class MACRO_NEW_AMMO(MTT_HE) : 3AS_MTT_redPlasma_HEAT
 	{
 		allowAgainstInfantry = 1;
@@ -95,6 +97,8 @@ class CfgAmmo
 
 class CfgMagazine
 {
+    class 3AS_40Rnd_MTT_HEAT;
+
     class MACRO_NEW_MAG(MTT_HE,46) : 3AS_40Rnd_MTT_HEAT
 	{
 		displayName = "MTT HE";
