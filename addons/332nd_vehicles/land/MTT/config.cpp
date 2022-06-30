@@ -103,6 +103,7 @@ class CfgMagazines
 	{
 		displayName = "MTT HE";
 		ammo = MACRO_NEW_AMMO(MTT_HE)
+        count=46;
 	};
 }
 
