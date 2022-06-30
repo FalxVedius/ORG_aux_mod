@@ -54,11 +54,31 @@ class CfgVehicles
             };
             class MainTurret1 : MainTurret1
             {
-
+                weapons[] =
+				{
+				  MACRO_NEW_WEAPON(MTT_Cannon)
+				};
+				magazines[] =
+				{
+				  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46)
+				};
             };
             class MainTurret2 : MainTurret2
             {
-
+                weapons[] =
+				{
+				  MACRO_NEW_WEAPON(MTT_Cannon)
+				};
+				magazines[] =
+				{
+				  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46)
+				};
             };
         };
     };
