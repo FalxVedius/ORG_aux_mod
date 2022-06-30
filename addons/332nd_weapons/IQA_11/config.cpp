@@ -60,7 +60,7 @@ class CfgMagazines
 		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_mag_ui.paa";
 		ammo=MACRO_NEW_AMMO(Refined_high_T);
 		count=8;
-		mass=15;
+		mass=30;
 		model="SWLW_merc_mando\rifles\sniper\sniper_mag.p3d";
 		modelSpecial="\SWLW_merc_mando\rifles\sniper\sniper_mag.p3d";
 		modelSpecialIsProxy=1;
@@ -81,7 +81,7 @@ class CfgMagazines
 		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_mag_ui.paa";
 		ammo=MACRO_NEW_AMMO(Refined_high);
 		count=8;
-		mass=15;
+		mass=30;
 		model="SWLW_merc_mando\rifles\sniper\sniper_mag.p3d";
 		modelSpecial="\SWLW_merc_mando\rifles\sniper\sniper_mag.p3d";
 		modelSpecialIsProxy=1;
@@ -284,8 +284,7 @@ class CfgWeapons
 				opticsID = 1;
 				cameraDir = "";
 				discreteDistance[] = { 300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400 };
-				discreteDistanceInitIndex = 1;
-				discreteInitIndex = 1;
+				discreteDistanceInitIndex = 0;
 				discretefov[] =
 				{
 					".25/1",
@@ -294,7 +293,6 @@ class CfgWeapons
 					".25/12",
 					".25/24"
 				};
-				discreteDistanceInitIndex = 2;
 				distanceZoomMin = 300;
 				distanceZoomMax = 2400;
 				memoryPointCamera = "eye";
@@ -303,17 +301,15 @@ class CfgWeapons
 				{
 					"OpticsCHAbera1"
 				};
-				weaponInfoType = "RscWeaponRangeZeroingFOV";
+				weaponInfoType = "RscWeaponZeroing";
 				opticsZoomMin = ".25/24";
 				opticsZoomMax = 0.25;
 				opticsZoomInit = 0.25;
-				thermalMode[] = { 0,5 };
 				visionMode[] =
 				{
 					"Normal",
 					"NVG"
 				};
-				opticsDisplayName = "WFOV";
 				opticsDisablePeripherialVision = 0;
 			};
 		};

@@ -101,14 +101,18 @@ class cfgWeapons
 		class FullAuto: FullAuto
 		{
 		    
-			sounds[] = {"StandardSound","SilencedSound" };
+			sounds[] = {"StandardSound","SilencedSound","GrenadeSound" };
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15s_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"332_DC17m_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			class SilencedSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_Suppresed_Firepuncher_Shot_SoundSet","332_Sniper_Tail_SoundSet" };
+				soundSetShot[] = { "332_DC17mSniper_Shot_SoundSet","332_Sniper_Tail_SoundSet" };
+			};
+			class GrenadeSound : BaseSoundModeType
+			{
+				soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
 			};
 			displayname="FullAuto";
 			reloadTime = 0.1;
@@ -124,14 +128,18 @@ class cfgWeapons
 
 		class Single: FullAuto
 		{
-			sounds[] = {"StandardSound","SilencedSound" };
+			sounds[] = {"StandardSound","SilencedSound","GrenadeSound" };
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15s_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"332_DC17m_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			class SilencedSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_Suppresed_Firepuncher_Shot_SoundSet","332_Sniper_Tail_SoundSet" };
+				soundSetShot[] = { "332_DC17mSniper_Shot_SoundSet","332_Sniper_Tail_SoundSet" };
+			};
+			class GrenadeSound : BaseSoundModeType
+			{
+				soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
 			};
 			reloadTime = 0.365;
 			displayname="SlowAuto";
@@ -297,7 +305,7 @@ class cfgWeapons
 
 		class ItemInfo : InventoryMuzzleItem_Base_F
 		{
-			soundTypeIndex = 1; // index of sound in sounds[] in weapon modes (inherited 1 from parent class) READ DIS, DIS BE COOL
+			soundTypeIndex = 2; // index of sound in sounds[] in weapon modes (inherited 1 from parent class) READ DIS, DIS BE COOL
 
 			class MagazineCoef
 			{

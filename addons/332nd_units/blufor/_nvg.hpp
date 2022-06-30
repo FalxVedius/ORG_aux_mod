@@ -7,6 +7,7 @@ class JLTS_CloneNVGRange_black;
 class JLTS_CloneNVGMC;
 class ls_mandalorian_rangefinder_nvg;
 
+
 class MACRO_NEW_NVG(Leadership_MCNVG) :JLTS_CloneNVGMC
 {
     descriptionShort = "Night Vision Goggles";
@@ -528,6 +529,44 @@ class MACRO_NEW_NVG(Griff_Visor_332):JLTS_CloneNVG
     author = "Halligan, Namenai,Falx ";
     visionMode[] = {"Normal","NVG"};
     thermalMode[] = {0,1};
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(Weiss_Visor_332) :JLTS_CloneNVG
+{
+    hiddenSelections[] = { "camo1" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Weiss.paa" };
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Weiss Visor";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
+class MACRO_NEW_NVG(Screw_Visor_332) :JLTS_CloneNVG
+{
+    hiddenSelections[] = { "camo1" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Screw.paa" };
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Screw Visor";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG" };
+    thermalMode[] = { 0,1 };
 
     opticsZoomInit = 0.0625;
     opticsZoomMax = 1;

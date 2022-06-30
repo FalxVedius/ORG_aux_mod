@@ -114,7 +114,7 @@ class CfgPatches
 
             MACRO_NEW_UNIT(captain,332nd_captain),
 
-            MACRO_NEW_UNIT(assault,332nd_assault_trooper),
+            MACRO_NEW_UNIT(assault,332nd_assault_Vet_trooper),
 
 
             //Custom ------------------------
@@ -124,7 +124,7 @@ class CfgPatches
             //Falx
             MACRO_NEW_UNIT(captain,Falx),
             //Halligan
-            MACRO_NEW_UNIT(cwo,Halligan),
+            MACRO_NEW_UNIT(aviation,Halligan),
             //Cutter
             MACRO_NEW_UNIT(aviation,Cutter),
             //Riddle
@@ -133,6 +133,16 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,Hoggy),
             //Griif
             MACRO_NEW_UNIT(infantry,Griif),
+            //Deva
+            MACRO_NEW_UNIT(infantry,Deva),
+            //Church
+            MACRO_NEW_UNIT(infantry,Church),
+            //Grass
+            MACRO_NEW_UNIT(infantry,Grass),
+            //Chopper
+            MACRO_NEW_UNIT(aviation,Chopper),
+            //Dets
+            MACRO_NEW_UNIT(airborne,Dets),
 
 		};
 		weapons[] = {
@@ -239,7 +249,7 @@ class CfgPatches
 
             MACRO_NEW_UNIFORM(captain,332nd_captain),
 
-            MACRO_NEW_UNIFORM(assault,332nd_assault_trooper),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_Vet_trooper),
 
 
             //Custom ------------------------
@@ -249,7 +259,7 @@ class CfgPatches
             //Falx
             MACRO_NEW_UNIFORM(captain,Falx),
             //Halligan
-            MACRO_NEW_UNIFORM(cwo,Halligan),
+            MACRO_NEW_UNIFORM(aviation,Halligan),
             //Cutter
             MACRO_NEW_UNIFORM(aviation,Cutter),
             //Riddle
@@ -258,6 +268,16 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,Hoggy),
             //Griif
             MACRO_NEW_UNIFORM(infantry,Griif),
+            //Deva
+            MACRO_NEW_UNIFORM(infantry,Deva),
+            //Church
+            MACRO_NEW_UNIFORM(infantry,Church),
+            //Grass
+            MACRO_NEW_UNIFORM(infantry,Grass),
+            //Chopper
+            MACRO_NEW_UNIFORM(aviation,Chopper),
+            //Dets
+            MACRO_NEW_UNIFORM(aviation,Dets),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -472,7 +492,7 @@ class CfgWeapons
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(332nd_captain,Captain,332nd_captain)
 
     //Assault Armor
-    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_trooper,Trooper *WIP*,332nd_assault_trooper)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_Vet_trooper,Veteran Trooper *WIP*,332nd_assault_Vet_trooper)
 
 
     //Custom ----------------------------------------
@@ -482,7 +502,7 @@ class CfgWeapons
     //Falx
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Falx,Falx,Falx)
     //Halligan
-    MACRO_NEW_CWO_UNIFORM_ITEM(Halligan,Halligan,Halligan)
+    MACRO_NEW_AVI_UNIFORM_ITEM(Halligan,Halligan,Halligan)
     //Cutter
     MACRO_NEW_AVI_UNIFORM_ITEM(Cutter,Cutter,Cutter)
     //Riddle
@@ -491,6 +511,16 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(Hoggy,Hoggy,Hoggy)
     //Griif
     MACRO_NEW_INF_UNIFORM_ITEM(Griif,Griif,Griif)
+    //Deva
+    MACRO_NEW_INF_UNIFORM_ITEM(Deva,Deva,Deva)
+    //Church
+    MACRO_NEW_INF_UNIFORM_ITEM(Church,Church,Church)
+    //Grass
+    MACRO_NEW_INF_UNIFORM_ITEM(Grass,Grass,Grass)
+    //Chopper
+    MACRO_NEW_AVI_UNIFORM_ITEM(Chopper,Chopper,Chopper)
+    //Dets
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Dets,Dets,Dets)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -637,7 +667,7 @@ class CfgVehicles
     MACRO_NEW_CAPTAIN_UNIT(332nd_captain,Clone Captain,332nd_captain,captain\Captain_Upper.paa,captain\Captain_Lower.paa)
 
     //Assault
-    MACRO_NEW_ASSAULT_UNIT(332nd_assault_trooper,Assault Trooper,332nd_assault_trooper)
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_Vet_trooper,Veteran Trooper,332nd_assault_Vet_trooper,veteran_trooper\Veteran_Trooper.paa)
 
 
     //Custom ----------------------------------------
@@ -647,7 +677,7 @@ class CfgVehicles
     //Falx
     MACRO_NEW_CAPTAIN_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
     //Halligan
-    MACRO_NEW_CWO_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
+    MACRO_NEW_AVI_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
     //Cutter
     MACRO_NEW_AVI_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
     //Riddle
@@ -656,5 +686,15 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,officer\Officer_Lower.paa)
     //Griif
     MACRO_NEW_INF_UNIT(Griif,Griif,Griif,custom\Griif_Upper.paa,custom\Griif_Lower.paa)
+    //Deva
+    MACRO_NEW_INF_UNIT(Deva,Deva,Deva,custom\Deva_Upper.paa,custom\Deva_Lower.paa)
+    //Church
+    MACRO_NEW_INF_UNIT(Church,Church,Church,custom\Church_Upper.paa,custom\Church_Lower.paa)
+    //Grass
+    MACRO_NEW_INF_UNIT(Grass,Grass,Grass,custom\Grass_Upper.paa,custom\Grass_Lower.paa)
+    //Chopper
+    MACRO_NEW_AVI_UNIT(Chopper,Chopper,Chopper,custom\Chopper_Upper.paa,custom\Chopper_Lower.paa)
+    //Dets
+    MACRO_NEW_AIRBORNE_UNIT(Dets,Dets,Dets,custom\Dets_Upper.paa,custom\Dets_Lower.paa)
 
 };

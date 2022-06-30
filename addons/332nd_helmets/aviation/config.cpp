@@ -26,6 +26,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(aviation,Recruit),
 			MACRO_NEW_HELMET(aviation,Sniggs),
 			MACRO_NEW_HELMET(aviation,Kink),
+			MACRO_NEW_HELMET(aviation,Halligan),
         };
 		weapons[] = {};
 	};
@@ -52,5 +53,6 @@ class CfgWeapons
 	MACRO_NEW_AVIATION_HELMET_ITEM(Recruit,Recruit,Recruit.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Sniggs,Sniggs,Sniggs.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Kink,Kink,Kink.paa)
+	MACRO_NEW_AVIATION_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 	
 }
