@@ -22,19 +22,24 @@ class CfgVehicles
 	class Tank : LandVehicle
     {
 
-    }
+    };
     
     class Tank_F : Tank
     {
-        
-    }
+
+    };
     
     class 3AS_Assualt_Base : Tank_F
     {
 
-    } 
+    }; 
 
-    class MACRO_NEW_VEHICLE(Land,CIS,TT_CIS) : 3AS_Assualt_Base
+    class 3AS_SAC_Trade : 3AS_Assualt_Base
+    {
+
+    };
+
+    class MACRO_NEW_VEHICLE(Land,CIS,TT_CIS) : 3AS_SAC_Trade
     {
 
         displayName = "Troop Transporter (CIS)";
