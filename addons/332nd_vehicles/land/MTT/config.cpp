@@ -63,3 +63,36 @@ class CfgVehicles
         };
     };
 };
+
+class CfgAmmo
+{
+    class MACRO_NEW_AMMO(MTT_HE) : 3AS_MTT_redPlasma_HEAT
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+	};
+}
+
+class CfgMagazine
+{
+    class MACRO_NEW_MAG(MTT_HE,46) : 3AS_40Rnd_MTT_HEAT
+	{
+		displayName = "MTT HE";
+		ammo = MACRO_NEW_AMMO(MTT_HE)
+	};
+}
+
+class CfgWeapons
+{
+    class 3as_MTTCannon;
+    
+    class MACRO_NEW_WEAPON(MTT_Cannon) : 3AS_MTTCannon
+	{
+		magazineWell[] = {};
+		magazines[] = 
+		{
+			MACRO_NEW_MAG(MTT_HE,46)
+		};
+	};
+
+};
