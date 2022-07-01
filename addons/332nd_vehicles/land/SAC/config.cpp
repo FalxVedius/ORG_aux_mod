@@ -1,7 +1,7 @@
  #include "../../../332nd_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(TT)
+	class MACRO_PATCH_NAME(SAC)
 	{
 		author = "332nd Aux Team";
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(Land,CIS,Troop_Transporter),
+            MACRO_NEW_VEHICLE(Land,CIS,SAC_CIS),
         };
 	};
 };
@@ -39,10 +39,10 @@ class CfgVehicles
 
     };
 
-    class MACRO_NEW_VEHICLE(Land,CIS,TT_CIS) : 3AS_SAC_Trade
+    class MACRO_NEW_VEHICLE(Land,CIS,SAC_CIS) : 3AS_SAC_Trade
     {
 
-        displayName = "Troop Transporter (CIS)";
+        displayName = "Squad Assault Craft (CIS)";
         scope = 2;
         scopeCurator = 2;
         faction = "EdCat_332ndCIS";
