@@ -153,9 +153,9 @@ class cfgWeapons
 		};
 
         magazines[] = {
-			MACRO_NEW_MAG(DC_17m_rifle,60),
-			MACRO_NEW_MAG(DC_17m_marks,5),
-			MACRO_NEW_MAG(DC_17m_grend,4)
+			MACRO_NEW_MAG(DC_17m_rifle,42),
+			MACRO_NEW_MAG(DC_17m_marks,10),
+			MACRO_NEW_MAG(DC_17m_grend,1)
 		};
         
 		class OpticsModes
@@ -327,10 +327,12 @@ class cfgWeapons
 		};
 	};
 };
-class SWLW_ammo_40mm_at;
-class MACRO_NEW_AMMO(762_blue);
+
 class CfgAmmo
 {	
+	class SWLW_ammo_40mm_at;
+	class MACRO_NEW_AMMO(762_blue);
+
 	class MACRO_NEW_AMMO(DM17GP): SWLW_ammo_40mm_at
 	{
 		aiAmmoUsageFlags="64 + 128";
@@ -380,7 +382,7 @@ class CfgMagazines
 	class 3as_5rnd_ec80_mag;
 	class 3as_antiarmour_mag;
 
-	class MACRO_NEW_MAG(DC_17m_rifle,60) : 3as_100rnd_ec40_mag
+	class MACRO_NEW_MAG(DC_17m_rifle,42) : 3as_100rnd_ec40_mag
 	{
 		count = 42;
 		mass = 10;
@@ -392,19 +394,19 @@ class CfgMagazines
 		tracersEvery = 1;
 	};
 
-	class MACRO_NEW_MAG(DC_17m_marks,5) : 3as_5rnd_ec80_mag
+	class MACRO_NEW_MAG(DC_17m_marks,10) : 3as_5rnd_ec80_mag
 	{
 		count = 10;
 		mass = 10;
 		initspeed = 2200;
-		displayName = MACRO_AMMO_DISPLAYNAME(17m Marksman Mag,10)
-		displayNameShort = "Med Power 5rnd";
+		displayName = MACRO_AMMO_DISPLAYNAME(17m Carbine Mag,10)
+		displayNameShort = "Med Power 10rnd";
 		descriptionShort = "332nd Medium Power Round";
 		ammo = MACRO_NEW_AMMO(762_Blue_DC17mSniper);
 		tracersEvery = 1;
 	};
 
-	class MACRO_NEW_MAG(DC_17m_grend,4) : 3as_antiarmour_mag
+	class MACRO_NEW_MAG(DC_17m_grend,1) : 3as_antiarmour_mag
 	{
 		count = 1;
 		mass = 25;
