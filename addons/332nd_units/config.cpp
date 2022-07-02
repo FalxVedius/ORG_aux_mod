@@ -1548,6 +1548,48 @@ class CfgVehicles
 				count = 30;
 			};
 
+			class WhiteImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
+				count = 30;
+			};
+
+			class BlueImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
+				count = 30;
+			};
+
+			class GreenImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_GREEN_x1";
+				count = 30;
+			};
+
+			class RedImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_RED_x1";
+				count = 30;
+			};
+
+			class PurpleImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_PURPLE_x1";
+				count = 30;
+			};
+
+			class YellowImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_YELLOW_x1";
+				count = 30;
+			};
+
+			class OrangeImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
+				count = 30;
+			};
+
 			class SquadShield_332nd
 			{
 				magazine = "332nd_aux_magazine_332_SquadShield_x1";

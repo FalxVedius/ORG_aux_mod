@@ -46,6 +46,13 @@ class CfgUnitInsignia
 		texture = "\332nd_units\Insignia\data\Torrent2_1.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
+	class Torrent2_2
+	{
+		displayName = "[332nd] Torrent 2-2";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Torrent2_2.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
 	class Seraph2_3
 	{
 		displayName = "[332nd] Torrent 2-3";								// Name displayed in Arsenal
