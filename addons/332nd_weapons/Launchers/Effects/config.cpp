@@ -41,6 +41,7 @@ class CfgLights
 class CfgCloudlets
 {
 	class Missile2;
+    class ArtilleryShell1;
     class ls_particle_hailfireRocket;
 	class 332nd_aux_effects_smoke_RPS6blue: Missile2
 	{
@@ -101,6 +102,18 @@ class CfgCloudlets
         lifetime = 1.5;
 		volume = 20;
         weight=20;
+	};
+
+    class 332nd_aux_effects_smoke_DC17mGP: ArtilleryShell1 //Shrieker
+	{
+		color[] = {{0.20,0,0.10,1},{0,0,0,0.3},{0,0,0,0.2},{0,0,0,0.1},{0,0,0,0.01}};
+		colorVar[] = {0,0,0,1};
+		colorCoef[] = {1,1,1,1};
+        interval=0.001;
+		size[] = {0.1,0.2,0.3};
+        lifetime = 1.5;
+		volume = 0.1;
+        weight=0.1;
 	};
 
     class 332nd_aux_effects_smoke_Proton_Purple: Missile4 //Shrieker
@@ -187,7 +200,7 @@ class CfgCloudlets
 		emissiveColor[] = {{1,1,1,1}};
 	};
 
-    class ArtilleryShell1;
+    
     class 332nd_aux_effects_smoke_tracerblue: ArtilleryShell1
 	{
 		color[] = {{0.2,0,0.8,0.20},{0.1,0.1,0.85,0.10},{0.15,0.15,0.9,0.02},{0.2,0.2,0.95,0.006},{0.25,0.25,1,0.001}};
@@ -441,6 +454,25 @@ class 332nd_aux_effects_missile_Rocket_Purple
     {
         simulation = "particles";
         type = "332nd_aux_effects_smoke_Rocket_Purple"; 
+    };
+};
+
+class 332nd_aux_effects_missile_Rocket_DC17mGP
+{
+    class light1
+    {
+        intensity = 1;
+        interval = 1;
+        lifeTime = 4;
+        position[] = {0,0,0};
+        simulation = "light";
+        type = "332nd_aux_effects_rocket_Purple";
+    };
+
+    class MissileEffect1
+    {
+        simulation = "particles";
+        type = "332nd_aux_effects_smoke_DC17mGP"; 
     };
 };
 
