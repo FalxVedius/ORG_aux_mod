@@ -307,9 +307,9 @@ class CfgWeapons
 						"OpticsBlur5"
 					};
 					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin=0.03125;
-					opticsZoomMax=0.0625;
-					opticsZoomInit=0.0625;
+					opticsZoomMin= 0.375;
+					opticsZoomMax= 0.375;
+					opticsZoomInit= 0.375;
 					discreteInitIndex = 0;
                     discreteDistanceInitIndex = 0;
 					discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000};

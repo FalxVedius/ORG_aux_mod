@@ -1149,6 +1149,12 @@ class CfgVehicles
 				count = 40;
 			};
 
+			class CombatStim_332nd
+			{
+				name = "332nd_aux_medical_Combat";
+				count = 40;
+			};
+
 			class Blood_332nd
 			{
 				name = "332nd_aux_medical_Blood";

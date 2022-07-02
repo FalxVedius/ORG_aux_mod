@@ -242,7 +242,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(Land,CIS,N99) : 3AS_n99
     {
-        displayName = "N99";
+        displayName = "N99 *WIP*";
         scope = 2;
         scopeCurator = 2;
         faction = "EdCat_332ndCIS";
