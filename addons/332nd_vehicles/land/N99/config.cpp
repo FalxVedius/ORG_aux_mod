@@ -64,8 +64,28 @@ class CfgWeapons
 		};
 		class manual : manual
 		{
-			reloadTime = 0.33333001;
+			reloadTime = 1.2;
 			autoFire = 1;
+
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"swlb_core\data\sounds\vehicles\aat\weapon\aat_main_shot.wss",
+					3.1622777,
+					1,
+					3000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1
+				};
+			};
 		};
 		class close : manual
 		{
@@ -73,7 +93,7 @@ class CfgWeapons
 			showToPlayer = 0;
 			burst = 4;
 			burstRangeMax = 16;
-			aiRateOfFire = 0.33333001;
+			aiRateOfFire = 1.2;
 			aiRateOfFireDispersion = 1.25;
 			aiRateOfFireDistance = 50;
 			minRange = 0;
@@ -119,7 +139,7 @@ class CfgWeapons
 			showToPlayer = 0;
 			burst = 3;
 			burstRangeMax = 8;
-			aiRateOfFire = 4;
+			aiRateOfFire = 1.2;
 			aiRateOfFireDispersion = 4;
 			aiRateOfFireDistance = 600;
 			minRange = 600;
