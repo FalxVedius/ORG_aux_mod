@@ -1,20 +1,137 @@
  #include "../../../332nd_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(MTT)
+	class MACRO_PATCH_NAME(N99)
 	{
 		author = "332nd Aux Team";
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
 		requiredAddons[]=
 		{
 			MACRO_PATCH_NAME(land_vehicles),
-            "A3_Armor_F_Beta"
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS),
+            MACRO_NEW_VEHICLE(Land,CIS,N99),
         };
 	};
+};
+
+class CfgAmmo
+{
+	class 3AS_N99_redplasma_HEAT;
+
+	class MACRO_NEW_AMMO(N99_AP) : 3AS_N99_redplasma_HEAT
+	{
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 512";
+		model = "swlw_main\Effects\laser_red.p3d";
+		tracerscale = 2;
+
+		cost = 5;
+		caliber = 22;
+		hit = 380;
+		indirectHit = 60;
+		indirectHitRange = 4;
+	};
+};
+
+class CfgMagazines
+{
+	class 3AS_48Rnd_N99_HEAT;
+
+	class MACRO_NEW_MAG(N99_AP,24) : 3AS_48Rnd_N99_HEAT
+	{
+		displayName = "N99 AP";
+		ammo = MACRO_NEW_AMMO(N99_AP)
+		count = 24;
+	};
+};
+
+class CfgWeapons
+{
+	class 3AS_GATCannon;
+	class 3AS_N99Cannon : 3AS_GATCannon
+	{
+		class manual;
+	};
+
+	class MACRO_NEW_WEAPON(N99_Cannon) : 3AS_N99Cannon
+	{
+		magazineWell[] = {};
+		magazines[] =
+		{
+			MACRO_NEW_MAG(N99_AP,24)
+		};
+		class manual : manual
+		{
+			reloadTime = 0.33333001;
+			autoFire = 1;
+		};
+		class close : manual
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 4;
+			burstRangeMax = 16;
+			aiRateOfFire = 0.33333001;
+			aiRateOfFireDispersion = 1.25;
+			aiRateOfFireDistance = 50;
+			minRange = 0;
+			minRangeProbab = 0.80000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.2;
+		};
+		class short : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 4;
+			burstRangeMax = 12;
+			aiRateOfFireDispersion = 1.25;
+			aiRateOfFireDistance = 150;
+			minRange = 20;
+			minRangeProbab = 0.69999999;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.2;
+		};
+		class medium : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 3;
+			burstRangeMax = 12;
+			aiRateOfFireDispersion = 2;
+			aiRateOfFireDistance = 250;
+			minRange = 150;
+			minRangeProbab = 0.69999999;
+			midRange = 600;
+			midRangeProbab = 0.64999998;
+			maxRange = 800;
+			maxRangeProbab = 0.1;
+		};
+		class far : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 3;
+			burstRangeMax = 8;
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 600;
+			minRange = 600;
+			minRangeProbab = 0.64999998;
+			midRange = 800;
+			midRangeProbab = 0.40000001;
+			maxRange = 1200;
+			maxRangeProbab = 0.1;
+		};
+	};
+
+
 };
 
 class CfgVehicles
@@ -32,6 +149,7 @@ class CfgVehicles
 		{
 			class MainTurret : NewTurret
 			{
+				class ViewGunner;
 				class Turrets
 				{
 					class CommanderOptics;
@@ -40,19 +158,16 @@ class CfgVehicles
 		};
 		class AnimationSources;
 		class ViewPilot;
-		class CargoTurret;
 		class ViewOptics;
-		class RCWSOptics;
-		class ViewGunner;
 		class ViewCargo;
 		class HeadLimits;
 		class HitPoints : HitPoints
 		{
 			class HitHull;
+			class HitFuel;
 			class HitEngine;
 			class HitLTrack;
 			class HitRTrack;
-			class HitFuel;
 		};
 		class Sounds : Sounds
 		{
@@ -61,97 +176,76 @@ class CfgVehicles
 		};
 	};
 
-	class 3as_MTT_Base : Tank_F
+	class 3AS_N99_base_F : Tank_F
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1 : NewTurret
-			{
-
-			};
-			class MainTurret2 : NewTurret
+			class MainTurret : MainTurret
 			{
 
 			};
 		};
 	};
-       
-    class 3as_MTT_01_Base : 3as_MTT_Base
-    {
-		class Turrets : Turrets
-		{
-			class MainTurret1 : MainTurret1
-			{
-
-			};
-			class MainTurret2 : MainTurret2
-			{
-
-			};
-		};
-    };
     
-    class 3as_MTT : 3as_MTT_01_Base
-    {
+	class 3AS_CIS_n99_base_F : 3AS_N99_base_F
+	{
 		class Turrets : Turrets
 		{
-			class MainTurret1 : MainTurret1
+			class MainTurret : MainTurret
 			{
 
 			};
-			class MainTurret2 : MainTurret2
+		};
+	};
+
+    class 3AS_CIS_n99_F : 3AS_CIS_n99_base_F
+    {
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+
+			};
+		};
+    }; 
+
+    class 3AS_n99 : 3AS_CIS_n99_F
+    {
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
 			{
 
 			};
 		};
     };
 
-    class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT
+    class MACRO_NEW_VEHICLE(Land,CIS,N99) : 3AS_n99
     {
-
-        displayName = "MTT (CIS)";
+        displayName = "N99";
         scope = 2;
         scopeCurator = 2;
         faction = "EdCat_332ndCIS";
         editorSubcategory = "EdSubcat_332nd_TANK";
         crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
 
-        typicalCargo[] =
-        {
-            "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew"
-        };
-
-        class Turrets : Turrets
-        {
-            class MainTurret1 : MainTurret1
-            {
-                weapons[] =
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
 				{
-				  MACRO_NEW_WEAPON(MTT_Cannon)
+				  MACRO_NEW_WEAPON(N99_Cannon)
 				};
 				magazines[] =
 				{
-				  MACRO_NEW_MAG(MTT_HE,46),
-                  MACRO_NEW_MAG(MTT_HE,46),
-                  MACRO_NEW_MAG(MTT_HE,46),
-                  MACRO_NEW_MAG(MTT_HE,46)
+				  MACRO_NEW_MAG(N99_AP,24),
+				  MACRO_NEW_MAG(N99_AP,24),
+				  MACRO_NEW_MAG(N99_AP,24),
+				  MACRO_NEW_MAG(N99_AP,24)
 				};
-            };
-            class MainTurret2 : MainTurret2
-            {
-                weapons[] =
-				{
-				  MACRO_NEW_WEAPON(MTT_Cannon)
-				};
-				magazines[] =
-				{
-				  MACRO_NEW_MAG(MTT_HE,46),
-                  MACRO_NEW_MAG(MTT_HE,46),
-                  MACRO_NEW_MAG(MTT_HE,46),
-                  MACRO_NEW_MAG(MTT_HE,46)
-				};
-            };
-        };
+			};
+		};
 
 		soundGetIn[] =
 		{
@@ -342,7 +436,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1,
 					1,
-					1750
+					480
 				};
 				frequency = "0.95 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
@@ -354,7 +448,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.1,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
@@ -366,7 +460,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.4,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
@@ -378,7 +472,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
@@ -390,7 +484,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
@@ -402,7 +496,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
 				volume = "engineOn*camPos*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
@@ -414,7 +508,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
 				volume = "engineOn*camPos*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
@@ -426,7 +520,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					2.8,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(400/ 2640),(900/ 2640)])*0.15";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(100/ 2640),(200/ 2640)]) * ((rpm/ 2640) factor[(900/ 2640),(700/ 2640)]))";
@@ -438,7 +532,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(700/ 2640),(1100/ 2640)])*0.2";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(705/ 2640),(850/ 2640)]) * ((rpm/ 2640) factor[(1100 / 2640),(950/ 2640)]))";
@@ -450,7 +544,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(950/ 2640),(1400/ 2640)])*0.2";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(900/ 2640),(1050/ 2640)]) * ((rpm/ 2640) factor[(1400/ 2640),(1200/ 2640)]))";
@@ -462,7 +556,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1200/ 2640),(1700/ 2640)])*0.2";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1170/ 2640),(1380/ 2640)]) * ((rpm/ 2640) factor[(1700/ 2640),(1500/ 2640)]))";
@@ -474,7 +568,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1500/ 2640),(2100/ 2640)])*0.1";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1500/ 2640),(1670/ 2640)]) * ((rpm/ 2640) factor[(2100/ 2640),(1800/ 2640)]))";
@@ -486,7 +580,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(1800/ 2640),(2300/ 2640)])*0.1";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*(((rpm/ 2640) factor[(1780/ 2640),(2060/ 2640)]) * ((rpm/ 2640) factor[(2450/ 2640),(2200/ 2640)]))";
@@ -498,7 +592,7 @@ class CfgVehicles
 					"3as\3as_saber\Sounds\tx130idle.ogg",
 					1.5,
 					1,
-					2000
+					550
 				};
 				frequency = "0.8 + ((rpm/ 2640) factor[(2100/ 2640),(2640/ 2640)])*0.1";
 				volume = "engineOn*camPos*(0.4+(0.6*(thrust factor[0.1,1])))*((rpm/ 2640) factor[(2150/ 2640),(2500/ 2640)])";
@@ -912,142 +1006,4 @@ class CfgVehicles
 			};
 		};
     };
-};
-
-class CfgAmmo
-{
-    class 3AS_MTT_redPlasma_HEAT;
-
-    class MACRO_NEW_AMMO(MTT_HE) : 3AS_MTT_redPlasma_HEAT
-	{
-		allowAgainstInfantry = 1;
-		aiAmmoUsageFlags = "16 + 64 + 128 + 512";
-		model = "swlw_main\Effects\laser_red.p3d";
-		tracerscale = 4;
-
-		cost = 5;
-		caliber = 28;
-		hit = 480;
-		indirectHit = 80;
-		indirectHitRange = 2;
-	};
-}
-
-class Mode_SemiAuto;
-class CfgMagazines
-{
-    class 3AS_40Rnd_MTT_HEAT;
-
-    class MACRO_NEW_MAG(MTT_HE,46) : 3AS_40Rnd_MTT_HEAT
-	{
-		displayName = "MTT HE";
-		ammo = MACRO_NEW_AMMO(MTT_HE)
-        count=46;
-	};
-}
-
-class CfgWeapons
-{
-	class 3AS_GATCannon;
-	class 3as_MTTCannon : 3AS_GATCannon
-	{
-		class manual;
-	};
-    
-    class MACRO_NEW_WEAPON(MTT_Cannon) : 3AS_MTTCannon
-	{
-		magazineWell[] = {};
-		magazines[] = 
-		{
-			MACRO_NEW_MAG(MTT_HE,46)
-		};
-		
-		class manual : manual
-		{
-			reloadTime = 0.44999999;
-			autoFire = 1;
-			sounds[] =
-			{
-				"StandardSound"
-			};
-			class StandardSound
-			{
-				begin1[] =
-				{
-					"swlb_core\data\sounds\vehicles\aat\weapon\aat_main_shot.wss",
-					3.1622777,
-					0.7,
-					3000
-				};
-				soundBegin[] =
-				{
-					"begin1",
-					1
-				};
-			};
-		};
-		class close : manual
-		{
-			aiBurstTerminable = 1;
-			showToPlayer = 0;
-			burst = 2;
-			burstRangeMax = 16;
-			aiRateOfFire = 0.44999999;
-			aiRateOfFireDispersion = 0.5;
-			aiRateOfFireDistance = 50;
-			minRange = 0;
-			minRangeProbab = 0.80000001;
-			midRange = 20;
-			midRangeProbab = 0.69999999;
-			maxRange = 50;
-			maxRangeProbab = 0.2;
-		};
-		class short : close
-		{
-			aiBurstTerminable = 1;
-			showToPlayer = 0;
-			burst = 2;
-			burstRangeMax = 12;
-			aiRateOfFireDispersion = 0.5;
-			aiRateOfFireDistance = 150;
-			minRange = 20;
-			minRangeProbab = 0.69999999;
-			midRange = 150;
-			midRangeProbab = 0.69999999;
-			maxRange = 300;
-			maxRangeProbab = 0.2;
-		};
-		class medium : close
-		{
-			aiBurstTerminable = 1;
-			showToPlayer = 0;
-			burst = 2;
-			burstRangeMax = 12;
-			aiRateOfFireDispersion = 0.5;
-			aiRateOfFireDistance = 250;
-			minRange = 150;
-			minRangeProbab = 0.69999999;
-			midRange = 600;
-			midRangeProbab = 0.64999998;
-			maxRange = 800;
-			maxRangeProbab = 0.1;
-		};
-		class far : close
-		{
-			aiBurstTerminable = 1;
-			showToPlayer = 0;
-			burst = 2;
-			burstRangeMax = 8;
-			aiRateOfFire = 4;
-			aiRateOfFireDispersion = 4;
-			aiRateOfFireDistance = 600;
-			minRange = 600;
-			minRangeProbab = 0.64999998;
-			midRange = 800;
-			midRangeProbab = 0.40000001;
-			maxRange = 1200;
-			maxRangeProbab = 0.1;
-		};
-	};
-
 };

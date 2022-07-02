@@ -444,6 +444,70 @@ class CfgVehicles
 		faction = "EdCat_332ndCIS";
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+		armor = 300;
+		armorStructural = 2;
+
+		class HitPoints
+		{
+			class HitEngine
+			{
+				armor = 0.75;
+				explosionShielding = 1;
+				material = -1;
+				minimalHit = 0.24;
+				name = "motor";
+				passThrough = 0.08;
+				radius = 0.33;
+				visual = "motor";
+			};
+			class HitFuel
+			{
+				armor = 1.5;
+				explosionShielding = 0.4;
+				material = -1;
+				minimalHit = 0.1;
+				name = "palivo";
+				passThrough = 1;
+				radius = 0.25;
+				visual = "motor";
+			};
+			class HitHull
+			{
+				armor = 4;
+				explosionShielding = 2;
+				material = -1;
+				minimalHit = 0.14;
+				name = "telo";
+				passThrough = 0.03;
+				radius = 0.2;
+				visual = "zbytek";
+			};
+			class HitLTrack
+			{
+				armor = 0.5;
+				explosionShielding = 1.44;
+				material = -1;
+				minimalHit = 0.08;
+				name = "track_l_hit";
+				passThrough = 0;
+				radius = 0.3;
+				visual = "pas_L";
+			};
+			class HitRTrack
+			{
+				armor = 0.5;
+				explosionShielding = 1.44;
+				material = -1;
+				minimalHit = 0.08;
+				name = "track_r_hit";
+				passThrough = 0;
+				radius = 0.3;
+				visual = "pas_P";
+			};
+		};
+
+
 		class Turrets : Turrets
 		 {
 		   class MainTurret : MainTurret
@@ -462,6 +526,32 @@ class CfgVehicles
 			   {
 			   };
 			   gunnerType = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+			   class HitPoints
+			   {
+				   class HitGun
+				   {
+					   armor = 0.75;
+					   explosionShielding = 1;
+					   material = -1;
+					   minimalHit = 0;
+					   name = "otocvez";
+					   passThrough = 0;
+					   radius = 0.15;
+					   visual = "";
+				   };
+				   class HitTurret
+				   {
+					   armor = 0.8;
+					   explosionShielding = 0.6;
+					   material = -1;
+					   minimalHit = 0;
+					   name = "otocvez";
+					   passThrough = 0;
+					   radius = 0.15;
+					   visual = "vez";
+				   };
+			   };
 		   };
 	   };
 

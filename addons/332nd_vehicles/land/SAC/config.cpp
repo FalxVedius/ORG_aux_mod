@@ -41,7 +41,6 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(Land,CIS,SAC_CIS) : 3AS_SAC_Trade
     {
-
         displayName = "Squad Assault Craft (CIS)";
         scope = 2;
         scopeCurator = 2;

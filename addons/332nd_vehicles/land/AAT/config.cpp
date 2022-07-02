@@ -58,6 +58,7 @@ class CfgAmmo
 	{
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "16 + 512";
+		tracerscale = 2;
 
 		cost = 50;
 		caliber = 18;
@@ -70,6 +71,7 @@ class CfgAmmo
 	{
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "16 + 64 + 128";
+		tracerscale = 2;
 
 		cost = 50;
 		caliber = 6;
@@ -82,6 +84,7 @@ class CfgAmmo
 	{
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
+		tracerscale = 2;
 
 		cost = 5;
 		caliber = 2.6;
