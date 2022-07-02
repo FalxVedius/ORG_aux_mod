@@ -47,5 +47,8 @@ class CfgVehicles
         faction = "EdCat_332ndCIS";
         editorSubcategory = "EdSubcat_332nd_TANK";
         crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+        armor = 250;
+        armorStructural = 2;
     };
 };
