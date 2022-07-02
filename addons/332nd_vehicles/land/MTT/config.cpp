@@ -1,178 +1,25 @@
-#include "../../../332nd_main/macros/main.hpp" // my config macro lib
-#define MACRO_TX200_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\land\ADSD
+ #include "../../../332nd_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(ADSD)
+	class MACRO_PATCH_NAME(MTT)
 	{
-		author = "Falx";
+		author = "332nd Aux Team";
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
 		requiredAddons[]=
 		{
-			MACRO_PATCH_NAME(land_vehicles)
+			MACRO_PATCH_NAME(land_vehicles),
+            "A3_Armor_F_Beta"
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(Land,CIS,ADSD),
+            MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS),
         };
-		weapons[] = {};
-	};
-};
-
-class CfgAmmo
-{
-	class 3as_ATT_redPlasma_AT;
-
-	class MACRO_NEW_AMMO(ADSD_AP) : 3as_ATT_redPlasma_AT
-	{
-		allowAgainstInfantry = 1;
-		aiAmmoUsageFlags = "16 + 64 + 128 + 256 + 512";
-		model = "swlw_main\Effects\laser_red.p3d";
-		tracerscale = 2;
-
-		cost = 50;
-		caliber = 34;
-		hit = 400;
-		indirectHit = 30;
-		indirectHitRange = 8;
-	};
-};
-
-class CfgMagazines
-{
-	class 3as_24rnd_125mm_ADSD;
-
-	class MACRO_NEW_MAG(ADSD_AP,24) : 3as_24rnd_125mm_ADSD
-	{
-		displayName = "ADSD AP";
-		ammo = MACRO_NEW_AMMO(ADSD_AP)
-	};
-};
-
-class Mode_SemiAuto;
-class CfgWeapons
-{
-	class 3AS_ADSD_Cannon;
-
-	class MACRO_NEW_WEAPON(ADSD_Cannon) : 3AS_ADSD_Cannon
-	{
-		magazineWell[] = {};
-		magazines[] =
-		{
-			MACRO_NEW_MAG(ADSD_AP,24)
-		};
-
-		modes[] =
-		{
-			"manual",
-			"close",
-			"short",
-			"medium",
-			"far"
-		};
-		class GunParticles
-		{
-		};
-		class manual : Mode_SemiAuto
-		{
-			displayName = "ADSD Cannon";
-			sounds[] =
-			{
-				"StandardSound"
-			};
-			class StandardSound
-			{
-				begin1[] =
-				{
-					"swlb_core\data\sounds\vehicles\aat\weapon\aat_main_shot.wss",
-					3.1622777,
-					1,
-					3000
-				};
-				soundBegin[] =
-				{
-					"begin1",
-					1
-				};
-			};
-
-			autofire = 1;
-			recoil = "Empty";
-			reloadTime = 0.4;
-			soundBurst = 0;
-			dispersion = 0.0060000001;
-			showToPlayer = 1;
-			minRange = 2;
-			minRangeProbab = 0.5;
-			midRange = 150;
-			midRangeProbab = 0.69999999;
-			maxRange = 450;
-			maxRangeProbab = 0.30000001;
-			aiRateOfFire = 2;
-			aiRateOfFireDistance = 150;
-		};
-		class close : manual
-		{
-			showToPlayer = 0;
-			soundBurst = 0;
-			soundContinuous = 0;
-			aiRateOfFire = 0.4;
-			aiRateOfFireDistance = 500;
-			aiRateOfFireDispersion = 1;
-			minRange = 0;
-			minRangeProbab = 0.050000001;
-			midRange = 100;
-			midRangeProbab = 0.57999998;
-			maxRange = 300;
-			maxRangeProbab = 0.30000001;
-		};
-		class short : close
-		{
-			minRange = 150;
-			minRangeProbab = 0.2;
-			midRange = 500;
-			midRangeProbab = 0.69999999;
-			maxRange = 1500;
-			maxRangeProbab = 0.40000001;
-			aiRateOfFire = 0.4;
-			aiRateOfFireDistance = 500;
-			aiRateOfFireDispersion = 2;
-		};
-		class medium : close
-		{
-			minRange = 250;
-			minRangeProbab = 0.2;
-			midRange = 750;
-			midRangeProbab = 0.69999999;
-			maxRange = 1000;
-			maxRangeProbab = 0.40000001;
-			aiRateOfFire = 0.4;
-			aiRateOfFireDistance = 700;
-			aiRateOfFireDispersion = 3;
-		};
-		class far : close
-		{
-			minRange = 500;
-			minRangeProbab = 0.2;
-			midRange = 1200;
-			midRangeProbab = 0.69999999;
-			maxRange = 2100;
-			maxRangeProbab = 0.30000001;
-			aiRateOfFire = 0.4;
-			aiRateOfFireDistance = 1000;
-			aiRateOfFireDispersion = 3;
-		};
 	};
 };
 
 class CfgVehicles
- {
-	class Land;
-	class LandVehicle : Land
-	{
-		class ViewPilot;
-		class ViewGunner;
-		class NewTurret;
-	};
+{
+	class LandVehicle;
 	class Tank : LandVehicle
 	{
 		class NewTurret;
@@ -185,7 +32,6 @@ class CfgVehicles
 		{
 			class MainTurret : NewTurret
 			{
-				class ViewGunner;
 				class Turrets
 				{
 					class CommanderOptics;
@@ -194,16 +40,19 @@ class CfgVehicles
 		};
 		class AnimationSources;
 		class ViewPilot;
+		class CargoTurret;
 		class ViewOptics;
+		class RCWSOptics;
+		class ViewGunner;
 		class ViewCargo;
 		class HeadLimits;
 		class HitPoints : HitPoints
 		{
 			class HitHull;
-			class HitFuel;
 			class HitEngine;
 			class HitLTrack;
 			class HitRTrack;
+			class HitFuel;
 		};
 		class Sounds : Sounds
 		{
@@ -211,83 +60,98 @@ class CfgVehicles
 			class Movement;
 		};
 	};
-	class 3AS_AAT_base_F : Tank_F
-	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				class Turrets : Turrets
-				{
-					class CommanderOptics : CommanderOptics
-					{
-					};
-				};
-			};
-		};
-	};
-	class 3AS_Advanced_DSD_Base : 3AS_AAT_base_F
-	{
-		class Turrets : Turrets
-		{
-			class MainTurret : MainTurret
-			{
-				class Turrets : Turrets
-				{
 
-				};
-			};
-		};
-	};
-	class 3AS_Advanced_DSD : 3AS_Advanced_DSD_Base
+	class 3as_MTT_Base : Tank_F
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
+			class MainTurret1 : NewTurret
 			{
-				class Turrets : Turrets
-				{
 
-				};
+			};
+			class MainTurret2 : NewTurret
+			{
+
 			};
 		};
 	};
-	
-    class MACRO_NEW_VEHICLE(Land,CIS,ADSD): 3AS_Advanced_DSD
+       
+    class 3as_MTT_01_Base : 3as_MTT_Base
     {
-        displayName = "ADSD *WiP*";
-        scope = 2;
-		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-
-		armor = 560;
-		armorStructural = 5;
-
 		class Turrets : Turrets
 		{
-			class MainTurret : MainTurret
+			class MainTurret1 : MainTurret1
 			{
-				weapons[] =
+
+			};
+			class MainTurret2 : MainTurret2
+			{
+
+			};
+		};
+    };
+    
+    class 3as_MTT : 3as_MTT_01_Base
+    {
+		class Turrets : Turrets
+		{
+			class MainTurret1 : MainTurret1
+			{
+
+			};
+			class MainTurret2 : MainTurret2
+			{
+
+			};
+		};
+    };
+
+    class MACRO_NEW_VEHICLE(Land,CIS,MTT_CIS) : 3as_MTT
+    {
+
+        displayName = "MTT (CIS)";
+        scope = 2;
+        scopeCurator = 2;
+        faction = "EdCat_332ndCIS";
+        editorSubcategory = "EdSubcat_332nd_TANK";
+        crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+        typicalCargo[] =
+        {
+            "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew"
+        };
+
+        class Turrets : Turrets
+        {
+            class MainTurret1 : MainTurret1
+            {
+                weapons[] =
 				{
-				  MACRO_NEW_WEAPON(ADSD_Cannon)
+				  MACRO_NEW_WEAPON(MTT_Cannon)
 				};
 				magazines[] =
 				{
-				  MACRO_NEW_MAG(ADSD_AP,24),
-				  MACRO_NEW_MAG(ADSD_AP,24),
-				  MACRO_NEW_MAG(ADSD_AP,24),
-				  MACRO_NEW_MAG(ADSD_AP,24),
-				  MACRO_NEW_MAG(ADSD_AP,24),
-				  MACRO_NEW_MAG(ADSD_AP,24)
+				  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46)
 				};
-				class Turrets : Turrets
+            };
+            class MainTurret2 : MainTurret2
+            {
+                weapons[] =
 				{
-
+				  MACRO_NEW_WEAPON(MTT_Cannon)
 				};
-			};
-		};
+				magazines[] =
+				{
+				  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46),
+                  MACRO_NEW_MAG(MTT_HE,46)
+				};
+            };
+        };
 
 		soundGetIn[] =
 		{
@@ -1047,27 +911,143 @@ class CfgVehicles
 				volume = "engineOn*(1-camPos)*grass*((((-speed*3.6) max speed*3.6)/ 60) factor[(((-49) max 49)/ 60),(((-53) max 53)/ 60)])";
 			};
 		};
-	};
+    };
 };
 
-class CfgFunctions
+class CfgAmmo
 {
-	class Aux332nd_ADSD
+    class 3AS_MTT_redPlasma_HEAT;
+
+    class MACRO_NEW_AMMO(MTT_HE) : 3AS_MTT_redPlasma_HEAT
 	{
-		class ADSD_Death
+		allowAgainstInfantry = 1;
+		aiAmmoUsageFlags = "16 + 64 + 128 + 512";
+		model = "swlw_main\Effects\laser_red.p3d";
+		tracerscale = 2;
+
+		cost = 5;
+		caliber = 28;
+		hit = 480;
+		indirectHit = 80;
+		indirectHitRange = 2;
+	};
+}
+
+class Mode_SemiAuto;
+class CfgMagazines
+{
+    class 3AS_40Rnd_MTT_HEAT;
+
+    class MACRO_NEW_MAG(MTT_HE,46) : 3AS_40Rnd_MTT_HEAT
+	{
+		displayName = "MTT HE";
+		ammo = MACRO_NEW_AMMO(MTT_HE)
+        count=46;
+	};
+}
+
+class CfgWeapons
+{
+	class 3AS_GATCannon;
+	class 3as_MTTCannon : 3AS_GATCannon
+	{
+		class manual;
+	};
+    
+    class MACRO_NEW_WEAPON(MTT_Cannon) : 3AS_MTTCannon
+	{
+		magazineWell[] = {};
+		magazines[] = 
 		{
-			file = "\332nd_vehicles\land\ADSD";
-			class Killed
+			MACRO_NEW_MAG(MTT_HE,46)
+		};
+		
+		class manual : manual
+		{
+			reloadTime = 0.44999999;
+			autoFire = 1;
+			sounds[] =
 			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"swlb_core\data\sounds\vehicles\aat\weapon\aat_main_shot.wss",
+					3.1622777,
+					0.7,
+					3000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					1
+				};
 			};
 		};
+		class close : manual
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 2;
+			burstRangeMax = 16;
+			aiRateOfFire = 0.44999999;
+			aiRateOfFireDispersion = 0.5;
+			aiRateOfFireDistance = 50;
+			minRange = 0;
+			minRangeProbab = 0.80000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.2;
+		};
+		class short : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 2;
+			burstRangeMax = 12;
+			aiRateOfFireDispersion = 0.5;
+			aiRateOfFireDistance = 150;
+			minRange = 20;
+			minRangeProbab = 0.69999999;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.2;
+		};
+		class medium : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 2;
+			burstRangeMax = 12;
+			aiRateOfFireDispersion = 0.5;
+			aiRateOfFireDistance = 250;
+			minRange = 150;
+			minRangeProbab = 0.69999999;
+			midRange = 600;
+			midRangeProbab = 0.64999998;
+			maxRange = 800;
+			maxRangeProbab = 0.1;
+		};
+		class far : close
+		{
+			aiBurstTerminable = 1;
+			showToPlayer = 0;
+			burst = 2;
+			burstRangeMax = 8;
+			aiRateOfFire = 4;
+			aiRateOfFireDispersion = 4;
+			aiRateOfFireDistance = 600;
+			minRange = 600;
+			minRangeProbab = 0.64999998;
+			midRange = 800;
+			midRangeProbab = 0.40000001;
+			maxRange = 1200;
+			maxRangeProbab = 0.1;
+		};
 	};
-};
 
-class Extended_Killed_EventHandlers
-{
-	class MACRO_NEW_VEHICLE(Land,CIS,ADSD)
-	{
-		Aux332nd_NoSim = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_ADSD_fnc_Killed;";
-	};
 };

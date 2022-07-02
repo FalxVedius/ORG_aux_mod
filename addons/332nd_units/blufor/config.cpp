@@ -139,6 +139,10 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,Church),
             //Grass
             MACRO_NEW_UNIT(infantry,Grass),
+            //Chopper
+            MACRO_NEW_UNIT(aviation,Chopper),
+            //Dets
+            MACRO_NEW_UNIT(airborne,Dets),
 
 		};
 		weapons[] = {
@@ -270,6 +274,10 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,Church),
             //Grass
             MACRO_NEW_UNIFORM(infantry,Grass),
+            //Chopper
+            MACRO_NEW_UNIFORM(aviation,Chopper),
+            //Dets
+            MACRO_NEW_UNIFORM(aviation,Dets),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -509,6 +517,10 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(Church,Church,Church)
     //Grass
     MACRO_NEW_INF_UNIFORM_ITEM(Grass,Grass,Grass)
+    //Chopper
+    MACRO_NEW_AVI_UNIFORM_ITEM(Chopper,Chopper,Chopper)
+    //Dets
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Dets,Dets,Dets)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -680,5 +692,9 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(Church,Church,Church,custom\Church_Upper.paa,custom\Church_Lower.paa)
     //Grass
     MACRO_NEW_INF_UNIT(Grass,Grass,Grass,custom\Grass_Upper.paa,custom\Grass_Lower.paa)
+    //Chopper
+    MACRO_NEW_AVI_UNIT(Chopper,Chopper,Chopper,custom\Chopper_Upper.paa,custom\Chopper_Lower.paa)
+    //Dets
+    MACRO_NEW_AIRBORNE_UNIT(Dets,Dets,Dets,custom\Dets_Upper.paa,custom\Dets_Lower.paa)
 
 };

@@ -568,10 +568,73 @@ class CfgVehicles
 	}
 
 	class 3AS_B_Katarn_Backpack;
-	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack) : 3AS_B_Katarn_Backpack
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_at) : 3AS_B_Katarn_Backpack
 	{
-		displayName = "[332nd] Assault Pack";
-		maximumLoad = 260;
+		displayName = "[332nd] Assault Pack - AT *WIP*";
+		maximumLoad = 468;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_Supp) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack - Support *WIP*";
+		maximumLoad = 380;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_Grend) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack - (UGL/DMR) *WIP*";
+		maximumLoad = 277;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_JTAC) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack - JTAC *WIP*";
+		maximumLoad = 468;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_Lead) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack - Leadership *WIP*";
+		maximumLoad = 316;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_EOD) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack - EOD *WIP*";
+		maximumLoad = 460;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_Medic) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack - Medic *WIP*";
+		maximumLoad = 433;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+	}
+
+	class MACRO_NEW_BACKPACK(blufor,332nd_assault_pack_Ammo) : 3AS_B_Katarn_Backpack
+	{
+		displayName = "[332nd] Assault Pack - Ammo Bearer *WIP*";
+		maximumLoad = 512;
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
