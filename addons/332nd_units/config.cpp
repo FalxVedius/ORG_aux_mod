@@ -13681,7 +13681,7 @@ class CfgVehicles
 		weapons[] = {"SWLW_LS150" ,"Throw","Put"};
 		respawnWeapons[] = { "SWLW_LS150","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Heavy_pack";
+		backpack = "";
 		magazines[] =
 		{
 			mag_5(SWLW_LS150_mag)
@@ -14618,7 +14618,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(rebel_Breacher,base) : WBK_BX_Assasin_1
+	class MACRO_NEW_UNIT(rebel_Breacher,base) : JLTS_Droid_B1_E5
 	{
 
 		author = MACRO_AUTHOR;

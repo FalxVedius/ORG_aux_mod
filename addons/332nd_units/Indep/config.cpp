@@ -217,41 +217,6 @@ class CfgGroups
 			side = 2;
 			name = "332nd Rebels";
 
-			class RebelTeams
-			{
-				name = "Rebel Teams";
-
-				class rebelSinperteam
-				{
-					name = "Marksman Team"
-						side = 2;
-					faction = "EdCat_332nd_Rebel";
-					class Unit0
-					{
-						side = 2;
-						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
-						rank = "CORPORAL";
-						position[] = { 0,0,0 };
-					};
-					class Unit1
-					{
-						side = 2;
-						vehicle = "332nd_aux_rebel_Sniper_unit_332nd_indep_rebel_Sniper";
-						rank = "PRIVATE";
-						position[] = { 0,1,0 };
-					};
-					class Unit2
-					{
-						side = 2;
-						vehicle = "332nd_aux_rebel_Spotter_unit_332nd_indep_rebel_Spotter";
-						rank = "PRIVATE";
-						position[] = { 1,0,0 };
-					};
-
-
-				};
-			};
-
 			class RebelFireteams
 			{
 
@@ -421,12 +386,42 @@ class CfgGroups
 					};
 
 				};
+
+				class rebelSinperteam
+				{
+					name = "Marksman Team"
+						side = 2;
+					faction = "EdCat_332nd_Rebel";
+					class Unit0
+					{
+						side = 2;
+						vehicle = "332nd_aux_rebel_SL_unit_332nd_indep_rebel_SL";
+						rank = "CORPORAL";
+						position[] = { 0,0,0 };
+					};
+					class Unit1
+					{
+						side = 2;
+						vehicle = "332nd_aux_rebel_Sniper_unit_332nd_indep_rebel_Sniper";
+						rank = "PRIVATE";
+						position[] = { 0,1,0 };
+					};
+					class Unit2
+					{
+						side = 2;
+						vehicle = "332nd_aux_rebel_Spotter_unit_332nd_indep_rebel_Spotter";
+						rank = "PRIVATE";
+						position[] = { 1,0,0 };
+					};
+
+
+				};
 			};
 
 			class RebelSquads
 			{
 				name = "Rebel Squads";
-				class RebelSquadBasic 
+				class RebelSquadBasic
 				{
 					name = "Basic Squad";
 					side = 2;
@@ -626,10 +621,10 @@ class CfgGroups
 			{
 				side = 2;
 				name = "Rebel Planes"
-				class HorentSwarm
+					class HorentSwarm
 				{
 					name = "Horent Swarm"
-					side = 2;
+						side = 2;
 					faction = "EdCat_332nd_Rebel";
 					class Unit0
 					{
@@ -661,7 +656,7 @@ class CfgGroups
 					};
 				}; //End Swarm
 			};
-
 		};
+		
 	};
 };

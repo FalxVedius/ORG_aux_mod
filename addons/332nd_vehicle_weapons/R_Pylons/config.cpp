@@ -184,10 +184,11 @@ class CfgWeapons
 	class weapon_GBU12Launcher;
 	class MACRO_NEW_WEAPON(R_PlasmaBomb_Pylon) : weapon_GBU12Launcher
 	{
+		magazineWell[] = {};
 		displayName = "R_Plasma_Bomb";
 		magazines[] = 
 		{
-		 MACRO_NEW_MAG(R_Pylon_PlasmaBomb,3)	 
+		 MACRO_NEW_MAG(Pylon_PlasmaBomb,3)
 		};
 	};
 };

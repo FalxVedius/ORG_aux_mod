@@ -1800,8 +1800,8 @@ class CfgVehicles
 		{
 			class DC_15s_x60_rebel
 			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
-				count = 15;
+				magazine = "332nd_aux_magazine_DC_R_15s_x60";
+				count = 3;
 			};
 
 			class Frag_rebel

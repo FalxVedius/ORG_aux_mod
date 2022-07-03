@@ -13,6 +13,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
             MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAP),
+			MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAS),
         };
 		weapons[] = {};
 	};
@@ -55,17 +56,25 @@ class VehicleSystemsTemplateRightPilot : DefaultVehicleSystemsDisplayManagerRigh
 
 class CfgVehicles
 {
-	class Plane_Fighter_03_dynamicLoadout_base_F;
+	class Plane;
 	class MFD
 	{
 	};
-	class 3as_vulture_dynamicLoadout_base : Plane_Fighter_03_dynamicLoadout_base_F
+	class Plane_Base_F : Plane
 	{
 		class Components;
 	};
-	class 3as_Vulture_dynamicLoadout : 3as_vulture_dynamicLoadout_base
+	class 3AS_Vulture_Base_F : Plane_Base_F
 	{
-		class Components;
+		class Components : Components
+		{
+			class pylons1;
+			class pylons2;
+			class pylons3;
+			class pylons4;
+			class pylons5;
+			class pylons6;
+		};
 	};
 
 	class MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAP) : 3AS_Vulture_Base_F
@@ -219,64 +228,32 @@ class CfgVehicles
 				  uiPicture = "a3\air_f_gamma\plane_fighter_03\data\ui\plane_a143_3den_ca.paa";
 				  class Pylons
 				  {
-					  class Pylons1
+					  class Pylons1 : Pylons1
 					  {
-						  hardpoints[] =
-						  {
-							  "332_A_Pylon"
-						  };
-						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-						  priority = 5;
-						  maxweight = 1200;
-						  UIposition[] = { 0.34999999,0.15000001 };
-					  };
-					  class Pylons2 : Pylons1
-					  {
-						  maxweight = 1200;
-						  UIposition[] = { 0.34999999,-0.15000001 };
-					  };
-					  class Pylons3 : Pylons1
-					  {
-						  UIposition[] = { 0.34999999,0.30000001 };
-						  mirroredMissilePos = 2;
-					  };
-					  class Pylons4 : Pylons2
-					  {
-						  UIposition[] = { 0.34999999,-0.30000001 };
-						  mirroredMissilePos = 1;
-					  };
-					  class Pylons5 : Pylons1
-					  {
-						  UIposition[] = { 0.34999999,0 };
-						  priority = 4;
-						  hardpoints[] =
-						  {
-							  "332_A_Pylon"
-						  };
+				  
 						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
 					  };
-					  class Pylons6 : Pylons5
+					  class Pylons2 : Pylons2
 					  {
-						  hardpoints[] = 
-						  {
-							  "332_A_Pylon"
-						  };
 						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-						 
-						  UIposition[] = { 0.34999999,0.5 };
-						  mirroredMissilePos = 5;
 					  };
-					  class Pylons7 : Pylons1
+					  class Pylons3 : Pylons3
 					  {
-						  hardpoints[] =
-						  {
-							  "332_A_Pylon"
-						  };
 						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-
-						  UIposition[] = { 0.34999999,0.5 };
-						  mirroredMissilePos = 5;
 					  };
+					  class Pylons4 : Pylons4
+					  {
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
+					  };
+					  class Pylons5 : Pylons5
+					  {
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
+					  };
+					  class Pylons6 : Pylons6
+					  {
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
+					  };
+					 
 				  };
 				  class Presets
 				  {
@@ -294,7 +271,7 @@ class CfgVehicles
 							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
 							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
 							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
-							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
+							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells",
 							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells"
 						  };
 					  };
@@ -305,7 +282,8 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAS) : 3AS_Vulture_Base_F
 	{
-		  displayName = "CAS Vulture Droid";
+		  displayName = "Rebel CAS Vulture Droid";
+			side = 2;
 		  scope = 2;
 		  armor = 25;
 		  scopeCurator = 2;
@@ -317,17 +295,27 @@ class CfgVehicles
 		  weapons[] =
 		  {
 			  MACRO_NEW_WEAPON(R_PlasmaBomb_Pylon),
+			  MACRO_NEW_WEAPON(Vulture_cannon),
 			  "CMFlareLauncher",
 		  };
 		  magazines[] =
 		  {
 			  MACRO_NEW_MAG(Pylon_PlasmaBomb,3),
 			  MACRO_NEW_MAG(Pylon_PlasmaBomb,3),
-			  "120Rnd_CMFlare_Chaff_Magazine",
-			  "120Rnd_CMFlare_Chaff_Magazine",
+			  MACRO_NEW_MAG(Vulture_30mm,1000),
+			  MACRO_NEW_MAG(Vulture_30mm,1000),
 			  "120Rnd_CMFlare_Chaff_Magazine",
 			  "120Rnd_CMFlare_Chaff_Magazine",
 		  };
+
+		  hiddenselections[] = {
+		   "camo1"
+		  };
+
+		  hiddenselectionstextures[] = {
+			 MACRO_VULTURE_TEXTURES\Base\Rebel_Vulture_Droid.paa,"3as_vulture\data\vulturedroid_color.paa"
+		  };
+
 			class EjectionSystem
 		{
 			EjectionSeatEnabled = 0;										//enable advanced ejection system								
@@ -473,9 +461,11 @@ class CfgVehicles
 						  displayName = "Default";
 						  attachment[] =
 						  {
-							  R_PlasmaBomb_Pylon
+							  
 							  "332nd_aux_magazine_R_Plasma_Bomb_x3",
-							  "332nd_aux_magazine_R_Plasma_Bomb_x3"
+							  "332nd_aux_magazine_R_Plasma_Bomb_x3",
+							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells",
+							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells"
 							 
 						  };
 					  };
