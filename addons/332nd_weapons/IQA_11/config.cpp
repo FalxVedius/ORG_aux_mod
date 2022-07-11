@@ -329,6 +329,15 @@ class CfgWeapons
 			{
 				compatibleItems[] = {};
 			};
+			class UnderBarrelSlot
+			{
+				linkProxy="\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
+				compatibleItems[]=
+				{
+					"3AS_Bipod_VK38X_f",
+					"bipod_01_f_blk"
+				};
+			};
 			mass = 130;
 		};
 
