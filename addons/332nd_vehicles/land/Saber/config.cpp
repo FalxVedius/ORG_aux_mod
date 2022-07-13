@@ -435,7 +435,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		class Turrets : Turrets
@@ -536,7 +536,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		class Turrets : Turrets
@@ -638,7 +638,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		class Turrets : Turrets
@@ -717,7 +717,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		class Turrets : Turrets

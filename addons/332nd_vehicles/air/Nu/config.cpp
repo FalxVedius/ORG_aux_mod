@@ -121,6 +121,10 @@ class CfgVehicles
 		{
 			"Nu_Cargo"
 		};
+		class ViewPilot: ViewPilot
+		{
+			initAngleX=0;
+		};
 		side=1;
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
@@ -153,7 +157,7 @@ class CfgVehicles
 			1,
 			600
 		};
-			class Sounds
+		class Sounds
 		{
 			class EngineInt
 			{
