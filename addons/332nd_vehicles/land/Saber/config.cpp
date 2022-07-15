@@ -663,7 +663,7 @@ class CfgVehicles
 			};
 			class Mainturret_top : Mainturret_top
 			{
-
+				stabilizedInAxes = 3;
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{
