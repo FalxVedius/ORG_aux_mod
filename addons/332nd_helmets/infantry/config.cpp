@@ -117,12 +117,16 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bob,Bob,Bob.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Ukrainian,Ukrainian,Ukrainian.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Griif,Griif,Griif.paa)
+	//MACRO_NEW_INF_HELMET_ITEM(Griif,Griif,Griif.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Noodles,Noodles,Noodles.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Caboose,Caboose,Caboose.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Inverse,Inverse,Inverse.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Mod,Mod,Mod.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Preacher,Preacher,Preacher.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Brain,Brain,Brain.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Ion,Ion,Ion.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sync,Sync,Sync.paa)
+
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Engineer,Engineer,CE.paa)

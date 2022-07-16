@@ -43,7 +43,7 @@ class CfgWeapons
 
     MACRO_NEW_AB_HELMET_ITEM(332nd_airborne,Airborne,AB.paa)
 	MACRO_NEW_AB_HELMET_ITEM(332nd_airborne_veteran,Airborne Veteran,AB_Vet_Helmet.paa)
-	//MACRO_NEW_AB_HELMET_ITEM(Griif,Griif,Griif.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Griif,Griif,Griif.paa)
 	//MACRO_NEW_AB_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Beast,Beast,Beast.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Screw,Screw,Screw.paa)
@@ -58,4 +58,5 @@ class CfgWeapons
 	MACRO_NEW_AB_HELMET_ITEM(Veta,Veta,Veta.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Grey,Grey,Grey.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Shock,Shock,Shock.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Cog,Cog,Cog.paa)
 };

@@ -1144,7 +1144,9 @@ class CfgWeapons
 			MACRO_NEW_MAG(Nu_75mm,80)
 		};
 		modes[] = {"manual"};
+		ballisticsComputer="1";
 		displayName = "Cannon Low Energy";
+		canLock = 2; // Always locks
 		class manual: LowROF
 		{
 			magazineReloadTime = 2;

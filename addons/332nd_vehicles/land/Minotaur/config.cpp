@@ -71,8 +71,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
-		armorStructural = 6;
+		armor = 150;
+		armorStructural = 5;
 
 		hiddenSelectionsTextures[] =
 		{
@@ -194,8 +194,8 @@ class CfgVehicles
 			"\sc_wheeled\data\saurus_apc\textures\camera_co.paa"
 		};
 
-		armor = 400;
-		armorStructural = 6;
+		armor = 150;
+		armorStructural = 5;
 		transportSoldier = 0;
 
 		attendant = true;

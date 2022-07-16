@@ -132,7 +132,7 @@ class CfgPatches
             //Hoggy
             MACRO_NEW_UNIT(infantry,Hoggy),
             //Griif
-            MACRO_NEW_UNIT(infantry,Griif),
+            MACRO_NEW_UNIT(airborne,Griif),
             //Deva
             MACRO_NEW_UNIT(infantry,Deva),
             //Church
@@ -267,7 +267,7 @@ class CfgPatches
             //Hoggy
             MACRO_NEW_UNIFORM(infantry,Hoggy),
             //Griif
-            MACRO_NEW_UNIFORM(infantry,Griif),
+            MACRO_NEW_UNIFORM(airborne,Griif),
             //Deva
             MACRO_NEW_UNIFORM(infantry,Deva),
             //Church
@@ -277,7 +277,7 @@ class CfgPatches
             //Chopper
             MACRO_NEW_UNIFORM(aviation,Chopper),
             //Dets
-            MACRO_NEW_UNIFORM(aviation,Dets),
+            MACRO_NEW_UNIFORM(airborne,Dets),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -510,7 +510,7 @@ class CfgWeapons
     //Hoggy
     MACRO_NEW_INF_UNIFORM_ITEM(Hoggy,Hoggy,Hoggy)
     //Griif
-    MACRO_NEW_INF_UNIFORM_ITEM(Griif,Griif,Griif)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Griif,Griif,Griif)
     //Deva
     MACRO_NEW_INF_UNIFORM_ITEM(Deva,Deva,Deva)
     //Church
@@ -684,8 +684,6 @@ class CfgVehicles
     MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Captain_Lower.paa)
     //Hoggy
     MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,officer\Officer_Lower.paa)
-    //Griif
-    MACRO_NEW_INF_UNIT(Griif,Griif,Griif,custom\Griif_Upper.paa,custom\Griif_Lower.paa)
     //Deva
     MACRO_NEW_INF_UNIT(Deva,Deva,Deva,custom\Deva_Upper.paa,custom\Deva_Lower.paa)
     //Church
@@ -696,5 +694,7 @@ class CfgVehicles
     MACRO_NEW_AVI_UNIT(Chopper,Chopper,Chopper,custom\Chopper_Upper.paa,custom\Chopper_Lower.paa)
     //Dets
     MACRO_NEW_AIRBORNE_UNIT(Dets,Dets,Dets,custom\Dets_Upper.paa,custom\Dets_Lower.paa)
+    //Griif
+    MACRO_NEW_AIRBORNE_UNIT(Griif,Griif,Griif,custom\Griif_Upper.paa,custom\Griif_Lower.paa)
 
 };

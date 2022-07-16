@@ -80,7 +80,7 @@ class CfgVehicles
 		};
 		
 
-		armor = 350;
+		armor = 250;
 		armorStructural = 4;
 
 		antiRollbarForceCoef = 48;

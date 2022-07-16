@@ -435,7 +435,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		hiddenSelectionsTextures[] = 
@@ -448,36 +448,38 @@ class CfgVehicles
 		{
 			class MainTurret_bottom : MainTurret_bottom
 			{
-			turretInfoType="RscOptics_MBT_01_gunner";
-			  memoryPointGun[]=
+				turretInfoType="RscOptics_MBT_01_gunner";
+				memoryPointGun[]=
 				{
 					"z_gunL_muzzle",
 					"z_gunR_muzzle"
 				};
-			  stabilizedInAxes = 3;
-			  weapons[] =
-			  {
-			    MACRO_NEW_WEAPON(Saber_High),
-				MACRO_NEW_WEAPON(Saber_low)
-			  };
-			  magazines[] =
-			  {
-			    MACRO_NEW_MAG(Saber_AP,25),
-				MACRO_NEW_MAG(Saber_AP,25),
-				MACRO_NEW_MAG(Saber_AP,25),
-				MACRO_NEW_MAG(Saber_AP,25),
-			    MACRO_NEW_MAG(MassDriver_HE,15),
-				MACRO_NEW_MAG(MassDriver_HE,15),
-				MACRO_NEW_MAG(Saber_Low,500),
-				MACRO_NEW_MAG(Saber_Low,500),
-				MACRO_NEW_MAG(Saber_Low,500),
-                MACRO_NEW_MAG(Saber_Low,500),
-				MACRO_NEW_MAG(Saber_Low,500)
-			  };
+				stabilizedInAxes = 3;
+				weapons[] =
+				{
+					MACRO_NEW_WEAPON(Saber_High),
+					MACRO_NEW_WEAPON(Saber_low)
+				};
+				magazines[] =
+				{
+					MACRO_NEW_MAG(Saber_AP,25),
+					MACRO_NEW_MAG(Saber_AP,25),
+					MACRO_NEW_MAG(Saber_AP,25),
+					MACRO_NEW_MAG(Saber_AP,25),
+					MACRO_NEW_MAG(MassDriver_HE,15),
+					MACRO_NEW_MAG(MassDriver_HE,15),
+					MACRO_NEW_MAG(Saber_Low,500),
+					MACRO_NEW_MAG(Saber_Low,500),
+					MACRO_NEW_MAG(Saber_Low,500),
+					MACRO_NEW_MAG(Saber_Low,500),
+					MACRO_NEW_MAG(Saber_Low,500)
+				};
 			};
 			class Mainturret_top : Mainturret_top
 			{
 				stabilizedInAxes = 3;
+				outGunnerMayFire=1;
+				ingunnerMayFire=0;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -542,7 +544,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		hiddenSelectionsTextures[] = 
@@ -588,6 +590,8 @@ class CfgVehicles
 			class Mainturret_top : Mainturret_top
 			{
 				stabilizedInAxes = 3;
+				outGunnerMayFire=1;
+				ingunnerMayFire=0;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(BeamLaser_Full)
@@ -650,7 +654,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		hiddenSelectionsTextures[] = 
@@ -735,7 +739,7 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 400;
+		armor = 200;
 		armorStructural = 5;
 
 		hiddenSelectionsTextures[] =
