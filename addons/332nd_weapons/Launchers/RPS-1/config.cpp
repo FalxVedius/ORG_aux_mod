@@ -56,7 +56,7 @@ class CfgWeapons
 		magazines[] = {"CBA_FakeLauncherMagazine"};
 		magazineWell[]={""};
 		ace_overpressure_angle=45;
-		ace_overpressure_damage=0.50999999;
+		ace_overpressure_damage=0;
 		ace_overpresssure_priority=1;
 		ace_overpressure_range=3;
         canLock=0;

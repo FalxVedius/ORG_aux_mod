@@ -122,6 +122,16 @@ class CfgVehicles
 			100
 		};
 
+		hiddenselectionstextures[] = 
+		{ 
+			"332nd_vehicles\_textures\land\ATTE\332nd_Vic_Test_AATE_Hull.paa",
+			"3as\3as_atte\data\atte_chasis_co.paa",
+			"332nd_vehicles\_textures\land\ATTE\332nd_Vic_Test_AATE_Cockpit.paa",
+			"332nd_vehicles\_textures\land\ATTE\332nd_Vic_Test_AATE_Turret.paa",
+			"3as\3as_atte\data\atte_underpiping_co.paa",
+			"3as\3as_atte\data\atte_middleleg_co.paa"
+		};
+
 		//enginePower = 20000;
 		maxSpeed = 15;
 		waterSpeedFactor=1;

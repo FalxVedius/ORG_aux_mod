@@ -250,7 +250,7 @@ class CfgWeapons
 		};
 		class medium : close
 		{
-			dispersion = 0.00071250001;
+			dispersion = 0.001;
 			showToPlayer = 0;
 			burst = 1;
 			burstRangeMax = 1;
@@ -266,7 +266,7 @@ class CfgWeapons
 		};
 		class far : close
 		{
-			dispersion = 0.00071250001;
+			dispersion = 0.002;
 			showToPlayer = 0;
 			burst = 1;
 			burstRangeMax = 1;
@@ -513,7 +513,7 @@ class CfgWeapons
 		};
 		class medium : close
 		{
-			dispersion = 0.00071250001;
+			dispersion = 0.001;
 			showToPlayer = 0;
 			burst = 1;
 			burstRangeMax = 1;
@@ -529,7 +529,7 @@ class CfgWeapons
 		};
 		class far : close
 		{
-			dispersion = 0.00071250001;
+			dispersion = 0.002;
 			showToPlayer = 0;
 			burst = 1;
 			burstRangeMax = 1;
