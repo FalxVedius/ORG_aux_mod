@@ -143,6 +143,8 @@ class CfgPatches
             MACRO_NEW_UNIT(aviation,Chopper),
             //Dets
             MACRO_NEW_UNIT(airborne,Dets),
+            //Poseidon
+            MACRO_NEW_UNIT(captain,Poseidon),
 
 		};
 		weapons[] = {
@@ -278,6 +280,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(aviation,Chopper),
             //Dets
             MACRO_NEW_UNIFORM(airborne,Dets),
+            //Poseidon
+            MACRO_NEW_UNIFORM(captain,Poseidon),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -521,6 +525,8 @@ class CfgWeapons
     MACRO_NEW_AVI_UNIFORM_ITEM(Chopper,Chopper,Chopper)
     //Dets
     MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Dets,Dets,Dets)
+    //Poseidon
+    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Poseidon,Poseidon,Poseidon)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -696,5 +702,6 @@ class CfgVehicles
     MACRO_NEW_AIRBORNE_UNIT(Dets,Dets,Dets,custom\Dets_Upper.paa,custom\Dets_Lower.paa)
     //Griif
     MACRO_NEW_AIRBORNE_UNIT(Griif,Griif,Griif,custom\Griif_Upper.paa,custom\Griif_Lower.paa)
-
+    //Poseidon
+    MACRO_NEW_CAPTAIN_UNIT(Poseidon,Poseidon,Poseidon,custom\Poseidon_Upper.paa,custom\Poseidon_Lower.paa)
 };

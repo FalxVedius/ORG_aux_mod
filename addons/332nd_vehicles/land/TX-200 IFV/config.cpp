@@ -69,13 +69,13 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] = 
 		{ 
-			"332nd_vehicles\_textures\land\TX200\armor_co.paa",
-			"332nd_vehicles\_textures\land\TX200\main_co.paa",
+			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Armour.paa",
+			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Main.paa",
 			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
 			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
 			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
-			"332nd_vehicles\_textures\land\TX200\turret_co.paa",
-			"332nd_vehicles\_textures\land\TX200\mg_co.paa",
+			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Turret.paa",
+			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Mg.paa",
 			"" 
 		};
 		

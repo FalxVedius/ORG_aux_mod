@@ -54,7 +54,7 @@ class CfgWeapons
 			MACRO_NEW_MAG(RPS6_AAMag,1)
 		};
 		ace_overpressure_angle=45;
-		ace_overpressure_damage=0.69999999;
+		ace_overpressure_damage=0;
 		ace_overpresssure_priority=1;
 		ace_overpressure_range=3;
 		ace_reloadlaunchers_enabled=1;
