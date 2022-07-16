@@ -159,6 +159,7 @@ class CfgMagazines
 		displayNameShort="White Impact Smk";
 		picture = "\332nd_weapons\equipment\data\332WhiteSmoke.paa";
 		mass=4;
+		scopeArsenal = 2;
 		ammo=MACRO_NEW_AMMO(332_Impact_white)
     };
 	class 3AS_SmokeBlue;

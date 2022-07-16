@@ -121,6 +121,10 @@ class CfgVehicles
 		{
 			"Nu_Cargo"
 		};
+		class ViewPilot: ViewPilot
+		{
+			initAngleX=0;
+		};
 		side=1;
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
@@ -153,7 +157,7 @@ class CfgVehicles
 			1,
 			600
 		};
-			class Sounds
+		class Sounds
 		{
 			class EngineInt
 			{
@@ -20989,6 +20993,12 @@ class CfgVehicles
 				count = 40;
 			};
 
+			class CombatStim_332nd
+			{
+				name = "332nd_aux_medical_Combat";
+				count = 40;
+			};
+
 			class Adrenaline_332nd
 			{
 				name = "332nd_aux_medical_Adrenaline";
@@ -21177,19 +21187,19 @@ class CfgVehicles
 
 			class DC17M_Rifle_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x42";
 				count = 300;
 			};
 
 			class DC17M_Marks_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				magazine = "332nd_aux_magazine_DC_17m_marks_x10";
 				count = 300;
 			};
 
 			class DC17M_Grend_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				magazine = "332nd_aux_magazine_DC_17m_grend_x1";
 				count = 50;
 			};
 
@@ -21337,6 +21347,48 @@ class CfgVehicles
 				count = 30;
 			};
 
+			class WhiteImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
+				count = 30;
+			};
+
+			class BlueImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
+				count = 30;
+			};
+
+			class GreenImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_GREEN_x1";
+				count = 30;
+			};
+
+			class RedImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_RED_x1";
+				count = 30;
+			};
+
+			class PurpleImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_PURPLE_x1";
+				count = 30;
+			};
+
+			class YellowImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_YELLOW_x1";
+				count = 30;
+			};
+
+			class OrangeImpact_332nd
+			{
+				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
+				count = 30;
+			};
+
 			class SquadShield_332nd
 			{
 				magazine = "332nd_aux_magazine_332_SquadShield_x1";
@@ -21395,6 +21447,30 @@ class CfgVehicles
 			{
 				magazine = "332nd_aux_magazine_DC_15x_x2";
 				count = 20;
+			};
+
+			class Dm17HeartStarter_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				count = 50;
+			};
+
+			class Dm17Bacta_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				count = 25;
+			};
+
+			class Dm17Kolto_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				count = 25;
+			};
+
+			class Dm17CombatStim_332nd
+			{
+				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				count = 50;
 			};
 		};
     };

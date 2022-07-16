@@ -46,6 +46,73 @@ class cfgWeapons
 		class WeaponSlotsInfo;
 	};
 	class JLTS_stun_muzzle;
+
+	class ItemCore;
+	class InventoryOpticsItem_Base_F;
+	class 332nd_Acog_DC15C : ItemCore
+	{
+		scope = 2;
+		displayName = "ACOG Optic";
+		picture = "\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
+		model = "\3AS\3AS_Weapons\DC15C\3AS_DC15C_ACOG_Sight_f.p3d";
+		weaponInfoType = "RscWeaponZeroing";
+		class ItemInfo : InventoryOpticsItem_Base_F
+		{
+			mass = 7;
+			modelOptics = "\3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d";
+			class OpticsModes
+			{
+				class 3AS_DC15C_Optic
+				{
+					opticsID = 1;
+					useModelOptics = 1;
+					opticsPPEffects[] =
+					{
+						"OpticsCHAbera1",
+						"OpticsBlur1"
+					};
+					opticsZoomMin = 0.375;
+					opticsZoomMax = 0.375;
+					opticsZoomInit = 0.375;
+					discreteDistance[] = {100,300,400,500,600,700,800,900,1000};
+					discreteDistanceInitIndex = 1;
+					distanceZoomMin = 100;
+					distanceZoomMax = 1000;
+					nFovLimit = 0.07;
+					discreteFov[] = {0.375};
+					discreteInitIndex = 0;
+					modelOptics[] =
+					{
+						"\3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d"
+					};
+					memoryPointCamera = "opticView";
+					visionMode[] =
+					{
+						"Normal",
+						"NVG"
+					};
+					opticsFlare = 1;
+					opticsDisablePeripherialVision = 1;
+					cameraDir = "";
+				};
+				class IronOnTopOfMyOptics : 3AS_DC15C_Optic
+				{
+					opticsID = 2;
+					useModelOptics = 0;
+					opticsFlare = 0;
+					opticsDisablePeripherialVision = 0;
+					opticsZoomMin = 0.375;
+					opticsZoomMax = 1.1;
+					opticsZoomInit = 0.75;
+					memoryPointCamera = "eye";
+					visionMode[] = {};
+					discretefov[] = {};
+				};
+			};
+		};
+	};
+
+
 	class MACRO_NEW_WEAPON(DC_15c): 3AS_DC15C_F
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15c [Rifleman])
@@ -101,6 +168,19 @@ class cfgWeapons
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{
 			mass = 80;
+
+			class CowsSlot
+			{
+				access = 1;
+				compatibleItems[] = { "332nd_Acog_DC15C","3AS_optic_reflex_DC15C" };
+				displayName = "Optics Slot";
+				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
+				iconPinpoint = "Bottom";
+				iconPosition[] = { 0,0 };
+				iconScale = 0;
+				linkProxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 0;
+			};
 		};
 
 		class OpticsModes
@@ -128,30 +208,6 @@ class cfgWeapons
                 visionMode[]={};
                 opticsFlare="true";
                 cameraDir="";
-            };
-            class scope: sight
-            {
-                opticsID=1;
-                useModelOptics=1;
-                opticsPPEffects[]=
-                {
-                    "OpticsCHAbera2",
-                    "OpticsBlur3"
-                };
-                opticsZoomMin=0.0300;
-                opticsZoomMax=0.125;
-                opticsZoomInit=0.125;
-                memoryPointCamera="optic_view";
-                opticsFlare=1;
-                opticsDisablePeripherialVision=1;
-                visionMode[] = {"Normal", "NVG"};
-                discretefov[] = {0.125,0.0625,0.0310};
-                discreteInitIndex = 0;
-                discreteDistanceInitIndex = 0;
-                discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000};
-                distanceZoomMin=100;
-                distanceZoomMax=1000;
-                modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
             };
         };
 	};

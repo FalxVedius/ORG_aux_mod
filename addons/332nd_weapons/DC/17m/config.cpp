@@ -23,12 +23,12 @@ class CfgPatches
 
 class cfgRecoils
 {
- class DC_15s
+ class DC_17m
  {              //  x     y     a     b
-  muzzleOuter[]	= { 0,  8,  0,  0 };
-  kickBack[]	= { 0.02, 0.04 };
+  muzzleOuter[]	= { 0,  6,  0,  0 };
+  kickBack[]	= { 0.03, 0.06 };
   permanent	= 0;
-  temporary	= 6;
+  temporary	= 5;
  };
 };
 class cfgWeapons
@@ -69,12 +69,12 @@ class cfgWeapons
 		};
 
 		
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17M *WIP*)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17M *Test*)
 
 		canShootInWater=1;
 		baseWeapon="332nd_aux_weapon_DC_17m";
-		recoil="DC_15s";
-		recoilprone="DC_15s";
+		recoil="DC_17m";
+		recoilprone="DC_17m";
 		cursor="332_DOT";
         cursoraim="332_DC15S";
 		modes[]=  
@@ -82,20 +82,19 @@ class cfgWeapons
 			"FullAuto",
 			"Single"
 		};
-		class 332Stun: JLTS_stun_muzzle
-		{
-	       magazines[]=
-		   {
-		  	MACRO_NEW_MAG(Stun,10)
-		   };
-		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
-		};
+		//class 332Stun: JLTS_stun_muzzle
+		//{
+	 //      magazines[]=
+		//   {
+		//  	MACRO_NEW_MAG(Stun,10)
+		//   };
+		//   magazineWell[]={};
+		//   cursoraim="332_Stun";
+		//   cursor="332_DOT"
+		//};
 		muzzles[]=
 		{
-			"this",
-			"332Stun"
+			"this"
 		};
 
 		class FullAuto: FullAuto
@@ -116,13 +115,13 @@ class cfgWeapons
 			};
 			displayname="FullAuto";
 			reloadTime = 0.1;
-			dispersion = 0.009;
+			dispersion = 0.001;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
 			midRangeProbab=0.69999999;
 			maxRange=30;
-			maxRangeProbab=0.1;
+			maxRangeProbab=0.11;
 			textureType="fastAuto";
 		};
 
@@ -141,9 +140,9 @@ class cfgWeapons
 			{
 				soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
 			};
-			reloadTime = 0.365;
+			reloadTime = 0.2;
 			displayname="SlowAuto";
-			dispersion = 0.00093;
+			dispersion = 0.001;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=250;
@@ -154,9 +153,9 @@ class cfgWeapons
 		};
 
         magazines[] = {
-			MACRO_NEW_MAG(DC_17m_rifle,60),
-			MACRO_NEW_MAG(DC_17m_marks,5),
-			MACRO_NEW_MAG(DC_17m_grend,4)
+			MACRO_NEW_MAG(DC_17m_rifle,42),
+			MACRO_NEW_MAG(DC_17m_marks,10),
+			MACRO_NEW_MAG(DC_17m_grend,1)
 		};
         
 		class OpticsModes
@@ -175,22 +174,6 @@ class cfgWeapons
 				opticsZoomMin = 0.25;
 				useModelOptics = 0;
 				visionMode[] = {};
-            };
-            class scope: sight
-            {
-				cameraDir = "";
-				distanceZoomMax = 100;
-				distanceZoomMin = 100;
-				memoryPointCamera = "opticView";
-				opticsDisablePeripherialVision = 0.67;
-				opticsFlare = "true";
-				opticsID = 2;
-				opticsPPEffects[] = { "OpticsCHAbera5","OpticsBlur5" };
-				opticsZoomInit = 0.2;
-				opticsZoomMax = 0.2;
-				opticsZoomMin = 0.015;
-				useModelOptics = 1;
-				visionMode[] = { "Normal","NVG"};
             };
         };
 	};
@@ -211,20 +194,20 @@ class cfgWeapons
 
 			class MagazineCoef
 			{
-				initSpeed = 0.67;
+				initSpeed = 1;
 			};
 
-			class AmmoCoef
-			{
-				hit = 1;
-				visibleFire = 0.1;
-				audibleFire = 0.1;
-				visibleFireTime = 1;
-				audibleFireTime = 1.0;
-				cost = 1.0;
-				typicalSpeed = 1;
-				airFriction = 1.0;
-			};
+			//class AmmoCoef
+			//{
+			//	hit = 1;
+			//	visibleFire = 0.1;
+			//	audibleFire = 0.1;
+			//	visibleFireTime = 1;
+			//	audibleFireTime = 1.0;
+			//	cost = 1.0;
+			//	typicalSpeed = 1;
+			//	airFriction = 1.0;
+			//};
 
 			muzzleEnd = "zaslehPoint";		// memory point in muzzle supressor's model
 			alternativeFire = "Zasleh2";	// class in cfgWeapons with model of muzzle flash	
@@ -260,33 +243,33 @@ class cfgWeapons
 
 			class MagazineCoef
 			{
-				initSpeed = 0.67;
+				initSpeed = 1;
 			};
 
-			class AmmoCoef
-			{
-				hit = 1;
-				visibleFire = 0.1;
-				audibleFire = 0.1;
-				visibleFireTime = 1;
-				audibleFireTime = 1.0;
-				cost = 1.0;
-				typicalSpeed = 1;
-				airFriction = 1.0;
-			};
+			//class AmmoCoef
+			//{
+			//	hit = 1;
+			//	visibleFire = 0.1;
+			//	audibleFire = 0.1;
+			//	visibleFireTime = 1;
+			//	audibleFireTime = 1.0;
+			//	cost = 1.0;
+			//	typicalSpeed = 1;
+			//	airFriction = 1.0;
+			//};
 
 			muzzleEnd = "zaslehPoint";		// memory point in muzzle supressor's model
 			alternativeFire = "Zasleh2";	// class in cfgWeapons with model of muzzle flash	
 
 			class MuzzleCoef
 			{
-				dispersionCoef = 1.0f;
+				dispersionCoef = 0.001f;
 				artilleryDispersionCoef = 1.0f;
 
 				fireLightCoef = 0.1f;
 
-				recoilCoef = 1.0f;
-				recoilProneCoef = 1.0f;
+				recoilCoef = 3.0f;
+				recoilProneCoef = 2.0f;
 
 				minRangeCoef = 1.0f; minRangeProbabCoef = 1.0f;
 				midRangeCoef = 1.0f; midRangeProbabCoef = 1.0f;
@@ -309,20 +292,20 @@ class cfgWeapons
 
 			class MagazineCoef
 			{
-				initSpeed = 0.67;
+				initSpeed = 1;
 			};
 
-			class AmmoCoef
-			{
-				hit = 1;
-				visibleFire = 0.1;
-				audibleFire = 0.1;
-				visibleFireTime = 1;
-				audibleFireTime = 1.0;
-				cost = 1.0;
-				typicalSpeed = 1;
-				airFriction = 1.0;
-			};
+			//class AmmoCoef
+			//{
+			//	hit = 1;
+			//	visibleFire = 0.1;
+			//	audibleFire = 0.1;
+			//	visibleFireTime = 1;
+			//	audibleFireTime = 1.0;
+			//	cost = 1.0;
+			//	typicalSpeed = 1;
+			//	airFriction = 1.0;
+			//};
 
 			muzzleEnd = "zaslehPoint";		// memory point in muzzle supressor's model
 			alternativeFire = "Zasleh2";	// class in cfgWeapons with model of muzzle flash	
@@ -334,7 +317,7 @@ class cfgWeapons
 
 				fireLightCoef = 0.1f;
 
-				recoilCoef = 1.0f;
+				recoilCoef = 5.0f;
 				recoilProneCoef = 1.0f;
 
 				minRangeCoef = 1.0f; minRangeProbabCoef = 1.0f;
@@ -345,45 +328,93 @@ class cfgWeapons
 	};
 };
 
+class CfgAmmo
+{	
+	class SWLW_ammo_40mm_at;
+	class MACRO_NEW_AMMO(762_blue);
+
+	class MACRO_NEW_AMMO(DM17GP): SWLW_ammo_40mm_at
+	{
+		aiAmmoUsageFlags="64 + 128";
+		ace_frag_enabled = 0;
+		irLock=0;
+		caliber = 1;
+		allowAgainstInfantry=1;
+		hit=80;
+		manualControl=0;
+		CraterEffects = "SWLW_plasma_he_impact";
+		indirectHit=20;
+		indirectHitRange=1;
+		tracerscale = 1;
+		model = "\A3\weapons_f\launchers\nlaw\nlaw_rocket";
+		maxControlRange = 0;
+		maxSpeed = 70;
+		effectfly="332nd_aux_effects_missile_Rocket_DC17mGP";
+		manueuvrability = 0;
+		coefGravity = 0;
+		flaresize = 1;
+		timeToLive = 20;
+		fuseDistance = 1;
+		typicalSpeed = 70;
+		soundfly[]=
+		{
+			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			2,
+			1.5,
+			200
+		};
+	};
+	class MACRO_NEW_AMMO(762_Blue_DC17mSniper): MACRO_NEW_AMMO(762_blue)
+	{
+		//effectfly="332nd_aux_effects_blue_bullet";
+		class CamShakePlayerFire
+		{
+		power = 5;
+		duration = 0.1;
+		frequency = 20;
+		};
+	};
+};
+
 class CfgMagazines
 {
 	class 3as_100rnd_ec40_mag;
 	class 3as_5rnd_ec80_mag;
 	class 3as_antiarmour_mag;
 
-	class MACRO_NEW_MAG(DC_17m_rifle,60) : 3as_100rnd_ec40_mag
+	class MACRO_NEW_MAG(DC_17m_rifle,42) : 3as_100rnd_ec40_mag
 	{
-		count = 60;
-		mass = 15;
-		initspeed = 1400;
-		displayName = MACRO_AMMO_DISPLAYNAME(17m Rifle Mag,60)
+		count = 42;
+		mass = 10;
+		initspeed = 700;
+		displayName = MACRO_AMMO_DISPLAYNAME(17m Rifle Mag,42)
 		displayNameShort = "Med Power 60rnd";
 		descriptionShort = "332nd Medium Power Round";
 		ammo = MACRO_NEW_AMMO(762_blue);
 		tracersEvery = 1;
 	};
 
-	class MACRO_NEW_MAG(DC_17m_marks,5) : 3as_5rnd_ec80_mag
+	class MACRO_NEW_MAG(DC_17m_marks,10) : 3as_5rnd_ec80_mag
 	{
-		count = 5;
-		mass = 15;
+		count = 10;
+		mass = 10;
 		initspeed = 2200;
-		displayName = MACRO_AMMO_DISPLAYNAME(17m Marksman Mag,5)
-		displayNameShort = "Med Power 5rnd";
+		displayName = MACRO_AMMO_DISPLAYNAME(17m Carbine Mag,10)
+		displayNameShort = "Med Power 10rnd";
 		descriptionShort = "332nd Medium Power Round";
-		ammo = MACRO_NEW_AMMO(762_blue);
+		ammo = MACRO_NEW_AMMO(762_Blue_DC17mSniper);
 		tracersEvery = 1;
 	};
 
-	class MACRO_NEW_MAG(DC_17m_grend,4) : 3as_antiarmour_mag
+	class MACRO_NEW_MAG(DC_17m_grend,1) : 3as_antiarmour_mag
 	{
-		count = 4;
-		mass = 15;
-		initspeed = 80;
-		displayName = MACRO_AMMO_DISPLAYNAME(17m Grenade,4)
+		count = 1;
+		mass = 25;
+		initspeed = 70;
+		displayName = MACRO_AMMO_DISPLAYNAME(17m GP Rocket,1)
 		displayNameShort = "High Explosive 4rnd";
 		descriptionShort = "332nd HE Round";
-		ammo = MACRO_NEW_AMMO(40mm_HE);
+		ammo = MACRO_NEW_AMMO(DM17GP);
 		tracersEvery = 1;
 	};
 };
