@@ -137,8 +137,8 @@
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Assault Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,"\3AS\3AS_Characters\Commando\data\Katarn_Helmet_Glass_CO.paa"};\
-			hiddenSelectionsMaterials[] = {"\332nd_helmets\assault\Assault_Helmet.rvmat","\3AS\3AS_Characters\Commando\data\Katarn_Visor.rvmat"};\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,"\332nd_helmets\assault\KatarnVisor.paa"};\
+			hiddenSelectionsMaterials[] = {"\332nd_helmets\assault\Assault_Helmet.rvmat","\332nd_helmets\assault\Assault_Visor.rvmat"};\
 		};
 	
 

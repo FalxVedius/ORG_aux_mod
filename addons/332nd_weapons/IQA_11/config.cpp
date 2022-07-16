@@ -285,6 +285,7 @@ class CfgWeapons
 				cameraDir = "";
 				discreteDistance[] = { 300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400 };
 				discreteDistanceInitIndex = 0;
+				discreteInitIndex = 0;
 				discretefov[] =
 				{
 					".25/1",
@@ -327,6 +328,15 @@ class CfgWeapons
 			class CowsSlot : CowsSlot
 			{
 				compatibleItems[] = {};
+			};
+			class UnderBarrelSlot
+			{
+				linkProxy="\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
+				compatibleItems[]=
+				{
+					"3AS_Bipod_VK38X_f",
+					"bipod_01_f_blk"
+				};
 			};
 			mass = 130;
 		};

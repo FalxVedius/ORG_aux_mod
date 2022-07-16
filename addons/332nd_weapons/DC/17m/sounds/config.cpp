@@ -99,7 +99,7 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 	class 332_DC17mSniper_Shot_SoundSet
 	{
 		soundShaders[] = {"332_DC17mSniper_Closure_SoundShader","332_DC17mSniper_closeShot_SoundShader","332_DC17mSniper_midShot_SoundShader","332_DC17mSniper_distShot_SoundShader"};
-		volumeFactor = 1.2;
+		volumeFactor = 1.4;
 		frequencyRandomizer = 0.75;
 		frequencyRandomizer = 0.25;
 		volumeCurve = "332_weapons_basic_volumecurve";

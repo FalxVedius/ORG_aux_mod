@@ -58,7 +58,7 @@ class cfgWeapons
 
 	class MACRO_NEW_WEAPON(DC_15x): OPTRE_M99A2S3
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(*WIP* DC 15x ATR [AT])
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15x ATR [AT])
 
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_m320";

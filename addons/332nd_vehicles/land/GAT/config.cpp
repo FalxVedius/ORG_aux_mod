@@ -442,8 +442,13 @@ class CfgVehicles
         scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
+		editorSubcategory = "EdSubcat_332nd_IFV";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+		armor = 150;
+		armorStructural = 2;
+
+
 		class Turrets : Turrets
 		 {
 		   class MainTurret : MainTurret
@@ -1231,8 +1236,12 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
+		editorSubcategory = "EdSubcat_332nd_IFV";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+		armor = 150;
+		armorStructural = 2;
+
 		class Turrets : Turrets
 		 {
 		   class MainTurret : MainTurret
@@ -2020,8 +2029,12 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
+		editorSubcategory = "EdSubcat_332nd_IFV";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+		armor = 150;
+		armorStructural = 2;
+
 		class Turrets : Turrets
 		 {
 		   class MainTurret : MainTurret
@@ -2809,8 +2822,12 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
+		editorSubcategory = "EdSubcat_332nd_IFV";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+
+		armor = 150;
+		armorStructural = 2;
+
 		class Turrets : Turrets
 		 {
 		   class MainTurret : MainTurret

@@ -923,7 +923,7 @@ class CfgAmmo
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "16 + 64 + 128 + 512";
 		model = "swlw_main\Effects\laser_red.p3d";
-		tracerscale = 2;
+		tracerscale = 4;
 
 		cost = 5;
 		caliber = 28;

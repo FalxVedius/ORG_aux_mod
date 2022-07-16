@@ -31,7 +31,7 @@ class CfgAmmo
 
 		cost = 50;
 		caliber = 34;
-		hit = 400;
+		hit = 200;
 		indirectHit = 30;
 		indirectHitRange = 8;
 	};
@@ -255,7 +255,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,ADSD): 3AS_Advanced_DSD
     {
-        displayName = "ADSD *WiP*";
+        displayName = "ADSD *Test*";
         scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332ndCIS";

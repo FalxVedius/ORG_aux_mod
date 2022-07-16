@@ -86,30 +86,6 @@ class cfgWeapons
                 opticsFlare="true";
                 cameraDir="";
             };
-            class scope: sight
-            {
-                opticsID=1;
-                useModelOptics=1;
-                opticsPPEffects[]=
-                {
-                    "OpticsCHAbera2",
-                    "OpticsBlur3"
-                };
-                opticsZoomMin=0.0300;
-                opticsZoomMax=0.125;
-                opticsZoomInit=0.125;
-                memoryPointCamera="optic_view";
-                opticsFlare=1;
-                opticsDisablePeripherialVision=1;
-                visionMode[] = {"Normal", "NVG"};
-                discretefov[] = {0.125,0.0625};
-                discreteInitIndex = 0;
-                discreteDistanceInitIndex = 0;
-                discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000};
-                distanceZoomMin=100;
-                distanceZoomMax=1000;
-                modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-            };
         };
 		
 		magazines[]=

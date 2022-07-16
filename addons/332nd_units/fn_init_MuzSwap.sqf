@@ -5,15 +5,15 @@ switch (true) do {
 	_Mag = _newMagazine select 0;
 	
 	
-	case (_Mag == "332nd_aux_magazine_DC_17m_rifle_x60"): 
+	case (_Mag == "332nd_aux_magazine_DC_17m_rifle_x42"): 
 	{ 
 		_unit addPrimaryWeaponItem "332nd_DC_17m_Rifle_Muz";
 	};
-	case (_Mag == "332nd_aux_magazine_DC_17m_marks_x5"): 
+	case (_Mag == "332nd_aux_magazine_DC_17m_marks_x10"): 
 	{ 
 		_unit addPrimaryWeaponItem "332nd_DC_17m_Marks_Muz";
 	};
-	case (_Mag == "332nd_aux_magazine_DC_17m_grend_x4"): 
+	case (_Mag == "332nd_aux_magazine_DC_17m_grend_x1"): 
 	{ 
 		_unit addPrimaryWeaponItem "332nd_DC_17m_Grend_Muz";
 	};

@@ -319,6 +319,7 @@ class CfgMagazines
 		count=2;
 		model = "\MRC\JLTS\weapons\PLX1\PLX1_mag.p3d";
 		mass=124;
+		displayNameShort="AT";
 	};
 	
 	class MACRO_NEW_MAG(PLX1_HEMag,2): SWLW_plx1_ap_mag
@@ -329,6 +330,7 @@ class CfgMagazines
 		mass=124;
 		count=1;
 		displayName=MACRO_AMMO_DISPLAYNAME(PLX1-HE,1)
+		displayNameShort="HE";
 	};
 	
 	class MACRO_NEW_MAG(PLX1_AAMag,2): SWLW_plx1_at_mag
@@ -338,6 +340,7 @@ class CfgMagazines
 		count=2;
 		model = "\MRC\JLTS\weapons\PLX1\PLX1_mag.p3d";
 		mass=62;
+		displayNameShort="AA";
 	};
 	
 	class MACRO_NEW_MAG(RPS6_ATMag,1): SWLW_plx1_at_mag
@@ -348,6 +351,7 @@ class CfgMagazines
 		count=1;
 		initSpeed=60;
 		mass=62;
+		displayNameShort="AT";
 	};
 	
 	class MACRO_NEW_MAG(RPS6_AAMag,1): MACRO_NEW_MAG(RPS6_ATMag,1)
@@ -355,6 +359,7 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(RPS6_AARocket);
 		displayName=MACRO_AMMO_DISPLAYNAME(RPS6-AA,1)
 		mass=31;
+		displayNameShort="AA";
 	};
 	
 	class MACRO_NEW_MAG(RPS1_ATMag,1): SWLW_plx1_at_mag
@@ -365,6 +370,7 @@ class CfgMagazines
 		count=1;
 		initSpeed=60;
 		mass=0;
+		displayNameShort="AT";
 	};
 	
 	class MACRO_NEW_MAG(RPS4_AT,1): MRAWS_HEAT_F
@@ -373,6 +379,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(RPS4-AT,1)
 		scope=2;
         mass=31;
+		displayNameShort="AT";
 	};
 	
 	class MACRO_NEW_MAG(RPS4_HE,1): MRAWS_HE_F
@@ -381,6 +388,7 @@ class CfgMagazines
 		displayName=MACRO_AMMO_DISPLAYNAME(RPS4-HE,1)
 		scope=2;
 		mass=31;
+		displayNameShort="HE";
 	};
 }
 	
