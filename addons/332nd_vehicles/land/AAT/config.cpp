@@ -941,58 +941,6 @@ class CfgVehicles
 
 		class TextureSources
 		{
-			class Tan
-			{
-				displayName = "Trade Federation";
-				author = MACRO_AUTHOR;
-				textures[] =
-				{
-					"3AS\3AS_AAT\data\Tan_AAT_CO.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-			class CIS
-			{
-				displayName = "CIS";
-				author = MACRO_AUTHOR;
-				textures[] =
-				{
-					"3AS\3AS_AAT\data\CIS_AAT_CO.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-			class Green
-			{
-				displayName="Green";
-				author = MACRO_AUTHOR;
-				textures[]=
-				{
-					"3AS\3AS_AAT\data\Green_AAT_CO.paa"
-				};
-				factions[]=
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-			class Red
-			{
-				displayName="Red";
-				author = MACRO_AUTHOR;
-				textures[]=
-				{
-					"3AS\3AS_AAT\data\Red_AAT_CO.paa"
-				};
-				factions[]=
-				{
-					"EdCat_332ndCIS"
-				};
-			};
 			class Desert
 			{
 				displayName="Desert";
@@ -1737,58 +1685,6 @@ class CfgVehicles
 
 		class TextureSources
 		{
-			class Tan
-			{
-				displayName = "Trade Federation";
-				author = MACRO_AUTHOR;
-				textures[] =
-				{
-					"3AS\3AS_AAT\data\Tan_AAT_CO.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-			class CIS
-			{
-				displayName = "CIS";
-				author = MACRO_AUTHOR;
-				textures[] =
-				{
-					"3AS\3AS_AAT\data\CIS_AAT_CO.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-			class Green
-			{
-				displayName="Green";
-				author = MACRO_AUTHOR;
-				textures[]=
-				{
-					"3AS\3AS_AAT\data\Green_AAT_CO.paa"
-				};
-				factions[]=
-				{
-					"EdCat_332ndCIS"
-				};
-			};
-			class Red
-			{
-				displayName="Red";
-				author = MACRO_AUTHOR;
-				textures[]=
-				{
-					"3AS\3AS_AAT\data\Red_AAT_CO.paa"
-				};
-				factions[]=
-				{
-					"EdCat_332ndCIS"
-				};
-			};
 			class Desert
 			{
 				displayName="Desert";
