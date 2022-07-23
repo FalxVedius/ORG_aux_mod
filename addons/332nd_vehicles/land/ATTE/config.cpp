@@ -94,7 +94,7 @@ class CfgVehicles
 		crewCrashProtection = 0.01;
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
-		armor = 5000;
+		armor = 5250;
 		soundEngineOnInt[]=
 		{
 			"",
@@ -133,7 +133,7 @@ class CfgVehicles
 		};
 
 		//enginePower = 20000;
-		maxSpeed = 15;
+		maxSpeed = 25;
 		waterSpeedFactor=1;
 		thrustDelay=0.1;
 		//switchTime = 0.1;

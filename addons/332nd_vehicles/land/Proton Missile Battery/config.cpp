@@ -79,7 +79,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,PMB) : OPTRE_lance
     {
-        displayName = "Proton Missile Battery *Test*";
+        displayName = "Proton Missile Battery";
         scope = 2;
 		scopeCurator = 2;
 		side = 0;

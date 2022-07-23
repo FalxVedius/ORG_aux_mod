@@ -927,7 +927,7 @@ class CfgAmmo
 
 		cost = 5;
 		caliber = 28;
-		hit = 480;
+		hit = 50;
 		indirectHit = 80;
 		indirectHitRange = 2;
 	};

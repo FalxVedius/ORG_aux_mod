@@ -221,26 +221,59 @@ class CfgVehicles
 					  class pylons1 : pylons1
 					  {
 						  attachment = "3AS_PylonRack_Vulture_1Rnd_Missile_AA";
+						  hardpoints[] = { "3AS_CIS_Vulture_AA","3AS_CIS_Vulture_HEAP" };
+						  maxweight = 300;
+						  name = "3AS_Vulture_MFD";
+						  priority = 13;
+						  UIposition[] = { 0.6,0.45 };
 					  };
 					  class pylons2 : pylons2
 					  {
 						  attachment = "3AS_PylonRack_Vulture_1Rnd_Missile_AA";
+						  hardpoints[] = { "3AS_CIS_Vulture_AA","3AS_CIS_Vulture_HEAP" };
+						  maxweight = 300;
+						  mirroredMissilePos = 1;
+						  name = "3AS_Vulture_MFD";
+						  priority = 13;
+						  UIposition[] = { 0.05,0.45 };
 					  };
 					  class pylons3 : pylons3
 					  {
 						  attachment = "3AS_PylonRack_Vulture_1Rnd_Missile_AA";
+						  hardpoints[] = { "3AS_CIS_Vulture_AA","3AS_CIS_Vulture_HEAP" };
+						  maxweight = 1050;
+						  name = "3AS_Vulture_MFD";
+						  priority = 11;
+						  UIposition[] = { 0.55,0.35 };
 					  };
 					  class pylons4 : pylons4
 					  {
 						  attachment = "3AS_PylonRack_Vulture_1Rnd_Missile_AA";
+						  hardpoints[] = { "3AS_CIS_Vulture_AA","3AS_CIS_Vulture_HEAP" };
+						  maxweight = 1050;
+						  mirroredMissilePos = 3;
+						  name = "3AS_Vulture_MFD";
+						  priority = 11;
+						  UIposition[] = { 0.1,0.35 };
 					  };
 					  class pylons5 : pylons5
 					  {
 						  attachment = "3AS_PylonRack_Vulture_1Rnd_Missile_AA";
+						  hardpoints[] = { "3AS_CIS_Vulture_AA","3AS_CIS_Vulture_HEAP" };
+						  maxweight = 1200;
+						  name = "3AS_Vulture_MFD";
+						  priority = 9;
+						  UIposition[] = { 0.5,0.25 };
 					  };
 					  class pylons6 : pylons6
 					  {
 						  attachment = "3AS_PylonRack_Vulture_1Rnd_Missile_AA";
+						  hardpoints[] = { "3AS_CIS_Vulture_AA","3AS_CIS_Vulture_HEAP" };
+						  maxweight = 1200;
+						  mirroredMissilePos = 5;
+						  name = "3AS_Vulture_MFD";
+						  priority = 9;
+						  UIposition[] = { 0.15,0.25 };
 					  };
 				  };
 				  class Presets
@@ -413,19 +446,41 @@ class CfgVehicles
 				  {
 					  class pylons1 : pylons1
 					  {
-						  attachment = "3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP";
+						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
+						  maxweight = 300;
+						  name = "3AS_Vulture_MFD";
+						  priority = 13;
+						  UIposition[] = { 0.6,0.45 };
 					  };
 					  class pylons2 : pylons2
 					  {
-						  attachment = "3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP";
+						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
+						  maxweight = 300;
+						  mirroredMissilePos = 1;
+						  name = "3AS_Vulture_MFD";
+						  priority = 13;
+						  UIposition[] = { 0.05,0.45 };
 					  };
 					  class pylons3 : pylons3
 					  {
-						  attachment = "3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP";
+						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
+						  maxweight = 1050;
+						  name = "3AS_Vulture_MFD";
+						  priority = 11;
+						  UIposition[] = { 0.55,0.35 };
 					  };
 					  class pylons4 : pylons4
 					  {
-						  attachment = "3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP";
+						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
+						  maxweight = 1050;
+						  mirroredMissilePos = 3;
+						  name = "3AS_Vulture_MFD";
+						  priority = 11;
+						  UIposition[] = { 0.1,0.35 };
 					  };
 				  };
 				  class Presets
@@ -441,8 +496,7 @@ class CfgVehicles
 						  attachment[] =
 						  {
 							  "3as_PylonRack_Vulture_7Rnd_Missle_AGM",
-							  "3as_PylonRack_Vulture_7Rnd_Missle_AGM",
-							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells"
+							  "3as_PylonRack_Vulture_7Rnd_Missle_AGM"
 						  };
 					  };
 				  };
@@ -595,8 +649,6 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "3AS_CIS_Vulture_AA",
-							  "3AS_CIS_Vulture_HEAP"
 						  };
 						  attachment = "";
 						  priority = 13;
@@ -613,8 +665,6 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "3AS_CIS_Vulture_AA",
-							  "3AS_CIS_Vulture_HEAP"
 						  };
 						  attachment = "";
 						  priority = 11;
@@ -631,8 +681,7 @@ class CfgVehicles
 					  {
 						  hardpoints[] =
 						  {
-							  "3AS_CIS_Vulture_AA",
-							  "3AS_CIS_Vulture_HEAP"
+
 						  };
 						  attachment = "";
 						  priority = 9;
@@ -656,10 +705,7 @@ class CfgVehicles
 					  class Default
 					  {
 						  displayName = "Default";
-						  attachment[] =
-						  {
-							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells"
-						  };
+						  attachment[] = {};
 					  };
 				  };
 			  };
