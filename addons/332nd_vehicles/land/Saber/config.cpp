@@ -435,8 +435,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 200;
-		armorStructural = 5;
+		armor = 500;
+		armorStructural = 6;
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -552,8 +552,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 200;
-		armorStructural = 5;
+		armor = 500;
+		armorStructural = 6;
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -663,8 +663,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 200;
-		armorStructural = 5;
+		armor = 500;
+		armorStructural = 6;
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -748,8 +748,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
-		armor = 200;
-		armorStructural = 5;
+		armor = 500;
+		armorStructural = 6;
 
 		hiddenSelectionsTextures[] =
 		{
