@@ -74,7 +74,7 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(Land,CIS,CLB): OPTRE_Scythe
     {
-        displayName = "Chain Laser Battery *Test*";
+        displayName = "Chain Laser Battery";
         scope = 2;
 		scopeCurator = 2;
 		side = 0;
