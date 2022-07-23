@@ -28,7 +28,7 @@ class CfgAmmo
 		caliber=40;
 		model = "ls_weapons_core\effects\laser_blue.p3d";
 		effectfly = "SWLW_plasma_green";
-		hit=2400;
+		hit=3400;
 		explosionEffects = "ATRocketExplosion";
 		tracerScale = 5;
 		indirectHit = 35;
@@ -241,7 +241,7 @@ class CfgAmmo
 	manualcontrol=1;
 	caliber=5;
 	effectsMissile = "332nd_aux_effects_missile_plx_blue";
-	hit=1250;
+	hit=2000;
 	thrusttime = 12;
 	indirectHit = 35;
 	indirectHitRange = 3;

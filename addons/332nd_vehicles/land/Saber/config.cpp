@@ -489,6 +489,14 @@ class CfgVehicles
 					MACRO_NEW_MAG(Heavy_HMG,150),
 					MACRO_NEW_MAG(Heavy_HMG,150),
 					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
+					MACRO_NEW_MAG(Heavy_HMG,150),
 					MACRO_NEW_MAG(Heavy_HMG,150)
 				};
 			};
@@ -598,6 +606,7 @@ class CfgVehicles
 				};
 				magazines[] =
 				{
+					MACRO_NEW_MAG(LaserBeamFull,2000),
 					MACRO_NEW_MAG(LaserBeamFull,2000)
 				};
 
