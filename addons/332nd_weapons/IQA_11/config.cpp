@@ -34,6 +34,36 @@ class CfgAmmo
 		 hit = 45;
 		 coefGravity = 1;
 		 caliber = 2;
+		  soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+		 class HitEffects
+		{
+			Hit_Foliage_green = "3AS_ImpactPlasma";
+			Hit_Foliage_Dead = "3AS_ImpactPlasma";
+			Hit_Foliage_Green_big = "3AS_ImpactPlasma";
+			Hit_Foliage_Palm = "3AS_ImpactPlasma";
+			Hit_Foliage_Pine = "3AS_ImpactPlasma";
+			hitFoliage = "3AS_ImpactPlasma";
+			hitGlass = "3AS_ImpactPlasma";
+			hitGlassArmored = "3AS_ImpactPlasma";
+			hitWood = "3AS_ImpactPlasma";
+			hitMetal = "3AS_ImpactPlasma";
+			hitMetalPlate = "3AS_ImpactPlasma";
+			hitBuilding = "3AS_ImpactPlasma";
+			hitPlastic = "3AS_ImpactPlasma";
+			hitRubber = "3AS_ImpactPlasma";
+			hitTyre = "3AS_ImpactPlasma";
+			hitConcrete = "3AS_ImpactPlasma";
+			hitMan = "3AS_ImpactPlasma";
+			hitGroundSoft = "3AS_ImpactPlasma";
+			hitGroundRed = "3AS_ImpactPlasma";
+			hitGroundHard = "3AS_ImpactPlasma";
+			hitWater = "3AS_ImpactPlasma";
+			hitVirtual = "3AS_ImpactPlasma";
+			default_mat = "3AS_ImpactPlasma";
+		};
 		 airFriction = -0.00000841;
 	};
 	class MACRO_NEW_AMMO(Refined_high_T): ls_ammo_127x108_blue
@@ -42,6 +72,36 @@ class CfgAmmo
          soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
 		 ACE_bulletMass = 2;
 		 coefGravity = 1;
+		  soundsetsoniccrack[]=
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+		 class HitEffects
+		{
+			Hit_Foliage_green = "3AS_ImpactPlasma";
+			Hit_Foliage_Dead = "3AS_ImpactPlasma";
+			Hit_Foliage_Green_big = "3AS_ImpactPlasma";
+			Hit_Foliage_Palm = "3AS_ImpactPlasma";
+			Hit_Foliage_Pine = "3AS_ImpactPlasma";
+			hitFoliage = "3AS_ImpactPlasma";
+			hitGlass = "3AS_ImpactPlasma";
+			hitGlassArmored = "3AS_ImpactPlasma";
+			hitWood = "3AS_ImpactPlasma";
+			hitMetal = "3AS_ImpactPlasma";
+			hitMetalPlate = "3AS_ImpactPlasma";
+			hitBuilding = "3AS_ImpactPlasma";
+			hitPlastic = "3AS_ImpactPlasma";
+			hitRubber = "3AS_ImpactPlasma";
+			hitTyre = "3AS_ImpactPlasma";
+			hitConcrete = "3AS_ImpactPlasma";
+			hitMan = "3AS_ImpactPlasma";
+			hitGroundSoft = "3AS_ImpactPlasma";
+			hitGroundRed = "3AS_ImpactPlasma";
+			hitGroundHard = "3AS_ImpactPlasma";
+			hitWater = "3AS_ImpactPlasma";
+			hitVirtual = "3AS_ImpactPlasma";
+			default_mat = "3AS_ImpactPlasma";
+		};
 		 hit = 45;
 		 caliber = 2;
 		 airFriction = -0.00000841;

@@ -232,6 +232,15 @@ class CfgAmmo
 	  flaresize=5;
 	  //effectsSmoke = "332nd_aux_effects_CMFlare";
     };
+
+	class 3AS_Vulture_Rocket_HEAP;
+	class MACRO_NEW_AMMO(Vulture_Rocket) : 3AS_Vulture_Rocket_HEAP
+	{
+		cost = 50;
+		hit = 15;
+		indirectHit = 5;
+		indirectHitRange = 10;
+	};
 };
 	
 
@@ -371,7 +380,7 @@ class CfgMagazines
 	class Bomb_04_Plane_CAS_01_F;
 	class MACRO_NEW_MAG(Ywing_Plasma,20): Bomb_04_Plane_CAS_01_F
 	{
-		displayName=MACRO_AMMO_DISPLAYNAME(Plasma Bomb);
+		displayName=MACRO_AMMO_DISPLAYNAME(Plasma Bomb)
 		ammo=MACRO_NEW_AMMO(Plasma_Bomb)
 		descriptionshort="Plasma Bomb";
 		displayNameShort="Plasma Bomb";
@@ -381,9 +390,22 @@ class CfgMagazines
 	class 120Rnd_CMFlare_Chaff_Magazine;
 	class MACRO_NEW_MAG(332_CM_Flare,120): 120Rnd_CMFlare_Chaff_Magazine
 	{
-		ammo=MACRO_NEW_AMMO(CM_FLARE);
+		ammo=MACRO_NEW_AMMO(CM_FLARE)
 		scope=1;
 		count=120;
+	};
+
+	class 3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP;
+	class MACRO_NEW_MAG(Vulture_Rocket_Pylon,12) : 3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP
+	{
+		ammo = MACRO_NEW_AMMO(Vulture_Rocket)
+		scope = 1;
+		pylonWeapon = "332nd_aux_weapon_Vulture_Rocket";
+	};
+	class MACRO_NEW_MAG(Vulture_Rocket,12) : 3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP
+	{
+		ammo = MACRO_NEW_AMMO(Vulture_Rocket)
+		scope = 1;
 	};
 };
 
@@ -1336,6 +1358,18 @@ class CfgWeapons
 					1
 				};
 			};
+		};
+	};
+
+	class 3AS_Vulture_Rocket_HEAP_F;
+
+	class MACRO_NEW_WEAPON(Vulture_Rocket) : 3AS_Vulture_Rocket_HEAP_F
+	{
+		magazineWell[] = {};
+		magazines[] = 
+		{
+			MACRO_NEW_MAG(Vulture_Rocket,12),
+			MACRO_NEW_MAG(Vulture_Rocket_Pylon,12)
 		};
 	};
 };

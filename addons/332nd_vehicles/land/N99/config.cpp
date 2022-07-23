@@ -29,7 +29,7 @@ class CfgAmmo
 
 		cost = 5;
 		caliber = 22;
-		hit = 380;
+		hit = 350;
 		indirectHit = 60;
 		indirectHitRange = 4;
 	};
@@ -64,7 +64,7 @@ class CfgWeapons
 		};
 		class manual : manual
 		{
-			reloadTime = 1.2;
+			reloadTime = 3;
 			autoFire = 1;
 
 			sounds[] =
@@ -93,7 +93,7 @@ class CfgWeapons
 			showToPlayer = 0;
 			burst = 4;
 			burstRangeMax = 16;
-			aiRateOfFire = 1.2;
+			aiRateOfFire = 3;
 			aiRateOfFireDispersion = 1.25;
 			aiRateOfFireDistance = 50;
 			minRange = 0;
@@ -139,7 +139,7 @@ class CfgWeapons
 			showToPlayer = 0;
 			burst = 3;
 			burstRangeMax = 8;
-			aiRateOfFire = 1.2;
+			aiRateOfFire = 3;
 			aiRateOfFireDispersion = 4;
 			aiRateOfFireDistance = 600;
 			minRange = 600;

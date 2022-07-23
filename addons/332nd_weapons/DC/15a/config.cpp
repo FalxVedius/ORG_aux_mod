@@ -439,6 +439,32 @@ class CfgAmmo
 	class ls_ammo_762_blue;
 	class  MACRO_NEW_AMMO(762_blue): ls_ammo_762_blue
 	{
+		class HitEffects
+		{
+			Hit_Foliage_green = "3AS_ImpactPlasma";
+			Hit_Foliage_Dead = "3AS_ImpactPlasma";
+			Hit_Foliage_Green_big = "3AS_ImpactPlasma";
+			Hit_Foliage_Palm = "3AS_ImpactPlasma";
+			Hit_Foliage_Pine = "3AS_ImpactPlasma";
+			hitFoliage = "3AS_ImpactPlasma";
+			hitGlass = "3AS_ImpactPlasma";
+			hitGlassArmored = "3AS_ImpactPlasma";
+			hitWood = "3AS_ImpactPlasma";
+			hitMetal = "3AS_ImpactPlasma";
+			hitMetalPlate = "3AS_ImpactPlasma";
+			hitBuilding = "3AS_ImpactPlasma";
+			hitPlastic = "3AS_ImpactPlasma";
+			hitRubber = "3AS_ImpactPlasma";
+			hitTyre = "3AS_ImpactPlasma";
+			hitConcrete = "3AS_ImpactPlasma";
+			hitMan = "3AS_ImpactPlasma";
+			hitGroundSoft = "3AS_ImpactPlasma";
+			hitGroundRed = "3AS_ImpactPlasma";
+			hitGroundHard = "3AS_ImpactPlasma";
+			hitWater = "3AS_ImpactPlasma";
+			hitVirtual = "3AS_ImpactPlasma";
+			default_mat = "3AS_ImpactPlasma";
+		};
 		soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"
@@ -448,7 +474,32 @@ class CfgAmmo
 	class ls_ammo_65_blue;
 	class  MACRO_NEW_AMMO(65_Blue): ls_ammo_65_blue
 	{
-		
+		class HitEffects
+		{
+			Hit_Foliage_green = "3AS_ImpactPlasma";
+			Hit_Foliage_Dead = "3AS_ImpactPlasma";
+			Hit_Foliage_Green_big = "3AS_ImpactPlasma";
+			Hit_Foliage_Palm = "3AS_ImpactPlasma";
+			Hit_Foliage_Pine = "3AS_ImpactPlasma";
+			hitFoliage = "3AS_ImpactPlasma";
+			hitGlass = "3AS_ImpactPlasma";
+			hitGlassArmored = "3AS_ImpactPlasma";
+			hitWood = "3AS_ImpactPlasma";
+			hitMetal = "3AS_ImpactPlasma";
+			hitMetalPlate = "3AS_ImpactPlasma";
+			hitBuilding = "3AS_ImpactPlasma";
+			hitPlastic = "3AS_ImpactPlasma";
+			hitRubber = "3AS_ImpactPlasma";
+			hitTyre = "3AS_ImpactPlasma";
+			hitConcrete = "3AS_ImpactPlasma";
+			hitMan = "3AS_ImpactPlasma";
+			hitGroundSoft = "3AS_ImpactPlasma";
+			hitGroundRed = "3AS_ImpactPlasma";
+			hitGroundHard = "3AS_ImpactPlasma";
+			hitWater = "3AS_ImpactPlasma";
+			hitVirtual = "3AS_ImpactPlasma";
+			default_mat = "3AS_ImpactPlasma";
+		};
 		soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"
@@ -463,12 +514,64 @@ class CfgAmmo
 		{
 			"332nd_blaster_flyby_soundset"
 		};
+		class HitEffects
+		{
+			Hit_Foliage_green = "3AS_ImpactPlasma";
+			Hit_Foliage_Dead = "3AS_ImpactPlasma";
+			Hit_Foliage_Green_big = "3AS_ImpactPlasma";
+			Hit_Foliage_Palm = "3AS_ImpactPlasma";
+			Hit_Foliage_Pine = "3AS_ImpactPlasma";
+			hitFoliage = "3AS_ImpactPlasma";
+			hitGlass = "3AS_ImpactPlasma";
+			hitGlassArmored = "3AS_ImpactPlasma";
+			hitWood = "3AS_ImpactPlasma";
+			hitMetal = "3AS_ImpactPlasma";
+			hitMetalPlate = "3AS_ImpactPlasma";
+			hitBuilding = "3AS_ImpactPlasma";
+			hitPlastic = "3AS_ImpactPlasma";
+			hitRubber = "3AS_ImpactPlasma";
+			hitTyre = "3AS_ImpactPlasma";
+			hitConcrete = "3AS_ImpactPlasma";
+			hitMan = "3AS_ImpactPlasma";
+			hitGroundSoft = "3AS_ImpactPlasma";
+			hitGroundRed = "3AS_ImpactPlasma";
+			hitGroundHard = "3AS_ImpactPlasma";
+			hitWater = "3AS_ImpactPlasma";
+			hitVirtual = "3AS_ImpactPlasma";
+			default_mat = "3AS_ImpactPlasma";
+		};
 	};
 	class MACRO_NEW_AMMO(127x108_Blue): ls_ammo_127x108_blue
 	{
 		 soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"
+		};
+		class HitEffects
+		{
+			Hit_Foliage_green = "3AS_ImpactPlasma";
+			Hit_Foliage_Dead = "3AS_ImpactPlasma";
+			Hit_Foliage_Green_big = "3AS_ImpactPlasma";
+			Hit_Foliage_Palm = "3AS_ImpactPlasma";
+			Hit_Foliage_Pine = "3AS_ImpactPlasma";
+			hitFoliage = "3AS_ImpactPlasma";
+			hitGlass = "3AS_ImpactPlasma";
+			hitGlassArmored = "3AS_ImpactPlasma";
+			hitWood = "3AS_ImpactPlasma";
+			hitMetal = "3AS_ImpactPlasma";
+			hitMetalPlate = "3AS_ImpactPlasma";
+			hitBuilding = "3AS_ImpactPlasma";
+			hitPlastic = "3AS_ImpactPlasma";
+			hitRubber = "3AS_ImpactPlasma";
+			hitTyre = "3AS_ImpactPlasma";
+			hitConcrete = "3AS_ImpactPlasma";
+			hitMan = "3AS_ImpactPlasma";
+			hitGroundSoft = "3AS_ImpactPlasma";
+			hitGroundRed = "3AS_ImpactPlasma";
+			hitGroundHard = "3AS_ImpactPlasma";
+			hitWater = "3AS_ImpactPlasma";
+			hitVirtual = "3AS_ImpactPlasma";
+			default_mat = "3AS_ImpactPlasma";
 		};
 	};
 

@@ -39,7 +39,6 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Grass),
 			MACRO_NEW_HELMET(infantry,Dakka),
 			MACRO_NEW_HELMET(infantry,King),
-			MACRO_NEW_HELMET(infantry,Spacy),
 			MACRO_NEW_HELMET(infantry,Church),
 			MACRO_NEW_HELMET(infantry,Tidal),
 			MACRO_NEW_HELMET(infantry,Deva),
@@ -107,7 +106,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Grass,Grass,Grass.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Dakka,Dakka,Dakka.paa)
 	MACRO_NEW_INF_HELMET_ITEM(King,King,King.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Spacy,Spacy,Spacy.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Church,Church,Church.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Tidal,Tidal,Tidal.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deva,Deva,Deva.paa)
@@ -120,7 +118,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bob,Bob,Bob.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Ukrainian,Ukrainian,Ukrainian.paa)
-	//MACRO_NEW_INF_HELMET_ITEM(Griif,Griif,Griif.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Noodles,Noodles,Noodles.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Caboose,Caboose,Caboose.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Inverse,Inverse,Inverse.paa)

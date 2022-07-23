@@ -4397,19 +4397,19 @@ class CfgVehicles
 
 			class DC17M_Rifle_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_17m_rifle_x60";
+				magazine = "332nd_aux_magazine_DC_17m_rifle_x42";
 				count = 300;
 			};
 
 			class DC17M_Marks_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_17m_marks_x5";
+				magazine = "332nd_aux_magazine_DC_17m_marks_x10";
 				count = 300;
 			};
 
 			class DC17M_Grend_332nd
 			{
-				magazine = "332nd_aux_magazine_DC_17m_grend_x4";
+				magazine = "332nd_aux_magazine_DC_17m_grend_x1";
 				count = 50;
 			};
 
