@@ -34,26 +34,23 @@ class CfgVehicles
 			{
 				class Turrets
 				{
-					class CommanderOptics;
+
 				};
 			};
-		};
-		class ViewPilot;
-		class ViewOptics;
-		class ViewGunner;
-		class ViewCargo;
-		class HitPoints : HitPoints
-		{
-			class HitHull;
-			class HitEngine;
-			class HitLTrack;
-			class HitRTrack;
-			class HitFuel;
-		};
-		class Sounds : Sounds
-		{
-			class Engine;
-			class Movement;
+            class MainTurretTop : MainTurret1
+			{
+                class Turrets
+				{
+
+				};
+			};
+			class MainTurretbottom : MainTurretTop
+			{
+            class Turrets
+				{
+
+				};
+			};
 		};
 	};
 
@@ -69,7 +66,7 @@ class CfgVehicles
 			{
 
 			};
-			class MainTurret_bottom : MainTurretTop
+			class MainTurretbottom : MainTurretTop
 			{
 
 			};
@@ -88,7 +85,7 @@ class CfgVehicles
 			{
 
 			};
-			class MainTurret_bottom : MainTurretTop
+			class MainTurretbottom : MainTurretTop
 			{
 
 			};
@@ -107,7 +104,7 @@ class CfgVehicles
 			{
 
 			};
-			class MainTurret_bottom : MainTurretTop
+			class MainTurretbottom : MainTurretTop
 			{
 
 			};
@@ -159,7 +156,7 @@ class CfgVehicles
                   MACRO_NEW_MAG(SmokeLauncherMag,10)
 				};
 			};
-			class MainTurret_bottom : MainTurretTop
+			class MainTurretbottom : MainTurretTop
 			{
                 weapons[] =
 				{
@@ -172,30 +169,6 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_PD_Ammo,10),
                   MACRO_NEW_MAG(ATAP_PD_Ammo,10)
 				};
-			};
-		};
-
-		class Hitpoints : Hitpoints
-		{
-			class HitEngine : HitEngine
-			{
-
-			};
-			class HitFuel : HitFuel
-			{
-
-			};
-			class HitHull : HitHull
-			{
-
-			};
-			class HitLTrack : HitLTrack
-			{
-
-			};
-			class HitRTrack : HitRTrack
-			{
-
 			};
 		};
 	};
