@@ -338,7 +338,7 @@ class CfgWeapons
     };	
     
     class 3AS_Sabre_Cannons_Super;
-	class 3AS_ATAP_AT_Turret" : 3AS_Sabre_Cannons_Super;
+	class 3AS_ATAP_AT_Turret : 3AS_Sabre_Cannons_Super;
     class MACRO_NEW_WEAPON(ATAP_AT) : 3AS_ATAP_AT_Turret
 	{
 		magazineWell[] = {};
