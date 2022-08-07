@@ -30,14 +30,14 @@ class CfgVehicles
 	{
 		class Turrets
 		{
-			class MainTurret : NewTurret
+			class MainTurret1 : NewTurret
 			{
 				class Turrets
 				{
 
 				};
 			};
-            class MainTurretTop : MainTurret
+            class MainTurretTop : MainTurret1
 			{
                 class Turrets
 				{
@@ -58,11 +58,11 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret: NewTurret
+			class MainTurret1: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret
+			class MainTurretTop : MainTurret1
 			{
 
 			};
@@ -77,11 +77,11 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret: NewTurret
+			class MainTurret1: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret
+			class MainTurretTop : MainTurret1
 			{
 
 			};
@@ -96,11 +96,11 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret: NewTurret
+			class MainTurret1: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret
+			class MainTurretTop : MainTurret1
 			{
 
 			};
@@ -111,7 +111,26 @@ class CfgVehicles
 		};
 	};
 	
-	class MACRO_NEW_VEHICLE(Land,TX,ATAP): 3as_ATAP_base
+	class 3as_ATAP : 3as_ATAP_base 
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret1: NewTurret
+			{
+
+			};
+			class MainTurretTop : MainTurret1
+			{
+
+			};
+			class MainTurretbottom : MainTurretTop
+			{
+
+			};
+		};
+	};
+
+	class MACRO_NEW_VEHICLE(Land,TX,ATAP): 3as_ATAP
 	{
 	    displayName = "AT-AP *WIP*";
 	    scope = 2;
@@ -127,7 +146,7 @@ class CfgVehicles
 
         class Turrets : Turrets
 		{
-			class MainTurret: NewTurret
+			class MainTurret1: NewTurret
 			{
                 weapons[] =
 				{
@@ -141,7 +160,7 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_HE_Mortar,10)
 				};
 			};
-			class MainTurretTop : MainTurret
+			class MainTurretTop : MainTurret1
 			{
                 weapons[] =
 				{
