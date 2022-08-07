@@ -167,10 +167,6 @@ class CfgVehicles
 				{
 				  MACRO_NEW_WEAPON(ATAP_Top_Cannon)
 				};
-
-["3AS_ATAP_AT_Turret","SmokeLauncher"]
-["3AS_15rnd_ATAP_AT_Mag","SmokeLauncherMag"]
-
 			};
 			class MainTurret_bottom : MainTurretTop
 			{
