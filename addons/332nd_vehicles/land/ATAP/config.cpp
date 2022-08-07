@@ -30,14 +30,14 @@ class CfgVehicles
 	{
 		class Turrets
 		{
-			class MainTurret1 : NewTurret
+			class MainTurret : NewTurret
 			{
 				class Turrets
 				{
 
 				};
 			};
-            class MainTurretTop : MainTurret1
+            class MainTurretTop : MainTurret
 			{
                 class Turrets
 				{
@@ -58,11 +58,11 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
+			class MainTurret: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret1
+			class MainTurretTop : MainTurret
 			{
 
 			};
@@ -77,11 +77,11 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
+			class MainTurret: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret1
+			class MainTurretTop : MainTurret
 			{
 
 			};
@@ -96,11 +96,11 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
+			class MainTurret: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret1
+			class MainTurretTop : MainTurret
 			{
 
 			};
@@ -127,7 +127,7 @@ class CfgVehicles
 
         class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
+			class MainTurret: NewTurret
 			{
                 weapons[] =
 				{
@@ -141,7 +141,7 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_HE_Mortar,10)
 				};
 			};
-			class MainTurretTop : MainTurret1
+			class MainTurretTop : MainTurret
 			{
                 weapons[] =
 				{
