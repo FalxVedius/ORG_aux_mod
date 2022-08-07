@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(Land,TX,130)
+            MACRO_NEW_VEHICLE(Land,TX,ATAP)
         };
 		weapons[] = {};
 	};
@@ -19,14 +19,12 @@ class CfgPatches
 
 class CfgVehicles
  {
-	class NewTurret;
 	class LandVehicle;
 	class Tank : LandVehicle
 	{
 		class NewTurret;
 		class Sounds;
 		class HitPoints;
-		class ACE_SelfActions;
 	};
 	class Tank_F : Tank
 	{
@@ -44,9 +42,6 @@ class CfgVehicles
 		class ViewOptics;
 		class ViewGunner;
 		class ViewCargo;
-		class ACE_SelfActions : ACE_SelfActions
-		{
-		};
 		class HitPoints : HitPoints
 		{
 			class HitHull;
@@ -66,19 +61,15 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret_1: NewTurret
+			class MainTurret1: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret_1
+			class MainTurretTop : MainTurret1
 			{
 
 			};
 			class MainTurret_bottom : MainTurretTop
-			{
-
-			};
-			class CargoTurret : NewTurret
 			{
 
 			};
@@ -89,19 +80,15 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret_1: NewTurret
+			class MainTurret1: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret_1
+			class MainTurretTop : MainTurret1
 			{
 
 			};
 			class MainTurret_bottom : MainTurretTop
-			{
-
-			};
-			class CargoTurret : NewTurret
 			{
 
 			};
@@ -112,19 +99,15 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret_1: NewTurret
+			class MainTurret1: NewTurret
 			{
 
 			};
-			class MainTurretTop : MainTurret_1
+			class MainTurretTop : MainTurret1
 			{
 
 			};
 			class MainTurret_bottom : MainTurretTop
-			{
-
-			};
-			class CargoTurret : NewTurret
 			{
 
 			};
@@ -147,7 +130,7 @@ class CfgVehicles
 
         class Turrets : Turrets
 		{
-			class MainTurret_1: NewTurret
+			class MainTurret1: NewTurret
 			{
                 weapons[] =
 				{
@@ -161,11 +144,19 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_HE_Mortar,10)
 				};
 			};
-			class MainTurretTop : MainTurret_1
+			class MainTurretTop : MainTurret1
 			{
                 weapons[] =
 				{
 				  MACRO_NEW_WEAPON(ATAP_Top_Cannon)
+				};
+                magazines[] =
+				{
+				  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
+                  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
+                  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
+                  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
+                  MACRO_NEW_MAG(SmokeLauncherMag,10)
 				};
 			};
 			class MainTurret_bottom : MainTurretTop
@@ -174,11 +165,13 @@ class CfgVehicles
 				{
 				  MACRO_NEW_WEAPON(ATAP_Bottom_Cannon)
 				};
-
-			};
-			class CargoTurret : NewTurret
-			{
-
+                magazines[] =
+				{
+				  MACRO_NEW_MAG(ATAP_PD_Ammo,10),
+                  MACRO_NEW_MAG(ATAP_PD_Ammo,10),
+                  MACRO_NEW_MAG(ATAP_PD_Ammo,10),
+                  MACRO_NEW_MAG(ATAP_PD_Ammo,10)
+				};
 			};
 		};
 
@@ -333,10 +326,7 @@ class CfgWeapons
 		magazineWell[] = {};
 		magazines[] = 
 		{
-			MACRO_NEW_MAG(ATAP_PD_Ammo,10),
-            MACRO_NEW_MAG(ATAP_PD_Ammo,10),
-            MACRO_NEW_MAG(ATAP_PD_Ammo,10),
-            MACRO_NEW_MAG(ATAP_PD_Ammo,10)
+			MACRO_NEW_MAG(ATAP_PD_Ammo,10)
 		};
     };	
     
@@ -351,9 +341,6 @@ class CfgWeapons
 		magazines[] = 
 		{
 			MACRO_NEW_MAG(ATAP_AT_Ammo,10),
-            MACRO_NEW_MAG(ATAP_AT_Ammo,10),
-            MACRO_NEW_MAG(ATAP_AT_Ammo,10),
-            MACRO_NEW_MAG(ATAP_AT_Ammo,10),
             MACRO_NEW_MAG(SmokeLauncherMag,10)
 		};
     };	
