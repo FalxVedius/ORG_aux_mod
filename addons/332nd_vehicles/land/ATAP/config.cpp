@@ -30,7 +30,7 @@ class CfgVehicles
 	{
 		class Turrets
 		{
-			class MainTurret : NewTurret
+			class MainTurret1 : NewTurret
 			{
 				class Turrets
 				{
