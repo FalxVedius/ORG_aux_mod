@@ -30,23 +30,9 @@ class CfgVehicles
 	{
 		class Turrets
 		{
-			class MainTurret1 : NewTurret
+			class MainTurret : NewTurret
 			{
 				class Turrets
-				{
-
-				};
-			};
-            class MainTurretTop : MainTurret1
-			{
-                class Turrets
-				{
-
-				};
-			};
-			class MainTurretbottom : MainTurretTop
-			{
-            class Turrets
 				{
 
 				};
@@ -58,15 +44,7 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
-			{
-
-			};
-			class MainTurretTop : MainTurret1
-			{
-
-			};
-			class MainTurretbottom : MainTurretTop
+			class MainTurret: MainTurret
 			{
 
 			};
@@ -77,15 +55,7 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
-			{
-
-			};
-			class MainTurretTop : MainTurret1
-			{
-
-			};
-			class MainTurretbottom : MainTurretTop
+			class MainTurret: MainTurret
 			{
 
 			};
@@ -96,7 +66,7 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
+			class MainTurret1: MainTurret
 			{
 
 			};
@@ -108,29 +78,14 @@ class CfgVehicles
 			{
 
 			};
+            class CargoTurret: NewTurret
+			{
+
+			}; 
 		};
 	};
 	
-	class 3as_ATAP : 3as_ATAP_base 
-	{
-		class Turrets : Turrets
-		{
-			class MainTurret1: NewTurret
-			{
-
-			};
-			class MainTurretTop : MainTurret1
-			{
-
-			};
-			class MainTurretbottom : MainTurretTop
-			{
-
-			};
-		};
-	};
-
-	class MACRO_NEW_VEHICLE(Land,TX,ATAP): 3as_ATAP
+	class MACRO_NEW_VEHICLE(Land,TX,ATAP): 3as_ATAP_base
 	{
 	    displayName = "AT-AP *WIP*";
 	    scope = 2;
@@ -148,6 +103,7 @@ class CfgVehicles
 		{
 			class MainTurret1: NewTurret
 			{
+                turretInfoType="RscWeaponRangeArtilleryAuto";
                 weapons[] =
 				{
 				  MACRO_NEW_WEAPON(ATAP_Mortar)
@@ -189,6 +145,10 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_PD_Ammo,10)
 				};
 			};
+            class CargoTurret: NewTurret
+			{
+
+			}; 
 		};
 	};
 };
