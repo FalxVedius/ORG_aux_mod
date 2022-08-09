@@ -101,7 +101,7 @@ class CfgVehicles
 
         class Turrets : Turrets
 		{
-			class MainTurret1: NewTurret
+			class MainTurret1: MainTurret1
 			{
                 turretInfoType="RscWeaponRangeArtilleryAuto";
                 weapons[] =
@@ -116,7 +116,7 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_HE_Mortar,10)
 				};
 			};
-			class MainTurretTop : MainTurret1
+			class MainTurretTop : MainTurretTop
 			{
                 weapons[] =
 				{
@@ -131,7 +131,7 @@ class CfgVehicles
                   MACRO_NEW_MAG(SmokeLauncherMag,10)
 				};
 			};
-			class MainTurretbottom : MainTurretTop
+			class MainTurretbottom : MainTurretbottom
 			{
                 weapons[] =
 				{
@@ -145,7 +145,7 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_PD_Ammo,10)
 				};
 			};
-            class CargoTurret: NewTurret
+            class CargoTurret: CargoTurret
 			{
 
 			}; 
