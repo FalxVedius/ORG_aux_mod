@@ -32,7 +32,7 @@ class CfgVehicles
 		{
 			class MainTurret : NewTurret
 			{
-				class Turrets: Turrets
+				class Turrets
 				{
 					class CommanderOptics: CommanderOptics
 					{
