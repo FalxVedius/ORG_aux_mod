@@ -34,9 +34,7 @@ class CfgVehicles
 			{
 				class Turrets
 				{
-					class CommanderOptics: CommanderOptics
-					{
-					};
+					class CommanderOptics;
 				};
 			};
 		};
