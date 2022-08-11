@@ -32,9 +32,11 @@ class CfgVehicles
 		{
 			class MainTurret : NewTurret
 			{
-				class Turrets
+				class Turrets: Turrets
 				{
-
+					class CommanderOptics: CommanderOptics
+					{
+					};
 				};
 			};
 		};
@@ -44,10 +46,15 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret: MainTurret
-			{
-
-			};
+            class MainTurret: MainTurret
+            {
+                class Turrets: Turrets
+                {
+                    class CommanderOptics: CommanderOptics
+                    {
+                    };
+                };
+            };
 		};
 	};
 
@@ -57,7 +64,12 @@ class CfgVehicles
 		{
 			class MainTurret: MainTurret
 			{
-
+                class Turrets: Turrets
+				{
+					class CommanderOptics: CommanderOptics
+					{
+					};
+				};
 			};
 		};
 	};
@@ -66,7 +78,7 @@ class CfgVehicles
 	{
 		class Turrets : Turrets
 		{
-			class MainTurret1: MainTurret
+			class MainTurret1: NewTurret
 			{
 
 			};
@@ -78,10 +90,6 @@ class CfgVehicles
 			{
 
 			};
-            class CargoTurret: NewTurret
-			{
-
-			}; 
 		};
 	};
 	
@@ -145,10 +153,6 @@ class CfgVehicles
                   MACRO_NEW_MAG(ATAP_PD_Ammo,10)
 				};
 			};
-            class CargoTurret: CargoTurret
-			{
-
-			}; 
 		};
 	};
 };
