@@ -126,7 +126,7 @@ class CfgVehicles
 			{
                 weapons[] =
 				{
-				  MACRO_NEW_WEAPON(ATAP_Top_Cannon)
+				  MACRO_NEW_WEAPON(ATAP_AT)
 				};
                 magazines[] =
 				{
@@ -141,7 +141,7 @@ class CfgVehicles
 			{
                 weapons[] =
 				{
-				  MACRO_NEW_WEAPON(ATAP_Bottom_Cannon)
+				  MACRO_NEW_WEAPON(ATAP_PD)
 				};
                 magazines[] =
 				{
