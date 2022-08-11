@@ -116,10 +116,10 @@ class CfgVehicles
 				};
 				magazines[] =
 				{
-				  MACRO_NEW_MAG(ATAP_HE_Mortar,10),
-                  MACRO_NEW_MAG(ATAP_HE_Mortar,10),
-                  MACRO_NEW_MAG(ATAP_HE_Mortar,10),
-                  MACRO_NEW_MAG(ATAP_HE_Mortar,10)
+				  MACRO_NEW_MAG(ATAP_HE_Mortar,15),
+                  MACRO_NEW_MAG(ATAP_HE_Mortar,15),
+                  MACRO_NEW_MAG(ATAP_HE_Mortar,15),
+                  MACRO_NEW_MAG(ATAP_HE_Mortar,15)
 				};
 			};
 			class MainTurretTop : MainTurretTop
@@ -130,10 +130,10 @@ class CfgVehicles
 				};
                 magazines[] =
 				{
-				  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
-                  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
-                  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
-                  MACRO_NEW_MAG(ATAP_AT_Ammo,10),
+				  MACRO_NEW_MAG(ATAP_AT_Ammo,15),
+                  MACRO_NEW_MAG(ATAP_AT_Ammo,15),
+                  MACRO_NEW_MAG(ATAP_AT_Ammo,15),
+                  MACRO_NEW_MAG(ATAP_AT_Ammo,15),
                   MACRO_NEW_MAG(SmokeLauncherMag,10)
 				};
 			};
@@ -145,10 +145,10 @@ class CfgVehicles
 				};
                 magazines[] =
 				{
-				  MACRO_NEW_MAG(ATAP_PD_Ammo,10),
-                  MACRO_NEW_MAG(ATAP_PD_Ammo,10),
-                  MACRO_NEW_MAG(ATAP_PD_Ammo,10),
-                  MACRO_NEW_MAG(ATAP_PD_Ammo,10)
+				  MACRO_NEW_MAG(ATAP_PD_Ammo,500),
+                  MACRO_NEW_MAG(ATAP_PD_Ammo,500),
+                  MACRO_NEW_MAG(ATAP_PD_Ammo,500),
+                  MACRO_NEW_MAG(ATAP_PD_Ammo,500)
 				};
 			};
 		};
@@ -192,7 +192,7 @@ class CfgMagazines
 {
     class 3AS_32Rnd_155mm_ATAP_Mortar_shells;
 
-    class MACRO_NEW_MAG(ATAP_HE_Mortar,10) : 3AS_32Rnd_155mm_ATAP_Mortar_shells
+    class MACRO_NEW_MAG(ATAP_HE_Mortar,15) : 3AS_32Rnd_155mm_ATAP_Mortar_shells
 	{
 		displayName = "ATAP HE Mortar";
 		ammo = MACRO_NEW_AMMO(ATAP_HE_Mortar)
@@ -201,7 +201,7 @@ class CfgMagazines
 
     class 3AS_15rnd_ATAP_AT_Mag;
 
-    class MACRO_NEW_MAG(ATAP_AT_Ammo,10) : 3AS_15rnd_ATAP_AT_Mag
+    class MACRO_NEW_MAG(ATAP_AT_Ammo,15) : 3AS_15rnd_ATAP_AT_Mag
 	{
 		displayName = "ATAP AT";
 		ammo = MACRO_NEW_AMMO(ATAP_AT_Ammo)
@@ -219,7 +219,7 @@ class CfgMagazines
 
     class 3AS_500Rnd_ATAP_PD_Mag;
 
-    class MACRO_NEW_MAG(ATAP_PD_Ammo,10) : 3AS_500Rnd_ATAP_PD_Mag
+    class MACRO_NEW_MAG(ATAP_PD_Ammo,500) : 3AS_500Rnd_ATAP_PD_Mag
 	{
 		displayName = "ATAP PD";
 		ammo = MACRO_NEW_AMMO(ATAP_PD_Ammo)
@@ -240,7 +240,7 @@ class CfgWeapons
 		magazineWell[] = {};
 		magazines[] = 
 		{
-			MACRO_NEW_MAG(ATAP_HE_Mortar,10)
+			MACRO_NEW_MAG(ATAP_HE_Mortar,15)
 		};
 		modes[] = {"Single1","Single2","Single3","Single4","Single5","Burst1","Burst2","Burst3","Burst4","Burst5"};
 
@@ -280,7 +280,7 @@ class CfgWeapons
 		magazineWell[] = {};
 		magazines[] = 
 		{
-			MACRO_NEW_MAG(ATAP_PD_Ammo,10)
+			MACRO_NEW_MAG(ATAP_PD_Ammo,500)
 		};
     };	
     
@@ -294,7 +294,7 @@ class CfgWeapons
 		magazineWell[] = {};
 		magazines[] = 
 		{
-			MACRO_NEW_MAG(ATAP_AT_Ammo,10),
+			MACRO_NEW_MAG(ATAP_AT_Ammo,15),
             MACRO_NEW_MAG(SmokeLauncherMag,10)
 		};
     };	
