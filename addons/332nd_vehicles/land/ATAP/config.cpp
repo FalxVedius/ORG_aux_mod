@@ -196,7 +196,7 @@ class CfgMagazines
 	{
 		displayName = "ATAP HE Mortar";
 		ammo = MACRO_NEW_AMMO(ATAP_HE_Mortar)
-        count=10;
+        count=15;
 	};
 
     class 3AS_15rnd_ATAP_AT_Mag;
@@ -205,7 +205,7 @@ class CfgMagazines
 	{
 		displayName = "ATAP AT";
 		ammo = MACRO_NEW_AMMO(ATAP_AT_Ammo)
-        count=10;
+        count=15;
 	};
 
     class SmokeLauncherMag;
@@ -223,7 +223,7 @@ class CfgMagazines
 	{
 		displayName = "ATAP PD";
 		ammo = MACRO_NEW_AMMO(ATAP_PD_Ammo)
-        count=10;
+        count=500;
 	};
 }
 
