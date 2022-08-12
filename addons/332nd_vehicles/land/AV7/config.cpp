@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_VEHICLE(Land,TX,AV7),
+            MACRO_NEW_VEHICLE(Land,AV,AV7),
         };
 	};
 };
@@ -33,7 +33,6 @@ class CfgVehicles
 			{
 				class Turrets
 				{
-					class CommanderOptics;
 				};
 			};
 		};
@@ -47,9 +46,6 @@ class CfgVehicles
             {
                 class Turrets: Turrets
                 {
-                    class CommanderOptics: CommanderOptics
-                    {
-                    };
                 };
             };
 		};
@@ -63,9 +59,6 @@ class CfgVehicles
 			{
                 class Turrets: Turrets
 				{
-					class CommanderOptics: CommanderOptics
-					{
-					};
 				};
 			};
 		};
@@ -79,9 +72,6 @@ class CfgVehicles
 			{
                 class Turrets: Turrets
 				{
-					class CommanderOptics: CommanderOptics
-					{
-					};
 				};
 			};
 		};
@@ -95,22 +85,19 @@ class CfgVehicles
 			{
                 class Turrets: Turrets
 				{
-					class CommanderOptics: CommanderOptics
-					{
-					};
 				};
 			};
 		};
 	};
 
 
-	class MACRO_NEW_VEHICLE(Land,TX,AV7): 3as_AV7
+	class MACRO_NEW_VEHICLE(Land,AV,AV7): 3as_AV7
 	{
 	    displayName = "AV7 *WIP*";
 	    scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TANK";
+		editorSubcategory = "EdSubcat_332nd_ARTILLERY";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
 		hiddenSelectionsTextures[] = 
@@ -129,10 +116,13 @@ class CfgVehicles
 				};
 				magazines[] =
 				{
-				  MACRO_NEW_MAG(AV7_HE_Mortar,15),
-                  MACRO_NEW_MAG(AV7_HE_Mortar,15),
-                  MACRO_NEW_MAG(AV7_HE_Mortar,15),
-                  MACRO_NEW_MAG(AV7_HE_Mortar,15)
+                    MACRO_NEW_MAG(AV7_HE_Mortar,32),
+                    MACRO_NEW_MAG(AV7_Smoke,12),
+                    MACRO_NEW_MAG(AV7_Guided,4),
+                    MACRO_NEW_MAG(AV7_Laser_Guided,4),
+                    MACRO_NEW_MAG(AV7_Mine_Cluster,12),
+                    MACRO_NEW_MAG(AV7_Cluster_Shell,4),
+                    MACRO_NEW_MAG(AV7_AT_Mine,12)
 				};
 			};
 		};
@@ -246,7 +236,7 @@ class CfgMagazines
 class CfgWeapons
 {
 	class CannonCore;
-    class CannonCore : 3AS_AV7_300mm_AMOS 
+    class 3AS_AV7_300mm_AMOS : CannonCore 
 	{
 		class manual;
 	};
