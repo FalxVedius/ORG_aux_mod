@@ -99,6 +99,7 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_ARTILLERY";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
+        forceHideCommander = true;
 
 		hiddenSelectionsTextures[] = 
 		{ 
