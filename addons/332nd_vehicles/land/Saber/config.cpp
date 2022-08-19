@@ -558,7 +558,7 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = 
 		{ 
 			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_WeaponsGL.paa"
+			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Weapons.paa"
 		};
 
 		class Turrets : Turrets

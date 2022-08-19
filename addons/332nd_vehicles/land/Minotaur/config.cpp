@@ -71,6 +71,9 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		tas_canBlift = 1;
+		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
+
 		armor = 400;
 		armorStructural = 6;
 
@@ -186,6 +189,9 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
+
+		tas_canBlift = 1;
+		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
 
 		hiddenSelectionsTextures[] =
 		{

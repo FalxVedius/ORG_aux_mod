@@ -461,7 +461,7 @@ class MACRO_NEW_NVG(assault_Ant) :JLTS_CloneNVGCC
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_clones_spec\SWLB_clone_commando_nvg_antenna.p3d";
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "SWLB_clones_spec\data\helmet_co.paa" };
+    hiddenSelectionsTextures[] = { "\332nd_units\Facewear\data\Antenna" };
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
     author = "Halligan, Namenai,Falx ";

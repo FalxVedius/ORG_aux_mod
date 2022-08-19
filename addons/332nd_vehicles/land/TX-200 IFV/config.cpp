@@ -67,6 +67,9 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_APCS";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 
+		tas_canBlift = 1;
+		tas_liftVars = "[[[[0.1,-4,-4]]], [0.1], [-0.5]]";
+
 		hiddenSelectionsTextures[] = 
 		{ 
 			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Armour.paa",

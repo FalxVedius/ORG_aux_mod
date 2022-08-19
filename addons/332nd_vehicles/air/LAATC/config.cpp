@@ -52,6 +52,20 @@ class Extended_init_EventHandlers
 	};
 };
 
+class CfgFunctions
+{
+	class ResupplyAirVic
+	{
+		class myCategory
+		{
+			class AddVicCratesToInventory
+			{
+				file = "332nd_vehicles\air\LAATC\fnc_spawnVicResupplyCrates.sqf";
+			};
+		};
+	};
+};
+
 class CfgVehicles
 {
 	class Helicopter_Base_F;
@@ -87,6 +101,8 @@ class CfgVehicles
 		_generalMacro="332_laat_C";
 		scope=2;
 
+		ace_cargo_hasCargo = 1;
+		ace_cargo_space = 12;
 		attendant = true;
 		ace_rearm_defaultSupply = 300000;
 		ace_refuel_fuelCargo = 3000;
@@ -125,7 +141,7 @@ class CfgVehicles
 		armor = 500 * 0.5;
 		class EventHandlers
         {
-	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
+	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_332nd'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
         };
 		faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
@@ -846,7 +862,7 @@ class CfgVehicles
 				priority = 3;
 				onlyForPlayer = 0;
 				condition = "(count(this getVariable [""TAS_Loaded"",[]]) > 0)";
-				statement = "0 = [this] spawn TAS_fnc_MagDrop;";
+				statement = "0 = [this] spawn TAS_fnc_Magdrop;";
 			};
 		};
 		ace_fastroping_enabled=1;
