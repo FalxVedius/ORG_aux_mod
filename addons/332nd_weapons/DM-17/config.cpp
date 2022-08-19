@@ -75,7 +75,7 @@ class CfgMagazines
 	{
 		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		count = 1;
-		mass = 5;
+		mass = 1;
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 HeartStarter,1)
 		displayNameShort = "Heart Starter rnd";
@@ -87,7 +87,7 @@ class CfgMagazines
 	{
 		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		count = 1;
-		mass = 5;
+		mass = 1;
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 CombatStim,1)
 		displayNameShort = "Combat Stim rnd";
@@ -99,7 +99,7 @@ class CfgMagazines
 	{
 		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		count = 1;
-		mass = 5;
+		mass = 10;
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 Bacta,1)
 		displayNameShort = "Bacta rnd";
@@ -111,7 +111,7 @@ class CfgMagazines
 	{
 		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		count = 1;
-		mass = 5;
+		mass = 10;
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 Kolto,1)
 		displayNameShort = "Kolto rnd";

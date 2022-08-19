@@ -43,7 +43,9 @@ class CfgMagazines
 
 class CfgWeapons
 {
+	class CannonCore;
 	class OPTRE_M71;
+
 
 	class MACRO_NEW_WEAPON(CLB_LaserCannon) : OPTRE_M71
 	{
@@ -51,6 +53,108 @@ class CfgWeapons
 		magazines[] =
 		{
 			MACRO_NEW_MAG(CLB_LaserMag,6000)
+		};
+
+		class manual : CannonCore
+		{
+			displayName = "$STR_A3_Phalanx_weapon_name";
+			autoFire = 1;
+			sounds[] =
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[] =
+				{
+					"\OPTRE_FC_Weapons\Data\sounds\Plasma_Shade_Fire.ogg",
+					4,
+					0.9,
+					3000
+				};
+				begin2[] =
+				{
+					"\OPTRE_FC_Weapons\Data\sounds\Plasma_Shade_Fire.ogg",
+					4,
+					1,
+					3000
+				};
+				begin3[] =
+				{
+					"\OPTRE_FC_Weapons\Data\sounds\Plasma_Shade_Fire.ogg",
+					4,
+					1.1,
+					3000
+				};
+				soundBegin[] =
+				{
+					"begin1",
+					0.33000001,
+					"begin2",
+					0.33000001,
+					"begin3",
+					0.34
+				};
+			};
+			weaponSoundEffect = "DefaultRifle";
+			reloadTime = 0.045000002;
+			dispersion = 0.0044999998;
+			soundContinuous = 0;
+			showToPlayer = 1;
+			burst = 1;
+			aiRateOfFire = 0;
+			aiRateOfFireDistance = 50;
+			minRange = 1;
+			minRangeProbab = 0.0099999998;
+			midRange = 2;
+			midRangeProbab = 0.0099999998;
+			maxRange = 3;
+			maxRangeProbab = 0.0099999998;
+			textureType = "fullAuto";
+		};
+		class close : manual
+		{
+			showToPlayer = 0;
+			burst = 100;
+			soundBurst = 0;
+			aiBurstTerminable = 1;
+			aiRateOfFire = 0;
+			aiRateOfFireDistance = 1;
+			AIRateOfFireDispersion = 0;
+			minRange = 0;
+			minRangeProbab = 0.94999999;
+			midRange = 600;
+			midRangeProbab = 0.89999998;
+			maxRange = 900;
+			maxRangeProbab = 0.89999998;
+		};
+		class medium : close
+		{
+			burst = 50;
+			burstRangeMax = 100;
+			aiBurstTerminable = 1;
+			aiRateOfFire = 0.1;
+			aiRateOfFireDistance = 1;
+			minRange = 600;
+			minRangeProbab = 0.85000002;
+			midRange = 900;
+			midRangeProbab = 0.82999998;
+			maxRange = 1500;
+			maxRangeProbab = 0.5;
+		};
+		class far : close
+		{
+			burst = 30;
+			burstRangeMax = 90;
+			aiBurstTerminable = 1;
+			aiRateOfFire = 0.2;
+			aiRateOfFireDistance = 1;
+			minRange = 900;
+			minRangeProbab = 0.82999998;
+			midRange = 1500;
+			midRangeProbab = 0.80000001;
+			maxRange = 3000;
+			maxRangeProbab = 0.1;
 		};
 	};
 };

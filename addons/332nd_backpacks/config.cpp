@@ -543,6 +543,11 @@ class CfgVehicles
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		hiddenSelectionsTextures[] =
+		{
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_AT.paa
+		};
 	}
 	class SWLB_clone_bag_leg;
 	class MACRO_NEW_BACKPACK(blufor,332nd_rifleman_pack) : SWLB_clone_bag_leg
