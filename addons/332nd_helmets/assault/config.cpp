@@ -26,4 +26,8 @@ class CfgWeapons
     class MACRO_NEW_HELMET(assault,base);
 
 	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_trooper,Trooper,Trooper.paa)
+	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_veteran,Veteran,Veteran.paa)
+	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_specialist,Specialist,Specialist.paa)
+	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_corporal,Corporal,Corporal.paa)
+	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_sergeant,Sergeant,Sergeant.paa)
 };
