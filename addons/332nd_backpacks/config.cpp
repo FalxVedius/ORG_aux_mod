@@ -546,7 +546,11 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_AT.paa
+			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_AT.paa,
+			"ls_equipment_bluefor\backpack\gar\backpack\data\holder_co.paa",
+			"ls_equipment_bluefor\backpack\gar\backpack\data\rocket_co.paa",
+			"ls_equipment_bluefor\backpack\gar\backpack\data\light_co.paa",
+			"ls_equipment_bluefor\backpack\gar\backpack\data\pouches_co.paa"
 		};
 	}
 	class SWLB_clone_bag_leg;
