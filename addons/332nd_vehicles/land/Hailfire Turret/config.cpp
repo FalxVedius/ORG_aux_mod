@@ -78,7 +78,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Hailfire_Turret) : B_SAM_System_01_F
     {
-        displayName = "Hailfire AT Turret";
+        displayName = "Hailfire AT Turret *WIP*";
         scope = 2;
 		scopeCurator = 2;
 		side = 0;

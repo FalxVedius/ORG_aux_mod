@@ -145,7 +145,7 @@ class CfgVehicles
         };
 		faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
-		displayName="LAAT/C Mk 1";
+		displayName="LAAT/C Mk1 *Test*";
 		model="3AS\3AS_LAATC\3AS_LAAT_C.p3d";
 		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
 		picture="\3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
@@ -640,53 +640,55 @@ class CfgVehicles
 				};
 
 				class 332nd_aux_Cyan_HUD :332nd_aux_Red_HUD
-			 {
+				 {
 				displayName = "Cyan HUD Color";
 				statement = [0,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\cyan.paa;
 
 			};
 
-			class 332nd_aux_Blue_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Blue_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "Blue HUD Color";
 				statement = [0,0,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\blue.paa;
 
 			};
 
-			class 332nd_aux_Purple_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Purple_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "Purple HUD Color";
 				statement = [.5,0,.5,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\purple.paa;
 
 			};
 
-			class 332nd_aux_White_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_White_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "White HUD Color";
 				statement = [1,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\white.paa;
 
 			};
 
-			class 332nd_aux_Black_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Black_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "Black HUD Color";
 				statement = [0,0,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\black.paa;
 
 			};
 
-			class 332nd_aux_Clear_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Clear_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "No HUD Color";
 				statement = [1,1,1,0,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\noHud.paa;
 
 			};
 			};
+
+			IntercomMacroAIR
 		};
 		class HitPoints : HitPoints
         {

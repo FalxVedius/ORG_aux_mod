@@ -428,7 +428,7 @@ class CfgVehicles
 	
 	class MACRO_NEW_VEHICLE(Land,TX,130): 3as_saber_m1
 	{
-	    displayName = "TX-130 Saber *WIP*";
+	    displayName = "TX-130 Saber";
 	    scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -437,6 +437,9 @@ class CfgVehicles
 
 		armor = 500;
 		armorStructural = 6;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -545,7 +548,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(Land,TX,130_GL) : 3as_saber_m1G
 	{
-		displayName = "TX-130 GL *WIP*";
+		displayName = "TX-130 GL";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -554,6 +557,9 @@ class CfgVehicles
 
 		armor = 500;
 		armorStructural = 6;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -656,7 +662,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(Land,TX,130_Recon) : 3as_saber_m1Recon
 	{
-		displayName = "TX-130 Recon *WIP*";
+		displayName = "TX-130 Recon";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -665,6 +671,9 @@ class CfgVehicles
 
 		armor = 500;
 		armorStructural = 6;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -741,7 +750,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(Land,TX,130_Super) : 3as_saber_super
 	{
-		displayName = "TX-130 Super *WIP*";
+		displayName = "TX-130 Super";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -750,6 +759,9 @@ class CfgVehicles
 
 		armor = 500;
 		armorStructural = 6;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] =
 		{

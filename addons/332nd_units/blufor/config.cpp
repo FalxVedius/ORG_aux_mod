@@ -115,7 +115,8 @@ class CfgPatches
             MACRO_NEW_UNIT(captain,332nd_captain),
 
             MACRO_NEW_UNIT(assault,332nd_assault_Vet_trooper),
-            MACRO_NEW_UNIT(assault,332nd_assault_trooper),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_trooper),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_senior),
             MACRO_NEW_UNIT(assault,332nd_assault_spec),
             MACRO_NEW_UNIT(assault,332nd_assault_corporal),
             MACRO_NEW_UNIT(assault,332nd_assault_sergeant),
@@ -257,6 +258,7 @@ class CfgPatches
 
             MACRO_NEW_UNIFORM(assault,332nd_assault_Vet_trooper),
             MACRO_NEW_UNIFORM(assault,332nd_assault_trooper),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_senior),
             MACRO_NEW_UNIFORM(assault,332nd_assault_spec),
             MACRO_NEW_UNIFORM(assault,332nd_assault_corporal),
             MACRO_NEW_UNIFORM(assault,332nd_assault_sergeant),
@@ -506,6 +508,7 @@ class CfgWeapons
     //Assault Armor
     MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_Vet_trooper,Veteran Trooper,332nd_assault_Vet_trooper)
     MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_trooper,Trooper,332nd_assault_trooper)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_senior,Senior Trooper,332nd_assault_senior)
     MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_Spec,Specialist,332nd_assault_Spec)
     MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_corporal,Corporal,332nd_assault_corporal)
     MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_sergeant,Sergeant,332nd_assault_sergeant)
@@ -687,6 +690,7 @@ class CfgVehicles
     //Assault
     MACRO_NEW_ASSAULT_UNIT(332nd_assault_Vet_trooper,Veteran Trooper,332nd_assault_Vet_trooper,veteran_trooper\Veteran_Trooper.paa)
     MACRO_NEW_ASSAULT_UNIT(332nd_assault_trooper,Trooper,332nd_assault_trooper,trooper\Trooper.paa)
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_senior,Senior Trooper,332nd_assault_senior,senior_trooper\Senior.paa)
     MACRO_NEW_ASSAULT_UNIT(332nd_assault_Spec,Specialist,332nd_assault_Spec,specialist_four\Specialist.paa)
     MACRO_NEW_ASSAULT_UNIT(332nd_assault_corporal,Corporal,332nd_assault_corporal,corporal\Corporal.paa)
     MACRO_NEW_ASSAULT_UNIT(332nd_assault_sergeant,Sergeant,332nd_assault_sergeant,sergeant\Sergeant.paa)

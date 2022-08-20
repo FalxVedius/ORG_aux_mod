@@ -42,6 +42,7 @@ class CfgVehicles
 				class Turrets;
 			};
 		};
+		class ACE_SelfActions;
 	};
 
 	class OPTRE_M494 : I_APC_tracked_03_base_F
@@ -56,11 +57,13 @@ class CfgVehicles
 				};
 			};
 		};
+
+		class ACE_SelfActions;
 	};
 
     class MACRO_NEW_VEHICLE(Land,TX,200) : OPTRE_M494
     {
-        displayName = "*WIP* TX-200 - 'Verax'";
+        displayName = "TX-200 - 'Verax'";
         scope = 2;
 		side=1;
 		faction = "EdCat_332nd";
@@ -69,6 +72,9 @@ class CfgVehicles
 
 		tas_canBlift = 1;
 		tas_liftVars = "[[[[0.1,-4,-4]]], [0.1], [-0.5]]";
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] = 
 		{ 

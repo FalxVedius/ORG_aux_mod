@@ -80,7 +80,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Laser_Cannon) : B_Ship_Gun_01_F
     {
-        displayName = "Laser Cannon";
+        displayName = "Laser Cannon *WIP*";
         scope = 2;
 		scopeCurator = 2;
 		side = 0;

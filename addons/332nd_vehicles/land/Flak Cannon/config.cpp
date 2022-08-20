@@ -80,7 +80,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Flak_cannon) : 3as_FlakCannon
     {
-        displayName = "Quad-Barrel Flak Cannon";
+        displayName = "Quad-Barrel Flak Cannon *WIP*";
         scope = 2;
 		scopeCurator = 2;
 		side = 0;

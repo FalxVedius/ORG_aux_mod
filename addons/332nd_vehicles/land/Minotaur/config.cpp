@@ -60,6 +60,8 @@ class CfgVehicles
 		{
 			class MainTurret;
 		};
+
+		class ACE_SelfActions;
 	};
 
     class MACRO_NEW_VEHICLE(Land,TX,155_Transport) : SC_SaurusAPC_Unarmed_SE
@@ -73,6 +75,9 @@ class CfgVehicles
 
 		tas_canBlift = 1;
 		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		armor = 400;
 		armorStructural = 6;
@@ -192,6 +197,9 @@ class CfgVehicles
 
 		tas_canBlift = 1;
 		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] =
 		{

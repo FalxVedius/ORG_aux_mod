@@ -1125,6 +1125,83 @@
 			displayName = [332nd] Assault Vest ('##displayname##');\
 		};
 
+
+// ============================================================================== Intercom Defines
+	
+	
+	#define IntercomMacro class ACE_SelfActions : ACE_SelfActions { \
+	    class TFAR_IntercomChannel { \
+	        displayName = "Intercom"; \
+	        condition = "true"; \
+	        statement = ""; \
+	        icon = ""; \
+	        class TFAR_IntercomChannel_disabled { \
+	            displayName = "Disabled"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != -1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-1,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_1 { \
+	            displayName = "Channel 1"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 0"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_2 { \
+	            displayName = "Channel 2"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],1,true];"; \
+	        }; \
+			class TFAR_IntercomChannel_3 { \
+	            displayName = "Crew"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 2"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];"; \
+	        }; \
+	    }; \
+	};
+
+	#define IntercomMacroAIR \
+	    class TFAR_IntercomChannel { \
+	        displayName = "Intercom"; \
+	        condition = "true"; \
+	        statement = ""; \
+	        icon = ""; \
+	        class TFAR_IntercomChannel_disabled { \
+	            displayName = "Disabled"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != -1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-1,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_1 { \
+	            displayName = "Channel 1"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 0"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_2 { \
+	            displayName = "Channel 2"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],1,true];"; \
+	        }; \
+			class TFAR_IntercomChannel_3 { \
+	            displayName = "Crew"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 2"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];"; \
+	        }; \
+	    };
+
 // ============================================================================== Macro Predefined Equipments
 
 	#define MACRO_AIR_COMMON_WEAPS "Laserdesignator_pilotCamera","CMFlareLauncher"
