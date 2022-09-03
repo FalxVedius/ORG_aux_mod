@@ -138,8 +138,6 @@
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Assault Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,"\332nd_helmets\assault\KatarnVisor.paa"};\
-			hiddenSelectionsMaterials[] = {"\332nd_helmets\assault\Assault_Helmet.rvmat","\332nd_helmets\assault\Assault_Visor.rvmat"};\
 		};
 	
 
@@ -701,12 +699,6 @@
 			scopeArsenal = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(assault,uniformClassname);\
-			hiddenSelections[] = {"camo","camo1"};\
-			hiddenSelectionsTextures[] = {\
-				MACRO_UNIFORM_TEXTURES_PATH\assault\uniforms\##uniclass,\
-				"\3AS\3AS_Characters\Commando\data\Katarn_Armor_Standard_CO.paa"\
-			};\
-			hiddenSelectionsMaterials[] = {"\332nd_units\_textures\assault\uniforms\Assault_Uniform.rvmat","\3AS\3AS_Characters\Commando\data\Katarn_Undersuit.rvmat"};\
 		}
 
 

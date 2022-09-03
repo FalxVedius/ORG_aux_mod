@@ -582,10 +582,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - AT *WIP*";
 		maximumLoad = 468;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_AT.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -596,10 +592,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - Support *WIP*";
 		maximumLoad = 380;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_Support.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -610,10 +602,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - (UGL/DMR) *WIP*";
 		maximumLoad = 277;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_UGLDMR.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -624,10 +612,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - JTAC *WIP*";
 		maximumLoad = 468;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_JTAC.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -638,10 +622,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - Leadership *WIP*";
 		maximumLoad = 316;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_Leadership.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -652,10 +632,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - EOD *WIP*";
 		maximumLoad = 460;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_EOD.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -666,10 +642,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - Medic *WIP*";
 		maximumLoad = 433;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_Medic.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
@@ -680,10 +652,6 @@ class CfgVehicles
 		displayName = "[332nd] Assault Pack - Ammo Bearer *WIP*";
 		maximumLoad = 512;
 
-		hiddenSelectionsTextures[] =
-		{
-			MACRO_BACKPACK_TEXTURES_PATH\Katarn_Backpack\Katarn_Ammo.paa
-		};
 
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
