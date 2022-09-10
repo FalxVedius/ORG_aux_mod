@@ -483,6 +483,7 @@ class CfgVehicles
 				stabilizedInAxes = 3;
 				outGunnerMayFire=1;
 				ingunnerMayFire=0;
+
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -502,6 +503,7 @@ class CfgVehicles
 					MACRO_NEW_MAG(Heavy_HMG,150),
 					MACRO_NEW_MAG(Heavy_HMG,150)
 				};
+
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{

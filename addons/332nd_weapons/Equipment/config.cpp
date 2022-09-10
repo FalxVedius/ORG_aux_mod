@@ -11,8 +11,27 @@ class CfgPatches
 			MACRO_PATCH_NAME(weapons)
 		};
 		requiredVersion = 0.1;
-		units[] = {};
+		units[] = {
+			MACRO_NEW_VEHICLE(Air,CRD,4)
+		};
 		weapons[] = {};
+	};
+};
+
+class CfgFunctions
+{
+	class Aux_Emara
+	{
+		class Emara_Functions
+		{
+			file = "\332nd_weapons\Equipment\functions";
+			class place
+			{
+			};
+			class pickup
+			{
+			};
+		};
 	};
 };
 
@@ -325,8 +344,9 @@ class CfgWeapons
 			};
 		};
 
-	}; 
-	class put: default
+	};
+
+	class put : default
 	{
 		muzzles[] +=
 		{
@@ -353,15 +373,149 @@ class CfgWeapons
 			showToPlayer=0;
 		};
 	};
+
+	class ACE_ItemCore;
+	class CBA_MiscItem_ItemInfo;
+	class MACRO_NEW_WEAPON(CRD_4_Emara) : ACE_ItemCore
+	{
+		author = "Falx";
+		scope = 2;
+		displayName = "[332nd] CRD-4 'Emara'";
+		descriptionShort = "UAV";
+		picture = "\DRNP_main\DRNP\addons\main\UI\icon_dron.paa";
+		model = "\A3\Weapons_F\Items\Toolkit";
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 30;
+		};
+	};
 };
 
+class CBA_Extended_EventHandlers_base;
 class CfgVehicles
 {
+	class Man;
+	class CAManBase : Man
+	{
+		class ACE_SelfActions
+		{
+			class ACE_Equipment
+			{
+				class ace_drone_place_Emara
+				{
+					displayName = "Place CRD-4 drone";
+					condition = "[_player,'332nd_aux_weapon_CRD_4_Emara'] call ace_common_fnc_hasItem";
+					statement = "[_player,'332nd_aux_weapon_CRD_4_Emara'] call Aux_Emara_fnc_place";
+					exceptions[] = {};
+					icon = "\DRNP_main\DRNP\addons\main\UI\Icon_dron.paa";
+				};
+			};
+		};
+	};
+
+	class Air;
+	class Helicopter : Air
+	{
+		class Turrets;
+		class HitPoints;
+		class ACE_Actions;
+	};
+	class Helicopter_Base_F : Helicopter
+	{
+		class Turrets : Turrets
+		{
+			class MainTurret;
+		};
+		class HitPoints : HitPoints
+		{
+			class HitHRotor;
+			class HitHull;
+			class HitWinch;
+		};
+		class AnimationSources;
+		class EventHandlers;
+		class ViewOptics;
+		class ViewPilot;
+		class Components;
+		class ACE_Actions
+		{
+			class ACE_MainActions;
+		};
+	};
+
+	class UAV_01_base_F : Helicopter_Base_F
+	{
+		class ACE_Actions : ACE_Actions
+		{
+			class ACE_MainActions : ACE_MainActions
+			{
+			};
+		};
+	};
+
+	class B_UAV_01_F : UAV_01_base_F
+	{
+		class ACE_Actions : ACE_Actions
+		{
+			class ACE_MainActions : ACE_MainActions
+			{
+			};
+		};
+	};
+
+	class MACRO_NEW_VEHICLE(Air,CRD_4,Emara) : B_UAV_01_F
+	{
+		author = "Falx";
+		displayName = "CRD-4 'Emara'";
+		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\B_UAV_01_F.jpg";
+		scope = 2;
+		scopeCurator = 2;
+		side = 1;
+		faction = "EdCat_332nd";
+		editorSubcategory = "EdSubcat_332nd_DRONE";
+
+		crew = "B_UAV_AI";
+		typicalCargo[] =
+		{
+			"B_UAV_AI"
+		};
+
+		fuelCapacity = 1000;
+		accuracy = 0.5;
+
+
+		class ACE_Actions : ACE_Actions
+		{
+			class ACE_MainActions : ACE_MainActions
+			{
+				selection = "main_turret_axis";
+				class ACE_Pickup
+				{
+					selection = "";
+					displayName = "Pickup drone";
+					distance = 5;
+					condition = "(!(isEngineOn _target) && alive _target)";
+					statement = "[_target,_player] call Aux_Emara_fnc_pickup";
+					showDisabled = 0;
+					exceptions[] = {};
+					icon = "\DRNP_main\DRNP\addons\main\UI\Icon_dron.paa";
+				};
+			};
+		};
+
+		class EventHandlers
+		{
+			class CBA_Extended_EventHandlers : CBA_Extended_EventHandlers_base
+			{
+			};
+		};
+
+
+	};
+
 	class ACE_Explosives_Place;
-    class 332nd_DemoPack_Placeable: ACE_Explosives_Place
+	class 332nd_DemoPack_Placeable : ACE_Explosives_Place
 	{
 		model = "SWLW_clones_spec\explosives\demo.p3d";
 	};
-}
-
-	
+};

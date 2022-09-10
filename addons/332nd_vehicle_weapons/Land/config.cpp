@@ -540,7 +540,7 @@ class CfgWeapons
 				};
 			};
 		};
-				class close: player
+		class close: player
 		{
 			burst=10;
 			aiRateOfFire=0.1375;

@@ -970,6 +970,56 @@ class CfgVehicles
 			};
 			};
 
+			class 332nd_aux_Skin_Selector
+			{
+				displayName = "Change LAAT Skin";
+				exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
+				condition = "!(isNull objectParent player) && (driver (vehicle player)==player)";
+				showDisabled = 0;
+				priority = 2.5;
+				icon = "";
+
+				class Standard_Skin
+				{
+					displayName = "Standard";
+					statement = "(vehicle player) setObjectTextureGlobal [0,'\332nd_vehicles\_textures\air\LAAT\Base\Body\body1_co.paa']; (vehicle player) setObjectTextureGlobal[1,'lsd_vehicles_heli\laati\data\body2_co.paa']; (vehicle player) setObjectTextureGlobal[2,'\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors1\door1_co.paa'];(vehicle player) setObjectTextureGlobal[3,'\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors2\door2_co.paa'];(vehicle player) setObjectTextureGlobal[4,'lsd_vehicles_heli\laati\data\door3_co.paa'];(vehicle player) setObjectTextureGlobal[5,'\332nd_vehicles\_textures\air\LAAT\Base\Wings\wings_co.paa'];(vehicle player) setObjectTextureGlobal[6,'lsd_vehicles_heli\laati\data\missiles_co.paa'];(vehicle player) setObjectTextureGlobal[7,'\332nd_vehicles\_textures\air\LAAT\Base\Cockpit\cockpits_co.paa'];(vehicle player) setObjectTextureGlobal[8,'lsd_vehicles_heli\laati\data\glass_ca.paa'];";
+				};
+				class Tech_Skin
+				{
+					displayName = "Technician";
+					statement = "(vehicle player) setObjectTextureGlobal [0,'\332nd_vehicles\_textures\air\LAAT\Variants\Tech\body1.paa']; (vehicle player) setObjectTextureGlobal[1,'\332nd_vehicles\_textures\air\LAAT\Variants\Tech\body2.paa'];(vehicle player) setObjectTextureGlobal[2,'\332nd_vehicles\_textures\air\LAAT\Variants\Tech\door1.paa'];(vehicle player) setObjectTextureGlobal[3,'\332nd_vehicles\_textures\air\LAAT\Variants\Tech\door2.paa'];(vehicle player) setObjectTextureGlobal[4,'\332nd_vehicles\_textures\air\LAAT\Variants\Tech\door3.paa'];(vehicle player) setObjectTextureGlobal[5,'\332nd_vehicles\_textures\air\LAAT\Variants\Tech\wings.paa'];(vehicle player) setObjectTextureGlobal[6,'lsd_vehicles_heli\laati\data\missiles_co.paa'];(vehicle player) setObjectTextureGlobal[7,'\332nd_vehicles\_textures\air\LAAT\Variants\Tech\cockpit.paa'];(vehicle player) setObjectTextureGlobal[8,'lsd_vehicles_heli\laati\data\glass_ca.paa'];";
+				};
+				class Lead_Skin
+				{
+					displayName = "Leadership";
+					statement = "(vehicle player) setObjectTextureGlobal [0,'\332nd_vehicles\_textures\air\LAAT\Variants\Lead\body1.paa']; (vehicle player) setObjectTextureGlobal[1,'\332nd_vehicles\_textures\air\LAAT\Variants\Lead\body2.paa'];(vehicle player) setObjectTextureGlobal[2,'\332nd_vehicles\_textures\air\LAAT\Variants\Lead\door1.paa'];(vehicle player) setObjectTextureGlobal[3,'\332nd_vehicles\_textures\air\LAAT\Variants\Lead\door2.paa'];(vehicle player) setObjectTextureGlobal[4,'\332nd_vehicles\_textures\air\LAAT\Variants\Lead\door3.paa'];(vehicle player) setObjectTextureGlobal[5,'\332nd_vehicles\_textures\air\LAAT\Variants\Lead\wings.paa'];(vehicle player) setObjectTextureGlobal[6,'lsd_vehicles_heli\laati\data\missiles_co.paa'];(vehicle player) setObjectTextureGlobal[7,'\332nd_vehicles\_textures\air\LAAT\Variants\Lead\cockpit.paa'];(vehicle player) setObjectTextureGlobal[8,'lsd_vehicles_heli\laati\data\glass_ca.paa'];";
+				};
+				class Verus_Skin
+				{
+					displayName = "Verus";
+					statement = "(vehicle player) setObjectTextureGlobal [0,'\332nd_vehicles\_textures\air\LAAT\Variants\Verus\Verus_ca.paa']; (vehicle player) setObjectTextureGlobal[1,'lsd_vehicles_heli\laati\data\body2_co.paa'];(vehicle player) setObjectTextureGlobal[2,'\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors1\door1_co.paa'];(vehicle player) setObjectTextureGlobal[3,'\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors2\door2_co.paa'];(vehicle player) setObjectTextureGlobal[4,'lsd_vehicles_heli\laati\data\door3_co.paa'];(vehicle player) setObjectTextureGlobal[5,'\332nd_vehicles\_textures\air\LAAT\Base\Wings\wings_co.paa'];(vehicle player) setObjectTextureGlobal[6,'lsd_vehicles_heli\laati\data\missiles_co.paa'];(vehicle player) setObjectTextureGlobal[7,'\332nd_vehicles\_textures\air\LAAT\Base\Cockpit\cockpits_co.paa'];(vehicle player) setObjectTextureGlobal[8,'lsd_vehicles_heli\laati\data\glass_ca.paa'];";
+				};
+				class Chopper_Skin
+				{
+					displayName = "Chopper";
+					statement = "(vehicle player) setObjectTextureGlobal [0,'\332nd_vehicles\_textures\air\LAAT\Variants\Chopper\Chopper_co.paa']; (vehicle player) setObjectTextureGlobal[1, 'lsd_vehicles_heli\laati\data\body2_co.paa'];(vehicle player) setObjectTextureGlobal[2, '\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors1\door1_co.paa'];(vehicle player) setObjectTextureGlobal[3, '\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors2\door2_co.paa'];(vehicle player) setObjectTextureGlobal[4, 'lsd_vehicles_heli\laati\data\door3_co.paa'];(vehicle player) setObjectTextureGlobal[5, '\332nd_vehicles\_textures\air\LAAT\Base\Wings\wings_co.paa'];(vehicle player) setObjectTextureGlobal[6, 'lsd_vehicles_heli\laati\data\missiles_co.paa'];(vehicle player) setObjectTextureGlobal[7, '\332nd_vehicles\_textures\air\LAAT\Base\Cockpit\cockpits_co.paa'];(vehicle player) setObjectTextureGlobal[8, 'lsd_vehicles_heli\laati\data\glass_ca.paa'];";
+				};
+				class Blast_Skin
+				{
+					displayName = "Blast";
+					statement = "(vehicle player) setObjectTextureGlobal [0,'\332nd_vehicles\_textures\air\LAAT\Variants\Blast\body1.paa']; (vehicle player) setObjectTextureGlobal[1,'\332nd_vehicles\_textures\air\LAAT\Variants\Blast\body2.paa'];(vehicle player) setObjectTextureGlobal[2,'\332nd_vehicles\_textures\air\LAAT\Variants\Blast\door1.paa'];(vehicle player) setObjectTextureGlobal[3,'\332nd_vehicles\_textures\air\LAAT\Variants\Blast\door2.paa'];(vehicle player) setObjectTextureGlobal[4,'\332nd_vehicles\_textures\air\LAAT\Variants\Blast\door3.paa'];(vehicle player) setObjectTextureGlobal[5,'\332nd_vehicles\_textures\air\LAAT\Variants\Blast\wings.paa'];(vehicle player) setObjectTextureGlobal[6,'lsd_vehicles_heli\laati\data\missiles_co.paa'];(vehicle player) setObjectTextureGlobal[7,'\332nd_vehicles\_textures\air\LAAT\Variants\Blast\cockpit.paa'];(vehicle player) setObjectTextureGlobal[8,'lsd_vehicles_heli\laati\data\glass_ca.paa'];";
+				};
+				//statement = "(vehicle player) setObjectTextureGlobal [0,'\332nd_vehicles\_textures\air\LAAT\Base\Body\body1_co.paa']; 
+				//(vehicle player) setObjectTextureGlobal[1,'lsd_vehicles_heli\laati\data\body2_co.paa'];
+				//(vehicle player) setObjectTextureGlobal[2,'\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors1\door1_co.paa'];
+				//(vehicle player) setObjectTextureGlobal[3,'\332nd_vehicles\_textures\air\LAAT\Base\Doors\Doors2\door2_co.paa'];
+				//(vehicle player) setObjectTextureGlobal[4,'lsd_vehicles_heli\laati\data\door3_co.paa'];
+				//(vehicle player) setObjectTextureGlobal[5,'\332nd_vehicles\_textures\air\LAAT\Base\Wings\wings_co.paa'];
+				//(vehicle player) setObjectTextureGlobal[6,'lsd_vehicles_heli\laati\data\missiles_co.paa'];
+				//(vehicle player) setObjectTextureGlobal[7,'\332nd_vehicles\_textures\air\LAAT\Base\Cockpit\cockpits_co.paa'];
+				//(vehicle player) setObjectTextureGlobal[8,'lsd_vehicles_heli\laati\data\glass_ca.paa'];";
+			}
+
 			IntercomMacroAIR
 		};
 

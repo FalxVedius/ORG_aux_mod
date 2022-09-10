@@ -138,6 +138,8 @@
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Assault Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,"\332nd_helmets\assault\KatarnVisor.paa"};\
+			hiddenSelectionsMaterials[] = {"\3AS\3AS_Characters\Commando\data\Katarn_Helmet.rvmat","\332nd_helmets\assault\Assault_Visor.rvmat"};\
 		};
 	
 
@@ -699,6 +701,11 @@
 			scopeArsenal = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(assault,uniformClassname);\
+			hiddenSelections[] = {"Camo","Camo1"};\
+			hiddenSelectionsTextures[] = {\
+				MACRO_UNIFORM_TEXTURES_PATH\assault\uniforms\##uniclass,\
+				"\3AS\3AS_Characters\Commando\data\Katarn_Undersuit_CO.paa"\
+			};\
 		}
 
 
@@ -1111,6 +1118,20 @@
 		};
 	#define MACRO_NEW_ASSAULT_TECH_VEST_ITEM(classname,displayname)\
 		class MACRO_NEW_VEST(assault_tech,classname): MACRO_NEW_VEST(assault_tech,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Assault Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_ASSAULT_NCO_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(assault_nco,classname): MACRO_NEW_VEST(assault_nco,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Assault Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_ASSAULT_AMMO_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(assault_ammo,classname): MACRO_NEW_VEST(assault_ammo,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
