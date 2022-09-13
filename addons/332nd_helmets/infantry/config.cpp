@@ -60,6 +60,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Brain),
 			MACRO_NEW_HELMET(infantry,Ion),
 			MACRO_NEW_HELMET(infantry,Sync),
+			
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),

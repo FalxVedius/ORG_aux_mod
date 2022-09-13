@@ -47,7 +47,7 @@ class CfgWeapons
 	{
 		scope = 2;
 		scopeArsenal = 2;
-		author ="SW 13th IB";
+		author = "332nd Aux Team";
 		baseweapon = "";
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC15-LE [Marksman])
 		mass = 50;
@@ -57,7 +57,7 @@ class CfgWeapons
 			MACRO_NEW_MAG(Firepuncher_T,8)
 		};
 		modes[] = {"Single"};
-        model="SW13IB-Weapons\DC15LE\DC15LE.p3d";
+        model="332nd_weapons\DC\15LE\DC15LE.p3d";
         picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		handAnim[]=
 		{
