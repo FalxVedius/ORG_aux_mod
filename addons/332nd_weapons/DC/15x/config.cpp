@@ -48,18 +48,28 @@ class CfgSounds
 };
 
 class CowsSlot;
+class MuzzleSlot;
 class PointerSlot;
+class UnderBarrelSlot;
 //class GunClouds;
-class mode_SemiAuto;
+class Mode_SemiAuto;
+class Mode_Burst;
+class Mode_FullAuto;
 class cfgWeapons
 {
 
-	class OPTRE_M99A2S3;
+	class Rifle;
+	class Rifle_Base_F: Rifle
+	{
+		class WeaponSlotsInfo;
+		class GunParticles;
+	};
 
-	class MACRO_NEW_WEAPON(DC_15x): OPTRE_M99A2S3
+	class MACRO_NEW_WEAPON(DC_15x): Rifle_Base_F
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15x ATR [AT])
-
+		scope = 2;
+		scopeArsenal = 2;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_m320";
 		recoilprone="recoil_m320";
@@ -72,8 +82,15 @@ class cfgWeapons
 			MACRO_NEW_MAG(DC_15x,2)
 		};
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
-
-		class Single: mode_SemiAuto
+		model="332nd_weapons\DC\15x\DC15LE.p3d";
+        picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
+		modes[] = {"Single"};
+		handAnim[]=
+		{
+			"OFP2_ManSkeleton",
+			"\MRC\JLTS\weapons\DC15X\anims\DC15X_handanim.rtm"
+		};
+		class Single: Mode_SemiAuto
         {
 			sounds[]=
 			{
@@ -105,41 +122,89 @@ class cfgWeapons
             reloadTime=2;
 			dispersion=0.0000001;
         };
-
+		reloadMagazineSound[]=
+		{
+			"\3AS\3AS_Main\Sounds\DC15A\DC15aReload",
+			1,
+			1,
+			30
+		};
 		class OpticsModes
         {
-            class scope
-            {
-                opticsID=1;
-                useModelOptics=1;
-                opticsPPEffects[]=
-                {
-                    "OpticsCHAbera2",
-                    "OpticsBlur3"
-                };
-                opticsZoomMin=0.0300;
-                opticsZoomMax=0.125;
-                opticsZoomInit=0.125;
-                memoryPointCamera="optic_view";
-                opticsFlare=1;
-                opticsDisablePeripherialVision=1;
-                visionMode[]=
-					{
-						"Normal",
-						"NVG",
-						"TI"
-					};
-					thermalMode[] = {0, 1};
-                discretefov[] = {0.125};
-                discreteInitIndex = 0;
-                discreteDistanceInitIndex = 0;
-                discreteDistance[] = {100};
-                distanceZoomMin=100;
-                distanceZoomMax=1000;
-                modelOptics = "\A3\Weapons_f\acc\reticle_tws";
-            };
+            class Snip
+			{
+				useModelOptics = 1;
+				opticsFlare = 1;
+				opticsID = 1;
+				cameraDir = "";
+				discreteDistance[] = { 300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000,2100,2200,2300,2400 };
+				discreteDistanceInitIndex = 0;
+				discreteInitIndex = 0;
+				discretefov[] =
+				{
+					".25/1",
+					".25/4",
+					".25/8",
+					".25/12",
+					".25/24"
+				};
+				distanceZoomMin = 300;
+				distanceZoomMax = 2400;
+				memoryPointCamera = "eye";
+				modelOptics = "\A3\Weapons_F\acc\reticle_sniper_F";
+				opticsPPEffects[] =
+				{
+					"OpticsCHAbera1"
+				};
+				weaponInfoType = "RscWeaponZeroing";
+				opticsZoomMin = ".25/24";
+				opticsZoomMax = 0.25;
+				opticsZoomInit = 0.25;
+				visionMode[] =
+				{
+					"Normal",
+					"NVG"
+				};
+				opticsDisablePeripherialVision = 0;
+			};
         };
-
+		class WeaponSlotsInfo: WeaponSlotsInfo
+		{
+			mass=68;
+			class CowsSlot: CowsSlot
+			{
+				compatibleItems[]={};
+			};
+			class MuzzleSlot: MuzzleSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
+				displayName="$str_a3_cfgweapons_abr_base_f_weaponslotsinfo_muzzleslot0";
+				compatibleItems[]=
+				{
+				};
+				iconPicture="\A3\Weapons_F\Data\UI\attachment_muzzle.paa";
+				iconPinpoint="Center";
+			};
+			class PointerSlot: PointerSlot
+			{
+				linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
+				compatibleItems[]=
+				{
+					"acc_flashlight",
+					"acc_pointer_IR"
+				};
+			};
+			class UnderBarrelSlot: UnderBarrelSlot
+			{
+				linkProxy="\A3\Data_F_Mark\Proxies\Weapon_Slots\UNDERBARREL";
+				compatibleItems[]=
+				{
+					"bipod_01_F_blk"
+				};
+				iconPicture="\A3\Weapons_F_Mark\Data\UI\attachment_under.paa";
+				iconPinpoint="Bottom";
+			};
+		};
 		class EventHandlers
 		{
 			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_DC15X_Sound;";
