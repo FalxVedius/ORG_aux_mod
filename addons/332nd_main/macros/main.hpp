@@ -132,13 +132,13 @@
 			displayName = [332nd] Arc Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arc\##texture};\
 		};
-	#define MACRO_NEW_ASSAULT_HELMET_ITEM(classname,displayname,texture)\
+	#define MACRO_NEW_ASSAULT_HELMET_ITEM(classname,displayname,texture,visor)\
 		class MACRO_NEW_HELMET(assault,classname): MACRO_NEW_HELMET(assault,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Assault Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,"\332nd_helmets\assault\KatarnVisor.paa"};\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,MACRO_HELMET_TEXTURES_PATH##\assault\##visor};\
 			hiddenSelectionsMaterials[] = {"\3AS\3AS_Characters\Commando\data\Katarn_Helmet.rvmat","\332nd_helmets\assault\Assault_Visor.rvmat"};\
 		};
 	
