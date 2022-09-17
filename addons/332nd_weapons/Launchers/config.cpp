@@ -30,13 +30,14 @@ class CfgAmmo
 		aiAmmoUsageFlags="64 + 128 + 256 + 512";
 		irLock=0;
 		allowAgainstInfantry=1;
-		hit=750;
+		hit=2000;
 		manualControl=0;
 		indirectHit=20;
 		indirectHitRange=8;
 		maxControlRange = 2500;
 		maxSpeed = 700;
 		effectsMissile = "332nd_aux_effects_missile_blue";
+		flightProfiles[] = { Direct };
 		manueuvrability = 26;
 		thrust = 700;
 		thrustTime = 15;
@@ -154,9 +155,9 @@ class CfgAmmo
 	  effectfly = "ls_plasma_blue";
 	  effectflare = "FlareShell";
 	  flaresize = 10;
-	  hit=850;
+	  hit=2000;
 
-	  caliber = 30;
+	  caliber = 1;
 	  tracerscale = 6;
 	  tracerstarttime = 0;
 	  effectsMissile = "332nd_aux_effects_RPS4_blue";
@@ -182,7 +183,7 @@ class CfgAmmo
 	  effectsMissile = "332nd_aux_effects_RPS4_green";
 	  flaresize = 10;
 	  tracerscale = 6;
-	  caliber = 10;
+	  caliber = 1;
 	  ace_frag_charge = 350;
 	  hit=50 ;
 	  indirectHit=50;
@@ -206,7 +207,7 @@ class CfgAmmo
     {
 		irLock=1;
 		allowAgainstInfantry=0;
-		hit=2100;
+		hit=4200;
 		airlock=0;
 		autoSeekTarget = 1;
 		lockSeekRadius = 25;
@@ -233,7 +234,7 @@ class CfgAmmo
 		initTime = 0;
 		typicalSpeed = 100;
 		missileKeepLockedCone = 360;
-soundengine[]=
+		soundengine[]=
 		{
 			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
 			2,
