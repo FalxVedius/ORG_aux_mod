@@ -80,7 +80,7 @@ class CfgVehicles
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Particle_Cannon) : 3as_ParticleCannon
     {
-        displayName = "Particle Cannon";
+        displayName = "Particle Cannon *WIP*";
         scope = 2;
 		scopeCurator = 2;
 		side = 0;

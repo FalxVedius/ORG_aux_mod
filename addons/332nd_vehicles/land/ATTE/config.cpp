@@ -60,6 +60,7 @@ class CfgVehicles
 		class ViewGunner;
 		class ViewCargo;
 		class HeadLimits;
+		class ACE_SelfActions;
 		class HitPoints : HitPoints
 		{
 			class HitHull;
@@ -83,6 +84,8 @@ class CfgVehicles
 			class MainTurretFront;
 			class MainTurretBack;
 		};
+
+		class ACE_SelfActions;
 	};
 	
     class MACRO_NEW_VEHICLE(Land,AT,TE): 3as_ATTE_Base
@@ -95,6 +98,14 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
 		armor = 5250;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
+
+		tas_canBlift = 1;
+		tas_liftVars = "[[[[0,-3.7,-10]]], [0], [0]]";
+
+
 		soundEngineOnInt[]=
 		{
 			"",

@@ -105,7 +105,7 @@ class CfgVehicles
 		scope=2;
 		forceInGarage=1;
 		scopeCurator=2;
-		displayName=" *Test* Nu-Class Attack Shuttle";
+		displayName= "Nu-Class Attack Shuttle *Test*";
 		model="3as\3as_nu\model\TCW_Nuaclass.p3d";
 		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
 		picture="3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
@@ -20903,6 +20903,8 @@ class CfgVehicles
 					icon = MACRO_HUD_CHANGER_ICONS\noHud.paa
 			   };
 			};
+
+			IntercomMacroAIR
 		};
 
 

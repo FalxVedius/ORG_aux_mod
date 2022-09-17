@@ -27,7 +27,8 @@ class CfgWeapons
     class V_PlateCarrier1_rgr;
     class 3AS_Katarn_Vest_Demo_Base;
     class 3AS_Katarn_Vest_Tech_Base;
-    class SWLB_clone_commando_tech_armor_k1;
+    class 3AS_Katarn_Vest_Team_Leader_Base;
+    class 3AS_Katarn_Vest_Sniper_Base;
 
     class JLTS_CloneVestOfficer : V_PlateCarrier1_rgr
     {
@@ -90,6 +91,14 @@ class CfgWeapons
         class ItemInfo;
     };
     class 3AS_V_Katarn_Vest_Tech : 3AS_Katarn_Vest_Tech_Base
+    {
+        class ItemInfo;
+    };
+    class 3AS_Katarn_Vest_Team_Leader : 3AS_Katarn_Vest_Team_Leader_Base
+    {
+        class ItemInfo;
+    };
+    class 3AS_Katarn_Vest_Sniper : 3AS_Katarn_Vest_Sniper_Base
     {
         class ItemInfo;
     };
@@ -970,6 +979,82 @@ class CfgWeapons
         };
     }
     MACRO_NEW_ASSAULT_TECH_VEST_ITEM(332nd_Assault_Tech_Vest,Tech *WIP*)
+
+
+    class MACRO_NEW_VEST(assault_nco,base) : 3AS_Katarn_Vest_Team_Leader
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Assault Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_ASSAULT_NCO_VEST_ITEM(332nd_Assault_NCO_Vest,NCO *WIP*)
+
+
+    class MACRO_NEW_VEST(assault_ammo,base) : 3AS_Katarn_Vest_Sniper
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[332nd] Assault Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+    MACRO_NEW_ASSAULT_AMMO_VEST_ITEM(332nd_Assault_Ammo_Vest,Bandolier *WIP*)
 
     /// ---- End
 }

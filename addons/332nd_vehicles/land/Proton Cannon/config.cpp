@@ -26,12 +26,13 @@ class CfgAmmo
 		allowAgainstInfantry = 1;
 		aiAmmoUsageFlags = "16 + 64 + 128 + 512";
 		model = "swlw_main\Effects\laser_red.p3d";
+		tracerscale = 16;
 
 		cost = 50;
-		caliber = 34;
-		hit = 600;
-		indirectHit = 30;
-		indirectHitRange = 8;
+		caliber = 18;
+		hit = 700;
+		indirectHit = 10;
+		indirectHitRange = 0.5;
 	};
 };
 
@@ -88,10 +89,10 @@ class CfgWeapons
 			{
 				begin1[] =
 				{
-					"swlb_core\data\sounds\vehicles\aat\weapon\aat_main_shot.wss",
-					3.1622777,
+					"332nd_vehicles\land\Proton Cannon\Sounds\Proton_Cannon.wss",
+					db + 250,
 					1,
-					3000
+					5000
 				};
 				soundBegin[] =
 				{
@@ -218,7 +219,7 @@ class CfgVehicles
 	
 	class MACRO_NEW_VEHICLE(Land,CIS,Proton_Cannon) : 3AS_FieldCannon
     {
-        displayName = "Proton Cannon";
+        displayName = "Proton Cannon *Test*";
         scope = 2;
 		scopeCurator = 2;
 		side = 0;

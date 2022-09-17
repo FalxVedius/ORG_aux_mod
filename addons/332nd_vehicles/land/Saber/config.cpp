@@ -428,7 +428,7 @@ class CfgVehicles
 	
 	class MACRO_NEW_VEHICLE(Land,TX,130): 3as_saber_m1
 	{
-	    displayName = "TX-130 Saber *WIP*";
+	    displayName = "TX-130 Saber";
 	    scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -437,6 +437,9 @@ class CfgVehicles
 
 		armor = 500;
 		armorStructural = 6;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -480,6 +483,7 @@ class CfgVehicles
 				stabilizedInAxes = 3;
 				outGunnerMayFire=1;
 				ingunnerMayFire=0;
+
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(Heavy_Hmg)
@@ -499,6 +503,7 @@ class CfgVehicles
 					MACRO_NEW_MAG(Heavy_HMG,150),
 					MACRO_NEW_MAG(Heavy_HMG,150)
 				};
+
 			};
 			class CargoTurret_01 : CargoTurret_01
 			{
@@ -545,7 +550,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(Land,TX,130_GL) : 3as_saber_m1G
 	{
-		displayName = "TX-130 GL *WIP*";
+		displayName = "TX-130 GL";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -555,10 +560,13 @@ class CfgVehicles
 		armor = 500;
 		armorStructural = 6;
 
+		TFAR_hasIntercom = 1;
+		IntercomMacro
+
 		hiddenSelectionsTextures[] = 
 		{ 
 			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_WeaponsGL.paa"
+			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Weapons.paa"
 		};
 
 		class Turrets : Turrets
@@ -656,7 +664,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(Land,TX,130_Recon) : 3as_saber_m1Recon
 	{
-		displayName = "TX-130 Recon *WIP*";
+		displayName = "TX-130 Recon";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -665,6 +673,9 @@ class CfgVehicles
 
 		armor = 500;
 		armorStructural = 6;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] = 
 		{ 
@@ -741,7 +752,7 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(Land,TX,130_Super) : 3as_saber_super
 	{
-		displayName = "TX-130 Super *WIP*";
+		displayName = "TX-130 Super";
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
@@ -750,6 +761,9 @@ class CfgVehicles
 
 		armor = 500;
 		armorStructural = 6;
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] =
 		{
