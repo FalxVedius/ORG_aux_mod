@@ -40,8 +40,8 @@ class CfgAmmo
 	class SWLW_clones_spec_demo_ammo;
 	class MACRO_NEW_AMMO(Demo_charge): SWLW_clones_spec_demo_ammo
 	{
-		hit = 8500;
-		indirectHit = 4500;
+		hit = 70000;
+		indirectHit = 70000;
 		indirectHitRange = 10;
 	};
 	class 442_impact;
@@ -62,13 +62,13 @@ class CfgAmmo
 	};
 	class MACRO_NEW_AMMO(332_AT_Grenade): MACRO_NEW_AMMO(332_HEDP)
 	{
-		hit = 5000;
+		hit = 30000;
 		caliber=10;
 		deflection=0;
 		explosionTime = 5;
 		deflectionSlowDown = 0.1;
 		model = "\MRC\JLTS\weapons\Explosives\explosive.p3d";
-		indirectHit = 5000;
+		indirectHit = 30000;
 		indirectHitRange = 1;
 	};
 	class 3AS_SonicDetonator;
