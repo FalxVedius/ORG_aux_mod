@@ -416,7 +416,7 @@ class CfgWeapons
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_technician,Flight Technician,332nd_flight_technician)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_officer,Flight Officer,332nd_flight_officer)
     MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_jr_lieutenant,Flight Jr Lieutenant,332nd_flight_jr_lieutenant)
-    MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_captain,Flight Captain,332nd_flight_captain)
+    MACRO_NEW_AVI_UNIFORM_ITEM(332nd_flight_captain,Flight Admiral,332nd_flight_captain)
 
     //ARF Base
     MACRO_NEW_ARF_BASE_UNIFORM_ITEM(332nd_arfbase_trooper,Trooper,332nd_arfbase_trooper)
@@ -600,7 +600,7 @@ class CfgVehicles
     MACRO_NEW_AVI_UNIT(332nd_flight_technician,Flight Technician,332nd_flight_technician,technician\technician_upper.paa,technician\technician_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_officer,Flight Officer,332nd_flight_officer,flight_officer\flight_officer_upper.paa,flight_officer\flight_officer_lower.paa)
     MACRO_NEW_AVI_UNIT(332nd_flight_jr_lieutenant,Flight Jr Lieutenant,332nd_flight_jr_lieutenant,jr_lieutenant\jr_lieutenant_upper.paa,jr_lieutenant\jr_lieutenant_lower.paa)
-    MACRO_NEW_AVI_UNIT(332nd_flight_captain,Flight Captain,332nd_flight_captain,captain\captain_upper.paa,captain\captain_lower.paa)
+    MACRO_NEW_AVI_UNIT(332nd_flight_captain,Flight Admiral,332nd_flight_captain,captain\captain_upper.paa,captain\captain_lower.paa)
 
     //ARF Base
     MACRO_NEW_ARF_BASE_UNIT(332nd_arfbase_trooper,Recon Base Trooper,332nd_arfbase_trooper,Trooper\arf_trooper_upper_ca.paa,Trooper\arf_trooper_lower_ca.paa,332nd_aux_arf_helmet_332nd_recon)
