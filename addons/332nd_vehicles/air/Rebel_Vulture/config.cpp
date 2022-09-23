@@ -231,28 +231,9 @@ class CfgVehicles
 					  class Pylons1 : Pylons1
 					  {
 				  
-						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
+						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x24";
 					  };
-					  class Pylons2 : Pylons2
-					  {
-						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-					  };
-					  class Pylons3 : Pylons3
-					  {
-						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-					  };
-					  class Pylons4 : Pylons4
-					  {
-						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-					  };
-					  class Pylons5 : Pylons5
-					  {
-						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-					  };
-					  class Pylons6 : Pylons6
-					  {
-						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-					  };
+					  
 					 
 				  };
 				  class Presets
@@ -267,10 +248,7 @@ class CfgVehicles
 						  displayName = "Default";
 						  attachment[] =
 						  {
-							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
-							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
-							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
-							  "332nd_aux_magazine_R_Pylon_AA_low_x12",
+							  "332nd_aux_magazine_R_Pylon_AA_low_x24",
 							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells",
 							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells"
 						  };
@@ -300,7 +278,6 @@ class CfgVehicles
 		  };
 		  magazines[] =
 		  {
-			  MACRO_NEW_MAG(Pylon_PlasmaBomb,3),
 			  MACRO_NEW_MAG(Pylon_PlasmaBomb,3),
 			  MACRO_NEW_MAG(Vulture_30mm,1000),
 			  MACRO_NEW_MAG(Vulture_30mm,1000),

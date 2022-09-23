@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(R_E5)
 	{
-		author = "Halligan";
+		author = "332nd Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -44,7 +44,7 @@ class CfgWeapons
 		JLTS_canHaveShield=1;
 		JLTS_shieldedWeapon=MACRO_NEW_WEAPON(E5_Shield);
 		scope=2;
-		displayName="rebel E5";
+		displayName="Rebel E5";
 		descriptionShort="Standard Blaster";
 		picture="\MRC\JLTS\weapons\E5\data\ui\E5_ui_ca.paa";
 		model="\MRC\JLTS\weapons\E5\E5.p3d";

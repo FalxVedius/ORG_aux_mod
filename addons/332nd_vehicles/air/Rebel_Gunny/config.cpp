@@ -1,4 +1,4 @@
-#include "../../../332nd_main/macros/main.hpp" // my config macro lib
+/*#include "../../../332nd_main/macros/main.hpp" // my config macro lib
 #define MACRO_GUNNY_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\air\Rebel_GUNNY
 class CfgPatches
 {
@@ -193,7 +193,7 @@ class CfgWeapons
 		};
 	};
 
-};
+};*/
 
 
 	

@@ -578,6 +578,18 @@
 		}; \
 	};
 
+#define MACRO_NEW_REBEL_MG_UNIFORM_ITEM(classname,displayname,uniformClassname)\
+	class MACRO_NEW_UNIFORM(rebel_Mg,classname): MACRO_NEW_UNIFORM(rebel_Mg,base)\
+	{\
+		displayName = [332nd] Rebel Mg Uniform ('##displayname##');\
+		scope = 2;\
+		class ItemInfo : ItemInfo\
+		{\
+			uniformClass = MACRO_NEW_UNIT(rebel_Mg,uniformClassname);\
+		}; \
+	};
+
+
 // ---- END REBEL ----
 
 // ---- START REBEL HUMAN ----
@@ -1233,6 +1245,15 @@
 			scope = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(rebel_Breacher,uniformClassname);\
+		}
+
+#define MACRO_NEW_REBEL_MG_UNIT(classname,displayname,uniformClassname)\
+		class MACRO_NEW_UNIT(rebel_Mg,classname): MACRO_NEW_UNIT(rebel_Mg,base)\
+		{\
+			author = MACRO_AUTHOR;\
+			scope = 2;\
+			displayName = displayname;\
+			uniformClass = MACRO_NEW_UNIFORM(rebel_Mg,uniformClassname);\
 		}
 
 

@@ -195,6 +195,13 @@ class CfgEditorSubcategories
 		side = 2;
 		proiority = 6;
 	};
+
+	class EdSubcat_332nd_Rebel_TURR
+	{
+		displayName = "Turrents";
+		side = 2;
+		proiority = 6;
+	};
 };
 class CfgMarkers
 {
@@ -738,17 +745,6 @@ class CfgWeapons
 		};
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_FL,base) : I_rebel_human
-	{
-		displayName = "[332nd] Rebel Fireteam Leader uniform ('base')";
-		scope = 0;
-		class ItemInfo : ItemInfo
-		{
-			uniformClass = MACRO_NEW_UNIT(rebel_FL,base);
-			containerClass = "Supply140";
-		};
-	};
-
 	class MACRO_NEW_UNIFORM(rebel_AA,base) : JLTS_DroidB1
 	{
 		displayName = "[332nd] Rebel AA uniform ('base')";
@@ -789,6 +785,17 @@ class CfgWeapons
 		class ItemInfo : ItemInfo
 		{
 			uniformClass = MACRO_NEW_UNIT(rebel_Breacher,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Mg,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Heavy Gunner uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Mg,base);
 			containerClass = "Supply140";
 		};
 	};
@@ -13054,39 +13061,19 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AT_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
 		
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			
+
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_M26_Clacker",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_M26_Clacker",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 
 		class HitPoints : HitPoints
@@ -13282,37 +13269,25 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_Valken38x","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_Valken38x","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_R_Valken38x","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Sniper_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15x_x2)
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15x_x2)
 
 		};
 		items[] =
 		{
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		respawnItems[] =
 		{
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 
 		class HitPoints : HitPoints
@@ -13508,20 +13483,17 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Medic_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_5(332nd_aux_magazine_35sa_low_x30),
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_5(332nd_aux_magazine_35sa_low_x30),
+
 
 		};
 		items[] =
@@ -13726,45 +13698,25 @@ class CfgVehicles
 
 		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
 		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
-		weapons[] = {"SWLW_LS150" ,"Throw","Put"};
-		respawnWeapons[] = { "SWLW_LS150","Throw","Put" };
+		weapons[] = {"332nd_aux_weapon_BK_152","Throw","Put"};
+		respawnWeapons[] = {"332nd_aux_weapon_BK_152","Throw","Put" };
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 		backpack = "";
 		magazines[] =
 		{
-			mag_5(SWLW_LS150_mag)
+			mag_5(332nd_aux_magazine_BK_152_x30)
 		};
 		respawnMagazines[] =
 		{
-			mag_5(SWLW_LS150_mag)
+			mag_5(332nd_aux_magazine_BK_152_x30)
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+		
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 
 		class HitPoints : HitPoints
@@ -13951,7 +13903,7 @@ class CfgVehicles
 		side = 2;
 
 		uniformClass = MACRO_NEW_UNIFORM(rebel_SL,base);
-		hiddenSelections[] = { "camo1"};
+		hiddenSelections[] = {"camo1"};
 
 		
 
@@ -13963,45 +13915,22 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_sqaud_lead_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
+			
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
+			
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			"ACE_plasmaIV_500",
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		headgearList[] =
 		{
-
 			"H_Cap_red", 0.7,
 			"H_Cap_tan", 0.7,
 			"H_Cap_blk", 0.7,
@@ -14011,7 +13940,31 @@ class CfgVehicles
 			"H_Construction_basic_white_F", 0.7,
 			"H_Construction_headset_black_F", 0.7,
 			"H_HeadSet_red_F", 0.7,
-
+			"H_WirelessEarpiece_F", 0.7,
+			"H_HeadBandage_bloody_F", 0.7,
+			"H_StrawHat_dark", 0.7,
+			"H_ShemagOpen_tan", 0.7,
+		};
+		allowedFacewear[] =
+		{
+			"G_Bandanna_aviator", 1,
+			"G_Bandanna_beast", 1,
+			"G_Bandanna_blk", 1,
+			"G_Bandanna_khk", 1,
+			"G_Bandanna_oli", 1,
+			"G_Bandanna_shades", 1,
+			"G_Bandanna_sport", 1,
+			"G_Squares_Tinted", 1,
+			"G_Sport_BlackWhite", 1,
+			"OPTRE_Glasses_Cigarette", 1,
+			"OPTRE_Glasses_Cigar", 1,
+			"332nd_Scarf_white", 1,
+			"332nd_Scarf_red", 1,
+			"332nd_Scarf_blue", 1,
+			"332nd_Scarf", 1,
+			"332nd_LowProfile", 1,
+			"332nd_EOD", 1,
+			"", 1,
 		};
 
 
@@ -14221,41 +14174,21 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AA_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_E5Low_x50)
+			
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_E5Low_x50)
+			
 
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			"ACE_plasmaIV_500",
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			"ACE_plasmaIV_500",
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 
 		class HitPoints : HitPoints
@@ -14467,31 +14400,11 @@ class CfgVehicles
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 
 		class HitPoints : HitPoints
@@ -14693,41 +14606,235 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Breacher_pack";
 		magazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DP23_x12Wide)
+			
 
 		};
 		respawnMagazines[] =
 		{
-			mag_5(332nd_aux_magazine_R_DP23_x12Wide)
+			
 
 		};
 		items[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
 		};
 		respawnItems[] =
 		{
-			mag_2(ACE_CableTie),
-			mag_10(332nd_aux_medical_BactaSpary),
-			mag_5(332nd_aux_medical_PlastiBandage),
-			"ACE_EntrenchingTool",
-			"ACE_Flashlight_XL50",
-			"MineDetector",
-			mag_2(ACE_epinephrine),
-			mag_3(ACE_plasmaIV_500),
-			"ACE_wirecutter",
-			"ACE_EarPlugs",
-			mag_4(332nd_aux_medical_PressureCuff),
+			
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(rebel_Mg,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Rebel Heavy Gunner";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Mg,base);
+		hiddenSelections[] = { "camo1" };
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Basic_Rebel_Reprogramed_Driod.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_M380","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_M380","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_M380_x200)
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_M380_x200)
+
+		};
+		items[] =
+		{
+
+		};
+		respawnItems[] =
+		{
+
 		};
 
 		class HitPoints : HitPoints
@@ -16237,8 +16344,6 @@ class CfgVehicles
 
 	};//Added
 
-
-		displayName = "[332nd] B2 Battle Droid Base";
 	// ---- End Opfor Units for Uniforms ----
 
 	// ---- End Opfor Units for Uniforms ----

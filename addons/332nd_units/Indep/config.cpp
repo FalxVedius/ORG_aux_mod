@@ -1,4 +1,4 @@
- #include "../../332nd_main/macros/main.hpp"
+#include "../../332nd_main/macros/main.hpp"
 /*current Mission
 Make rebels carry custom equipment as well as equipment in there backpack, with spawnable groups of rebels
 */
@@ -6,7 +6,7 @@ class CfgPatches
 {
     class MACRO_PATCH_NAME(indep_units)
     {
-        author = "Bugs+Thunder";
+        author = "332nd Aux Team";
         addonRootClass = MACRO_PATCH_NAME(units);
         requiredAddons[] =
         {
@@ -20,6 +20,7 @@ class CfgPatches
 			MACRO_NEW_UNIT(rebel_Medic,332nd_indep_rebel_Medic),
 			MACRO_NEW_UNIT(rebel_Heavy,332nd_indep_rebel_Heavy),
 			MACRO_NEW_UNIT(rebel_SL,332nd_indep_rebel_SL),
+			MACRO_NEW_UNIT(rebel_Mg,332nd_indep_rebel_Mg),
 			MACRO_NEW_UNIT(rebel_AA,332nd_indep_rebel_AA),
 			MACRO_NEW_UNIT(rebel_Spotter,332nd_indep_rebel_Spotter),
 			MACRO_NEW_UNIT(rebel_Breacher,332nd_indep_rebel_Breacher),
@@ -37,6 +38,7 @@ class CfgPatches
 			MACRO_NEW_UNIFORM(rebel_Medic,332nd_indep_rebel_Medic),
 			MACRO_NEW_UNIFORM(rebel_Heavy,332nd_indep_rebel_Heavy),
 			MACRO_NEW_UNIFORM(rebel_SL,332nd_indep_rebel_SL),
+			MACRO_NEW_UNIFORM(rebel_Mg,332nd_indep_rebel_Mg),
 			MACRO_NEW_UNIFORM(rebel_AA,332nd_indep_rebel_AA),
 			MACRO_NEW_UNIFORM(rebel_Spotter,332nd_indep_rebel_Spotter),
 			MACRO_NEW_UNIFORM(rebel_Breacher,332nd_indep_rebel_Breacher),
@@ -60,7 +62,7 @@ class CfgWeapons
 	class U_C_Mechanic_01_F;
 	class C_Man_casual_1_F;
 	class JLTS_DroidB1;
-	class I_rebel_human;
+
 
 	class I_R_H_AT;
 	class I_R_H_S;
@@ -90,6 +92,11 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
+	class MACRO_NEW_UNIFORM(rebel_Mg,base) : JLTS_DroidB1
+	{
+		class ItemInfo;
+	};
+
 	class MACRO_NEW_UNIFORM(rebel_Heavy,base) : JLTS_DroidB1
 	{
 		class ItemInfo;
@@ -110,7 +117,7 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
-	class MACRO_NEW_UNIFORM(rebel_SL,base) : I_rebel_human
+	class MACRO_NEW_UNIFORM(rebel_SL,base) : C_Man_casual_6_F
 	{
 		class ItemInfo;
 	};
@@ -148,7 +155,7 @@ class CfgWeapons
 		class ItemInfo;
 	};
 
-	//Rebel
+	//Rebel Driods
 	MACRO_NEW_REBEL_UNIFORM_ITEM(332nd_indep_rebel,Rebel,332nd_indep_rebel)//Class name, shown name, unit name
 	MACRO_NEW_REBEL_AT_UNIFORM_ITEM(332nd_indep_rebel_AT,AT Rebel,332nd_indep_rebel_AT)
 	MACRO_NEW_REBEL_SNIPER_UNIFORM_ITEM(332nd_indep_rebel_Sniper,Sniper Rebel,332nd_indep_rebel_Sniper)
@@ -158,6 +165,9 @@ class CfgWeapons
 	MACRO_NEW_REBEL_AA_UNIFORM_ITEM(332nd_indep_rebel_AA,AA Rebel,332nd_indep_rebel_AA)
 	MACRO_NEW_REBEL_SPOTTER_UNIFORM_ITEM(332nd_indep_rebel_Spotter,Spotter Rebel,332nd_indep_rebel_Spotter)
 	MACRO_NEW_REBEL_BREACHER_UNIFORM_ITEM(332nd_indep_rebel_Breacher,Breacher Rebel,332nd_indep_rebel_Breacher)
+	MACRO_NEW_REBEL_MG_UNIFORM_ITEM(332nd_indep_rebel_Mg, Mg Rebel, 332nd_indep_rebel_Mg)
+
+	//Rebel Humans
 	MACRO_NEW_REBEL_HUMAN_UNIFORM_ITEM(332nd_indep_rebel_Human,Human Rebel,332nd_indep_rebel_Human)
 	MACRO_NEW_REBEL_HUMAN_AT_UNIFORM_ITEM(332nd_indep_rebel_Human_AT,Human AT Rebel,332nd_indep_rebel_Human_AT)
 	MACRO_NEW_REBEL_HUMAN_SNIPER_UNIFORM_ITEM(332nd_indep_rebel_Human_Sniper,Human Sniper Rebel,332nd_indep_rebel_Human_Sniper)
@@ -179,6 +189,7 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(rebel_AA,base);
 	class MACRO_NEW_UNIT(rebel_Spotter,base);
 	class MACRO_NEW_UNIT(rebel_Breacher,base);
+	class MACRO_NEW_UNIT(rebel_Mg,base);
 	//Rebel Human
 	class MACRO_NEW_UNIT(rebel_Human,base);
 	class MACRO_NEW_UNIT(rebel_Human_AT,base);
@@ -197,6 +208,7 @@ class CfgVehicles
 		MACRO_NEW_REBEL_AA_UNIT(332nd_indep_rebel_AA,AA Rebel,332nd_indep_rebel_AA)
 		MACRO_NEW_REBEL_SPOTTER_UNIT(332nd_indep_rebel_Spotter,Spotter Rebel,332nd_indep_rebel_Spotter)
 		MACRO_NEW_REBEL_BREACHER_UNIT(332nd_indep_rebel_Breacher,Breacher Rebel,332nd_indep_rebel_Breacher)
+		MACRO_NEW_REBEL_MG_UNIT(332nd_indep_rebel_Mg,MG Rebel,332nd_indep_rebel_Mg)
 
 		//Rebel Human
 		MACRO_NEW_REBEL_HUMAN_UNIT(332nd_indep_rebel_Human,Human Rebel,332nd_indep_rebel_Human)
@@ -224,7 +236,7 @@ class CfgGroups
 
 				class rebelFireteamBasic
 				{
-					name = "Rifeteam"
+					name = "Rifeteam";
 					side = 2;
 					faction = "EdCat_332nd_Rebel";
 					class Unit0
@@ -303,7 +315,7 @@ class CfgGroups
 
 				class rebelFireteamAT
 				{
-					name = "AT Team"
+					name = "AT Team";
 						side = 2;
 					faction = "EdCat_332nd_Rebel";
 					class Unit0
@@ -346,7 +358,7 @@ class CfgGroups
 
 				class rebelFireteamAA
 				{
-					name = "AA Team"
+					name = "AA Team";
 						side = 2;
 					faction = "EdCat_332nd_Rebel";
 					class Unit0
@@ -389,7 +401,7 @@ class CfgGroups
 
 				class rebelSinperteam
 				{
-					name = "Marksman Team"
+					name = "Marksman Team";
 						side = 2;
 					faction = "EdCat_332nd_Rebel";
 					class Unit0
@@ -620,7 +632,7 @@ class CfgGroups
 			class RebelPlanes
 			{
 				side = 2;
-				name = "Rebel Planes"
+				name = "Rebel Planes";
 					class HorentSwarm
 				{
 					name = "Horent Swarm"

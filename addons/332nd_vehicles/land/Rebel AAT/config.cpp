@@ -1,4 +1,4 @@
-#include "../../../332nd_main/macros/main.hpp" // my config macro lib
+/*#include "../../../332nd_main/macros/main.hpp" // my config macro lib
 #define MACRO_AAT_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\land\Rebel_AAT
 class CfgPatches
 {
@@ -264,4 +264,4 @@ class CfgVehicles
 
 	};
 
-};
+}; */

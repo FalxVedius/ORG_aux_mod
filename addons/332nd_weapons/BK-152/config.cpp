@@ -20,35 +20,6 @@ class CfgPatches
 	};
 };
 
-class CfgWeapons
-{
-	
-	class arifle_AK12_base_F;
-	class MACRO_NEW_WEAPON(BK_152) : arifle_AK12_base_F
-	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(BK-152)
-		picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
-		baseWeapon = "";
-		scope = 2;
-		displayName = "$STR_A3_CfgWeapons_arifle_AK12_base_F0";
-		picture = "\A3\Weapons_F_Exp\Rifles\AK12\Data\UI\icon_arifle_AK12_F_X_CA.paa";
-		hiddenSelectionsTextures[] =
-		{
-			"\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_1_co.paa",
-			"\A3\Weapons_F_Exp\Rifles\AK12\Data\AK12_ak12_2_co.paa"
-		};
-		scope = 2;
-		magazines[] =
-		{
-			MACRO_NEW_MAG(BK_152,30)
-		};
-		magazineWell[] =
-		{
-			""
-		};
-	};
-};
-
 class CfgMagazines
 {
 	class MACRO_NEW_AMMO(R_762_green);
@@ -69,3 +40,98 @@ class CfgMagazines
 		tracersEvery = 1;
 	};
 };
+
+class mode_FullAuto;
+class BaseSoundModeType;
+class MuzzleSlot;
+class CowsSlot;
+class PointerSlot;
+class UnderBarrelSlot;
+class Mode_SemiAuto;
+class WeaponSlotsInfo;
+
+class CfgWeapons
+{
+
+	class OPTRE_Commando;
+	class MACRO_NEW_WEAPON(BK_152) : OPTRE_Commando
+	{
+		scope = 2;
+		displayName = MACRO_WEAPON_DISPLAYNAME(BK - 152)
+			magazines[] = {
+				MACRO_NEW_MAG(BK_152,30)
+			};
+		canShootInWater = 1;
+		recoil = "recoil_spar";
+		recoilprone = "recoil_spar";
+		baseWeapon = "";
+		modes[] = { "Single","" };
+		hiddenSelectionsTextures[] =
+		{
+			"OPTRE_Weapons\Commando\data\commando_black_co.paa",
+			"OPTRE_Weapons\Commando\data\commando2_black_co.paa"
+		};
+		muzzles[] =
+		{
+			"this"
+		};
+
+		class Single : Mode_SemiAuto
+		{
+			sounds[] = { "StandardSound" };
+			class StandardSound : BaseSoundModeType
+			{
+				soundSetShot[] = { "332_DC15c_Shot_SoundSet","332_DC15a_Tail_SoundSet" };
+			};
+			reloadTime = 0.096000001;
+			recoil = "recoil_single_mx";
+			recoilProne = "recoil_single_prone_mx";
+			aiBurstTerminable = 1;
+			dispersion = 0.0020000001;
+			minRange = 2;
+			aiDispersionCoefX = 2.0;
+			aiDispersionCoefY = 2.0;
+			minRangeProbab = 0.5;
+			midRange = 200;
+			midRangeProbab = 0.69999999;
+			maxRange = 400;
+			maxRangeProbab = 0.30000001;
+		};
+		class WeaponSlotsInfo : WeaponSlotsInfo
+		{
+			mass = 50;
+			class MuzzleSlot : MuzzleSlot
+			{
+				compatibleitems[] =
+				{
+					"muzzle_snds_65_TI_blk_F",
+					"OPTRE_MA5Suppressor"
+				};
+			};
+			class CowsSlot : CowsSlot
+			{
+				compatibleitems[] =
+				{
+					"3as_optic_reflex_dc15c"
+				};
+			};
+			class PointerSlot : PointerSlot
+			{
+				compatibleitems[] =
+				{
+					"acc_flashlight"
+				};
+			};
+			class UnderBarrelSlot : UnderBarrelSlot
+			{
+				compatibleItems[] =
+				{
+					"bipod_03_F_blk"
+				};
+			};
+
+		};
+	};
+};
+
+

@@ -28,16 +28,16 @@ class CfgAmmo
 			2000
 		};
 		manualcontrol = 0;
-		missileLockMaxDistance = 8000;
+		missileLockMaxDistance = 6000;
 		missileLockMinDistance = 0;
 		effectsMissile = "332nd_aux_effects_missile_Rocket_Green";
 		caliber = 1;
 		weaponLockSystem = "1 + 2 + 4 + 16"; //Visual + Infra-red + laser_guided + Missile
-		missileKeepLockedCone = 360;
-		missileLockCone = 360;
-		indirectHit = 15;
-		hit = 25;
-		cmImmunity = 0.2;
+		missileKeepLockedCone = 135;
+		missileLockCone = 135;
+		indirectHit = 35;
+		hit = 65;
+		cmImmunity = 0.1;
 		whistleOnFire = 1;
 		cost = 2000;
 		missileLockMaxSpeed = 7000;
@@ -70,13 +70,14 @@ class CfgAmmo
 		effectsMissile = "332nd_aux_effects_missile_Rocket_Dark_Green";
 		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
 		caliber = 1;
-		missileLockMaxDistance = 3000;
+		missileLockMaxDistance = 6000;
 		missileLockMinDistance = 0;
 		missileLockCone = 180;
 		airlock = 0;
-		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
+		weaponLockSystem = "1 + 2 + 4 + 16";
 		missileKeepLockedCone = 180;
 		hit = 85;
+		cost = 2000;
 		indirectHit = 35;
 		mass = 2;
 		indirectHitRange = 8;
@@ -88,10 +89,7 @@ class CfgAmmo
 		effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
 		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
 		proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
-		//thrust = 50;
 		timeToLive = 60;
-		//typicalSpeed = 50;
-		//thrustTime = 1.5;
 		explosionEffects = "MK82_Explode";
 		weaponLockSystem = "8";
 		missileKeepLockedCone = 360;
@@ -109,11 +107,11 @@ class CfgMagazines
 {
 	
 	class PylonRack_12Rnd_missiles;
-	class MACRO_NEW_MAG(R_Pylon_AA_low,12) : PylonRack_12Rnd_missiles
+	class MACRO_NEW_MAG(R_Pylon_AA_low,24) : PylonRack_12Rnd_missiles
 	{
 		hardpoints[] = { "332_A_Pylon" };
 		displayName = "Firefly Cluster Missile";
-		count = 12;
+		count = 24;
 		descriptionshort = "Air to Air Firefly Cluster Missile";
 		pylonWeapon = MACRO_NEW_WEAPON(R_AALow_Pylon);
 		displayNameShort = "A2A Firefly Missiles";
@@ -159,13 +157,13 @@ class CfgWeapons
 	{
 		magazineWell[] = {};
 		magazines[] = {
-			MACRO_NEW_MAG(R_Pylon_AA_low,12)
+			MACRO_NEW_MAG(R_Pylon_AA_low,24)
 		};
 		lockAcquire = 1;
 		displayName = "Firefly";
 		weaponLockDelay = 0;
 		burst = 3;
-		aiRateOfFire = 5.0;
+		reloadTime = 1.5;
 		
 	};
 
@@ -177,7 +175,7 @@ class CfgWeapons
 		magazines[] = {
 			 MACRO_NEW_MAG(R_Pylon_AGM_Med,12),
 		};
-		displayName = "AGMM";
+		displayName = "AGM";
 		lockAcquire = 1;
 	};
 

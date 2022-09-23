@@ -808,77 +808,6 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class CableTie
-			{
-				name = "ACE_CableTie";
-				count = 3;
-			};
-
-			class Entrenching_Tool_rebel
-			{
-				namne = "ACE_EntrenchingTool";
-				count = 1;
-			};
-
-			class Flashlight_rebel
-			{
-				namne = "ACE_Flashlight_XL50";
-				count = 1;
-			};
-
-			class M26_Clacker_rebel
-			{
-				namne = "ACE_M26_Clacker";
-				count = 1;
-			};
-
-			class MineDetector_rebel
-			{
-				namne = "MineDetector";
-				count = 1;
-			};
-
-			class Wirecutter_rebel
-			{
-				name = "ACE_wirecutter";
-				count = 1;
-			};
-
-			class Earplugs_rebel
-			{
-				name = "ACE_EarPlugs";
-				count = 1;
-			};
-
-			class epinephrine_rebel
-			{
-				name = "ACE_epinephrine";
-				count = 2;
-			};
-
-			class PlasmaIV_500_rebel
-			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
-			};
-
-			class Pressure_Cuff_rebel
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 4;
-			};
-
-			class Plasti_Band_rebel
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 5;
-			};
-
-			class Bacta_Spray_rebel
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 10;
-			};
 
 		};
 
@@ -892,19 +821,13 @@ class CfgVehicles
 			class DC_15s_x60_rebel
 			{
 				magazine = "332nd_aux_magazine_R_DC_15s_x60";
-				count = 15;
-			};
-
-			class Frag_rebel
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 2;
+				count = 3;
 			};
 
 			class RPS6_AT_rnd_rebel
 			{
 				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
-				count = 4;
+				count = 2;
 			};
 
 		};
@@ -928,78 +851,7 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class CableTie
-			{
-				name = "ACE_CableTie";
-				count = 3;
-			};
-
-			class Entrenching_Tool_rebel
-			{
-				namne = "ACE_EntrenchingTool";
-				count = 1;
-			};
-
-			class Flashlight_rebel
-			{
-				namne = "ACE_Flashlight_XL50";
-				count = 1;
-			};
-
-			class M26_Clacker_rebel
-			{
-				namne = "ACE_M26_Clacker";
-				count = 1;
-			};
-
-			class MineDetector_rebel
-			{
-				namne = "MineDetector";
-				count = 1;
-			};
-
-			class Wirecutter_rebel
-			{
-				name = "ACE_wirecutter";
-				count = 1;
-			};
-
-			class Earplugs_rebel
-			{
-				name = "ACE_EarPlugs";
-				count = 1;
-			};
-
-			class epinephrine_rebel
-			{
-				name = "ACE_epinephrine";
-				count = 2;
-			};
-
-			class PlasmaIV_500_rebel
-			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
-			};
-
-			class Pressure_Cuff_rebel
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 4;
-			};
-
-			class Plasti_Band_rebel
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 5;
-			};
-
-			class Bacta_Spray_rebel
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 10;
-			};
-
+			
 		};
 
 		class TransportWeapons
@@ -1009,22 +861,16 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-			class DC_15s_x60_rebel
+			class E5Low_x50_rebel
 			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
-				count = 15;
-			};
-
-			class Frag_rebel
-			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
-				count = 2;
+				magazine = "332nd_aux_magazine_R_E5Low_x50";
+				count = 3;
 			};
 
 			class RPS6_AA_rnd_rebel
 			{
 				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
-				count = 4;
+				count = 2;
 			};
 
 		};
@@ -1049,77 +895,6 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class CableTie
-			{
-				name = "ACE_CableTie";
-				count = 3;
-			};
-
-			class Entrenching_Tool_rebel
-			{
-				namne = "ACE_EntrenchingTool";
-				count = 1;
-			};
-
-			class Flashlight_rebel
-			{
-				namne = "ACE_Flashlight_XL50";
-				count = 1;
-			};
-
-			class M26_Clacker_rebel
-			{
-				namne = "ACE_M26_Clacker";
-				count = 1;
-			};
-
-			class MineDetector_rebel
-			{
-				namne = "MineDetector";
-				count = 1;
-			};
-
-			class Wirecutter_rebel
-			{
-				name = "ACE_wirecutter";
-				count = 1;
-			};
-
-			class Earplugs_rebel
-			{
-				name = "ACE_EarPlugs";
-				count = 1;
-			};
-
-			class epinephrine_rebel
-			{
-				name = "ACE_epinephrine";
-				count = 2;
-			};
-
-			class PlasmaIV_500_rebel
-			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
-			};
-
-			class Pressure_Cuff_rebel
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 4;
-			};
-
-			class Plasti_Band_rebel
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 5;
-			};
-
-			class Bacta_Spray_rebel
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 10;
-			};
 
 		};
 
@@ -1130,18 +905,11 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-			class DC_15x_x10_rebel
+			class R_Valken38x_x15
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x10";
-				count = 7;
+				magazine = "332nd_aux_magazine_R_Valken38x_x15";
+				count = 3;
 			};
-
-			class DC_15x_x2_rebel
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
-				count = 10;
-			};
-
 
 			class Smoke_Blue_rebel
 			{
@@ -1183,77 +951,6 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class CableTie
-			{
-				name = "ACE_CableTie";
-				count = 3;
-			};
-
-			class Entrenching_Tool_rebel
-			{
-				namne = "ACE_EntrenchingTool";
-				count = 1;
-			};
-
-			class Flashlight_rebel
-			{
-				namne = "ACE_Flashlight_XL50";
-				count = 1;
-			};
-
-			class M26_Clacker_rebel
-			{
-				namne = "ACE_M26_Clacker";
-				count = 1;
-			};
-
-			class MineDetector_rebel
-			{
-				namne = "MineDetector";
-				count = 1;
-			};
-
-			class Wirecutter_rebel
-			{
-				name = "ACE_wirecutter";
-				count = 1;
-			};
-
-			class Earplugs_rebel
-			{
-				name = "ACE_EarPlugs";
-				count = 1;
-			};
-
-			class epinephrine_rebel
-			{
-				name = "ACE_epinephrine";
-				count = 2;
-			};
-
-			class PlasmaIV_500_rebel
-			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
-			};
-
-			class Pressure_Cuff_rebel
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 4;
-			};
-
-			class Plasti_Band_rebel
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 5;
-			};
-
-			class Bacta_Spray_rebel
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 10;
-			};
 
 		};
 
@@ -1264,36 +961,12 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-			class DC_15x_x10_rebel
+			class R_DP23_X12
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x10";
-				count = 7;
+				magazine = "332nd_aux_magazine_R_DP23_x12";
+				count = 4;
 			};
 
-			class DC_15x_x2_rebel
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
-				count = 10;
-			};
-
-
-			class Smoke_Blue_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
-				count = 2;
-			};
-
-			class Smoke_Orange_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
-				count = 2;
-			};
-
-			class Smoke_White_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
-				count = 2;
-			};
 
 		};
 
@@ -1451,77 +1124,6 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class CableTie
-			{
-				name = "ACE_CableTie";
-				count = 3;
-			};
-
-			class Entrenching_Tool_rebel
-			{
-				namne = "ACE_EntrenchingTool";
-				count = 1;
-			};
-
-			class Flashlight_rebel
-			{
-				namne = "ACE_Flashlight_XL50";
-				count = 1;
-			};
-
-			class M26_Clacker_rebel
-			{
-				namne = "ACE_M26_Clacker";
-				count = 1;
-			};
-
-			class MineDetector_rebel
-			{
-				namne = "MineDetector";
-				count = 1;
-			};
-
-			class Wirecutter_rebel
-			{
-				name = "ACE_wirecutter";
-				count = 1;
-			};
-
-			class Earplugs_rebel
-			{
-				name = "ACE_EarPlugs";
-				count = 1;
-			};
-
-			class epinephrine_rebel
-			{
-				name = "ACE_epinephrine";
-				count = 2;
-			};
-
-			class PlasmaIV_500_rebel
-			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
-			};
-
-			class Pressure_Cuff_rebel
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 4;
-			};
-
-			class Plasti_Band_rebel
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 5;
-			};
-
-			class Bacta_Spray_rebel
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 10;
-			};
 
 		};
 
@@ -1532,36 +1134,13 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-			class DC_15x_x10_rebel
+
+			class R_BK_152_x30
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x10";
-				count = 7;
+				magazine = "332nd_aux_magazine_R_BK_152_x30";
+				count = 4;
 			};
 
-			class DC_15x_x2_rebel
-			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
-				count = 10;
-			};
-
-
-			class Smoke_Blue_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
-				count = 2;
-			};
-
-			class Smoke_Orange_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
-				count = 2;
-			};
-
-			class Smoke_White_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
-				count = 2;
-			};
 
 		};
 
@@ -1611,29 +1190,10 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-			class DC_15s_x60_rebel_medic
+			class DC_15s_x60_rebel
 			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
-				count = 7;
-			};
-
-			class 35sa_low_x30_rebel_medic
-			{
-				magazine = "332nd_aux_magazine_35sa_low_x30";
-				count = 10;
-			};
-
-
-			class Smoke_Blue_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
-				count = 2;
-			};
-
-			class Smoke_Orange_rebel
-			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
-				count = 2;
+				magazine = "332nd_aux_magazine_R_DC_15s_x60";
+				count = 3;
 			};
 
 			class Smoke_White_rebel
@@ -1663,77 +1223,6 @@ class CfgVehicles
 
 		class TransportItems
 		{
-			class CableTie
-			{
-				name = "ACE_CableTie";
-				count = 3;
-			};
-
-			class Entrenching_Tool_rebel
-			{
-				namne = "ACE_EntrenchingTool";
-				count = 1;
-			};
-
-			class Flashlight_rebel
-			{
-				namne = "ACE_Flashlight_XL50";
-				count = 1;
-			};
-
-			class M26_Clacker_rebel
-			{
-				namne = "ACE_M26_Clacker";
-				count = 1;
-			};
-
-			class MineDetector_rebel
-			{
-				namne = "MineDetector";
-				count = 1;
-			};
-
-			class Wirecutter_rebel
-			{
-				name = "ACE_wirecutter";
-				count = 1;
-			};
-
-			class Earplugs_rebel
-			{
-				name = "ACE_EarPlugs";
-				count = 1;
-			};
-
-			class epinephrine_rebel
-			{
-				name = "ACE_epinephrine";
-				count = 2;
-			};
-
-			class PlasmaIV_500_rebel
-			{
-				name = "ACE_plasmaIV_500";
-				count = 2;
-			};
-
-			class Pressure_Cuff_rebel
-			{
-				name = "332nd_aux_medical_PressureCuff";
-				count = 4;
-			};
-
-			class Plasti_Band_rebel
-			{
-				name = "332nd_aux_medical_PlastiBandage";
-				count = 5;
-			};
-
-			class Bacta_Spray_rebel
-			{
-				name = "332nd_aux_medical_BactaSpray";
-				count = 10;
-			};
 
 		};
 
@@ -1744,7 +1233,11 @@ class CfgVehicles
 
 		class TransportMagazines
 		{
-
+			class DC_15s_x60_rebel
+			{
+				magazine = "332nd_aux_magazine_R_DC_15s_x60";
+				count = 3;
+			};
 		};
 
 
