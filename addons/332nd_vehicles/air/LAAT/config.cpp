@@ -254,6 +254,7 @@ class CfgVehicles
 	class 3AS_Patrol_LAAT_Base : Heli_Attack_01_base_F
 	{
 		class Turrets;
+		class HitPoints;
 	};
 
 	class 3AS_Patrol_LAAT_Republic : 3AS_Patrol_LAAT_Base
@@ -265,6 +266,10 @@ class CfgVehicles
 		{
 			class MainTurret;
 			class Copilot;
+		};
+		class HitPoints : HitPoints
+		{
+			class HitVRotor;
 		};
 
 	};
@@ -3407,6 +3412,22 @@ class CfgVehicles
         ls_impulsor_boostSpeed_1=400;
         ls_impulsor_boostSpeed_2=600;
         ls_hasImpulse=1;
+
+		class HitPoints : HitPoints
+		{
+			class HitVRotor : HitVRotor
+			{
+				armor = 9999;
+				minimalHit = 9999;
+				convexComponent = "tail_rotor_hit";
+				explosionShielding = 6;
+				material = 51;
+				name = "tail_rotor_hit";
+				passThrough = 0.3;
+				visual = "";
+				radius = 0.01;
+			};
+		};
 
 		class Components: Components
 		{

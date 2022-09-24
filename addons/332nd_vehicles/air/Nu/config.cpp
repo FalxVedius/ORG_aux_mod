@@ -542,12 +542,16 @@ class CfgVehicles
 				convexComponent="engine_hit_1";
 				name="engine_hit_1";
 				hitpoint="engine_hit_1";
+				armor = 9999;
+				minimalHit = 9999;
 			};
 			class HitEngine_2: HitEngine
 			{
 				convexComponent="engine_hit_2";
 				name="engine_hit_2";
 				hitpoint="engine_hit_2";
+				armor = 9999;
+				minimalHit = 9999;
 			};
 			class HitAvionics
 			{
