@@ -743,7 +743,8 @@ class CfgVehicles
             };
             class HitVRotor : HitVRotor
             {
-                armor = 3 * 5;
+                armor = 9999;
+				minimalHit = 9999;
                 convexComponent = "tail_rotor_hit";
                 explosionShielding = 6;
                 material = 51;
