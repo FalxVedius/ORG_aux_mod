@@ -311,8 +311,8 @@ class CfgAmmo
 		{
 			"332nd_blaster_flyby_soundset"
 		};
-		caliber = 10;
-		hit = 450;
+		caliber = 40;
+		hit = 700;
 		typicalSpeed=5000;
 		explosionEffects = "ImpactPlasmaExpGreen";
 		tracerscale = 3;
