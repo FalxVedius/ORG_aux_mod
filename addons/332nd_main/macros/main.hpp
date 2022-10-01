@@ -131,14 +131,14 @@
 			displayName = [332nd] Arc Helmet ('##displayname##');\
 			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\arc\##texture};\
 		};
-	#define MACRO_NEW_ASSAULT_HELMET_ITEM(classname,displayname,texture)\
+	#define MACRO_NEW_ASSAULT_HELMET_ITEM(classname,displayname,texture,visor)\
 		class MACRO_NEW_HELMET(assault,classname): MACRO_NEW_HELMET(assault,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Assault Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,"\332nd_helmets\assault\KatarnVisor.paa"};\
-			hiddenSelectionsMaterials[] = {"\332nd_helmets\assault\Assault_Helmet.rvmat","\332nd_helmets\assault\Assault_Visor.rvmat"};\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\assault\##texture,MACRO_HELMET_TEXTURES_PATH##\assault\##visor};\
+			hiddenSelectionsMaterials[] = {"\3AS\3AS_Characters\Commando\data\Katarn_Helmet.rvmat","\332nd_helmets\assault\Assault_Visor.rvmat"};\
 		};
 	
 
@@ -907,12 +907,11 @@
 			scopeArsenal = 2;\
 			displayName = displayname;\
 			uniformClass = MACRO_NEW_UNIFORM(assault,uniformClassname);\
-			hiddenSelections[] = {"camo","camo1"};\
+			hiddenSelections[] = {"Camo","Camo1"};\
 			hiddenSelectionsTextures[] = {\
 				MACRO_UNIFORM_TEXTURES_PATH\assault\uniforms\##uniclass,\
-				"\3AS\3AS_Characters\Commando\data\Katarn_Armor_Standard_CO.paa"\
+				"\3AS\3AS_Characters\Commando\data\Katarn_Undersuit_CO.paa"\
 			};\
-			hiddenSelectionsMaterials[] = {"\332nd_units\_textures\assault\uniforms\Assault_Uniform.rvmat","\3AS\3AS_Characters\Commando\data\Katarn_Undersuit.rvmat"};\
 		}
 
 
@@ -1498,6 +1497,97 @@
 			scopeArsenal = 2;\
 			displayName = [332nd] Assault Vest ('##displayname##');\
 		};
+	#define MACRO_NEW_ASSAULT_NCO_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(assault_nco,classname): MACRO_NEW_VEST(assault_nco,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Assault Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_ASSAULT_AMMO_VEST_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(assault_ammo,classname): MACRO_NEW_VEST(assault_ammo,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [332nd] Assault Vest ('##displayname##');\
+		};
+
+
+// ============================================================================== Intercom Defines
+	
+	
+	#define IntercomMacro class ACE_SelfActions : ACE_SelfActions { \
+	    class TFAR_IntercomChannel { \
+	        displayName = "Intercom"; \
+	        condition = "true"; \
+	        statement = ""; \
+	        icon = ""; \
+	        class TFAR_IntercomChannel_disabled { \
+	            displayName = "Disabled"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != -1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-1,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_1 { \
+	            displayName = "Channel 1"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 0"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_2 { \
+	            displayName = "Channel 2"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],1,true];"; \
+	        }; \
+			class TFAR_IntercomChannel_3 { \
+	            displayName = "Crew"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 2"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];"; \
+	        }; \
+	    }; \
+	};
+
+	#define IntercomMacroAIR \
+	    class TFAR_IntercomChannel { \
+	        displayName = "Intercom"; \
+	        condition = "true"; \
+	        statement = ""; \
+	        icon = ""; \
+	        class TFAR_IntercomChannel_disabled { \
+	            displayName = "Disabled"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != -1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-1,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_1 { \
+	            displayName = "Channel 1"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 0"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];"; \
+	        }; \
+	        class TFAR_IntercomChannel_2 { \
+	            displayName = "Channel 2"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 1"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],1,true];"; \
+	        }; \
+			class TFAR_IntercomChannel_3 { \
+	            displayName = "Crew"; \
+	            condition = "_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)], -2];\
+							 if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot', TFAR_defaultIntercomSlot]};\
+							 _intercom != 2"; \
+	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];"; \
+	        }; \
+	    };
 
 // ============================================================================== Macro Predefined Equipments
 

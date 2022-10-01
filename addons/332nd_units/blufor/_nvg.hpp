@@ -6,6 +6,7 @@ class JLTS_CloneNVGRange;
 class JLTS_CloneNVGRange_black;
 class JLTS_CloneNVGMC;
 class ls_mandalorian_rangefinder_nvg;
+class lsd_gar_rangefinder_nvg;
 
 
 class MACRO_NEW_NVG(Leadership_MCNVG) :JLTS_CloneNVGMC
@@ -14,7 +15,6 @@ class MACRO_NEW_NVG(Leadership_MCNVG) :JLTS_CloneNVGMC
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
     displayName = "[332nd] Commander Visor";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
     author = "Halligan, Namenai,Falx ";
     visionMode[] = { "Normal","NVG","Ti" };
@@ -424,15 +424,12 @@ class MACRO_NEW_NVG(Scarf_white) :JLTS_CloneNVGCC
     };
 };
 
-class MACRO_NEW_NVG(Rangefinder_ls) :JLTS_CloneNVGCC
+class MACRO_NEW_NVG(Rangefinder_ls) :lsd_gar_rangefinder_nvg
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
     displayName = "[332nd] Rangefinder (Legions)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
-    model = "\SWLB_clones\SWLB_clone_rangefinder_off.p3d";
-    hiddenSelections[] = {};
-    hiddenSelectionsTextures[] = {};
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
     author = "Halligan, Namenai,Falx ";
@@ -442,15 +439,6 @@ class MACRO_NEW_NVG(Rangefinder_ls) :JLTS_CloneNVGCC
     opticsZoomInit = 0.0625;
     opticsZoomMax = 1;
     opticsZoomMin = 1;
-
-    class ItemInfo
-    {
-        hiddenSelections[] = { "camo1" };
-        mass = 20;
-        modelOff = "\SWLB_clones\SWLB_clone_rangefinder_off.p3d";
-        type = 616;
-        uniformModel = "\SWLB_clones\SWLB_clone_rangefinder_off.p3d";
-    };
 };
 
 class MACRO_NEW_NVG(assault_Ant) :JLTS_CloneNVGCC
@@ -461,7 +449,7 @@ class MACRO_NEW_NVG(assault_Ant) :JLTS_CloneNVGCC
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_clones_spec\SWLB_clone_commando_nvg_antenna.p3d";
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "SWLB_clones_spec\data\helmet_co.paa" };
+    hiddenSelectionsTextures[] = { "\332nd_units\Facewear\data\Antenna" };
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
     author = "Halligan, Namenai,Falx ";

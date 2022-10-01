@@ -29,6 +29,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(ab,Grey),
 			MACRO_NEW_HELMET(ab,Shock),
 			MACRO_NEW_HELMET(ab,Striker),
+			MACRO_NEW_HELMET(ab,Saiko),
         };
 		weapons[] = {};
 	};
@@ -57,4 +58,5 @@ class CfgWeapons
 	MACRO_NEW_AB_HELMET_ITEM(Shock,Shock,Shock.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Cog,Cog,Cog.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Striker,Striker,Striker.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Saiko,Saiko,Saiko.paa)
 };

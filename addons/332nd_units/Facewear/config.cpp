@@ -71,8 +71,8 @@ class CfgGlasses
 	{
 		displayName = "[332nd] EOD Bag";
 		model = "\SWLB_clones_spec\SWLB_clone_commando_eod_armor.p3d";
-		hiddenSelections[] = {};
-		hiddenSelectionsTextures[] = {};
+		hiddenSelections[] = { "camo" };
+		hiddenSelectionsTextures[] = { "\332nd_units\Facewear\data\EOD.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
@@ -183,7 +183,7 @@ class CfgGlasses
 
 	class 332nd_RangeFinder_ls : G_Tactical_Black
 	{
-		displayName = "[332nd] Rangefinder";
+		displayName = "[332nd] Rangefinder (Legions)";
 		model = "\SWLB_clones\SWLB_clone_rangefinder_off.p3d";
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
@@ -197,7 +197,7 @@ class CfgGlasses
 		displayName = "[332nd] Antenna";
 		model = "\SWLB_clones_spec\SWLB_clone_commando_nvg_antenna.p3d";
 		hiddenSelections[] = { "camo1" };
-		hiddenSelectionsTextures[] = { "SWLB_clones_spec\data\helmet_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\Facewear\data\Antenna" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";

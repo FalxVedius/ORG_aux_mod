@@ -60,6 +60,8 @@ class CfgVehicles
 		{
 			class MainTurret;
 		};
+
+		class ACE_SelfActions;
 	};
 
     class MACRO_NEW_VEHICLE(Land,TX,155_Transport) : SC_SaurusAPC_Unarmed_SE
@@ -70,6 +72,12 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
+
+		tas_canBlift = 1;
+		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		armor = 400;
 		armorStructural = 6;
@@ -186,6 +194,12 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_CAR";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
+
+		tas_canBlift = 1;
+		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
+
+		TFAR_hasIntercom = 1;
+		IntercomMacro
 
 		hiddenSelectionsTextures[] =
 		{

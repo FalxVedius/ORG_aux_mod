@@ -1311,6 +1311,7 @@ class CfgVehicles
 
 	class JLTS_Ammobox_support_GAR;
 	class JLTS_Ammobox_weapons_GAR;
+	class JLTS_Ammobox_grenades_GAR;
 
 	class EmptyBox_332nd : JLTS_Ammobox_weapons_GAR
 	{
@@ -1934,6 +1935,33 @@ class CfgVehicles
 				count = 20;
 			};
 		};
+
+		class EventHandlers
+		{
+			init = "[_this] spawn Resupply_fnc_SetCratesToCarryable;";
+		};
+	};
+
+	class VehicleBox_332nd : JLTS_Ammobox_grenades_GAR
+	{
+		author = MACRO_AUTHOR;
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "[332nd] Vehicle Resupply Box";
+		maximumLoad = 5000;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
+
+		ace_cargo_size = 5;
+
+		attendant = true;
+		ace_rearm_defaultSupply = 300000;
+		ace_refuel_fuelCargo = 3000;
+		ace_repair_canRepair = 1;
+		ace_refuel_fuelCapacity = 1400;
+		ace_refuel_flowRate = 4;
+		ace_refuel_canReceive = 1;
 
 		class EventHandlers
 		{

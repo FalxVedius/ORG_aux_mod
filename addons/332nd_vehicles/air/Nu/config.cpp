@@ -105,7 +105,7 @@ class CfgVehicles
 		scope=2;
 		forceInGarage=1;
 		scopeCurator=2;
-		displayName=" *Test* Nu-Class Attack Shuttle";
+		displayName= "Nu-Class Attack Shuttle *Test*";
 		model="3as\3as_nu\model\TCW_Nuaclass.p3d";
 		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
 		picture="3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
@@ -542,12 +542,16 @@ class CfgVehicles
 				convexComponent="engine_hit_1";
 				name="engine_hit_1";
 				hitpoint="engine_hit_1";
+				armor = 9999;
+				minimalHit = 9999;
 			};
 			class HitEngine_2: HitEngine
 			{
 				convexComponent="engine_hit_2";
 				name="engine_hit_2";
 				hitpoint="engine_hit_2";
+				armor = 9999;
+				minimalHit = 9999;
 			};
 			class HitAvionics
 			{
@@ -20903,6 +20907,8 @@ class CfgVehicles
 					icon = MACRO_HUD_CHANGER_ICONS\noHud.paa
 			   };
 			};
+
+			IntercomMacroAIR
 		};
 
 

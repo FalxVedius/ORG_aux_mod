@@ -900,8 +900,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
 
-		armor = 500;
-		armorStructural = 5;
+		armor = 2000;
+		armorStructural = 10;
 
 		class Turrets : Turrets
 		{
@@ -1644,8 +1644,8 @@ class CfgVehicles
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
 
-		armor = 500;
-		armorStructural = 5;
+		armor = 2000;
+		armorStructural = 10;
 
 		class Turrets : Turrets
 		{
@@ -2379,7 +2379,7 @@ class CfgVehicles
 		};
 	};
 
-	class MACRO_NEW_VEHICLE(Land,CIS,Heavy_AAT) : ls_ground_aat_red
+	class MACRO_NEW_VEHICLE(Land,CIS,Heavy_AAT) : 3AS_AAT_CIS
 	{
 		displayName = "Heavy AAT";
 		scope = 2;
@@ -2393,8 +2393,10 @@ class CfgVehicles
 			"332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew"
 		};
 
-		armor = 1000;
-		armorStructural = 6;
+		armor = 5900;
+		armorStructural = 10;
+
+		hiddenSelectionsTextures[] = { "3AS\3AS_AAT\data\Red_AAT_CO.paa" };
 
 		class Turrets : Turrets
 		{
@@ -2429,25 +2431,6 @@ class CfgVehicles
 						  MACRO_NEW_MAG(Heavy_AAT_MMG,500)
 						};
 					};
-				};
-			};
-		};
-
-		class TextureSources
-		{
-			class Red
-			{
-				displayname = "CIS Red";
-				author = MACRO_AUTHOR;
-				textures[] =
-				{
-					"ls_vehicles_ground\aat\data\red\body1_red_co.paa",
-					"ls_vehicles_ground\aat\data\red\body2_red_co.paa",
-					"ls_vehicles_ground\aat\data\red\gun_red_co.paa"
-				};
-				factions[] =
-				{
-					"EdCat_332ndCIS"
 				};
 			};
 		};

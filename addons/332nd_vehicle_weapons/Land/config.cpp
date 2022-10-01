@@ -25,10 +25,10 @@ class CfgAmmo
 	{
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
 		cartridge = "";
-		caliber=40;
+		caliber=80;
 		model = "ls_weapons_core\effects\laser_blue.p3d";
 		effectfly = "SWLW_plasma_green";
-		hit=3400;
+		hit=2000;
 		explosionEffects = "ATRocketExplosion";
 		tracerScale = 5;
 		indirectHit = 35;
@@ -169,8 +169,8 @@ class CfgAmmo
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
 		cartridge = "FxCartridge_556";
 		effectsMissile = "332nd_aux_effects_RPS4_blue";
-		caliber=15;
-		hit=250;
+		caliber=30;
+		hit=400;
 		indirectHit = 8;
 		indirectHitRange = 0.2;
 	};
@@ -190,10 +190,10 @@ class CfgAmmo
 	{
 		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000 }; //Volume,Pitch,Distance
 		cartridge = "FxCartridge_556";
-		caliber = 40;
+		caliber = 80;
 		model = "ls_weapons_core\effects\laser_blue.p3d";
 		effectfly = "SWLW_plasma_green";
-		hit = 1600;
+		hit = 1200;
 		explosionEffects = "ATRocketExplosion";
 		tracerScale = 5;
 		indirectHit = 35;
@@ -204,7 +204,7 @@ class CfgAmmo
 	{
 		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000 }; //Volume,Pitch,Distance
 		cartridge = "FxCartridge_556";
-		caliber = 40;
+		caliber = 80;
 		model = "ls_weapons_core\effects\laser_blue.p3d";
 		effectfly = "SWLW_plasma_green";
 		hit = 1100;
@@ -217,34 +217,34 @@ class CfgAmmo
 	class B_40mm_GPR;
 	class MACRO_NEW_AMMO(40mmHEDP): B_40mm_GPR
 	{
-    soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
-	cartridge = "";
-	effectsMissile = "332nd_aux_effects_RPS4_green";
-	caliber=6;
-	model = "swlw_main\Effects\laser_green.p3d";
-	effectfly = "SWLW_plasma_green";
-	hit=70;
-	tracerScale = 1.3;
-	indirectHit = 35;
-	indirectHitRange = 3;
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
+		cartridge = "";
+		effectsMissile = "332nd_aux_effects_RPS4_green";
+		caliber=6;
+		model = "swlw_main\Effects\laser_green.p3d";
+		effectfly = "SWLW_plasma_green";
+		hit=70;
+		tracerScale = 1.3;
+		indirectHit = 35;
+		indirectHitRange = 3;
 	};
 	class M_Titan_AT_long;
 	class MACRO_NEW_AMMO(RX_200_ATGM): M_Titan_AT_long
 	{
-	soundFly[]=
-		{
+		soundFly[]=
+			{
 			"swlw_rework\sounds\launcher\E60R_fly.wss",
 			5,
 			5,
 			1000
 		};
-	manualcontrol=1;
-	caliber=5;
-	effectsMissile = "332nd_aux_effects_missile_plx_blue";
-	hit=2000;
-	thrusttime = 12;
-	indirectHit = 35;
-	indirectHitRange = 3;
+		manualcontrol=1;
+		caliber=10;
+		effectsMissile = "332nd_aux_effects_missile_plx_blue";
+		hit=1100;
+		thrusttime = 12;
+		indirectHit = 35;
+		indirectHitRange = 3;
 	};
 
 	class ls_ammo_338_red;
@@ -541,7 +541,7 @@ class CfgWeapons
 				};
 			};
 		};
-				class close: player
+		class close: player
 		{
 			burst=10;
 			aiRateOfFire=0.1375;
@@ -808,7 +808,7 @@ class CfgWeapons
 				begin1[]=
 				{
 					"332nd_vehicle_weapons\Land\sounds\SaberLowPower.wss",
-					2.3,
+					1,
 					1,
 					6000
 				};
@@ -819,7 +819,7 @@ class CfgWeapons
 				};
 			};
 			burst=1;
-			reloadTime=0.04;
+			reloadTime=0.08;
 			dispersion=0;
 			minRange=2;
 			minRangeProbab=0.30000001;
@@ -1883,6 +1883,8 @@ class CfgWeapons
 		};
 		displayName = "40mm Directed Energy Autocannon";
 
+		magazineReloadTime = 14;
+
 		class GunParticles
 		{
 			class Effect
@@ -1968,6 +1970,9 @@ class CfgWeapons
             MACRO_NEW_MAG(ATGM,2)
 		};
 		displayName = "Concussion Missiles";
+
+		magazineReloadTime = 20;
+
 		class player: player
 		{
 			magazineReloadTime = 10;
