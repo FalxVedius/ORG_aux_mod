@@ -28,7 +28,7 @@ class CfgAmmo
 			2000
 		};
 		manualcontrol = 0;
-		missileLockMaxDistance = 6000;
+		missileLockMaxDistance = 4000;
 		missileLockMinDistance = 0;
 		effectsMissile = "332nd_aux_effects_missile_Rocket_Green";
 		caliber = 1;
@@ -39,7 +39,7 @@ class CfgAmmo
 		hit = 65;
 		cmImmunity = 0.1;
 		whistleOnFire = 1;
-		cost = 2000;
+		cost = 5;
 		missileLockMaxSpeed = 7000;
 		maxSpeed = 8000;
 	};
@@ -70,14 +70,14 @@ class CfgAmmo
 		effectsMissile = "332nd_aux_effects_missile_Rocket_Dark_Green";
 		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
 		caliber = 1;
-		missileLockMaxDistance = 6000;
+		missileLockMaxDistance = 3000;
 		missileLockMinDistance = 0;
 		missileLockCone = 180;
 		airlock = 0;
 		weaponLockSystem = "1 + 2 + 4 + 16";
 		missileKeepLockedCone = 180;
 		hit = 85;
-		cost = 2000;
+		cost = 1;
 		indirectHit = 35;
 		mass = 2;
 		indirectHitRange = 8;
@@ -93,9 +93,9 @@ class CfgAmmo
 		explosionEffects = "MK82_Explode";
 		weaponLockSystem = "8";
 		missileKeepLockedCone = 360;
-		hit = 5000;
-		indirectHit = 3000;
-		indirectHitRange = 30;
+		hit = 1000;
+		indirectHit = 1000;
+		indirectHitRange = 15;
 	};
 
 };
@@ -163,7 +163,7 @@ class CfgWeapons
 		displayName = "Firefly";
 		weaponLockDelay = 0;
 		burst = 3;
-		reloadTime = 1.5;
+		reloadTime = 1;
 		
 	};
 

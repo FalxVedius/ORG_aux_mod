@@ -95,6 +95,14 @@ class CfgWeapons
 				};
 			};
 		};
+
+		class LinkedItems {
+			class LinkedItemsOptic {
+				item = "332nd_Optic_VK38X";
+				slot = "CowsSlot";
+			};
+		};
+
 		descriptionShort="Rebel Valken";
 		modes[] =
 		{
@@ -119,7 +127,7 @@ class CfgWeapons
 			aiRateOfFireDistance = 25;
 		};
 			scope = 2;
-			displayName = MACRO_WEAPON_DISPLAYNAME(Rebel Valken 38x)
+			displayName = "Rebel Valken 38x";
 				weaponInfoType = "RscWeaponZeroing";
 			magazines[] =
 			{
@@ -156,4 +164,34 @@ class CfgWeapons
 			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_Valken_Sound;";
 		};
 
+};
+
+class CfgMagazines
+{
+	class JLTS_E5S_mag;
+	class MACRO_NEW_MAG(R_Valken38x,15) : JLTS_E5S_mag
+	{
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 15;
+		mass = 15;
+		initspeed = 1200;
+		displayName = MACRO_AMMO_DISPLAYNAME(Valken - 38x Refined Medium Magazine,15)
+		displayNameShort = "Refined Medium Magazine x15";
+		descriptionShort = "Refined Medium Magazine x15";
+		ammo = MACRO_NEW_AMMO(338_Green_T);
+		tracersEvery = 1;
+	};
+};
+
+class CfgAmmo
+{
+	class ls_ammo_338_green;
+	class  MACRO_NEW_AMMO(338_Green_T) : ls_ammo_338_green
+	{
+		effectfly = "332nd_aux_effects_green_bullet";
+		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200 };
+	};
 };

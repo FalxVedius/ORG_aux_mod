@@ -62,7 +62,7 @@ class cfgWeapons
 			class UnderBarrelSlot : UnderBarrelSlot {};
 		};
 
-		displayName = MACRO_WEAPON_DISPLAYNAME(Rebel DC 15s)
+		displayName = "Rebel DC 15s";
 
 		canShootInWater = 1;
 		baseWeapon = "332nd_aux_weapon_R_DC_15s";
@@ -75,20 +75,10 @@ class cfgWeapons
 		 "Single"
 		};
 		picture = "\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
-		class 332Stun : JLTS_stun_muzzle
-		{
-		   magazines[] =
-		   {
-			MACRO_NEW_MAG(Stun,10)
-		   };
-		   magazineWell[] = {};
-		   cursoraim = "332_Stun";
-		   cursor = "332_DOT"
-		};
+
 		muzzles[] =
 		{
-			"this",
-			"332Stun"
+			"this"
 		};
 		modelOptics[] = { "\A3\Weapons_F_EPA\acc\reticle_marksman_F","\A3\Weapons_F_EPA\acc\reticle_marksman_z_F" };
 		class FullAuto : FullAuto
@@ -130,12 +120,6 @@ class cfgWeapons
 			maxRange = 30;
 			maxRangeProbab = 0.1;
 			textureType = "fastAuto";
-		};
-
-		class stun : stun
-		{
-			cursoraim = "332_Stun";
-			cursor = "332_DOT"
 		};
 
 		class Single : FullAuto
@@ -235,5 +219,33 @@ class cfgWeapons
 		};
 
 	};
-	
+};
+
+class CfgMagazines
+{
+	class 30rnd_762x39_AK12_Mag_F;
+	class MACRO_NEW_MAG(R_DC_15s,60) : 30rnd_762x39_AK12_Mag_F //15S
+	{
+		modelSpecial = "";
+		modelSpecialIsProxy = 0;
+		picture = "\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
+		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
+		count = 60;
+		mass = 15;
+		initspeed = 1400;
+		displayName = MACRO_AMMO_DISPLAYNAME(R_15s,60)
+		displayNameShort = "Green 60rnd";
+		descriptionShort = "332nd Green Medium Power Round";
+		ammo = MACRO_NEW_AMMO(R_DC65_green);
+		tracersEvery = 1;
+	};
+};
+
+class CfgAmmo
+{
+	class ls_ammo_65_green;
+	class MACRO_NEW_AMMO(R_DC65_green) : ls_ammo_65_green
+	{
+		lightcolor[] = { 0, 188, 0 };
+	};
 };
