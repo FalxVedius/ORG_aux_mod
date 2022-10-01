@@ -183,7 +183,7 @@ class CfgGlasses
 
 	class 332nd_RangeFinder_ls : G_Tactical_Black
 	{
-		displayName = "[332nd] Rangefinder";
+		displayName = "[332nd] Rangefinder (Legions)";
 		model = "\SWLB_clones\SWLB_clone_rangefinder_off.p3d";
 		hiddenSelections[] = {};
 		hiddenSelectionsTextures[] = {};
