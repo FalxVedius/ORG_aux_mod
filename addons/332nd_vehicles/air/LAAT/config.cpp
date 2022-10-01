@@ -143,6 +143,7 @@ class CfgVehicles
 		class sounds;
 		class SoundsExt;
 		class SoundEvents;
+		class EventHandlers;
 		class Reflectors : Reflectors
 		{
 			class Left;
@@ -262,6 +263,7 @@ class CfgVehicles
 		class Components;
 
 		class ACE_selfActions;
+		class EventHandlers;
 		class Turrets : Turrets
 		{
 			class MainTurret;
@@ -302,7 +304,7 @@ class CfgVehicles
             MACRO_NEW_MAG(Air_Dumb_rocket,24),
 			MACRO_NEW_MAG(Air_Dumb_rocket,24),
         };
-        class EventHandlers
+        class EventHandlers : EventHandlers
         {
             init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
         };
@@ -398,6 +400,23 @@ class CfgVehicles
 		//	"taildamageint",
 		//	"taildamageout"
 		//};
+
+		class RotorLibHelicopterProperties
+		{
+			RTDconfig = "A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
+			autoHoverCorrection[] = { 3.2,0,0 };
+			defaultCollective = 0.80500001;
+			retreatBladeStallWarningSpeed = 83;
+			maxTorque = 5800;
+			stressDamagePerSec = 0;
+			maxHorizontalStabilizerLeftStress = 10000;
+			maxHorizontalStabilizerRightStress = 10000;
+			maxVerticalStabilizerStress = 10000;
+			horizontalWingsAngleCollMin = 0;
+			horizontalWingsAngleCollMax = 0;
+			maxMainRotorStress = 350000;
+			maxTailRotorStress = 350000;
+		};
 		
 		
 		class sounds
@@ -3396,14 +3415,19 @@ class CfgVehicles
 			defaultCollective=0.80500001;
 			retreatBladeStallWarningSpeed=83;
 			maxTorque=5800;
-			stressDamagePerSec=0.0099999998;
-			maxHorizontalStabilizerLeftStress=8000;
-			maxHorizontalStabilizerRightStress=8000;
-			maxVerticalStabilizerStress=4000;
-			horizontalWingsAngleCollMin=0;
-			horizontalWingsAngleCollMax=0;
-			maxMainRotorStress=225000;
-			maxTailRotorStress=225000;
+			stressDamagePerSec = 0;
+			maxHorizontalStabilizerLeftStress = 10000;
+			maxHorizontalStabilizerRightStress = 10000;
+			maxVerticalStabilizerStress = 10000;
+			horizontalWingsAngleCollMin = 0;
+			horizontalWingsAngleCollMax = 0;
+			maxMainRotorStress = 350000;
+			maxTailRotorStress = 350000;
+		};
+
+		class EventHandlers : EventHandlers
+		{
+			init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
 		};
 
 
@@ -4256,12 +4280,6 @@ class CfgVehicles
 				count = 50;
 			};
 		};
-
-		class EventHandlers
-        {
-		    //init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
-            init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory";
-        };
 	};
 
     class MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd) :	MACRO_NEW_VEHICLE(air,LAAT,mk1_332nd_base)

@@ -79,6 +79,7 @@ class CfgVehicles
 		class ACE_selfActions;
 		class Components;
 		class Turrets;
+		class EventHandlers;
 		class HitPoints : HitPoints
 		{
 			class HitHull;
@@ -139,7 +140,7 @@ class CfgVehicles
         ls_hasImpulse=1;
 		forceInGarage = 1;
 		armor = 500 * 0.5;
-		class EventHandlers
+		class EventHandlers : EventHandlers
         {
 	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_332nd'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
         };
@@ -193,19 +194,19 @@ class CfgVehicles
 
 		class RotorLibHelicopterProperties
 		{
-			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
+			RTDconfig = "A3\Air_F_Heli\Heli_Transport_03\RTD_Heli_Transport_03.xml";
 			autoHoverCorrection[]={3.2,0,0};
 			defaultCollective=0.7;
-			retreatBladeStallWarningSpeed=83;
-			maxTorque=5800;
-			stressDamagePerSec=0.0099999998;
-			maxHorizontalStabilizerLeftStress=8000;
-			maxHorizontalStabilizerRightStress=8000;
-			maxVerticalStabilizerStress=8000;
+			retreatBladeStallWarningSpeed = 92.583;
+			maxTorque = 4032;
+			stressDamagePerSec = 0;
+			maxHorizontalStabilizerLeftStress = 10000;
+			maxHorizontalStabilizerRightStress = 10000;
+			maxVerticalStabilizerStress = 10000;
 			horizontalWingsAngleCollMin=0;
 			horizontalWingsAngleCollMax=0;
-			maxMainRotorStress=225000;
-			maxTailRotorStress=225000;
+			maxMainRotorStress = 350000;
+			maxTailRotorStress = 350000;
 		};
 		startDuration=4.5;
 		castDriverShadow=0;
