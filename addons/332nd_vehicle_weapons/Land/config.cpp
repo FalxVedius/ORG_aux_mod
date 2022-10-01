@@ -429,6 +429,7 @@ class CfgMagazines
 
 
 
+
 	class 40Rnd_40mm_APFSDS_shells;
 	class MACRO_NEW_MAG(RX200_40mmAP,50): 40Rnd_40mm_APFSDS_shells
 	{
@@ -1214,7 +1215,6 @@ class CfgWeapons
 			maxRangeProbab=0.1;
 		};
 	};
-
 
 	class BARC_Repeater;
 	class MACRO_NEW_WEAPON(BARC_40mm): BARC_Repeater

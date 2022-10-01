@@ -1,5 +1,4 @@
 #include "../332nd_main/macros/main.hpp" // my config macro lib
-
 #define mag_2(a) a, a
 #define mag_3(a) a, a, a
 #define mag_4(a) a, a, a, a
@@ -7,7 +6,6 @@
 #define mag_8(a) a, a, a, a, a, a, a, a
 #define mag_10(a) a, a, a, a, a, a, a, a, a, a
 #define mag_15(a) a, a, a, a, a, a, a, a, a, a, a, a, a, a, a
-
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(units)
@@ -32,7 +30,6 @@ class CfgPatches
 		};
 	};
 };
-
 class CfgFactionClasses
 {
 	class EdCat_332nd
@@ -48,8 +45,14 @@ class CfgFactionClasses
 		side = 0;
 		priority = 2;
 	};
-};
 
+	class EdCat_332nd_Rebel
+	{
+		displayName = "332nd Rebels";
+		side = 2;
+		priority = 2;
+	};
+};
 class CfgEditorCategories
 {
 	class EdCat_332nd_Props
@@ -57,7 +60,6 @@ class CfgEditorCategories
 		displayName = "332nd Legion Supplies";
 	};
 };
-
 class CfgEditorSubcategories
 {
 	class EdSubcat_332nd_AA
@@ -150,8 +152,57 @@ class CfgEditorSubcategories
 		displayName = "Turrets";
 		priority = 16;
 	};
-};
 
+	class EdSubcat_332nd_RBASIC
+	{
+		displayName = "Droids";
+		priority = 3;
+	};
+
+	class EdSubcat_332nd_RHUMAN
+	{
+		displayName = "Human";
+		priority = 3;
+	};
+
+	class EdSubcat_332nd_AIR
+	{
+		displayName = "Air";
+		priority = 3;
+	};
+
+	class EdSubcat_332nd_Rebel_PLANES
+	{
+		displayName = "Planes";
+		proiority = 3;
+	};
+
+	class EdSubcat_332nd_Rebel_HEIL
+	{
+		displayName = "Heilcopters";
+		proiority = 3;
+	};
+
+	class EdSubcat_332nd_Rebel_TANKS
+	{
+		displayName = "Tanks";
+		proiority = 3;
+	};
+
+	class EdSubcat_332nd_Rebel_CARS
+	{
+		displayName = "Cars";
+		side = 2;
+		proiority = 6;
+	};
+
+	class EdSubcat_332nd_Rebel_TURR
+	{
+		displayName = "Turrents";
+		side = 2;
+		proiority = 6;
+	};
+};
 class CfgMarkers
 {
 	class mil_dot;
@@ -163,7 +214,6 @@ class CfgMarkers
 		color[] = { 1, 1, 1, 1 };
 	};
 };
-
 class CfgWeapons
 {
  	// ---- blufor Uniforms ----
@@ -398,6 +448,7 @@ class CfgWeapons
 	// ---- Opfor Uniforms ----
 
 	//B1
+	
 	class JLTS_DroidB1 : U_I_CombatUniform
 	{
 		class ItemInfo;
@@ -580,8 +631,241 @@ class CfgWeapons
 	};
 
 	// ---- End opfor Uniforms ----
-}
+	class I_G_Soldier_SL_F;
+	class C_Man_casual_1_F;
+	class C_man_p_fugitive_F;
+	class C_man_polo_5_F;
+	class ls_civ_randomNearHuman_m_polo3;
+	class ls_civ_randomNearHuman_m_polo2;
+	class ls_civ_randomNearHuman_m_polo6;
+	class I_rebel_human : I_G_Soldier_SL_F
+	{
+		class ItemInfo;
+	};
 
+	class I_rebel_human_base : C_Man_casual_1_F
+	{
+		class ItemInfo;
+	};
+
+	class I_rebel_human_base_v2 : ls_civ_randomNearHuman_m_polo6
+	{
+		class ItemInfo;
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+	};
+
+	class I_rebel_human_base_v3 : C_man_p_fugitive_F
+	{
+		class ItemInfo;
+	};
+
+	class I_rebel_human_base_v4 : C_man_polo_5_F
+	{
+		class ItemInfo;
+	};
+
+	class I_rebel_human_base_v5 : ls_civ_randomNearHuman_m_polo3
+	{
+		class ItemInfo;
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+	};
+
+	class I_rebel_human_base_v6 : ls_civ_randomNearHuman_m_polo2
+	{
+		class ItemInfo;
+	};
+
+	class MACRO_NEW_UNIFORM(rebel,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_At,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] AT Rebel uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_At,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Snpier,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Sniper uniform ('base')";
+		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Sniper,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Medic,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Medic uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Medic,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Heavy,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Heavy uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Heavy,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_SL,base) : I_rebel_human
+	{
+		displayName = "[332nd] Rebel Squad Leader uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_SL,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_AA,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel AA uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_AA,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Spotter,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Spotter uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Spotter,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Shocker,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Shocker uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Shocker,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Breacher,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Breacher uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Breacher,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Mg,base) : JLTS_DroidB1
+	{
+		displayName = "[332nd] Rebel Heavy Gunner uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Mg,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Human,base) : I_rebel_human_base
+	{
+		displayName = "[332nd] Rebel uniform ('base')";
+		scope = 0;						
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Human,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Human_AT,base) : I_rebel_human_base_v2
+	{
+		displayName = "[332nd] Rebel AT uniform ('base')";
+		scope = 0;							
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_AT,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Human_Sniper,base) : I_rebel_human_base_v3
+	{
+		displayName = "[332nd] Rebel Sniper uniform ('base')";
+		scope = 0;							
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Sniper,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Human_Medic,base) : I_rebel_human_base_v4
+	{
+		displayName = "[332nd] Rebel Medic uniform ('base')";
+		scope = 0;				
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Medic,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Human_Heavy,base) : I_rebel_human_base_v5
+	{
+		displayName = "[332nd] Rebel Heavy uniform ('base')";
+		scope = 0;
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Heavy,base);
+			containerClass = "Supply140";
+		};
+	};
+
+	class MACRO_NEW_UNIFORM(rebel_Human_Spotter,base) : I_rebel_human_base_v6
+	{
+		displayName = "[332nd] Rebel Spotter uniform ('base')";
+		scope = 0;							
+		class ItemInfo : ItemInfo
+		{
+			uniformClass = MACRO_NEW_UNIT(rebel_Human_Spotter,base);
+			containerClass = "Supply140";
+		};
+	};
+};
 class CfgSounds
 {
 	sounds[] = {};
@@ -723,6 +1007,8 @@ class CfgSounds
 		sound[] = { "\opfor\DeathSounds\B1-Death-Sound-23.ogg", db + 250, 1.0, 125 };
 		titles[] = {};
 	};
+
+
 	
 	//Redefine Webknights Sounds to be louder
 	class B1_shooting_1_332nd
@@ -924,7 +1210,6 @@ class CfgSounds
 		titles[] = {};
 	};
 };
-
 class CfgFunctions
 {
 	class Resupply
@@ -1019,7 +1304,6 @@ class CfgFunctions
 		};
 	};
 };
-
 class CfgVehicles
 {
 
@@ -1689,6 +1973,7 @@ class CfgVehicles
 
 	// ---- Blufor Units for Uniforms ----
 
+
 	class B_Soldier_f;
     class JLTS_Clone_P2_DC15A : B_Soldier_f 
     {
@@ -1723,16 +2008,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -1962,16 +2245,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -2441,16 +2722,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -2681,16 +2960,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -2921,16 +3198,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3161,16 +3436,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3401,16 +3674,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3641,16 +3912,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -3879,16 +4148,14 @@ class CfgVehicles
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
 			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
 			mag_2(332nd_aux_magazine_DC_15a_High_x10),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -4135,14 +4402,12 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -4369,14 +4634,12 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
 			mag_15(332nd_aux_magazine_DC_15s_x60),
-			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
 		{
@@ -12537,6 +12800,3580 @@ class CfgVehicles
 
 	};
 
+	//Rebel
+	class C_Man_casual_6_F;
+	class U_I_C_Soldier_Para_1_F;
+	class U_C_ArtTShirt_01_v6_F;
+	class U_I_C_Soldier_Bandit_1_F;
+	class U_C_E_LooterJacket_01_F;
+	class U_C_Mechanic_01_F;
+
+	class I_G_Soldier_SL_F;
+	class I_rebel_human : I_G_Soldier_SL_F
+	{
+		class HitPoints;
+	};
+
+	class I_R_H_AT : C_Man_casual_6_F
+	{
+		class HitPoints;
+	};
+
+	class I_R_H_S : U_I_C_Soldier_Para_1_F
+	{
+		class HitPoints;
+
+	};
+
+	class I_R_H_M : U_C_ArtTShirt_01_v6_F
+	{
+		class HitPoints;
+	};
+
+	class I_R_H_L : U_I_C_Soldier_Bandit_1_F
+	{
+		class HitPoints;
+	};
+
+	class I_R_H_H : U_C_E_LooterJacket_01_F
+	{
+		class HitPoints;
+
+	};
+
+	class I_R_H_B : U_C_Mechanic_01_F
+	{
+		class HitPoints;
+	};
+
+	class MACRO_NEW_UNIT(rebel,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel,base);
+		hiddenSelections[] = { "camo1" };
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Basic_Rebel_Reprogramed_Driod.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_E5_B1","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_E5_B1","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_E5Low_x50)
+			
+
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_E5Low_x50)
+
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	class MACRO_NEW_UNIT(rebel_AT,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] AT Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_AT,base);
+		hiddenSelections[] = { "camo1" };
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\AT_Redroid.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AT_pack";
+		magazines[] =
+		{
+		
+		};
+		respawnMagazines[] =
+		{
+
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+			
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	class MACRO_NEW_UNIT(rebel_Sniper,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Sniper Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Sniper,base);
+		hiddenSelections[] = { "camo1" };
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Spotter_Redroid.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_Valken38x","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_Valken38x","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Sniper_pack";
+		magazines[] =
+		{
+
+		};
+		respawnMagazines[] =
+		{
+
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+			
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(rebel_Medic,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Medical Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Medic,base);
+		hiddenSelections[] = { "camo1" };
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Medic_Redroid.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Medic_pack";
+		magazines[] =
+		{
+
+		};
+		respawnMagazines[] =
+		{
+
+
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(rebel_Heavy,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Heavy Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Heavy,base);
+		hiddenSelections[] = { "camo1" };
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Heavy_Redroid.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = {"332nd_aux_weapon_BK_152","Throw","Put"};
+		respawnWeapons[] = {"332nd_aux_weapon_BK_152","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_BK_152_x30)
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_BK_152_x30)
+		};
+		items[] =
+		{
+		
+		};
+		respawnItems[] =
+		{
+			
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(rebel_SL,base) : I_rebel_human
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Squad Leader Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_SL,base);
+		hiddenSelections[] = {"camo1"};
+
+		
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_sqaud_lead_pack";
+		magazines[] =
+		{
+			
+		};
+		respawnMagazines[] =
+		{
+			
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+			
+		};
+		headgearList[] =
+		{
+			"H_Cap_red", 0.7,
+			"H_Cap_tan", 0.7,
+			"H_Cap_blk", 0.7,
+			"H_PASGT_basic_black_F", 0.7,
+			"H_Hat_grey", 0.7,
+			"H_Cap_marshal", 0.7,
+			"H_Construction_basic_white_F", 0.7,
+			"H_Construction_headset_black_F", 0.7,
+			"H_HeadSet_red_F", 0.7,
+			"H_WirelessEarpiece_F", 0.7,
+			"H_HeadBandage_bloody_F", 0.7,
+			"H_StrawHat_dark", 0.7,
+			"H_ShemagOpen_tan", 0.7,
+		};
+		allowedFacewear[] =
+		{
+			"G_Bandanna_aviator", 1,
+			"G_Bandanna_beast", 1,
+			"G_Bandanna_blk", 1,
+			"G_Bandanna_khk", 1,
+			"G_Bandanna_oli", 1,
+			"G_Bandanna_shades", 1,
+			"G_Bandanna_sport", 1,
+			"G_Squares_Tinted", 1,
+			"G_Sport_BlackWhite", 1,
+			"OPTRE_Glasses_Cigarette", 1,
+			"OPTRE_Glasses_Cigar", 1,
+			"332nd_Scarf_white", 1,
+			"332nd_Scarf_red", 1,
+			"332nd_Scarf_blue", 1,
+			"332nd_Scarf", 1,
+			"332nd_LowProfile", 1,
+			"332nd_EOD", 1,
+			"", 1,
+		};
+
+
+		class EventHandlers;
+		class EventHandlers : EventHandlers 
+		{ 
+			init = ""; 
+		};
+		
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};  //Remove and replace with General leader
+
+	class MACRO_NEW_UNIT(rebel_AA,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] AA Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_AA,base);
+		hiddenSelections[] = { "camo1"};
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\AA_Redroid.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_E5_B1","332nd_aux_weapon_RPS_6","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_E5_B1","332nd_aux_weapon_RPS_6","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_AA_pack";
+		magazines[] =
+		{
+			
+
+		};
+		respawnMagazines[] =
+		{
+			
+
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+			
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(rebel_Spotter,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Spotter Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Spotter,base);
+		hiddenSelections[] = { "camo1"};
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Spotter_Redroid.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic"};
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic"};
+		weapons[] = {"Throw","Put"};
+		respawnWeapons[] = {"Throw","Put"};
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "";
+		magazines[] =
+		{
+
+
+		};
+		respawnMagazines[] =
+		{
+
+
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+			
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(rebel_Breacher,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Breacher Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Breacher,base);
+		hiddenSelections[] = { "camo1"};
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Breacher_Redroid.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_DP_23" ,"Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DP_23","Throw","Put"};
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Breacher_pack";
+		magazines[] =
+		{
+			
+
+		};
+		respawnMagazines[] =
+		{
+			
+
+		};
+		items[] =
+		{
+			
+		};
+		respawnItems[] =
+		{
+			
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	class MACRO_NEW_UNIT(rebel_Mg,base) : JLTS_Droid_B1_E5
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Rebel Heavy Gunner";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RBASIC";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Mg,base);
+		hiddenSelections[] = { "camo1" };
+
+		hiddenSelectionsTextures[] =
+		{
+			"\332nd_units\_textures\Indep\Reprogramed Driod\Basic_Rebel_Reprogramed_Driod.paa"
+		};
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_M380","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_M380","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_M380_x200)
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_M380_x200)
+
+		};
+		items[] =
+		{
+
+		};
+		respawnItems[] =
+		{
+
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};
+
+	//Rebel human var Something wrong only showing AT boi
+	
+	class MACRO_NEW_UNIT(rebel_Human,base) : I_R_H_B
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Human Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Human,base);
+		hiddenSelections[] = { "camo1" };
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_E5_B1","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_E5_B1","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_E5Low_x50)
+
+
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_E5Low_x50)
+
+		};
+		items[] =
+		{
+
+		};
+		respawnItems[] =
+		{
+
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	class MACRO_NEW_UNIT(rebel_Human_AT,base) : I_R_H_AT
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Human AT Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Human_AT,base);
+		hiddenSelections[] = { "camo1" };
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_RPS_6","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_AT_pack";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
+			mag_2(JLTS_stun_mag_long),
+
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
+			mag_2(JLTS_stun_mag_long),
+
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_EntrenchingTool",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_2(ACE_epinephrine),
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_EntrenchingTool",
+			"ACE_M26_Clacker",
+			"MineDetector",
+			mag_2(ACE_epinephrine),
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	class MACRO_NEW_UNIT(rebel_Human_Sniper,base) : I_R_H_S
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Human Sniper Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Sniper,base);
+		hiddenSelections[] = { "camo1" };
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_Valken38x","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_Valken38x","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_Sniper_pack";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_DC_15x_x2)
+
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_DC_15x_x2)
+
+		};
+		items[] =
+		{
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_Flashlight_XL50",
+			"MineDetector",
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+		respawnItems[] =
+		{
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_Flashlight_XL50",
+			"MineDetector",
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	class MACRO_NEW_UNIT(rebel_Human_Medic,base) : I_R_H_M
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Human Medic Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Medic,base);
+		hiddenSelections[] = { "camo1" };
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		respawnWeapons[] = { "332nd_aux_weapon_R_DC_15s","332nd_aux_weapon_Westar35SA_mod","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_Human_Medic_pack";
+		magazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
+			mag_5(332nd_aux_magazine_35sa_low_x30)
+
+		};
+		respawnMagazines[] =
+		{
+			mag_5(332nd_aux_magazine_R_DC_15s_x60),
+			mag_5(332nd_aux_magazine_35sa_low_x30)
+
+		};
+		items[] =
+		{
+
+		};
+		respawnItems[] =
+		{
+
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	class MACRO_NEW_UNIT(rebel_Human_Heavy,base) : I_R_H_H
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Human Heavy Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Heavy,base);
+		hiddenSelections[] = { "camo1" };
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "SWLW_LS150" ,"Throw","Put" };
+		respawnWeapons[] = { "SWLW_LS150","Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		magazines[] =
+		{
+			mag_5(SWLW_LS150_mag)
+		};
+		respawnMagazines[] =
+		{
+			mag_5(SWLW_LS150_mag)
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"MineDetector",
+			mag_2(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter",
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"MineDetector",
+			mag_2(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter",
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	class MACRO_NEW_UNIT(rebel_Human_Spotter,base) : I_R_H_L
+	{
+
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Human Spotter Rebel";
+
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_RHUMAN";
+		side = 2;
+
+		uniformClass = MACRO_NEW_UNIFORM(rebel_Human_Spotter,base);
+		hiddenSelections[] = { "camo1" };
+
+		linkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		respawnLinkedItems[] = { "ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_bino_basic" };
+		weapons[] = { "Throw","Put" };
+		respawnWeapons[] = { "Throw","Put" };
+		nakedUniform = "lsd_cis_bxDroid_uniform";
+		backpack = "332nd_aux_blufor_backpack_332nd_rebel_pack";
+		magazines[] =
+		{
+
+
+		};
+		respawnMagazines[] =
+		{
+
+
+		};
+		items[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"MineDetector",
+			mag_2(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter",
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+		respawnItems[] =
+		{
+			mag_2(ACE_CableTie),
+			mag_10(332nd_aux_medical_BactaSpary),
+			mag_5(332nd_aux_medical_PlastiBandage),
+			"ACE_EntrenchingTool",
+			"ACE_Flashlight_XL50",
+			"MineDetector",
+			mag_2(ACE_epinephrine),
+			mag_3(ACE_plasmaIV_500),
+			"ACE_wirecutter",
+			"ACE_EarPlugs",
+			mag_4(332nd_aux_medical_PressureCuff),
+		};
+
+		class HitPoints : HitPoints
+		{
+			class HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "face_hub";
+				passThrough = 0.80000001;
+				radius = 0.079999998;
+				explosionShielding = 0.1;
+				minimalHit = 0.0099999998;
+			};
+			class HitNeck : HitFace
+			{
+				armor = 2;
+				material = -1;
+				name = "neck";
+				passThrough = 0.80000001;
+				radius = 0.1;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+			};
+			class HitHead : HitNeck
+			{
+				armor = 2;
+				material = -1;
+				name = "head";
+				passThrough = 0.80000001;
+				radius = 0.2;
+				explosionShielding = 0.5;
+				minimalHit = 0.0099999998;
+				depends = "HitFace max HitNeck";
+			};
+			class HitPelvis : HitHead
+			{
+				armor = 16;
+				material = -1;
+				name = "pelvis";
+				passThrough = 0.80000001;
+				radius = 0.23999999;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "";
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor = 12;
+				material = -1;
+				name = "spine1";
+				passThrough = 0.80000001;
+				radius = 0.16;
+				explosionShielding = 3;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor = 12;
+				material = -1;
+				name = "spine2";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor = 16;
+				material = -1;
+				name = "spine3";
+				passThrough = 0.33000001;
+				radius = 0.18000001;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+			};
+			class HitBody : HitChest
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 6;
+				visual = "injury_body";
+				minimalHit = 0.0099999998;
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+			};
+			class HitArms : HitBody
+			{
+				armor = 12;
+				material = -1;
+				name = "arms";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class HitHands : HitArms
+			{
+				armor = 12;
+				material = -1;
+				name = "hands";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 1;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+				depends = "HitArms";
+			};
+			class HitLegs : HitHands
+			{
+				armor = 12;
+				material = -1;
+				name = "legs";
+				passThrough = 1;
+				radius = 0.14;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+				depends = "0";
+			};
+			class Incapacitated : HitLegs
+			{
+				armor = 2000;
+				material = -1;
+				name = "body";
+				passThrough = 1;
+				radius = 0;
+				explosionShielding = 3;
+				visual = "";
+				minimalHit = 0;
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2";
+			};
+			class HitLeftArm
+			{
+				armor = 12;
+				material = -1;
+				name = "hand_l";
+				passThrough = 1;
+				radius = 0.079999998;
+				explosionShielding = 3;
+				visual = "injury_hands";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightArm : HitLeftArm
+			{
+				name = "hand_r";
+			};
+			class HitLeftLeg
+			{
+				armor = 12;
+				material = -1;
+				name = "leg_l";
+				passThrough = 1;
+				radius = 0.1;
+				explosionShielding = 3;
+				visual = "injury_legs";
+				minimalHit = 0.0099999998;
+			};
+			class HitRightLeg : HitLeftLeg
+			{
+				name = "leg_r";
+			};
+		};
+
+	};//Added
+
+	// ---- End Opfor Units for Uniforms ----
+
 	// ---- End Opfor Units for Uniforms ----
 };
 
@@ -12663,7 +16500,6 @@ class Extended_Killed_EventHandlers
 		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy_B2;";
 	};
 };
-
 class Extended_Init_EventHandlers
 {
 	//B1s
@@ -12769,7 +16605,6 @@ class Extended_Init_EventHandlers
 		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B2;";
 	};
 };
-
 class Extended_Fired_EventHandlers
 {
 	//Heavy Droids
