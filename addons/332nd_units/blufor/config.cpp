@@ -115,6 +115,11 @@ class CfgPatches
             MACRO_NEW_UNIT(captain,332nd_captain),
 
             MACRO_NEW_UNIT(assault,332nd_assault_Vet_trooper),
+            MACRO_NEW_UNIT(assault,332nd_assault_trooper),
+            MACRO_NEW_UNIT(assault,332nd_assault_senior),
+            MACRO_NEW_UNIT(assault,332nd_assault_spec),
+            MACRO_NEW_UNIT(assault,332nd_assault_corporal),
+            MACRO_NEW_UNIT(assault,332nd_assault_sergeant),
 
 
             //Custom ------------------------
@@ -122,7 +127,7 @@ class CfgPatches
             //Blast
             MACRO_NEW_UNIT(captain,Blast),
             //Falx
-            MACRO_NEW_UNIT(captain,Falx),
+            MACRO_NEW_UNIT(assault,Falx),
             //Halligan
             MACRO_NEW_UNIT(aviation,Halligan),
             //Cutter
@@ -252,6 +257,11 @@ class CfgPatches
             MACRO_NEW_UNIFORM(captain,332nd_captain),
 
             MACRO_NEW_UNIFORM(assault,332nd_assault_Vet_trooper),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_trooper),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_senior),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_spec),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_corporal),
+            MACRO_NEW_UNIFORM(assault,332nd_assault_sergeant),
 
 
             //Custom ------------------------
@@ -259,7 +269,7 @@ class CfgPatches
             //Blast
             MACRO_NEW_UNIFORM(captain,Blast),
             //Falx
-            MACRO_NEW_UNIFORM(captain,Falx),
+            MACRO_NEW_UNIFORM(assault,Falx),
             //Halligan
             MACRO_NEW_UNIFORM(aviation,Halligan),
             //Cutter
@@ -496,7 +506,12 @@ class CfgWeapons
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(332nd_captain,Captain,332nd_captain)
 
     //Assault Armor
-    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_Vet_trooper,Veteran Trooper *WIP*,332nd_assault_Vet_trooper)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_Vet_trooper,Veteran Trooper,332nd_assault_Vet_trooper)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_trooper,Trooper,332nd_assault_trooper)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_senior,Senior Trooper,332nd_assault_senior)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_Spec,Specialist,332nd_assault_Spec)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_corporal,Corporal,332nd_assault_corporal)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(332nd_assault_sergeant,Sergeant,332nd_assault_sergeant)
 
 
     //Custom ----------------------------------------
@@ -504,7 +519,7 @@ class CfgWeapons
     //Blast
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Blast,Blast,Blast)
     //Falx
-    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Falx,Falx,Falx)
+    MACRO_NEW_ASSAULT_UNIFORM_ITEM(Falx,Falx,Falx)
     //Halligan
     MACRO_NEW_AVI_UNIFORM_ITEM(Halligan,Halligan,Halligan)
     //Cutter
@@ -674,6 +689,11 @@ class CfgVehicles
 
     //Assault
     MACRO_NEW_ASSAULT_UNIT(332nd_assault_Vet_trooper,Veteran Trooper,332nd_assault_Vet_trooper,veteran_trooper\Veteran_Trooper.paa)
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_trooper,Trooper,332nd_assault_trooper,trooper\Trooper.paa)
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_senior,Senior Trooper,332nd_assault_senior,senior_trooper\Senior.paa)
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_Spec,Specialist,332nd_assault_Spec,specialist_four\Specialist.paa)
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_corporal,Corporal,332nd_assault_corporal,corporal\Corporal.paa)
+    MACRO_NEW_ASSAULT_UNIT(332nd_assault_sergeant,Sergeant,332nd_assault_sergeant,sergeant\Sergeant.paa)
 
 
     //Custom ----------------------------------------
@@ -681,7 +701,7 @@ class CfgVehicles
     //Blast
     MACRO_NEW_CAPTAIN_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\Blast_Lower.paa)
     //Falx
-    MACRO_NEW_CAPTAIN_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
+    MACRO_NEW_ASSAULT_UNIT(Falx,Falx,Falx,custom\Falx.paa)
     //Halligan
     MACRO_NEW_AVI_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
     //Cutter

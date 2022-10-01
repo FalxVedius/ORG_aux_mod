@@ -52,6 +52,20 @@ class Extended_init_EventHandlers
 	};
 };
 
+class CfgFunctions
+{
+	class ResupplyAirVic
+	{
+		class myCategory
+		{
+			class AddVicCratesToInventory
+			{
+				file = "332nd_vehicles\air\LAATC\fnc_spawnVicResupplyCrates.sqf";
+			};
+		};
+	};
+};
+
 class CfgVehicles
 {
 	class Helicopter_Base_F;
@@ -65,6 +79,7 @@ class CfgVehicles
 		class ACE_selfActions;
 		class Components;
 		class Turrets;
+		class EventHandlers;
 		class HitPoints : HitPoints
 		{
 			class HitHull;
@@ -87,6 +102,8 @@ class CfgVehicles
 		_generalMacro="332_laat_C";
 		scope=2;
 
+		ace_cargo_hasCargo = 1;
+		ace_cargo_space = 12;
 		attendant = true;
 		ace_rearm_defaultSupply = 300000;
 		ace_refuel_fuelCargo = 3000;
@@ -123,13 +140,13 @@ class CfgVehicles
         ls_hasImpulse=1;
 		forceInGarage = 1;
 		armor = 500 * 0.5;
-		class EventHandlers
+		class EventHandlers : EventHandlers
         {
-	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor";
+	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_332nd'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
         };
 		faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
-		displayName="LAAT/C Mk 1";
+		displayName="LAAT/C Mk1 *Test*";
 		model="3AS\3AS_LAATC\3AS_LAAT_C.p3d";
 		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
 		picture="\3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
@@ -177,19 +194,19 @@ class CfgVehicles
 
 		class RotorLibHelicopterProperties
 		{
-			RTDconfig="A3\Air_F_Beta\Heli_Attack_02\RTD_Heli_Attack_02.xml";
+			RTDconfig = "A3\Air_F_Heli\Heli_Transport_03\RTD_Heli_Transport_03.xml";
 			autoHoverCorrection[]={3.2,0,0};
 			defaultCollective=0.7;
-			retreatBladeStallWarningSpeed=83;
-			maxTorque=5800;
-			stressDamagePerSec=0.0099999998;
-			maxHorizontalStabilizerLeftStress=8000;
-			maxHorizontalStabilizerRightStress=8000;
-			maxVerticalStabilizerStress=8000;
+			retreatBladeStallWarningSpeed = 92.583;
+			maxTorque = 4032;
+			stressDamagePerSec = 0;
+			maxHorizontalStabilizerLeftStress = 10000;
+			maxHorizontalStabilizerRightStress = 10000;
+			maxVerticalStabilizerStress = 10000;
 			horizontalWingsAngleCollMin=0;
 			horizontalWingsAngleCollMax=0;
-			maxMainRotorStress=225000;
-			maxTailRotorStress=225000;
+			maxMainRotorStress = 350000;
+			maxTailRotorStress = 350000;
 		};
 		startDuration=4.5;
 		castDriverShadow=0;
@@ -624,53 +641,55 @@ class CfgVehicles
 				};
 
 				class 332nd_aux_Cyan_HUD :332nd_aux_Red_HUD
-			 {
+				 {
 				displayName = "Cyan HUD Color";
 				statement = [0,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\cyan.paa;
 
 			};
 
-			class 332nd_aux_Blue_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Blue_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "Blue HUD Color";
 				statement = [0,0,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\blue.paa;
 
 			};
 
-			class 332nd_aux_Purple_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Purple_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "Purple HUD Color";
 				statement = [.5,0,.5,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\purple.paa;
 
 			};
 
-			class 332nd_aux_White_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_White_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "White HUD Color";
 				statement = [1,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\white.paa;
 
 			};
 
-			class 332nd_aux_Black_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Black_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "Black HUD Color";
 				statement = [0,0,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\black.paa;
 
 			};
 
-			class 332nd_aux_Clear_HUD :332nd_aux_Red_HUD
-			{
+				class 332nd_aux_Clear_HUD :332nd_aux_Red_HUD
+				{
 				displayName = "No HUD Color";
 				statement = [1,1,1,0,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 				icon = MACRO_HUD_CHANGER_ICONS\noHud.paa;
 
 			};
 			};
+
+			IntercomMacroAIR
 		};
 		class HitPoints : HitPoints
         {
@@ -725,7 +744,8 @@ class CfgVehicles
             };
             class HitVRotor : HitVRotor
             {
-                armor = 3 * 5;
+                armor = 9999;
+				minimalHit = 9999;
                 convexComponent = "tail_rotor_hit";
                 explosionShielding = 6;
                 material = 51;
@@ -846,7 +866,7 @@ class CfgVehicles
 				priority = 3;
 				onlyForPlayer = 0;
 				condition = "(count(this getVariable [""TAS_Loaded"",[]]) > 0)";
-				statement = "0 = [this] spawn TAS_fnc_MagDrop;";
+				statement = "0 = [this] spawn TAS_fnc_Magdrop;";
 			};
 		};
 		ace_fastroping_enabled=1;

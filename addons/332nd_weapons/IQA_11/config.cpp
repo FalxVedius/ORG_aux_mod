@@ -369,7 +369,8 @@ class CfgWeapons
 				visionMode[] =
 				{
 					"Normal",
-					"NVG"
+					"NVG",
+					"TI"
 				};
 				opticsDisablePeripherialVision = 0;
 			};

@@ -377,8 +377,8 @@ class CfgMagazines
 		scope=1;
 		count=24;
 	};
-	class Bomb_04_Plane_CAS_01_F;
-	class MACRO_NEW_MAG(Ywing_Plasma,20): Bomb_04_Plane_CAS_01_F
+	class magazine_Bomb_GBU12_x1;
+	class MACRO_NEW_MAG(Ywing_Plasma,20): magazine_Bomb_GBU12_x1
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(Plasma Bomb)
 		ammo=MACRO_NEW_AMMO(Plasma_Bomb)
