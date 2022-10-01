@@ -696,4 +696,4 @@ class CfgVehicles
 		editorCategory = "EdCat_332nd_Props";
 		editorSubcategory = "EdSubcat_332nd_PACKS";
 	}
-}
+};
