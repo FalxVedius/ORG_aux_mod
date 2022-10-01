@@ -69,7 +69,7 @@ class cfgWeapons
     class MACRO_NEW_WEAPON(R_DP_23): JLTS_DP23
     {
 		scope=2;
-	    displayName=MACRO_WEAPON_DISPLAYNAME(Rebel Shotgun)
+		displayName = "Rebel Shotgun";
 		reloadTime=0.20;
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_smg_03";
@@ -90,20 +90,9 @@ class cfgWeapons
 			MACRO_NEW_MAG(R_DP23,12Wide)
 		};
 	
-		class 332Stun: JLTS_stun_muzzle
-		{
-	       magazines[]=
-		   {
-		  	MACRO_NEW_MAG(Stun,10)
-		   };
-		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
-		};
 		muzzles[]=
 		{
-			"this",
-			"332Stun"
+			"this"
 		};
 
         class OpticsModes
@@ -157,10 +146,6 @@ class cfgWeapons
             };
         };
 
-		// magazines[]=
-		// {
-		// 	"332_Shotgun_blue"
-		// };
 
         class Single: Mode_SemiAuto
 		{
@@ -237,7 +222,7 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(R_DP23_Shell);
 		count=15;
 		mass=10;
-		initspeed=1300;
+		initSpeed = 774;
 	};
 
 	class MACRO_NEW_MAG(R_DP23,12Wide): 30rnd_762x39_AK12_Mag_F //DP-23
@@ -247,7 +232,7 @@ class CfgMagazines
 		ammo=MACRO_NEW_AMMO(R_DP23_Shell_Wide);
 		count=15;
 		mass=10;
-		initspeed=1300;
+		initSpeed = 774;
 	};
 }
 
@@ -276,14 +261,14 @@ class CfgAmmo
 		fuseDistance = 0;
 		grenadeBurningSound[] = {};
 		grenadeFireSound[] = {};
-		hit = 30;
-		caliber = 1;
+		hit = 5;
+		caliber = 1.2;
 
 		thrust = 210;
 		thrustTime = 1.5;
-		timeToLive = 6;
+		timetolive = 3;
 		triggerDistance = 0;
-		typicalSpeed = 900;
+		typicalSpeed = 380;
 	}
 
 	class MACRO_NEW_AMMO(R_DP23_Shell_Wide): B_12Gauge_Pellets_Submunition
@@ -292,14 +277,15 @@ class CfgAmmo
 		submunitionConeAngle = 3;
 		submunitionConeAngleHorizontal=40;
 		submunitionConeType[] = {"poissondisc",12};
-		hit = 15;
+		hit = 5;
+		caliber = 1.2;
 		triggerDistance = 0;
 	}
 
 	class MACRO_NEW_AMMO(R_DP23_Pellet): B_12Gauge_Pellets_Submunition_Deploy
 	{
-		hit = 15;
-		caliber = 1;
+		hit = 5;
+		caliber = 1.2;
 		typicalSpeed = 360;
 		triggerDistance = 0;
 		effectfly = "ls_plasma_blue";

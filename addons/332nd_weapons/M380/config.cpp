@@ -36,7 +36,7 @@ class CfgWeapons
 		dlc = "";
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(M380)
+		displayName = "Rebel M380"
 		ACE_Overheating_mrbs = 300000;
 		recoil = "recoil_lim";
 		recoilprone = "recoil_mx";
@@ -50,7 +50,12 @@ class CfgWeapons
 		};
 		modes[] =
 		{
-			"FullAuto"
+			"FullAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 		};
 		class WeaponSlotsInfo : WeaponSlotsInfo
 		{
@@ -103,81 +108,9 @@ class CfgWeapons
 			};
 			class StandardSound : BaseSoundModeType
 			{
-				begin3[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-03.ogg",
-					"db8",
-					1,
-					2000
-				};
-				begin4[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-04.ogg",
-					"db8",
-					1,
-					2000
-				};
-				begin5[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-05.ogg",
-					"db8",
-					1,
-					2000
-				};
-				begin6[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-06.ogg",
-					"db8",
-					1,
-					2000
-				};
-				begin7[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-07.ogg",
-					"db8",
-					1,
-					2000
-				};
-				begin8[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-08.ogg",
-					"db8",
-					1,
-					2000
-				};
-				begin9[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-09.ogg",
-					"db8",
-					1,
-					2000
-				};
-				begin10[] =
-				{
-					"\OPTRE_Weapons\MG\data\sounds\M73LMG-10.ogg",
-					"db8",
-					1,
-					2000
-				};
-				soundBegin[] =
-				{
-					"begin3",
-					0.1,
-					"begin4",
-					0.1,
-					"begin5",
-					0.1,
-					"begin6",
-					0.1,
-					"begin7",
-					0.1,
-					"begin8",
-					0.1,
-					"begin9",
-					0.1,
-					"begin10",
-					0.1
-				};
+				begin1[] = { "swlw_rework\sounds\e-series\E5C_shot.wss",2,1,2000 };
+				soundBegin[] = { "begin1",1 };
+
 				class SoundTails
 				{
 					class TailTrees
@@ -338,17 +271,83 @@ class CfgWeapons
 					};
 				};
 			};
-			reloadTime = 0.078900002;
-			dispersion = 0.00075000001;
-			minRange = 2;
-			minRangeProbab = 0.0099999998;
-			midRange = 200;
-			midRangeProbab = 0.0099999998;
-			maxRange = 400;
+			reloadTime = 0.055;
+			dispersion = 0.002;
+			soundContinuous = 0;
+			soundBurst = 0;
+			minRange = 0;
+			aiBurstTerminable = 1;
+			minRangeProbab = 0.30000001;
+			midRange = 5;
+			midRangeProbab = 0.69999999;
+			maxRange = 10;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 1;
+		};
+		class close : FullAuto
+		{
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 50;
+			minRange = 10;
+			minRangeProbab = 0.050000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 0;
+		};
+		class short : close
+		{
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 300;
+			minRange = 50;
+			minRangeProbab = 0.050000001;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.039999999;
+		};
+		class medium : close
+		{
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 600;
+			minRange = 200;
+			minRangeProbab = 0.050000001;
+			midRange = 300;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
+			maxRangeProbab = 0.1;
+		};
+		class far_optic1 : medium
+		{
+			showToPlayer = 0;
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 1000;
+			minRange = 300;
+			minRangeProbab = 0.050000001;
+			midRange = 500;
+			midRangeProbab = 0.40000001;
+			maxRange = 650;
 			maxRangeProbab = 0.0099999998;
 		};
-		aiDispersionCoefY = 10;
-		aiDispersionCoefX = 10;
+		class far_optic2 : far_optic1
+		{
+			burst = 40;
+			minRange = 400;
+			minRangeProbab = 0.050000001;
+			midRange = 750;
+			midRangeProbab = 0.69999999;
+			maxRange = 900;
+			maxRangeProbab = 0.0099999998;
+			aiRateOfFire = 0.75;
+			aiRateOfFireDistance = 900;
+		};
+		aiDispersionCoefY = 3;
+		aiDispersionCoefX = 3;
 	};
 
 };
@@ -364,12 +363,22 @@ class CfgMagazines
 		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count = 200;
 		mass = 30;
-		initspeed = 1200;
+		initSpeed = 600;
 		displayName = MACRO_AMMO_DISPLAYNAME(M380,200)
 		displayNameShort = "Low Power 200rnd";
 		descriptionShort = "332nd Low Power Round";
-		ammo = MACRO_NEW_AMMO(R_762_green);
+		ammo = MACRO_NEW_AMMO(R_M380762_green);
 		tracersEvery = 1;
+	};
+};
+
+class CfgAmmo
+{
+	class ls_ammo_762_green;
+	class MACRO_NEW_AMMO(R_M380762_green) :ls_ammo_762_green
+	{
+		lightcolor[] = { 0, 188, 0 };
+
 	};
 };
 

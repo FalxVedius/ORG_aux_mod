@@ -1,17 +1,14 @@
-#include "../../332nd_main/macros/main.hpp" // my config macro lib
+#include "../../../332nd_main/macros/main.hpp" // my config macro lib
 
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(R_Z90)
 	{
 		author = "332nd Aux Team";
-        addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
-			"A3_Data_F",
-		    "A3_Weapons_F",
-			"JLTS_weapons_Z6",
-			MACRO_PATCH_NAME(weapons)
+			MACRO_PATCH_NAME(weapons),
+			MACRO_PATCH_NAME(Effects)
 		};
 		requiredVersion = 0.1;
 		units[] = {};
@@ -42,7 +39,8 @@ class cfgWeapons
 	class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(R_Z90) : JLTS_Z6
 	{
-		scope = 0;
+		scope = 1;
+		scopeArsenal = 0;
 		displayName = MACRO_WEAPON_DISPLAYNAME(Z90)
 		reloadTime = 0.1;
 		ACE_Overheating_mrbs = 300000;
@@ -52,14 +50,19 @@ class cfgWeapons
 		baseweapon = "";
 		cursor = "332_DOT";
 		cursoraim = "332_Z6";
-		modes[] = {
-			"FullAuto"
+		modes[] =
+		{
+			"FullAuto",
+			"close",
+			"short",
+			"medium",
+			"far_optic1",
+			"far_optic2"
 		};
 		modelOptics[] = { "\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F" };
 		muzzles[] =
 		{
-			"this",
-			"332_Z90Supercharge"
+			"this"
 		};
 		class OpticsModes
 		{
@@ -113,7 +116,7 @@ class cfgWeapons
 		};
 		magazines[] =
 		{
-			MACRO_NEW_MAG(R_Z90,150)
+			MACRO_NEW_MAG(R_Z90,750)
 		};
 		class FullAuto : Mode_FullAuto
 		{
@@ -124,120 +127,109 @@ class cfgWeapons
 			};
 
 			displayname = "FullAuto";
-			reloadTime = 0.06;
-			dispersion = 0.001;
+			reloadTime = 0.055;
+			dispersion = 0.002;
+			soundContinuous = 0;
+			soundBurst = 0;
 			minRange = 0;
-			minRangeProbab = 0.89999998;
-			midRange = 15;
+			aiBurstTerminable = 1;
+			minRangeProbab = 0.30000001;
+			midRange = 5;
 			midRangeProbab = 0.69999999;
-			maxRange = 30;
+			maxRange = 10;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 1;
+		};
+		class close : FullAuto
+		{
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 50;
+			minRange = 10;
+			minRangeProbab = 0.050000001;
+			midRange = 20;
+			midRangeProbab = 0.69999999;
+			maxRange = 50;
+			maxRangeProbab = 0.039999999;
+			showToPlayer = 0;
+		};
+		class short : close
+		{
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 300;
+			minRange = 50;
+			minRangeProbab = 0.050000001;
+			midRange = 150;
+			midRangeProbab = 0.69999999;
+			maxRange = 300;
+			maxRangeProbab = 0.039999999;
+		};
+		class medium : close
+		{
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 600;
+			minRange = 200;
+			minRangeProbab = 0.050000001;
+			midRange = 300;
+			midRangeProbab = 0.69999999;
+			maxRange = 500;
 			maxRangeProbab = 0.1;
 		};
-		class 332_Z90Supercharge : JLTS_stun_muzzle
+		class far_optic1 : medium
 		{
-			displayName = "Supercharge";
-			descriptionShort = "Z90 Supercharge";
-			reloadTime = 1;
-			cursor = "332_DOT";
-			cursoraim = "332_DC17";
-			showtoplayer = 1;
-			modes[] = {"Single"};
-			discreteDistance[] = {100,200,300,400};
-			memoryPointCamera = "eye";
-
-
-			class Single : mode_SemiAuto
+			showToPlayer = 0;
+			burst = 40;
+			aiRateOfFire = 0.055;
+			aiRateOfFireDistance = 1000;
+			minRange = 300;
+			minRangeProbab = 0.050000001;
+			midRange = 500;
+			midRangeProbab = 0.40000001;
+			maxRange = 650;
+			maxRangeProbab = 0.0099999998;
+		};
+		class far_optic2 : far_optic1
 		{
-			sounds[] = {"StandardSound"};
-			class StandardSound : BaseSoundModeType
-			{
-				soundSetShot[] = {"332_Z6_Supercharge_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
-			};
+			burst = 40;
+			minRange = 400;
+			minRangeProbab = 0.050000001;
+			midRange = 750;
+			midRangeProbab = 0.69999999;
+			maxRange = 900;
+			maxRangeProbab = 0.0099999998;
+			aiRateOfFire = 0.75;
+			aiRateOfFireDistance = 900;
 		};
-
-			magazineWell[] = {};
-			magazines[] =
-				{
-				MACRO_NEW_MAG(R_Z90_Supercharge,1)
-				};
-			useModelOptics = 0;
-			useExternalOptic = 0;
-			cameraDir = "OP_look";
-			discreteDistanceInitIndex = 0;
-			reloadMagazineSound[] =
-			{
-				"\3AS\3AS_Main\Sounds\Old\Blaster_reload.wss",
-				1,
-				1,
-				10
-			};
-		};
-		class WeaponSlotsInfo : WeaponSlotsInfo
-		{
-			mass = 30;
-			class CowsSlot : CowsSlot
-			{
-				compatibleItems[] = {};
-			};
-			class PointerSlot
-			{
-				linkProxy = "\A3\data_f\proxies\weapon_slots\SIDE";
-				displayName = "Pointer Slot";
-				compatibleItems[] =
-				{
-					"acc_flashlight",
-					"acc_pointer_IR"
-				};
-			};
-		};
+		aiDispersionCoefY = 3;
+		aiDispersionCoefX = 3;
 	};
 };
-class cfgAmmo
+class CfgAmmo
 {
-  class ls_ammo_127x108_blue;
-  class MACRO_NEW_AMMO(R_Z90_Supercharge): ls_ammo_127x108_blue
-    {
-    hit = 120;
-	indirecthit=8;
-	indirectHitRange = 1;
-	caliber=20;
-	effectfly="332nd_aux_effects_RPS4_blue";
-	explosionEffects = "ImpactPlasmaExpBlue";
+	class ls_ammo_762_green;
+	class MACRO_NEW_AMMO(R_Z90762_green) :ls_ammo_762_green
+	{
+		lightcolor[] = { 0, 188, 0 };
 	};
 };
 class CfgMagazines
 {
 	class 30rnd_762x39_AK12_Mag_F;
-	class MACRO_NEW_MAG(R_Z90,150): 30rnd_762x39_AK12_Mag_F //Z6 Box magazine
+	class MACRO_NEW_MAG(R_Z90,750): 30rnd_762x39_AK12_Mag_F
 	{
 		modelSpecial="";
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=150;
+		count=750;
 		mass=30;
 		initspeed=1200;
-		displayName=MACRO_AMMO_DISPLAYNAME(Z90 Low,150)
+		displayName=MACRO_AMMO_DISPLAYNAME(Z90 Low,750)
 		displayNameShort="Low Power 150rnd";
 		descriptionShort="332nd Low Power Round";
-		ammo= MACRO_NEW_AMMO(R_762_green);
-		tracersEvery=1;
-	};
-
-	class MACRO_NEW_MAG(R_Z90_Supercharge,1): 30rnd_762x39_AK12_Mag_F //DW-32S
-	{
-		modelSpecial="";
-		modelSpecialIsProxy=0;
-		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
-		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=1;
-		mass=3;
-		tracerscale = 6;
-		initspeed=400;
-		displayName=MACRO_AMMO_DISPLAYNAME(Z90 Supercharge,1)
-		displayNameShort="Conc-Med Power Tracer 20rnd";
-		descriptionShort="332nd Concentrated-Medium Power Tracer Round";
-		ammo=MACRO_NEW_AMMO(Z90_Supercharge);
+		ammo= MACRO_NEW_AMMO(R_Z90762_green);
 		tracersEvery=1;
 	};
 };

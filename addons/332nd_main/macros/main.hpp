@@ -515,7 +515,7 @@
 #define MACRO_NEW_REBEL_SL_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_SL,classname): MACRO_NEW_UNIFORM(rebel_SL,base)\
 	{\
-		displayName = [332nd] Rebel Squad Leader Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -526,7 +526,7 @@
 #define MACRO_NEW_REBEL_FL_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_FL,classname): MACRO_NEW_UNIFORM(rebel_FL,base)\
 	{\
-		displayName = [332nd] Rebel Fireteam Leader Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -537,7 +537,7 @@
 #define MACRO_NEW_REBEL_AA_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_AA,classname): MACRO_NEW_UNIFORM(rebel_AA,base)\
 	{\
-		displayName = [332nd] Rebel AA Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -548,7 +548,7 @@
 #define MACRO_NEW_REBEL_SPOTTER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Spotter,classname): MACRO_NEW_UNIFORM(rebel_Spotter,base)\
 	{\
-		displayName = [332nd] Rebel Squad Leader Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -559,7 +559,7 @@
 #define MACRO_NEW_REBEL_SHOCKER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Shocker,classname): MACRO_NEW_UNIFORM(rebel_Shocker,base)\
 	{\
-		displayName = [332nd] Rebel Shocker Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -570,7 +570,7 @@
 #define MACRO_NEW_REBEL_BREACHER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Breacher,classname): MACRO_NEW_UNIFORM(rebel_Breacher,base)\
 	{\
-		displayName = [332nd] Rebel Breacher Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -581,7 +581,7 @@
 #define MACRO_NEW_REBEL_MG_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Mg,classname): MACRO_NEW_UNIFORM(rebel_Mg,base)\
 	{\
-		displayName = [332nd] Rebel Mg Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -597,7 +597,7 @@
 #define MACRO_NEW_REBEL_HUMAN_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Human,classname): MACRO_NEW_UNIFORM(rebel_Human,base)\
 	{\
-		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -608,7 +608,7 @@
 #define MACRO_NEW_REBEL_HUMAN_AT_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Human_AT,classname): MACRO_NEW_UNIFORM(rebel_Human_AT,base)\
 	{\
-		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -619,7 +619,7 @@
 #define MACRO_NEW_REBEL_HUMAN_SNIPER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Human_Sniper,classname): MACRO_NEW_UNIFORM(rebel_Human_Sniper,base)\
 	{\
-		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -630,7 +630,7 @@
 #define MACRO_NEW_REBEL_HUMAN_MEDIC_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Human_Medic,classname): MACRO_NEW_UNIFORM(rebel_Human_Medic,base)\
 	{\
-		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -641,7 +641,7 @@
 #define MACRO_NEW_REBEL_HUMAN_HEAVY_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Human_Heavy,classname): MACRO_NEW_UNIFORM(rebel_Human_Heavy,base)\
 	{\
-		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -652,7 +652,7 @@
 #define MACRO_NEW_REBEL_HUMAN_SPOTTER_UNIFORM_ITEM(classname,displayname,uniformClassname)\
 	class MACRO_NEW_UNIFORM(rebel_Human_Spotter,classname): MACRO_NEW_UNIFORM(rebel_Human_Spotter,base)\
 	{\
-		displayName = [332nd] Rebel Uniform ('##displayname##');\
+		displayName = [332nd] Rebel Human Uniform ('##displayname##');\
 		scope = 2;\
 		class ItemInfo : ItemInfo\
 		{\
@@ -1201,14 +1201,6 @@
 			uniformClass = MACRO_NEW_UNIFORM(rebel_SL,uniformClassname);\
 		}
 
-#define MACRO_NEW_REBEL_FL_UNIT(classname,displayname,uniformClassname)\
-		class MACRO_NEW_UNIT(rebel_FL,classname): MACRO_NEW_UNIT(rebel_FL,base)\
-		{\
-			author = MACRO_AUTHOR;\
-			scope = 2;\
-			displayName = displayname;\
-			uniformClass = MACRO_NEW_UNIFORM(rebel_FL,uniformClassname);\
-		}
 
 #define MACRO_NEW_REBEL_AA_UNIT(classname,displayname,uniformClassname)\
 		class MACRO_NEW_UNIT(rebel_AA,classname): MACRO_NEW_UNIT(rebel_AA,base)\
@@ -1588,6 +1580,520 @@
 	            statement = "(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];"; \
 	        }; \
 	    };
+
+#define B1_Hitpoints \
+		class HitPoints : HitPoints \
+		{ \
+			class HitFace \
+			{ \
+				armor = 1; \
+				material = -1; \
+				name = "face_hub"; \
+				passThrough = 0.80000001; \
+				radius = 0.079999998; \
+				explosionShielding = 0.1; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitNeck : HitFace \
+			{ \
+				armor = 1; \
+				material = -1; \
+				name = "neck"; \
+				passThrough = 0.80000001; \
+				radius = 0.1; \
+				explosionShielding = 0.5; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitHead : HitNeck \
+			{ \
+				armor = 1; \
+				material = -1; \
+				name = "head"; \
+				passThrough = 0.80000001; \
+				radius = 0.2; \
+				explosionShielding = 0.5; \
+				minimalHit = 0.0099999998; \
+				depends = "HitFace max HitNeck"; \
+			}; \
+			class HitPelvis : HitHead \
+			{ \
+				armor = 6; \
+				material = -1; \
+				name = "pelvis"; \
+				passThrough = 0.80000001; \
+				radius = 0.23999999; \
+				explosionShielding = 3; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+				depends = ""; \
+			}; \
+			class HitAbdomen : HitPelvis \
+			{ \
+				armor = 4; \
+				material = -1; \
+				name = "spine1"; \
+				passThrough = 0.80000001; \
+				radius = 0.16; \
+				explosionShielding = 3; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitDiaphragm : HitAbdomen \
+			{ \
+				armor = 4; \
+				material = -1; \
+				name = "spine2"; \
+				passThrough = 0.33000001; \
+				radius = 0.18000001; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitChest : HitDiaphragm \
+			{ \
+				armor = 6; \
+				material = -1; \
+				name = "spine3"; \
+				passThrough = 0.33000001; \
+				radius = 0.18000001; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitBody : HitChest \
+			{ \
+				armor = 800; \
+				material = -1; \
+				name = "body"; \
+				passThrough = 1; \
+				radius = 0; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest"; \
+			}; \
+			class HitArms : HitBody \
+			{ \
+				armor = 4; \
+				material = -1; \
+				name = "arms"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 3; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+				depends = "0"; \
+			}; \
+			class HitHands : HitArms \
+			{ \
+				armor = 4; \
+				material = -1; \
+				name = "hands"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 1; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+				depends = "HitArms"; \
+			}; \
+			class HitLegs : HitHands \
+			{ \
+				armor = 4; \
+				material = -1; \
+				name = "legs"; \
+				passThrough = 1; \
+				radius = 0.14; \
+				explosionShielding = 3; \
+				visual = "injury_legs"; \
+				minimalHit = 0.0099999998; \
+				depends = "0"; \
+			}; \
+			class Incapacitated : HitLegs \
+			{ \
+				armor = 800; \
+				material = -1; \
+				name = "body"; \
+				passThrough = 1; \
+				radius = 0; \
+				explosionShielding = 3; \
+				visual = ""; \
+				minimalHit = 0; \
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2"; \
+			}; \
+			class HitLeftArm \
+			{ \
+				armor = 4; \
+				material = -1; \
+				name = "hand_l"; \
+				passThrough = 1; \
+				radius = 0.079999998; \
+				explosionShielding = 3; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitRightArm : HitLeftArm \
+			{ \
+				name = "hand_r"; \
+			}; \
+			class HitLeftLeg \
+			{ \
+				armor = 4; \
+				material = -1; \
+				name = "leg_l"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 3; \
+				visual = "injury_legs"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitRightLeg : HitLeftLeg \
+			{ \
+				name = "leg_r"; \
+			}; \
+		}; \
+
+#define BX_Hitpoints \
+		class HitPoints : HitPoints \
+		{ \
+			class HitFace \
+			{ \
+				armor = 1; \
+				material = -1; \
+				name = "face_hub"; \
+				passThrough = 0.80000001; \
+				radius = 0.079999998; \
+				explosionShielding = 0.1; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitNeck : HitFace \
+			{ \
+				armor = 1; \
+				material = -1; \
+				name = "neck"; \
+				passThrough = 0.80000001; \
+				radius = 0.1; \
+				explosionShielding = 0.5; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitHead : HitNeck \
+			{ \
+				armor = 1; \
+				material = -1; \
+				name = "head"; \
+				passThrough = 0.80000001; \
+				radius = 0.2; \
+				explosionShielding = 0.5; \
+				minimalHit = 0.0099999998; \
+				depends = "HitFace max HitNeck"; \
+			}; \
+			class HitPelvis : HitHead \
+			{ \
+				armor = 12; \
+				material = -1; \
+				name = "pelvis"; \
+				passThrough = 0.80000001; \
+				radius = 0.23999999; \
+				explosionShielding = 3; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+				depends = ""; \
+			}; \
+			class HitAbdomen : HitPelvis \
+			{ \
+				armor = 8; \
+				material = -1; \
+				name = "spine1"; \
+				passThrough = 0.80000001; \
+				radius = 0.16; \
+				explosionShielding = 3; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitDiaphragm : HitAbdomen \
+			{ \
+				armor = 8; \
+				material = -1; \
+				name = "spine2"; \
+				passThrough = 0.33000001; \
+				radius = 0.18000001; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitChest : HitDiaphragm \
+			{ \
+				armor = 12; \
+				material = -1; \
+				name = "spine3"; \
+				passThrough = 0.33000001; \
+				radius = 0.18000001; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitBody : HitChest \
+			{ \
+				armor = 1325; \
+				material = -1; \
+				name = "body"; \
+				passThrough = 1; \
+				radius = 0; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest"; \
+			}; \
+			class HitArms : HitBody \
+			{ \
+				armor = 8; \
+				material = -1; \
+				name = "arms"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 3; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+				depends = "0"; \
+			}; \
+			class HitHands : HitArms \
+			{ \
+				armor = 8; \
+				material = -1; \
+				name = "hands"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 1; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+				depends = "HitArms"; \
+			}; \
+			class HitLegs : HitHands \
+			{ \
+				armor = 8; \
+				material = -1; \
+				name = "legs"; \
+				passThrough = 1; \
+				radius = 0.14; \
+				explosionShielding = 3; \
+				visual = "injury_legs"; \
+				minimalHit = 0.0099999998; \
+				depends = "0"; \
+			}; \
+			class Incapacitated : HitLegs \
+			{ \
+				armor = 1000; \
+				material = -1; \
+				name = "body"; \
+				passThrough = 1; \
+				radius = 0; \
+				explosionShielding = 3; \
+				visual = ""; \
+				minimalHit = 0; \
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2"; \
+			}; \
+			class HitLeftArm \
+			{ \
+				armor = 8; \
+				material = -1; \
+				name = "hand_l"; \
+				passThrough = 1; \
+				radius = 0.079999998; \
+				explosionShielding = 3; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitRightArm : HitLeftArm \
+			{ \
+				name = "hand_r"; \
+			}; \
+			class HitLeftLeg \
+			{ \
+				armor = 8; \
+				material = -1; \
+				name = "leg_l"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 3; \
+				visual = "injury_legs"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitRightLeg : HitLeftLeg \
+			{ \
+				name = "leg_r"; \
+			}; \
+		}; \
+
+#define Player_Hitpoints \
+		class HitPoints : HitPoints \
+		{ \
+			class HitFace \
+			{ \
+				armor = 2; \
+				material = -1; \
+				name = "face_hub"; \
+				passThrough = 0.80000001; \
+				radius = 0.079999998; \
+				explosionShielding = 0.1; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitNeck : HitFace \
+			{ \
+				armor = 2; \
+				material = -1; \
+				name = "neck"; \
+				passThrough = 0.80000001; \
+				radius = 0.1; \
+				explosionShielding = 0.5; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitHead : HitNeck \
+			{ \
+				armor = 2; \
+				material = -1; \
+				name = "head"; \
+				passThrough = 0.80000001; \
+				radius = 0.2; \
+				explosionShielding = 0.5; \
+				minimalHit = 0.0099999998; \
+				depends = "HitFace max HitNeck"; \
+			}; \
+			class HitPelvis : HitHead \
+			{ \
+				armor = 13; \
+				material = -1; \
+				name = "pelvis"; \
+				passThrough = 0.80000001; \
+				radius = 0.23999999; \
+				explosionShielding = 3; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+				depends = ""; \
+			}; \
+			class HitAbdomen : HitPelvis \
+			{ \
+				armor = 10; \
+				material = -1; \
+				name = "spine1"; \
+				passThrough = 0.80000001; \
+				radius = 0.16; \
+				explosionShielding = 3; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitDiaphragm : HitAbdomen \
+			{ \
+				armor = 10; \
+				material = -1; \
+				name = "spine2"; \
+				passThrough = 0.33000001; \
+				radius = 0.18000001; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitChest : HitDiaphragm \
+			{ \
+				armor = 13; \
+				material = -1; \
+				name = "spine3"; \
+				passThrough = 0.33000001; \
+				radius = 0.18000001; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitBody : HitChest \
+			{ \
+				armor = 1325; \
+				material = -1; \
+				name = "body"; \
+				passThrough = 1; \
+				radius = 0; \
+				explosionShielding = 6; \
+				visual = "injury_body"; \
+				minimalHit = 0.0099999998; \
+				depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest"; \
+			}; \
+			class HitArms : HitBody \
+			{ \
+				armor = 10; \
+				material = -1; \
+				name = "arms"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 3; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+				depends = "0"; \
+			}; \
+			class HitHands : HitArms \
+			{ \
+				armor = 10; \
+				material = -1; \
+				name = "hands"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 1; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+				depends = "HitArms"; \
+			}; \
+			class HitLegs : HitHands \
+			{ \
+				armor = 10; \
+				material = -1; \
+				name = "legs"; \
+				passThrough = 1; \
+				radius = 0.14; \
+				explosionShielding = 3; \
+				visual = "injury_legs"; \
+				minimalHit = 0.0099999998; \
+				depends = "0"; \
+			}; \
+			class Incapacitated : HitLegs \
+			{ \
+				armor = 1325; \
+				material = -1; \
+				name = "body"; \
+				passThrough = 1; \
+				radius = 0; \
+				explosionShielding = 3; \
+				visual = ""; \
+				minimalHit = 0; \
+				depends = "(((Total - 0.25) max 0) + ((HitHead - 0.25) max 0) + ((HitBody - 0.25) max 0)) * 2"; \
+			}; \
+			class HitLeftArm \
+			{ \
+				armor = 10; \
+				material = -1; \
+				name = "hand_l"; \
+				passThrough = 1; \
+				radius = 0.079999998; \
+				explosionShielding = 3; \
+				visual = "injury_hands"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitRightArm : HitLeftArm \
+			{ \
+				name = "hand_r"; \
+			}; \
+			class HitLeftLeg \
+			{ \
+				armor = 10; \
+				material = -1; \
+				name = "leg_l"; \
+				passThrough = 1; \
+				radius = 0.1; \
+				explosionShielding = 3; \
+				visual = "injury_legs"; \
+				minimalHit = 0.0099999998; \
+			}; \
+			class HitRightLeg : HitLeftLeg \
+			{ \
+				name = "leg_r"; \
+			}; \
+		}; \
+
 
 // ============================================================================== Macro Predefined Equipments
 

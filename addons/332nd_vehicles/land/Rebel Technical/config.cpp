@@ -19,13 +19,23 @@ class CfgPatches
 };
 class CfgVehicles
  {
-	class I_G_Offroad_01_armed_F;
-	class ViewGunner;
-	class ViewOptics;
-	class Turrets;
-	class M2_Turret;
-	class I_Z6_Turret;
-	class I_E5C_Turret;
+	class Offroad_01_military_base_F;
+
+	class Offroad_01_armed_base_F : Offroad_01_military_base_F
+	{
+		class Turrets;
+	};
+
+	class I_G_Offroad_01_armed_F : Offroad_01_armed_base_F
+	{
+		class Turrets : Turrets
+		{
+			class M2_Turret;
+		};
+	};
+
+	
+
 
 	
     class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6): I_G_Offroad_01_armed_F
@@ -35,24 +45,21 @@ class CfgVehicles
 		scopeCurator = 2;
 		side = 2;
 		faction = "EdCat_332nd_Rebel";
-		editorSubcategory = "EdSubcat_332nd_Rebel_TANKS";
+		editorSubcategory = "EdSubcat_332nd_Rebel_CARS";
 		crew = "332nd_aux_rebel_unit_332nd_indep_rebel";
-		hiddenselections[] = {
-			 "camo1"
-		};
+
 		class EventHandlers
 		{
 			init = "(_this select 0) setVariable [""BIS_enableRandomization"",false];";
 		};
 
-		hiddenselectionstextures[] = {
-		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Offroad.paa,"soft_f\Offroaf_01\Data\Offroad_01_ext_BASE01_CO.paa",
-		   MACRO_Rebel_Technical_TEXTURES\Base\Rebel_Offroad.paa,"soft_f\Offroaf_01\Data\Offroad_01_ext_BASE01_CO.paa"
-		};
+		hiddenSelections[] = { "camo","camo2" };
+
+		hiddenSelectionsTextures[] = { "\332nd_vehicles\_textures\land\Rebel_Technical\Base\Rebel_Offroad.paa", "\332nd_vehicles\_textures\land\Rebel_Technical\Base\Rebel_Offroad.paa" };
 
 		class Turrets : Turrets
 		{
-			class I_Z6_Turret : M2_Turret
+			class M2_Turret : M2_Turret
 			{
 				weapons[] =
 				{
@@ -61,63 +68,17 @@ class CfgVehicles
 				};
 				magazines[] =
 				{
-					"332nd_aux_magazine_R_Z90_x150",
-					"332nd_aux_magazine_R_Z90_x150",
-					"332nd_aux_magazine_R_Z90_x150",
-					"332nd_aux_magazine_R_Z90_x150"
+					"332nd_aux_magazine_R_Z90_x750",
+					"332nd_aux_magazine_R_Z90_x750",
+					"332nd_aux_magazine_R_Z90_x750",
+					"332nd_aux_magazine_R_Z90_x750",
+					"332nd_aux_magazine_R_Z90_x750",
+					"332nd_aux_magazine_R_Z90_x750"
 					
 				};
 			};
 			   
 	   };
-
-		class Components;
-		class Components : Components
-		{
-			class TransportPylonsComponent
-			{
-				uiPicture = "a3\air_f_gamma\plane_fighter_03\data\ui\plane_a143_3den_ca.paa";
-				class Pylons
-				{
-					class Pylons1
-					{
-						hardpoints[] =
-						{
-							"332_A_Pylon"
-						};
-						attachment = "332nd_aux_magazine_R_Pylon_AA_low_x12";
-						priority = 5;
-						maxweight = 1200;
-						UIposition[] = { 0.34999999,0.15000001 };
-					};
-					class Pylons2 : Pylons1
-					{
-						maxweight = 1200;
-						UIposition[] = { 0.34999999,-0.15000001 };
-					};
-					
-				};
-				class Presets
-				{
-					class Empty
-					{
-						displayName = "Empty";
-						attachment[] = {};
-					};
-					class Default
-					{
-						displayName = "Default";
-						attachment[] =
-						{
-							"332nd_aux_magazine_R_Pylon_AA_low_x12",
-							"332nd_aux_magazine_R_Pylon_AA_low_x12"
-						};
-					};
-				};
-			};
-		};
-
-
 	};
 
 };	

@@ -20,9 +20,17 @@ class CfgPatches
 	};
 };
 
+class CfgAmmo
+{
+	class ls_ammo_762_green;
+	class MACRO_NEW_AMMO(R_BK762_green) : ls_ammo_762_green
+	{
+		lightcolor[] = { 0, 188, 0 };
+	};
+};
+
 class CfgMagazines
 {
-	class MACRO_NEW_AMMO(R_762_green);
 	class 30rnd_762x39_AK12_Mag_F;
 	class MACRO_NEW_MAG(BK_152,30) : 30rnd_762x39_AK12_Mag_F
 	{
@@ -32,11 +40,11 @@ class CfgMagazines
 		model = "\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		count = 30;
 		mass = 15;
-		initspeed = 1400;
+		initspeed = 900;
 		displayName = MACRO_AMMO_DISPLAYNAME(BK_152,30)
 		displayNameShort = "Green 30rnd";
 		descriptionShort = "332nd Green Medium Power Round";
-		ammo = MACRO_NEW_AMMO(R_762_green);
+		ammo = MACRO_NEW_AMMO(R_BK762_green);
 		tracersEvery = 1;
 	};
 };
@@ -57,15 +65,15 @@ class CfgWeapons
 	class MACRO_NEW_WEAPON(BK_152) : OPTRE_Commando
 	{
 		scope = 2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(BK - 152)
-			magazines[] = {
-				MACRO_NEW_MAG(BK_152,30)
-			};
+		displayName = "Rebel BK - 152";
+		magazines[] = {
+			MACRO_NEW_MAG(BK_152,30)
+		};
 		canShootInWater = 1;
 		recoil = "recoil_spar";
 		recoilprone = "recoil_spar";
 		baseWeapon = "";
-		modes[] = { "Single","" };
+		modes[] = { "Single"};
 		hiddenSelectionsTextures[] =
 		{
 			"OPTRE_Weapons\Commando\data\commando_black_co.paa",

@@ -1,7 +1,7 @@
 #include "../../../332nd_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class MACRO_PATCH_NAME(R_M380_turrent)
+	class MACRO_PATCH_NAME(R_M380_turret)
 	{
 		author = "332nd Aux Team";
 		addonRootClass = MACRO_PATCH_NAME(land_vehicles);
@@ -11,7 +11,7 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-			MACRO_NEW_VEHICLE(Land,Rebel,R_M380_turrent),
+			MACRO_NEW_VEHICLE(Land,Rebel,R_M380_turret),
 		};
 		weapons[] = {};
 	};
@@ -21,10 +21,10 @@ class CfgMagazines
 {
 	class MACRO_NEW_MAG(R_M380,200);
 
-	class MACRO_NEW_MAG(R_M380_turrent_Mag,2000) : MACRO_NEW_MAG(R_M380,200)
+	class MACRO_NEW_MAG(R_M380_turret_Mag,2000) : MACRO_NEW_MAG(R_M380,200)
 	{
 		count = 2000;
-		displayName = MACRO_AMMO_DISPLAYNAME(R_M380_turrent_Mag,2000)
+		displayName = MACRO_AMMO_DISPLAYNAME(R_M380_turret_Mag,2000)
 	};
 };
 
@@ -32,14 +32,14 @@ class CfgWeapons
 {
 	class MACRO_NEW_WEAPON(R_M380);
 
-	class MACRO_NEW_WEAPON(R_M380_turrent) : MACRO_NEW_WEAPON(R_M380)
+	class MACRO_NEW_WEAPON(R_M380_turret) : MACRO_NEW_WEAPON(R_M380)
 	{
 		scopeArsenal = 0;
-		model = "\OPTRE_Weapons\MG\M73.p3d";
+		model = "";
 		magazineWell[] = {};
 		magazines[] =
 		{
-			MACRO_NEW_MAG(R_M380_turrent_Mag,2000)
+			MACRO_NEW_MAG(R_M380_turret_Mag,2000)
 		};
 	};
 };
@@ -68,7 +68,7 @@ class CfgVehicles
 		};
 	};
 
-	class MACRO_NEW_VEHICLE(Land,Rebel,R_M380_turrent) : 3AS_HeavyRepeater_Unarmoured
+	class MACRO_NEW_VEHICLE(Land,Rebel,R_M380_turret) : 3AS_HeavyRepeater_Unarmoured
 	{
 		displayName = "M380 Turrent";
 		scope = 2;
@@ -85,15 +85,15 @@ class CfgVehicles
 
 				weapons[] =
 				{
-				  MACRO_NEW_WEAPON(R_M380_turrent)
+				  MACRO_NEW_WEAPON(R_M380_turret)
 				};
 				magazines[] =
 				{
-				  MACRO_NEW_MAG(R_M380_turrent_Mag,2000),
-				  MACRO_NEW_MAG(R_M380_turrent_Mag,2000),
-				  MACRO_NEW_MAG(R_M380_turrent_Mag,2000),
-				  MACRO_NEW_MAG(R_M380_turrent_Mag,2000),
-				  MACRO_NEW_MAG(R_M380_turrent_Mag,2000)
+				  MACRO_NEW_MAG(R_M380_turret_Mag,2000),
+				  MACRO_NEW_MAG(R_M380_turret_Mag,2000),
+				  MACRO_NEW_MAG(R_M380_turret_Mag,2000),
+				  MACRO_NEW_MAG(R_M380_turret_Mag,2000),
+				  MACRO_NEW_MAG(R_M380_turret_Mag,2000)
 				};
 			};
 		};
@@ -103,17 +103,17 @@ class CfgVehicles
 			class muzzle_source
 			{
 				source = "reload";
-				weapon = MACRO_NEW_WEAPON(E5c_E_Web);
+				weapon = MACRO_NEW_WEAPON(R_M380_turret);
 			};
 			class muzzle_source_rot
 			{
 				source = "ammorandom";
-				weapon = MACRO_NEW_WEAPON(E5c_E_Web);
+				weapon = MACRO_NEW_WEAPON(R_M380_turret);
 			};
 			class minigun
 			{
 				source = "revolving";
-				weapon = MACRO_NEW_WEAPON(E5c_E_Web);
+				weapon = MACRO_NEW_WEAPON(R_M380_turret);
 			};
 		};
 	};
