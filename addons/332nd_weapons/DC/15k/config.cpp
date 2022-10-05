@@ -160,5 +160,6 @@ class CfgAmmo
 		visibleFireTime = 3;
 		visibleFire = 1;
 		cartridge = "";
+		effectfly = "332nd_mainRound_effects";
 	};
 };

@@ -36,6 +36,63 @@ class CfgLights
 	{
 		color[] = {0.3,0,0.5};
 	};
+
+    class 332nd_aux_MainRound_effects
+    {
+        ambient[] = {0,0,1,0};
+        brightness = 0;
+        color[] = { 0,0,1,1 };
+        diffuse[] = { 0,0,0.1 };
+        drawLight = 0;
+        intensity = 0;
+        position[] = { 0,0.2,0 };
+
+        class Attenuation
+        {
+            constant = 1;
+            linear = 0;
+            quadratic = 40;
+            start = 0;
+        };
+    };
+
+    class 332nd_aux_MainRound_CIS_effects
+    {
+        ambient[] = {1,0,0,0};
+        brightness = 0;
+        color[] = { 1,0,0,1 };
+        diffuse[] = { 0.1,0,0 };
+        drawLight = 0;
+        intensity = 0;
+        position[] = { 0,0.2,0 };
+
+        class Attenuation
+        {
+            constant = 1;
+            linear = 0;
+            quadratic = 40;
+            start = 0;
+        };
+    };
+
+    class 332nd_aux_MainRound_REBEL_effects
+    {
+        ambient[] = {0,1,0,0};
+        brightness = 0;
+        color[] = { 0,1,0,1 };
+        diffuse[] = { 0,0.1,0 };
+        drawLight = 0;
+        intensity = 0;
+        position[] = { 0,0.2,0 };
+
+        class Attenuation
+        {
+            constant = 1;
+            linear = 0;
+            quadratic = 40;
+            start = 0;
+        };
+    };
 };
 
 class CfgCloudlets
@@ -712,4 +769,43 @@ class 332nd_aux_effects_purple_tracer_Bomb
         simulation = "particles";
         type = "332nd_aux_effects_Bomb_tracerPurple"; 
     };
+};
+
+class 332nd_mainRound_effects
+{
+        class MainRoundEffects
+        {
+            intensity = 0;
+            interval = 1;
+            lifeTime = 6;
+            position[] = { 0,0,0 };
+            simulation = "light";
+            type = "332nd_aux_MainRound_effects";
+        };
+};
+
+class 332nd_mainRound_CIS_effects
+{
+        class MainRoundEffects
+        {
+            intensity = 0;
+            interval = 1;
+            lifeTime = 6;
+            position[] = { 0,0,0 };
+            simulation = "light";
+            type = "332nd_aux_MainRound_CIS_effects";
+        };
+};
+
+class 332nd_mainRound_REBEL_effects
+{
+        class MainRoundEffects
+        {
+            intensity = 0;
+            interval = 1;
+            lifeTime = 6;
+            position[] = { 0,0,0 };
+            simulation = "light";
+            type = "332nd_aux_MainRound_REBEL_effects";
+        };
 };

@@ -220,7 +220,7 @@ class CfgAmmo
 		submunitionConeType[] = {"poissondisc",12};
 
 		model = "ls_weapons_core\Effects\laser_blue.p3d";
-		effectfly = "ls_plasma_blue";
+		effectfly = "332nd_mainRound_effects";
 		ExplosionEffects = "ls_plasma_impact";
 
 		indirectHit = 0;
@@ -308,7 +308,7 @@ class CfgAmmo
 		caliber = 1;
 		typicalSpeed = 360;
 		triggerDistance = 0;
-		effectfly = "ls_plasma_blue";
+		effectfly = "332nd_mainRound_effects";
 		ExplosionEffects = "ls_plasma_impact";
 		model = "ls_weapons_core\Effects\laser_blue.p3d";
 		class HitEffects

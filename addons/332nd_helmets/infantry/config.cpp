@@ -61,6 +61,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Ion),
 			MACRO_NEW_HELMET(infantry,Sync),
 			MACRO_NEW_HELMET(infantry,Bored),
+			MACRO_NEW_HELMET(infantry,Jager),
 			
 
 			MACRO_NEW_HELMET(engineer,Cadet),
@@ -129,6 +130,7 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Ion,Ion,Ion.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sync,Sync,Sync.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bored,Bored,Bored.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Jager,Jager,Jager.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)

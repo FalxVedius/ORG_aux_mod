@@ -465,6 +465,7 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
+		effectfly = "332nd_mainRound_effects";
 		soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"
@@ -500,6 +501,7 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
+		effectfly = "332nd_mainRound_effects";
 		soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"
@@ -573,6 +575,7 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
+		effectfly = "332nd_mainRound_effects";
 	};
 
 	class SWLW_ammo_40mm_green;
