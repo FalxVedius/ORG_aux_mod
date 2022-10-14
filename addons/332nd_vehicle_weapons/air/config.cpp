@@ -20,217 +20,217 @@ class CfgAmmo
     class ls_50mm_laat_he;
 	class MACRO_NEW_AMMO(ARCLow): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_green.p3d";
-	effectfly="332nd_aux_effects_green_tracer_AVI";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
-	flaresize=10;
-	caliber=3;
-	tracersEvery = 1;
-	hit=200;
-	indirectHit = 25;
-	mass=1;
-	indirectHitRange = 1.5;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_green.p3d";
+		effectfly="332nd_aux_effects_green_tracer_AVI";
+		 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
+		flaresize=10;
+		caliber=8;
+		tracersEvery = 1;
+		hit = 640;
+		indirectHit = 25;
+		mass=1;
+		indirectHitRange = 1.5;
+		tracerscale=2;
 	};
 	
 	class ls_50mm_laat_apfsds;
 	class MACRO_NEW_AMMO(LAAT_40mm): ls_50mm_laat_apfsds
 	{
-	model="SWLW_main\Effects\laser_green.p3d";
-	effectfly="332nd_aux_effects_green_tracer_AVI";
-	soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,500};
-	flaresize=10;
-	caliber=8;
-	explosionEffects = "ATRocketExplosion";
-	tracersEvery = 1;
-	indirectHit = 12;
-	mass=2;
-	indirectHitRange = 4;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_green.p3d";
+		effectfly="332nd_aux_effects_green_tracer_AVI";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,500};
+		flaresize=10;
+		caliber=8;
+		explosionEffects = "ATRocketExplosion";
+		tracersEvery = 1;
+		hit = 640;
+		indirectHit = 12;
+		mass=2;
+		indirectHitRange = 4;
+		tracerscale=2;
 	};
 	
 	class MACRO_NEW_AMMO(ARCHigh): ls_50mm_laat_he
 	{
-	flaresize=20;
-	class CamShakeFire
-	{
-		power = 30;
-		duration = 0.5;
-		frequency = 20;
-		distance = 30;
-	};
-	class CamShakePlayerFire
-	{
-		power = 10;
-		duration = 0.3;
-		frequency = 20;
-	};
-	class CamShakeHit
-	{
-		power = 100;
-		duration = 1;
-		frequency = 20;
-	};
-	ExplosionEffects = "ATRocketExplosion";
-    soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
-	hit=3000;
-	caliber=15;
-	mass=20;
-	tracerScale = 15;
-	indirectHit = 2500;
-	indirectHitRange = 5;
+		flaresize=20;
+		class CamShakeFire
+		{
+			power = 30;
+			duration = 0.5;
+			frequency = 20;
+			distance = 30;
+		};
+		class CamShakePlayerFire
+		{
+			power = 10;
+			duration = 0.3;
+			frequency = 20;
+		};
+		class CamShakeHit
+		{
+			power = 100;
+			duration = 1;
+			frequency = 20;
+		};
+		ExplosionEffects = "ATRocketExplosion";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
+		hit=10000;
+		caliber=15;
+		mass=20;
+		tracerScale = 15;
+		indirectHit = 4500;
+		indirectHitRange = 5;
 	};
 	
 	class M_Titan_AT_long;
 	class MACRO_NEW_AMMO(RX_200_ATGM): M_Titan_AT_long
 	{
-	soundFly[]=
-		{
-			"swlw_rework\sounds\launcher\E60R_fly.wss",
-			5,
-			5,
-			1000
-		};
-	manualcontrol=1;
-	caliber=5;
-	effectsMissile = "332nd_aux_effects_missile_plx_blue";
-	hit=200;
-	thrusttime = 12;
-	indirectHit = 35;
-	indirectHitRange = 3;
+		soundFly[]=
+			{
+				"swlw_rework\sounds\launcher\E60R_fly.wss",
+				5,
+				5,
+				1000
+			};
+		manualcontrol=1;
+		caliber=5;
+		effectsMissile = "332nd_aux_effects_missile_plx_blue";
+		hit=200;
+		thrusttime = 12;
+		indirectHit = 35;
+		indirectHitRange = 3;
 	};
 	class ls_50mm_apfsds;
 	class MACRO_NEW_AMMO(Nu_20mm): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_blue.p3d";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
-	flaresize=4;
-	effectfly="332nd_aux_effects_blue_tracer_AVI";
-	caliber=3;
-	tracersEvery = 1;
-	hit=130;
-	explosionEffects = "ImpactPlasmaExpBlue";
-	indirectHit =6;
-	mass=2;
-	indirectHitRange = 0.5;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_blue.p3d";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+		flaresize=4;
+		effectfly="332nd_aux_effects_blue_tracer_AVI";
+		caliber=3;
+		tracersEvery = 1;
+		hit=230;
+		explosionEffects = "ImpactPlasmaExpBlue";
+		indirectHit =6;
+		mass=2;
+		indirectHitRange = 0.5;
+		tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(Air_25mm): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_blue.p3d";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
-	flaresize=4;
-	effectfly="332nd_aux_effects_blue_tracer_AVI";
-	caliber=3;
-	tracersEvery = 1;
-	hit=175;
-	explosionEffects = "ImpactPlasmaExpBlue";
-	indirectHit =12;
-	mass=1;
-	indirectHitRange = 1.5;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_blue.p3d";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+		flaresize=4;
+		effectfly="332nd_aux_effects_blue_tracer_AVI";
+		caliber=8;
+		tracersEvery = 1;
+		hit=275;
+		explosionEffects = "ImpactPlasmaExpBlue";
+		indirectHit =12;
+		mass=1;
+		indirectHitRange = 1.5;
+		tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(Vulture_30mm): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_red.p3d";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
-	flaresize=4;
-	caliber=3;
-	maxLeadSpeed = 2000;
-	allowAgainstInfantry=1;
-	tracersEvery = 1;
-	cost = 30;
-	hit=120;
-	explosionEffects = "ATRocketExplosion";
-	indirectHit =6;
-	mass=2;
-	indirectHitRange = 0.1;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_red.p3d";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+		flaresize=4;
+		caliber=3;
+		maxLeadSpeed = 2000;
+		allowAgainstInfantry=1;
+		tracersEvery = 1;
+		cost = 30;
+		hit=120;
+		explosionEffects = "ATRocketExplosion";
+		indirectHit =6;
+		mass=2;
+		indirectHitRange = 0.1;
+		tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(LE_30mm): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_green.p3d";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
-	flaresize=4;
-	effectfly="332nd_aux_effects_green_tracer_AVI";
-	caliber=5;
-	tracersEvery = 1;
-	hit=150;
-	explosionEffects = "ImpactPlasmaExpgreen";
-	indirectHit =50;
-	mass=2;
-	indirectHitRange = 4;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_green.p3d";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+		flaresize=4;
+		effectfly="332nd_aux_effects_green_tracer_AVI";
+		caliber=5;
+		tracersEvery = 1;
+		hit=750;
+		explosionEffects = "ImpactPlasmaExpgreen";
+		indirectHit =50;
+		mass=2;
+		indirectHitRange = 4;
+		tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(Z95_30mm): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_blue.p3d";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
-	flaresize=4;
-	effectfly="332nd_aux_effects_blue_tracer_AVI";
-	caliber=5;
-	tracersEvery = 1;
-	hit=150;
-	explosionEffects = "ImpactPlasmaExpBlue";
-	indirectHit =25;
-	mass=2;
-	indirectHitRange = 2.5;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_blue.p3d";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+		flaresize=4;
+		effectfly="332nd_aux_effects_blue_tracer_AVI";
+		caliber=8;
+		tracersEvery = 1;
+		hit=650;
+		explosionEffects = "ImpactPlasmaExpBlue";
+		indirectHit =25;
+		mass=2;
+		indirectHitRange = 2.5;
+		tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(Ywing_30mm): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_blue.p3d";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
-	flaresize=4;
-	caliber=8;
-	tracersEvery = 1;
-	hit=300;
-	explosionEffects = "ATRocketExplosion";
-	indirectHit =40;
-	mass=2;
-	indirectHitRange =3;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_blue.p3d";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
+		flaresize=4;
+		caliber=8;
+		tracersEvery = 1;
+		hit=1000;
+		explosionEffects = "ATRocketExplosion";
+		indirectHit =40;
+		mass=2;
+		indirectHitRange =3;
+		tracerscale=2;
 	};
 	class MACRO_NEW_AMMO(Nu_75mm_he): ls_50mm_laat_he
 	{
-	model="SWLW_main\Effects\laser_green.p3d";
-	effectfly="332nd_aux_effects_RPS4_green";
-	 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
-	flaresize=10;
-	caliber = 10;
-	tracersEvery = 1;
-	hit = 300;
-	explosionEffects = "ATRocketExplosion";
-	indirectHit = 26;
-	mass=2;
-	indirectHitRange = 4.2;
-	tracerscale=2;
+		model="SWLW_main\Effects\laser_green.p3d";
+		effectfly="332nd_aux_effects_RPS4_green";
+		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
+		flaresize=10;
+		caliber = 10;
+		tracersEvery = 1;
+		hit = 650;
+		explosionEffects = "ATRocketExplosion";
+		indirectHit = 26;
+		mass=2;
+		indirectHitRange = 4.2;
+		tracerscale=2;
 	};
 	class Rocket_03_HE_F;
     class MACRO_NEW_AMMO(Shrieker_Rocket): Rocket_03_HE_F
     {
-	  caliber = 2;
-	  hit = 210;
-	  indirectHit = 55;
-	  indirectHitRange = 15;
-	  flaresize=10;
-	  proxyShape = "";
-	  thrustTime = 5;
-	  soundfly[]=
-		{
+		caliber = 2;
+		hit = 610;
+		indirectHit = 55;
+		indirectHitRange = 15;
+		flaresize=10;
+		proxyShape = "";
+		thrustTime = 5;
+		soundfly[]=
+		{	
 			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
 			1,
 			1.5,
 			200
 		};
-	  manualcontrol=0;
-	  effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
+		manualcontrol=0;
+		effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
     };
 	class CMflareAmmo;
 	class MACRO_NEW_AMMO(CM_FLARE): CMflareAmmo
     {
-	  flaresize=5;
-	  //effectsSmoke = "332nd_aux_effects_CMFlare";
+		flaresize=5;
     };
 
 	class 3AS_Vulture_Rocket_HEAP;

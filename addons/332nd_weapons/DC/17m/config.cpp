@@ -162,16 +162,17 @@ class cfgWeapons
         {
             class sight
             {
-				distanceZoomMax = 100;
-				distanceZoomMin = 100;
 				memoryPointCamera = "eye";
 				opticsDisablePeripherialVision = 0.67;
 				opticsFlare = "true";
 				opticsID = 1;
 				opticsPPEffects[] = { "OpticsCHAbera5","OpticsBlur5" };
-				opticsZoomInit = 0.75;
-				opticsZoomMax = 1.25;
 				opticsZoomMin = 0.25;
+				opticsZoomMax = 1.25;
+				opticsZoomInit = 0.75;
+				discreteInitIndex = 0;
+				distanceZoomMin = 100;
+				distanceZoomMax = 700;
 				useModelOptics = 0;
 				visionMode[] = {};
             };

@@ -96,16 +96,17 @@ class CfgWeapons
 					"OpticsBlur5"
 				};
 				opticsDisablePeripherialVision=0.67000002;
-				opticsZoomMin=0.375;
-				opticsZoomMax=1.1;
-				discreteDistance[] = {100,200,300};
-				opticsZoomInit=0.75;
+				opticsZoomMin= 0.25;
+				opticsZoomMax= 1.25;
+				opticsZoomInit = 0.75;
+				distanceZoomMin = 100;
+				distanceZoomMax = 700;
+				discreteDistance[] = { 100,200,300,400,500,600,700,800 };
 				discreteInitIndex = 0;
                 discreteDistanceInitIndex = 0;
 				memoryPointCamera="eye";
 				visionMode[]={};
-				distanceZoomMin=100;
-				distanceZoomMax=100;
+
 			};
 		};
 		class GunParticles: GunParticles
@@ -149,10 +150,10 @@ class CfgWeapons
 			};
 			class UnderBarrelSlot: UnderBarrelSlot
 			{
-				linkProxy="\A3\data_f_mark\proxies\weapon_slots\UNDERBARREL";
+				linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
 				compatibleItems[]=
 				{
-				"332nd_bipod"
+					"332nd_bipod"
 				};
 			};
 		};
@@ -218,13 +219,14 @@ class CfgWeapons
 						"OpticsBlur5"
 					};
 					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin=0.375;
-					opticsZoomMax=1.1;
-					opticsZoomInit=0.75;
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					discreteInitIndex = 0;
+					distanceZoomMin = 100;
+					distanceZoomMax = 700;
 					memoryPointCamera="eye";
 					visionMode[]={};
-					distanceZoomMin=100;
-					distanceZoomMax=100;
 				};
 				class Scope: IronSights
 				{
@@ -236,9 +238,12 @@ class CfgWeapons
 						"OpticsBlur5"
 					};
 					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin=0.122173;
-					opticsZoomMax=0.122173;
-					opticsZoomInit=0.122173;
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					discreteInitIndex = 0;
+					distanceZoomMin = 100;
+					distanceZoomMax = 700;
 					memoryPointCamera="opticView";
 					visionMode[]=
 					{
@@ -246,8 +251,6 @@ class CfgWeapons
 						"NVG"
 					};
 					opticsFlare="true";
-					distanceZoomMin=100;
-					distanceZoomMax=100;
 					cameraDir="";
 				};
 			};
@@ -284,18 +287,17 @@ class CfgWeapons
 						"OpticsBlur5"
 					};
 					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin=0.375;
-					opticsZoomMax=1.1;
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					discreteInitIndex = 0;
+					distanceZoomMin = 100;
+					distanceZoomMax = 700;
 					discreteDistance[] = {100,200,300};
-                    distanceZoomMin=100;
-                    distanceZoomMax=1000;
 					discreteInitIndex = 0;
                     discreteDistanceInitIndex = 0;
-					opticsZoomInit=0.75;
 					memoryPointCamera="eye";
 					visionMode[]={};
-					distanceZoomMin=100;
-					distanceZoomMax=100;
 				};
 				class Scope: IronSights
 				{
@@ -307,14 +309,15 @@ class CfgWeapons
 						"OpticsBlur5"
 					};
 					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin= 0.375;
-					opticsZoomMax= 0.375;
-					opticsZoomInit= 0.375;
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					discreteInitIndex = 0;
+					distanceZoomMin = 100;
+					distanceZoomMax = 700;
 					discreteInitIndex = 0;
                     discreteDistanceInitIndex = 0;
 					discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000};
-                    distanceZoomMin=100;
-                    distanceZoomMax=1000;
 					memoryPointCamera="opticView";
 					visionMode[]=
 					{
@@ -322,8 +325,6 @@ class CfgWeapons
 						"NVG"
 					};
 					opticsFlare="true";
-					distanceZoomMin=100;
-					distanceZoomMax=100;
 					cameraDir="";
 				};
 			};
