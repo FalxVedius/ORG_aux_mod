@@ -69,7 +69,7 @@ class cfgWeapons
 		};
 
 		
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17M *Test*)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17M [Rifleman])
 
 		canShootInWater=1;
 		baseWeapon="332nd_aux_weapon_DC_17m";

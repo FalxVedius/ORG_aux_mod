@@ -151,6 +151,10 @@ class CfgPatches
             MACRO_NEW_UNIT(airborne,Dets),
             //Poseidon
             MACRO_NEW_UNIT(captain,Poseidon),
+            //Sigma
+            MACRO_NEW_UNIT(infantry,Sigma),
+            //Sentinel
+            MACRO_NEW_UNIT(airborne,Sentinel),
 
 		};
 		weapons[] = {
@@ -294,6 +298,10 @@ class CfgPatches
             MACRO_NEW_UNIFORM(airborne,Dets),
             //Poseidon
             MACRO_NEW_UNIFORM(captain,Poseidon),
+            //Sigma
+            MACRO_NEW_UNIFORM(infantry,Sigma),
+            //Sentinel
+            MACRO_NEW_UNIFORM(airborne,Sentinel),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -545,6 +553,10 @@ class CfgWeapons
     MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Dets,Dets,Dets)
     //Poseidon
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Poseidon,Poseidon,Poseidon)
+    //Sigma
+    MACRO_NEW_INF_UNIFORM_ITEM(Sigma,Sigma,Sigma)
+    //Sentinel
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Sentinel,Sentinel,Sentinel)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -728,4 +740,8 @@ class CfgVehicles
     MACRO_NEW_AIRBORNE_UNIT(Griif,Griif,Griif,custom\Griif_Upper.paa,custom\Griif_Lower.paa)
     //Poseidon
     MACRO_NEW_CAPTAIN_UNIT(Poseidon,Poseidon,Poseidon,custom\Poseidon_Upper.paa,custom\Poseidon_Lower.paa)
+    //Sigma
+    MACRO_NEW_INF_UNIT(Sigma,Sigma,Sigma,custom\Sigma_Upper.paa,custom\Sigma_Lower.paa)
+    //Sentinel
+    MACRO_NEW_AIRBORNE_UNIT(Sentinel,Sentinel,Sentinel,custom\Sentinel_Upper.paa,custom\Sentinel_Lower.paa)
 };

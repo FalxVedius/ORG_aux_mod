@@ -67,7 +67,18 @@ class CfgWeapons
 			"this",
 			"332Stun"
 		};
-		reloadAction="3AS_GestureReloadDC15A";
+
+		handAnim[] = { "OFP2_ManSkeleton","\A3\Weapons_F_Mark\Machineguns\MMG_02\Data\Anim\mmg_02.rtm" };
+
+		hiddenSelections[] = { "camo","camo1" };
+
+		hiddenSelectionsTextures[] = { "sc_weapons_2\data\pkmp\textures\body_co.paa","" };
+
+		model = "\sc_weapons_2\data\pkmp\pkmp.p3d";
+
+		reloadAction = "GestureReloadSPAR_02";
+		reloadMagazineSound[] = { "A3\Sounds_F_Exp\arsenal\weapons\Rifles\SPAR02\SPAR02_reload",1,1,10 };
+
 		magazineReloadSwitchPhase=0.40000001;
 		cursor="332_DOT";
         cursoraim="332_DC15A";
@@ -75,14 +86,14 @@ class CfgWeapons
 		recoil = "recoil_spar";
 		recoilprone="recoil_spar";
 		maxRecoilSway=0.0125;
-		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
+		picture = "\sc_weapons_2\data\icons\icon_pkmp_ca.paa";
 		swayDecaySpeed=1.25;
 		modes[] = {"FullAuto"};
 		inertia=0.5;
 		dexterity=1.5;
 		maxZeroing=1000;
 		initSpeed=-1;
-		model="3AS\3AS_Weapons\DC15A\3AS_DC15A_f.p3d";
+
 		class OpticsModes
 		{
 			class Ironsights
@@ -125,7 +136,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\MUZZLE";
 				compatibleItems[]=
 				{
-					"332nd_DC15b_muzzle"
+
 				};
 				iconPosition[]={0,0.44999999};
 				iconScale=0.2;
@@ -135,8 +146,8 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					"3AS_Optic_Red_DC15A",
-					"332nd_DC15b_Scope"
+					"332nd_acog_dc15l",
+					"3as_optic_reflex_dc15c"
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -153,7 +164,7 @@ class CfgWeapons
 				linkProxy = "\a3\data_f_mark\Proxies\Weapon_Slots\UNDERBARREL";
 				compatibleItems[]=
 				{
-					"332nd_bipod"
+					"bipod_01_f_blk"
 				};
 			};
 		};
@@ -163,11 +174,6 @@ class CfgWeapons
 		distanceZoomMin=400;
 		distanceZoomMax=400;
 		descriptionShort="DC-15A, The Clone Wars Mod";
-		handAnim[]=
-		{
-			"OFP2_ManSkeleton",
-			"3AS\3AS_Weapons\DC15A\Data\Anim\DC15A_handanim.rtm"
-		};
 		selectionFireAnim="zasleh";
 		flash="gunfire";
 		flashSize=3;
@@ -188,198 +194,6 @@ class CfgWeapons
 			class StandardSound: BaseSoundModeType
 			{
 				soundSetShot[] = {"332_DC15b_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
-			};
-		};
-	};
-		
-	class ItemCore;
-	class InventoryMuzzleItem_Base_F;
-	class InventoryOpticsItem_Base_F;
-	class 3AS_Optic_Red_DC15A: ItemCore
-	{
-		scope=2;
-		displayName="3AS DC15A Red Optic";
-		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
-		model="\3AS\3AS_Weapons\DC15A\3AS_DC15A_Red.p3d";
-		weaponInfoType="RscWeaponZeroing";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=1;
-			modelOptics="\3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d";
-			class OpticsModes
-			{
-				class IronSights
-				{
-					opticsID=1;
-					useModelOptics=0;
-					opticsFlare="true";
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera5",
-						"OpticsBlur5"
-					};
-					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin = 0.25;
-					opticsZoomMax = 1.25;
-					opticsZoomInit = 0.75;
-					discreteInitIndex = 0;
-					distanceZoomMin = 100;
-					distanceZoomMax = 700;
-					memoryPointCamera="eye";
-					visionMode[]={};
-				};
-				class Scope: IronSights
-				{
-					opticsID=2;
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera5",
-						"OpticsBlur5"
-					};
-					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin = 0.25;
-					opticsZoomMax = 1.25;
-					opticsZoomInit = 0.75;
-					discreteInitIndex = 0;
-					distanceZoomMin = 100;
-					distanceZoomMax = 700;
-					memoryPointCamera="opticView";
-					visionMode[]=
-					{
-						"Normal",
-						"NVG"
-					};
-					opticsFlare="true";
-					cameraDir="";
-				};
-			};
-		};
-	};
-	class 3AS_Bipod_DC15L_f;
-	class 332nd_bipod: 3AS_Bipod_DC15L_f
-	 {
-		  displayname="332nd Bipod";
-		  scope=2;
-	 }
-
-	class 332nd_DC15b_Scope: ItemCore
-	{
-		scope=2;
-		displayName="[332nd] DC15b Scope";
-		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
-		model="\3AS\3AS_Weapons\DC15A\3AS_DC15A_LE_Scope.p3d";
-		weaponInfoType="RscWeaponZeroing";
-		class ItemInfo: InventoryOpticsItem_Base_F
-		{
-			mass=1;
-			modelOptics="\A3\Weapons_F_EPA\acc\reticle_marksman_F";
-			class OpticsModes
-			{
-				class IronSights
-				{
-					opticsID=1;
-					useModelOptics=0;
-					opticsFlare="true";
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera5",
-						"OpticsBlur5"
-					};
-					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin = 0.25;
-					opticsZoomMax = 1.25;
-					opticsZoomInit = 0.75;
-					discreteInitIndex = 0;
-					distanceZoomMin = 100;
-					distanceZoomMax = 700;
-					discreteDistance[] = {100,200,300};
-					discreteInitIndex = 0;
-                    discreteDistanceInitIndex = 0;
-					memoryPointCamera="eye";
-					visionMode[]={};
-				};
-				class Scope: IronSights
-				{
-					opticsID=2;
-					useModelOptics=1;
-					opticsPPEffects[]=
-					{
-						"OpticsCHAbera5",
-						"OpticsBlur5"
-					};
-					opticsDisablePeripherialVision=0.67000002;
-					opticsZoomMin = 0.25;
-					opticsZoomMax = 1.25;
-					opticsZoomInit = 0.75;
-					discreteInitIndex = 0;
-					distanceZoomMin = 100;
-					distanceZoomMax = 700;
-					discreteInitIndex = 0;
-                    discreteDistanceInitIndex = 0;
-					discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1000};
-					memoryPointCamera="opticView";
-					visionMode[]=
-					{
-						"Normal",
-						"NVG"
-					};
-					opticsFlare="true";
-					cameraDir="";
-				};
-			};
-		};
-	};
-	class 3AS_Muzzle_LE_DC15A;
-	class 332nd_DC15b_muzzle: 3AS_Muzzle_LE_DC15A
-	{
-		author="$STR_3as_Studio";
-		_generalMacro="muzzle_snds_H";
-		htMin=1;
-		htMax=600;
-		afMax=0;
-		mfMax=0;
-		mFact=1;
-		tBody=100;
-		scope=2;
-		inertia=0.2;
-		displayName="[332nd] DC-15b Flash - Hider";
-		picture="\a3\Weapons_F\acc\Data\UI\icon_muzzle_snds_H_ca.paa";
-		model="\3AS\3AS_Weapons\DC15A\3AS_DC15A_LE_Muzzle.p3d";
-		class ItemInfo: InventoryMuzzleItem_Base_F
-		{
-			mass=10;
-			class MagazineCoef
-			{
-				initSpeed=1.25;
-			};
-			class AmmoCoef
-			{
-				hit=1;
-				typicalSpeed=1;
-				airFriction=1;
-				visibleFire=1;
-				audibleFire=1;
-				visibleFireTime=1;
-				audibleFireTime=1;
-				cost=1;
-			};
-			soundTypeIndex=1;
-			muzzleEnd="zaslehPoint";
-			alternativeFire="Zasleh2";
-			class MuzzleCoef
-			{
-				dispersionCoef=0.80000001;
-				artilleryDispersionCoef=1;
-				fireLightCoef=1;
-				recoilCoef=1;
-				recoilProneCoef=1;
-				minRangeCoef=1;
-				minRangeProbabCoef=1;
-				midRangeCoef=1;
-				midRangeProbabCoef=1;
-				maxRangeCoef=1;
-				maxRangeProbabCoef=1;
 			};
 		};
 	};
@@ -438,6 +252,7 @@ class CfgAmmo
 			default_mat = "3AS_ImpactPlasma";
 		};
 		 effectfly = "332nd_mainRound_effects";
+		 cartridge = "";
         soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"
@@ -447,6 +262,7 @@ class CfgAmmo
 	{
 	     hit = 20;
 		 effectfly="332nd_aux_effects_blue_bullet";
+		 cartridge = "";
 		 class HitEffects
 		{
 			Hit_Foliage_green = "3AS_ImpactPlasma";
