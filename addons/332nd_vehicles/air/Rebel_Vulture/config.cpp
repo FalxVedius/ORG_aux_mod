@@ -14,6 +14,7 @@ class CfgPatches
 		units[] = {
             MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAP),
 			MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_CAS),
+			MACRO_NEW_VEHICLE(air,CIS,Rebel_Vulture_GUN),
         };
 		weapons[] = {};
 	};
@@ -230,7 +231,10 @@ class CfgVehicles
 				  {
 					  class Pylons1 : Pylons1
 					  {
-				  
+						  hardpoints[] =
+						  {
+							  "332_A_Rebel_Pylon"
+						  };
 						  attachment = "332nd_aux_magazine_R_Pylon_AA_low_x24";
 					  };
 				  };
@@ -277,7 +281,7 @@ class CfgVehicles
 		  };
 		  magazines[] =
 		  {
-			  MACRO_NEW_MAG(Pylon_PlasmaBomb,3),
+			  MACRO_NEW_MAG(Pylon_PlasmaBomb,1),
 			  MACRO_NEW_MAG(Vulture_30mm,1000),
 			  MACRO_NEW_MAG(Vulture_30mm,1000),
 			  "120Rnd_CMFlare_Chaff_Magazine",
@@ -410,19 +414,23 @@ class CfgVehicles
 				  {
 					  class pylons1 : pylons1
 					  {
-						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x3";
+						  hardpoints[] = { "332_B_Rebel_Pylon" };
+						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x1";
 					  };
 					  class pylons2 : pylons2
 					  {
-						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x3";
+						  hardpoints[] = { "332_B_Rebel_Pylon" };
+						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x1";
 					  };
 					  class pylons3 : pylons3
 					  {
-						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x3";
+						  hardpoints[] = { "332_B_Rebel_Pylon" };
+						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x1";
 					  };
 					  class pylons4 : pylons4
 					  {
-						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x3";
+						  hardpoints[] = { "332_B_Rebel_Pylon" };
+						  attachment = "332nd_aux_magazine_Pylon_PlasmaBomb_x1";
 					  };
 				  };
 				  class Presets
@@ -438,8 +446,8 @@ class CfgVehicles
 						  attachment[] =
 						  {
 							  
-							  "332nd_aux_magazine_Pylon_PlasmaBomb_x3",
-							  "332nd_aux_magazine_Pylon_PlasmaBomb_x3",
+							  "332nd_aux_magazine_Pylon_PlasmaBomb_x1",
+							  "332nd_aux_magazine_Pylon_PlasmaBomb_x1",
 							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells",
 							  "3as_PylonWeapon_40Rnd_Vulture_Heavy_shells"
 							 

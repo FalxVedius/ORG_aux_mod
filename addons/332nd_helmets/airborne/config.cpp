@@ -30,6 +30,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(ab,Shock),
 			MACRO_NEW_HELMET(ab,Striker),
 			MACRO_NEW_HELMET(ab,Saiko),
+			MACRO_NEW_HELMET(ab,Penny),
+			MACRO_NEW_HELMET(ab,Oxide),
         };
 		weapons[] = {};
 	};
@@ -59,4 +61,6 @@ class CfgWeapons
 	MACRO_NEW_AB_HELMET_ITEM(Cog,Cog,Cog.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Striker,Striker,Striker.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Saiko,Saiko,Saiko.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Penny,Penny,Penny.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Oxide,Oxide,Oxide.paa)
 };

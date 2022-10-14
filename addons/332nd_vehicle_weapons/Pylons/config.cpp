@@ -20,7 +20,7 @@ class CfgAmmo
     class Missile_AGM_02_F;
 	class MACRO_NEW_AMMO(AGM_Med): Missile_AGM_02_F
 	{
-	soundengine[]=
+		soundengine[]=
 		{
 			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
 			1,
@@ -39,26 +39,26 @@ class CfgAmmo
 			"332nd_genericrocket_flyby_soundset"
 		};
 		model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
-	  manualcontrol=0;
-	  effectsMissile = "332nd_aux_effects_missile_Rocket_Blue";
-	  proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
-	caliber=1;
-	missileLockMaxDistance = 3000;
-	missileLockMinDistance = 0;
-	missileLockCone = 360;
-	airlock=0;
-	weaponLockSystem = "1 + 2 + 4 + 8 + 16";
-	missileKeepLockedCone = 360;
-	hit=1100;
-	indirectHit = 85;
-	mass=2;
-	indirectHitRange = 8;
+		manualcontrol=0;
+		effectsMissile = "332nd_aux_effects_missile_Rocket_Blue";
+		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
+		caliber=1;
+		missileLockMaxDistance = 3000;
+		missileLockMinDistance = 0;
+		missileLockCone = 360;
+		airlock=0;
+		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
+		missileKeepLockedCone = 360;
+		hit=3300;
+		indirectHit = 85;
+		mass=2;
+		indirectHitRange = 8;
 	};
 
 
 	class MACRO_NEW_AMMO(Proton_Torpedo): Missile_AGM_02_F
 	{
-	soundengine[]=
+		soundengine[]=
 		{
 			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
 			1,
@@ -82,71 +82,71 @@ class CfgAmmo
 		typicalSpeed = 50;
 		thrustTime = 60;
 		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
-	  manualcontrol=1;
-	  effectsMissile = "332nd_aux_effects_missile_Proton_Purple";
-	  proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
-	caliber=1;
-	explosionEffects = "HelicopterExplosionEffects2";
-	missileLockMaxDistance = 5000;
-	missileLockMinDistance = 0;
-	missileLockCone = 360;
-	airlock=1;
-	weaponLockSystem = "1 + 2 + 4 + 8 + 16";
-	missileKeepLockedCone = 360;
-	hit=3500;
-	indirectHit = 1000;
-	mass=2;
-	indirectHitRange = 10;
+		manualcontrol=1;
+		effectsMissile = "332nd_aux_effects_missile_Proton_Purple";
+		proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
+		caliber=1;
+		explosionEffects = "HelicopterExplosionEffects2";
+		missileLockMaxDistance = 5000;
+		missileLockMinDistance = 0;
+		missileLockCone = 360;
+		airlock=1;
+		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
+		missileKeepLockedCone = 360;
+		hit=6500;
+		indirectHit = 1000;
+		mass=2;
+		indirectHitRange = 10;
 	};
 
 	class Bo_GBU12_LGB;
 	class MACRO_NEW_AMMO(Proton_Bomb): Bo_GBU12_LGB
 	{
-	soundFly[]=
+		soundFly[]=
 		{
 			"332nd_vehicle_weapons\air\sounds\V1.wss",
 			2,
 			15,
 			1000
 		};
-    effectfly="332nd_aux_effects_purple_tracer_Bomb";
-	effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
-	maxSpeed = 100;
+		effectfly="332nd_aux_effects_purple_tracer_Bomb";
+		effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
+		maxSpeed = 100;
 		thrust = 50;
 		timeToLive = 60;
 		typicalSpeed = 50;
 		thrustTime = 1.5;
-	explosionEffects = "HelicopterExplosionEffects2";
+		explosionEffects = "HelicopterExplosionEffects2";
 
-	weaponLockSystem = "1 + 2 + 4 + 8 + 16";
-	missileKeepLockedCone = 360;
-	hit=5000;
-	indirectHit = 1150;
-	indirectHitRange = 15;
+		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
+		missileKeepLockedCone = 360;
+		hit=10000;
+		indirectHit = 1150;
+		indirectHitRange = 15;
 	};
 
 	class MACRO_NEW_AMMO(Plasma_Bomb): Bo_GBU12_LGB
 	{
-	effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
-	model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
-	proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
-	//thrust = 50;
-	timeToLive = 60;
-	//typicalSpeed = 50;
-	//thrustTime = 1.5;
-	explosionEffects = "MK82_Explode";
-	weaponLockSystem = "8";
-	missileKeepLockedCone = 360;
-	hit=5000;
-	indirectHit = 3000;
-	indirectHitRange = 30;
+		effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
+		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
+		proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
+		//thrust = 50;
+		timeToLive = 60;
+		//typicalSpeed = 50;
+		//thrustTime = 1.5;
+		explosionEffects = "MK82_Explode";
+		weaponLockSystem = "8";
+		missileKeepLockedCone = 360;
+		hit=10000;
+		indirectHit = 3000;
+		indirectHitRange = 30;
 	};
 	
 
     class M_Air_AA;
 	class MACRO_NEW_AMMO(AA_Med): M_Air_AA
 	{
-	soundengine[]=
+		soundengine[]=
 		{
 			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
 			1,
@@ -164,21 +164,21 @@ class CfgAmmo
 		{
 			"332nd_genericrocket_flyby_soundset"
 		};
-    manualcontrol=0;
-	missileLockMaxDistance = 5000;
-	missileLockMinDistance = 0;
-    effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
-	caliber=1;
-	weaponLockSystem = "1 + 2 + 16";
-	missileKeepLockedCone = 270;
-	missileLockCone = 360;
-	hit=600;
-    cmImmunity = 0.9;
+		manualcontrol=0;
+		missileLockMaxDistance = 5000;
+		missileLockMinDistance = 0;
+		effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
+		caliber=1;
+		weaponLockSystem = "1 + 2 + 16";
+		missileKeepLockedCone = 270;
+		missileLockCone = 360;
+		hit=600;
+		cmImmunity = 0.9;
 	};
 
 	class MACRO_NEW_AMMO(AA_Low): M_Air_AA
 	{
-	soundengine[]=
+		soundengine[]=
 		{
 			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
 			1,
@@ -196,16 +196,16 @@ class CfgAmmo
 		{
 			"332nd_genericrocket_flyby_soundset"
 		};
-    manualcontrol=0;
-	missileLockMaxDistance = 1500;
-	missileLockMinDistance = 0;
-    effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
-	caliber=1;
-	weaponLockSystem = "1 + 2 + 16";
-	missileKeepLockedCone = 270;
-	missileLockCone = 360;
-	hit=150;
-    cmImmunity = 0.8;
+		manualcontrol=0;
+		missileLockMaxDistance = 1500;
+		missileLockMinDistance = 0;
+		effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
+		caliber=1;
+		weaponLockSystem = "1 + 2 + 16";
+		missileKeepLockedCone = 270;
+		missileLockCone = 360;
+		hit=150;
+		cmImmunity = 0.8;
 	};
 };
 	

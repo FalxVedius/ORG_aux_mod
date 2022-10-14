@@ -73,12 +73,12 @@ class cfgWeapons
                     "OpticsBlur5"
                 };
                 opticsDisablePeripherialVision=0.67000002;
-                opticsZoomMin=0.375;
-                opticsZoomMax=1.1;
-                opticsZoomInit=0.75;
-                discreteInitIndex=0;
-                distanceZoomMin=100;
-                distanceZoomMax=700;
+				opticsZoomMin = 0.25;
+				opticsZoomMax = 1.25;
+				opticsZoomInit = 0.75;
+				discreteInitIndex = 0;
+				distanceZoomMin = 100;
+				distanceZoomMax = 700;
                 discreteDistance[]={100,200,300,400,500,600,700};
                 discreteDistanceInitIndex=0;
                 memoryPointCamera="eye";

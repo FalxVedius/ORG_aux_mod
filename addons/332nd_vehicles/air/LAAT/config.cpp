@@ -3277,6 +3277,8 @@ class CfgVehicles
         scope = 2;
         forceInGarage = 1;
         maximumLoad = 10000;
+		ace_cargo_hasCargo = 1;
+		ace_cargo_space = 16;
 
         faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
