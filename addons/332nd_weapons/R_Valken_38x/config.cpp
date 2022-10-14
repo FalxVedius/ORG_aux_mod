@@ -191,7 +191,7 @@ class CfgAmmo
 	class ls_ammo_338_green;
 	class  MACRO_NEW_AMMO(338_Green_T) : ls_ammo_338_green
 	{
-		effectfly = "332nd_aux_effects_green_bullet";
+		effectfly = "332nd_mainRound_REBEL_effects";
 		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0.8,0.6,200 };
 	};
 };

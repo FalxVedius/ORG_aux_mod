@@ -34,7 +34,7 @@ class cfgWeapons
     class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_15k) : 3as_pistol_DC15SA_F
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15k *Test*)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15k)
 
         ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
@@ -160,5 +160,6 @@ class CfgAmmo
 		visibleFireTime = 3;
 		visibleFire = 1;
 		cartridge = "";
+		effectfly = "332nd_mainRound_effects";
 	};
 };

@@ -57,16 +57,14 @@ class cfgWeapons
 						"OpticsCHAbera1",
 						"OpticsBlur1"
 					};
-					opticsZoomMin = 0.375;
-					opticsZoomMax = 0.375;
-					opticsZoomInit = 0.375;
+					opticsZoomMin = 0.25;
+					opticsZoomMax = 1.25;
+					opticsZoomInit = 0.75;
+					discreteInitIndex = 0;
+					distanceZoomMin = 100;
+					distanceZoomMax = 700;
 					discreteDistance[] = {100,300,400,500,600,700,800,900,1000};
 					discreteDistanceInitIndex = 1;
-					distanceZoomMin = 100;
-					distanceZoomMax = 1000;
-					nFovLimit = 0.07;
-					discreteFov[] = {0.375};
-					discreteInitIndex = 0;
 					modelOptics[] =
 					{
 						"\3AS\3AS_Weapons\Data\3AS_2D_Optic.p3d"
@@ -87,9 +85,6 @@ class cfgWeapons
 					useModelOptics = 0;
 					opticsFlare = 0;
 					opticsDisablePeripherialVision = 0;
-					opticsZoomMin = 0.375;
-					opticsZoomMax = 1.1;
-					opticsZoomInit = 0.75;
 					memoryPointCamera = "eye";
 					visionMode[] = {};
 					discretefov[] = {};
@@ -145,12 +140,12 @@ class cfgWeapons
                     "OpticsBlur5"
                 };
                 opticsDisablePeripherialVision=0.67000002;
-                opticsZoomMin=0.375;
-                opticsZoomMax=1.1;
-                opticsZoomInit=0.75;
-                discreteInitIndex=0;
-                distanceZoomMin=100;
-                distanceZoomMax=700;
+				opticsZoomMin = 0.25;
+				opticsZoomMax = 1.25;
+				opticsZoomInit = 0.75;
+				discreteInitIndex = 0;
+				distanceZoomMin = 100;
+				distanceZoomMax = 700;
                 discreteDistance[]={100,200,300,400,500,600,700};
                 discreteDistanceInitIndex=0;
                 memoryPointCamera="eye";

@@ -43,6 +43,7 @@ class CfgAmmo
 		suppressionRadiusHit = 14;
 		explosionSoundEffect = "DefaultExplosion";
 		explosioneffects = "ExploAmmoExplosion";
+		effectfly = "332nd_mainRound_CIS_effects";
 		soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"

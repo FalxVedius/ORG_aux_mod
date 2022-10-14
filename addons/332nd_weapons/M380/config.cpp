@@ -378,7 +378,7 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(R_M380762_green) :ls_ammo_762_green
 	{
 		lightcolor[] = { 0, 188, 0 };
-
+		effectfly = "332nd_mainRound_REBEL_effects";
 	};
 };
 

@@ -286,6 +286,7 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
+		effectfly = "332nd_mainRound_effects";
 	};
 	class  MACRO_NEW_AMMO(408_Blue_T): ls_ammo_408_blue
 	{

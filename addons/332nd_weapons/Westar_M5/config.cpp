@@ -474,6 +474,7 @@ class CfgAmmo
        visibleFireTime = 3;
 	   visibleFire = 1;
 	   cartridge = "";
+	   effectfly = "332nd_mainRound_effects";
 	   class HitEffects
 		{
 			Hit_Foliage_green = "3AS_ImpactPlasma";

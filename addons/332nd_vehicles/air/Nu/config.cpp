@@ -86,7 +86,7 @@ class CfgVehicles
 		class AnimationSources;
 		class ViewPilot;
 		class ViewOptics;
-		class components;
+		class Components;
 		class RotorLibHelicopterProperties;
 		class ACE_SelfActions: ACE_SelfActions
 		{
@@ -94,7 +94,32 @@ class CfgVehicles
 	};
     class B_Heli_Attack_01_base_F: Heli_Attack_01_base_F
 	{
-		class ACE_SelfActions: ACE_SelfActions
+		class Turrets : Turrets
+		{
+			class CopilotTurret;
+			class MainTurret;
+		};
+		class HitPoints : HitPoints
+		{
+			class HitHull;
+			class HitFuel;
+			class HitEngine;
+			class HitAvionics;
+			class HitVRotor;
+			class HitHRotor;
+			class HitGlass1;
+			class HitGlass2;
+			class HitGlass3;
+			class HitGlass4;
+			class HitGlass5;
+		};
+		class CargoTurret;
+		class AnimationSources;
+		class ViewPilot;
+		class ViewOptics;
+		class Components;
+		class RotorLibHelicopterProperties;
+		class ACE_SelfActions : ACE_SelfActions
 		{
 		};
 	};
@@ -1575,7 +1600,7 @@ class CfgVehicles
 			controllable=1;
 		};
 		maximumLoad=25000;
-		class Components: components
+		class Components : Components
 		{
 			class SensorsManagerComponent
 			{
@@ -1739,6 +1764,44 @@ class CfgVehicles
 						componentType="SensorsDisplayComponent";
 						range[]={4000,2000,16000,8000};
 						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class TransportPylonsComponent
+			{
+				uiPicture = "swlb_a_vehicle\laat\data\ui\laat_ui.paa";
+				class Pylons
+				{
+					class PylonLeft1
+					{
+						attachment = "332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority = 5;
+						hardpoints[] =
+						{
+							"332_B_Pylon"
+						};
+						turret[] = {};
+						UIposition[] = { 0.059999999,0.40000001 };
+					};
+					class PylonLeft2 : PylonLeft1
+					{
+						attachment = "332nd_aux_magazine_Pylon_AGM_Med_x3";
+						priority = 4;
+						hardpoints[] =
+						{
+							"332_B_Pylon"
+						};
+						UIposition[] = { 0.079999998,0.34999999 };
+					};
+					class PylonRight2 : PylonLeft2
+					{
+						mirroredMissilePos = 2;
+						UIposition[] = { 0.62,0.34999999 };
+					};
+					class PylonRight1 : PylonLeft1
+					{
+						mirroredMissilePos = 1;
+						UIposition[] = { 0.63999999,0.40000001 };
 					};
 				};
 			};

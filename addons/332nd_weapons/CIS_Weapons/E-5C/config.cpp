@@ -229,6 +229,7 @@ class CfgAmmo
 		{
 			"332nd_blaster_flyby_soundset"
 		};
+		effectfly = "332nd_mainRound_CIS_effects";
 		class HitEffects
 		{
 			Hit_Foliage_green = "3AS_ImpactPlasma";
