@@ -214,9 +214,9 @@ class CfgVehicles
 
 		attendant = true;
 		ace_rearm_defaultSupply = 300000;
-		ace_refuel_fuelCargo = 3000;
+		ace_refuel_fuelCargo = 10000;
 		ace_repair_canRepair = 1;
-		ace_refuel_fuelCapacity = 1400;
+		ace_refuel_fuelCapacity = 10000;
 		ace_refuel_flowRate = 4;
 		ace_refuel_canReceive = 1;
 

@@ -33,7 +33,7 @@ class cfgWeapons
     class JLTS_stun_muzzle;
 	class MACRO_NEW_WEAPON(DC_44h): optre_hgun_comet_F
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 44h *Test*)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 44h)
 
         ACE_Overheating_mrbs=300000;
 		canShootInWater=1;

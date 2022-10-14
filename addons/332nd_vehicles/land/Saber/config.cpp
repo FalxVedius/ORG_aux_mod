@@ -482,7 +482,7 @@ class CfgVehicles
 			{
 				stabilizedInAxes = 3;
 				outGunnerMayFire=1;
-				ingunnerMayFire=0;
+				ingunnerMayFire=1;
 
 				weapons[] =
 				{
@@ -607,7 +607,7 @@ class CfgVehicles
 			{
 				stabilizedInAxes = 3;
 				outGunnerMayFire=1;
-				ingunnerMayFire=0;
+				ingunnerMayFire=1;
 				weapons[] =
 				{
 					MACRO_NEW_WEAPON(BeamLaser_Full)

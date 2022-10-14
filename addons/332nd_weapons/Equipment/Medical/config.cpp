@@ -71,6 +71,14 @@ class CfgFunctions
 			{
 
 			};
+			class Protein
+			{
+
+			};
+			class ProteinLocal
+			{
+
+			};
 			class MedicalInit
 			{
 
@@ -517,6 +525,7 @@ class ACE_Medical_Treatment_Actions
 	class ApplyTourniquet;
 	class RemoveTourniquet;
 	class CPR;
+	class PersonalAidKit;
 
 	class MACRO_NEW_MEDICAL_ITEM(BactaSpray) : ElasticBandage
 	{
@@ -644,6 +653,8 @@ class ACE_Medical_Treatment_Actions
 
 		allowedSelections[] = { "All" };
 
+		condition = "_patient != player;";
+
 		medicRequired = 1;
 		displayName = "Bacta Injector";
 		displayNameProgress = "Injecting Bacta...";
@@ -655,6 +666,8 @@ class ACE_Medical_Treatment_Actions
 		items[] = { "332nd_aux_medical_Kolto_Inj" };
 
 		allowedSelections[] = { "All" };
+
+		condition = "_patient != player;";
 
 		medicRequired = 1;
 		displayName = "Kolto Injector";
@@ -684,6 +697,18 @@ class ACE_Medical_Treatment_Actions
 		medicRequired = 1;
 		callbackSuccess = "Aux332nd_fnc_RestartHeart";
 	};
+	class MACRO_NEW_MEDICAL_ITEM(Geltabs) : PersonalAidKit
+	{
+		items[] = { "332nd_aux_medical_Geltabs" };
+
+		allowedSelections[] = { "All" };
+
+		medicRequired = 1;
+		displayName = "Geltabs";
+		displayNameProgress = "Administering Geltabs...";
+
+		callbackSuccess = "Aux332nd_fnc_Protein";
+	};
 	class MACRO_NEW_MEDICAL_ITEM(PFG) : Epinephrine
 	{
 		items[] = { "332nd_aux_medical_PFG" };
@@ -703,6 +728,7 @@ class CfgWeapons
 	class ACE_morphine;
 	class ACE_surgicalKit;
 	class ACE_tourniquet;
+	class ACE_personalAidKit;
 	class CBA_MiscItem_ItemInfo;
 
 	class MACRO_NEW_MEDICAL_ITEM(BactaSpray) : ACE_elasticBandage
@@ -1232,6 +1258,23 @@ class CfgWeapons
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
 			mass = 1;
+		};
+	};
+	class MACRO_NEW_MEDICAL_ITEM(Geltabs) : ACE_personalAidKit
+	{
+		scope = 2;
+		scopeArsenal = 2;
+		author = MACRO_AUTHOR;
+		displayName = MACRO_MEDICAL_ITEM_DISPLAYNAME(Geltabs)
+		descriptionShort = "332nd Healing";
+		descriptionUse = "Chewing 332nd";
+
+		picture = "\MRC\JLTS\contraband\Drugs\data\ui\protein_ui_ca.paa";
+		model = "\MRC\JLTS\contraband\Drugs\protein.p3d";
+
+		class ItemInfo : CBA_MiscItem_ItemInfo
+		{
+			mass = 50;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(PFG) : ACE_epinephrine

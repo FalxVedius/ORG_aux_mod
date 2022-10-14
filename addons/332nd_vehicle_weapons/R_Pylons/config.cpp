@@ -109,7 +109,7 @@ class CfgMagazines
 	class PylonRack_12Rnd_missiles;
 	class MACRO_NEW_MAG(R_Pylon_AA_low,24) : PylonRack_12Rnd_missiles
 	{
-		hardpoints[] = { "332_A_Pylon" };
+		hardpoints[] = { "332_A_Rebel_Pylon" };
 		displayName = "Firefly Cluster Missile";
 		count = 24;
 		descriptionshort = "Air to Air Firefly Cluster Missile";
@@ -122,7 +122,7 @@ class CfgMagazines
 	class PylonRack_12Rnd_missiles;
 	class MACRO_NEW_MAG(R_Pylon_AGM_Med,12) : PylonRack_12Rnd_missiles
 	{
-		hardpoints[] = { "332_A_Pylon" };
+		hardpoints[] = { "332_A_Rebel_Pylon" };
 		displayName = "Micro Missile AGM";
 		count = 12;
 		descriptionshort = "Air to Ground micro Concussion Missile";
@@ -132,15 +132,15 @@ class CfgMagazines
 	};
 
 	class PylonMissile_1Rnd_BombCluster_03_F;
-	class MACRO_NEW_MAG(Pylon_PlasmaBomb,3) : PylonMissile_1Rnd_BombCluster_03_F
+	class MACRO_NEW_MAG(Pylon_PlasmaBomb,1) : PylonMissile_1Rnd_BombCluster_03_F
 	{
-		hardpoints[] = { "332_B_Pylon"};
+		hardpoints[] = { "332_B_Rebel_Pylon"};
 		displayName = "Rebel Plasma Bomb";
 		descriptionshort = "Rebel Plasma Bomb";
 		pylonWeapon = "332nd_aux_weapon_Rebel_PlasmaBomb_Pylon";
 		displayNameShort = "R_Plasma Bomb";
 		tracersEvery = 1;
-		count = 3;
+		count = 1;
 		initspeed = 0;
 		ammo = MACRO_NEW_AMMO(R_Plasma_Bomb)
 	};
@@ -186,7 +186,7 @@ class CfgWeapons
 		displayName = "R_Plasma_Bomb";
 		magazines[] = 
 		{
-		 MACRO_NEW_MAG(Pylon_PlasmaBomb,3)
+		 MACRO_NEW_MAG(Pylon_PlasmaBomb,1)
 		};
 	};
 };

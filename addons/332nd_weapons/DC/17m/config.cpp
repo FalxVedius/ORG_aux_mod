@@ -69,7 +69,7 @@ class cfgWeapons
 		};
 
 		
-		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17M *Test*)
+		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17M [Rifleman])
 
 		canShootInWater=1;
 		baseWeapon="332nd_aux_weapon_DC_17m";
@@ -162,16 +162,17 @@ class cfgWeapons
         {
             class sight
             {
-				distanceZoomMax = 100;
-				distanceZoomMin = 100;
 				memoryPointCamera = "eye";
 				opticsDisablePeripherialVision = 0.67;
 				opticsFlare = "true";
 				opticsID = 1;
 				opticsPPEffects[] = { "OpticsCHAbera5","OpticsBlur5" };
-				opticsZoomInit = 0.75;
-				opticsZoomMax = 1.25;
 				opticsZoomMin = 0.25;
+				opticsZoomMax = 1.25;
+				opticsZoomInit = 0.75;
+				discreteInitIndex = 0;
+				distanceZoomMin = 100;
+				distanceZoomMax = 700;
 				useModelOptics = 0;
 				visionMode[] = {};
             };

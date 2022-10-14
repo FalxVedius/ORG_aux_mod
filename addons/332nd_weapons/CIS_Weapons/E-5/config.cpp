@@ -322,5 +322,6 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
+		effectfly = "332nd_mainRound_CIS_effects";
 	};
 };

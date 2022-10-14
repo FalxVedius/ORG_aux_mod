@@ -34,6 +34,7 @@ class CfgAmmo
 		 hit = 45;
 		 coefGravity = 1;
 		 caliber = 2;
+		 effectfly = "332nd_mainRound_effects";
 		  soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"

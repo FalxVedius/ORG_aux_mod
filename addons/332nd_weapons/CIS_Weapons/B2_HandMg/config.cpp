@@ -18,6 +18,55 @@ class CfgPatches
 	};
 };
 
+class CfgAmmo
+{
+	class ls_ammo_338_red;
+	class MACRO_NEW_AMMO(338_Red) : ls_ammo_338_red
+	{
+		hit = 20;
+		dangerRadiusBulletClose = 16;
+		dangerRadiusHit = 40;
+		suppressionRadiusBulletClose = 10;
+		suppressionRadiusHit = 14;
+		explosionSoundEffect = "DefaultExplosion";
+		model = "kobra\442_turrets\Droideka\Doublelaserred.p3d";
+		effectfly = "332nd_mainRound_CIS_effects";
+		soundsetsoniccrack[] =
+		{
+			"332nd_blaster_flyby_soundset"
+		};
+
+		class CamShakeExplode
+		{
+			power = "(20*0.2)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((1 + 20^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power = 20;
+			duration = "((round (20^0.25))*0.2 max 0.2)";
+			frequency = 20;
+			distance = 1;
+		};
+		class CamShakeFire
+		{
+			power = "(20^0.25)";
+			duration = "((round (20^0.5))*0.2 max 0.2)";
+			frequency = 20;
+			distance = "((20^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power = 0.0099999998;
+			duration = 0.1;
+			frequency = 20;
+			distance = 1;
+		};
+	};
+};
+
 class CfgMagazines
 {
 	class 30rnd_762x39_AK12_Mag_F;
@@ -135,5 +184,4 @@ class cfgWeapons
 			aiRateOfFireDistance = 900;
 		};
 	};
-};
 };
