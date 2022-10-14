@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(backpacks_indep)
 	{
-		author = "Namenai";
+		author = "332nd Aux Team";
 		requiredAddons[] =
 		{
 			MACRO_PATCH_NAME(main)
@@ -324,6 +324,25 @@ class CfgVehicles
 			class E60R_AT_rnd_rebel
 			{
 				magazine = "332nd_aux_magazine_E60R_ATMag_x1";
+				count = 2;
+			};
+		};
+	};
+
+	class MACRO_NEW_BACKPACK(indep,332nd_rebel_Human_AA_pack) : B_TacticalPack_blk
+	{
+		displayName = "[332nd] rebel Human AA Pack";
+		maximumLoad = 332;
+
+		editorCategory = "EdCat_332nd_Props";
+		editorSubcategory = "EdSubcat_332nd_PACKS";
+
+		class TransportMagazines
+		{
+
+			class E60R_AA_rnd_rebel
+			{
+				magazine = "332nd_aux_magazine_E60R_AAMag_x1";
 				count = 2;
 			};
 		};
