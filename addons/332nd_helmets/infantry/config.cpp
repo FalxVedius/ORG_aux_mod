@@ -61,6 +61,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Jager),
 			MACRO_NEW_HELMET(infantry,Kanin),
 			MACRO_NEW_HELMET(infantry,Driskoll),
+			MACRO_NEW_HELMET(infantry,Cutter),
+			MACRO_NEW_HELMET(infantry,Sniggs),
 			
 
 			MACRO_NEW_HELMET(engineer,Cadet),
@@ -111,7 +113,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Vault,Vault,Vault.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Xander,Xander,Xander.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Zombie,Zombie,Zombie.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Knight,Knight,Knight.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
@@ -129,6 +130,9 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Jager,Jager,Jager.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Kanin,Kanin,Kanin.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Driskoll,Driskoll,Driskoll.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sniggs,Sniggs,Sniggs.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
