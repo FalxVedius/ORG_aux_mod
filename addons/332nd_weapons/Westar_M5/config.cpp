@@ -253,11 +253,17 @@ class CfgWeapons
 			useExternalOptic=0;
 			magazines[]=
 			{
-				"3Rnd_Smoke_Grenade_shell",
 				"3Rnd_UGL_FlareWhite_F",
 				"ACE_HuntIR_M203",
                 MACRO_NEW_MAG(DC_15_UGL_AP,2),
-                MACRO_NEW_MAG(DC_15_UGL_HE,4)
+                MACRO_NEW_MAG(DC_15_UGL_HE,4),
+				MACRO_NEW_MAG(332_GL_SMOKE_WHITE,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_RED,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_GREEN,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_YELLOW,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_PURPLE,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_BLUE,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_ORANGE,1),
 			};
 			magazineWell[]={};
 			cameraDir="OP_look";

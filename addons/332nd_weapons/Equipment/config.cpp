@@ -114,6 +114,70 @@ class CfgAmmo
 	{
 		explosionTime = -1;
 	};
+
+	class MACRO_NEW_AMMO(332_GL_White): 3AS_SmokeShellBase
+	{
+		explosionTime=1;
+		simulation = "shotSmoke";
+		defelcting = 10;
+		deflectionSlowDown=0.1;
+		deflectionDirDistribution=0.1;
+		deflectionSlowDown = 0.1;
+	};
+	class MACRO_NEW_AMMO(332_GL_Red): 3AS_SmokeShellRed
+	{
+		explosionTime=1;
+		simulation = "shotSmoke";
+		deflecting = 10;
+		deflectionSlowDown=0.1;
+		deflectionDirDistribution=0.1;
+		deflectionSlowDown = 0.1;
+	};
+	class MACRO_NEW_AMMO(332_GL_Green): 3AS_SmokeShellGreen
+	{
+		explosionTime=1;
+		simulation = "shotSmoke";
+		deflecting = 10;
+		deflectionSlowDown=0.1;
+		deflectionDirDistribution=0.1;
+		deflectionSlowDown = 0.1;
+	};
+	class MACRO_NEW_AMMO(332_GL_Yellow): 3AS_SmokeShellYellow
+	{
+		explosionTime=1;
+		simulation = "shotSmoke";
+		deflecting = 10;
+		deflectionSlowDown=0.1;
+		deflectionDirDistribution=0.1;
+		deflectionSlowDown = 0.1;
+	};
+	class MACRO_NEW_AMMO(332_GL_Purple): 3AS_SmokeShellPurple
+	{
+		explosionTime=1;
+		simulation = "shotSmoke";
+		deflecting = 10;
+		deflectionSlowDown=0.1;
+		deflectionDirDistribution=0.1;
+		deflectionSlowDown = 0.1;
+	};
+	class MACRO_NEW_AMMO(332_GL_Blue): 3AS_SmokeShellBlue
+	{
+		explosionTime=1;
+		simulation = "shotSmoke";
+		deflecting = 10;
+		deflectionSlowDown=0.1;
+		deflectionDirDistribution=0.1;
+		deflectionSlowDown = 0.1;
+	};
+	class MACRO_NEW_AMMO(332_GL_Orange): 3AS_SmokeShellOrange
+	{
+		explosionTime=1;
+		simulation = "shotSmoke";
+		deflecting = 10;
+		deflectionSlowDown=0.1;
+		deflectionDirDistribution=0.1;
+		deflectionSlowDown = 0.1;
+	};
 };
 
 class CfgMagazines
@@ -235,6 +299,64 @@ class CfgMagazines
 		mass=4;
 		ammo=MACRO_NEW_AMMO(332_Impact_orange)
     };
+	class 3Rnd_Smoke_Grenade_shell;
+	class 3Rnd_SmokeRed_Grenade_shell;
+	class 3Rnd_SmokeGreen_Grenade_shell;
+	class 3Rnd_SmokeYellow_Grenade_shell;
+	class 3Rnd_SmokePurple_Grenade_shell;
+	class 3Rnd_SmokeBlue_Grenade_shell;
+	class 3Rnd_SmokeOrange_Grenade_shell;
+
+	class MACRO_NEW_MAG(332_GL_SMOKE_WHITE,1): 3Rnd_Smoke_Grenade_shell
+	{
+		displayName="[332nd] 1rnd GL Smoke White";
+		displayNameShort="GL Impact Smoke(white)";
+		count=1;
+		ammo=MACRO_NEW_AMMO(332_GL_White)
+	};
+	class MACRO_NEW_MAG(332_GL_SMOKE_RED,1): 3Rnd_SmokeRed_Grenade_shell
+	{
+		displayName="[332nd] 1rnd GL Smoke Red";
+		displayNameShort="GL Impact Smoke(red)";
+		count=1;
+		ammo=MACRO_NEW_AMMO(332_GL_Red)
+	};
+	class MACRO_NEW_MAG(332_GL_SMOKE_GREEN,1): 3Rnd_SmokeGreen_Grenade_shell
+	{
+		displayName="[332nd] 1rnd GL Smoke Green";
+		displayNameShort="GL Impact Smoke(green)";
+		count=1;
+		ammo=MACRO_NEW_AMMO(332_GL_Green)
+	};
+	class MACRO_NEW_MAG(332_GL_SMOKE_YELLOW,1): 3Rnd_SmokeYellow_Grenade_shell
+	{
+		displayName="[332nd] 1rnd GL Smoke Yellow";
+		displayNameShort="GL Impact Smoke(yellow)";
+		count=1;
+		ammo=MACRO_NEW_AMMO(332_GL_Yellow)
+	};
+	class MACRO_NEW_MAG(332_GL_SMOKE_PURPLE,1): 3Rnd_SmokePurple_Grenade_shell
+	{
+		displayName="[332nd] 1rnd GL Smoke Purple";
+		displayNameShort="GL Impact Smoke(purple)";
+		count=1;
+		ammo=MACRO_NEW_AMMO(332_GL_Purple)
+	};
+	class MACRO_NEW_MAG(332_GL_SMOKE_BLUE,1): 3Rnd_SmokeBlue_Grenade_shell
+	{
+		displayName="[332nd] 1rnd GL Smoke Blue";
+		displayNameShort="GL Impact Smoke(blue)";
+		count=1;
+		ammo=MACRO_NEW_AMMO(332_GL_Blue)
+	};
+	class MACRO_NEW_MAG(332_GL_SMOKE_ORANGE,1): 3Rnd_SmokeOrange_Grenade_shell
+	{
+		displayName="[332nd] 1rnd GL Smoke Orange";
+		displayNameShort="GL Impact Smoke(orange)";
+		count=1;
+		ammo=MACRO_NEW_AMMO(332_GL_Orange)
+	};
+
 };
 
 class CfgWeapons
