@@ -356,6 +356,56 @@ class CfgMagazines
 		count=1;
 		ammo=MACRO_NEW_AMMO(332_GL_Orange)
 	};
+	
+	class MACRO_NEW_MAG(332_GL3_SMOKE_WHITE,3): 3Rnd_Smoke_Grenade_shell
+	{
+		displayName="[332nd] 3rnd GL Smoke White";
+		displayNameShort="GL Impact Smoke(white)";
+		count=3;
+		ammo=MACRO_NEW_AMMO(332_GL_White)
+	};
+	class MACRO_NEW_MAG(332_GL3_SMOKE_RED,3): 3Rnd_SmokeRed_Grenade_shell
+	{
+		displayName="[332nd] 3rnd GL Smoke Red";
+		displayNameShort="GL Impact Smoke(red)";
+		count=3;
+		ammo=MACRO_NEW_AMMO(332_GL_Red)
+	};
+	class MACRO_NEW_MAG(332_GL3_SMOKE_GREEN,3): 3Rnd_SmokeGreen_Grenade_shell
+	{
+		displayName="[332nd] 3rnd GL Smoke Green";
+		displayNameShort="GL Impact Smoke(green)";
+		count=3;
+		ammo=MACRO_NEW_AMMO(332_GL_Green)
+	};
+	class MACRO_NEW_MAG(332_GL3_SMOKE_YELLOW,3): 3Rnd_SmokeYellow_Grenade_shell
+	{
+		displayName="[332nd] 3rnd GL Smoke Yellow";
+		displayNameShort="GL Impact Smoke(yellow)";
+		count=3;
+		ammo=MACRO_NEW_AMMO(332_GL_Yellow)
+	};
+	class MACRO_NEW_MAG(332_GL3_SMOKE_PURPLE,3): 3Rnd_SmokePurple_Grenade_shell
+	{
+		displayName="[332nd] 3rnd GL Smoke Purple";
+		displayNameShort="GL Impact Smoke(purple)";
+		count=3;
+		ammo=MACRO_NEW_AMMO(332_GL_Purple)
+	};
+	class MACRO_NEW_MAG(332_GL3_SMOKE_BLUE,3): 3Rnd_SmokeBlue_Grenade_shell
+	{
+		displayName="[332nd] 3rnd GL Smoke Blue";
+		displayNameShort="GL Impact Smoke(blue)";
+		count=3;
+		ammo=MACRO_NEW_AMMO(332_GL_Blue)
+	};
+	class MACRO_NEW_MAG(332_GL3_SMOKE_ORANGE,3): 3Rnd_SmokeOrange_Grenade_shell
+	{
+		displayName="[332nd] 3rnd GL Smoke Orange";
+		displayNameShort="GL Impact Smoke(orange)";
+		count=3;
+		ammo=MACRO_NEW_AMMO(332_GL_Orange)
+	};
 
 };
 
