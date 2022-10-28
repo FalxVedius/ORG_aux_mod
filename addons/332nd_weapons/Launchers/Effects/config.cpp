@@ -28,6 +28,10 @@ class CfgLights
 	{
 		color[] = {0,1,0};
 	};
+    class 332nd_aux_effects_rocket_dark_green : ls_light_hailfireRocket
+    {
+        color[] = {0,56,2};
+    };
 	class 332nd_aux_effects_rocket_red: ls_light_hailfireRocket
 	{
 		color[] = {186,0,0};
@@ -640,7 +644,7 @@ class 332nd_aux_effects_missile_Rocket_Dark_Green
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_Dark_Green";
+        type = "332nd_aux_effects_rocket_dark_green";
     };
 
     class MissileEffect1
