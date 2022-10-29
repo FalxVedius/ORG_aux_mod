@@ -155,6 +155,8 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,Sigma),
             //Sentinel
             MACRO_NEW_UNIT(airborne,Sentinel),
+            //Cutter
+            MACRO_NEW_UNIT(infantry,Cutter),
 
 		};
 		weapons[] = {
@@ -278,8 +280,6 @@ class CfgPatches
             MACRO_NEW_UNIFORM(assault,Falx),
             //Halligan
             MACRO_NEW_UNIFORM(aviation,Halligan),
-            //Cutter
-            MACRO_NEW_UNIFORM(aviation,Cutter),
             //Riddle
             MACRO_NEW_UNIFORM(captain,Riddle),
             //Hoggy
@@ -302,6 +302,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,Sigma),
             //Sentinel
             MACRO_NEW_UNIFORM(airborne,Sentinel),
+            //Cutter
+            MACRO_NEW_UNIFORM(infantry,Cutter),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -533,8 +535,6 @@ class CfgWeapons
     MACRO_NEW_ASSAULT_UNIFORM_ITEM(Falx,Falx,Falx)
     //Halligan
     MACRO_NEW_AVI_UNIFORM_ITEM(Halligan,Halligan,Halligan)
-    //Cutter
-    MACRO_NEW_AVI_UNIFORM_ITEM(Cutter,Cutter,Cutter)
     //Riddle
     MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Riddle,Riddle,Riddle)
     //Hoggy
@@ -557,6 +557,8 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(Sigma,Sigma,Sigma)
     //Sentinel
     MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Sentinel,Sentinel,Sentinel)
+    //Cutter
+    MACRO_NEW_INF_UNIFORM_ITEM(Cutter,Cutter,Cutter)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -720,12 +722,10 @@ class CfgVehicles
     MACRO_NEW_ASSAULT_UNIT(Falx,Falx,Falx,custom\Falx.paa)
     //Halligan
     MACRO_NEW_AVI_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
-    //Cutter
-    MACRO_NEW_AVI_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
     //Riddle
     MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Captain_Lower.paa)
     //Hoggy
-    MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,officer\Officer_Lower.paa)
+    MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,custom\Hoggy_Lower.paa)
     //Deva
     MACRO_NEW_INF_UNIT(Deva,Deva,Deva,custom\Deva_Upper.paa,custom\Deva_Lower.paa)
     //Church
@@ -744,4 +744,6 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(Sigma,Sigma,Sigma,custom\Sigma_Upper.paa,custom\Sigma_Lower.paa)
     //Sentinel
     MACRO_NEW_AIRBORNE_UNIT(Sentinel,Sentinel,Sentinel,custom\Sentinel_Upper.paa,custom\Sentinel_Lower.paa)
+    //Cutter
+    MACRO_NEW_INF_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
 };

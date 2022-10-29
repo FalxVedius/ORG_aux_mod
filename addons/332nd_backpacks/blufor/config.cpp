@@ -110,7 +110,7 @@ class CfgVehicles
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Medic Pack)
         scope = 2;
-        maximumLoad = 400;
+        maximumLoad = 393;
         hiddenSelectionsTextures[] = {MACRO_BACKPACK_TEXTURES_PATH\jt12\JT-12_Medic_co.paa};
 
         tf_dialog = "JLTS_clone_rto_radio_dialog";

@@ -31,20 +31,16 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Hoggy),
 			MACRO_NEW_HELMET(infantry,Deserter),
 			MACRO_NEW_HELMET(infantry,Poseidon),
-			MACRO_NEW_HELMET(infantry,Frost),
 			MACRO_NEW_HELMET(infantry,Aspect),
-			MACRO_NEW_HELMET(infantry,Beat),
 			MACRO_NEW_HELMET(infantry,Grass),
 			MACRO_NEW_HELMET(infantry,King),
 			MACRO_NEW_HELMET(infantry,Church),
 			MACRO_NEW_HELMET(infantry,Tidal),
-			MACRO_NEW_HELMET(infantry,Deva),
 			MACRO_NEW_HELMET(infantry,Vault),
 			MACRO_NEW_HELMET(infantry,Xander),
 			MACRO_NEW_HELMET(infantry,Zombie),
 			MACRO_NEW_HELMET(infantry,Brotha),
 			MACRO_NEW_HELMET(infantry,Knight),
-			MACRO_NEW_HELMET(infantry,Sigma),
 			MACRO_NEW_HELMET(infantry,Rev),
 			MACRO_NEW_HELMET(infantry,Bob),
 			MACRO_NEW_HELMET(infantry,Ukrainian),
@@ -61,6 +57,8 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Jager),
 			MACRO_NEW_HELMET(infantry,Kanin),
 			MACRO_NEW_HELMET(infantry,Driskoll),
+			MACRO_NEW_HELMET(infantry,Cutter),
+			MACRO_NEW_HELMET(infantry,Sniggs),
 			
 
 			MACRO_NEW_HELMET(engineer,Cadet),
@@ -99,21 +97,16 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Riddle,Riddle,Riddle.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Hoggy,Hoggy,Hoggy.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Poseidon,Poseidon,Poseidon.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Frost,Frost,Frost.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deserter,Deserter,332nd_Rebal_Helmet_phase_2_ca.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Aspect,Aspect,Aspect.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Beat,Beat,Beat.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Grass,Grass,Grass.paa)
 	MACRO_NEW_INF_HELMET_ITEM(King,King,King.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Church,Church,Church.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Tidal,Tidal,Tidal.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Deva,Deva,Deva.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Vault,Vault,Vault.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Xander,Xander,Xander.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Zombie,Zombie,Zombie.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Knight,Knight,Knight.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Rev,Rev,Rev.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bob,Bob,Bob.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Ukrainian,Ukrainian,Ukrainian.paa)
@@ -129,6 +122,9 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Jager,Jager,Jager.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Kanin,Kanin,Kanin.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Driskoll,Driskoll,Driskoll.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sniggs,Sniggs,Sniggs.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)

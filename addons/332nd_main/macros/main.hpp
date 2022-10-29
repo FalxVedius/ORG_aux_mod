@@ -80,8 +80,8 @@
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [332nd] Pilot Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\##texture, "","3AS\3AS_Characters\Clones\Headgear\Textures\PilotP2\Phase_2_Pilot_Tubes_co.paa",MACRO_HELMET_TEXTURES_PATH##\aviation\##texture,""};\
+			displayName = [332nd] Aviation Helmet ('##displayname##');\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\aviation\##texture, MACRO_HELMET_TEXTURES_PATH##\aviation\##texture,"",MACRO_HELMET_TEXTURES_PATH##\aviation\##texture,MACRO_HELMET_TEXTURES_PATH##\aviation\##texture,""};\
 		};
 	#define MACRO_NEW_ENGINEER_HELMET_ITEM(classname,displayname,texture)\
 		class MACRO_NEW_HELMET(engineer,classname): MACRO_NEW_HELMET(engineer,base)\

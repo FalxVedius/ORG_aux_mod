@@ -76,7 +76,7 @@ class CfgAmmo
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
 		hit=10000;
 		caliber=15;
-		mass=20;
+		mass=1;
 		tracerScale = 15;
 		indirectHit = 4500;
 		indirectHitRange = 5;
