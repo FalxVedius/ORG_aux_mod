@@ -1528,6 +1528,12 @@ class CfgVehicles
 				name = "332nd_aux_medical_PressureCuff";
 				count = 30;
 			};
+
+			class Geltab_332nd
+			{
+				name = "332nd_aux_medical_Geltabs";
+				count = 5;
+			};
 		};
 
 		class TransportWeapons
@@ -5756,7 +5762,7 @@ class CfgVehicles
 				};
 				magazines[] = {
 					MACRO_NEW_MAG(Deka_MAG,30),
-					MACRO_NEW_MAG(Deka_MAG,30)),
+					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30)
@@ -5906,7 +5912,7 @@ class CfgVehicles
 				};
 				magazines[] = {
 					MACRO_NEW_MAG(Deka_MAG,30),
-					MACRO_NEW_MAG(Deka_MAG,30)),
+					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30),
 					MACRO_NEW_MAG(Deka_MAG,30)
