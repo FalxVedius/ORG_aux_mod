@@ -360,9 +360,9 @@ class CfgVehicles
 		   };
 		   hiddenselectionstextures[] =
 		   {
-			   "3as\3as_arc170\Data\Main_Frame_CO.paa",
-			   "3as\3as_arc170\Data\Wings_Engines_CO.paa",
-			   "3as\3as_arc170\Data\Guns_CO.paa"
+			   "332nd_vehicles\_textures\air\ARC\Main_Frame.paa",
+			   "332nd_vehicles\_textures\air\ARC\Wings_Engines.paa",
+			   "332nd_vehicles\_textures\air\ARC\Guns.paa"
 		   };
 			 acceleration = 2000;
 			 class EjectionSystem

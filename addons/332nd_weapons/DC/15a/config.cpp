@@ -345,11 +345,24 @@ class cfgWeapons
 			discreteDistanceInitIndex=0;
 			magazineWell[]={};
 			magazines[]= {
-				"3Rnd_Smoke_Grenade_shell",
 				"3Rnd_UGL_FlareWhite_F",
 				"ACE_HuntIR_M203",
                 MACRO_NEW_MAG(DC_15_UGL_AP,2),
-                MACRO_NEW_MAG(DC_15_UGL_HE,4)
+                MACRO_NEW_MAG(DC_15_UGL_HE,4),
+				MACRO_NEW_MAG(332_GL_SMOKE_WHITE,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_RED,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_GREEN,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_YELLOW,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_PURPLE,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_BLUE,1),
+				MACRO_NEW_MAG(332_GL_SMOKE_ORANGE,1),
+				MACRO_NEW_MAG(332_GL3_SMOKE_WHITE,3),
+				MACRO_NEW_MAG(332_GL3_SMOKE_RED,3),
+				MACRO_NEW_MAG(332_GL3_SMOKE_GREEN,3),
+				MACRO_NEW_MAG(332_GL3_SMOKE_YELLOW,3),
+				MACRO_NEW_MAG(332_GL3_SMOKE_PURPLE,3),
+				MACRO_NEW_MAG(332_GL3_SMOKE_BLUE,3),
+				MACRO_NEW_MAG(332_GL3_SMOKE_ORANGE,3),
 			};
 		};
 	};
@@ -357,6 +370,7 @@ class cfgWeapons
 
 class CfgMagazines
 {
+	
 	class 30rnd_762x39_AK12_Mag_F;
 	class MACRO_NEW_MAG(DC_15a_Medium,30): 30rnd_762x39_AK12_Mag_F //Medium Mag for DC15A/UGL
 	{
