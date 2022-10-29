@@ -97,14 +97,9 @@ class CfgVehicles
 	    scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_ARTILLERY";
+		editorSubcategory = "EdSubcat_332nd_ART";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
         forceHideCommander = true;
-
-		hiddenSelectionsTextures[] = 
-		{ 
-
-		};
 
         class Turrets : Turrets
 		{

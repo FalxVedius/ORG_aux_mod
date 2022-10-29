@@ -703,6 +703,8 @@ class ACE_Medical_Treatment_Actions
 
 		allowedSelections[] = { "All" };
 
+		treatmentTime = "60";
+
 		medicRequired = 1;
 		displayName = "Geltabs";
 		displayNameProgress = "Administering Geltabs...";

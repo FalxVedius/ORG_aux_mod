@@ -44,8 +44,8 @@ class CfgAmmo
 		maxSpeed = 8000;
 	};
 
-	class Missile_AGM_02_F;
-	class MACRO_NEW_AMMO(R_AGM_Med) : Missile_AGM_02_F
+	class M_SPG9_HEAT;
+	class MACRO_NEW_AMMO(R_ATGM_Med) : M_SPG9_HEAT
 	{
 		soundengine[] =
 		{
@@ -69,14 +69,9 @@ class CfgAmmo
 		manualcontrol = 0;
 		effectsMissile = "332nd_aux_effects_missile_Rocket_Dark_Green";
 		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
-		caliber = 1;
-		missileLockMaxDistance = 3000;
-		missileLockMinDistance = 0;
-		missileLockCone = 180;
+		caliber = 2;
 		airlock = 0;
-		weaponLockSystem = "1 + 2 + 4 + 16";
-		missileKeepLockedCone = 180;
-		hit = 85;
+		hit = 550;
 		cost = 1;
 		indirectHit = 35;
 		mass = 2;
@@ -97,12 +92,8 @@ class CfgAmmo
 		indirectHit = 1000;
 		indirectHitRange = 15;
 	};
-
 };
 	
-
-
-
 class CfgMagazines
 {
 	
@@ -119,20 +110,20 @@ class CfgMagazines
 		maxLeadSpeed = 800;
 	};
 
-	class PylonRack_12Rnd_missiles;
-	class MACRO_NEW_MAG(R_Pylon_AGM_Med,12) : PylonRack_12Rnd_missiles
+	class 12rnd_SPG9_HEAT;
+	class MACRO_NEW_MAG(R_Pylon_ATGM_Med,12) : 12rnd_SPG9_HEAT
 	{
-		hardpoints[] = { "332_A_Rebel_Pylon" };
-		displayName = "Micro Missile AGM";
+		hardpoints[] = { "332_A_Rebel_Pylon"};
+		displayName = "Beetle ATGM";
 		count = 12;
-		descriptionshort = "Air to Ground micro Concussion Missile";
-		pylonWeapon = MACRO_NEW_WEAPON(R_AGM_Pylon);
-		displayNameShort = "A2G Micro Missiles";
-		ammo = MACRO_NEW_AMMO(R_AGM_Med)
+		descriptionshort = "Anti-Tank Missile Beetle";
+		pylonWeapon = MACRO_NEW_WEAPON(R_ATGM_Pylon);
+		displayNameShort = "ATGM Beetle Missiles";
+		ammo = MACRO_NEW_AMMO(R_ATGM_Med)
 	};
 
 	class PylonMissile_1Rnd_BombCluster_03_F;
-	class MACRO_NEW_MAG(Pylon_PlasmaBomb,1) : PylonMissile_1Rnd_BombCluster_03_F
+	class MACRO_NEW_MAG(Pylon_PlasmaBomb_R,1) : PylonMissile_1Rnd_BombCluster_03_F
 	{
 		hardpoints[] = { "332_B_Rebel_Pylon"};
 		displayName = "Rebel Plasma Bomb";
@@ -164,19 +155,17 @@ class CfgWeapons
 		weaponLockDelay = 0;
 		burst = 3;
 		reloadTime = 1;
-		
 	};
 
-	class Missile_AGM_02_Plane_CAS_01_F;
-	class MACRO_NEW_WEAPON(R_AGM_Pylon) : Missile_AGM_02_Plane_CAS_01_F
+	class launcher_SPG9;
+	class MACRO_NEW_WEAPON(R_ATGM_Pylon) : launcher_SPG9
 	{
 		magazineWell[] = {};
 		weaponLockDelay = 0.5;
 		magazines[] = {
-			 MACRO_NEW_MAG(R_Pylon_AGM_Med,12),
+			 MACRO_NEW_MAG(R_Pylon_ATGM_Med,12),
 		};
-		displayName = "AGM";
-		lockAcquire = 1;
+		displayName = "ATGM";
 	};
 
 	class weapon_GBU12Launcher;
@@ -186,7 +175,7 @@ class CfgWeapons
 		displayName = "R_Plasma_Bomb";
 		magazines[] = 
 		{
-		 MACRO_NEW_MAG(Pylon_PlasmaBomb,1)
+		 MACRO_NEW_MAG(Pylon_PlasmaBomb_R,1)
 		};
 	};
 };
