@@ -12,11 +12,13 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-			MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6)
+			MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6),
+			MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_AT)
         };
 		weapons[] = {};
 	};
 };
+
 class CfgVehicles
  {
 	class Offroad_01_military_base_F;
@@ -34,13 +36,9 @@ class CfgVehicles
 		};
 	};
 
-	
-
-
-	
     class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_Z6): I_G_Offroad_01_armed_F
     {
-        displayName = "Rebel Technical Z90 (Experimental)";
+        displayName = "Rebel Lynx (Z90) (Experimental)";
         scope = 2;
 		scopeCurator = 2;
 		side = 2;
@@ -64,7 +62,6 @@ class CfgVehicles
 				weapons[] =
 				{
 					"332nd_aux_weapon_R_Z90",
-					
 				};
 				magazines[] =
 				{
@@ -79,6 +76,58 @@ class CfgVehicles
 			};
 			   
 	   };
+	};
+
+	class Offroad_01_military_base_F;
+
+	class Offroad_01_AT_base_F : Offroad_01_military_base_F
+	{
+		class Turrets;
+	};
+
+	class I_G_Offroad_01_AT_F : Offroad_01_AT_base_F
+	{
+		class Turrets : Turrets
+		{
+			class AT_Turret;
+		};
+	};
+
+	class MACRO_NEW_VEHICLE(Land,CIS,Rebel_Light_Technical_AT) : I_G_Offroad_01_AT_F
+	{
+		displayName = "Rebel Lynx (AT) (Experimental)";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "EdCat_332nd_Rebel";
+		editorSubcategory = "EdSubcat_332nd_Rebel_CARS";
+		crew = "332nd_aux_rebel_unit_332nd_indep_rebel";
+
+		class EventHandlers
+		{
+			init = "(_this select 0) setVariable [""BIS_enableRandomization"",false];";
+		};
+
+		hiddenSelections[] = { "camo","camo2" };
+
+		hiddenSelectionsTextures[] = { "\332nd_vehicles\_textures\land\Rebel_Technical\Base\Rebel_Offroad.paa", "\332nd_vehicles\_textures\land\Rebel_Technical\Base\Rebel_Offroad.paa" };
+
+		class Turrets : Turrets
+		{
+			class AT_Turret : AT_Turret
+			{
+				weapons[] =
+				{
+					"332nd_aux_weapon_R_ATGM_Pylon"
+				};
+				magazines[] =
+				{
+					"332nd_aux_magazine_R_Pylon_ATGM_Med_x12",
+					"332nd_aux_magazine_R_Pylon_ATGM_Med_x12"					
+				};
+			};
+
+		};
 	};
 
 };	
