@@ -19,6 +19,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(assault,332nd_corporal),
 			MACRO_NEW_HELMET(assault,332nd_sergeant),
 			MACRO_NEW_HELMET(assault,Falx),
+			MACRO_NEW_HELMET(assault,Monty),
         };
 		weapons[] = {};
 	};
