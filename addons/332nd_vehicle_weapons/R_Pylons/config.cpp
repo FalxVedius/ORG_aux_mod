@@ -132,7 +132,7 @@ class CfgMagazines
 	};
 
 	class PylonMissile_1Rnd_BombCluster_03_F;
-	class MACRO_NEW_MAG(Pylon_PlasmaBomb,1) : PylonMissile_1Rnd_BombCluster_03_F
+	class MACRO_NEW_MAG(Pylon_PlasmaBomb_R,1) : PylonMissile_1Rnd_BombCluster_03_F
 	{
 		hardpoints[] = { "332_B_Rebel_Pylon"};
 		displayName = "Rebel Plasma Bomb";
@@ -186,7 +186,7 @@ class CfgWeapons
 		displayName = "R_Plasma_Bomb";
 		magazines[] = 
 		{
-		 MACRO_NEW_MAG(Pylon_PlasmaBomb,1)
+		 MACRO_NEW_MAG(Pylon_PlasmaBomb_R,1)
 		};
 	};
 };
