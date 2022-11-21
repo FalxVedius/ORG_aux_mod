@@ -118,12 +118,12 @@ class CfgVehicles
 			{
 				weapons[] =
 				{
-					"332nd_aux_weapon_R_ATGM_Pylon"
+					"332nd_aux_weapon_R_SPG"
 				};
 				magazines[] =
 				{
-					"332nd_aux_magazine_R_Pylon_ATGM_Med_x12",
-					"332nd_aux_magazine_R_Pylon_ATGM_Med_x12"					
+					"332nd_aux_magazine_R_SPG_Med_x12",
+					"332nd_aux_magazine_R_SPG_Med_x12"					
 				};
 			};
 
@@ -131,3 +131,70 @@ class CfgVehicles
 	};
 
 };	
+
+class CfgAmmo
+{
+	class M_SPG9_HEAT;
+	class MACRO_NEW_AMMO(R_SPG_Med) : M_SPG9_HEAT
+	{
+		soundengine[] =
+		{
+			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
+			1,
+			1,
+			750
+		};
+		soundfly[] =
+		{
+			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			1,
+			1.5,
+			200
+		};
+		soundsetsoniccrack[] =
+		{
+			"332nd_genericrocket_flyby_soundset"
+		};
+		model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
+		manualcontrol = 0;
+		effectsMissile = "332nd_aux_effects_missile_Rocket_Dark_Green";
+		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
+		caliber = 2;
+		airlock = 0;
+		hit = 550;
+		cost = 1;
+		indirectHit = 35;
+		mass = 2;
+		indirectHitRange = 8;
+	};
+};
+
+class CfgMagazines
+{
+	class 12rnd_SPG9_HEAT;
+	class MACRO_NEW_MAG(R_SPG_Med,12) : 12rnd_SPG9_HEAT
+	{
+		displayName = "Beetle SPG";
+		count = 12;
+		descriptionshort = "Anti-Tank Missile Beetle";
+		pylonWeapon = MACRO_NEW_WEAPON(R_SPG);
+		displayNameShort = "SPG Beetle Missiles";
+		ammo = MACRO_NEW_AMMO(R_SPG_Med);
+	};
+};
+
+class CfgWeapons
+{
+
+	class launcher_SPG9;
+	class MACRO_NEW_WEAPON(R_SPG) : launcher_SPG9
+	{
+		magazineWell[] = {};
+		weaponLockDelay = 0.5;
+		magazines[] = {
+			 MACRO_NEW_MAG(R_SPG_Med,12),
+		};
+		displayName = "SPG";
+	};
+
+};
