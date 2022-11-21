@@ -59,6 +59,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Driskoll),
 			MACRO_NEW_HELMET(infantry,Cutter),
 			MACRO_NEW_HELMET(infantry,Sniggs),
+			MACRO_NEW_HELMET(infantry,Falx),
 			
 
 			MACRO_NEW_HELMET(engineer,Cadet),
@@ -125,6 +126,7 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sniggs,Sniggs,Sniggs.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Falx,Falx,Falx.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)

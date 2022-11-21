@@ -128,7 +128,7 @@ class CfgPatches
             //Blast
             MACRO_NEW_UNIT(aviation,Blast),
             //Falx
-            MACRO_NEW_UNIT(assault,Falx),
+            MACRO_NEW_UNIT(infantry,Falx),
             //Halligan
             MACRO_NEW_UNIT(aviation,Halligan),
             //Cutter
@@ -139,8 +139,6 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,Hoggy),
             //Griif
             MACRO_NEW_UNIT(airborne,Griif),
-            //Deva
-            MACRO_NEW_UNIT(infantry,Deva),
             //Church
             MACRO_NEW_UNIT(infantry,Church),
             //Grass
@@ -277,7 +275,7 @@ class CfgPatches
             //Blast
             MACRO_NEW_UNIFORM(aviation,Blast),
             //Falx
-            MACRO_NEW_UNIFORM(assault,Falx),
+            MACRO_NEW_UNIFORM(infantry,Falx),
             //Halligan
             MACRO_NEW_UNIFORM(aviation,Halligan),
             //Riddle
@@ -286,8 +284,6 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,Hoggy),
             //Griif
             MACRO_NEW_UNIFORM(airborne,Griif),
-            //Deva
-            MACRO_NEW_UNIFORM(infantry,Deva),
             //Church
             MACRO_NEW_UNIFORM(infantry,Church),
             //Grass
@@ -532,7 +528,7 @@ class CfgWeapons
     //Blast
     MACRO_NEW_AVI_UNIFORM_ITEM(Blast,Blast,Blast)
     //Falx
-    MACRO_NEW_ASSAULT_UNIFORM_ITEM(Falx,Falx,Falx)
+    MACRO_NEW_INF_UNIFORM_ITEM(Falx,Falx,Falx)
     //Halligan
     MACRO_NEW_AVI_UNIFORM_ITEM(Halligan,Halligan,Halligan)
     //Riddle
@@ -541,8 +537,6 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(Hoggy,Hoggy,Hoggy)
     //Griif
     MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Griif,Griif,Griif)
-    //Deva
-    MACRO_NEW_INF_UNIFORM_ITEM(Deva,Deva,Deva)
     //Church
     MACRO_NEW_INF_UNIFORM_ITEM(Church,Church,Church)
     //Grass
@@ -719,15 +713,13 @@ class CfgVehicles
     //Blast
     MACRO_NEW_AVI_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\Blast_Lower.paa)
     //Falx
-    MACRO_NEW_ASSAULT_UNIT(Falx,Falx,Falx,custom\Falx.paa)
+    MACRO_NEW_INF_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
     //Halligan
     MACRO_NEW_AVI_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
     //Riddle
     MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Captain_Lower.paa)
     //Hoggy
     MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,custom\Hoggy_Lower.paa)
-    //Deva
-    MACRO_NEW_INF_UNIT(Deva,Deva,Deva,custom\Deva_Upper.paa,custom\Deva_Lower.paa)
     //Church
     MACRO_NEW_INF_UNIT(Church,Church,Church,custom\Church_Upper.paa,custom\Church_Lower.paa)
     //Grass

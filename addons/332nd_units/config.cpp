@@ -52,6 +52,13 @@ class CfgFactionClasses
 		side = 2;
 		priority = 2;
 	};
+
+	class EdCat_332nd_Haxion
+	{
+		displayName = "332nd Haxion Cartel";
+		side = 2;
+		priority = 2;
+	};
 };
 class CfgEditorCategories
 {
@@ -7075,6 +7082,42 @@ class CfgVehicles
 	};//Added
 
 	// ---- End Opfor Units for Uniforms ----
+
+	// ---- Start Haxion Cartel Units ----
+
+	class MACRO_NEW_UNIT(Haxion_SL,base) : O_Soldier_F
+	{
+		author = MACRO_AUTHOR;
+		scope = 0;
+		displayName = "[332nd] Haxion Squad Leader Base";
+
+		faction = "EdCat_332nd_Haxion";
+		editorSubcategory = "EdSubcat_332nd_MEN";
+		uniformClass = MACRO_NEW_UNIFORM(Haxion_SL,base);
+
+		identityTypes[] = { "ls_zabrak_male1t2_base", "Male03PER"};
+
+		linkedItems[] = { "V_BandollierB_cbr","ItemMap","TFAR_anprc148jem","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1" };
+		respawnLinkedItems[] = { "V_BandollierB_cbr","ItemMap","TFAR_anprc148jem","ItemCompass","ItemWatch","JLTS_NVG_droid_chip_1" };
+		weapons[] = { "SWLW_ZH73","Throw","Put" };
+		respawnWeapons[] = { "SWLW_ZH73","Throw","Put" };
+		backpack = "ls_orsf_trooperLR_backpack";
+
+		magazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+		respawnMagazines[] =
+		{
+			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_2(JLTS_RG4D_mag),
+			"SmokeShellGreen",
+			"SmokeShell"
+		};
+	}
 };
 
 class Extended_Reloaded_EventHandlers
@@ -7313,8 +7356,3 @@ class Extended_Fired_EventHandlers
 		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_B2;";
 	};
 };
-
-
-
-// TODO: Code for Rebels to fix for next Update.
-
