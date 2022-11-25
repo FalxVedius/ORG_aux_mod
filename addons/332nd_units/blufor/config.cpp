@@ -153,6 +153,8 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,Sigma),
             //Sentinel
             MACRO_NEW_UNIT(airborne,Sentinel),
+            //Screw
+            MACRO_NEW_UNIT(airborne,Screw),
             //Cutter
             MACRO_NEW_UNIT(infantry,Cutter),
 
@@ -298,6 +300,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,Sigma),
             //Sentinel
             MACRO_NEW_UNIFORM(airborne,Sentinel),
+            //Screw
+            MACRO_NEW_UNIFORM(airborne,Screw),
             //Cutter
             MACRO_NEW_UNIFORM(infantry,Cutter),
 
@@ -551,6 +555,8 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(Sigma,Sigma,Sigma)
     //Sentinel
     MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Sentinel,Sentinel,Sentinel)
+    //Screw
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Screw,Screw,Screw)
     //Cutter
     MACRO_NEW_INF_UNIFORM_ITEM(Cutter,Cutter,Cutter)
 
@@ -736,6 +742,8 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(Sigma,Sigma,Sigma,custom\Sigma_Upper.paa,custom\Sigma_Lower.paa)
     //Sentinel
     MACRO_NEW_AIRBORNE_UNIT(Sentinel,Sentinel,Sentinel,custom\Sentinel_Upper.paa,custom\Sentinel_Lower.paa)
+    //Screw
+    MACRO_NEW_AIRBORNE_UNIT(Screw,Screw,Screw,custom\Screw_Upper.paa,custom\Screw_Lower.paa)
     //Cutter
     MACRO_NEW_INF_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
 };

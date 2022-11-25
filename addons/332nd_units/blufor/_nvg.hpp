@@ -578,7 +578,24 @@ class MACRO_NEW_NVG(Hoggy_Visor_332) :JLTS_CloneNVG
     opticsZoomMax = 1;
     opticsZoomMin = 1;
 };
+class MACRO_NEW_NVG(Ion_Visor_332) :JLTS_CloneNVG
+{
+    hiddenSelections[] = { "camo1" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\IonNVG.paa" };
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Ion Visor";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
 class MACRO_NEW_NVG(Halligan_Visor_332):JLTS_CloneNVG
 {
     hiddenSelections[] = {"camo1"};

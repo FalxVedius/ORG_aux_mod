@@ -60,6 +60,9 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Sniggs),
 			MACRO_NEW_HELMET(infantry,Falx),
 			MACRO_NEW_HELMET(infantry,Harmacist),
+			MACRO_NEW_HELMET(infantry,Pagan),
+			MACRO_NEW_HELMET(infantry,Sabine),
+			MACRO_NEW_HELMET(infantry,Storm),
 			
 
 			MACRO_NEW_HELMET(engineer,Cadet),
@@ -127,6 +130,9 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Sniggs,Sniggs,Sniggs.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Falx,Falx,Falx.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Harmacist,Harmacist,Harmacist.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Pagan,Pagan,Pagan.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sabine,Sabine,Sabine.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Storm,Storm,Storm.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
