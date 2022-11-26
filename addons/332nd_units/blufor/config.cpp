@@ -156,7 +156,9 @@ class CfgPatches
             //Screw
             MACRO_NEW_UNIT(airborne,Screw),
             //Cutter
-            MACRO_NEW_UNIT(infantry,Cutter),
+            MACRO_NEW_UNIT(mech,Cutter),
+            //Lasagna
+            MACRO_NEW_UNIT(mech,Lasagna),
 
 		};
 		weapons[] = {
@@ -303,7 +305,9 @@ class CfgPatches
             //Screw
             MACRO_NEW_UNIFORM(airborne,Screw),
             //Cutter
-            MACRO_NEW_UNIFORM(infantry,Cutter),
+            MACRO_NEW_UNIFORM(mech,Cutter),
+            //Lasagna
+            MACRO_NEW_UNIFORM(mech,Lasagna),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -558,7 +562,9 @@ class CfgWeapons
     //Screw
     MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Screw,Screw,Screw)
     //Cutter
-    MACRO_NEW_INF_UNIFORM_ITEM(Cutter,Cutter,Cutter)
+    MACRO_NEW_MECHANIZED_UNIFORM_ITEM(Cutter,Cutter,Cutter)
+    //Lasagna
+    MACRO_NEW_MECHANIZED_UNIFORM_ITEM(Lasagna,Lasagna,Lasagna)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -745,5 +751,7 @@ class CfgVehicles
     //Screw
     MACRO_NEW_AIRBORNE_UNIT(Screw,Screw,Screw,custom\Screw_Upper.paa,custom\Screw_Lower.paa)
     //Cutter
-    MACRO_NEW_INF_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
+    MACRO_NEW_MECHANIZED_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
+    //Lasagna
+    MACRO_NEW_MECHANIZED_UNIT(Lasagna,Lasagna,Lasagna,custom\Lasagna_Upper.paa,custom\Lasagna_Lower.paa)
 };

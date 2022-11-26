@@ -10,6 +10,15 @@
 	""													// for keypressup
 ] call CBA_fnc_addKeybind;
 
+// Place Map Marker
+[
+	["332nd Aux", "Map Markers"], 											// mod name (modify to whatevs)
+	"PlaceMarker_332nd_key", 											// action ID
+	["Place Dot Marker", "Places a black dot on your location"], 	// Action name
+	{ false call aux_332nd_fnc_placeMarker }, 									// For keypressdown
+	""													// for keypressup
+] call CBA_fnc_addKeybind;
+
 
 GVAR(nextReload) = QGVAR(HE);
 // Add keybinds

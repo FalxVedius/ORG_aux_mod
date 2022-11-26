@@ -50,6 +50,11 @@ class cfgFunctions
 			{
 
 			};
+			class placeMarker
+			{
+
+			};
+
 		};
 
 		class user_actions 
