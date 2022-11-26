@@ -3431,6 +3431,8 @@ class CfgVehicles
 			init = "[_this, 'AmmoBox_332nd', 'MedicalBox_332nd'] spawn ResupplyAir_fnc_AddCratesToInventory;"
 		};
 
+		hiddenSelectionsTextures[] = { "332nd_vehicles\_textures\air\LAATLE\LAAT_LE_PE.paa" };
+
 
 		ls_impulsor_fuelDrain_1=0.00005;
         ls_impulsor_fuelDrain_2=0.00005;
@@ -5062,6 +5064,23 @@ class CfgVehicles
 				textures[] =
 				{
 					MACRO_LAAT_TEXTURES\Variants\Lead\body1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\body2.paa,
+					MACRO_LAAT_TEXTURES\Variants\Lead\door1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door2.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door3.paa,
+					MACRO_LAAT_TEXTURES\Variants\Lead\wings.paa,
+					"lsd_vehicles_heli\laati\data\missiles_co.paa",
+					MACRO_LAAT_TEXTURES\Variants\Lead\cockpit.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
+				};
+				factions[] =
+				{
+					"EdCat_332nd"
+				};
+			};
+			class Noseart_Bugs
+			{
+				displayName = "332nd Bugs Noseart";
+				author = "Falx";
+				textures[] =
+				{
+					MACRO_LAAT_TEXTURES\Variants\Bugs\Bugs.paa,MACRO_LAAT_TEXTURES\Variants\Lead\body2.paa,
 					MACRO_LAAT_TEXTURES\Variants\Lead\door1.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door2.paa,MACRO_LAAT_TEXTURES\Variants\Lead\door3.paa,
 					MACRO_LAAT_TEXTURES\Variants\Lead\wings.paa,
 					"lsd_vehicles_heli\laati\data\missiles_co.paa",

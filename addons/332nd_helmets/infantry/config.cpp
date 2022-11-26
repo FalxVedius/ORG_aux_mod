@@ -54,11 +54,15 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Ion),
 			MACRO_NEW_HELMET(infantry,Sync),
 			MACRO_NEW_HELMET(infantry,Bored),
-			MACRO_NEW_HELMET(infantry,Jager),
 			MACRO_NEW_HELMET(infantry,Kanin),
 			MACRO_NEW_HELMET(infantry,Driskoll),
-			MACRO_NEW_HELMET(infantry,Cutter),
 			MACRO_NEW_HELMET(infantry,Sniggs),
+			MACRO_NEW_HELMET(infantry,Falx),
+			MACRO_NEW_HELMET(infantry,Harmacist),
+			MACRO_NEW_HELMET(infantry,Pagan),
+			MACRO_NEW_HELMET(infantry,Sabine),
+			MACRO_NEW_HELMET(infantry,Storm),
+			MACRO_NEW_HELMET(infantry,Nordic),
 			
 
 			MACRO_NEW_HELMET(engineer,Cadet),
@@ -119,12 +123,16 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Ion,Ion,Ion.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sync,Sync,Sync.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Bored,Bored,Bored.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Jager,Jager,Jager.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Kanin,Kanin,Kanin.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Driskoll,Driskoll,Driskoll.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Brotha,Brotha,Brotha.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Sniggs,Sniggs,Sniggs.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Falx,Falx,Falx.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Harmacist,Harmacist,Harmacist.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Pagan,Pagan,Pagan.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sabine,Sabine,Sabine.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Storm,Storm,Storm.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Nordic,Nordic,Nordic.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
