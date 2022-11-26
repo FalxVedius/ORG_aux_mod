@@ -21,6 +21,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(barc,Lasagna),
 			MACRO_NEW_HELMET(barc,Qrow),
 			MACRO_NEW_HELMET(barc,Spacy),
+			MACRO_NEW_HELMET(barc,Cutter),
         };
 		weapons[] = {};
 	};
@@ -28,11 +29,11 @@ class CfgPatches
 
 class CfgWeapons
 {
-    // ---- Helmets ----
+	// ---- Helmets ----
 
-    class MACRO_NEW_HELMET(barc,base);
-	
-    MACRO_NEW_BARC_HELMET_ITEM(Trooper,Trooper,Trooper.paa)
+	class MACRO_NEW_HELMET(barc,base);
+
+	MACRO_NEW_BARC_HELMET_ITEM(Trooper,Trooper,Trooper.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Veteran,Veteran,Veteran.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Specialist,Specialist,Specialist.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Corporal,Corporal,Corporal.paa)
@@ -40,5 +41,6 @@ class CfgWeapons
 	MACRO_NEW_BARC_HELMET_ITEM(Lasagna,Lasagna,Lasagna.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Qrow,Qrow,Qrow.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Spacy,Spacy,Spacy.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
 
-}
+};

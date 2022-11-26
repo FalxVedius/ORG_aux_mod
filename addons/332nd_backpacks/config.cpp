@@ -72,7 +72,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_Dig.paa
 		};
-		displayName = "[332nd] Ammo Bearer Pack (Digital)";
+		displayName = "[332nd] Ammo Bearer Pack (Urban)";
 		maximumLoad = 450;
 
 		editorCategory = "EdCat_332nd_Props";
@@ -108,7 +108,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Backpack_332_Wood.paa
 		};
-		displayName = "[332nd] Ammo Bearer Pack (Wood)";
+		displayName = "[332nd] Ammo Bearer Pack (Multi-cam)";
 		maximumLoad = 450;
 
 		editorCategory = "EdCat_332nd_Props";
@@ -144,7 +144,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_Dig.paa
 		};
-		displayName = "[332nd] Support Pack (Digital)";
+		displayName = "[332nd] Support Pack (Urban)";
 		maximumLoad = 290;
 
 		editorCategory = "EdCat_332nd_Props";
@@ -180,7 +180,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\Support_332_Wood.paa
 		};
-		displayName = "[332nd] Support Pack (Wood)";
+		displayName = "[332nd] Support Pack (Multi-cam)";
 		maximumLoad = 290;
 
 		editorCategory = "EdCat_332nd_Props";
@@ -242,7 +242,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_Dig.paa
 		};
-		displayName = "[332nd] Medic Pack (Digital)";
+		displayName = "[332nd] Medic Pack (Urban)";
 		tf_dialog = "JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode = "tf_west_radio_code";
@@ -296,7 +296,7 @@ class CfgVehicles
 		{
 			MACRO_BACKPACK_TEXTURES_PATH\JLTS_Backpack\medic_332_Wood.paa
 		};
-		displayName = "[332nd] Medic Pack (Wood)";
+		displayName = "[332nd] Medic Pack (Multi-cam)";
 		tf_dialog = "JLTS_clone_rto_radio_dialog";
 		tf_dialogUpdate = "call TFAR_fnc_updateLRDialogToChannel;";
 		tf_encryptionCode = "tf_west_radio_code";
@@ -361,7 +361,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Dig) : JLTS_Clone_backpack_RTO
 	{
-		displayName = "[332nd] JTAC Pack (Digital)";
+		displayName = "[332nd] JTAC Pack (Urban)";
 		maximumLoad = 375;
 
 		tf_range = 50000;
@@ -406,7 +406,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_RTO_Wood) : JLTS_Clone_backpack_RTO
 	{
-		displayName = "[332nd] JTAC Pack (Wood)";
+		displayName = "[332nd] JTAC Pack (Multi-cam)";
 		maximumLoad = 375;
 
 		tf_range = 50000;
@@ -480,7 +480,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Dig) : JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] EOD Pack (Digital)";
+		displayName = "[332nd] EOD Pack (Urban)";
 
 		hiddenSelectionsTextures[] =
 		{
@@ -522,7 +522,7 @@ class CfgVehicles
 	}
 	class MACRO_NEW_BACKPACK(blufor,332nd_Demolition_pack_Wood) : JLTS_Clone_backpack_eod
 	{
-		displayName = "[332nd] EOD Pack (Wood)";
+		displayName = "[332nd] EOD Pack (Multi-cam)";
 
 		hiddenSelectionsTextures[] =
 		{

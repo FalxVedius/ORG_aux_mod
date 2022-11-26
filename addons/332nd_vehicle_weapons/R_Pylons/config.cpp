@@ -44,39 +44,6 @@ class CfgAmmo
 		maxSpeed = 8000;
 	};
 
-	class M_SPG9_HEAT;
-	class MACRO_NEW_AMMO(R_ATGM_Med) : M_SPG9_HEAT
-	{
-		soundengine[] =
-		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
-			1,
-			1,
-			750
-		};
-		soundfly[] =
-		{
-			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
-			1,
-			1.5,
-			200
-		};
-		soundsetsoniccrack[] =
-		{
-			"332nd_genericrocket_flyby_soundset"
-		};
-		model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
-		manualcontrol = 0;
-		effectsMissile = "332nd_aux_effects_missile_Rocket_Dark_Green";
-		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
-		caliber = 2;
-		airlock = 0;
-		hit = 550;
-		cost = 1;
-		indirectHit = 35;
-		mass = 2;
-		indirectHitRange = 8;
-	};
 
 	class Bo_GBU12_LGB;
 	class MACRO_NEW_AMMO(R_Plasma_Bomb) : Bo_GBU12_LGB
@@ -108,18 +75,6 @@ class CfgMagazines
 		displayNameShort = "A2A Firefly Missiles";
 		ammo = MACRO_NEW_AMMO(R_AA_Low)
 		maxLeadSpeed = 800;
-	};
-
-	class 12rnd_SPG9_HEAT;
-	class MACRO_NEW_MAG(R_Pylon_ATGM_Med,12) : 12rnd_SPG9_HEAT
-	{
-		hardpoints[] = { "332_A_Rebel_Pylon"};
-		displayName = "Beetle ATGM";
-		count = 12;
-		descriptionshort = "Anti-Tank Missile Beetle";
-		pylonWeapon = MACRO_NEW_WEAPON(R_ATGM_Pylon);
-		displayNameShort = "ATGM Beetle Missiles";
-		ammo = MACRO_NEW_AMMO(R_ATGM_Med)
 	};
 
 	class PylonMissile_1Rnd_BombCluster_03_F;
@@ -155,17 +110,6 @@ class CfgWeapons
 		weaponLockDelay = 0;
 		burst = 3;
 		reloadTime = 1;
-	};
-
-	class launcher_SPG9;
-	class MACRO_NEW_WEAPON(R_ATGM_Pylon) : launcher_SPG9
-	{
-		magazineWell[] = {};
-		weaponLockDelay = 0.5;
-		magazines[] = {
-			 MACRO_NEW_MAG(R_Pylon_ATGM_Med,12),
-		};
-		displayName = "ATGM";
 	};
 
 	class weapon_GBU12Launcher;
