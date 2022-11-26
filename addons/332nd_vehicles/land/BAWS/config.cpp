@@ -156,7 +156,7 @@ class CfgVehicles
         icon="\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
 		side=0;
 		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
+		editorSubcategory = "EdSubcat_332nd_ART";
 		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
         availableForSupportTypes[]=
 		{
@@ -339,7 +339,7 @@ class CfgVehicles
 				author="Falx";
 				textures[]=
 				{
-					"3AS\3AS_GAT\data\hull_CO.paa"
+					"3AS\3AS_HAGM\data\CISArty_CIS_CO.paa"
 				};
 				factions[]=
 				{
@@ -352,7 +352,7 @@ class CfgVehicles
 				author="Falx";
 				textures[]=
 				{
-					"3AS\3AS_GAT\data\Olive\hull_CO.paa"
+					"3AS\3AS_HAGM\data\CISArty_Tan_CO.paa"
 				};
 				factions[]=
 				{
