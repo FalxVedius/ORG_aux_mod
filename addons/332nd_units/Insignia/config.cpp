@@ -39,6 +39,13 @@ class CfgUnitInsignia
 		texture = "\332nd_units\Insignia\data\Banshee1_4.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
+	class 332nd_Banshee2_4
+	{
+		displayName = "[332nd] Banshee 2-4";								// Name displayed in Arsenal
+		author = "Halligan";											// Author displayed in Arsenal
+		texture = "\332nd_units\Insignia\data\Banshee2_4.paa";			// Image path
+		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
+	};
 	class Torrent2_1
 	{
 		displayName = "[332nd] Torrent 2-1";								// Name displayed in Arsenal
@@ -55,14 +62,14 @@ class CfgUnitInsignia
 	};
 	class Seraph2_3
 	{
-		displayName = "[332nd] Torrent 2-3";								// Name displayed in Arsenal
+		displayName = "[332nd] Seraph 2-3";								// Name displayed in Arsenal
 		author = "Halligan";											// Author displayed in Arsenal
 		texture = "\332nd_units\Insignia\data\Seraph2_3.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
 	};
 	class Seraph1_3
 	{
-		displayName = "[332nd] Torrent 1-3";								// Name displayed in Arsenal
+		displayName = "[332nd] Seraph 1-3";								// Name displayed in Arsenal
 		author = "Halligan";											// Author displayed in Arsenal
 		texture = "\332nd_units\Insignia\data\Seraph1_3.paa";			// Image path
 		material = "\MRC\JLTS\Core_mod\data\insignias\insignia_CloneArmor.rvmat";	// .rvmat path
