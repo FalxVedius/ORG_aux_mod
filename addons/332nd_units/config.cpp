@@ -3033,13 +3033,13 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_17m_rifle_x60),
+			mag_8(332nd_aux_magazine_DC_17m_rifle_x42),
 			mag_2(JLTS_stun_mag_long),
 			mag_2(332nd_aux_magazine_332_FRAG_x1)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_17m_rifle_x60),
+			mag_8(332nd_aux_magazine_DC_17m_rifle_x42),
 			mag_2(JLTS_stun_mag_long),
 			mag_2(332nd_aux_magazine_332_FRAG_x1)
 		};
