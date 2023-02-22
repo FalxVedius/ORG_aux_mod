@@ -10,5 +10,4 @@ if (isServer) then {
 	_unit = _obj select 0;
 	_unit allowFleeing 0;
 	_unit setSpeaker "NoVoice";
-	
 };

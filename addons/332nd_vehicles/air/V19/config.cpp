@@ -92,6 +92,17 @@ class CfgVehicles
 		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
 		airBrake=80;
 		airBrakeFrictionCoef=60;
+
+		hiddenselectionstextures[] = 
+		{ 
+			"332nd_vehicles\_textures\air\V19\wings_CO_LOGO_PW.paa",
+			"332nd_vehicles\_textures\air\V19\wing_plates_CO_PW.paa",
+			"332nd_vehicles\_textures\air\V19\Hull_CO_PW.paa",
+			"3as\3as_v19\textures\gun gear_co.paa",
+			"a3\air_f_jets\plane_fighter_01\data\fighter_01_glass_01_ca.paa",
+			"332nd_vehicles\_textures\air\V19\Pizzlepit_CO.paa" 
+		};
+
 		weapons[] =
 		{
 			MACRO_NEW_WEAPON(V19_25mm),

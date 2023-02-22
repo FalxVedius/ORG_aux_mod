@@ -110,4 +110,25 @@ class CfgWeapons
 	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Jung,Undead Jungle,Undead_Jung.paa)
 	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Snow,Undead Snow,Undead_Snow.paa)
 	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Undead_Urb,Undead Urban,Undead_Urb.paa)
+
+	MACRO_NEW_ARF_HELMET_ITEM(Mini,Mini,Mini.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Mini_Wood,Mini Multi-cam,Mini_Wood.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Mini_Des,Mini Desert,Mini_Des.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Mini_Jung,Mini Jungle,Mini_Jung.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Mini_Snow,Mini Snow,Mini_Snow.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Mini_Urb,Mini Urban,Mini_Urb.paa)
+
+	MACRO_NEW_ARF_HELMET_ITEM(Cosmic,Cosmic,Cosmic.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Cosmic_Wood,Cosmic Multi-cam,Cosmic_Wood.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Cosmic_Des,Cosmic Desert,Cosmic_Des.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Cosmic_Jung,Cosmic Jungle,Cosmic_Jung.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Cosmic_Snow,Cosmic Snow,Cosmic_Snow.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Cosmic_Urb,Cosmic Urban,Cosmic_Urb.paa)
+
+	MACRO_NEW_ARF_HELMET_ITEM(Sal,Salvatore,Sal.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Sal_Wood,Salvatore Multi-cam,Sal_Wood.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Sal_Des,Salvatore Desert,Sal_Des.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Sal_Jung,Salvatore Jungle,Sal_Jung.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Sal_Snow,Salvatore Snow,Sal_Snow.paa)
+	MACRO_NEW_ARF_CUSTOM_HELMET_ITEM(Sal_Urb,Salvatore Urban,Sal_Urb.paa)
 }

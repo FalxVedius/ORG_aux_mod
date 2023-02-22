@@ -159,6 +159,10 @@ class CfgPatches
             MACRO_NEW_UNIT(mech,Cutter),
             //Lasagna
             MACRO_NEW_UNIT(mech,Lasagna),
+            //Tanya
+            MACRO_NEW_UNIT(infantry,Tanya),
+            //Dragneel
+            MACRO_NEW_UNIT(aviation,Dragneel),
 
 		};
 		weapons[] = {
@@ -308,6 +312,10 @@ class CfgPatches
             MACRO_NEW_UNIFORM(mech,Cutter),
             //Lasagna
             MACRO_NEW_UNIFORM(mech,Lasagna),
+            //Tanya
+            MACRO_NEW_UNIFORM(infantry,Tanya),
+            //Dragneel
+            MACRO_NEW_UNIFORM(aviation,Dragneel),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -565,6 +573,10 @@ class CfgWeapons
     MACRO_NEW_MECHANIZED_UNIFORM_ITEM(Cutter,Cutter,Cutter)
     //Lasagna
     MACRO_NEW_MECHANIZED_UNIFORM_ITEM(Lasagna,Lasagna,Lasagna)
+    //Tanya
+    MACRO_NEW_INF_UNIFORM_ITEM(Tanya,Tanya,Tanya)
+    //Dragneel
+    MACRO_NEW_AVI_UNIFORM_ITEM(Dragneel,Dragneel,Dragneel)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -729,7 +741,7 @@ class CfgVehicles
     //Halligan
     MACRO_NEW_AVI_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
     //Riddle
-    MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Captain_Lower.paa)
+    MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Riddle_Lower.paa)
     //Hoggy
     MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,custom\Hoggy_Lower.paa)
     //Church
@@ -754,4 +766,15 @@ class CfgVehicles
     MACRO_NEW_MECHANIZED_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
     //Lasagna
     MACRO_NEW_MECHANIZED_UNIT(Lasagna,Lasagna,Lasagna,custom\Lasagna_Upper.paa,custom\Lasagna_Lower.paa)
+    //Tanya
+    MACRO_NEW_INF_UNIT(Tanya,Tanya,Tanya,custom\Tanya_Upper.paa,custom\Tanya_Lower.paa)
+    //Dragneel
+    MACRO_NEW_AVI_UNIT(Dragneel,Dragneel,Dragneel,custom\Drag_Upper.paa,custom\Drag_Lower.paa)
+    //Fuzzy
+    //MACRO_NEW_ARF_BASE_UNIT(Fuzzy,Fuzzy,Fuzzy,customs\Fuzzy_Upper.paa,customs\Fuzzy_Lower.paa,332nd_aux_arf_helmet_332nd_recon)
+    //MACRO_NEW_ARF_DESERT_UNIT(Fuzzy_Des,Fuzzy Desert,Fuzzy_Des,customs\Fuzzy_Upper_Des.paa,customs\Fuzzy_Lower_Des.paa,332nd_aux_arf_helmet_332nd_recon_desert)
+    //MACRO_NEW_ARF_JUNGLE_UNIT(Fuzzy_Jung,Fuzzy Jungle, 332nd_arfjung_trooper, Trooper\arf_trooper_jungle_upper_ca.paa, Trooper\arf_trooper_jungle_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_jungle)
+    //MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_trooper, Recon Snow Trooper, 332nd_arfsnow_trooper, Trooper\arf_trooper_snow_upper_ca.paa, Trooper\arf_trooper_snow_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_snow)
+    //MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_trooper, Recon Urban / Night - Ops Trooper, 332nd_arfurb_trooper, Trooper\arf_trooper_urban_upper_ca.paa, Trooper\arf_trooper_urban_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_urban)
+    //MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_trooper, Recon Multi - cam Trooper, 332nd_arfwood_trooper, Trooper\arf_trooper_woodland_upper_ca.paa, Trooper\arf_trooper_woodland_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_woodland)
 };

@@ -121,7 +121,7 @@ class CfgAmmo
 		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
 		missileKeepLockedCone = 360;
 		hit=10000;
-		indirectHit = 1150;
+		indirectHit = 3000;
 		indirectHitRange = 15;
 	};
 

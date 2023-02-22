@@ -14,5 +14,4 @@ if (isServer) then {
 	_unit disableAI "SUPPRESSION";
 	_unit disableAI "COVER";
 	_unit setUnitPos "UP";
-	
 };

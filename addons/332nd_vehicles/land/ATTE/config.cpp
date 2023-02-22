@@ -97,7 +97,7 @@ class CfgVehicles
 		crewCrashProtection = 0.01;
 		editorSubcategory = "EdSubcat_332nd_TANK";
 		crew = "332nd_aux_infantry_unit_332nd_trooper";
-		armor = 5250;
+		armor = 1500;
 
 		TFAR_hasIntercom = 1;
 		IntercomMacro
@@ -143,18 +143,8 @@ class CfgVehicles
 			"3as\3as_atte\data\atte_middleleg_co.paa"
 		};
 
-		//enginePower = 20000;
-		maxSpeed = 25;
-		waterSpeedFactor=1;
-		thrustDelay=0.1;
-		//switchTime = 0.1;
-		//soundEngine[] = {"", 1, 1};
-		waterLeakiness = 0;
-		canFloat = 1;
-		//latency = 0.1;
-		//brakeIdleSpeed = 5;
-		peakTorque = 40000;
-		//engineMOI = 0.01;
+		maxSpeed = 10;
+
 
 		class VehicleTransport
 		{
@@ -306,11 +296,6 @@ class CfgVehicles
 				maxDroop=0;
 				maxCompression=0;
 			};
-		};
-
-		class Eventhandlers
-		{
-			init = "_this execVM '332nd_vehicles\land\ATTE\fn_InitWalk.sqf';";
 		};
 
 

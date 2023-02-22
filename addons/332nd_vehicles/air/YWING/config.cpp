@@ -66,6 +66,14 @@ class CfgVehicles
 		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
 
 
+		hiddenselectionstextures[] = 
+		{ 
+			"332nd_vehicles\_textures\air\YWING\Chasis_RedLeader_CO_CW.paa",
+			"3as\3as_btlb\data\detail_co.paa",
+			"332nd_vehicles\_textures\air\YWING\Interior_CO_CW.paa" 
+		};
+
+
 		 acceleration = 2000;
 		 class EjectionSystem
 		 {

@@ -11,6 +11,4 @@ if (isServer) then {
 	_unit allowFleeing 0;
 	_unit disableAI "MINEDETECTION";
 	_unit disableAI "SUPPRESSION";
-	_unit disableAI "COVER";
-
 };

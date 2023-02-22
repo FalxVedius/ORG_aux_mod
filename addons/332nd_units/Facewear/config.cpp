@@ -315,10 +315,21 @@ class CfgGlasses
 
 	class 332nd_JTAC_Attachment : 332nd_Helmet_Visor
 	{
-		displayName = "[332nd] JTAC Attachment";
+		displayName = "[332nd] JTAC Attachment (Blue)";
 		model = "332nd_units\Facewear\Clone_RTO_EARS.p3d";
 		hiddenSelections[] = { "camo1" };
 		hiddenSelectionsTextures[] = { "\332nd_units\Facewear\data\CAMO1_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+	
+	class 332nd_JTAC_Attachment_Orange : 332nd_Helmet_Visor
+	{
+		displayName = "[332nd] JTAC Attachment (Orange)";
+		model = "332nd_units\Facewear\Clone_RTO_EARS.p3d";
+		hiddenSelections[] = { "camo1" };
+		hiddenSelectionsTextures[] = { "\332nd_units\Facewear\data\CAMO2_co.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";

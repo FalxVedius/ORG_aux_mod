@@ -121,8 +121,8 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] = 
 		{ 
-			"3AS\3AS_LAATC\data\Camo_0_co.paa",
-			"3AS\3AS_LAATC\data\Camo_1_co.paa" 
+			"332nd_vehicles\_textures\air\LAATC\Camo_0_CO_PW.paa",
+			"332nd_vehicles\_textures\air\LAATC\Camo_1_CO_PW.paa" 
 		};
 
 		crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);

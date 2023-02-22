@@ -24,7 +24,7 @@ _handle = [_counter, _patient, _medic, _bodyPart] spawn {
 
 		scopeName "BactaInjLoop_Local";
 	
-		if(_counter < 10) then
+		if(_counter < 12) then
 		{
 			_wounds = _patient getVariable ["ace_medical_openWounds", []];
 			_bandagedWounds = _patient getVariable ["ace_medical_bandagedWounds", []];
