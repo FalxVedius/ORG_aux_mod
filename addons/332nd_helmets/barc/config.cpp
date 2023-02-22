@@ -22,6 +22,9 @@ class CfgPatches
 			MACRO_NEW_HELMET(barc,Qrow),
 			MACRO_NEW_HELMET(barc,Spacy),
 			MACRO_NEW_HELMET(barc,Cutter),
+			MACRO_NEW_HELMET(barc,Royal),
+			MACRO_NEW_HELMET(barc, Print),
+			MACRO_NEW_HELMET(barc, Beast),
         };
 		weapons[] = {};
 	};
@@ -42,5 +45,8 @@ class CfgWeapons
 	MACRO_NEW_BARC_HELMET_ITEM(Qrow,Qrow,Qrow.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Spacy,Spacy,Spacy.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Cutter,Cutter,Cutter.paa)
-
+	MACRO_NEW_BARC_HELMET_ITEM(Royal,Royal,Royal.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Print,Print,Print.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Beast,Beast,Beast.paa)
+	
 };
