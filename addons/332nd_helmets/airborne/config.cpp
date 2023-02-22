@@ -33,6 +33,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(ab,Penny),
 			MACRO_NEW_HELMET(ab,Oxide),
 			MACRO_NEW_HELMET(ab,Dalton),
+			MACRO_NEW_HELMET(ab,Lyssa),
         };
 		weapons[] = {};
 	};
@@ -65,4 +66,5 @@ class CfgWeapons
 	MACRO_NEW_AB_HELMET_ITEM(Penny,Penny,Penny.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Oxide,Oxide,Oxide.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Dalton,Dalton,Dalton.paa)
+	MACRO_NEW_AB_HELMET_ITEM(Lyssa,Lyssa,Lyssa.paa)
 };
