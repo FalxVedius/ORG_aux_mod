@@ -126,7 +126,7 @@ class CfgPatches
             //Custom ------------------------
 
             //Blast
-            MACRO_NEW_UNIT(aviation,Blast),
+            MACRO_NEW_UNIT(infantry,Blast),
             //Falx
             MACRO_NEW_UNIT(infantry,Falx),
             //Halligan
@@ -277,7 +277,7 @@ class CfgPatches
             //Custom ------------------------
 
             //Blast
-            MACRO_NEW_UNIFORM(aviation,Blast),
+            MACRO_NEW_UNIFORM(infantry,Blast),
             //Falx
             MACRO_NEW_UNIFORM(infantry,Falx),
             //Halligan
@@ -534,7 +534,7 @@ class CfgWeapons
     //Custom ----------------------------------------
 
     //Blast
-    MACRO_NEW_AVI_UNIFORM_ITEM(Blast,Blast,Blast)
+    MACRO_NEW_INF_UNIFORM_ITEM(Blast,Blast,Blast)
     //Falx
     MACRO_NEW_INF_UNIFORM_ITEM(Falx,Falx,Falx)
     //Halligan
@@ -723,7 +723,7 @@ class CfgVehicles
     //Custom ----------------------------------------
     
     //Blast
-    MACRO_NEW_AVI_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\Blast_Lower.paa)
+    MACRO_NEW_INF_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\Blast_Lower.paa)
     //Falx
     MACRO_NEW_INF_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
     //Halligan

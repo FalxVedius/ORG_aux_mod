@@ -63,7 +63,10 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Sabine),
 			MACRO_NEW_HELMET(infantry,Storm),
 			MACRO_NEW_HELMET(infantry,Nordic),
-			
+			MACRO_NEW_HELMET(infantry,Kink),
+			MACRO_NEW_HELMET(infantry,Pillsy),
+			MACRO_NEW_HELMET(infantry,Ambiguous),
+			MACRO_NEW_HELMET(infantry,Blast),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -133,6 +136,10 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Sabine,Sabine,Sabine.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Storm,Storm,Storm.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Nordic,Nordic,Nordic.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Kink,Kink,Kink.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Pillsy,Pillsy,Pillsy.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Ambiguous,Ambiguous,Ambiguous.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Blast,Blast,Blast.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)
