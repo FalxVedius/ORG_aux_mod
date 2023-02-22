@@ -27,6 +27,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(aviation,Halligan),
 			MACRO_NEW_HELMET(aviation,Pockets),
 			MACRO_NEW_HELMET(aviation,Jager),
+			MACRO_NEW_HELMET(aviation,Preacher),
         };
 		weapons[] = {};
 	};
@@ -54,5 +55,6 @@ class CfgWeapons
 	MACRO_NEW_AVIATION_HELMET_ITEM(Halligan,Halligan,Halligan.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Pockets,Pockets,Pockets.paa)
 	MACRO_NEW_AVIATION_HELMET_ITEM(Jager,Jager,Jager.paa)
+	MACRO_NEW_AVIATION_HELMET_ITEM(Preacher,Preacher,Preacher.paa)
 	
 }
