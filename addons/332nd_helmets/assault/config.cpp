@@ -19,6 +19,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(assault,332nd_corporal),
 			MACRO_NEW_HELMET(assault,332nd_sergeant),
 			MACRO_NEW_HELMET(assault,Monty),
+			MACRO_NEW_HELMET(assault,Tally),
         };
 		weapons[] = {};
 	};
@@ -36,4 +37,5 @@ class CfgWeapons
 	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_corporal,Corporal,Corporal.paa,KatarnVisor.paa)
 	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_sergeant,Sergeant,Sergeant.paa,KatarnVisor.paa)
 	MACRO_NEW_ASSAULT_HELMET_ITEM(Monty,Monty,Monty.paa,Monty.paa)
+	MACRO_NEW_ASSAULT_HELMET_ITEM(Tally,Tally,Tally.paa,Tally.paa)
 };
