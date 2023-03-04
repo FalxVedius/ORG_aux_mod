@@ -25,6 +25,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(barc,Royal),
 			MACRO_NEW_HELMET(barc, Print),
 			MACRO_NEW_HELMET(barc, Beast),
+			MACRO_NEW_HELMET(barc, Hoggy),
         };
 		weapons[] = {};
 	};
@@ -48,5 +49,6 @@ class CfgWeapons
 	MACRO_NEW_BARC_HELMET_ITEM(Royal,Royal,Royal.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Print,Print,Print.paa)
 	MACRO_NEW_BARC_HELMET_ITEM(Beast,Beast,Beast.paa)
+	MACRO_NEW_BARC_HELMET_ITEM(Hoggy,Hoggy,Hoggy.paa)
 	
 };
