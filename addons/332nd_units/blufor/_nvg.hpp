@@ -640,7 +640,7 @@ class MACRO_NEW_NVG(Halligan_Visor_332):JLTS_CloneNVG
 class MACRO_NEW_NVG(Royal_Visor_332) :JLTS_CloneNVG
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Royal.paa" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\RoyalNVG.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
     displayName = "[332nd] Royal Visor";
