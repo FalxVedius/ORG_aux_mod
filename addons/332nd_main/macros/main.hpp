@@ -1988,7 +1988,7 @@
 		{ \
 			class HitFace \
 			{ \
-				armor = 2; \
+				armor = 1; \
 				material = -1; \
 				name = "face_hub"; \
 				passThrough = 0.80000001; \
@@ -1998,7 +1998,7 @@
 			}; \
 			class HitNeck : HitFace \
 			{ \
-				armor = 2; \
+				armor = 1; \
 				material = -1; \
 				name = "neck"; \
 				passThrough = 0.80000001; \
@@ -2008,7 +2008,7 @@
 			}; \
 			class HitHead : HitNeck \
 			{ \
-				armor = 2; \
+				armor = 1; \
 				material = -1; \
 				name = "head"; \
 				passThrough = 0.80000001; \
@@ -2019,7 +2019,7 @@
 			}; \
 			class HitPelvis : HitHead \
 			{ \
-				armor = 13; \
+				armor = 12; \
 				material = -1; \
 				name = "pelvis"; \
 				passThrough = 0.80000001; \
@@ -2031,7 +2031,7 @@
 			}; \
 			class HitAbdomen : HitPelvis \
 			{ \
-				armor = 10; \
+				armor = 8; \
 				material = -1; \
 				name = "spine1"; \
 				passThrough = 0.80000001; \
@@ -2042,7 +2042,7 @@
 			}; \
 			class HitDiaphragm : HitAbdomen \
 			{ \
-				armor = 10; \
+				armor = 8; \
 				material = -1; \
 				name = "spine2"; \
 				passThrough = 0.33000001; \
@@ -2053,7 +2053,7 @@
 			}; \
 			class HitChest : HitDiaphragm \
 			{ \
-				armor = 13; \
+				armor = 12; \
 				material = -1; \
 				name = "spine3"; \
 				passThrough = 0.33000001; \
@@ -2064,7 +2064,7 @@
 			}; \
 			class HitBody : HitChest \
 			{ \
-				armor = 1325; \
+				armor = 1000; \
 				material = -1; \
 				name = "body"; \
 				passThrough = 1; \
@@ -2076,7 +2076,7 @@
 			}; \
 			class HitArms : HitBody \
 			{ \
-				armor = 10; \
+				armor = 8; \
 				material = -1; \
 				name = "arms"; \
 				passThrough = 1; \
@@ -2088,7 +2088,7 @@
 			}; \
 			class HitHands : HitArms \
 			{ \
-				armor = 10; \
+				armor = 8; \
 				material = -1; \
 				name = "hands"; \
 				passThrough = 1; \
@@ -2100,7 +2100,7 @@
 			}; \
 			class HitLegs : HitHands \
 			{ \
-				armor = 10; \
+				armor = 8; \
 				material = -1; \
 				name = "legs"; \
 				passThrough = 1; \
@@ -2112,7 +2112,7 @@
 			}; \
 			class Incapacitated : HitLegs \
 			{ \
-				armor = 1325; \
+				armor = 1000; \
 				material = -1; \
 				name = "body"; \
 				passThrough = 1; \
@@ -2124,7 +2124,7 @@
 			}; \
 			class HitLeftArm \
 			{ \
-				armor = 10; \
+				armor = 8; \
 				material = -1; \
 				name = "hand_l"; \
 				passThrough = 1; \
@@ -2139,7 +2139,7 @@
 			}; \
 			class HitLeftLeg \
 			{ \
-				armor = 10; \
+				armor = 8; \
 				material = -1; \
 				name = "leg_l"; \
 				passThrough = 1; \

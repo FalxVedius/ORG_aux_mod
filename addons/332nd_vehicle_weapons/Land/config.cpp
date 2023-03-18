@@ -241,7 +241,7 @@ class CfgAmmo
 		manualcontrol=1;
 		caliber=10;
 		effectsMissile = "332nd_aux_effects_missile_plx_blue";
-		hit=1100;
+		hit=4000;
 		thrusttime = 12;
 		indirectHit = 35;
 		indirectHitRange = 3;
