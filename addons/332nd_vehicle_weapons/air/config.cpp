@@ -74,7 +74,7 @@ class CfgAmmo
 		};
 		ExplosionEffects = "ATRocketExplosion";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",10,0.95,2000}; //Volume,Pitch,Distance
-		hit=10000;
+		hit=12000;
 		caliber=15;
 		mass=1;
 		tracerScale = 15;

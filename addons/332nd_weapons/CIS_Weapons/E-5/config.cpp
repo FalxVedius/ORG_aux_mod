@@ -285,8 +285,8 @@ class CfgMagazines
 };
 class CfgAmmo
 {
-	class ls_ammo_65_red;
-	class  MACRO_NEW_AMMO(556_Red): ls_ammo_65_red
+	class ls_ammo_762_red;
+	class  MACRO_NEW_AMMO(556_Red): ls_ammo_762_red
 	{
 		//soundsetbulletfly[]=
 		//{
