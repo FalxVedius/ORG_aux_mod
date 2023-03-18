@@ -63,14 +63,14 @@ class CfgWeapons
 class CfgVehicles
  {
 
-	class StaticMGWeapon;
+	class StaticWeapon;
 
-	class 3as_FlakCannon_Base : StaticMGWeapon
+	class StaticMGWeapon : StaticWeapon
 	{
 		class Turrets;
 	};
 
-	class 3as_FlakCannon : 3as_FlakCannon_Base
+	class 3as_FlakCannon_Base : StaticMGWeapon
 	{
 		class Turrets : Turrets
 		{
@@ -78,7 +78,7 @@ class CfgVehicles
 		};
 	};
 	
-    class MACRO_NEW_VEHICLE(Land,CIS,Flak_cannon) : 3as_FlakCannon
+    class MACRO_NEW_VEHICLE(Land,CIS,Flak_cannon) : 3as_FlakCannon_Base
     {
         displayName = "Quad-Barrel Flak Cannon *WIP*";
         scope = 2;

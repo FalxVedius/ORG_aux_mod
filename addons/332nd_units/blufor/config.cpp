@@ -163,6 +163,8 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,Tanya),
             //Dragneel
             MACRO_NEW_UNIT(aviation,Dragneel),
+            //Brain
+            MACRO_NEW_UNIT(infantry,Brain),
 
 		};
 		weapons[] = {
@@ -316,6 +318,8 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,Tanya),
             //Dragneel
             MACRO_NEW_UNIFORM(aviation,Dragneel),
+            //Brain
+            MACRO_NEW_UNIFORM(infantry,Brain),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -577,6 +581,8 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(Tanya,Tanya,Tanya)
     //Dragneel
     MACRO_NEW_AVI_UNIFORM_ITEM(Dragneel,Dragneel,Dragneel)
+    //Brain
+    MACRO_NEW_INF_UNIFORM_ITEM(Brain,Brain,Brain)
 
     #include "_nvg.hpp"
     #include "_bino.hpp"
@@ -777,4 +783,6 @@ class CfgVehicles
     //MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_trooper, Recon Snow Trooper, 332nd_arfsnow_trooper, Trooper\arf_trooper_snow_upper_ca.paa, Trooper\arf_trooper_snow_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_snow)
     //MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_trooper, Recon Urban / Night - Ops Trooper, 332nd_arfurb_trooper, Trooper\arf_trooper_urban_upper_ca.paa, Trooper\arf_trooper_urban_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_urban)
     //MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_trooper, Recon Multi - cam Trooper, 332nd_arfwood_trooper, Trooper\arf_trooper_woodland_upper_ca.paa, Trooper\arf_trooper_woodland_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_woodland)
+    //Brain
+    MACRO_NEW_INF_UNIT(Brain,Brain,Brain,custom\Brain_Upper.paa,custom\Brain_Lower.paa)
 };

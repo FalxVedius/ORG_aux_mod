@@ -28,7 +28,6 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,CWS),
 
 			MACRO_NEW_HELMET(infantry,Riddle),
-			MACRO_NEW_HELMET(infantry,Hoggy),
 			MACRO_NEW_HELMET(infantry,Deserter),
 			MACRO_NEW_HELMET(infantry,Poseidon),
 			MACRO_NEW_HELMET(infantry,Aspect),
@@ -68,6 +67,7 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,Ambiguous),
 			MACRO_NEW_HELMET(infantry,Blast),
 			MACRO_NEW_HELMET(infantry,Viking),	
+			MACRO_NEW_HELMET(infantry,Sigma),
 
 			MACRO_NEW_HELMET(engineer,Cadet),
 			MACRO_NEW_HELMET(engineer,Engineer),
@@ -103,7 +103,6 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(CWS,CW-S,CWS.paa)
 
 	MACRO_NEW_INF_HELMET_ITEM(Riddle,Riddle,Riddle.paa)
-	MACRO_NEW_INF_HELMET_ITEM(Hoggy,Hoggy,Hoggy.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Poseidon,Poseidon,Poseidon.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Deserter,Deserter,332nd_Rebal_Helmet_phase_2_ca.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Aspect,Aspect,Aspect.paa)
@@ -142,6 +141,7 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(Ambiguous,Ambiguous,Ambiguous.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Blast,Blast,Blast.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Viking,Viking,Viking.paa)
+	MACRO_NEW_INF_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
 
 
 	MACRO_NEW_ENGINEER_HELMET_ITEM(Cadet,Cadet,CE-C.paa)

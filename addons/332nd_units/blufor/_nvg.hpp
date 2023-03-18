@@ -561,6 +561,25 @@ class MACRO_NEW_NVG(Screw_Visor_332) :JLTS_CloneNVG
     opticsZoomMin = 1;
 };
 
+class MACRO_NEW_NVG(Caboose_Visor_332) :JLTS_CloneNVG
+{
+    hiddenSelections[] = { "camo1" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\CabooseNVG.paa" };
+    descriptionShort = "Night Vision Goggles";
+    descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
+    displayName = "[332nd] Caboose Visor";
+    modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
+
+    //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
+    author = "Halligan, Namenai,Falx ";
+    visionMode[] = { "Normal","NVG" };
+    thermalMode[] = { 0,1 };
+
+    opticsZoomInit = 0.0625;
+    opticsZoomMax = 1;
+    opticsZoomMin = 1;
+};
+
 class MACRO_NEW_NVG(Hoggy_Visor_332) :JLTS_CloneNVG
 {
     hiddenSelections[] = { "camo1" };
@@ -621,7 +640,7 @@ class MACRO_NEW_NVG(Halligan_Visor_332):JLTS_CloneNVG
 class MACRO_NEW_NVG(Royal_Visor_332) :JLTS_CloneNVG
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Royal.paa" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\RoyalNVG.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
     displayName = "[332nd] Royal Visor";
