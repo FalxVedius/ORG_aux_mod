@@ -327,13 +327,13 @@ class CfgWeapons
 			reloadTime = 0.1;
 			dispersion = 0.0012000001;
 			aiRateOfFire = 1;
-			aiRateOfFireDistance = 10;
+			aiRateOfFireDistance = 50;
 			minRange = 0;
-			minRangeProbab = 0.0099999998;
-			midRange = 1;
-			midRangeProbab = 0.0099999998;
-			maxRange = 2;
-			maxRangeProbab = 0.0099999998;
+			minRangeProbab = 0.69999999;
+			midRange = 100;
+			midRangeProbab = 0.69999999;
+			maxRange = 200;
+			maxRangeProbab = 0.2;
 		};
 		class close : manual
 		{
@@ -463,12 +463,12 @@ class CfgWeapons
 			dispersion = 0.00056999997;
 			aiRateOfFire = 1;
 			aiRateOfFireDistance = 10;
-			minRange = 0;
-			minRangeProbab = 0.0099999998;
-			midRange = 1;
-			midRangeProbab = 0.0099999998;
-			maxRange = 2;
-			maxRangeProbab = 0.0099999998;
+			minRange = 5;
+			minRangeProbab = 0.1;
+			midRange = 500;
+			midRangeProbab = 0.80000001;
+			maxRange = 1000;
+			maxRangeProbab = 0.85000002;
 		};
 		class TopDown : player
 		{
@@ -593,11 +593,11 @@ class CfgWeapons
 			aiRateOfFire = 1;
 			aiRateOfFireDistance = 10;
 			minRange = 0;
-			minRangeProbab = 0.0099999998;
-			midRange = 1;
-			midRangeProbab = 0.0099999998;
-			maxRange = 2;
-			maxRangeProbab = 0.0099999998;
+			minRangeProbab = 0.69999999;
+			midRange = 100;
+			midRangeProbab = 0.69999999;
+			maxRange = 200;
+			maxRangeProbab = 0.2;
 		};
 		class close : manual
 		{

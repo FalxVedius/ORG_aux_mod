@@ -75,15 +75,15 @@ class CfgWeapons
 			recoil="recoil_single_mx";
 			recoilProne="recoil_single_prone_mx";
 			aiBurstTerminable = 1;
-			dispersion=0.0020000001;
-			minRange=2;
+			dispersion=0.00116;
+			minRange=120;
 			aiDispersionCoefX=1.0;
 			aiDispersionCoefY=1.0;
-			minRangeProbab=0.5;
-			midRange=200;
-			midRangeProbab=0.69999999;
+			minRangeProbab=0.7;
+			midRange=300;
+			midRangeProbab=0.5;
 			maxRange=400;
-			maxRangeProbab=0.30000001;
+			maxRangeProbab=0.3;
 		};
 		class FullAuto: Mode_FullAuto
 		{
@@ -93,7 +93,7 @@ class CfgWeapons
 				soundSetShot[] = {"332_E5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.14;
-			dispersion=0.005;
+			dispersion= 0.00116;
 			aiBurstTerminable = 1;
 			aiDispersionCoefX=1.0;
 			aiDispersionCoefY=1.0;
@@ -141,7 +141,7 @@ class CfgWeapons
 			aiDispersionCoefX=1.0
 			aiDispersionCoefY=1.0
 			aiBurstTerminable=1;
-			minRange=2;
+			minRange=20;
 			minRangeProbab=0.5;
 			midRange=75;
 			midRangeProbab=0.69999999;
@@ -182,11 +182,11 @@ class CfgWeapons
 			showToPlayer=0;
 			aiDispersionCoefX=1.0
 			aiDispersionCoefY=1.0
-			minRange=2;
+			minRange=120;
 			minRangeProbab=0.2;
 			midRange=450;
 			midRangeProbab=0.69999999;
-			maxRange=600;
+			maxRange=750;
 			maxRangeProbab=0.2;
 			aiRateOfFire=4;
 			aiRateOfFireDistance=600;
@@ -222,13 +222,13 @@ class CfgWeapons
 			};
 			requiredOpticType=2;
 			showToPlayer=0;
-			minRange=100;
+			minRange=200;
 			minRangeProbab=0.1;
 			midRange=500;
 			aiDispersionCoefX=1.0
 			aiDispersionCoefY=1.0
 			midRangeProbab=0.60000002;
-			maxRange=700;
+			maxRange=900;
 			maxRangeProbab=0.050000001;
 			aiRateOfFire=6;
 			aiRateOfFireDistance=700;
