@@ -703,7 +703,7 @@ class ACE_Medical_Treatment_Actions
 
 		allowedSelections[] = { "All" };
 
-		treatmentTime = "60";
+		treatmentTime = "30";
 
 		medicRequired = 1;
 		displayName = "Geltabs";
@@ -1276,7 +1276,7 @@ class CfgWeapons
 
 		class ItemInfo : CBA_MiscItem_ItemInfo
 		{
-			mass = 50;
+			mass = 30;
 		};
 	};
 	class MACRO_NEW_MEDICAL_ITEM(PFG) : ACE_epinephrine

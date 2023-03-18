@@ -3620,8 +3620,8 @@ class CfgVehicles
 
 		backpack = MACRO_NEW_BACKPACK(opfor,332nd_b1_at_bp);
 
-		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AT),"Throw","Put" };
-		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AT),"Throw","Put" };
+		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
+		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
 
 		magazines[] =
 		{

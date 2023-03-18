@@ -116,7 +116,7 @@ class CfgVehicles
         editorSubcategory = "EdSubcat_332nd_TANK";
         crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
 
-		armor = 10000;
+		armor = 4000;
 		armorStructural = 10;
 
         typicalCargo[] =
