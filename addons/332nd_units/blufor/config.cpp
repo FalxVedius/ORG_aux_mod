@@ -22,7 +22,6 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,332nd_corporal),
             MACRO_NEW_UNIT(infantry,332nd_sergeant),
             MACRO_NEW_UNIT(infantry,332nd_officer),
-            MACRO_NEW_UNIT(infantry,332nd_deserter),
 
             MACRO_NEW_UNIT(airborne,trooper),
             MACRO_NEW_UNIT(airborne,senior_trooper),
@@ -125,47 +124,6 @@ class CfgPatches
 
             //Custom ------------------------
 
-            //Blast
-            MACRO_NEW_UNIT(infantry,Blast),
-            //Falx
-            MACRO_NEW_UNIT(infantry,Falx),
-            //Halligan
-            MACRO_NEW_UNIT(aviation,Halligan),
-            //Cutter
-            MACRO_NEW_UNIT(aviation,Cutter),
-            //Riddle
-            MACRO_NEW_UNIT(captain,Riddle),
-            //Hoggy
-            MACRO_NEW_UNIT(infantry,Hoggy),
-            //Griif
-            MACRO_NEW_UNIT(airborne,Griif),
-            //Church
-            MACRO_NEW_UNIT(infantry,Church),
-            //Grass
-            MACRO_NEW_UNIT(infantry,Grass),
-            //Chopper
-            MACRO_NEW_UNIT(aviation,Chopper),
-            //Dets
-            MACRO_NEW_UNIT(airborne,Dets),
-            //Poseidon
-            MACRO_NEW_UNIT(captain,Poseidon),
-            //Sigma
-            MACRO_NEW_UNIT(infantry,Sigma),
-            //Sentinel
-            MACRO_NEW_UNIT(airborne,Sentinel),
-            //Screw
-            MACRO_NEW_UNIT(airborne,Screw),
-            //Cutter
-            MACRO_NEW_UNIT(mech,Cutter),
-            //Lasagna
-            MACRO_NEW_UNIT(mech,Lasagna),
-            //Tanya
-            MACRO_NEW_UNIT(infantry,Tanya),
-            //Dragneel
-            MACRO_NEW_UNIT(aviation,Dragneel),
-            //Brain
-            MACRO_NEW_UNIT(infantry,Brain),
-
 		};
 		weapons[] = {
 
@@ -179,7 +137,6 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,332nd_sergeant),
             MACRO_NEW_UNIFORM(infantry,332nd_officer),
             MACRO_NEW_UNIFORM(infantry,332nd_original),
-            MACRO_NEW_UNIFORM(infantry,332nd_deserter),
 
             MACRO_NEW_UNIFORM(airborne,trooper),
             MACRO_NEW_UNIFORM(airborne,senior_trooper),
@@ -281,45 +238,6 @@ class CfgPatches
 
 
             //Custom ------------------------
-
-            //Blast
-            MACRO_NEW_UNIFORM(infantry,Blast),
-            //Falx
-            MACRO_NEW_UNIFORM(infantry,Falx),
-            //Halligan
-            MACRO_NEW_UNIFORM(aviation,Halligan),
-            //Riddle
-            MACRO_NEW_UNIFORM(captain,Riddle),
-            //Hoggy
-            MACRO_NEW_UNIFORM(infantry,Hoggy),
-            //Griif
-            MACRO_NEW_UNIFORM(airborne,Griif),
-            //Church
-            MACRO_NEW_UNIFORM(infantry,Church),
-            //Grass
-            MACRO_NEW_UNIFORM(infantry,Grass),
-            //Chopper
-            MACRO_NEW_UNIFORM(aviation,Chopper),
-            //Dets
-            MACRO_NEW_UNIFORM(airborne,Dets),
-            //Poseidon
-            MACRO_NEW_UNIFORM(captain,Poseidon),
-            //Sigma
-            MACRO_NEW_UNIFORM(infantry,Sigma),
-            //Sentinel
-            MACRO_NEW_UNIFORM(airborne,Sentinel),
-            //Screw
-            MACRO_NEW_UNIFORM(airborne,Screw),
-            //Cutter
-            MACRO_NEW_UNIFORM(mech,Cutter),
-            //Lasagna
-            MACRO_NEW_UNIFORM(mech,Lasagna),
-            //Tanya
-            MACRO_NEW_UNIFORM(infantry,Tanya),
-            //Dragneel
-            MACRO_NEW_UNIFORM(aviation,Dragneel),
-            //Brain
-            MACRO_NEW_UNIFORM(infantry,Brain),
 
             // ----- nvgs -----
              MACRO_NEW_NVG(Specialist_Visor),
@@ -429,7 +347,6 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_sergeant,Sergeant,332nd_sergeant)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_officer,Officer,332nd_officer)
     MACRO_NEW_INF_UNIFORM_ITEM(332nd_original,Original,332nd_original)
-    MACRO_NEW_INF_UNIFORM_ITEM(332nd_deserter,Deserter,332nd_deserter)
 
     //Airborne
     MACRO_NEW_AIRBORNE_UNIFORM_ITEM(trooper,Trooper,trooper)
@@ -545,45 +462,6 @@ class CfgWeapons
 
     //Custom ----------------------------------------
 
-    //Blast
-    MACRO_NEW_INF_UNIFORM_ITEM(Blast,Blast,Blast)
-    //Falx
-    MACRO_NEW_INF_UNIFORM_ITEM(Falx,Falx,Falx)
-    //Halligan
-    MACRO_NEW_AVI_UNIFORM_ITEM(Halligan,Halligan,Halligan)
-    //Riddle
-    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Riddle,Riddle,Riddle)
-    //Hoggy
-    MACRO_NEW_INF_UNIFORM_ITEM(Hoggy,Hoggy,Hoggy)
-    //Griif
-    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Griif,Griif,Griif)
-    //Church
-    MACRO_NEW_INF_UNIFORM_ITEM(Church,Church,Church)
-    //Grass
-    MACRO_NEW_INF_UNIFORM_ITEM(Grass,Grass,Grass)
-    //Chopper
-    MACRO_NEW_AVI_UNIFORM_ITEM(Chopper,Chopper,Chopper)
-    //Dets
-    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Dets,Dets,Dets)
-    //Poseidon
-    MACRO_NEW_CAPTAIN_UNIFORM_ITEM(Poseidon,Poseidon,Poseidon)
-    //Sigma
-    MACRO_NEW_INF_UNIFORM_ITEM(Sigma,Sigma,Sigma)
-    //Sentinel
-    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Sentinel,Sentinel,Sentinel)
-    //Screw
-    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(Screw,Screw,Screw)
-    //Cutter
-    MACRO_NEW_MECHANIZED_UNIFORM_ITEM(Cutter,Cutter,Cutter)
-    //Lasagna
-    MACRO_NEW_MECHANIZED_UNIFORM_ITEM(Lasagna,Lasagna,Lasagna)
-    //Tanya
-    MACRO_NEW_INF_UNIFORM_ITEM(Tanya,Tanya,Tanya)
-    //Dragneel
-    MACRO_NEW_AVI_UNIFORM_ITEM(Dragneel,Dragneel,Dragneel)
-    //Brain
-    MACRO_NEW_INF_UNIFORM_ITEM(Brain,Brain,Brain)
-
     #include "_nvg.hpp"
     #include "_bino.hpp"
 };
@@ -623,7 +501,6 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(332nd_sergeant,Clone Sergeant,332nd_sergeant,sergeant\Sergeant_Upper.paa,sergeant\Sergeant_Lower.paa)
     MACRO_NEW_INF_UNIT(332nd_officer,Clone Officer,332nd_officer,officer\Officer_Upper.paa,officer\Officer_Lower.paa)
     MACRO_NEW_INF_UNIT(332nd_original,Clone Original Armor,332nd_original,trooper\332nd_Original_Upper_Armor.paa,trooper\332nd_Original_Lower_Armor.paa)
-    MACRO_NEW_INF_UNIT(332nd_deserter,Clone Deserter,332nd_deserter,clone_deserter\332nd_Rebal_Armor_upper_ca.paa,clone_deserter\332nd_Rebal_lower_ca.paa)
 
     //Airborne
     MACRO_NEW_AIRBORNE_UNIT(trooper,Clone Trooper,trooper,trooper\Trooper_Upper.paa,trooper\Trooper_Lower.paa)
@@ -739,50 +616,5 @@ class CfgVehicles
 
 
     //Custom ----------------------------------------
-    
-    //Blast
-    MACRO_NEW_INF_UNIT(Blast,Blast,Blast,custom\Blast_Upper.paa,custom\Blast_Lower.paa)
-    //Falx
-    MACRO_NEW_INF_UNIT(Falx,Falx,Falx,custom\Falx_Upper.paa,custom\Falx_Lower.paa)
-    //Halligan
-    MACRO_NEW_AVI_UNIT(Halligan,Halligan,Halligan,custom\Halligan_Upper.paa,custom\Halligan_Lower.paa)
-    //Riddle
-    MACRO_NEW_CAPTAIN_UNIT(Riddle,Riddle,Riddle,custom\Riddle_Upper.paa,custom\Riddle_Lower.paa)
-    //Hoggy
-    MACRO_NEW_INF_UNIT(Hoggy,Hoggy,Hoggy,custom\Hoggy_Upper.paa,custom\Hoggy_Lower.paa)
-    //Church
-    MACRO_NEW_INF_UNIT(Church,Church,Church,custom\Church_Upper.paa,custom\Church_Lower.paa)
-    //Grass
-    MACRO_NEW_INF_UNIT(Grass,Grass,Grass,custom\Grass_Upper.paa,custom\Grass_Lower.paa)
-    //Chopper
-    MACRO_NEW_AVI_UNIT(Chopper,Chopper,Chopper,custom\Chopper_Upper.paa,custom\Chopper_Lower.paa)
-    //Dets
-    MACRO_NEW_AIRBORNE_UNIT(Dets,Dets,Dets,custom\Dets_Upper.paa,custom\Dets_Lower.paa)
-    //Griif
-    MACRO_NEW_AIRBORNE_UNIT(Griif,Griif,Griif,custom\Griif_Upper.paa,custom\Griif_Lower.paa)
-    //Poseidon
-    MACRO_NEW_CAPTAIN_UNIT(Poseidon,Poseidon,Poseidon,custom\Poseidon_Upper.paa,custom\Poseidon_Lower.paa)
-    //Sigma
-    MACRO_NEW_INF_UNIT(Sigma,Sigma,Sigma,custom\Sigma_Upper.paa,custom\Sigma_Lower.paa)
-    //Sentinel
-    MACRO_NEW_AIRBORNE_UNIT(Sentinel,Sentinel,Sentinel,custom\Sentinel_Upper.paa,custom\Sentinel_Lower.paa)
-    //Screw
-    MACRO_NEW_AIRBORNE_UNIT(Screw,Screw,Screw,custom\Screw_Upper.paa,custom\Screw_Lower.paa)
-    //Cutter
-    MACRO_NEW_MECHANIZED_UNIT(Cutter,Cutter,Cutter,custom\Cutter_Upper.paa,custom\Cutter_Lower.paa)
-    //Lasagna
-    MACRO_NEW_MECHANIZED_UNIT(Lasagna,Lasagna,Lasagna,custom\Lasagna_Upper.paa,custom\Lasagna_Lower.paa)
-    //Tanya
-    MACRO_NEW_INF_UNIT(Tanya,Tanya,Tanya,custom\Tanya_Upper.paa,custom\Tanya_Lower.paa)
-    //Dragneel
-    MACRO_NEW_AVI_UNIT(Dragneel,Dragneel,Dragneel,custom\Drag_Upper.paa,custom\Drag_Lower.paa)
-    //Fuzzy
-    //MACRO_NEW_ARF_BASE_UNIT(Fuzzy,Fuzzy,Fuzzy,customs\Fuzzy_Upper.paa,customs\Fuzzy_Lower.paa,332nd_aux_arf_helmet_332nd_recon)
-    //MACRO_NEW_ARF_DESERT_UNIT(Fuzzy_Des,Fuzzy Desert,Fuzzy_Des,customs\Fuzzy_Upper_Des.paa,customs\Fuzzy_Lower_Des.paa,332nd_aux_arf_helmet_332nd_recon_desert)
-    //MACRO_NEW_ARF_JUNGLE_UNIT(Fuzzy_Jung,Fuzzy Jungle, 332nd_arfjung_trooper, Trooper\arf_trooper_jungle_upper_ca.paa, Trooper\arf_trooper_jungle_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_jungle)
-    //MACRO_NEW_ARF_SNOW_UNIT(332nd_arfsnow_trooper, Recon Snow Trooper, 332nd_arfsnow_trooper, Trooper\arf_trooper_snow_upper_ca.paa, Trooper\arf_trooper_snow_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_snow)
-    //MACRO_NEW_ARF_URBAN_UNIT(332nd_arfurb_trooper, Recon Urban / Night - Ops Trooper, 332nd_arfurb_trooper, Trooper\arf_trooper_urban_upper_ca.paa, Trooper\arf_trooper_urban_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_urban)
-    //MACRO_NEW_ARF_WOODLAND_UNIT(332nd_arfwood_trooper, Recon Multi - cam Trooper, 332nd_arfwood_trooper, Trooper\arf_trooper_woodland_upper_ca.paa, Trooper\arf_trooper_woodland_lower_ca.paa, 332nd_aux_arf_helmet_332nd_recon_woodland)
-    //Brain
-    MACRO_NEW_INF_UNIT(Brain,Brain,Brain,custom\Brain_Upper.paa,custom\Brain_Lower.paa)
+ 
 };

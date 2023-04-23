@@ -15,26 +15,9 @@ class CfgPatches
             // helmets
             MACRO_NEW_HELMET(ab,332nd_airborne),
 			MACRO_NEW_HELMET(ab,332nd_airborne_veteran),
-			MACRO_NEW_HELMET(ab,Griif),
-			MACRO_NEW_HELMET(ab,Beast),
-			MACRO_NEW_HELMET(ab,Screw),
 			MACRO_NEW_HELMET(ab,Corporal),
 			MACRO_NEW_HELMET(ab,Specialist),
 			MACRO_NEW_HELMET(ab,Sergeant),
-			MACRO_NEW_HELMET(ab,Dets),
-			MACRO_NEW_HELMET(ab,Dark),
-			MACRO_NEW_HELMET(ab,Sentinel),
-			MACRO_NEW_HELMET(ab,Raven),
-			MACRO_NEW_HELMET(ab,Veta),
-			MACRO_NEW_HELMET(ab,Grey),
-			MACRO_NEW_HELMET(ab,Shock),
-			MACRO_NEW_HELMET(ab,Striker),
-			MACRO_NEW_HELMET(ab,Saiko),
-			MACRO_NEW_HELMET(ab,Penny),
-			MACRO_NEW_HELMET(ab,Oxide),
-			MACRO_NEW_HELMET(ab,Dalton),
-			MACRO_NEW_HELMET(ab,Lyssa),
-			MACRO_NEW_HELMET(ab,Nordic),
         };
 		weapons[] = {};
 	};
@@ -48,25 +31,7 @@ class CfgWeapons
 
     MACRO_NEW_AB_HELMET_ITEM(332nd_airborne,Airborne,AB.paa)
 	MACRO_NEW_AB_HELMET_ITEM(332nd_airborne_veteran,Airborne Veteran,AB_Vet_Helmet.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Griif,Griif,Griif.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Beast,Beast,Beast.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Screw,Screw,Screw.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Corporal,Corporal,Corporal.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Specialist,Specialist,Specialist.paa)
 	MACRO_NEW_AB_HELMET_ITEM(Sergeant,Sergeant,Sergeant.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Dets,Dets,Dets.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Dark,Dark,Dark.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Sentinel,Sentinel,Sentinel.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Raven,Raven,Raven.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Veta,Veta,Veta.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Grey,Grey,Grey.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Shock,Shock,Shock.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Cog,Cog,Cog.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Striker,Striker,Striker.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Saiko,Saiko,Saiko.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Penny,Penny,Penny.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Oxide,Oxide,Oxide.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Dalton,Dalton,Dalton.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Lyssa,Lyssa,Lyssa.paa)
-	MACRO_NEW_AB_HELMET_ITEM(Nordic,Nordic,Nordic.paa)
 };
