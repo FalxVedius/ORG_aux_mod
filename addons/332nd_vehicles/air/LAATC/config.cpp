@@ -113,16 +113,22 @@ class CfgVehicles
 		ace_refuel_canReceive = 1;
 
 
-		hiddenSelections[] = 
-		{ 
-			"camo",
-			"camo1" 
+		hiddenselections[]=
+		{
+			"_auxiliary",
+			"_cockpit",
+			"_glass",
+			"_hull",
+			"_wings"
 		};
 
-		hiddenSelectionsTextures[] = 
-		{ 
-			"332nd_vehicles\_textures\air\LAATC\Camo_0_CO_PW.paa",
-			"332nd_vehicles\_textures\air\LAATC\Camo_1_CO_PW.paa" 
+		hiddenSelectionsTextures[]=
+		{
+			"\lsd_vehicles_heli\laatc\data\auxiliary_co.paa",
+			"\lsd_vehicles_heli\laatc\data\standard\cockpit_co.paa",
+			"\lsd_vehicles_heli\laatc\data\glass_ca.paa",
+			"\lsd_vehicles_heli\laatc\data\standard\hull_co.paa",
+			"\lsd_vehicles_heli\laatc\data\standard\wings_co.paa"
 		};
 
 		crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
@@ -147,10 +153,10 @@ class CfgVehicles
 		faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
 		displayName="LAAT/C Mk1 *Test*";
-		model="3AS\3AS_LAATC\3AS_LAAT_C.p3d";
-		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
-		picture="\3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
-		editorpreview="\3AS\3as_Laat\LAATI\data\editorpreview\3as_laat.jpg";
+		model="\lsd_vehicles_heli\laatc\lsd_heli_laatc";
+		icon="lsd_vehicles_heli\laati\data\ui\laat_icon.paa";
+		picture="";
+		editorpreview="lsd_vehicles_heli\laati\data\ui\laat_preview.jpg";
 		memoryPointTaskMarker="TaskMarker_1_pos";
 		cargoaction[]=
 		{
@@ -900,8 +906,9 @@ class CfgVehicles
 		radarType=8;
 		preciseGetInOut=0;
 		cargoPreciseGetInOut[]={0};
-		driverAction="LAAT_Pilot";
-		getInAction="ChopperLight_L_In_H";
+		driverAction="pilot_Heli_Light_02";
+		driverInAction="pilot_Heli_Light_02";
+		getInAction="GetInLow";
 		getOutAction="GetOutLow";
 		memoryPointsGetInCargo[]=
 		{
