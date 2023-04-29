@@ -96,7 +96,7 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		crewCrashProtection = 0.01;
 		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		crew = "332nd_aux_infantry_unit_trooper";
 		armor = 1500;
 
 		TFAR_hasIntercom = 1;

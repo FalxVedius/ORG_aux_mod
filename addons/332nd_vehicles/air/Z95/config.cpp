@@ -47,8 +47,8 @@ class VehicleSystemsTemplateRightPilot : DefaultVehicleSystemsDisplayManagerRigh
 class CfgVehicles
 {
 	class NewTurret;
-	class Air;
-	class Plane : Air
+	class Plane_Base_F;
+	class VTOL_Base_F : Plane_Base_F
 	{
 		class NewTurret;
 		class ViewPilot;
@@ -57,16 +57,16 @@ class CfgVehicles
 			class HitHull;
 		};
 	};
-	class Plane_Base_F : Plane
+	class 3AS_Z95_VTOL_Base_F : VTOL_Base_F
 	{
 		class AnimationSources;
 		class Components;
 	};
-	class Plane_Fighter_03_base_F : Plane_Base_F
+	class 3AS_Z95_VTOL_Base : 3AS_Z95_VTOL_Base_F
 	{
 	  class sounds;
 	};
-	class Plane_Fighter_03_dynamicLoadout_base_F : Plane_Fighter_03_base_F
+	class 3AS_Z95_VTOL_Dynamic_Base_F : 3AS_Z95_VTOL_Base
 	{
 	
 		class Components : Components
@@ -78,7 +78,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class 3as_Z95_base : Plane_Fighter_03_dynamicLoadout_base_F
+	class 3AS_Z95_Republic : 3AS_Z95_VTOL_Dynamic_Base_F
 	{
 		class Components : Components
 		{	
@@ -86,7 +86,7 @@ class CfgVehicles
 		class ACE_SelfActions;
 	};
 
-	class MACRO_NEW_VEHICLE(air,Z,95) : 3as_Z95_base
+	class MACRO_NEW_VEHICLE(air,Z,95) : 3AS_Z95_Republic
 	{
 		displayName = "Z-95";
 		scope = 2;
@@ -99,7 +99,7 @@ class CfgVehicles
 			"3AS\3as_Z95\Data\cockpit_co.paa",
 			"3AS\3as_saber\data\glass\glass_ca"
 		};
-		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
+		crew = "332nd_aux_infantry_unit_trooper";
 		class EjectionSystem
 		{
 			EjectionSeatEnabled = 0;										//enable advanced ejection system								

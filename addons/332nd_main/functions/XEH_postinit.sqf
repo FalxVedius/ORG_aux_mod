@@ -26,7 +26,7 @@
 //    }, _this] call CBA_fnc_execNextFrame;
 //	
 //}] call CBA_fnc_addEventHandler;
-//
-//
-//["vehicle", {_this call Aux332nd_MPS_fnc_handlePlayerVehicleChanged;}, true] call CBA_fnc_addPlayerEventHandler;
+
+
+["vehicle", {_this call Aux332nd_MPS_fnc_handlePlayerVehicleChanged;}, true] call CBA_fnc_addPlayerEventHandler;
 

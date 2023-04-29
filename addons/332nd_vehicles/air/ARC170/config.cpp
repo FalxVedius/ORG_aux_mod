@@ -183,7 +183,7 @@ class CfgVehicles
 		  };
 
 
-		  crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
+		  crew = "332nd_aux_infantry_unit_trooper";
 		  //  soundengineonint[]=
 		  //{
 		  //	"\jsrs_soundmod_complete\JSRS_Soundmod_Soundfiles\air_vehicles\plane_cas_01\plane_cas_01_engine_start_int.ogg",
