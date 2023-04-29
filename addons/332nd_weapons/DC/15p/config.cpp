@@ -37,8 +37,9 @@ class cfgWeapons
 
 	class MACRO_NEW_WEAPON(DC_15p): lsi_weapon_e11
 	{
-		displayName = MACRO_WEAPON_DISPLAYNAME(*WIP* DC 15P [Rifleman])
+		displayName = MACRO_WEAPON_DISPLAYNAME(*WIP * DC 15P[Rifleman])
 
+		scopeArsenal = 0;
 		ACE_Overheating_mrbs=300000;
 		recoil="DC_15s";
 		recoilprone="DC_15s";

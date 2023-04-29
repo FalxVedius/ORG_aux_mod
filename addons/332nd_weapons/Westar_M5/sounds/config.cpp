@@ -23,19 +23,32 @@ class CfgPatches
 
 class cfgSoundShaders 
 {
-	class 332_Suppressed_WestarM5_SoundShader
+	class 332_WestarM5_Closure_SoundShader
 	{
 		samples[] = {{"332nd_weapons\Westar_M5\sounds\WestarM5close.wss",1}};
-		volume = 0.9;
-		range = 300;
-		rangeCurve[] = {{0,1},{300,0}};
+		volume = 0.4466836;
+		range = 5;
 	};
-	class 332_Suppressed_WestarM5_distShot_SoundShader
+	class 332_WestarM5_closeShot_SoundShader
+	{
+		samples[] = {{"332nd_weapons\Westar_M5\sounds\WestarM5close.wss",1}};
+		volume = 1.0;
+		range = 50;
+		rangeCurve = "closeShotCurve";
+	};
+	class 332_WestarM5_midShot_SoundShader
+	{
+		samples[] = {{"332nd_weapons\Westar_M5\sounds\WestarM5.wss",1}};
+		volume = 0.7943282;
+		range = 1800;
+		rangeCurve[] = {{0,0.2},{50,1},{300,0},{1800,0}};
+	};
+	class 332_WestarM5_distShot_SoundShader
 	{
 		samples[] = {{"332nd_weapons\Westar_M5\sounds\WestarM5distant.wss",1}};
-		volume = 1;
-		range = 1000;
-		rangeCurve[] = {{0,0},{50,0},{300,1},{1000,1}};
+		volume = 1.0;
+		range = 4000;
+		rangeCurve[] = {{0,0},{50,0},{300,1},{4000,1}};
 	};
 };
 
@@ -43,12 +56,12 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 {
 	
 
-	class 332_Suppresed_WestarM5_Shot_SoundSet
+	class 332_WestarM5_Shot_SoundSet
 	{
-		soundShaders[] = {"332_Suppressed_WestarM5_SoundShader","332_Suppressed_WestarM5_distShot_SoundShader","332_DC15a_tailInterior_SoundShader"};
+		soundShaders[] = {"332_WestarM5_Closure_SoundShader","332_WestarM5_closeShot_SoundShader","332_WestarM5_midShot_SoundShader","332_WestarM5_distShot_SoundShader"};
 		volumeFactor = 1;
-		frequencyRandomizer = 0.6;
-		frequencyRandomizermin = 0.25;
+		frequencyRandomizer = 0.75;
+		frequencyRandomizer = 0.25;
 		volumeCurve = "332_weapons_basic_volumecurve";
 		sound3DProcessingType = "332_weapons_3dprocessor";
 		distanceFilter = "332_weapons_lowpass_filter";

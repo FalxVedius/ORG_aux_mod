@@ -19,10 +19,10 @@ class CfgWeapons
 {
     // ---- Helmets ----
 
-    class SWLB_clone_P1_helmet;
+    class ls_gar_phase1_helmet;
 	class JLTS_CloneHelmetARC;
 
-	class CloneHelmetP1_Base : SWLB_clone_P1_helmet
+	class CloneHelmetP1_Base : ls_gar_phase1_helmet
 	{
 		scopeArsenal = 0;
 		class ItemInfo;

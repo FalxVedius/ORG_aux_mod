@@ -13,11 +13,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
             // helmets
-			MACRO_NEW_HELMET(assault,332nd_trooper),
-			MACRO_NEW_HELMET(assault,332nd_veteran),
-			MACRO_NEW_HELMET(assault,332nd_specialist),
-			MACRO_NEW_HELMET(assault,332nd_corporal),
-			MACRO_NEW_HELMET(assault,332nd_sergeant),
+
         };
 		weapons[] = {};
 	};
@@ -29,9 +25,5 @@ class CfgWeapons
 
     class MACRO_NEW_HELMET(assault,base);
 
-	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_trooper,Trooper,Trooper.paa,KatarnVisor.paa)
-	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_veteran,Veteran,Veteran.paa,KatarnVisor.paa)
-	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_specialist,Specialist,Specialist.paa,KatarnVisor.paa)
-	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_corporal,Corporal,Corporal.paa,KatarnVisor.paa)
-	MACRO_NEW_ASSAULT_HELMET_ITEM(332nd_sergeant,Sergeant,Sergeant.paa,KatarnVisor.paa)
+
 };

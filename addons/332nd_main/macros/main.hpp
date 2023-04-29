@@ -64,7 +64,9 @@
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [332nd] Infantry Helmet ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\infantry\##texture};\
+			hiddenSelections[] = {"camo1","visor","illum"};\
+			hiddenSelectionsTextures[] = {MACRO_HELMET_TEXTURES_PATH##\infantry\##texture,"ls_armor_bluefor\helmet\gar\phase1\data\visor_co.paa","ls_armor_bluefor\helmet\gar\phase1\data\illum_co.paa"};\
+			hiddenSelectionsMaterials[] = {MACRO_HELMET_TEXTURES_PATH\helmet.rvmat,MACRO_HELMET_TEXTURES_PATH\visor.rvmat};\
 		};
 
 	#define MACRO_NEW_AB_HELMET_ITEM(classname,displayname,texture)\
@@ -474,10 +476,11 @@
 			uniformClass = MACRO_NEW_UNIFORM(infantry,uniformClassname);\
 			hiddenSelections[]= {"camo1","camo2","undersuit","insignia"};\
 			hiddenSelectionsTextures[] = {\
-				MACRO_UNIFORM_TEXTURES_PATH\airborne\uniforms\##upper,\
-				MACRO_UNIFORM_TEXTURES_PATH\airborne\uniforms\##lower,\
+				MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##upper,\
+				MACRO_UNIFORM_TEXTURES_PATH\infantry\uniforms\##lower,\
 				"ls_armor_bluefor\uniform\gar\phase2\data\undersuit_co.paa"\
 			};\
+			hiddenSelectionsMaterials[] = {MACRO_UNIFORM_TEXTURES_PATH\TrooperUpper.rvmat,MACRO_UNIFORM_TEXTURES_PATH\TrooperLower.rvmat,MACRO_UNIFORM_TEXTURES_PATH\undersuit.rvmat};\
 		}
 
 	#define MACRO_NEW_AIRBORNE_UNIT(classname,displayname,uniformClassname,upper,lower)\

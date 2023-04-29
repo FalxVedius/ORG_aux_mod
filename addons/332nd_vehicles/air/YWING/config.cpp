@@ -64,7 +64,7 @@ class CfgVehicles
 		  "120Rnd_CMFlare_Chaff_Magazine",
 		  "120Rnd_CMFlare_Chaff_Magazine" };
 
-		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
+		crew = "332nd_aux_infantry_unit_trooper";
 
 
 		hiddenselectionstextures[] = 

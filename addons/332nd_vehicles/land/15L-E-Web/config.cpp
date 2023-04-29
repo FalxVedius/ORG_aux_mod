@@ -77,7 +77,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_TURR";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		crew = "332nd_aux_infantry_unit_trooper";
 
 		class Turrets : Turrets
 		{
@@ -126,7 +126,7 @@ class CfgVehicles
 		scopeCurator = 2;
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_TURR";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		crew = "332nd_aux_infantry_unit_trooper";
 
 		class Turrets : Turrets
 		{

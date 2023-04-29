@@ -55,7 +55,7 @@ class CfgWeapons
 	{
 		author="Halligan";
 		scope=2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5 [Mission/Banshee])
+		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5 [Rifleman])
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_F.p3d";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		weaponInfoType="RscWeaponZeroing";
@@ -64,6 +64,7 @@ class CfgWeapons
 		{
 			MACRO_NEW_MAG(Westar_M5,40)
 		};
+		magazineWell[] = {};
 		class 332Stun: JLTS_stun_muzzle
 		{
 	    magazines[]=
@@ -155,7 +156,7 @@ class CfgWeapons
 		class Single: Mode_SemiAuto
 		{
 			reloadTime=0.115;
-			dispersion=0.0001;
+			dispersion=0.003;
 			minRange=2;
 			minRangeProbab=0.5;
 			midRange=200;
@@ -169,13 +170,13 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType 
 			{
-				soundSetShot[] = {"332_Suppresed_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"332_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			reloadTime=0.115;
-			dispersion=0.0001;
+			reloadTime=0.035;
+			dispersion=0.006;
 			minRange=0;
 			minRangeProbab=0.89999998;
 			midRange=15;
@@ -188,7 +189,7 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType 
 			{
-				soundSetShot[] = {"332_Suppresed_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"332_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
 			};
 		};
 			class OpticsModes
@@ -357,7 +358,7 @@ class CfgWeapons
 	class MACRO_NEW_WEAPON(Westar_M5_GL): MACRO_NEW_WEAPON(Westar_M5)
 	{
 		scope=2;
-		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5 UGL [Mission/Banshee Grenadier])
+		displayName = MACRO_WEAPON_DISPLAYNAME(Westar-M5 UGL [Grenadier])
 		model="3AS\3AS_Weapons\WestarM5\3AS_Westar_M5_GL.p3d";
 		picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		weaponInfoType="RscWeaponZeroing";
@@ -387,7 +388,7 @@ class CfgWeapons
 	class 332nd_WestarM5_Scope: ItemCore
 	{
 		scope=2;
-		displayName="[332nd] Thermal Spotting Scope";
+		displayName="[332nd] Spotting Scope";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
 		model="\3AS\3AS_Weapons\WestarM5\3AS_Westar_Scope_F.p3d";
 		weaponInfoType="RscWeaponZeroing";
@@ -423,7 +424,8 @@ class CfgWeapons
 					memoryPointCamera="opticView";
 					visionMode[]=
 					{
-						"TI"
+						"Normal",
+						"NVG"
 					};
 					thermalMode[] = {0, 1};
 					opticsFlare=1;
@@ -462,10 +464,10 @@ class CfgMagazines
 		modelSpecialIsProxy=0;
 		picture="\MRC\JLTS\weapons\DC15A\data\ui\DC15A_mag_ui_ca.paa";
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
-		count=35;
+		count=40;
 		mass=10;
 		initspeed=800;
-		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Suppressed Medium,35)
+		displayName=MACRO_AMMO_DISPLAYNAME(Westar M-5 Low Power,40)
 		displayNameShort="Westar suppressed medium magazine";
 		descriptionShort="Westar suppressed medium magazine";
 		ammo=MACRO_NEW_AMMO(Medium_Westar);
@@ -475,17 +477,14 @@ class CfgMagazines
 
 class CfgAmmo
 {
-	class ls_ammo_762_blue;
-	class MACRO_NEW_AMMO(Medium_Westar): ls_ammo_762_blue
+	class ls_ammo_65_blue;
+	class MACRO_NEW_AMMO(Medium_Westar): ls_ammo_65_blue
 	{
 	   soundsetsoniccrack[]=
 		{
 			"332nd_blaster_flyby_soundset"
 		};
-       audibleFire = 2;
        ACE_bulletMass = 3;
-       visibleFireTime = 3;
-	   visibleFire = 1;
 	   cartridge = "";
 	   effectfly = "332nd_mainRound_effects";
 	   class HitEffects

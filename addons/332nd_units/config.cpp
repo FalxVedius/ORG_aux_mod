@@ -1688,7 +1688,11 @@ class CfgVehicles
 
 	// ---- Blufor Units for Uniforms ----
 
-
+	class B_Soldier_f;
+	class JLTS_Clone_P2_DC15A : B_Soldier_f
+	{
+		class HitPoints;
+	};
 	class lsd_blueforClone_base;
     class lsd_gar_phase2_base : lsd_blueforClone_base
     {
@@ -1700,7 +1704,7 @@ class CfgVehicles
 	};
 
 	//recruit
-	class MACRO_NEW_UNIT(recruit,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(recruit,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -1712,8 +1716,8 @@ class CfgVehicles
 		faction = "EdCat_332nd";
 		editorSubcategory = "EdSubcat_332nd_MEN";
 
-		linkedItems[] = {"332nd_aux_infantry_helmet_332nd_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
-		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_332nd_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		linkedItems[] = {"332nd_aux_infantry_helmet_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
+		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
@@ -1781,8 +1785,8 @@ class CfgVehicles
         uniformClass = MACRO_NEW_UNIFORM(infantry,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-        linkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
-		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
+        linkedItems[] = {"332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
+		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
 		weapons[] = {"332nd_aux_weapon_DC_15a","Throw","Put"};
 		respawnWeapons[] = {"332nd_aux_weapon_DC_15a","Throw","Put"};
 		nakedUniform = "U_BasicBody";
@@ -1838,7 +1842,7 @@ class CfgVehicles
     };
 
 	//infantry
-	class MACRO_NEW_UNIT(airborne,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(airborne,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -1850,7 +1854,7 @@ class CfgVehicles
 		uniformClass = MACRO_NEW_UNIFORM(airborne,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		linkedItems[] = { "332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
@@ -1908,7 +1912,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(arfbase,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(arfbase,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -1922,7 +1926,7 @@ class CfgVehicles
 
 		camouflage = 0.6;
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
+		linkedItems[] = { "332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
 		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
 		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
@@ -1978,7 +1982,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(arfdes,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(arfdes,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -2048,7 +2052,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(arfjung,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(arfjung,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -2118,7 +2122,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(arfsnow,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(arfsnow,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -2188,7 +2192,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(arfurb,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(arfurb,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -2258,7 +2262,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(arfwood,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(arfwood,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -2328,7 +2332,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(mech,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(mech,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -2416,7 +2420,7 @@ class CfgVehicles
 		backpack = "332nd_aux_blufor_backpack_332nd_medic";
 	};
 
-	class MACRO_NEW_UNIT(aviation,base): SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(aviation,base): lsd_gar_phase2_base
     {
         author = MACRO_AUTHOR;
         scope = 0;
@@ -2480,7 +2484,7 @@ class CfgVehicles
 
     };
 
-	class MACRO_NEW_UNIT(cwo,base): SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(cwo,base): lsd_gar_phase2_base
     {
         author = MACRO_AUTHOR;
         scope = 0;
@@ -2541,7 +2545,7 @@ class CfgVehicles
 
     };
 
-	class MACRO_NEW_UNIT(scenario,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(scenario,base) : JLTS_Clone_P2_DC15A
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -2608,7 +2612,7 @@ class CfgVehicles
 
 	};
 
-	class MACRO_NEW_UNIT(captain,base) : SWLB_clone_base_P2
+	class MACRO_NEW_UNIT(captain,base) : lsd_gar_phase2_base
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
@@ -3288,7 +3292,8 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_E60R_ATMag_x1",
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag",
 			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -3297,7 +3302,8 @@ class CfgVehicles
 		{
 			mag_10(332nd_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_E60R_ATMag_x1",
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag",
 			"332nd_aux_magazine_332_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -4356,10 +4362,14 @@ class CfgVehicles
 		magazines[] =
 		{
 			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag"
 		};
 		respawnMagazines[] =
 		{
 			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			"JLTS_RPS6_mag",
+			"JLTS_RPS6_mag"
 		};
 
 		BX_Hitpoints

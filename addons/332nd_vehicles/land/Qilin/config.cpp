@@ -189,10 +189,10 @@ class CfgVehicles
         side = 1;
         faction="EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_CAR";
-		crew="332nd_aux_infantry_unit_332nd_trooper";
+		crew="332nd_aux_infantry_unit_trooper";
         typicalCargo[]=
 		{
-			"332nd_aux_infantry_unit_332nd_trooper"
+			"332nd_aux_infantry_unit_trooper"
 		};
         textureList[]=
 		{
@@ -319,10 +319,10 @@ class CfgVehicles
 
         faction="EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_CAR";
-		crew="332nd_aux_infantry_unit_332nd_trooper";
+		crew="332nd_aux_infantry_unit_trooper";
         typicalCargo[]=
 		{
-			"332nd_aux_infantry_unit_332nd_trooper"
+			"332nd_aux_infantry_unit_trooper"
 		};
         textureList[]=
 		{

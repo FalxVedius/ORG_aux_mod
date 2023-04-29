@@ -328,8 +328,8 @@ class CfgVehicles
             MACRO_LAAT_TEXTURES\Base\Cockpit\cockpits_co.paa,"lsd_vehicles_heli\laati\data\glass_ca.paa"
         };
 
-        crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
-        typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
+        crew = "332nd_aux_infantry_unit_trooper";
+        typicalcargo[] = { "332nd_aux_infantry_unit_trooper" };
 
 		soundengineonint[]=
 		{
@@ -3304,8 +3304,8 @@ class CfgVehicles
 		cyclicForwardForceCoef=2;
 		mainRotorSpeed=-1;
 		backRotorSpeed=1;
-        crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
-        typicalcargo[] = { MACRO_NEW_UNIT(aviation,332nd_flight_cadet) };
+        crew = "332nd_aux_infantry_unit_trooper";
+        typicalcargo[] = { "332nd_aux_infantry_unit_trooper" };
 
 		class ACE_SelfActions :ACE_SelfActions
 		{
