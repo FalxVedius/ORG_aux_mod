@@ -19,8 +19,15 @@ class CfgWeapons
 {
     // ---- Helmets ----
 
+	class JLTS_CloneHelmetP2;
     class ls_gar_phase1_helmet;
 	class JLTS_CloneHelmetARC;
+
+	class CloneHelmetScenario_Base : JLTS_CloneHelmetP2
+	{
+		scopeArsenal = 0;
+		class ItemInfo;
+	};
 
 	class CloneHelmetP1_Base : ls_gar_phase1_helmet
 	{
@@ -260,7 +267,7 @@ class CfgWeapons
 		};
 	}
 
-	class MACRO_NEW_HELMET(scenario,base) : CloneHelmetP1_Base
+	class MACRO_NEW_HELMET(scenario,base) : CloneHelmetScenario_Base
 	{
 		scopeArsenal = 0;
 		scope = 0;
