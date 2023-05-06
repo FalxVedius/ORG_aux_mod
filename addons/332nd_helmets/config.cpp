@@ -21,6 +21,7 @@ class CfgWeapons
 
 	class JLTS_CloneHelmetP2;
     class ls_gar_phase1_helmet;
+	class ls_gar_phase2_helmet;
 	class JLTS_CloneHelmetARC;
 
 	class CloneHelmetScenario_Base : JLTS_CloneHelmetP2
@@ -30,6 +31,12 @@ class CfgWeapons
 	};
 
 	class CloneHelmetP1_Base : ls_gar_phase1_helmet
+	{
+		scopeArsenal = 0;
+		class ItemInfo;
+	};
+
+	class CloneHelmetP2_Base : ls_gar_phase2_helmet
 	{
 		scopeArsenal = 0;
 		class ItemInfo;
@@ -47,7 +54,7 @@ class CfgWeapons
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[332nd] Infantry Helmet ('base')";
+        displayName = "[332nd] Infantry P1 Helmet ('base')";
         subItems[] = {"G_B_Diving"};
 
 		class ItemInfo : ItemInfo
@@ -63,6 +70,29 @@ class CfgWeapons
 			};
 		};
     }
+
+	//Base infantry P2 helmet
+	class MACRO_NEW_HELMET(infantry_P2,base) : CloneHelmetP2_Base
+	{
+		scopeArsenal = 0;
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[332nd] Infantry P2 Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
+
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
+	}
 
 	class MACRO_NEW_HELMET(arc,base) : CloneHelmetARC_Base
 	{

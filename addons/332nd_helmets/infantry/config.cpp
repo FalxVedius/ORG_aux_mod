@@ -18,7 +18,13 @@ class CfgPatches
 			MACRO_NEW_HELMET(infantry,veteran),
 			MACRO_NEW_HELMET(infantry,Specialist),
 			MACRO_NEW_HELMET(infantry,nco),
-        };
+
+			MACRO_NEW_HELMET(infantry_P2,recruit),
+			MACRO_NEW_HELMET(infantry_P2,trooper),
+			MACRO_NEW_HELMET(infantry_P2,veteran),
+			MACRO_NEW_HELMET(infantry_P2,Specialist),
+			MACRO_NEW_HELMET(infantry_P2,nco),
+        };							 
 		weapons[] = {};
 	};
 };
@@ -28,6 +34,7 @@ class CfgWeapons
     // ---- Helmets ----
 
     class MACRO_NEW_HELMET(infantry,base);
+	class MACRO_NEW_HELMET(infantry_P2,base);
 	class MACRO_NEW_HELMET(engineer,base);
 
 	MACRO_NEW_INF_HELMET_ITEM(recruit,Recruit,Recruit.paa)
@@ -35,5 +42,11 @@ class CfgWeapons
 	MACRO_NEW_INF_HELMET_ITEM(veteran,Veteran Trooper,Veteran.paa)
 	MACRO_NEW_INF_HELMET_ITEM(Specialist,Specialist,Specialist.paa)
 	MACRO_NEW_INF_HELMET_ITEM(nco,NCO,Nco.paa)
+
+	MACRO_NEW_INF_P2_HELMET_ITEM(recruit,Recruit,Recruit_P2.paa)
+	MACRO_NEW_INF_P2_HELMET_ITEM(trooper,Trooper,Trooper_P2.paa)
+	MACRO_NEW_INF_P2_HELMET_ITEM(veteran,Veteran Trooper,Veteran_P2.paa)
+	MACRO_NEW_INF_P2_HELMET_ITEM(Specialist,Specialist,Specialist_P2.paa)
+	MACRO_NEW_INF_P2_HELMET_ITEM(nco,NCO,Nco_P2.paa)
 
 };
