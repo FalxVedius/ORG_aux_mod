@@ -131,7 +131,7 @@ class CfgVehicles
 			"\lsd_vehicles_heli\laatc\data\standard\wings_co.paa"
 		};
 
-		crew = MACRO_NEW_UNIT(aviation,332nd_flight_cadet);
+		crew = "332nd_aux_infantry_unit_trooper";
 
 		availableforsupporttypes[]=
 		{

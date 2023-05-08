@@ -49,7 +49,7 @@ class CfgAmmo
 		airlock=0;
 		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
 		missileKeepLockedCone = 360;
-		hit=3300;
+		hit=8500;
 		indirectHit = 85;
 		mass=2;
 		indirectHitRange = 8;
@@ -93,7 +93,7 @@ class CfgAmmo
 		airlock=1;
 		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
 		missileKeepLockedCone = 360;
-		hit=6500;
+		hit= 17500;
 		indirectHit = 1000;
 		mass=2;
 		indirectHitRange = 10;
@@ -120,7 +120,7 @@ class CfgAmmo
 
 		weaponLockSystem = "1 + 2 + 4 + 8 + 16";
 		missileKeepLockedCone = 360;
-		hit=10000;
+		hit= 17500;
 		indirectHit = 3000;
 		indirectHitRange = 15;
 	};
@@ -137,7 +137,7 @@ class CfgAmmo
 		explosionEffects = "MK82_Explode";
 		weaponLockSystem = "8";
 		missileKeepLockedCone = 360;
-		hit=10000;
+		hit= 17500;
 		indirectHit = 3000;
 		indirectHitRange = 30;
 	};

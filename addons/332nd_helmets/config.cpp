@@ -19,10 +19,17 @@ class CfgWeapons
 {
     // ---- Helmets ----
 
-    class JLTS_CloneHelmetP2;
+	class JLTS_CloneHelmetP2;
+    class ls_gar_phase1_helmet;
 	class JLTS_CloneHelmetARC;
 
-	class CloneHelmetP2_Base : JLTS_CloneHelmetP2
+	class CloneHelmetScenario_Base : JLTS_CloneHelmetP2
+	{
+		scopeArsenal = 0;
+		class ItemInfo;
+	};
+
+	class CloneHelmetP1_Base : ls_gar_phase1_helmet
 	{
 		scopeArsenal = 0;
 		class ItemInfo;
@@ -35,7 +42,7 @@ class CfgWeapons
 	};
 
 	//Base infantry helmet
-    class MACRO_NEW_HELMET(infantry,base): CloneHelmetP2_Base
+    class MACRO_NEW_HELMET(infantry,base): CloneHelmetP1_Base
     {
         scopeArsenal = 0;
         scope = 0;
@@ -238,7 +245,7 @@ class CfgWeapons
 	}
 
 	//Base Engineer helmet
-	class MACRO_NEW_HELMET(engineer,base): CloneHelmetP2_Base
+	class MACRO_NEW_HELMET(engineer,base): CloneHelmetP1_Base
 	{
 		scopeArsenal = 0;
 		scope = 0;
@@ -260,7 +267,7 @@ class CfgWeapons
 		};
 	}
 
-	class MACRO_NEW_HELMET(scenario,base) : CloneHelmetP2_Base
+	class MACRO_NEW_HELMET(scenario,base) : CloneHelmetScenario_Base
 	{
 		scopeArsenal = 0;
 		scope = 0;

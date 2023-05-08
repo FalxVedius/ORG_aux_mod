@@ -13,9 +13,7 @@ class CfgPatches
 		requiredVersion = 0.1;
 		units[] = {
 
-            MACRO_NEW_HELMET(arc,Arc),
-			MACRO_NEW_HELMET(arc,Marshal),
-			MACRO_NEW_HELMET(arc,Sigma),
+
 
         };
 		weapons[] = {};
@@ -28,8 +26,6 @@ class CfgWeapons
 
 	class MACRO_NEW_HELMET(arc,base);
 
-	MACRO_NEW_ARC_HELMET_ITEM(Arc,Arc,Arc.paa)
-	MACRO_NEW_ARC_HELMET_ITEM(Marshal,Marshal,Marshal.paa)
-	MACRO_NEW_ARC_HELMET_ITEM(Sigma,Sigma,Sigma.paa)
+
 
 }

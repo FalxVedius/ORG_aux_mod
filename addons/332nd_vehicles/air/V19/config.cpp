@@ -89,7 +89,7 @@ class CfgVehicles
 		{
 			EjectionSeatEnabled = 0;										//enable advanced ejection system								
 		};
-		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
+		crew = "332nd_aux_infantry_unit_trooper";
 		airBrake=80;
 		airBrakeFrictionCoef=60;
 

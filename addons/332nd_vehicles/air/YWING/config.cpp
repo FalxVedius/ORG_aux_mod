@@ -21,14 +21,15 @@ class CfgPatches
 class CfgVehicles
 {
 
-	class Plane_Fighter_03_dynamicLoadout_base_F;
+	class NewTurret;
+	class Plane_Fighter_03_base_F;
 
-	class BTL_Base : Plane_Fighter_03_dynamicLoadout_base_F
+	class Plane_Fighter_03_dynamicLoadout_base_F : Plane_Fighter_03_base_F
 	{
 		class Turrets;
 	};
 
-	class 3AS_BTLB_Bomber : BTL_Base
+	class BTL_Base : Plane_Fighter_03_dynamicLoadout_base_F
 	{
 		class Turrets : Turrets
 		{
@@ -39,7 +40,7 @@ class CfgVehicles
 		class ACE_SelfActions;
 	};
 
-	class MACRO_NEW_VEHICLE(air,Y,WING) : 3AS_BTLB_Bomber
+	class MACRO_NEW_VEHICLE(air,Y,WING) : BTL_Base
 	{
 		displayName = "Y-Wing *WIP*";
 		scope = 2;
@@ -63,7 +64,7 @@ class CfgVehicles
 		  "120Rnd_CMFlare_Chaff_Magazine",
 		  "120Rnd_CMFlare_Chaff_Magazine" };
 
-		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
+		crew = "332nd_aux_infantry_unit_trooper";
 
 
 		hiddenselectionstextures[] = 

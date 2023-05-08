@@ -609,6 +609,7 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(40mm_AP): SWLW_ammo_40mm_at
 	{
 		 //effectfly="332nd_aux_effects_RPS4_blue";
+		hit = 1500;
 		 fuseDistance=15;
         soundsetsoniccrack[]=
 		{

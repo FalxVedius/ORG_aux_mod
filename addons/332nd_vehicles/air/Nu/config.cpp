@@ -138,7 +138,7 @@ class CfgVehicles
 		faction = "EdCat_332nd";
         editorSubcategory = "EdSubcat_332nd_HELI";
 
-		crew = "332nd_aux_aviation_unit_332nd_flight_ensign";
+		crew = "332nd_aux_infantry_unit_trooper";
 
 		memoryPointSupply="doplnovani";
 		memoryPointTaskMarker="TaskMarker_1_pos";
