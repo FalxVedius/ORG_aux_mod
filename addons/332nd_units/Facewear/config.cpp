@@ -384,6 +384,21 @@ class CfgGlasses
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 	};
 
+	class 332nd_ARF_Antenna: G_Tactical_Black
+	{
+		displayName = "[332nd] ARF Antenna";
+		model = "\lsd_equipment_bluefor\facewear\gar\arfAntenna\lsd_gar_arfAntenna.p3d";
+		hiddenSelections[]=
+			{
+				"camo1",
+				"camo2"
+			};
+		hiddenSelectionsTextures[] = { "\lsd_equipment_bluefor\facewear\gar\arfantenna\data\helmet_arf_antenna_co.paa" };
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
 	class 332nd_JTAC_Attachment : 332nd_Helmet_Visor
 	{
 		displayName = "[332nd] JTAC Attachment (Blue)";
