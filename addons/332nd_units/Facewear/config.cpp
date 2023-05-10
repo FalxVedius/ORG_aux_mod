@@ -170,6 +170,28 @@ class CfgGlasses
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
 	};
 
+	class 332nd_Headlamp_P1 : G_Tactical_Black
+	{
+		displayName = "[332nd] Headlamp (P1)";
+		model = "lsd_equipment_bluefor\facewear\gar\headlampSingle\lsd_gar_n3rf_this_Fleshlight_p1";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
+	class 332nd_Headlamp_P2 : G_Tactical_Black
+	{
+		displayName = "[332nd] Headlamp (P2)";
+		model = "lsd_equipment_bluefor\facewear\gar\headlampSingle\lsd_gar_n3rf_this_Fleshlight_p2";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		ACE_Overlay = "";
+		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
+		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
+	};
+
 	class 332nd_RangeFinder_P1 : G_Tactical_Black
 	{
 		displayName = "[332nd] Rangefinder (P1)";
@@ -223,7 +245,7 @@ class CfgGlasses
 				"camo1",
 				"camo2"
 			};
-		hiddenSelectionsTextures[] = { "\lsd_equipment_bluefor\nvg\gar\visor\data\swlb_clone_nvg_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
@@ -237,7 +259,7 @@ class CfgGlasses
 				"camo1",
 				"camo2"
 			};
-		hiddenSelectionsTextures[] = { "\lsd_equipment_bluefor\nvg\gar\visor\data\swlb_clone_nvg_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
@@ -330,7 +352,7 @@ class CfgGlasses
 				"camo1",
 				"camo2"
 			};
-		hiddenSelectionsTextures[] = { "\lsd_equipment_bluefor\nvg\gar\visor\data\swlb_clone_nvg_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
@@ -345,7 +367,7 @@ class CfgGlasses
 				"camo1",
 				"camo2"
 			};
-		hiddenSelectionsTextures[] = { "\lsd_equipment_bluefor\nvg\gar\visor\data\swlb_clone_nvg_co.paa" };
+		hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG.paa" };
 		ACE_Overlay = "";
 		ACE_OverlayDirt = "A3\Ui_f\data\igui\rsctitles\HealthTextures\dust_upper_ca.paa";
 		ACE_DustPath = "\z\ace\addons\goggles\textures\fx\dust\%1.paa";
