@@ -87,6 +87,7 @@ class MACRO_NEW_NVG(Headlamp_P2) :lsd_gar_p2SingleHeadlamp_nvg
 
 class MACRO_NEW_NVG(Specialist_Visor_P1) :lsd_gar_p1Standard_nvg
 {
+    scope=1;
     hiddenSelections[] = { "camo1", "camo2" };
     hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG.paa" };
     descriptionShort = "Night Vision Goggles";
@@ -558,6 +559,7 @@ class MACRO_NEW_NVG(Trooper_NVG):JLTS_NVG_droid_chip_1
 
 class MACRO_NEW_NVG(Leadership_Visor_P1):lsd_gar_p1Standard_nvg
 {
+    scope=1;
     hiddenSelections[] = { "camo1" };
     hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG_Leadership.paa" };
     descriptionShort = "Night Vision Goggles";
@@ -587,7 +589,7 @@ class MACRO_NEW_NVG(Leadership_Visor_P1):lsd_gar_p1Standard_nvg
 class MACRO_NEW_NVG(Leadership_Visor_P2):lsd_gar_standard_nvg
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG_Leadership.paa" };
+    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\NVG.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
     displayName = "[332nd] Leadership/Marksman Visor (P2)";
