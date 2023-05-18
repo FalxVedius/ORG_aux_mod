@@ -1,4 +1,4 @@
-#include "../../../../332nd_main/macros/main.hpp" // my config macro lib
+#include "../../../../ORG_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
 	class MACRO_PATCH_NAME(E5S_sounds)

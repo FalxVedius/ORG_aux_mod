@@ -1,4 +1,4 @@
-#include "../../../332nd_main/macros/main.hpp" // my config macro lib
+#include "../../../ORG_main/macros/main.hpp" // my config macro lib
 #define MACRO_TX200_TEXTURES MACRO_VEHICLE_TEXTURES_PATH\land\ADSD
 class CfgPatches
 {

@@ -4,7 +4,7 @@
 	#define MACRO_AUTHOR_PPL "Halligan, Falx, Poseidon, Namenai"
 	#define MACRO_MODNAME ORG_aux
 	#define MACRO_MODNAME_SCRIPT aux_ORG
-	#define MACRO_MOD_VERSION 5.13.21a
+	#define MACRO_MOD_VERSION 5.17.23a
 
 	#define MACRO_HELMET_TEXTURES_PATH \ORG_helmets\_textures
 	#define MACRO_UNIFORM_TEXTURES_PATH \ORG_units\_textures

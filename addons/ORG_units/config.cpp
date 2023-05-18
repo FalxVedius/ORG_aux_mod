@@ -1,4 +1,4 @@
-#include "../332nd_main/macros/main.hpp" // my config macro lib
+#include "../ORG_main/macros/main.hpp" // my config macro lib
 #define mag_2(a) a, a
 #define mag_3(a) a, a, a
 #define mag_4(a) a, a, a, a

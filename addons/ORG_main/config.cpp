@@ -28,20 +28,20 @@ class CfgPatches
 
 class cfgFunctions
 {
-	class 332nd_aux_functions
+	class ORG_aux_functions
 	{
-		tag = "aux_332nd"; //tag
+		tag = "aux_ORG"; //tag
 		class ace_interactions //catagory
 		{
 			class change_hud_color //function name, aux_332nd_fnc_change_hud_color
 			{
-				file = "332nd_main\functions\interactions\hud_color_changer\hud_color_change.sqf"
+				file = "ORG_main\functions\interactions\hud_color_changer\hud_color_change.sqf"
 			}
 		}
 
 		class Keybinds_and_Functions
 		{
-			file = "\332nd_main\functions";
+			file = "\ORG_main\functions";
 			class keybinds
 			{
 				postInit = 1;
@@ -61,7 +61,7 @@ class cfgFunctions
 		{
 			class show_damage_report
 			{
-				file = "332nd_main\functions\actions\show_damage_report.sqf"
+				file = "ORG_main\functions\actions\show_damage_report.sqf"
 			}
 		}
 	}
@@ -72,17 +72,17 @@ class cfgFunctions
 // Non scheduled environments
 class Extended_PreInit_EventHandlers
 {
-	class 332nd_aux_PREINIT
+	class ORG_aux_PREINIT
 	{
-		init="call compile preprocessFileLineNumbers '332nd_main\functions\XEH_preinit.sqf'";
+		init="call compile preprocessFileLineNumbers 'ORG_main\functions\XEH_preinit.sqf'";
 	};
 };
 
 class Extended_PostInit_EventHandlers 
 {
-	class 332nd_aux_POSTINIT
+	class ORG_aux_POSTINIT
 	{
-		init="call compile preprocessFileLineNumbers '332nd_main\functions\XEH_postinit.sqf'";
+		init="call compile preprocessFileLineNumbers 'ORG_main\functions\XEH_postinit.sqf'";
 	};
 };
 
@@ -118,7 +118,7 @@ class RscDisplayLoadMission : RscStandardDisplay
 			y = SafeZoneY;
 			h = SafeZoneH;
 			w = SafeZoneW;
-			text = "\332nd_main\images\332nd_Banner.paa";
+			text = "\ORG_main\images\332nd_Banner.paa";
 		};
 	};
 };
@@ -142,7 +142,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Banner.paa";
+					text = "\ORG_main\images\332nd_Banner.paa";
 				};
 			};
 		};
@@ -162,7 +162,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_1.paa";
+					text = "\ORG_main\images\332nd_Promo_1.paa";
 				};
 			};
 		};
@@ -182,7 +182,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_2.paa";
+					text = "\ORG_main\images\332nd_Promo_2.paa";
 				};
 			};
 		};
@@ -202,7 +202,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_3.paa";
+					text = "\ORG_main\images\332nd_Promo_3.paa";
 				};
 			};
 		};
@@ -222,7 +222,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_4.paa";
+					text = "\ORG_main\images\332nd_Promo_4.paa";
 				};
 			};
 		};
@@ -242,7 +242,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_5.paa";
+					text = "\ORG_main\images\332nd_Promo_5.paa";
 				};
 			};
 		};
@@ -262,7 +262,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_6.paa";
+					text = "\ORG_main\images\332nd_Promo_6.paa";
 				};
 			};
 		};
@@ -282,7 +282,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_7.paa";
+					text = "\ORG_main\images\332nd_Promo_7.paa";
 				};
 			};
 		};
@@ -302,7 +302,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_8.paa";
+					text = "\ORG_main\images\332nd_Promo_8.paa";
 				};
 			};
 		};
@@ -322,7 +322,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_9.paa";
+					text = "\ORG_main\images\332nd_Promo_9.paa";
 				};
 			};
 		};
@@ -342,7 +342,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_10_Tally.paa";
+					text = "\ORG_main\images\332nd_Promo_10_Tally.paa";
 				};
 			};
 		};
@@ -362,7 +362,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_11.paa";
+					text = "\ORG_main\images\332nd_Promo_11.paa";
 				};
 			};
 		};
@@ -382,7 +382,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_12.paa";
+					text = "\ORG_main\images\332nd_Promo_12.paa";
 				};
 			};
 		};
@@ -402,7 +402,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_13.paa";
+					text = "\ORG_main\images\332nd_Promo_13.paa";
 				};
 			};
 		};
@@ -422,7 +422,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_14.paa";
+					text = "\ORG_main\images\332nd_Promo_14.paa";
 				};
 			};
 		};
@@ -442,7 +442,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_15.paa";
+					text = "\ORG_main\images\332nd_Promo_15.paa";
 				};
 			};
 		};
@@ -462,7 +462,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_16.paa";
+					text = "\ORG_main\images\332nd_Promo_16.paa";
 				};
 			};
 		};
@@ -482,7 +482,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_17.paa";
+					text = "\ORG_main\images\332nd_Promo_17.paa";
 				};
 			};
 		};
@@ -502,7 +502,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_18.paa";
+					text = "\ORG_main\images\332nd_Promo_18.paa";
 				};
 			};
 		};
@@ -522,7 +522,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_19.paa";
+					text = "\ORG_main\images\332nd_Promo_19.paa";
 				};
 			};
 		};
@@ -542,7 +542,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_20.paa";
+					text = "\ORG_main\images\332nd_Promo_20.paa";
 				};
 			};
 		};
@@ -562,7 +562,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_21.paa";
+					text = "\ORG_main\images\332nd_Promo_21.paa";
 				};
 			};
 		};
@@ -582,7 +582,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_22.paa";
+					text = "\ORG_main\images\332nd_Promo_22.paa";
 				};
 			};
 		};
@@ -602,7 +602,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_23.paa";
+					text = "\ORG_main\images\332nd_Promo_23.paa";
 				};
 			};
 		};
@@ -622,7 +622,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_24.paa";
+					text = "\ORG_main\images\332nd_Promo_24.paa";
 				};
 			};
 		};
@@ -642,7 +642,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_25.paa";
+					text = "\ORG_main\images\332nd_Promo_25.paa";
 				};
 			};
 		};
@@ -662,7 +662,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_26.paa";
+					text = "\ORG_main\images\332nd_Promo_26.paa";
 				};
 			};
 		};
@@ -682,7 +682,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_27.paa";
+					text = "\ORG_main\images\332nd_Promo_27.paa";
 				};
 			};
 		};
@@ -702,7 +702,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_28.paa";
+					text = "\ORG_main\images\332nd_Promo_28.paa";
 				};
 			};
 		};
@@ -722,7 +722,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_29.paa";
+					text = "\ORG_main\images\332nd_Promo_29.paa";
 				};
 			};
 		};
@@ -742,7 +742,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_30.paa";
+					text = "\ORG_main\images\332nd_Promo_30.paa";
 				};
 			};
 		};
@@ -762,7 +762,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_31.paa";
+					text = "\ORG_main\images\332nd_Promo_31.paa";
 				};
 			};
 		};
@@ -782,7 +782,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_32.paa";
+					text = "\ORG_main\images\332nd_Promo_32.paa";
 				};
 			};
 		};
@@ -802,7 +802,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_33.paa";
+					text = "\ORG_main\images\332nd_Promo_33.paa";
 				};
 			};
 		};
@@ -822,7 +822,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_34.paa";
+					text = "\ORG_main\images\332nd_Promo_34.paa";
 				};
 			};
 		};
@@ -842,7 +842,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_35.paa";
+					text = "\ORG_main\images\332nd_Promo_35.paa";
 				};
 			};
 		};
@@ -862,7 +862,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_36.paa";
+					text = "\ORG_main\images\332nd_Promo_36.paa";
 				};
 			};
 		};
@@ -882,7 +882,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_37.paa";
+					text = "\ORG_main\images\332nd_Promo_37.paa";
 				};
 			};
 		};
@@ -902,7 +902,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_38.paa";
+					text = "\ORG_main\images\332nd_Promo_38.paa";
 				};
 			};
 		};
@@ -922,7 +922,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_39.paa";
+					text = "\ORG_main\images\332nd_Promo_39.paa";
 				};
 			};
 		};
@@ -942,7 +942,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_41.paa";
+					text = "\ORG_main\images\332nd_Promo_41.paa";
 				};
 			};
 		};
@@ -962,7 +962,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_41.paa";
+					text = "\ORG_main\images\332nd_Promo_41.paa";
 				};
 			};
 		};
@@ -982,7 +982,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_42.paa";
+					text = "\ORG_main\images\332nd_Promo_42.paa";
 				};
 			};
 		};
@@ -1002,7 +1002,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_43.paa";
+					text = "\ORG_main\images\332nd_Promo_43.paa";
 				};
 			};
 		};
@@ -1022,7 +1022,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_44.paa";
+					text = "\ORG_main\images\332nd_Promo_44.paa";
 				};
 			};
 		};
@@ -1042,7 +1042,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_45.paa";
+					text = "\ORG_main\images\332nd_Promo_45.paa";
 				};
 			};
 		};
@@ -1062,7 +1062,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_46.paa";
+					text = "\ORG_main\images\332nd_Promo_46.paa";
 				};
 			};
 		};
@@ -1082,7 +1082,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_47.paa";
+					text = "\ORG_main\images\332nd_Promo_47.paa";
 				};
 			};
 		};
@@ -1102,7 +1102,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_48.paa";
+					text = "\ORG_main\images\332nd_Promo_48.paa";
 				};
 			};
 		};
@@ -1122,7 +1122,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_49.paa";
+					text = "\ORG_main\images\332nd_Promo_49.paa";
 				};
 			};
 		};
@@ -1142,7 +1142,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_50.paa";
+					text = "\ORG_main\images\332nd_Promo_50.paa";
 				};
 			};
 		};
@@ -1162,7 +1162,7 @@ class RscDisplayLoading
 					y = SafeZoneY;
 					h = SafeZoneH;
 					w = SafeZoneW;
-					text = "\332nd_main\images\332nd_Promo_51.paa";
+					text = "\ORG_main\images\332nd_Promo_51.paa";
 				};
 			};
 		};
@@ -1184,7 +1184,7 @@ class RscDisplayLoadCustom : RscStandardDisplay
 			y = SafeZoneY;
 			h = SafeZoneH;
 			w = SafeZoneW;
-			text = "\332nd_main\images\332nd_Banner.paa";
+			text = "\ORG_main\images\332nd_Banner.paa";
 		};
 	};
 };
@@ -1203,7 +1203,7 @@ class RscDisplayClientWait : RscDisplayMPPlayers
 		y = SafeZoneY;
 		h = SafeZoneH;
 		w = SafeZoneW;
-		text = "\332nd_main\images\332nd_Banner.paa";
+		text = "\ORG_main\images\332nd_Banner.paa";
 	};
 };
 
@@ -1221,7 +1221,7 @@ class RscDisplayClient : RscStandardDisplay
 			y = SafeZoneY;
 			h = SafeZoneH;
 			w = SafeZoneW;
-			text = "\332nd_main\images\332nd_Banner.paa";
+			text = "\ORG_main\images\332nd_Banner.paa";
 		};
 	};
 };
