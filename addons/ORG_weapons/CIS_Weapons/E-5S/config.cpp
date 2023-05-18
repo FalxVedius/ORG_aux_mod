@@ -43,10 +43,10 @@ class CfgAmmo
 		suppressionRadiusHit = 14;
 		explosionSoundEffect = "DefaultExplosion";
 		explosioneffects = "ExploAmmoExplosion";
-		effectfly = "332nd_mainRound_CIS_effects";
+		effectfly = "ORG_mainRound_CIS_effects";
 		soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		class HitEffects
 		{
@@ -119,7 +119,7 @@ class CfgMagazines
 		initspeed = 1200;
 		displayName = "E5S Magazine";
 		displayNameShort = "E5S rnd";
-		descriptionShort = "332nd E5S Round";
+		descriptionShort = "ORG E5S Round";
 		ammo =MACRO_NEW_AMMO(20mm_E5S);
 		tracersEvery = 1;
 	};
@@ -161,7 +161,7 @@ class CfgWeapons
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_Sniper_Tail_SoundSet","332_E5S_Shot_SoundSet" };
+				soundSetShot[] = { "ORG_Sniper_Tail_SoundSet","ORG_E5S_Shot_SoundSet" };
 			};
 			reloadTime = 1;
 			dispersion = 0.001;
@@ -292,7 +292,7 @@ class CfgWeapons
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_Sniper_Tail_SoundSet","332_E5S_Shot_SoundSet" };
+				soundSetShot[] = { "ORG_Sniper_Tail_SoundSet","ORG_E5S_Shot_SoundSet" };
 			};
 			reloadTime = 1;
 			dispersion = 0.001;

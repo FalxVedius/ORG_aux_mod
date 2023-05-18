@@ -40,7 +40,7 @@ class CfgMagazines
 		initspeed = 1100;
 		displayName = "E5X Magazine";
 		displayNameShort = "E5X rnd";
-		descriptionShort = "332nd E5X Round";
+		descriptionShort = "ORG E5X Round";
 		ammo = MACRO_NEW_AMMO(762_Red);
 		tracersEvery = 1;
 	};
@@ -84,7 +84,7 @@ class CfgWeapons
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_DC15a_Tail_SoundSet","332_E5X_Shot_SoundSet" };
+				soundSetShot[] = { "ORG_DC15a_Tail_SoundSet","ORG_E5X_Shot_SoundSet" };
 			};
 			reloadTime = 0.1;
 			dispersion = 0.0002;

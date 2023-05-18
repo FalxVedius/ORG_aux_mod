@@ -30,10 +30,10 @@ class CfgAmmo
 		suppressionRadiusHit = 14;
 		explosionSoundEffect = "DefaultExplosion";
 		model = "kobra\442_turrets\Droideka\Doublelaserred.p3d";
-		effectfly = "332nd_mainRound_CIS_effects";
+		effectfly = "ORG_mainRound_CIS_effects";
 		soundsetsoniccrack[] =
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 
 		class CamShakeExplode
@@ -113,7 +113,7 @@ class cfgWeapons
 			sounds[] = { "StandardSound" };
 			class StandardSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_Sniper_Tail_SoundSet","332_B2_Shot_SoundSet" };
+				soundSetShot[] = { "ORG_Sniper_Tail_SoundSet","ORG_B2_Shot_SoundSet" };
 			};
 			displayname="FullAuto";
 			reloadTime=0.25;

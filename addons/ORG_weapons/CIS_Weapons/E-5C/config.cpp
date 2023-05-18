@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(E5c)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -60,7 +60,7 @@ class CfgWeapons
 		//JLTS_hasEMPProtection=0;
 		//JLTS_friedItem="JLTS_E5C_fried";
 		//JLTS_repairTime=40;
-		author="332nd Aux Team";
+		author="ORG Aux Team";
 		scope=2;
 		baseWeapon="";
 		displayName="CIS E5c";
@@ -110,7 +110,7 @@ class CfgWeapons
 		    sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15a_Tail_SoundSet","332_E5c_Shot_SoundSet"};
+				soundSetShot[] = {"ORG_DC15a_Tail_SoundSet","ORG_E5c_Shot_SoundSet"};
 			};
 			reloadTime=0.055;
 			dispersion=0.002;
@@ -227,9 +227,9 @@ class CfgAmmo
 	{
 		soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
-		effectfly = "332nd_mainRound_CIS_effects";
+		effectfly = "ORG_mainRound_CIS_effects";
 		class HitEffects
 		{
 			Hit_Foliage_green = "3AS_ImpactPlasma";
