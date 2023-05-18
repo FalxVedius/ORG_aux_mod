@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15c)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -49,7 +49,7 @@ class cfgWeapons
 
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
-	class 332nd_Acog_DC15C : ItemCore
+	class ORG_Acog_DC15C : ItemCore
 	{
 		scope = 2;
 		displayName = "ACOG Optic";
@@ -118,27 +118,27 @@ class cfgWeapons
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_15c";
 		recoilProne="recoil_15c";
-		cursor="332_DOT";
-        cursoraim="332_DC15C";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DC15C";
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15c_Medium,45)
 		};
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Burst"};
-		class 332Stun: JLTS_stun_muzzle
+		class ORGStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332Stun"
+			"ORGStun"
 		};
 		class Burst: Single
 		{
@@ -147,7 +147,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15c_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15c_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			textureType = "burst";
 			multiplier = 1;
@@ -170,7 +170,7 @@ class cfgWeapons
 			class CowsSlot
 			{
 				access = 1;
-				compatibleItems[] = { "332nd_Acog_DC15C","3AS_optic_reflex_DC15C" };
+				compatibleItems[] = { "ORG_Acog_DC15C","3AS_optic_reflex_DC15C" };
 				displayName = "Optics Slot";
 				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
 				iconPinpoint = "Bottom";
@@ -216,9 +216,9 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15c UGL [Grenadier])
 		canShootInWater=1;
 		ACE_Overheating_mrbs=300000;
-		cursor="332_DOT";
-        cursoraim="332_DC15C";
-		muzzles[] = {"this","332UGL"};
+		cursor="ORG_DOT";
+        cursoraim="ORG_DC15C";
+		muzzles[] = {"this","ORGUGL"};
 		handAnim[]=
 		{
 			"OFP2_ManSkeleton",
@@ -227,15 +227,15 @@ class cfgWeapons
 		weaponInfoType="RscWeaponZeroing";
 		model = "3AS\3AS_Weapons\DC15C\3AS_DC15C_GL.p3d";
 
-		class 332UGL: UGL_F
+		class ORGUGL: UGL_F
 		{
 			displayName="UGL";
 			descriptionShort="UGL";
 			reloadTime=1;
-			cursor="332_DOT";
+			cursor="ORG_DOT";
 			modes[] = {"Single"};
 			recoil="recoil_15a";
-			cursorAim="332_UGL";
+			cursorAim="ORG_UGL";
 			baseweapon="";
 			showtoplayer=1;
 			discreteDistance[]={25,50,100,200,300,400};
@@ -244,7 +244,7 @@ class cfgWeapons
 		    {
 				class StandardSound: BaseSoundModeType
 				{
-					soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
+					soundSetShot[] = {"ORG_UGL_Shot_SoundSet","ORG_Rocket_Tail_SoundSet"};
 				};
 				sounds[]=
 				{
@@ -275,20 +275,20 @@ class cfgWeapons
 				"ACE_HuntIR_M203",
                 MACRO_NEW_MAG(DC_15_UGL_AP,2),
                 MACRO_NEW_MAG(DC_15_UGL_HE,4),
-				MACRO_NEW_MAG(332_GL_SMOKE_WHITE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_RED,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_GREEN,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_YELLOW,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_PURPLE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_BLUE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_ORANGE,1),
-				MACRO_NEW_MAG(332_GL3_SMOKE_WHITE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_RED,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_GREEN,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_YELLOW,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_PURPLE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_BLUE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_ORANGE,3),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_WHITE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_RED,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_GREEN,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_YELLOW,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_PURPLE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_BLUE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_ORANGE,1),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_WHITE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_RED,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_GREEN,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_YELLOW,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_PURPLE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_BLUE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_ORANGE,3),
 				};
 			useModelOptics=0;
 			useExternalOptic=0;
@@ -319,7 +319,7 @@ class CfgMagazines
 		initspeed=1600;
 		displayName=MACRO_AMMO_DISPLAYNAME(15C Medium,45)
 		displayNameShort="Med Power rnd";
-		descriptionShort="332nd Medium Power Round";
+		descriptionShort="ORG Medium Power Round";
 		ammo=MACRO_NEW_AMMO(762_blue);
 		tracersEvery=1;
 	};

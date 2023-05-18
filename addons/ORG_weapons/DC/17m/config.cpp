@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_17m)
 	{
-		author = "332nd_aux_team";
+		author = "ORG_aux_team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -64,7 +64,7 @@ class cfgWeapons
 			class MuzzleSlot : MuzzleSlot
 			{
 				// class names with items supported by weapon
-				compatibleItems[] = { "332nd_DC_17m_Rifle_Muz", "332nd_DC_17m_Marks_Muz", "332nd_DC_17m_Grend_Muz" }; // moved to each weapon
+				compatibleItems[] = { "ORG_DC_17m_Rifle_Muz", "ORG_DC_17m_Marks_Muz", "ORG_DC_17m_Grend_Muz" }; // moved to each weapon
 			};
 		};
 
@@ -72,25 +72,25 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 17M [Rifleman])
 
 		canShootInWater=1;
-		baseWeapon="332nd_aux_weapon_DC_17m";
+		baseWeapon="ORG_aux_weapon_DC_17m";
 		recoil="DC_17m";
 		recoilprone="DC_17m";
-		cursor="332_DOT";
-        cursoraim="332_DC15S";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DC15S";
 		modes[]=  
 		{
 			"FullAuto",
 			"Single"
 		};
-		//class 332Stun: JLTS_stun_muzzle
+		//class ORGStun: JLTS_stun_muzzle
 		//{
 	 //      magazines[]=
 		//   {
 		//  	MACRO_NEW_MAG(Stun,10)
 		//   };
 		//   magazineWell[]={};
-		//   cursoraim="332_Stun";
-		//   cursor="332_DOT"
+		//   cursoraim="ORG_Stun";
+		//   cursor="ORG_DOT"
 		//};
 		muzzles[]=
 		{
@@ -103,15 +103,15 @@ class cfgWeapons
 			sounds[] = {"StandardSound","SilencedSound","GrenadeSound" };
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC17m_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC17m_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			class SilencedSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_DC17mSniper_Shot_SoundSet","332_Sniper_Tail_SoundSet" };
+				soundSetShot[] = { "ORG_DC17mSniper_Shot_SoundSet","ORG_Sniper_Tail_SoundSet" };
 			};
 			class GrenadeSound : BaseSoundModeType
 			{
-				soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_UGL_Shot_SoundSet","ORG_Rocket_Tail_SoundSet"};
 			};
 			displayname="FullAuto";
 			reloadTime = 0.1;
@@ -130,15 +130,15 @@ class cfgWeapons
 			sounds[] = {"StandardSound","SilencedSound","GrenadeSound" };
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC17m_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC17m_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			class SilencedSound : BaseSoundModeType
 			{
-				soundSetShot[] = { "332_DC17mSniper_Shot_SoundSet","332_Sniper_Tail_SoundSet" };
+				soundSetShot[] = { "ORG_DC17mSniper_Shot_SoundSet","ORG_Sniper_Tail_SoundSet" };
 			};
 			class GrenadeSound : BaseSoundModeType
 			{
-				soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_UGL_Shot_SoundSet","ORG_Rocket_Tail_SoundSet"};
 			};
 			reloadTime = 0.2;
 			displayname="SlowAuto";
@@ -181,11 +181,11 @@ class cfgWeapons
 
 	class muzzle_snds_338_black;
 	class InventoryMuzzleItem_Base_F;
-	class 332nd_DC_17m_Rifle_Muz : muzzle_snds_338_black
+	class ORG_DC_17m_Rifle_Muz : muzzle_snds_338_black
 	{
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "332nd Rifle Muzzle";
+		displayName = "ORG Rifle Muzzle";
 		picture = "\a3\Weapons_F_Mark\Data\UI\icon_muzzle_snds_338_black_ca.paa";
 		model = "";
 
@@ -230,11 +230,11 @@ class cfgWeapons
 		};
 	};
 
-	class 332nd_DC_17m_Marks_Muz : muzzle_snds_338_black
+	class ORG_DC_17m_Marks_Muz : muzzle_snds_338_black
 	{
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "332nd Marksman Muzzle";
+		displayName = "ORG Marksman Muzzle";
 		picture = "\a3\Weapons_F_Mark\Data\UI\icon_muzzle_snds_338_black_ca.paa";
 		model = "";
 
@@ -279,11 +279,11 @@ class cfgWeapons
 		};
 	};
 
-	class 332nd_DC_17m_Grend_Muz : muzzle_snds_338_black
+	class ORG_DC_17m_Grend_Muz : muzzle_snds_338_black
 	{
 		scope = 2;
 		scopeArsenal = 2;
-		displayName = "332nd Grenade Muzzle";
+		displayName = "ORG Grenade Muzzle";
 		picture = "\a3\Weapons_F_Mark\Data\UI\icon_muzzle_snds_338_black_ca.paa";
 		model = "";
 
@@ -350,7 +350,7 @@ class CfgAmmo
 		model = "\A3\weapons_f\launchers\nlaw\nlaw_rocket";
 		maxControlRange = 0;
 		maxSpeed = 70;
-		effectfly="332nd_aux_effects_missile_Rocket_DC17mGP";
+		effectfly="ORG_aux_effects_missile_Rocket_DC17mGP";
 		manueuvrability = 0;
 		coefGravity = 0;
 		flaresize = 1;
@@ -359,7 +359,7 @@ class CfgAmmo
 		typicalSpeed = 70;
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			"ORG_weapons\sounds\weapons\flight\rocketengine1.wss",
 			2,
 			1.5,
 			200
@@ -367,7 +367,7 @@ class CfgAmmo
 	};
 	class MACRO_NEW_AMMO(762_Blue_DC17mSniper): MACRO_NEW_AMMO(762_blue)
 	{
-		//effectfly="332nd_aux_effects_blue_bullet";
+		//effectfly="ORG_aux_effects_blue_bullet";
 		class CamShakePlayerFire
 		{
 		power = 5;
@@ -390,7 +390,7 @@ class CfgMagazines
 		initspeed = 700;
 		displayName = MACRO_AMMO_DISPLAYNAME(17m Rifle Mag,42)
 		displayNameShort = "Med Power 60rnd";
-		descriptionShort = "332nd Medium Power Round";
+		descriptionShort = "ORG Medium Power Round";
 		ammo = MACRO_NEW_AMMO(762_blue);
 		tracersEvery = 1;
 	};
@@ -402,7 +402,7 @@ class CfgMagazines
 		initspeed = 2200;
 		displayName = MACRO_AMMO_DISPLAYNAME(17m Carbine Mag,10)
 		displayNameShort = "Med Power 10rnd";
-		descriptionShort = "332nd Medium Power Round";
+		descriptionShort = "ORG Medium Power Round";
 		ammo = MACRO_NEW_AMMO(762_Blue_DC17mSniper);
 		tracersEvery = 1;
 	};
@@ -414,7 +414,7 @@ class CfgMagazines
 		initspeed = 70;
 		displayName = MACRO_AMMO_DISPLAYNAME(17m GP Rocket,1)
 		displayNameShort = "High Explosive 4rnd";
-		descriptionShort = "332nd HE Round";
+		descriptionShort = "ORG HE Round";
 		ammo = MACRO_NEW_AMMO(DM17GP);
 		tracersEvery = 1;
 	};

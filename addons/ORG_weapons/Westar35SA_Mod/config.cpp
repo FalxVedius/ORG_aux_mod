@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Westar_Series)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -37,27 +37,27 @@ class cfgWeapons
 		recoil="recoil_spar";
 		recoilprone="recoil_spar";
 		canShootInWater=1;
-		cursoraim="332_DC15S";
-		cursor="332_DOT";
+		cursoraim="ORG_DC15S";
+		cursor="ORG_DOT";
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
         linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
 
 		modes[] = {"FullAuto","close","short","medium"};
 		
-		class 332PistolStun: JLTS_stun_muzzle
+		class ORGPistolStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332PistolStun"
+			"ORGPistolStun"
 		};
         compatibleItems[]=
         {
@@ -181,7 +181,7 @@ class CfgMagazines
 		initspeed=1750;
 		displayName=MACRO_AMMO_DISPLAYNAME(35SA Low,45)
 		displayNameShort="low Power 30rnd";
-		descriptionShort="332nd Low Power Round";
+		descriptionShort="ORG Low Power Round";
 		ammo=MACRO_NEW_AMMO(65_Blue);
 		tracersEvery=1;
 	};

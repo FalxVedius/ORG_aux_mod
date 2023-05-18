@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Snipers)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -54,8 +54,8 @@ class cfgWeapons
 		canShootInWater=1;
 		baseweapon="";
 		handling="2.6";
-		cursor="332_DOT";
-        cursoraim="332_DMR";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DMR";
 		modes[]=  {
 			"Single"
 		};
@@ -115,20 +115,20 @@ class cfgWeapons
 			};
 		};
 
-		class 332Stun: JLTS_stun_muzzle
+		class ORGStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332Stun"
+			"ORGStun"
 		};
 
 		magazines[]=
@@ -144,7 +144,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DW32_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DW32_Shot_SoundSet","ORG_Sniper_Tail_SoundSet"};
 			};
 			reloadTime=0.25;
 			dispersion=0.000000000005;
@@ -187,7 +187,7 @@ class CfgMagazines
 		initspeed=2000;
 		displayName=MACRO_AMMO_DISPLAYNAME(Conc-Med,20)
 		displayNameShort="Conc-Med Power 20rnd";
-		descriptionShort="332nd Concentrated-Medium Power Round";
+		descriptionShort="ORG Concentrated-Medium Power Round";
 		ammo=MACRO_NEW_AMMO(338_Blue);
 		tracersEvery=1;
 	};
@@ -203,7 +203,7 @@ class CfgMagazines
 		initspeed=2000;
 		displayName=MACRO_AMMO_DISPLAYNAME(Conc-Med Tracer,20)
 		displayNameShort="Conc-Med Power Tracer 20rnd";
-		descriptionShort="332nd Concentrated-Medium Power Tracer Round";
+		descriptionShort="ORG Concentrated-Medium Power Tracer Round";
 		ammo=MACRO_NEW_AMMO(338_Blue_T);
 		tracersEvery=1;
 	};
@@ -217,9 +217,9 @@ class CfgMagazines
 		count=5;
 		mass=15
 		initspeed=2100;
-		displayName="332nd HighHv 5rnd";
+		displayName="ORG HighHv 5rnd";
 		displayName=MACRO_AMMO_DISPLAYNAME(High Power,5)
-		descriptionShort="332nd High Power-High Velocity Round";
+		descriptionShort="ORG High Power-High Velocity Round";
 		ammo="ls_ammo_127x108_green";
 		tracersEvery=1;
 	};
@@ -233,9 +233,9 @@ class CfgMagazines
 		count=5;
 		mass=15
 		initspeed=2100;
-		displayName="332nd HighHv Tracer 5rnd";
+		displayName="ORG HighHv Tracer 5rnd";
 		displayName=MACRO_AMMO_DISPLAYNAME(High Power Tracer,5)
-		descriptionShort="332nd High Power-High Velocity Tracer Round";
+		descriptionShort="ORG High Power-High Velocity Tracer Round";
 		ammo=MACRO_NEW_AMMO(127x108_green_T);
 		tracersEvery=1;
 	};

@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Blaster_Flyby_sounds)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -22,97 +22,97 @@ class CfgPatches
 class cfgSoundShaders 
 {
 	//###################################### SHOTS ######################################
-	class 332nd_blaster_flyby_soundshader
+	class ORG_blaster_flyby_soundshader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby1.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby1.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby2.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby2.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby3.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby3.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby4.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby4.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby5.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby5.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby6.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby6.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby7.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby7.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby8.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby8.wss",
 				1
 			},
 			
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby9.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby9.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby10.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby10.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby11.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby11.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby12.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby12.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby13.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby13.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby14.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby14.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby15.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby15.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby16.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby16.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby17.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby17.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby18.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby18.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby19.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby19.wss",
 				1
 			},
 			{
-				"332nd_weapons\sounds\weapons\flybys\blaster\Flyby20.wss",
+				"ORG_weapons\sounds\weapons\flybys\blaster\Flyby20.wss",
 				1
 			}
 			
@@ -124,28 +124,28 @@ class cfgSoundShaders
 
 class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cfgSoundSets|relevant wiki page]]
 {
-		class 332nd_blaster_flyby_soundset
+		class ORG_blaster_flyby_soundset
 	{
 		soundshaders[]=
 		{
-			"332nd_blaster_flyby_soundshader"
+			"ORG_blaster_flyby_soundshader"
 		};
 		volumefactor=1;
 		soundshaderslimit=2;
 		volumerandomizer=1;
-		volumecurve="332nd_basic_vl_sin";
+		volumecurve="ORG_basic_vl_sin";
 		spatial=1;
 		doppler=0;
 		loop=0;
-		sound3dprocessingtype="332nd_snaps_3dprocessor";
-		distancefilter="332_weapons_lowpass_filter";
+		sound3dprocessingtype="ORG_snaps_3dprocessor";
+		distancefilter="ORG_weapons_lowpass_filter";
 		frequencyrandomizer=1;
 	};
 };
 
 class cfgsound3dprocessors
 {
-    class 332nd_snaps_3dprocessor
+    class ORG_snaps_3dprocessor
 	{
 		type="panner";
 		innerrange=0;
@@ -156,7 +156,7 @@ class cfgsound3dprocessors
 
 class cfgsoundcurves
 {
-    class 332nd_basic_vl_sin
+    class ORG_basic_vl_sin
 	{
 		points[]=
 		{

@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15k)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -39,28 +39,28 @@ class cfgWeapons
         ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-		cursor="332_DOT";
+		cursor="ORG_DOT";
 		baseweapon= (DC_15k)
-        cursoraim="332_DC17";
+        cursoraim="ORG_DC17";
 		magazines[] = {MACRO_NEW_MAG(DC_15k,15)};
 
 		discreteDistanceInitIndex = 0;
 
 
-        class 332PistolStun: JLTS_stun_muzzle
+        class ORGPistolStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332PistolStun"
+			"ORGPistolStun"
 		};
 		linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
         compatibleItems[]=
@@ -101,7 +101,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_Suppresed_DC15k_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_Suppresed_DC15k_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.10;
 			displayname="SemiAuto";
@@ -140,7 +140,7 @@ class CfgMagazines
 		initspeed=800;
 		displayName=MACRO_AMMO_DISPLAYNAME(15k ,15)
 		displayNameShort="Med Power 15rnd";
-		descriptionShort="332nd Medium Power Round";
+		descriptionShort="ORG Medium Power Round";
 		ammo=MACRO_NEW_AMMO(Medium_15k);
 		tracersEvery=1;
 	};
@@ -153,13 +153,13 @@ class CfgAmmo
 	{
 		soundsetsoniccrack[] =
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		audibleFire = 2;
 		ACE_bulletMass = 3;
 		visibleFireTime = 3;
 		visibleFire = 1;
 		cartridge = "";
-		effectfly = "332nd_mainRound_effects";
+		effectfly = "ORG_mainRound_effects";
 	};
 };

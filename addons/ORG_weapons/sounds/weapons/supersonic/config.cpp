@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Supersonic_sounds)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -22,12 +22,12 @@ class CfgPatches
 class cfgSoundShaders 
 {
 	//###################################### SHOTS ######################################
-	class 332nd_Supersonic_soundshader
+	class ORG_Supersonic_soundshader
 	{
 		samples[]=
 		{
 			{
-				"332nd_weapons\sounds\weapons\supersonic\NoSound.wss",
+				"ORG_weapons\sounds\weapons\supersonic\NoSound.wss",
 				1
 			},
 		};
@@ -38,11 +38,11 @@ class cfgSoundShaders
 
 class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cfgSoundSets|relevant wiki page]]
 {
-		class 332nd_Supersonic_soundset
+		class ORG_Supersonic_soundset
 	{
 		soundshaders[]=
 		{
-			"332nd_Supersonic_soundshader"
+			"ORG_Supersonic_soundshader"
 		};
 		volumefactor=0;
 	};

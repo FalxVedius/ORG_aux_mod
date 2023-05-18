@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class  MACRO_PATCH_NAME(DC_15b)
 	{
-	    author = "332nd Aux Team";
+	    author = "ORG Aux Team";
 		addonRootClass=MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -20,9 +20,9 @@ class CfgPatches
 		{
 			MACRO_NEW_WEAPON(DC_15b),
 			"3AS_Optic_Red_DC15A",
-			"332nd_DC15b_Scope",
-			"332nd_DC15b_muzzle",
-			"332nd_bipod"
+			"ORG_DC15b_Scope",
+			"ORG_DC15b_muzzle",
+			"ORG_bipod"
 		};
 	};
 };
@@ -52,20 +52,20 @@ class CfgWeapons
 		{
 			MACRO_NEW_MAG(DC_15b,60)
 		};
-		class 332Stun: JLTS_stun_muzzle
+		class ORGStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332Stun"
+			"ORGStun"
 		};
 
 		handAnim[] = { "OFP2_ManSkeleton","\A3\Weapons_F_Mark\Machineguns\MMG_02\Data\Anim\mmg_02.rtm" };
@@ -80,8 +80,8 @@ class CfgWeapons
 		reloadMagazineSound[] = { "A3\Sounds_F_Exp\arsenal\weapons\Rifles\SPAR02\SPAR02_reload",1,1,10 };
 
 		magazineReloadSwitchPhase=0.40000001;
-		cursor="332_DOT";
-        cursoraim="332_DC15A";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DC15A";
 		discreteDistanceInitIndex=0;
 		recoil = "recoil_spar";
 		recoilprone="recoil_spar";
@@ -146,7 +146,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					"332nd_acog_dc15l",
+					"ORG_acog_dc15l",
 					"3as_optic_reflex_dc15c"
 				};
 			};
@@ -193,7 +193,7 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15b_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15b_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 		};
 	};
@@ -251,17 +251,17 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
-		 effectfly = "332nd_mainRound_effects";
+		 effectfly = "ORG_mainRound_effects";
 		 cartridge = "";
         soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 	};
 	class MACRO_NEW_AMMO(338_Blue_T): ls_ammo_338_blue
 	{
 	     hit = 20;
-		 effectfly="332nd_aux_effects_blue_bullet";
+		 effectfly="ORG_aux_effects_blue_bullet";
 		 cartridge = "";
 		 class HitEffects
 		{
@@ -291,7 +291,7 @@ class CfgAmmo
 		};
         soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 	};
 	

@@ -1,9 +1,9 @@
 #include "../../ORG_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class 332_BX42
+	class ORG_BX42
 	{
-		author="332nd Aux team";
+		author="ORG Aux team";
 		requiredAddons[]=
 		{
 			"A3_data_F",
@@ -13,24 +13,24 @@ class CfgPatches
 		};
 		weapons[]=
 		{
-			"332_X42"
+			"ORG_X42"
 		};
 		units[]={};
 		magazines[]=
 		{
-			"332_FlamerFuel"
+			"ORG_FlamerFuel"
 		};
 		ammo[]=
 		{
-			"332_FlameRound",
-			"332_FlameRound_sub"
+			"ORG_FlameRound",
+			"ORG_FlameRound_sub"
 		};
 	};
 };
 class CfgCloudlets
 {
 	class ExploAmmoSmoke;
-	class 332_flamesExplosion: ExploAmmoSmoke
+	class ORG_flamesExplosion: ExploAmmoSmoke
 	{
 		interval="0.015";
 		circleRadius=0.1;
@@ -116,7 +116,7 @@ class Flame_Explosion
 class CfgAmmo
 {
 	class BulletBase;
-	class 332_FlameRound: BulletBase
+	class ORG_FlameRound: BulletBase
 	{
 		submunitionAmmo="FlameRound_sub";
 		submunitionConeType[]=
@@ -149,10 +149,10 @@ class CfgAmmo
 		tracerEndTime=0.1;
 		craterEffects="";
 		effectFly="SmallFire";
-		explosionEffects="332_flamesExplosion";
+		explosionEffects="ORG_flamesExplosion";
 		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
 	};
-	class 332_FlameRound_sub: BulletBase
+	class ORG_FlameRound_sub: BulletBase
 	{
 		hit=5;
 		indirectHit=3;
@@ -177,17 +177,17 @@ class CfgAmmo
 		tracerEndTime=0.1;
 		craterEffects="";
 		effectFly="SmallFire";
-		explosionEffects="332_flamesExplosion";
+		explosionEffects="ORG_flamesExplosion";
 	};
 };
 class CfgMagazines
 {
 	class CA_Magazine;
-	class 332_FlamerFuel: CA_Magazine
+	class ORG_FlamerFuel: CA_Magazine
 	{
 		scope=2;
 		displayName="Liquid Plasma Fuel";
-		ammo="332_FlameRound";
+		ammo="ORG_FlameRound";
 		count=45;
 		initSpeed=25;
 		tracersEvery=1;
@@ -210,12 +210,12 @@ class CfgWeapons
 		class WeaponSlotsInfo;
 		class GunParticles;
 	};
-	class 332_X42: arifle_MX_Base_F
+	class ORG_X42: arifle_MX_Base_F
 	{
-		author="332nd Aux Team";
+		author="ORG Aux Team";
 		scope=2;
 		scopearsenal=2;
-		cursoraim="332_DC17";
+		cursoraim="ORG_DC17";
 		displayName=MACRO_WEAPON_DISPLAYNAME(*Experimental* X42 Plasma Thrower)
 		descriptionShort="";
 		picture="3AS\3AS_Weapons\X42\Data\BTX42_ui_ca.paa";
@@ -227,7 +227,7 @@ class CfgWeapons
 		};
 		magazines[]=
 		{
-			"332_FlamerFuel"
+			"ORG_FlamerFuel"
 		};
 		magazineWell[]={};
 		fireSpreadAngle=0.94999999;

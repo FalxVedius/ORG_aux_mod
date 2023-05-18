@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Z6)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -50,8 +50,8 @@ class cfgWeapons
 		recoilprone="recoil_mx";
 		canShootInWater=1;
 		baseweapon="";
-		cursor="332_DOT";
-		cursoraim="332_Z6";
+		cursor="ORG_DOT";
+		cursoraim="ORG_Z6";
 		modes[]=  {
 			"FullAuto"
 		};
@@ -59,7 +59,7 @@ class cfgWeapons
         muzzles[]=
 		{
 			"this",
-			"332_Z6Supercharge"
+			"ORG_Z6Supercharge"
 		};
 		class OpticsModes
         {
@@ -99,7 +99,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_Z6_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_Z6_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 
 			displayname="FullAuto";
@@ -113,13 +113,13 @@ class cfgWeapons
 			maxRangeProbab=0.1;
 		};
 		
-        class 332_Z6Supercharge: JLTS_stun_muzzle
+        class ORG_Z6Supercharge: JLTS_stun_muzzle
 		{
 			displayName="Supercharge";
 			descriptionShort="Z6 Supercharge";
 			reloadTime=1;
-			cursor="332_DOT";
-            cursoraim="332_DC17";
+			cursor="ORG_DOT";
+            cursoraim="ORG_DC17";
 			showtoplayer=1;
 			modes[] = {"Single"};
 			discreteDistance[]={100,200,300,400};
@@ -131,7 +131,7 @@ class cfgWeapons
 		    sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_Z6_Supercharge_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_Z6_Supercharge_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 		};
 			
@@ -185,7 +185,7 @@ class cfgAmmo
 	indirecthit=8;
 	indirectHitRange = 1;
 	caliber=20;
-	effectfly="332nd_aux_effects_RPS4_blue";
+	effectfly="ORG_aux_effects_RPS4_blue";
 	explosionEffects = "ImpactPlasmaExpBlue";
 	class HitEffects
 		{
@@ -232,7 +232,7 @@ class CfgMagazines
 		initspeed=1200;
 		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Low,200)
 		displayNameShort="Low Power 200rnd";
-		descriptionShort="332nd Low Power Round";
+		descriptionShort="ORGnd Low Power Round";
 		ammo=MACRO_NEW_AMMO(65_Blue);
 		tracersEvery=1;
 	};
@@ -256,7 +256,7 @@ class CfgMagazines
 		initspeed=400;
 		displayName=MACRO_AMMO_DISPLAYNAME(Z6 Supercharge,1)
 		displayNameShort="Conc-Med Power Tracer 20rnd";
-		descriptionShort="332nd Concentrated-Medium Power Tracer Round";
+		descriptionShort="ORGnd Concentrated-Medium Power Tracer Round";
 		ammo=MACRO_NEW_AMMO(Z6_Supercharge);
 		tracersEvery=1;
 	};

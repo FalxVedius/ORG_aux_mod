@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Z95_sounds)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -17,18 +17,18 @@ class CfgPatches
 		requiredVersion = 0.1;
 	};
 };
-//"332nd_weapons\DC\15a\sounds\DC15p.wss",
+//"ORG_weapons\DC\15a\sounds\DC15p.wss",
 
 class cfgSoundShaders 
 {
 	//###################################### SHOTS ######################################
-		class 332nd_Z95_EngineLowExt_SoundShader
+		class ORG_Z95_EngineLowExt_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_low_ext.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_low_ext.wss",
 				1
 			}
 		};
@@ -36,13 +36,13 @@ class cfgSoundShaders
 		volume="0.6 * machcone*engineOn*camPos*(rpm factor[0, 1])*(thrust factor[0.75, 0])";
 		range=1200;
 	};
-	class 332nd_Z95_EngineHighExt_SoundShader
+	class ORG_Z95_EngineHighExt_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_high_ext.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_high_ext.wss",
 				1
 			}
 		};
@@ -50,13 +50,13 @@ class cfgSoundShaders
 		volume="0.6 * machcone*engineOn*camPos*(rpm factor[0, 1])*(thrust factor[0, 0.75])";
 		range=1300;
 	};
-	class 332nd_Z95_ForsageExt_SoundShader
+	class ORG_Z95_ForsageExt_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_forsage_ext.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_forsage_ext.wss",
 				1
 			}
 		};
@@ -71,7 +71,7 @@ class cfgSoundShaders
 			{1500,0}
 		};
 	};
-	//class 332nd_Z95_WindNoiseExt_SoundShader
+	//class ORG_Z95_WindNoiseExt_SoundShader
 	//{
 	//	samples[]=
 	//	{
@@ -85,13 +85,13 @@ class cfgSoundShaders
 	//	volume="0.25 * machcone*4*camPos*(speed factor[1, 200])";
 	//	range=200;
 	//};
-	class 332nd_Z95_EngineExt_Middle_SoundShader
+	class ORG_Z95_EngineExt_Middle_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_middle.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_middle.wss",
 				1
 			}
 		};
@@ -105,13 +105,13 @@ class cfgSoundShaders
 			{4000,1}
 		};
 	};
-	class 332nd_Z95_EngineExt_Dist_Front_SoundShader
+	class ORG_Z95_EngineExt_Dist_Front_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_front.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_front.wss",
 				1
 			}
 		};
@@ -125,13 +125,13 @@ class cfgSoundShaders
 			{5000,1}
 		};
 	};
-	class 332nd_Z95_EngineExt_Dist_Rear_SoundShader
+	class ORG_Z95_EngineExt_Dist_Rear_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_back.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_back.wss",
 				1
 			}
 		};
@@ -145,46 +145,46 @@ class cfgSoundShaders
 			{5000,1}
 		};
 	};
-	class 332nd_Z95_EngineLowInt_SoundShader
+	class ORG_Z95_EngineLowInt_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_low_int.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_low_int.wss",
 				1
 			}
 		};
 		frequency="1.0 min (rpm + 0.5)*(rpm factor[0, 1])";
 		volume="1 * engineOn*(1-camPos)*(rpm factor[0.5, 1])";
 	};
-	class 332nd_Z95_EngineHighInt_SoundShader
+	class ORG_Z95_EngineHighInt_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_high_int.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_high_int.wss",
 				1
 			}
 		};
 		frequency="1.0 min (rpm + 0.25)*(rpm factor[0.25, 1.1])";
 		volume="1 * engineOn*(1-camPos)*(rpm factor[0, 1])";
 	};
-	class 332nd_Z95_ForsageInt_SoundShader
+	class ORG_Z95_ForsageInt_SoundShader
 	{
 		samples[]=
 		{
 			
 			{
-				"332nd_weapons\sounds\vehicles\Z95\Z95_engine_forsage_int.wss",
+				"ORG_weapons\sounds\vehicles\Z95\Z95_engine_forsage_int.wss",
 				1
 			}
 		};
 		frequency="1.0 min (rpm + 0.5)*(rpm factor[0, 1])";
 		volume="1 * engineOn*(1-camPos)*(rpm factor[0.5, 1])*(thrust factor[0.5, 1.0])";
 	};
-	//class 332nd_Z95_WindNoiseInt_SoundShader
+	//class ORG_Z95_WindNoiseInt_SoundShader
 	//{
 	//	samples[]=
 	//	{
@@ -197,7 +197,7 @@ class cfgSoundShaders
 	//	frequency="3*(speed factor[1, 200])";
 	//	volume="1 * 3*(1-camPos)*(speed factor[1, 200])";
 	//};
-	//class 332nd_Z95_VelocityInt_SoundShader
+	//class ORG_Z95_VelocityInt_SoundShader
 	//{
 	//	samples[]=
 	//	{
@@ -214,22 +214,22 @@ class cfgSoundShaders
 
 class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cfgSoundSets|relevant wiki page]]
 {
-		class 332nd_Z95_EngineLowExt_SoundSet
+		class ORG_Z95_EngineLowExt_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_EngineLowExt_SoundShader"
+			"ORG_Z95_EngineLowExt_SoundShader"
 		};
 		volumeFactor=1.2;
 		spatial=1;
 		loop=1;
 		sound3DProcessingType="JetExt_Close_3DProcessingType";
 	};
-	class 332nd_Z95_EngineHighExt_SoundSet
+	class ORG_Z95_EngineHighExt_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_EngineHighExt_SoundShader"
+			"ORG_Z95_EngineHighExt_SoundShader"
 		};
 		volumeFactor=1.2;
 		spatial=1;
@@ -238,11 +238,11 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 		occlusionFactor=0.44999999;
 		obstructionFactor=0.34999999;
 	};
-	class 332nd_Z95_ForsageExt_SoundSet
+	class ORG_Z95_ForsageExt_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_ForsageExt_SoundShader"
+			"ORG_Z95_ForsageExt_SoundShader"
 		};
 		volumeFactor=1.25;
 		spatial=1;
@@ -252,22 +252,22 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 		occlusionFactor=0.44999999;
 		obstructionFactor=0.34999999;
 	};
-	//class 332nd_Z95_WindNoiseExt_SoundSet
+	//class ORG_Z95_WindNoiseExt_SoundSet
 	//{
 	//	soundShaders[]=
 	//	{
-	//		"332nd_Z95_WindNoiseExt_SoundShader"
+	//		"ORG_Z95_WindNoiseExt_SoundShader"
 	//	};
 	//	volumeFactor=1;
 	//	spatial=1;
 	//	loop=1;
 	//	sound3DProcessingType="JetExt_Close_3DProcessingType";
 	//};
-	class 332nd_Z95_EngineExt_Middle_SoundSet
+	class ORG_Z95_EngineExt_Middle_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_EngineExt_Middle_SoundShader"
+			"ORG_Z95_EngineExt_Middle_SoundShader"
 		};
 		volumeFactor=1.4;
 		spatial=1;
@@ -278,11 +278,11 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 		occlusionFactor=0.5;
 		obstructionFactor=0;
 	};
-	class 332nd_Z95_EngineExt_Dist_Front_SoundSet
+	class ORG_Z95_EngineExt_Dist_Front_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_EngineExt_Dist_Front_SoundShader"
+			"ORG_Z95_EngineExt_Dist_Front_SoundShader"
 		};
 		volumeFactor=1.3;
 		spatial=1;
@@ -293,11 +293,11 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 		occlusionFactor=0.5;
 		obstructionFactor=0;
 	};
-	class 332nd_Z95_EngineExt_Dist_Rear_SoundSet
+	class ORG_Z95_EngineExt_Dist_Rear_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_EngineExt_Dist_Rear_SoundShader"
+			"ORG_Z95_EngineExt_Dist_Rear_SoundShader"
 		};
 		volumeFactor=1.5;
 		spatial=1;
@@ -308,55 +308,55 @@ class cfgSoundSets //on more info about soundSets look at the [[Arma_3_Sound:_cf
 		occlusionFactor=0.5;
 		obstructionFactor=0;
 	};
-	class 332nd_Z95_EngineLowInt_SoundSet
+	class ORG_Z95_EngineLowInt_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_EngineLowInt_SoundShader"
+			"ORG_Z95_EngineLowInt_SoundShader"
 		};
 		volumeFactor=1.4;
 		spatial=0;
 		loop=1;
 		sound3DProcessingType="VehicleInt_Back_3DProcessingType";
 	};
-	class 332nd_Z95_EngineHighInt_SoundSet
+	class ORG_Z95_EngineHighInt_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_EngineHighInt_SoundShader"
+			"ORG_Z95_EngineHighInt_SoundShader"
 		};
 		volumeFactor=1.3;
 		spatial=0;
 		loop=1;
 		sound3DProcessingType="VehicleInt_Back_3DProcessingType";
 	};
-	class 332nd_Z95_ForsageInt_SoundSet
+	class ORG_Z95_ForsageInt_SoundSet
 	{
 		soundShaders[]=
 		{
-			"332nd_Z95_ForsageInt_SoundShader"
+			"ORG_Z95_ForsageInt_SoundShader"
 		};
 		volumeFactor=1.35;
 		spatial=0;
 		loop=1;
 		sound3DProcessingType="VehicleInt_Back_3DProcessingType";
 	};
-	//class 332nd_Z95_WindNoiseInt_SoundSet
+	//class ORG_Z95_WindNoiseInt_SoundSet
 	//{
 	//	soundShaders[]=
 	//	{
-	//		"332nd_Z95_WindNoiseInt_SoundShader"
+	//		"ORG_Z95_WindNoiseInt_SoundShader"
 	//	};
 	//	volumeFactor=1;
 	//	spatial=0;
 	//	loop=1;
 	//	sound3DProcessingType="VehicleInt_Front_3DProcessingType";
 	//};
-	//class 332nd_Z95_VelocityInt_SoundSet
+	//class ORG_Z95_VelocityInt_SoundSet
 	//{
 	//	soundShaders[]=
 	//	{
-	//		"332nd_Z95_VelocityInt_SoundShader"
+	//		"ORG_Z95_VelocityInt_SoundShader"
 	//	};
 	//	volumeFactor=1.25;
 	//	spatial=0;

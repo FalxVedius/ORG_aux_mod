@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15l)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -35,7 +35,7 @@ class cfgWeapons
 
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
-	class 332nd_Acog_DC15L : ItemCore
+	class ORG_Acog_DC15L : ItemCore
 	{
 		scope = 2;
 		displayName = "DC15L Optic";
@@ -97,8 +97,8 @@ class cfgWeapons
 	class MACRO_NEW_WEAPON(DC_15l):3AS_DC15L_F
 	{
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15L [Heavy Support])
-		cursor="332_DOT";
-        cursoraim="332_Chevron";
+		cursor="ORG_DOT";
+        cursoraim="ORG_Chevron";
 		ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
 		recoil="recoil_spar";
@@ -117,7 +117,7 @@ class cfgWeapons
 			class CowsSlot
 			{
 				access = 1;
-				compatibleItems[] = { "332nd_Acog_DC15L" };
+				compatibleItems[] = { "ORG_Acog_DC15L" };
 				displayName = "Optics Slot";
 				iconPicture = "\A3\Weapons_F\Data\UI\attachment_top.paa";
 				iconPinpoint = "Bottom";
@@ -159,7 +159,7 @@ class cfgWeapons
          sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType 
 			{
-				soundSetShot[] = {"332_Sniper_Tail_SoundSet","332_DC15l_Shot_SoundSet"};
+				soundSetShot[] = {"ORG_Sniper_Tail_SoundSet","ORG_DC15l_Shot_SoundSet"};
 			};
 
         
@@ -199,7 +199,7 @@ class CfgMagazines
 		initspeed=1500;
 		displayName=MACRO_AMMO_DISPLAYNAME(15L,200)
 		displayNameShort="High Power 200rnd";
-		descriptionShort="332nd High Power Round";
+		descriptionShort="ORG High Power Round";
 		ammo=MACRO_NEW_AMMO(127x108_Blue);
 		tracersEvery=1;
 	};
@@ -209,7 +209,7 @@ class CfgMagazines
 		model="\MRC\JLTS\weapons\DC15A\DC15A_mag.p3d";
 		displayName=MACRO_AMMO_DISPLAYNAME(15L (T),200 Tracer)
 		displayNameShort="High Power Tracer 200rnd";
-		descriptionShort="332nd (T) High Power Round Tracer";
+		descriptionShort="ORG (T) High Power Round Tracer";
 		ammo=MACRO_NEW_AMMO(127x108_Blue_T);
 		tracersEvery=1;
 	};

@@ -18,7 +18,7 @@ class CfgPatches
 		units[] = {};
 		weapons[] = {
 			MACRO_NEW_WEAPON(Valken38x),
-			"332nd_Optic_VK38X"
+			"ORG_Optic_VK38X"
 		};
 	};
 };
@@ -26,11 +26,11 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class Aux332nd
+	class AuxORG
 	{
 		class Valken_Sounds
 		{
-			file = "\332nd_weapons\Valken_38x";
+			file = "\ORG_weapons\Valken_38x";
 			class Fired_Valken_Sound
 			{
 			};
@@ -70,8 +70,8 @@ class CfgWeapons
 	{
 		recoil="recoil_dmr_05";
 		recoilprone="recoil_prone_dmr_05";
-		cursor="332_DOT";
-        cursoraim="332_DMR";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DMR";
 		swayDecaySpeed=1.25;
 		inertia=0.5;
 		dexterity=1.5;
@@ -83,7 +83,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					"332nd_Optic_VK38X"
+					"ORG_Optic_VK38X"
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -106,7 +106,7 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_Valken38x_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_Valken38x_Shot_SoundSet","ORG_Sniper_Tail_SoundSet"};
 			};
 			reloadTime=0.7;
 			dispersion=0.000000000005;
@@ -153,7 +153,7 @@ class CfgWeapons
 
 		class EventHandlers
 		{
-			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_Valken_Sound;";
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn AuxORG_fnc_Fired_Valken_Sound;";
 		};
 
 	};
@@ -162,10 +162,10 @@ class CfgWeapons
 
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
-	class 332nd_Optic_VK38X : ItemCore
+	class ORG_Optic_VK38X : ItemCore
 	{
 		scope=2;
-		displayName="332nd VK-38X Optic";
+		displayName="ORG VK-38X Optic";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
 		model="3AS\3AS_Weapons\Valken38X\3AS_VK38X_Scope_f.p3d";
 		weaponInfoType="RscWeaponZeroing";
@@ -175,7 +175,7 @@ class CfgWeapons
 			modelOptics = "\A3\Weapons_F\acc\reticle_LRPS_F";
 			class OpticsModes
 			{
-				class 332_VK38X_Optic
+				class ORG_VK38X_Optic
 				{
 					opticsID=1;
 					useModelOptics=1;
@@ -206,7 +206,7 @@ class CfgWeapons
 					opticsDisablePeripherialVision=1;
 					cameraDir="";
 				};
-				class IronOnTopOfMyOptics : 332_VK38X_Optic
+				class IronOnTopOfMyOptics : ORG_VK38X_Optic
 				{
 					opticsID=2;
 					useModelOptics=0;
@@ -258,7 +258,7 @@ class CfgAmmo
 	{
 		soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		class HitEffects
 		{
@@ -286,14 +286,14 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
-		effectfly = "332nd_mainRound_effects";
+		effectfly = "ORG_mainRound_effects";
 	};
 	class  MACRO_NEW_AMMO(408_Blue_T): ls_ammo_408_blue
 	{
-	    effectfly="332nd_aux_effects_blue_bullet";
+	    effectfly="ORG_aux_effects_blue_bullet";
 		soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		class HitEffects
 		{

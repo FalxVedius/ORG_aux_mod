@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15x)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -25,11 +25,11 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class Aux332nd
+	class AuxORG
 	{
 		class DC_15XSounds
 		{
-			file = "\332nd_weapons\DC\15x";
+			file = "\ORG_weapons\DC\15x";
 			class Fired_DC15X_Sound
 			{
 			};
@@ -75,14 +75,14 @@ class cfgWeapons
 		recoilprone="recoil_m320";
 		canShootInWater=1;
         baseWeapon=MACRO_NEW_WEAPON(DC_15x);
-		cursor="332_DOT";
-        cursoraim="332_Chevron";
+		cursor="ORG_DOT";
+        cursoraim="ORG_Chevron";
 		magazineWell[] = {};
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15x,2)
 		};
 		modelOptics = "\A3\Weapons_f\acc\reticle_tws";
-		model="332nd_weapons\DC\15x\DC15LE.p3d";
+		model="ORG_weapons\DC\15x\DC15LE.p3d";
         picture="\3AS\3AS_Weapons\DC15A\Data\Textures\DC15A_Arsenal.paa";
 		modes[] = {"Single"};
 		handAnim[]=
@@ -108,7 +108,7 @@ class cfgWeapons
 				weaponSoundEffect="";
 				begin1[]=
 				{
-					"332nd_weapons\DC\15X\sounds\DC-15X.wss",
+					"ORG_weapons\DC\15X\sounds\DC-15X.wss",
 					1.5,
 					1,
 					4500
@@ -207,7 +207,7 @@ class cfgWeapons
 		};
 		class EventHandlers
 		{
-			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_DC15X_Sound;";
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn AuxORG_fnc_Fired_DC15X_Sound;";
 		};
 	};
 };
@@ -237,10 +237,10 @@ class CfgAmmo
 	class ls_ammo_127x108_green;
     class MACRO_NEW_AMMO(127x108_green_T): ls_ammo_127x108_green
 	{
-		 effectfly="332nd_aux_effects_green_bullet";
+		 effectfly="ORG_aux_effects_green_bullet";
         soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		class HitEffects
 		{
@@ -274,7 +274,7 @@ class CfgAmmo
 	{
         soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		class HitEffects
 		{
@@ -306,10 +306,10 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(DC_15xATR): ls_ammo_127x108_green
 	{
-		effectfly="332nd_aux_effects_RPS4_green";
+		effectfly="ORG_aux_effects_RPS4_green";
         soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		caliber = 40;
 		hit = 700;

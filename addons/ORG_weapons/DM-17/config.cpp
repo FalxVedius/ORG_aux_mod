@@ -20,11 +20,11 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class Aux332nd
+	class AuxORG
 	{
 		class Weapons
 		{
-			file = "\332nd_weapons\DM-17";
+			file = "\ORG_weapons\DM-17";
 			class onHit
 			{
 			};
@@ -42,28 +42,28 @@ class CfgAmmo
 	{
 		hit = 0.0099999998;
 		aiAmmoUsageFlags = 0;
-		Aux332nd_IsMedicRound = 1;
+		AuxORG_IsMedicRound = 1;
 		caliber = 0.1;
 	};
 	class CombatStim_Round : ls_ammo_556_blue
 	{
 		hit = 0.0099999998;
 		aiAmmoUsageFlags = 0;
-		Aux332nd_IsCombatStimRound = 1;
+		AuxORG_IsCombatStimRound = 1;
 		caliber = 0.1;
 	};
 	class Bacta_Round : ls_ammo_556_blue
 	{
 		hit = 0.0099999998;
 		aiAmmoUsageFlags = 0;
-		Aux332nd_IsBactaRound = 1;
+		AuxORG_IsBactaRound = 1;
 		caliber = 0.1;
 	};
 	class Kolto_Round : ls_ammo_556_blue
 	{
 		hit = 0.0099999998;
 		aiAmmoUsageFlags = 0;
-		Aux332nd_IsKoltoRound = 1;
+		AuxORG_IsKoltoRound = 1;
 		caliber = 0.1;
 	};
 };
@@ -79,7 +79,7 @@ class CfgMagazines
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 HeartStarter,1)
 		displayNameShort = "Heart Starter rnd";
-		descriptionShort = "332nd Heart Starter Round";
+		descriptionShort = "ORG Heart Starter Round";
 		ammo = "HeartStarter_Round";
 		tracersEvery = 1;
 	};
@@ -91,7 +91,7 @@ class CfgMagazines
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 CombatStim,1)
 		displayNameShort = "Combat Stim rnd";
-		descriptionShort = "332nd Combat Stim Round";
+		descriptionShort = "ORG Combat Stim Round";
 		ammo = "CombatStim_Round";
 		tracersEvery = 1;
 	};
@@ -103,7 +103,7 @@ class CfgMagazines
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 Bacta,1)
 		displayNameShort = "Bacta rnd";
-		descriptionShort = "332nd Bacta Round";
+		descriptionShort = "ORG Bacta Round";
 		ammo = "Bacta_Round";
 		tracersEvery = 1;
 	};
@@ -115,7 +115,7 @@ class CfgMagazines
 		initspeed = 1400;
 		displayName = MACRO_AMMO_DISPLAYNAME(DM17 Kolto,1)
 		displayNameShort = "Kolto rnd";
-		descriptionShort = "332nd Kolto Round";
+		descriptionShort = "ORG Kolto Round";
 		ammo = "Kolto_Round";
 		tracersEvery = 1;
 	};
@@ -188,6 +188,6 @@ class Extended_HitPart_EventHandlers
 {
 	class CAManBase
 	{
-		Aux332nd_MedicRound = "(_this select 0) call Aux332nd_fnc_onHit";
+		AuxORG_MedicRound = "(_this select 0) call AuxORG_fnc_onHit";
 	};
 };

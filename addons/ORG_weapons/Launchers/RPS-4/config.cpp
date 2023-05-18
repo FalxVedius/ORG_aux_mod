@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(RPS_4)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons)
 		requiredAddons[]=
 		{
@@ -42,7 +42,7 @@ class CfgWeapons
 		modes[]=  {
 		    "Single"
 		};
-        cursor="332_RPS4";
+        cursor="ORG_RPS4";
 		hiddenSelectionsTextures[]=
 		{
 			MACRO_WEAPON_TEXTURES_PATH\RPS4_01.paa,
@@ -97,7 +97,7 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_RPS4_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_RPS4_Shot_SoundSet","ORG_Rocket_Tail_SoundSet"};
 			};
 			sounds[]=
 			{

@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(RPS_6)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons)
 		requiredAddons[]=
 		{
@@ -45,9 +45,9 @@ class CfgWeapons
 		modes[]=  {
 		    "Single"
 		};
-        cursor="332_RocketLauncher";
-		cursoraim="332_Locking";
-		cursoraimon="332_Locked";
+        cursor="ORG_RocketLauncher";
+		cursoraim="ORG_Locking";
+		cursoraimon="ORG_Locked";
 
 		magazines[] = {
 			MACRO_NEW_MAG(RPS6_ATMag,1),

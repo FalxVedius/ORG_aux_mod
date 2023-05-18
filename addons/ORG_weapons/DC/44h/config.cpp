@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_44h)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -38,9 +38,9 @@ class cfgWeapons
         ACE_Overheating_mrbs=300000;
 		canShootInWater=1;
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
-		cursor="332_DOT";
+		cursor="ORG_DOT";
 		baseweapon= (DC_44h)
-        cursoraim="332_DC17";
+        cursoraim="ORG_DC17";
 		magazines[] = 
 		{
 			MACRO_NEW_MAG(DC_44h,6)
@@ -49,20 +49,20 @@ class cfgWeapons
 		recoil = "recoil_m320";
 		recoilprone = "recoil_m320";
 
-        class 332PistolStun: JLTS_stun_muzzle
+        class ORGPistolStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332PistolStun"
+			"ORGPistolStun"
 		};
 		linkProxy="\A3\data_f\proxies\weapon_slots\SIDE";
         compatibleItems[]=
@@ -103,7 +103,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = { "332_Sniper_Tail_SoundSet","332_DC44h_Shot_SoundSet" };
+				soundSetShot[] = { "ORG_Sniper_Tail_SoundSet","ORG_DC44h_Shot_SoundSet" };
 			};
 			reloadTime=0.3;
 			displayname="SemiAuto";
@@ -133,7 +133,7 @@ class CfgMagazines
 		initspeed=1550;
 		displayName=MACRO_AMMO_DISPLAYNAME(44h ,6)
 		displayNameShort="High Power 6rnd";
-		descriptionShort="332nd High Power Round";
+		descriptionShort="ORG High Power Round";
 		ammo = MACRO_NEW_AMMO(127x108_Blue);
 		tracersEvery=1;
 	};

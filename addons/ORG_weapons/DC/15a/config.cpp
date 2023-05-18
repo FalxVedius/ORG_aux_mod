@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15a)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -76,8 +76,8 @@ class cfgWeapons
 		recoil="recoil_15a";
 		recoilProne="recoil_single_prone_mx";
 		ACE_Overheating_mrbs=300000;
-		cursor="332_DOT";
-        cursoraim="332_DC15A";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DC15A";
 
 		magazines[] = {
 			MACRO_NEW_MAG(DC_15a_Medium,30),
@@ -92,7 +92,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType 
 			{
-				soundSetShot[] = {"332_DC15a_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15a_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 
 			reloadTime=0.14;
@@ -109,7 +109,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15a_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15a_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
@@ -182,20 +182,20 @@ class cfgWeapons
             //};
         };
 
-		class 332Stun: JLTS_stun_muzzle
+		class ORGStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332Stun"
+			"ORGStun"
 		};
 	};
 
@@ -216,10 +216,10 @@ class cfgWeapons
 		muzzles[]=
 		{
 			"this",
-			"332_EGLM"
+			"ORG_EGLM"
 		};
-		cursor="332_DOT";
-        cursoraim="332_DC15A";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DC15A";
 		modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		modes[] = {"Single","FullAuto"};
 		class Single: Single
@@ -227,7 +227,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15a_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15a_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.14;
 			dispersion=0.00000009;
@@ -243,7 +243,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15a_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15a_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			showtoplayer=1;
 			displayname="Full Auto";
@@ -292,7 +292,7 @@ class cfgWeapons
             };
         };
 
-		class 332_EGLM: EGLM
+		class ORG_EGLM: EGLM
 		{
 			displayName="UGL";
 			
@@ -303,8 +303,8 @@ class cfgWeapons
 			displayName="15a UGL";
 			modes[] = {"Single"};
 			recoil="recoil_15a";
-			cursor="332_DOT";
-			cursorAim="332_UGL";
+			cursor="ORG_DOT";
+			cursorAim="ORG_UGL";
 			cameraDir="OP_look";
 			discreteDistance[]={25,100,200,300,400};
 			discreteDistanceCameraPoint[]= {
@@ -318,7 +318,7 @@ class cfgWeapons
 		    {
 				class StandardSound: BaseSoundModeType
 				{
-					soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
+					soundSetShot[] = {"ORG_UGL_Shot_SoundSet","ORG_Rocket_Tail_SoundSet"};
 				};
 				sounds[]=
 				{
@@ -349,20 +349,20 @@ class cfgWeapons
 				"ACE_HuntIR_M203",
                 MACRO_NEW_MAG(DC_15_UGL_AP,2),
                 MACRO_NEW_MAG(DC_15_UGL_HE,4),
-				MACRO_NEW_MAG(332_GL_SMOKE_WHITE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_RED,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_GREEN,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_YELLOW,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_PURPLE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_BLUE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_ORANGE,1),
-				MACRO_NEW_MAG(332_GL3_SMOKE_WHITE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_RED,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_GREEN,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_YELLOW,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_PURPLE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_BLUE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_ORANGE,3),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_WHITE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_RED,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_GREEN,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_YELLOW,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_PURPLE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_BLUE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_ORANGE,1),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_WHITE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_RED,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_GREEN,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_YELLOW,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_PURPLE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_BLUE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_ORANGE,3),
 			};
 		};
 	};
@@ -383,7 +383,7 @@ class CfgMagazines
 		initspeed=1800;
 		displayName=MACRO_AMMO_DISPLAYNAME(15a Medium,30)
 		displayNameShort="Med Power rnd";
-		descriptionShort="332nd Medium Power Round";
+		descriptionShort="ORG Medium Power Round";
 		ammo=MACRO_NEW_AMMO(762_blue);
 		tracersEvery=1;
 	};
@@ -395,7 +395,7 @@ class CfgMagazines
 		initspeed=1800;
 		displayName=MACRO_AMMO_DISPLAYNAME(15a Low,60)
 		displayNameShort="Low Power 60rnd";
-		descriptionShort="332nd Low Power Round";
+		descriptionShort="ORG Low Power Round";
 		ammo=MACRO_NEW_AMMO(65_Blue);
 	};
 
@@ -406,7 +406,7 @@ class CfgMagazines
 		initspeed=1600;
 		displayName=MACRO_AMMO_DISPLAYNAME(15a High,15)
 		displayNameShort="High Power 15rnd";
-		descriptionShort="332nd High Power Round";
+		descriptionShort="ORG High Power Round";
 		ammo=MACRO_NEW_AMMO(127x108_green);
 	};
 
@@ -440,8 +440,8 @@ class CfgMagazines
 		initspeed=250;
 		ammo = MACRO_NEW_AMMO(Stun);
 		displayName=MACRO_AMMO_DISPLAYNAME(10rnd Stun (30sec) Magazine,10)
-		displayNameShort="332nd 30 sec stun magazine";
-		descriptionShort="332nd 30 sec stun magazine";
+		displayNameShort="ORG 30 sec stun magazine";
+		descriptionShort="ORG 30 sec stun magazine";
 		model = "\MRC\JLTS\weapons\Core\stun_mag.p3d";
 		picture = "\MRC\JLTS\weapons\Core\data\ui\stun_mag_ui_ca.paa";
 		tracersEvery=1;
@@ -479,10 +479,10 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
-		effectfly = "332nd_mainRound_effects";
+		effectfly = "ORG_mainRound_effects";
 		soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 	};
 	
@@ -515,20 +515,20 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
-		effectfly = "332nd_mainRound_effects";
+		effectfly = "ORG_mainRound_effects";
 		soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 	};
 
 	class ls_ammo_127x108_blue;
 	class MACRO_NEW_AMMO(127x108_Blue_T): ls_ammo_127x108_blue
 	{
-	     effectfly="332nd_aux_effects_blue_bullet";
+	     effectfly="ORG_aux_effects_blue_bullet";
 		 soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		class HitEffects
 		{
@@ -561,7 +561,7 @@ class CfgAmmo
 	{
 		 soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		class HitEffects
 		{
@@ -589,7 +589,7 @@ class CfgAmmo
 			hitVirtual = "3AS_ImpactPlasma";
 			default_mat = "3AS_ImpactPlasma";
 		};
-		effectfly = "332nd_mainRound_effects";
+		effectfly = "ORG_mainRound_effects";
 	};
 
 	class SWLW_ammo_40mm_green;
@@ -599,21 +599,21 @@ class CfgAmmo
 		indirecthit=20;
 		fuseDistance=15;
 		indirectHitRange=6;
-		//effectfly="332nd_aux_effects_RPS4_green";
+		//effectfly="ORG_aux_effects_RPS4_green";
         soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 	};
 	class SWLW_ammo_40mm_at;
 	class MACRO_NEW_AMMO(40mm_AP): SWLW_ammo_40mm_at
 	{
-		 //effectfly="332nd_aux_effects_RPS4_blue";
+		 //effectfly="ORG_aux_effects_RPS4_blue";
 		hit = 1500;
 		 fuseDistance=15;
         soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 	};
 

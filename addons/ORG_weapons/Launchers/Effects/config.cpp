@@ -20,28 +20,28 @@ class CfgPatches
 class CfgLights
 {
 	class ls_light_hailfireRocket;
-	class 332nd_aux_effects_rocket_blue: ls_light_hailfireRocket
+	class ORG_aux_effects_rocket_blue: ls_light_hailfireRocket
 	{
 		color[] = {0,0,1};
 	};
-	class 332nd_aux_effects_rocket_green: ls_light_hailfireRocket
+	class ORG_aux_effects_rocket_green: ls_light_hailfireRocket
 	{
 		color[] = {0,1,0};
 	};
-    class 332nd_aux_effects_rocket_dark_green : ls_light_hailfireRocket
+    class ORG_aux_effects_rocket_dark_green : ls_light_hailfireRocket
     {
         color[] = {0,56,2};
     };
-	class 332nd_aux_effects_rocket_red: ls_light_hailfireRocket
+	class ORG_aux_effects_rocket_red: ls_light_hailfireRocket
 	{
 		color[] = {186,0,0};
 	};
-    class 332nd_aux_effects_rocket_Purple: ls_light_hailfireRocket
+    class ORG_aux_effects_rocket_Purple: ls_light_hailfireRocket
 	{
 		color[] = {0.3,0,0.5};
 	};
 
-    class 332nd_aux_MainRound_effects
+    class ORG_aux_MainRound_effects
     {
         ambient[] = {0,0,1,0};
         brightness = 0;
@@ -60,7 +60,7 @@ class CfgLights
         };
     };
 
-    class 332nd_aux_MainRound_CIS_effects
+    class ORG_aux_MainRound_CIS_effects
     {
         ambient[] = {1,0,0,0};
         brightness = 0;
@@ -85,7 +85,7 @@ class CfgCloudlets
 	class Missile2;
     class ArtilleryShell1;
     class ls_particle_hailfireRocket;
-	class 332nd_aux_effects_smoke_RPS6blue: Missile2
+	class ORG_aux_effects_smoke_RPS6blue: Missile2
 	{
 		color[] = {{0,0,0.6,0.1}};
 		colorVar[] = {0,0,0,1};
@@ -95,7 +95,7 @@ class CfgCloudlets
 		volume = 30;	
         weight=30;
 	};
-	class 332nd_aux_effects_smoke_RPS6red: Missile2
+	class ORG_aux_effects_smoke_RPS6red: Missile2
 	{
 		color[] = {{0.2,0,0.05,0.1}};
 		colorVar[] = {0,0,0,1};
@@ -106,7 +106,7 @@ class CfgCloudlets
         weight=30;
 	};
 	
-	class 332nd_aux_effects_smoke_PLXblue: ls_particle_hailfireRocket //PLX
+	class ORG_aux_effects_smoke_PLXblue: ls_particle_hailfireRocket //PLX
 	{
 		color[] = {{0.1,0.2,0.8,1},{0,0,0,1},{0,0,0,1}};
 		colorVar[] = {0,0,0,1};
@@ -115,7 +115,7 @@ class CfgCloudlets
 		size[] = {2,2};
 		volume = 2;	
 	};
-	class 332nd_aux_effects_smoke_PLXgreen: ls_particle_hailfireRocket //PLX
+	class ORG_aux_effects_smoke_PLXgreen: ls_particle_hailfireRocket //PLX
 	{
 		color[] = {{0.2,0.8,0.1,1},{0,0,0,1},{0,0,0,1}};
 		colorVar[] = {0,0,0,1};
@@ -124,7 +124,7 @@ class CfgCloudlets
 		size[] = {2,2};
 		volume = 2;	
 	};
-	class 332nd_aux_effects_smoke_PLXred: ls_particle_hailfireRocket
+	class ORG_aux_effects_smoke_PLXred: ls_particle_hailfireRocket
 	{
 		color[] = {{0.8,0.1,0.2,1},{0,0,0,1},{0,0,0,1}};
 		colorVar[] = {0,0,0,1};
@@ -134,7 +134,7 @@ class CfgCloudlets
 		volume = 2;	
 	};
         class Missile4;
-    	class 332nd_aux_effects_smoke_Rocket_Purple: Missile4 //Shrieker
+    	class ORG_aux_effects_smoke_Rocket_Purple: Missile4 //Shrieker
 	{
 		color[] = {{0.20,0,0.10,1},{0,0,0,0.5},{0,0,0,0.3},{0,0,0,0.1},{0,0,0,0.01}};
 		colorVar[] = {0,0,0,1};
@@ -146,7 +146,7 @@ class CfgCloudlets
         weight=20;
 	};
 
-    class 332nd_aux_effects_smoke_DC17mGP: ArtilleryShell1 //Shrieker
+    class ORG_aux_effects_smoke_DC17mGP: ArtilleryShell1 //Shrieker
 	{
 		color[] = {{0.20,0,0.10,1},{0,0,0,0.3},{0,0,0,0.2},{0,0,0,0.1},{0,0,0,0.01}};
 		colorVar[] = {0,0,0,1};
@@ -158,7 +158,7 @@ class CfgCloudlets
         weight=0.1;
 	};
 
-    class 332nd_aux_effects_smoke_Proton_Purple: Missile4 //Shrieker
+    class ORG_aux_effects_smoke_Proton_Purple: Missile4 //Shrieker
 	{
 		color[] = {{0.20,0,0.10,1},{0.20,0,0.10,0.5},{0.20,0,0.10,0.3},{0.20,0,0.10,0.1},{0.20,0,0.10,0.01}};
 		colorVar[] = {0,0,0,1};
@@ -170,7 +170,7 @@ class CfgCloudlets
         weight=25;
 	};
 
-    class 332nd_aux_effects_smoke_Rocket_Blue: Missile4 //Shrieker
+    class ORG_aux_effects_smoke_Rocket_Blue: Missile4 //Shrieker
 	{
 		color[] = {{0,0.05,0.2,1},{0,0,0,0.5},{0,0,0,0.3},{0,0,0,0.1},{0,0,0,0.01}};
 		colorVar[] = {0,0,0,1};
@@ -181,7 +181,7 @@ class CfgCloudlets
 		volume = 15;
         weight=15;
 	};
-    class 332nd_aux_effects_smoke_Rocket_Red: Missile4 //Shrieker
+    class ORG_aux_effects_smoke_Rocket_Red: Missile4 //Shrieker
 	{
 		color[] = {{0.3,0,0.05,1},{0,0,0,0.5},{0,0,0,0.3},{0,0,0,0.1},{0,0,0,0.01}};
 		colorVar[] = {0,0,0,1};
@@ -194,7 +194,7 @@ class CfgCloudlets
 	};
 	
 	class ls_particle_hailfireRocketSparks;
-	class 332nd_aux_effects_sparks_blue: ls_particle_hailfireRocketSparks //PLX / RPS4
+	class ORG_aux_effects_sparks_blue: ls_particle_hailfireRocketSparks //PLX / RPS4
 	{
 	    color[] = {{0.4,0.4,1,-50}};
 		colorCoef[] = {1,1,1,1};
@@ -202,40 +202,40 @@ class CfgCloudlets
 		lifetime = 3;	
 		weight = 1;
 	};
-	class 332nd_aux_effects_sparks_embers: ls_particle_hailfireRocketSparks //RPS-6
+	class ORG_aux_effects_sparks_embers: ls_particle_hailfireRocketSparks //RPS-6
 	{
 	    color[] = {{1,1,1,-50}};
 		lifetime = 0.5;
 		weight=1;
 		emissiveColor[] = {{1,1,1,1}};
 	};
-	class 332nd_aux_effects_sparks_green: ls_particle_hailfireRocketSparks //PLX / RPS4
+	class ORG_aux_effects_sparks_green: ls_particle_hailfireRocketSparks //PLX / RPS4
 	{
 	    color[] = {{0.4,1,0.4,-50}};
 		lifetime = 3;
 		weight = 1;
 		emissiveColor[] = {{0.8,1,0.8,1}};
 	};
-	class 332nd_aux_effects_sparks_red: ls_particle_hailfireRocketSparks //PLX / RPS4
+	class ORG_aux_effects_sparks_red: ls_particle_hailfireRocketSparks //PLX / RPS4
 	{
 	    color[] = {{1,0.4,0.4,-50}};
 		lifetime = 3;
 		weight = 1;
 		emissiveColor[] = {{1,0.8,0.8,1}};
 	};
-    class 332nd_aux_effects_sparks_rocket: ls_particle_hailfireRocketSparks 
+    class ORG_aux_effects_sparks_rocket: ls_particle_hailfireRocketSparks 
 	{
 	    color[] = {{1,1,1,-50}};
 		lifetime = 5;
 		emissiveColor[] = {{1,1,1,1}};
 	};
-    class 332nd_aux_effects_sparks_Blue_rocket: ls_particle_hailfireRocketSparks 
+    class ORG_aux_effects_sparks_Blue_rocket: ls_particle_hailfireRocketSparks 
 	{
 	    color[] = {{0.5,0.5,1,-50}};
 		lifetime = 5;
 		emissiveColor[] = {{1,1,1,1}};
 	};
-     class 332nd_aux_effects_sparks_Red_rocket: ls_particle_hailfireRocketSparks 
+     class ORG_aux_effects_sparks_Red_rocket: ls_particle_hailfireRocketSparks 
 	{
 	    color[] = {{1,0.5,0.5,-50}};
 		lifetime = 5;
@@ -243,7 +243,7 @@ class CfgCloudlets
 	};
 
     
-    class 332nd_aux_effects_smoke_tracerblue: ArtilleryShell1
+    class ORG_aux_effects_smoke_tracerblue: ArtilleryShell1
 	{
 		color[] = {{0.2,0,0.8,0.20},{0.1,0.1,0.85,0.10},{0.15,0.15,0.9,0.02},{0.2,0.2,0.95,0.006},{0.25,0.25,1,0.001}};
 		colorVar[] = {0,0,0,0};
@@ -255,13 +255,13 @@ class CfgCloudlets
         weight=4;
         emissiveColor[] = {{0.5,0.5,0.8,0.14},{0.8,0.8,0.8,0.5}};
 	};
-    class 332nd_aux_effects_smoke_tracergreen: 332nd_aux_effects_smoke_tracerblue
+    class ORG_aux_effects_smoke_tracergreen: ORG_aux_effects_smoke_tracerblue
     {
     color[] = {{0.2,0.8,0,0.20},{0.1,0.85,0.1,0.10},{0.15,0.9,0.15,0.02},{0.2,0.95,0.2,0.006},{0.25,1,0.25,0.001}};
     emissiveColor[] = {{0.5,0.8,0.5,0.14},{0.8,0.8,0.8,0.5}};
     };
 
-    class 332nd_aux_effects_AVI_tracergreen: ArtilleryShell1
+    class ORG_aux_effects_AVI_tracergreen: ArtilleryShell1
 	{
 		color[] = {{0,1.5,0,0.20},{0,0.5,0,0.001}};
 		colorVar[] = {0,0,0,0};
@@ -274,7 +274,7 @@ class CfgCloudlets
         emissiveColor[] = {{0.5,0.5,0.8,0.14},{0.8,0.8,0.8,0.5}};
 	};
 
-    class 332nd_aux_effects_Bomb_tracerPurple: ArtilleryShell1
+    class ORG_aux_effects_Bomb_tracerPurple: ArtilleryShell1
 	{
 		color[] = {{0.60,0,0.40,1},{0.60,0,0.40,0.5},{0.60,0,0.40,0.3},{0.60,0,0.40,0.1},{0.60,0,0.40,0.01}};
 		colorVar[] = {0,0,0,0};
@@ -286,7 +286,7 @@ class CfgCloudlets
         weight=35;
 	};
 
-    class 332nd_aux_effects_AVI_tracerblue: ArtilleryShell1
+    class ORG_aux_effects_AVI_tracerblue: ArtilleryShell1
 	{
 		color[] = {{0,0,1.5,0.20},{0,0,0.5,0.001}};
 		colorVar[] = {0,0,0,0};
@@ -301,21 +301,21 @@ class CfgCloudlets
 
     //CM
    class Cmeasures1;
-   class 332nd_aux_effects_CM1: Cmeasures1
+   class ORG_aux_effects_CM1: Cmeasures1
    {
 		lifeTime = 5;	
         size[] = {0.2,0.5};
         volume=2;
    };
    class Cmeasures1L;
-   class 332nd_aux_effects_CM1L: Cmeasures1L
+   class ORG_aux_effects_CM1L: Cmeasures1L
    {
 		lifeTime = 2;	
         size[] = {0.3,3,3.5,4,5,6};
         volume=2;
    };
    class Cmeasures1M;
-   class 332nd_aux_effects_CM1M: Cmeasures1L
+   class ORG_aux_effects_CM1M: Cmeasures1L
    {
 		lifeTime = 5;	
         size[] = {0.3,3,3.5,4,5,6};
@@ -324,7 +324,7 @@ class CfgCloudlets
    
 };
 
-class 332nd_aux_effects_missile_blue
+class ORG_aux_effects_missile_blue
 {
     class light1
     {
@@ -333,22 +333,22 @@ class 332nd_aux_effects_missile_blue
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_blue";
+        type = "ORG_aux_effects_rocket_blue";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_RPS6blue"; 
+        type = "ORG_aux_effects_smoke_RPS6blue"; 
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_embers";
+        type = "ORG_aux_effects_sparks_embers";
     };
 };
 
-class 332nd_aux_effects_missile_red
+class ORG_aux_effects_missile_red
 {
     class light1
     {
@@ -357,22 +357,22 @@ class 332nd_aux_effects_missile_red
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_red";
+        type = "ORG_aux_effects_rocket_red";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_RPS6red"; 
+        type = "ORG_aux_effects_smoke_RPS6red"; 
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_embers";
+        type = "ORG_aux_effects_sparks_embers";
     };
 };
 
-class 332nd_aux_effects_RPS4_blue
+class ORG_aux_effects_RPS4_blue
 {
     class light1
     {
@@ -381,16 +381,16 @@ class 332nd_aux_effects_RPS4_blue
         lifeTime = 1;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_blue";
+        type = "ORG_aux_effects_rocket_blue";
     };
     class MissileEffect2 : light1
     {
 		simulation = "particles";
-		type = "332nd_aux_effects_sparks_blue";
+		type = "ORG_aux_effects_sparks_blue";
     };
 };
 
-class 332nd_aux_effects_RPS4_green
+class ORG_aux_effects_RPS4_green
 {
     class light1
     {
@@ -399,16 +399,16 @@ class 332nd_aux_effects_RPS4_green
         lifeTime = 1;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_green";
+        type = "ORG_aux_effects_rocket_green";
     };
     class MissileEffect2 : light1
     {
 		simulation = "particles";
-		type = "332nd_aux_effects_sparks_green";
+		type = "ORG_aux_effects_sparks_green";
     };
 };
 
-class 332nd_aux_effects_missile_plx_blue
+class ORG_aux_effects_missile_plx_blue
 {
     class light1
     {
@@ -417,22 +417,22 @@ class 332nd_aux_effects_missile_plx_blue
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_blue";
+        type = "ORG_aux_effects_rocket_blue";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_PLXblue"; 
+        type = "ORG_aux_effects_smoke_PLXblue"; 
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_blue";
+        type = "ORG_aux_effects_sparks_blue";
     };
 };
 
-class 332nd_aux_effects_missile_plx_green
+class ORG_aux_effects_missile_plx_green
 {
     class light1
     {
@@ -441,22 +441,22 @@ class 332nd_aux_effects_missile_plx_green
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_green";
+        type = "ORG_aux_effects_rocket_green";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_PLXgreen"; 
+        type = "ORG_aux_effects_smoke_PLXgreen"; 
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_green";
+        type = "ORG_aux_effects_sparks_green";
     };
 };
 
-class 332nd_aux_effects_missile_plx_red
+class ORG_aux_effects_missile_plx_red
 {
     class light1
     {
@@ -465,22 +465,22 @@ class 332nd_aux_effects_missile_plx_red
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_red";
+        type = "ORG_aux_effects_rocket_red";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_PLXred"; 
+        type = "ORG_aux_effects_smoke_PLXred"; 
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_red";
+        type = "ORG_aux_effects_sparks_red";
     };
 };
 
-class 332nd_aux_effects_missile_Rocket_Purple
+class ORG_aux_effects_missile_Rocket_Purple
 {
     class light1
     {
@@ -489,17 +489,17 @@ class 332nd_aux_effects_missile_Rocket_Purple
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_Purple";
+        type = "ORG_aux_effects_rocket_Purple";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_Rocket_Purple"; 
+        type = "ORG_aux_effects_smoke_Rocket_Purple"; 
     };
 };
 
-class 332nd_aux_effects_missile_Rocket_DC17mGP
+class ORG_aux_effects_missile_Rocket_DC17mGP
 {
     class light1
     {
@@ -508,17 +508,17 @@ class 332nd_aux_effects_missile_Rocket_DC17mGP
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_Purple";
+        type = "ORG_aux_effects_rocket_Purple";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_DC17mGP"; 
+        type = "ORG_aux_effects_smoke_DC17mGP"; 
     };
 };
 
-class 332nd_aux_effects_missile_Rocket_Blue
+class ORG_aux_effects_missile_Rocket_Blue
 {
     class light1
     {
@@ -527,22 +527,22 @@ class 332nd_aux_effects_missile_Rocket_Blue
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_blue";
+        type = "ORG_aux_effects_rocket_blue";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_Rocket_Blue"; 
+        type = "ORG_aux_effects_smoke_Rocket_Blue"; 
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_Blue_rocket";
+        type = "ORG_aux_effects_sparks_Blue_rocket";
     };
 };
 
-class 332nd_aux_effects_missile_Rocket_Red
+class ORG_aux_effects_missile_Rocket_Red
 {
     class light1
     {
@@ -551,22 +551,22 @@ class 332nd_aux_effects_missile_Rocket_Red
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_red";
+        type = "ORG_aux_effects_rocket_red";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_Rocket_Red"; 
+        type = "ORG_aux_effects_smoke_Rocket_Red"; 
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_Red_rocket";
+        type = "ORG_aux_effects_sparks_Red_rocket";
     };
 };
 
-class 332nd_aux_effects_missile_Rocket_Green
+class ORG_aux_effects_missile_Rocket_Green
 {
     class light1
     {
@@ -575,22 +575,22 @@ class 332nd_aux_effects_missile_Rocket_Green
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_Green";
+        type = "ORG_aux_effects_rocket_Green";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_Rocket_Green";
+        type = "ORG_aux_effects_smoke_Rocket_Green";
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_green";
+        type = "ORG_aux_effects_sparks_green";
     };
 };
 
-class 332nd_aux_effects_missile_Rocket_Dark_Green
+class ORG_aux_effects_missile_Rocket_Dark_Green
 {
     class light1
     {
@@ -599,22 +599,22 @@ class 332nd_aux_effects_missile_Rocket_Dark_Green
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_dark_green";
+        type = "ORG_aux_effects_rocket_dark_green";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_Rocket_Dark_Green";
+        type = "ORG_aux_effects_smoke_Rocket_Dark_Green";
     };
 
     class MissileEffect2 : MissileEffect1
     {
-        type = "332nd_aux_effects_sparks_green";
+        type = "ORG_aux_effects_sparks_green";
     };
 };
 
-class 332nd_aux_effects_missile_Proton_Purple
+class ORG_aux_effects_missile_Proton_Purple
 {
     class light1
     {
@@ -623,18 +623,18 @@ class 332nd_aux_effects_missile_Proton_Purple
         lifeTime = 4;
         position[] = {0,0,0};
         simulation = "light";
-        type = "332nd_aux_effects_rocket_purple";
+        type = "ORG_aux_effects_rocket_purple";
     };
 
     class MissileEffect1
     {
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_Proton_Purple"; 
+        type = "ORG_aux_effects_smoke_Proton_Purple"; 
     };
 };
 
 class CounterMeasureFlare;
-class 332nd_aux_effects_CMFlare
+class ORG_aux_effects_CMFlare
 {
     class light1
     {
@@ -654,7 +654,7 @@ class 332nd_aux_effects_CMFlare
     //    position[] = {0,0,0};
     //    qualityLevel = 2;
     //    simulation = "particles";
-    //    type = "332nd_aux_effects_CM1"; 
+    //    type = "ORG_aux_effects_CM1"; 
     //};
 
     //class CM1L
@@ -665,7 +665,7 @@ class 332nd_aux_effects_CMFlare
     //    position[] = {0,0,0};
     //    qualityLevel = 2;
     //    simulation = "particles";
-    //    type = "332nd_aux_effects_CM1L"; 
+    //    type = "ORG_aux_effects_CM1L"; 
     //};
 
     class CM1M
@@ -676,61 +676,61 @@ class 332nd_aux_effects_CMFlare
         position[] = {0,0,0};
         qualityLevel = 2;
         simulation = "particles";
-        type = "332nd_aux_effects_CM1M"; 
+        type = "ORG_aux_effects_CM1M"; 
     };
 };
 
-class 332nd_aux_effects_blue_bullet
+class ORG_aux_effects_blue_bullet
 {
     class MissileEffect1
     {
         qualityLevel = 2;
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_tracerblue"; 
+        type = "ORG_aux_effects_smoke_tracerblue"; 
     };
 };
 
-class 332nd_aux_effects_green_bullet
+class ORG_aux_effects_green_bullet
 {
     class MissileEffect1
     {
         qualityLevel = 2;
         simulation = "particles";
-        type = "332nd_aux_effects_smoke_tracergreen"; 
+        type = "ORG_aux_effects_smoke_tracergreen"; 
     };
 };
 
-class 332nd_aux_effects_green_tracer_AVI
+class ORG_aux_effects_green_tracer_AVI
 {
     class MissileEffect1
     {
         qualityLevel = 2;
         simulation = "particles";
-        type = "332nd_aux_effects_AVI_tracergreen"; 
+        type = "ORG_aux_effects_AVI_tracergreen"; 
     };
 };
 
-class 332nd_aux_effects_blue_tracer_AVI
+class ORG_aux_effects_blue_tracer_AVI
 {
     class MissileEffect1
     {
         qualityLevel = 2;
         simulation = "particles";
-        type = "332nd_aux_effects_AVI_tracerblue"; 
+        type = "ORG_aux_effects_AVI_tracerblue"; 
     };
 };
 
-class 332nd_aux_effects_purple_tracer_Bomb
+class ORG_aux_effects_purple_tracer_Bomb
 {
     class MissileEffect1
     {
         qualityLevel = 2;
         simulation = "particles";
-        type = "332nd_aux_effects_Bomb_tracerPurple"; 
+        type = "ORG_aux_effects_Bomb_tracerPurple"; 
     };
 };
 
-class 332nd_mainRound_effects
+class ORG_mainRound_effects
 {
         class MainRoundEffects
         {
@@ -739,11 +739,11 @@ class 332nd_mainRound_effects
             lifeTime = 6;
             position[] = { 0,0,0 };
             simulation = "light";
-            type = "332nd_aux_MainRound_effects";
+            type = "ORG_aux_MainRound_effects";
         };
 };
 
-class 332nd_mainRound_CIS_effects
+class ORG_mainRound_CIS_effects
 {
         class MainRoundEffects
         {
@@ -752,6 +752,6 @@ class 332nd_mainRound_CIS_effects
             lifeTime = 6;
             position[] = { 0,0,0 };
             simulation = "light";
-            type = "332nd_aux_MainRound_CIS_effects";
+            type = "ORG_aux_MainRound_CIS_effects";
         };
 };

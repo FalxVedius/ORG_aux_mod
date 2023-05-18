@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(DC_15s)
 	{
-		author = "332nd_aux_team + Clock";
+		author = "ORG_aux_team + Clock";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -73,32 +73,32 @@ class cfgWeapons
 		displayName = MACRO_WEAPON_DISPLAYNAME(DC 15s [Rifleman])
 
 		canShootInWater=1;
-		baseWeapon="332nd_aux_weapon_DC_15s";
+		baseWeapon="ORG_aux_weapon_DC_15s";
 		recoil="DC_15s";
 		recoilprone="DC_15s";
-		cursor="332_DOT";
+		cursor="ORG_DOT";
 		JLTS_canHaveShield=1;
-		JLTS_shieldedWeapon="332nd_aux_weapon_DC_15s_Shield";
-        cursoraim="332_DC15S";
+		JLTS_shieldedWeapon="ORG_aux_weapon_DC_15s_Shield";
+        cursoraim="ORG_DC15S";
 		modes[]=  {
 		 "FullAuto",
 		 "Single"
 		};
 		picture="\MRC\JLTS\weapons\DC15S\data\ui\DC15S_ui_ca.paa";
-		class 332Stun: JLTS_stun_muzzle
+		class ORGStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332Stun"
+			"ORGStun"
 		};
         modelOptics[] = {"\A3\Weapons_F_EPA\acc\reticle_marksman_F", "\A3\Weapons_F_EPA\acc\reticle_marksman_z_F"};
 		class FullAuto: FullAuto
@@ -107,7 +107,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15s_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15s_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			displayname="FullAuto";
 			reloadTime=0.08;
@@ -123,8 +123,8 @@ class cfgWeapons
 
 		class stun: stun
 		{
-		  cursoraim="332_Stun";
-		  cursor="332_DOT"
+		  cursoraim="ORG_Stun";
+		  cursor="ORG_DOT"
 		};
 
 		class Single: FullAuto
@@ -132,7 +132,7 @@ class cfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DC15s_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DC15s_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 			reloadTime=0.14;
 			displayname="SlowAuto";
@@ -194,11 +194,11 @@ class cfgWeapons
 			};
 		};
 		
-		displayName="332nd 15s Shield";
-		baseWeapon="332nd_aux_weapon_DC_15s_Shield";
+		displayName="ORG 15s Shield";
+		baseWeapon="ORG_aux_weapon_DC_15s_Shield";
 		scope=1;
 		JLTS_isShielded=1;
-		JLTS_baseWeapon="332nd_aux_weapon_DC_15s";
+		JLTS_baseWeapon="ORG_aux_weapon_DC_15s";
 		model="\MRC\JLTS\weapons\DC15S\DC15S_shielded.p3d";
 		hiddenSelections[]=
 		{
@@ -234,7 +234,7 @@ class CfgMagazines
 		initspeed=1400;
 		displayName=MACRO_AMMO_DISPLAYNAME(15s,60)
 		displayNameShort="Med Power 60rnd";
-		descriptionShort="332nd Medium Power Round";
+		descriptionShort="ORG Medium Power Round";
 		ammo=MACRO_NEW_AMMO(762_blue);
 		tracersEvery=1;
 	};

@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(MPS_5)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons)
 		requiredAddons[]=
 		{
@@ -24,11 +24,11 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class Aux332nd_MPS
+	class AuxORG_MPS
 	{
 		class Functions
 		{
-			file = "\332nd_weapons\Launchers\MPS-5\functions";
+			file = "\ORG_weapons\Launchers\MPS-5\functions";
 			class canDeployWeapon
 			{
 			};
@@ -70,7 +70,7 @@ class CfgWeapons
 	{
 		author = "Falx";
 		scope = 2;
-		displayName = "[332nd] MPS-5 60mm Mortar *WIP* [Heavy Grenadier]";
+		displayName = "[ORG] MPS-5 60mm Mortar *WIP* [Heavy Grenadier]";
 		displayNameShort = "MPS-5";
 		model = "\z\potato\addons\vz99\data\vz99_carry";
 		picture = "\z\potato\addons\vz99\ui\weaponSide_ca.paa";
@@ -230,8 +230,8 @@ class CfgVehicles
 			class mps_5_deploy
 			{
 				displayName = "Deploy MPS-5";
-				condition = "_this call Aux332nd_MPS_fnc_canDeployWeapon";
-				statement = "_this call Aux332nd_MPS_fnc_doDeployWeapon";
+				condition = "_this call AuxORG_MPS_fnc_canDeployWeapon";
+				statement = "_this call AuxORG_MPS_fnc_doDeployWeapon";
 				exceptions[] = {};
 				icon = "\z\potato\addons\vz99\UI\action_mortar_ca.paa";
 			};
@@ -285,45 +285,45 @@ class CfgVehicles
 				displayName = "Pickup Weapon";
 				selection = "Konec hlavne";
 				distance = 3;
-				condition = "_this call Aux332nd_MPS_fnc_canPickupWeapon";
-				statement = "_this call Aux332nd_MPS_fnc_doPickupWeapon";
+				condition = "_this call AuxORG_MPS_fnc_canPickupWeapon";
+				statement = "_this call AuxORG_MPS_fnc_doPickupWeapon";
 			};
 		};
 		class ACE_SelfActions : ACE_SelfActions
 		{
-			class load_HE_332nd
+			class load_HE_ORG
 			{
 				displayName = "Load HE";
-				condition = "['332nd_aux_magazine_MPS_HE_x1'] call Aux332nd_MPS_fnc_canSelectNextMagazine";
-				statement = "['332nd_aux_magazine_MPS_HE_x1'] call Aux332nd_MPS_fnc_doSelectNextMagazine";
+				condition = "['ORG_aux_magazine_MPS_HE_x1'] call AuxORG_MPS_fnc_canSelectNextMagazine";
+				statement = "['ORG_aux_magazine_MPS_HE_x1'] call AuxORG_MPS_fnc_doSelectNextMagazine";
 				exceptions[] = {};
 				icon = "\z\potato\addons\vz99\UI\action_shell_ca.paa";
 				distance = 10;
 			};
-			class load_Smoke_332nd
+			class load_Smoke_ORG
 			{
 				displayName = "Load Smoke";
-				condition = "['332nd_aux_magazine_MPS_Smoke_x1'] call Aux332nd_MPS_fnc_canSelectNextMagazine";
-				statement = "['332nd_aux_magazine_MPS_Smoke_x1'] call Aux332nd_MPS_fnc_doSelectNextMagazine";
+				condition = "['ORG_aux_magazine_MPS_Smoke_x1'] call AuxORG_MPS_fnc_canSelectNextMagazine";
+				statement = "['ORG_aux_magazine_MPS_Smoke_x1'] call AuxORG_MPS_fnc_doSelectNextMagazine";
 				exceptions[] = {};
 				icon = "\z\potato\addons\vz99\UI\action_shell_ca.paa";
 				distance = 10;
 			};
-			class load_Smoke_Red_332nd
+			class load_Smoke_Red_ORG
 			{
 				displayName = "Load Red Smoke";
-				condition = "['332nd_aux_magazine_MPS_Smoke_Red_x1'] call Aux332nd_MPS_fnc_canSelectNextMagazine";
-				statement = "['332nd_aux_magazine_MPS_Smoke_Red_x1'] call Aux332nd_MPS_fnc_doSelectNextMagazine";
+				condition = "['ORG_aux_magazine_MPS_Smoke_Red_x1'] call AuxORG_MPS_fnc_canSelectNextMagazine";
+				statement = "['ORG_aux_magazine_MPS_Smoke_Red_x1'] call AuxORG_MPS_fnc_doSelectNextMagazine";
 				exceptions[] = {};
 				icon = "\z\potato\addons\vz99\UI\action_shell_ca.paa";
 				distance = 10;
 			
 			};
-			class load_Flare_332nd
+			class load_Flare_ORG
 			{
 				displayName = "Load Flare";
-				condition = "['332nd_aux_magazine_MPS_Flare_x1'] call Aux332nd_MPS_fnc_canSelectNextMagazine";
-				statement = "['332nd_aux_magazine_MPS_Flare_x1'] call Aux332nd_MPS_fnc_doSelectNextMagazine";
+				condition = "['ORG_aux_magazine_MPS_Flare_x1'] call AuxORG_MPS_fnc_canSelectNextMagazine";
+				statement = "['ORG_aux_magazine_MPS_Flare_x1'] call AuxORG_MPS_fnc_doSelectNextMagazine";
 				exceptions[] = {};
 				icon = "\z\potato\addons\vz99\UI\action_shell_ca.paa";
 				distance = 10;
@@ -334,15 +334,15 @@ class CfgVehicles
 		author = "Falx";
 		scope = 2;
 		side = 1;
-		faction = "EdCat_332nd";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 		availableForSupportTypes[] =
 		{
 			"Artillery"
 		};
 		displayName = "MPS-5 60mm Mortar *WIP*";
 		displayNameShort = "MPS-5";
-		editorSubcategory = "EdSubcat_332nd_TURR";
+		editorSubcategory = "EdSubcat_ORG_TURR";
 
 		artilleryScanner = 1;
 		cost = 200000;

@@ -24,7 +24,7 @@ class CfgFunctions
 	{
 		class Emara_Functions
 		{
-			file = "\332nd_weapons\Equipment\functions";
+			file = "\ORG_weapons\Equipment\functions";
 			class place
 			{
 			};
@@ -45,7 +45,7 @@ class CfgAmmo
 		indirectHitRange = 10;
 	};
 	class 442_impact;
-	class MACRO_NEW_AMMO(332_HEDP): 442_impact
+	class MACRO_NEW_AMMO(ORG_HEDP): 442_impact
 	{
 		hit = 250;
 		indirectHit = 250;
@@ -54,13 +54,13 @@ class CfgAmmo
 		ace_frag_enabled = 0;
 	};
 	class 442_thermal_det;
-	class MACRO_NEW_AMMO(332_FRAG): 442_thermal_det
+	class MACRO_NEW_AMMO(ORG_FRAG): 442_thermal_det
 	{
 		hit = 30;
 		indirectHit = 30;
 		indirectHitRange = 10;
 	};
-	class MACRO_NEW_AMMO(332_AT_Grenade): MACRO_NEW_AMMO(332_HEDP)
+	class MACRO_NEW_AMMO(ORG_AT_Grenade): MACRO_NEW_AMMO(ORG_HEDP)
 	{
 		hit = 30000;
 		caliber=10;
@@ -72,7 +72,7 @@ class CfgAmmo
 		indirectHitRange = 1;
 	};
 	class 3AS_SonicDetonator;
-	class MACRO_NEW_AMMO(332_FLASH): 3AS_SonicDetonator
+	class MACRO_NEW_AMMO(ORG_FLASH): 3AS_SonicDetonator
 	{
 		explosionTime = 2;
 		ace_grenades_flashbangBangs=4;
@@ -80,42 +80,42 @@ class CfgAmmo
 		ace_grenades_flashbangIntervalMaxDeviation=0;
 	};
 	class 3AS_SmokeShellBase;
-	class MACRO_NEW_AMMO(332_Impact_white): 3AS_SmokeShellBase
+	class MACRO_NEW_AMMO(ORG_Impact_white): 3AS_SmokeShellBase
 	{
 		explosionTime = -1;
 	};
 	class 3AS_SmokeShellBlue;
-	class MACRO_NEW_AMMO(332_Impact_blue): 3AS_SmokeShellBlue
+	class MACRO_NEW_AMMO(ORG_Impact_blue): 3AS_SmokeShellBlue
 	{
 		explosionTime = -1;
 	};
 	class 3AS_SmokeShellGreen;
-	class MACRO_NEW_AMMO(332_Impact_green): 3AS_SmokeShellGreen
+	class MACRO_NEW_AMMO(ORG_Impact_green): 3AS_SmokeShellGreen
 	{
 		explosionTime = -1;
 	};
 	class 3AS_SmokeShellRed;
-	class MACRO_NEW_AMMO(332_Impact_red): 3AS_SmokeShellRed
+	class MACRO_NEW_AMMO(ORG_Impact_red): 3AS_SmokeShellRed
 	{
 		explosionTime = -1;
 	};
 	class 3AS_SmokeShellPurple;
-	class MACRO_NEW_AMMO(332_Impact_purple): 3AS_SmokeShellPurple
+	class MACRO_NEW_AMMO(ORG_Impact_purple): 3AS_SmokeShellPurple
 	{
 		explosionTime = -1;
 	};
 	class 3AS_SmokeShellYellow;
-	class MACRO_NEW_AMMO(332_Impact_yellow): 3AS_SmokeShellYellow
+	class MACRO_NEW_AMMO(ORG_Impact_yellow): 3AS_SmokeShellYellow
 	{
 		explosionTime = -1;
 	};
 	class 3AS_SmokeShellOrange;
-	class MACRO_NEW_AMMO(332_Impact_orange): 3AS_SmokeShellOrange
+	class MACRO_NEW_AMMO(ORG_Impact_orange): 3AS_SmokeShellOrange
 	{
 		explosionTime = -1;
 	};
 
-	class MACRO_NEW_AMMO(332_GL_White): 3AS_SmokeShellBase
+	class MACRO_NEW_AMMO(ORG_GL_White): 3AS_SmokeShellBase
 	{
 		explosionTime=1;
 		simulation = "shotSmoke";
@@ -124,7 +124,7 @@ class CfgAmmo
 		deflectionDirDistribution=0.1;
 		deflectionSlowDown = 0.1;
 	};
-	class MACRO_NEW_AMMO(332_GL_Red): 3AS_SmokeShellRed
+	class MACRO_NEW_AMMO(ORG_GL_Red): 3AS_SmokeShellRed
 	{
 		explosionTime=1;
 		simulation = "shotSmoke";
@@ -133,7 +133,7 @@ class CfgAmmo
 		deflectionDirDistribution=0.1;
 		deflectionSlowDown = 0.1;
 	};
-	class MACRO_NEW_AMMO(332_GL_Green): 3AS_SmokeShellGreen
+	class MACRO_NEW_AMMO(ORG_GL_Green): 3AS_SmokeShellGreen
 	{
 		explosionTime=1;
 		simulation = "shotSmoke";
@@ -142,7 +142,7 @@ class CfgAmmo
 		deflectionDirDistribution=0.1;
 		deflectionSlowDown = 0.1;
 	};
-	class MACRO_NEW_AMMO(332_GL_Yellow): 3AS_SmokeShellYellow
+	class MACRO_NEW_AMMO(ORG_GL_Yellow): 3AS_SmokeShellYellow
 	{
 		explosionTime=1;
 		simulation = "shotSmoke";
@@ -151,7 +151,7 @@ class CfgAmmo
 		deflectionDirDistribution=0.1;
 		deflectionSlowDown = 0.1;
 	};
-	class MACRO_NEW_AMMO(332_GL_Purple): 3AS_SmokeShellPurple
+	class MACRO_NEW_AMMO(ORG_GL_Purple): 3AS_SmokeShellPurple
 	{
 		explosionTime=1;
 		simulation = "shotSmoke";
@@ -160,7 +160,7 @@ class CfgAmmo
 		deflectionDirDistribution=0.1;
 		deflectionSlowDown = 0.1;
 	};
-	class MACRO_NEW_AMMO(332_GL_Blue): 3AS_SmokeShellBlue
+	class MACRO_NEW_AMMO(ORG_GL_Blue): 3AS_SmokeShellBlue
 	{
 		explosionTime=1;
 		simulation = "shotSmoke";
@@ -169,7 +169,7 @@ class CfgAmmo
 		deflectionDirDistribution=0.1;
 		deflectionSlowDown = 0.1;
 	};
-	class MACRO_NEW_AMMO(332_GL_Orange): 3AS_SmokeShellOrange
+	class MACRO_NEW_AMMO(ORG_GL_Orange): 3AS_SmokeShellOrange
 	{
 		explosionTime=1;
 		simulation = "shotSmoke";
@@ -183,121 +183,121 @@ class CfgAmmo
 class CfgMagazines
 {
 	class SquadShieldMagazine;
-	class MACRO_NEW_MAG(332_SquadShield,1): SquadShieldMagazine
+	class MACRO_NEW_MAG(ORG_SquadShield,1): SquadShieldMagazine
 	{
 		author = "Halligan, Namenai, Falx";
-		displayName="[332nd] Squad Shield";
+		displayName="[ORG] Squad Shield";
 		displayNameShort="Squad Shield";
-		picture = "\332nd_weapons\equipment\data\332Squadshield.paa";
+		picture = "\ORG_weapons\equipment\data\ORGSquadshield.paa";
 		mass=20;
 	};
 	class SWLW_clones_spec_demo_mag;
-	class MACRO_NEW_MAG(332_DemoCharge,1): SWLW_clones_spec_demo_mag
+	class MACRO_NEW_MAG(ORG_DemoCharge,1): SWLW_clones_spec_demo_mag
 	{
-		displayName="[332nd] Demo Charge";
+		displayName="[ORG] Demo Charge";
 		mass=40;
 		ammo=MACRO_NEW_AMMO(Demo_charge)
     };
 	class 442_impact_mag;
-	class MACRO_NEW_MAG(332_HEDP,1): 442_impact_mag
+	class MACRO_NEW_MAG(ORG_HEDP,1): 442_impact_mag
 	{
-		displayName="[332nd] HEDP Impact Imploder";
+		displayName="[ORG] HEDP Impact Imploder";
 		mass=8;
 		displayNameShort="HEDP Impact";
-		picture = "\332nd_weapons\equipment\data\332ImpactGrenade.paa";
-		ammo=MACRO_NEW_AMMO(332_HEDP)
+		picture = "\ORG_weapons\equipment\data\ORGImpactGrenade.paa";
+		ammo=MACRO_NEW_AMMO(ORG_HEDP)
     };
 	class 442_thermal_det_mag;
-	class MACRO_NEW_MAG(332_FRAG,1): 442_thermal_det_mag
+	class MACRO_NEW_MAG(ORG_FRAG,1): 442_thermal_det_mag
 	{
-		displayName="[332nd] Thermal Detonator";
+		displayName="[ORG] Thermal Detonator";
 		displayNameShort="Thermal Det";
 		mass=8;
-		picture = "\332nd_weapons\equipment\data\332ThermalDetonator.paa";
-		ammo=MACRO_NEW_AMMO(332_FRAG)
+		picture = "\ORG_weapons\equipment\data\ORGThermalDetonator.paa";
+		ammo=MACRO_NEW_AMMO(ORG_FRAG)
     };
 	class ACE_M14;
-	class MACRO_NEW_MAG(332_INCENDIARY,1): ACE_M14
+	class MACRO_NEW_MAG(ORG_INCENDIARY,1): ACE_M14
 	{
-		displayName="[332nd] AT Charge";
+		displayName="[ORG] AT Charge";
 		mass=16;
 		displayNameShort="AT Charge";
 		initspeed=12;
 		picture = "\SWLW_clones_spec\explosives\data\ui\breach_ui_ca.paa";
-		ammo=MACRO_NEW_AMMO(332_AT_Grenade)
+		ammo=MACRO_NEW_AMMO(ORG_AT_Grenade)
     };
 	class 3AS_SonicDet;
-	class MACRO_NEW_MAG(332_FLASH,1): 3AS_SonicDet
+	class MACRO_NEW_MAG(ORG_FLASH,1): 3AS_SonicDet
 	{
-		displayName="[332nd] 4-flash Sonic Detonator";
+		displayName="[ORG] 4-flash Sonic Detonator";
 		displayNameShort="Sonic Det";
-		picture = "\332nd_weapons\equipment\data\3324Flashbang.paa";
+		picture = "\ORG_weapons\equipment\data\ORG4Flashbang.paa";
 		mass=4;
-		ammo=MACRO_NEW_AMMO(332_FLASH)
+		ammo=MACRO_NEW_AMMO(ORG_FLASH)
     };
 	class 3AS_Smoke_Base;
-	class MACRO_NEW_MAG(332_SMOKE_IMPACT_WHITE,1): 3AS_Smoke_Base
+	class MACRO_NEW_MAG(ORG_SMOKE_IMPACT_WHITE,1): 3AS_Smoke_Base
 	{
-		displayName="[332nd] Impact Smk White";
+		displayName="[ORG] Impact Smk White";
 		displayNameShort="White Impact Smk";
-		picture = "\332nd_weapons\equipment\data\332WhiteSmoke.paa";
+		picture = "\ORG_weapons\equipment\data\ORGWhiteSmoke.paa";
 		mass=4;
 		scopeArsenal = 2;
-		ammo=MACRO_NEW_AMMO(332_Impact_white)
+		ammo=MACRO_NEW_AMMO(ORG_Impact_white)
     };
 	class 3AS_SmokeBlue;
-	class MACRO_NEW_MAG(332_SMOKE_IMPACT_BLUE,1): 3AS_SmokeBlue
+	class MACRO_NEW_MAG(ORG_SMOKE_IMPACT_BLUE,1): 3AS_SmokeBlue
 	{
-		displayName="[332nd] Impact Smk Blue";
+		displayName="[ORG] Impact Smk Blue";
 		displayNameShort="Blue Impact Smk";
-		picture = "\332nd_weapons\equipment\data\332BlueSmoke.paa";
+		picture = "\ORG_weapons\equipment\data\ORGBlueSmoke.paa";
 		mass=4;
-		ammo= MACRO_NEW_AMMO(332_Impact_blue)
+		ammo= MACRO_NEW_AMMO(ORG_Impact_blue)
     };
 	class 3AS_SmokeGreen;
-	class MACRO_NEW_MAG(332_SMOKE_IMPACT_GREEN,1): 3AS_SmokeGreen
+	class MACRO_NEW_MAG(ORG_SMOKE_IMPACT_GREEN,1): 3AS_SmokeGreen
 	{
-		displayName="[332nd] Impact Smk Green";
+		displayName="[ORG] Impact Smk Green";
 		displayNameShort="Green Impact Smk";
-		picture = "\332nd_weapons\equipment\data\332GreenSmoke.paa";
+		picture = "\ORG_weapons\equipment\data\ORGGreenSmoke.paa";
 		mass=4;
-		ammo=MACRO_NEW_AMMO(332_Impact_green)
+		ammo=MACRO_NEW_AMMO(ORG_Impact_green)
     };
 	class 3AS_SmokeRed;
-	class MACRO_NEW_MAG(332_SMOKE_IMPACT_RED,1): 3AS_SmokeRed
+	class MACRO_NEW_MAG(ORG_SMOKE_IMPACT_RED,1): 3AS_SmokeRed
 	{
-		displayName="[332nd] Impact Smk Red";
+		displayName="[ORG] Impact Smk Red";
 		displayNameShort="Red Impact Smk";
-		picture = "\332nd_weapons\equipment\data\332RedSmoke.paa";
+		picture = "\ORG_weapons\equipment\data\ORGRedSmoke.paa";
 		mass=4;
-		ammo=MACRO_NEW_AMMO(332_Impact_red)
+		ammo=MACRO_NEW_AMMO(ORG_Impact_red)
     };
 	class 3AS_SmokePurple;
-	class MACRO_NEW_MAG(332_SMOKE_IMPACT_PURPLE,1): 3AS_SmokePurple
+	class MACRO_NEW_MAG(ORG_SMOKE_IMPACT_PURPLE,1): 3AS_SmokePurple
 	{
-		displayName="[332nd] Impact Smk Purple";
+		displayName="[ORG] Impact Smk Purple";
 		displayNameShort="Purple Impact Smk";
-		picture = "\332nd_weapons\equipment\data\332PurpleSmoke.paa";
+		picture = "\ORG_weapons\equipment\data\ORGPurpleSmoke.paa";
 		mass=4;
-		ammo=MACRO_NEW_AMMO(332_Impact_purple)
+		ammo=MACRO_NEW_AMMO(ORG_Impact_purple)
     };
 	class 3AS_SmokeYellow;
-	class MACRO_NEW_MAG(332_SMOKE_IMPACT_YELLOW,1): 3AS_SmokeYellow
+	class MACRO_NEW_MAG(ORG_SMOKE_IMPACT_YELLOW,1): 3AS_SmokeYellow
 	{
-		displayName="[332nd] Impact Smk Yellow";
+		displayName="[ORG] Impact Smk Yellow";
 		displayNameShort="Yellow Impact Smk";
-		picture = "\332nd_weapons\equipment\data\332YellowSmoke.paa";
+		picture = "\ORG_weapons\equipment\data\ORGYellowSmoke.paa";
 		mass=4;
-		ammo=MACRO_NEW_AMMO(332_Impact_yellow)
+		ammo=MACRO_NEW_AMMO(ORG_Impact_yellow)
     };
 	class 3AS_SmokeOrange;
-	class MACRO_NEW_MAG(332_SMOKE_IMPACT_ORANGE,1): 3AS_SmokeOrange
+	class MACRO_NEW_MAG(ORG_SMOKE_IMPACT_ORANGE,1): 3AS_SmokeOrange
 	{
-		displayName="[332nd] Impact Smk Orange";
+		displayName="[ORG] Impact Smk Orange";
 		displayNameShort="Orange Impact Smk";
-		picture = "\332nd_weapons\equipment\data\332OrangeSmoke.paa";
+		picture = "\ORG_weapons\equipment\data\ORGOrangeSmoke.paa";
 		mass=4;
-		ammo=MACRO_NEW_AMMO(332_Impact_orange)
+		ammo=MACRO_NEW_AMMO(ORG_Impact_orange)
     };
 	class 3Rnd_Smoke_Grenade_shell;
 	class 3Rnd_SmokeRed_Grenade_shell;
@@ -307,104 +307,104 @@ class CfgMagazines
 	class 3Rnd_SmokeBlue_Grenade_shell;
 	class 3Rnd_SmokeOrange_Grenade_shell;
 
-	class MACRO_NEW_MAG(332_GL_SMOKE_WHITE,1): 3Rnd_Smoke_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL_SMOKE_WHITE,1): 3Rnd_Smoke_Grenade_shell
 	{
-		displayName="[332nd] 1rnd GL Smoke White";
+		displayName="[ORG] 1rnd GL Smoke White";
 		displayNameShort="GL Impact Smoke(white)";
 		count=1;
-		ammo=MACRO_NEW_AMMO(332_GL_White)
+		ammo=MACRO_NEW_AMMO(ORG_GL_White)
 	};
-	class MACRO_NEW_MAG(332_GL_SMOKE_RED,1): 3Rnd_SmokeRed_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL_SMOKE_RED,1): 3Rnd_SmokeRed_Grenade_shell
 	{
-		displayName="[332nd] 1rnd GL Smoke Red";
+		displayName="[ORG] 1rnd GL Smoke Red";
 		displayNameShort="GL Impact Smoke(red)";
 		count=1;
-		ammo=MACRO_NEW_AMMO(332_GL_Red)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Red)
 	};
-	class MACRO_NEW_MAG(332_GL_SMOKE_GREEN,1): 3Rnd_SmokeGreen_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL_SMOKE_GREEN,1): 3Rnd_SmokeGreen_Grenade_shell
 	{
-		displayName="[332nd] 1rnd GL Smoke Green";
+		displayName="[ORG] 1rnd GL Smoke Green";
 		displayNameShort="GL Impact Smoke(green)";
 		count=1;
-		ammo=MACRO_NEW_AMMO(332_GL_Green)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Green)
 	};
-	class MACRO_NEW_MAG(332_GL_SMOKE_YELLOW,1): 3Rnd_SmokeYellow_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL_SMOKE_YELLOW,1): 3Rnd_SmokeYellow_Grenade_shell
 	{
-		displayName="[332nd] 1rnd GL Smoke Yellow";
+		displayName="[ORG] 1rnd GL Smoke Yellow";
 		displayNameShort="GL Impact Smoke(yellow)";
 		count=1;
-		ammo=MACRO_NEW_AMMO(332_GL_Yellow)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Yellow)
 	};
-	class MACRO_NEW_MAG(332_GL_SMOKE_PURPLE,1): 3Rnd_SmokePurple_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL_SMOKE_PURPLE,1): 3Rnd_SmokePurple_Grenade_shell
 	{
-		displayName="[332nd] 1rnd GL Smoke Purple";
+		displayName="[ORG] 1rnd GL Smoke Purple";
 		displayNameShort="GL Impact Smoke(purple)";
 		count=1;
-		ammo=MACRO_NEW_AMMO(332_GL_Purple)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Purple)
 	};
-	class MACRO_NEW_MAG(332_GL_SMOKE_BLUE,1): 3Rnd_SmokeBlue_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL_SMOKE_BLUE,1): 3Rnd_SmokeBlue_Grenade_shell
 	{
-		displayName="[332nd] 1rnd GL Smoke Blue";
+		displayName="[ORG] 1rnd GL Smoke Blue";
 		displayNameShort="GL Impact Smoke(blue)";
 		count=1;
-		ammo=MACRO_NEW_AMMO(332_GL_Blue)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Blue)
 	};
-	class MACRO_NEW_MAG(332_GL_SMOKE_ORANGE,1): 3Rnd_SmokeOrange_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL_SMOKE_ORANGE,1): 3Rnd_SmokeOrange_Grenade_shell
 	{
-		displayName="[332nd] 1rnd GL Smoke Orange";
+		displayName="[ORG] 1rnd GL Smoke Orange";
 		displayNameShort="GL Impact Smoke(orange)";
 		count=1;
-		ammo=MACRO_NEW_AMMO(332_GL_Orange)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Orange)
 	};
 	
-	class MACRO_NEW_MAG(332_GL3_SMOKE_WHITE,3): 3Rnd_Smoke_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL3_SMOKE_WHITE,3): 3Rnd_Smoke_Grenade_shell
 	{
-		displayName="[332nd] 3rnd GL Smoke White";
+		displayName="[ORG] 3rnd GL Smoke White";
 		displayNameShort="GL Impact Smoke(white)";
 		count=3;
-		ammo=MACRO_NEW_AMMO(332_GL_White)
+		ammo=MACRO_NEW_AMMO(ORG_GL_White)
 	};
-	class MACRO_NEW_MAG(332_GL3_SMOKE_RED,3): 3Rnd_SmokeRed_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL3_SMOKE_RED,3): 3Rnd_SmokeRed_Grenade_shell
 	{
-		displayName="[332nd] 3rnd GL Smoke Red";
+		displayName="[ORG] 3rnd GL Smoke Red";
 		displayNameShort="GL Impact Smoke(red)";
 		count=3;
-		ammo=MACRO_NEW_AMMO(332_GL_Red)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Red)
 	};
-	class MACRO_NEW_MAG(332_GL3_SMOKE_GREEN,3): 3Rnd_SmokeGreen_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL3_SMOKE_GREEN,3): 3Rnd_SmokeGreen_Grenade_shell
 	{
-		displayName="[332nd] 3rnd GL Smoke Green";
+		displayName="[ORG] 3rnd GL Smoke Green";
 		displayNameShort="GL Impact Smoke(green)";
 		count=3;
-		ammo=MACRO_NEW_AMMO(332_GL_Green)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Green)
 	};
-	class MACRO_NEW_MAG(332_GL3_SMOKE_YELLOW,3): 3Rnd_SmokeYellow_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL3_SMOKE_YELLOW,3): 3Rnd_SmokeYellow_Grenade_shell
 	{
-		displayName="[332nd] 3rnd GL Smoke Yellow";
+		displayName="[ORG] 3rnd GL Smoke Yellow";
 		displayNameShort="GL Impact Smoke(yellow)";
 		count=3;
-		ammo=MACRO_NEW_AMMO(332_GL_Yellow)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Yellow)
 	};
-	class MACRO_NEW_MAG(332_GL3_SMOKE_PURPLE,3): 3Rnd_SmokePurple_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL3_SMOKE_PURPLE,3): 3Rnd_SmokePurple_Grenade_shell
 	{
-		displayName="[332nd] 3rnd GL Smoke Purple";
+		displayName="[ORG] 3rnd GL Smoke Purple";
 		displayNameShort="GL Impact Smoke(purple)";
 		count=3;
-		ammo=MACRO_NEW_AMMO(332_GL_Purple)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Purple)
 	};
-	class MACRO_NEW_MAG(332_GL3_SMOKE_BLUE,3): 3Rnd_SmokeBlue_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL3_SMOKE_BLUE,3): 3Rnd_SmokeBlue_Grenade_shell
 	{
-		displayName="[332nd] 3rnd GL Smoke Blue";
+		displayName="[ORG] 3rnd GL Smoke Blue";
 		displayNameShort="GL Impact Smoke(blue)";
 		count=3;
-		ammo=MACRO_NEW_AMMO(332_GL_Blue)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Blue)
 	};
-	class MACRO_NEW_MAG(332_GL3_SMOKE_ORANGE,3): 3Rnd_SmokeOrange_Grenade_shell
+	class MACRO_NEW_MAG(ORG_GL3_SMOKE_ORANGE,3): 3Rnd_SmokeOrange_Grenade_shell
 	{
-		displayName="[332nd] 3rnd GL Smoke Orange";
+		displayName="[ORG] 3rnd GL Smoke Orange";
 		displayNameShort="GL Impact Smoke(orange)";
 		count=3;
-		ammo=MACRO_NEW_AMMO(332_GL_Orange)
+		ammo=MACRO_NEW_AMMO(ORG_GL_Orange)
 	};
 
 };
@@ -417,102 +417,102 @@ class CfgWeapons
 	{
 		muzzles[]+=
 		{
-			"332nd_SquadShield_Muzzle",
-			"332nd_HEDP_Muzzle",
-			"332nd_FRAG_Muzzle",
-			"332nd_INCENDIARY_Muzzle",
-			"332_FLASH_Muzzle",
-			"332_Impact_white_Muzzle",
-			"332_Impact_blue_Muzzle",
-			"332_Impact_green_Muzzle",
-			"332_Impact_red_Muzzle",
-			"332_Impact_purple_Muzzle",
-			"332_Impact_yellow_Muzzle",
-			"332_Impact_orange_Muzzle",
+			"ORG_SquadShield_Muzzle",
+			"ORG_HEDP_Muzzle",
+			"ORG_FRAG_Muzzle",
+			"ORG_INCENDIARY_Muzzle",
+			"ORG_FLASH_Muzzle",
+			"ORG_Impact_white_Muzzle",
+			"ORG_Impact_blue_Muzzle",
+			"ORG_Impact_green_Muzzle",
+			"ORG_Impact_red_Muzzle",
+			"ORG_Impact_purple_Muzzle",
+			"ORG_Impact_yellow_Muzzle",
+			"ORG_Impact_orange_Muzzle",
 		};
 		class ThrowMuzzle;
-		class 332nd_SquadShield_Muzzle: ThrowMuzzle
+		class ORG_SquadShield_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_SquadShield,1)
+				MACRO_NEW_MAG(ORG_SquadShield,1)
 			};
 		};
-		class 332nd_HEDP_Muzzle: ThrowMuzzle
+		class ORG_HEDP_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_HEDP,1)
+				MACRO_NEW_MAG(ORG_HEDP,1)
 			};
 		};
-		class 332nd_FRAG_Muzzle: ThrowMuzzle
+		class ORG_FRAG_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_FRAG,1)
+				MACRO_NEW_MAG(ORG_FRAG,1)
 			};
 		};
-		class 332nd_INCENDIARY_Muzzle: ThrowMuzzle
+		class ORG_INCENDIARY_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_INCENDIARY,1)
+				MACRO_NEW_MAG(ORG_INCENDIARY,1)
 			};
 		};
-		class 332_FLASH_Muzzle: ThrowMuzzle
+		class ORG_FLASH_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_FLASH,1)
+				MACRO_NEW_MAG(ORG_FLASH,1)
 			};
 		};
-		class 332_Impact_white_Muzzle: ThrowMuzzle
+		class ORG_Impact_white_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_SMOKE_IMPACT_WHITE,1)
+				MACRO_NEW_MAG(ORG_SMOKE_IMPACT_WHITE,1)
 			};
 		};
-		class 332_Impact_blue_Muzzle: ThrowMuzzle
+		class ORG_Impact_blue_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				 MACRO_NEW_MAG(332_SMOKE_IMPACT_BLUE,1)
+				 MACRO_NEW_MAG(ORG_SMOKE_IMPACT_BLUE,1)
 			};
 		};
-		class 332_Impact_green_Muzzle: ThrowMuzzle
+		class ORG_Impact_green_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_SMOKE_IMPACT_GREEN,1)
+				MACRO_NEW_MAG(ORG_SMOKE_IMPACT_GREEN,1)
 			};
 		};
-		class 332_Impact_red_Muzzle: ThrowMuzzle
+		class ORG_Impact_red_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_SMOKE_IMPACT_RED,1)
+				MACRO_NEW_MAG(ORG_SMOKE_IMPACT_RED,1)
 			};
 		};
-		class 332_Impact_purple_Muzzle: ThrowMuzzle
+		class ORG_Impact_purple_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_SMOKE_IMPACT_PURPLE,1)
+				MACRO_NEW_MAG(ORG_SMOKE_IMPACT_PURPLE,1)
 			};
 		};
-		class 332_Impact_yellow_Muzzle: ThrowMuzzle
+		class ORG_Impact_yellow_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-			    MACRO_NEW_MAG(332_SMOKE_IMPACT_YELLOW,1)
+			    MACRO_NEW_MAG(ORG_SMOKE_IMPACT_YELLOW,1)
 			};
 		};
-		class 332_Impact_orange_Muzzle: ThrowMuzzle
+		class ORG_Impact_orange_Muzzle: ThrowMuzzle
 		{
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_SMOKE_IMPACT_ORANGE,1)
+				MACRO_NEW_MAG(ORG_SMOKE_IMPACT_ORANGE,1)
 			};
 		};
 
@@ -522,17 +522,17 @@ class CfgWeapons
 	{
 		muzzles[] +=
 		{
-			"332_demoCharge_Muzzle"
+			"ORG_demoCharge_Muzzle"
 		};
 		displayName="$STR_A3_CfgWeapons_Put0";
 		class PutMuzzle;
-		class 332_DemoCharge_Muzzle: PutMuzzle
+		class ORG_DemoCharge_Muzzle: PutMuzzle
 		{
 			autoreload=0;
 			enableAttack=1;
 			magazines[]=
 			{
-				MACRO_NEW_MAG(332_DemoCharge,1)
+				MACRO_NEW_MAG(ORG_DemoCharge,1)
 			};
 			multiSoundHit[]=
 			{
@@ -541,7 +541,7 @@ class CfgWeapons
 				"soundHit2",
 				0.5
 			};
-			displayName="[332nd] Demolition Charge";
+			displayName="[ORG] Demolition Charge";
 			showToPlayer=0;
 		};
 	};
@@ -552,7 +552,7 @@ class CfgWeapons
 	{
 		author = "Falx";
 		scope = 2;
-		displayName = "[332nd] CRD-4 'Emara'";
+		displayName = "[ORG] CRD-4 'Emara'";
 		descriptionShort = "UAV";
 		picture = "\DRNP_main\DRNP\addons\main\UI\icon_dron.paa";
 		model = "\A3\Weapons_F\Items\Toolkit";
@@ -576,8 +576,8 @@ class CfgVehicles
 				class ace_drone_place_Emara
 				{
 					displayName = "Place CRD-4 drone";
-					condition = "[_player,'332nd_aux_weapon_CRD_4_Emara'] call ace_common_fnc_hasItem";
-					statement = "[_player,'332nd_aux_weapon_CRD_4_Emara'] call Aux_Emara_fnc_place";
+					condition = "[_player,'ORG_aux_weapon_CRD_4_Emara'] call ace_common_fnc_hasItem";
+					statement = "[_player,'ORG_aux_weapon_CRD_4_Emara'] call Aux_Emara_fnc_place";
 					exceptions[] = {};
 					icon = "\DRNP_main\DRNP\addons\main\UI\Icon_dron.paa";
 				};
@@ -643,8 +643,8 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_DRONE";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_DRONE";
 
 		crew = "B_UAV_AI";
 		typicalCargo[] =
@@ -686,7 +686,7 @@ class CfgVehicles
 	};
 
 	class ACE_Explosives_Place;
-	class 332nd_DemoPack_Placeable : ACE_Explosives_Place
+	class ORG_DemoPack_Placeable : ACE_Explosives_Place
 	{
 		model = "SWLW_clones_spec\explosives\demo.p3d";
 	};

@@ -19,7 +19,7 @@ class CfgPatches
 		{
 			MACRO_NEW_WEAPON(Westar_M5),
             MACRO_NEW_WEAPON(Westar_M5_GL),
-			"332nd_WestarM5_Scope"
+			"ORG_WestarM5_Scope"
 		};
 	};
 };
@@ -65,20 +65,20 @@ class CfgWeapons
 			MACRO_NEW_MAG(Westar_M5,40)
 		};
 		magazineWell[] = {};
-		class 332Stun: JLTS_stun_muzzle
+		class ORGStun: JLTS_stun_muzzle
 		{
 	    magazines[]=
 		{
 			MACRO_NEW_MAG(Stun,10)
 		};
 		magazineWell[]={};
-		cursoraim="332_Stun";
-		cursor="332_DOT"
+		cursoraim="ORG_Stun";
+		cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332Stun"
+			"ORGStun"
 		};
 		reloadAction="GestureReloadMX";
 		magazineReloadSwitchPhase=0.40000001;
@@ -90,8 +90,8 @@ class CfgWeapons
 		dexterity=1.5;
 		initSpeed=-1;
 		maxZeroing=500;
-		cursor="332_DOT";
-        cursoraim="332_DC15C";
+		cursor="ORG_DOT";
+        cursoraim="ORG_DC15C";
 		ace_overheating_mrbs=3000;
 		ace_overheating_slowdownFactor=1;
 		ace_overheating_allowSwapBarrel=0;
@@ -112,7 +112,7 @@ class CfgWeapons
 				linkProxy="\A3\data_f\proxies\weapon_slots\TOP";
 				compatibleItems[]=
 				{
-					"332nd_WestarM5_Scope"
+					"ORG_WestarM5_Scope"
 				};
 			};
 			class PointerSlot: PointerSlot
@@ -170,7 +170,7 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType 
 			{
-				soundSetShot[] = {"332_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_WestarM5_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 		};
 		class FullAuto: Mode_FullAuto
@@ -189,7 +189,7 @@ class CfgWeapons
 			sounds[] = {"StandardSound"};
 			class StandardSound: BaseSoundModeType 
 			{
-				soundSetShot[] = {"332_WestarM5_Shot_SoundSet","332_DC15a_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_WestarM5_Shot_SoundSet","ORG_DC15a_Tail_SoundSet"};
 			};
 		};
 			class OpticsModes
@@ -246,9 +246,9 @@ class CfgWeapons
 				cameraDir="";
 			};
 		};
-		class 332nd_WestarM5_GL: UGL_F
+		class ORG_WestarM5_GL: UGL_F
 		{
-			displayName="[332nd] WestarM5-GL";
+			displayName="[ORG] WestarM5-GL";
 			descriptionShort="GL for the WestarM5 Platform";
 			useModelOptics=0;
 			useExternalOptic=0;
@@ -258,25 +258,25 @@ class CfgWeapons
 				"ACE_HuntIR_M203",
                 MACRO_NEW_MAG(DC_15_UGL_AP,2),
                 MACRO_NEW_MAG(DC_15_UGL_HE,4),
-				MACRO_NEW_MAG(332_GL_SMOKE_WHITE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_RED,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_GREEN,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_YELLOW,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_PURPLE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_BLUE,1),
-				MACRO_NEW_MAG(332_GL_SMOKE_ORANGE,1),
-				MACRO_NEW_MAG(332_GL3_SMOKE_WHITE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_RED,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_GREEN,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_YELLOW,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_PURPLE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_BLUE,3),
-				MACRO_NEW_MAG(332_GL3_SMOKE_ORANGE,3),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_WHITE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_RED,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_GREEN,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_YELLOW,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_PURPLE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_BLUE,1),
+				MACRO_NEW_MAG(ORG_GL_SMOKE_ORANGE,1),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_WHITE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_RED,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_GREEN,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_YELLOW,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_PURPLE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_BLUE,3),
+				MACRO_NEW_MAG(ORG_GL3_SMOKE_ORANGE,3),
 			};
 			magazineWell[]={};
 			cameraDir="OP_look";
-			cursor="332_DOT";
-			cursorAim="332_UGL";
+			cursor="ORG_DOT";
+			cursorAim="ORG_UGL";
 
 			discreteDistance[]={25,50,100,200,300,400};
 			discreteDistanceCameraPoint[]=
@@ -292,7 +292,7 @@ class CfgWeapons
 		    {
 				class StandardSound: BaseSoundModeType
 				{
-					soundSetShot[] = {"332_UGL_Shot_SoundSet","332_Rocket_Tail_SoundSet"};
+					soundSetShot[] = {"ORG_UGL_Shot_SoundSet","ORG_Rocket_Tail_SoundSet"};
 				};
 				sounds[]=
 				{
@@ -365,7 +365,7 @@ class CfgWeapons
 		muzzles[]=
 		{
 			"this",
-			"332nd_WestarM5_GL"
+			"ORG_WestarM5_GL"
 		};
 		class WeaponSlotsInfo: WeaponSlotsInfo
 		{
@@ -373,7 +373,7 @@ class CfgWeapons
 			{
 				compatibleItems[]=
 				{
-					"332nd_WestarM5_Scope"
+					"ORG_WestarM5_Scope"
 				};
 			};
 			mass=80;
@@ -385,10 +385,10 @@ class CfgWeapons
 	};
 	class ItemCore;
 	class InventoryOpticsItem_Base_F;
-	class 332nd_WestarM5_Scope: ItemCore
+	class ORG_WestarM5_Scope: ItemCore
 	{
 		scope=2;
-		displayName="[332nd] Spotting Scope";
+		displayName="[ORG] Spotting Scope";
 		picture="\3AS\3AS_Weapons\Data\Textures\Energy_Cell_Arsenal.paa";
 		model="\3AS\3AS_Weapons\WestarM5\3AS_Westar_Scope_F.p3d";
 		weaponInfoType="RscWeaponZeroing";
@@ -432,7 +432,7 @@ class CfgWeapons
 					opticsDisablePeripherialVision=1;
 					cameraDir="";
 				};
-				class 3332nd_OverSight_Optic: 3AS_Scope_Optics
+				class 3ORG_OverSight_Optic: 3AS_Scope_Optics
 				{
 					opticsID=2;
 					useModelOptics=0;
@@ -482,11 +482,11 @@ class CfgAmmo
 	{
 	   soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
        ACE_bulletMass = 3;
 	   cartridge = "";
-	   effectfly = "332nd_mainRound_effects";
+	   effectfly = "ORG_mainRound_effects";
 	   class HitEffects
 		{
 			Hit_Foliage_green = "3AS_ImpactPlasma";

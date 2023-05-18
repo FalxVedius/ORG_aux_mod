@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Shotguns)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -24,11 +24,11 @@ class CfgPatches
 
 class CfgFunctions
 {
-	class Aux332nd
+	class AuxORG
 	{
 		class DP_23Sounds
 		{
-			file = "\332nd_weapons\DP-23";
+			file = "\ORG_weapons\DP-23";
 			class Fired_DP23_Sound
 			{
 			};
@@ -74,8 +74,8 @@ class cfgWeapons
 		ACE_Overheating_mrbs=300000;
 		recoil="recoil_smg_03";
 		recoilprone="recoil_smg_03";
-		cursor="332_DOT";
-        cursoraim="332_Shotgun";
+		cursor="ORG_DOT";
+        cursoraim="ORG_Shotgun";
 		canShootInWater=1;
 		baseweapon="";
 		handling="2";
@@ -90,20 +90,20 @@ class cfgWeapons
 			MACRO_NEW_MAG(DP23,12Wide)
 		};
 	
-		class 332Stun: JLTS_stun_muzzle
+		class ORGStun: JLTS_stun_muzzle
 		{
 	       magazines[]=
 		   {
 		  	MACRO_NEW_MAG(Stun,10)
 		   };
 		   magazineWell[]={};
-		   cursoraim="332_Stun";
-		   cursor="332_DOT"
+		   cursoraim="ORG_Stun";
+		   cursor="ORG_DOT"
 		};
 		muzzles[]=
 		{
 			"this",
-			"332Stun"
+			"ORGStun"
 		};
 
         class OpticsModes
@@ -135,14 +135,14 @@ class cfgWeapons
 
 		// magazines[]=
 		// {
-		// 	"332_Shotgun_blue"
+		// 	"ORG_Shotgun_blue"
 		// };
 
         class Single: Mode_SemiAuto
 		{
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_DP23_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_DP23_Shot_SoundSet","ORG_Sniper_Tail_SoundSet"};
 			};
 			sounds[] = {"StandardSound"};
 			reloadTime=0.7;
@@ -173,7 +173,7 @@ class cfgWeapons
 
 		class EventHandlers
 		{
-			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_DP23_Sound;";
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn AuxORG_fnc_Fired_DP23_Sound;";
 		};
 				
 	};
@@ -220,7 +220,7 @@ class CfgAmmo
 		submunitionConeType[] = {"poissondisc",12};
 
 		model = "ls_weapons_core\Effects\laser_blue.p3d";
-		effectfly = "332nd_mainRound_effects";
+		effectfly = "ORG_mainRound_effects";
 		ExplosionEffects = "ls_plasma_impact";
 
 		indirectHit = 0;
@@ -308,7 +308,7 @@ class CfgAmmo
 		caliber = 1;
 		typicalSpeed = 360;
 		triggerDistance = 0;
-		effectfly = "332nd_mainRound_effects";
+		effectfly = "ORG_mainRound_effects";
 		ExplosionEffects = "ls_plasma_impact";
 		model = "ls_weapons_core\Effects\laser_blue.p3d";
 		class HitEffects

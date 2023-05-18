@@ -36,7 +36,7 @@ class CfgAmmo
 		indirectHitRange=8;
 		maxControlRange = 2500;
 		maxSpeed = 700;
-		effectsMissile = "332nd_aux_effects_missile_blue";
+		effectsMissile = "ORG_aux_effects_missile_blue";
 		flightProfiles[] = { Direct };
 		manueuvrability = 26;
 		thrust = 700;
@@ -48,7 +48,7 @@ class CfgAmmo
 		typicalSpeed = 700;
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			"ORG_weapons\sounds\weapons\flight\rocketengine1.wss",
 			2,
 			1.5,
 			200
@@ -65,18 +65,18 @@ class CfgAmmo
 		maxSpeed = 150;
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss", //try OGG
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss", //try OGG
 			2,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			"ORG_weapons\sounds\weapons\flight\rocketengine1.wss",
 			2,
 			1.5,
 			200
@@ -99,14 +99,14 @@ class CfgAmmo
 		manualControl = 0;
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss",
 			2,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			"ORG_weapons\sounds\weapons\flight\rocketengine1.wss",
 			1,
 			1.5,
 			200
@@ -117,17 +117,17 @@ class CfgAmmo
 	{
 		cmImmunity=1;
 		hit=1700;
-		effectsMissile = "332nd_aux_effects_missile_red";
+		effectsMissile = "ORG_aux_effects_missile_red";
 		missileLockMaxDistance = 3000;
 		manueuvrability = 25;
 		sideAirFriction = 0.02;
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			"ORG_weapons\sounds\weapons\flight\RocketEngine.wss",
 			2,
 			1.5,
 			200
@@ -135,7 +135,7 @@ class CfgAmmo
 		missileKeepLockedCone = 360;
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss",
 			2,
 			1,
 			750
@@ -160,7 +160,7 @@ class CfgAmmo
 	  caliber = 1;
 	  tracerscale = 6;
 	  tracerstarttime = 0;
-	  effectsMissile = "332nd_aux_effects_RPS4_blue";
+	  effectsMissile = "ORG_aux_effects_RPS4_blue";
 	  tracerendtime = 10;
 	  tracerColor[] = {0.7,0.7,0.5,0.04};
 	  tracerColorR[] = {0.7,0.7,0.5,0.04};
@@ -180,7 +180,7 @@ class CfgAmmo
 	  model = "ls_weapons_core\Effects\laser_green.p3d";
 	  effectfly = "ls_plasma_green";
 	  effectflare = "FlareShell";
-	  effectsMissile = "332nd_aux_effects_RPS4_green";
+	  effectsMissile = "ORG_aux_effects_RPS4_green";
 	  flaresize = 10;
 	  tracerscale = 6;
 	  caliber = 1;
@@ -218,14 +218,14 @@ class CfgAmmo
 		indirectHit=20;
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		manualControl=1;
 		missileManualControlCone = 90;
 		weaponLockSystem = "1 + 2 + 16";
 		indirectHitRange=8;
 		maxSpeed = 100;
-		effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
+		effectsMissile = "ORG_aux_effects_missile_Rocket_Purple";
 		manueuvrability = 30;
 		thrust = 80;
 		thrustTime = 20;
@@ -236,14 +236,14 @@ class CfgAmmo
 		missileKeepLockedCone = 360;
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss",
 			2,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			"ORG_weapons\sounds\weapons\flight\rocketengine1.wss",
 			2,
 			1.5,
 			200
@@ -258,17 +258,17 @@ class CfgAmmo
 		indirectHit=500;
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss",
 			1,
 			1,
 			750
 		};
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		indirectHitRange=30;
-		effectsMissile = "332nd_aux_effects_missile_plx_green";
+		effectsMissile = "ORG_aux_effects_missile_plx_green";
 		explosionEffects = "BombExplosion";
 		maxSpeed = 75;
 		thrust = 50;
@@ -288,24 +288,24 @@ class CfgAmmo
 		sideAirFriction = 0.02;
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss",
 			1,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\rocketengine1.wss",
+			"ORG_weapons\sounds\weapons\flight\rocketengine1.wss",
 			1,
 			1.5,
 			200
 		};
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		missileKeepLockedCone = 360;
-		effectsMissile = "332nd_aux_effects_missile_plx_red";
+		effectsMissile = "ORG_aux_effects_missile_plx_red";
 	};
 };
 

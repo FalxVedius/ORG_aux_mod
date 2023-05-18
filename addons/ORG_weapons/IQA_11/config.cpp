@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(Firepuncher)
 	{
-		author="332nd Aux Team";
+		author="ORG Aux Team";
 		addonRootClass = MACRO_PATCH_NAME(weapons);
 		requiredAddons[]=
 		{
@@ -20,7 +20,7 @@ class CfgPatches
 		weapons[]=
 		{
 			MACRO_NEW_WEAPON(Firepuncher),
-			"332nd_Firepuncher_Suppressor"
+			"ORG_Firepuncher_Suppressor"
 		};
 	};
 };
@@ -34,10 +34,10 @@ class CfgAmmo
 		 hit = 45;
 		 coefGravity = 1;
 		 caliber = 2;
-		 effectfly = "332nd_mainRound_effects";
+		 effectfly = "ORG_mainRound_effects";
 		  soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		 class HitEffects
 		{
@@ -69,13 +69,13 @@ class CfgAmmo
 	};
 	class MACRO_NEW_AMMO(Refined_high_T): ls_ammo_127x108_blue
 	{
-		 effectfly="332nd_aux_effects_blue_bullet";
+		 effectfly="ORG_aux_effects_blue_bullet";
          soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,2,1000};
 		 ACE_bulletMass = 2;
 		 coefGravity = 1;
 		  soundsetsoniccrack[]=
 		{
-			"332nd_blaster_flyby_soundset"
+			"ORG_blaster_flyby_soundset"
 		};
 		 class HitEffects
 		{
@@ -160,11 +160,11 @@ class CfgMagazines
 
 class CfgFunctions
 {
-	class Aux332nd
+	class AuxORG
 	{
 		class FirePuncher_Sounds
 		{
-			file = "\332nd_weapons\IQA_11";
+			file = "\ORG_weapons\IQA_11";
 			class Fired_FirePuncher_Sound
 			{
 			};
@@ -210,10 +210,10 @@ class CfgWeapons
 	};
 	class ItemCore;
 	class InventoryMuzzleItem_Base_F;	
-	class 332nd_Firepuncher_Suppressor: muzzle_snds_338_black
+	class ORG_Firepuncher_Suppressor: muzzle_snds_338_black
 	{
 		scope = 2;
-		displayName = "332nd Firepuncher Suppressor";
+		displayName = "ORG Firepuncher Suppressor";
 		picture = "\a3\Weapons_F_Mark\Data\UI\icon_muzzle_snds_338_black_ca.paa";
 		model = "\A3\Weapons_F\Acc\acca_snds_338_black_F";	
 		
@@ -263,7 +263,7 @@ class CfgWeapons
 		baseweapon = "";
 		picture="\SWLW_merc_mando\rifles\sniper\data\ui\sniper_ui.paa";
 
-		model = "332nd_weapons\IQA_11\CrossHair_Sniper.p3d";
+		model = "ORG_weapons\IQA_11\CrossHair_Sniper.p3d";
 		handAnim[] =
 		{
 			"OFP2_ManSkeleton",
@@ -321,11 +321,11 @@ class CfgWeapons
 			sounds[] = {"StandardSound","SilencedSound"};
 			class StandardSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_Firepuncher_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_Firepuncher_Shot_SoundSet","ORG_Sniper_Tail_SoundSet"};
 			};
 			class SilencedSound: BaseSoundModeType
 			{
-				soundSetShot[] = {"332_Suppresed_Firepuncher_Shot_SoundSet","332_Sniper_Tail_SoundSet"};
+				soundSetShot[] = {"ORG_Suppresed_Firepuncher_Shot_SoundSet","ORG_Sniper_Tail_SoundSet"};
 			};
 			reloadTime=1.2;
 			dispersion=0.000001;
@@ -385,7 +385,7 @@ class CfgWeapons
 		    class MuzzleSlot : SlotInfo
 			{
 				// class names with items supported by weapon
-				compatibleItems[] = {"332nd_Firepuncher_Suppressor"}; // moved to each weapon
+				compatibleItems[] = {"ORG_Firepuncher_Suppressor"}; // moved to each weapon
 			};
 			class CowsSlot : CowsSlot
 			{
@@ -405,7 +405,7 @@ class CfgWeapons
 
 		class EventHandlers
 		{
-			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn Aux332nd_fnc_Fired_FirePuncher_Sound;";
+			fired = "[_this select 0, _this select 1, _this select 1, _this select 2] spawn AuxORG_fnc_Fired_FirePuncher_Sound;";
 		};
 	};
 };
