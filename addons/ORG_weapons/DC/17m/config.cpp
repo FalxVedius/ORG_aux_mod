@@ -157,6 +157,7 @@ class cfgWeapons
 			MACRO_NEW_MAG(DC_17m_marks,10),
 			MACRO_NEW_MAG(DC_17m_grend,1)
 		};
+		magazineWell[] = {};
         
 		class OpticsModes
         {
