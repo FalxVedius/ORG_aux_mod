@@ -43,7 +43,7 @@ class DefaultVehicleSystemsDisplayManagerRight
 
 class Extended_init_EventHandlers
 {
-	class MACRO_NEW_VEHICLE(air, LAAT, Cargo)
+	class MACRO_NEW_VEHICLE(air,LAAT,Cargo)
 	{
 		class laat_init_eh
 		{
@@ -96,7 +96,7 @@ class CfgVehicles
 		};
 	};
 
-	class MACRO_NEW_VEHICLE(air, LAAT, Cargo) : B_Heli_Attack_01_base_F
+	class MACRO_NEW_VEHICLE(air,LAAT,Cargo) : B_Heli_Attack_01_base_F
 	{
 		author = "ORG Aux Team";
 		_generalMacro = "ORG_laat_C";
