@@ -3,18 +3,18 @@ class CfgPatches
 {
 	class ORG_LAAT_Cargo
 	{
-		requiredAddons[]=
+		requiredAddons[] =
 		{
 			"A3_Armor_F_Beta",
 			"A3_Weapons_F",
 			"A3_Data_F",
 			"A3_Air_F"
 		};
-		units[]=
+		units[] =
 		{
 			MACRO_NEW_VEHICLE(air,LAAT,Cargo)
 		};
-		weapons[]={};
+		weapons[] = {};
 	};
 };
 class SensorTemplatePassiveRadar;
@@ -43,11 +43,11 @@ class DefaultVehicleSystemsDisplayManagerRight
 
 class Extended_init_EventHandlers
 {
-	class MACRO_NEW_VEHICLE(air,LAAT,Cargo)
+	class MACRO_NEW_VEHICLE(air, LAAT, Cargo)
 	{
 		class laat_init_eh
 		{
-			init="if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle; }; (_this select 0) setVariable [""lockState"", 0, true]; (_this select 0) setVariable [""ls_traumaState"", 0, true]; (_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[15,16,17,18,19,20]] call ls_vehicle_fnc_laatCargoTurretPhase;";
+			init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle; }; (_this select 0) setVariable [""lockState"", 0, true]; (_this select 0) setVariable [""ls_traumaState"", 0, true]; (_this) spawn ls_vehicle_fnc_ImpulsorMonitor; [_this select 0,"""",[15,16,17,18,19,20]] call ls_vehicle_fnc_laatCargoTurretPhase;";
 		};
 	};
 };
@@ -69,11 +69,11 @@ class CfgFunctions
 class CfgVehicles
 {
 	class Helicopter_Base_F;
-	class Heli_Attack_01_base_F: Helicopter_Base_F
+	class Heli_Attack_01_base_F : Helicopter_Base_F
 	{
 		class HitPoints;
 	};
-	class B_Heli_Attack_01_base_F: Heli_Attack_01_base_F
+	class B_Heli_Attack_01_base_F : Heli_Attack_01_base_F
 	{
 		class CargoTurret;
 		class ACE_selfActions;
@@ -96,11 +96,11 @@ class CfgVehicles
 		};
 	};
 
-	class MACRO_NEW_VEHICLE(air,LAAT,Cargo): B_Heli_Attack_01_base_F
+	class MACRO_NEW_VEHICLE(air, LAAT, Cargo) : B_Heli_Attack_01_base_F
 	{
-		author="ORG Aux Team";
-		_generalMacro="ORG_laat_C";
-		scope=2;
+		author = "ORG Aux Team";
+		_generalMacro = "ORG_laat_C";
+		scope = 2;
 
 		ace_cargo_hasCargo = 1;
 		ace_cargo_space = 12;
@@ -113,117 +113,123 @@ class CfgVehicles
 		ace_refuel_canReceive = 1;
 
 
-		hiddenSelections[] = 
-		{ 
-			"camo",
-			"camo1" 
+		hiddenselections[] =
+		{
+			"_auxiliary",
+			"_cockpit",
+			"_glass",
+			"_hull",
+			"_wings"
 		};
 
-		hiddenSelectionsTextures[] = 
-		{ 
-			"ORG_vehicles\_textures\air\LAATC\Camo_0_CO_PW.paa",
-			"ORG_vehicles\_textures\air\LAATC\Camo_1_CO_PW.paa" 
+		hiddenSelectionsTextures[] =
+		{
+			"\lsd_vehicles_heli\laatc\data\auxiliary_co.paa",
+			"\lsd_vehicles_heli\laatc\data\standard\cockpit_co.paa",
+			"\lsd_vehicles_heli\laatc\data\glass_ca.paa",
+			"\lsd_vehicles_heli\laatc\data\standard\hull_co.paa",
+			"\lsd_vehicles_heli\laatc\data\standard\wings_co.paa"
 		};
 
 		crew = "ORG_aux_infantry_unit_trooper";
 
-		availableforsupporttypes[]=
+		availableforsupporttypes[] =
 		{
 			"Transport"
 		};
-		cost="3e+006";
-		side=1;
-		ls_impulsor_fuelDrain_1=0.00005;
-        ls_impulsor_fuelDrain_2=0.00005;
-        ls_impulsor_boostSpeed_1=400;
-        ls_impulsor_boostSpeed_2=600;
-        ls_hasImpulse=1;
+		cost = "3e+006";
+		side = 1;
+		ls_impulsor_fuelDrain_1 = 0.00005;
+		ls_impulsor_fuelDrain_2 = 0.00005;
+		ls_impulsor_boostSpeed_1 = 400;
+		ls_impulsor_boostSpeed_2 = 600;
+		ls_hasImpulse = 1;
 		forceInGarage = 1;
 		armor = 500 * 0.5;
 		class EventHandlers : EventHandlers
-        {
-	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_ORG'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
-        };
+		{
+			init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_ORG'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
+		};
 		faction = "EdCat_ORG";
-        editorSubcategory = "EdSubcat_ORG_HELI";
-		displayName="LAAT/C Mk1 *Test*";
-		model="3AS\3AS_LAATC\3AS_LAAT_C.p3d";
-		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
-		picture="\3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
-		editorpreview="\3AS\3as_Laat\LAATI\data\editorpreview\3as_laat.jpg";
-		memoryPointTaskMarker="TaskMarker_1_pos";
-		cargoaction[]=
+		editorSubcategory = "EdSubcat_ORG_HELI";
+		displayName = "LAAT/C Mk1 *Test*";
+		model = "\lsd_vehicles_heli\laatc\lsd_heli_laatc";
+		icon = "lsd_vehicles_heli\laati\data\ui\laat_icon.paa";
+		picture = "";
+		editorpreview = "lsd_vehicles_heli\laati\data\ui\laat_preview.jpg";
+		memoryPointTaskMarker = "TaskMarker_1_pos";
+		cargoaction[] =
 		{
 			"passenger_boat_holdleft",
 			"passenger_boat_holdleft",
 			"passenger_boat_holdleft"
 		};
-		driveOnComponent[]=
+		driveOnComponent[] =
 		{
 			"Skids"
 		};
-		accuracy=0.5;
-		tas_canLift=1;
-		draconicForceXCoef=11;
-		draconicForceYCoef=2;
-		draconicForceZCoef=2;
-		draconicTorqueXCoef=0.050000001;
-		draconicTorqueYCoef=0;
-		geardowntime=1.5;
-		gearretracting=0;
-		gearuptime=1.5;
-		gearMinAlt=0;
-		gearsUpFrictionCoef=0.001;
-		nameSound="veh_helicopter_s";
-		fuelCapacity=3000;
-		fuelConsumptionRate=0.12;
-		mainBladeRadius=0.1;
-		liftForceCoef=3;
-		bodyFrictionCoef=11;
-		cyclicAsideForceCoef=5;
-		cyclicForwardForceCoef=3;
-		backRotorForceCoef=2;
-		acceleration=450;
-		maxSpeed=600;
-		brakeDistance=400;
-		mainRotorSpeed=-1;
-		backRotorSpeed=2;
-		maxMainRotorDive=7;
-		minMainRotorDive=-7;
-		neutralMainRotorDive=0;
+		accuracy = 0.5;
+		tas_canLift = 1;
+		draconicForceXCoef = 11;
+		draconicForceYCoef = 2;
+		draconicForceZCoef = 2;
+		draconicTorqueXCoef = 0.050000001;
+		draconicTorqueYCoef = 0;
+		geardowntime = 1.5;
+		gearretracting = 0;
+		gearuptime = 1.5;
+		gearMinAlt = 0;
+		gearsUpFrictionCoef = 0.001;
+		nameSound = "veh_helicopter_s";
+		fuelCapacity = 3000;
+		fuelConsumptionRate = 0.12;
+		mainBladeRadius = 0.1;
+		liftForceCoef = 3;
+		bodyFrictionCoef = 11;
+		cyclicAsideForceCoef = 5;
+		cyclicForwardForceCoef = 3;
+		backRotorForceCoef = 2;
+		acceleration = 450;
+		maxSpeed = 600;
+		brakeDistance = 400;
+		mainRotorSpeed = -1;
+		backRotorSpeed = 2;
+		maxMainRotorDive = 7;
+		minMainRotorDive = -7;
+		neutralMainRotorDive = 0;
 
 		class RotorLibHelicopterProperties
 		{
 			RTDconfig = "A3\Air_F_Heli\Heli_Transport_03\RTD_Heli_Transport_03.xml";
-			autoHoverCorrection[]={3.2,0,0};
-			defaultCollective=0.7;
+			autoHoverCorrection[] = { 3.2,0,0 };
+			defaultCollective = 0.7;
 			retreatBladeStallWarningSpeed = 92.583;
 			maxTorque = 4032;
 			stressDamagePerSec = 0;
 			maxHorizontalStabilizerLeftStress = 10000;
 			maxHorizontalStabilizerRightStress = 10000;
 			maxVerticalStabilizerStress = 10000;
-			horizontalWingsAngleCollMin=0;
-			horizontalWingsAngleCollMax=0;
+			horizontalWingsAngleCollMin = 0;
+			horizontalWingsAngleCollMax = 0;
 			maxMainRotorStress = 350000;
 			maxTailRotorStress = 350000;
 		};
-		startDuration=4.5;
-		castDriverShadow=0;
-		canFloat=1;
-		waterLeakiness=0.2;
-		waterResistanceCoef=0.89999998;
-		waterResistance=1;
-		waterLinearDampingCoefY=3;
-		waterLinearDampingCoefX=2;
-		waterAngularDampingCoef=3;
-		maxFordingDepth=110.65;
-		armorStructural=1;
-		altFullForce=10000;
-		altNoForce=15000;
-		crewCrashProtection=1;
-		explosionShielding=0.33000001;
-		epeImpulseDamageCoef=0;
+		startDuration = 4.5;
+		castDriverShadow = 0;
+		canFloat = 1;
+		waterLeakiness = 0.2;
+		waterResistanceCoef = 0.89999998;
+		waterResistance = 1;
+		waterLinearDampingCoefY = 3;
+		waterLinearDampingCoefX = 2;
+		waterAngularDampingCoef = 3;
+		maxFordingDepth = 110.65;
+		armorStructural = 1;
+		altFullForce = 10000;
+		altNoForce = 15000;
+		crewCrashProtection = 1;
+		explosionShielding = 0.33000001;
+		epeImpulseDamageCoef = 0;
 		soundengineonint[] =
 		{
 			"ORG_weapons\sounds\vehicles\LAAT\int_start.wss",
@@ -692,148 +698,148 @@ class CfgVehicles
 			IntercomMacroAIR
 		};
 		class HitPoints : HitPoints
-        {
-            class HitHull : HitHull
-            {
-                armor = 999;
-                convexComponent = "hull_hit";
-                depends = "Total";
-                explosionShielding = 1;
-                material = 51;
-                name = "hull_hit";
-                passThrough = 1;
-                visual = "zbytek";
-                radius = 0.01;
-            };
-            class HitFuel : HitFuel
-            {
-                convexcomponent = "fuel_hit";
-                hitpoint = "fuel_hit";
-                name = "fuel_hit";
-                explosionShielding = 2;
-                radius = 0.1;
-                visual = "";
-                passthrough = 0.1;
-                minimalhit = 0.1;
-                material = -1;
-                armor = 0.6 * 5;
-            };
-            class HitEngine : HitEngine
-            {
-                armor = 1;
-                convexComponent = "engine_hit";
-                explosionShielding = 2;
-                material = 51;
-                name = "engine_hit";
-                hitpoint = "engine_hit";
-                passThrough = 1;
-                visual = "";
-                radius = 0.2 * 5;
-                minimalHit = 0.6;
-            };
-            class HitHRotor : HitHRotor
-            {
-                armor = 3 * 5;
-                convexComponent = "main_rotor_hit";
-                explosionShielding = 2.5;
-                material = 51;
-                name = "main_rotor_hit";
-                passThrough = 0.1;
-                visual = "";
-                radius = 0.01;
-            };
-            class HitVRotor : HitVRotor
-            {
-                armor = 9999;
+		{
+			class HitHull : HitHull
+			{
+				armor = 999;
+				convexComponent = "hull_hit";
+				depends = "Total";
+				explosionShielding = 1;
+				material = 51;
+				name = "hull_hit";
+				passThrough = 1;
+				visual = "zbytek";
+				radius = 0.01;
+			};
+			class HitFuel : HitFuel
+			{
+				convexcomponent = "fuel_hit";
+				hitpoint = "fuel_hit";
+				name = "fuel_hit";
+				explosionShielding = 2;
+				radius = 0.1;
+				visual = "";
+				passthrough = 0.1;
+				minimalhit = 0.1;
+				material = -1;
+				armor = 0.6 * 5;
+			};
+			class HitEngine : HitEngine
+			{
+				armor = 1;
+				convexComponent = "engine_hit";
+				explosionShielding = 2;
+				material = 51;
+				name = "engine_hit";
+				hitpoint = "engine_hit";
+				passThrough = 1;
+				visual = "";
+				radius = 0.2 * 5;
+				minimalHit = 0.6;
+			};
+			class HitHRotor : HitHRotor
+			{
+				armor = 3 * 5;
+				convexComponent = "main_rotor_hit";
+				explosionShielding = 2.5;
+				material = 51;
+				name = "main_rotor_hit";
+				passThrough = 0.1;
+				visual = "";
+				radius = 0.01;
+			};
+			class HitVRotor : HitVRotor
+			{
+				armor = 9999;
 				minimalHit = 9999;
-                convexComponent = "tail_rotor_hit";
-                explosionShielding = 6;
-                material = 51;
-                name = "tail_rotor_hit";
-                passThrough = 0.3;
-                visual = "";
-                radius = 0.01;
-            };
-            class HitAvionics : HitAvionics
-            {
-                armor = 1 * 5;
-                convexComponent = "avionics_hit";
-                explosionShielding = 2;
-                material = 51;
-                name = "avionics_hit";
-                passThrough = 1;
-                visual = "";
-                radius = 0.5;
-                minimalHit = 0.6;
-            };
-        };
+				convexComponent = "tail_rotor_hit";
+				explosionShielding = 6;
+				material = 51;
+				name = "tail_rotor_hit";
+				passThrough = 0.3;
+				visual = "";
+				radius = 0.01;
+			};
+			class HitAvionics : HitAvionics
+			{
+				armor = 1 * 5;
+				convexComponent = "avionics_hit";
+				explosionShielding = 2;
+				material = 51;
+				name = "avionics_hit";
+				passThrough = 1;
+				visual = "";
+				radius = 0.5;
+				minimalHit = 0.6;
+			};
+		};
 		class AnimationSources
 		{
 			class Clamp_Hinges
 			{
-				source="user";
-				animPeriod=0;
-				initPhase=0;
+				source = "user";
+				animPeriod = 0;
+				initPhase = 0;
 			};
 			class Clamp
 			{
-				source="user";
-				animPeriod=0;
-				initPhase=0;
+				source = "user";
+				animPeriod = 0;
+				initPhase = 0;
 			};
 		};
-		class Components: Components
+		class Components : Components
 		{
 			class TransportPylonsComponent
 			{
-				uiPicture="swlb_a_vehicle\laat\data\ui\laat_ui.paa";
+				uiPicture = "swlb_a_vehicle\laat\data\ui\laat_ui.paa";
 				class Pylons
 				{
 					class PylonLeft1
 					{
-						attachment="ORG_aux_magazine_Pylon_AA_Med_x3";
-						priority=5;
-						hardpoints[]=
+						attachment = "ORG_aux_magazine_Pylon_AA_Med_x3";
+						priority = 5;
+						hardpoints[] =
 						{
 							"ORG_A_Pylon"
 						};
-						turret[]={};
-						UIposition[]={0.059999999,0.40000001};
+						turret[] = {};
+						UIposition[] = { 0.059999999,0.40000001 };
 					};
-					class PylonLeft2: PylonLeft1
+					class PylonLeft2 : PylonLeft1
 					{
-						attachment="ORG_aux_magazine_Pylon_Shrieker_x20";  
-						priority=4;
-						hardpoints[]=
+						attachment = "ORG_aux_magazine_Pylon_Shrieker_x20";
+						priority = 4;
+						hardpoints[] =
 						{
 							"ORG_C_Pylon"
 						};
-						UIposition[]={0.079999998,0.34999999};
+						UIposition[] = { 0.079999998,0.34999999 };
 					};
-					class PylonLeft3: PylonLeft1
+					class PylonLeft3 : PylonLeft1
 					{
-						attachment="ORG_aux_magazine_Pylon_AGM_Med_x3";
-						priority=3;
-						hardpoints[]=
+						attachment = "ORG_aux_magazine_Pylon_AGM_Med_x3";
+						priority = 3;
+						hardpoints[] =
 						{
 							"ORG_B_Pylon"
 						};
-						UIposition[]={0.1,0.30000001};
+						UIposition[] = { 0.1,0.30000001 };
 					};
-					class PylonRight3: PylonLeft3
+					class PylonRight3 : PylonLeft3
 					{
-						mirroredMissilePos=3;
-						UIposition[]={0.58999997,0.30000001};
+						mirroredMissilePos = 3;
+						UIposition[] = { 0.58999997,0.30000001 };
 					};
-					class PylonRight2: PylonLeft2
+					class PylonRight2 : PylonLeft2
 					{
-						mirroredMissilePos=2;
-						UIposition[]={0.62,0.34999999};
+						mirroredMissilePos = 2;
+						UIposition[] = { 0.62,0.34999999 };
 					};
-					class PylonRight1: PylonLeft1
+					class PylonRight1 : PylonLeft1
 					{
-						mirroredMissilePos=1;
-						UIposition[]={0.63999999,0.40000001};
+						mirroredMissilePos = 1;
+						UIposition[] = { 0.63999999,0.40000001 };
 					};
 				};
 			};
@@ -869,8 +875,8 @@ class CfgVehicles
 				statement = "0 = [this] spawn TAS_fnc_Magdrop;";
 			};
 		};
-		ace_fastroping_enabled=1;
-		ace_fastroping_ropeOrigins[]=
+		ace_fastroping_enabled = 1;
+		ace_fastroping_ropeOrigins[] =
 		{
 			{1.5,1,-3.5},
 			{1.5,2.5,-3.5},
@@ -883,190 +889,191 @@ class CfgVehicles
 		{
 			class mfd
 			{
-				renderTarget="rendertarget0";
+				renderTarget = "rendertarget0";
 				class CargoView
 				{
-					pointPosition="Pip_Pos";
-					pointDirection="Pip_Dir";
-					renderVisionMode=0;
-					renderQuality=2;
-					fov=0.5;
+					pointPosition = "Pip_Pos";
+					pointDirection = "Pip_Dir";
+					renderVisionMode = 0;
+					renderQuality = 2;
+					fov = 0.5;
 				};
 			};
 		};
-		ace_fastroping_onCut="ace_fastroping_fnc_onCutCommon";
-		ace_fastroping_onPrepare="ace_fastroping_fnc_onPrepareCommon";
-		slingLoadMaxCargoMass=5000000;
-		radarType=8;
-		preciseGetInOut=0;
-		cargoPreciseGetInOut[]={0};
-		driverAction="LAAT_Pilot";
-		getInAction="ChopperLight_L_In_H";
-		getOutAction="GetOutLow";
-		memoryPointsGetInCargo[]=
+		ace_fastroping_onCut = "ace_fastroping_fnc_onCutCommon";
+		ace_fastroping_onPrepare = "ace_fastroping_fnc_onPrepareCommon";
+		slingLoadMaxCargoMass = 5000000;
+		radarType = 8;
+		preciseGetInOut = 0;
+		cargoPreciseGetInOut[] = { 0 };
+		driverAction = "pilot_Heli_Light_02";
+		driverInAction = "pilot_Heli_Light_02";
+		getInAction = "GetInLow";
+		getOutAction = "GetOutLow";
+		memoryPointsGetInCargo[] =
 		{
 			"pos_cargo"
 		};
-		memoryPointsGetInCargoDir[]=
+		memoryPointsGetInCargoDir[] =
 		{
 			"pos_cargo_dir"
 		};
-		usePreciseGetInAction=0;
-		memoryPointsGetInDriverPrecise="pos_driver";
-		memorypointsgetindriver="pos_driver";
-		memorypointsgetindriverdir="pos_driver_dir";
-		memoryPointsGetInCargoPrecise[]=
+		usePreciseGetInAction = 0;
+		memoryPointsGetInDriverPrecise = "pos_driver";
+		memorypointsgetindriver = "pos_driver";
+		memorypointsgetindriverdir = "pos_driver_dir";
+		memoryPointsGetInCargoPrecise[] =
 		{
 			"GetIn_Cargo",
 			"GetIn_Cargo2"
 		};
-		cargoGetInAction[]=
+		cargoGetInAction[] =
 		{
 			"GetInLow"
 		};
-		cargoGetOutAction[]=
+		cargoGetOutAction[] =
 		{
 			"GetOutLow"
 		};
-		getInRadius=10;
-		typicalCargo[]=
+		getInRadius = 10;
+		typicalCargo[] =
 		{
 			"B_HeliPilot_F"
 		};
-		memorypointlmissile="Rocket_1";
-		memorypointrmissile="Rocket_2";
-		memoryPointLRocket="Rocket_1";
-		memoryPointRRocket="Rocket_2";
+		memorypointlmissile = "Rocket_1";
+		memorypointrmissile = "Rocket_2";
+		memoryPointLRocket = "Rocket_1";
+		memoryPointRRocket = "Rocket_2";
 		weapons[] = {
-            MACRO_AIR_COMMON_WEAPS,
-            MACRO_NEW_WEAPON(LAAT_40mm), MACRO_NEW_WEAPON(air_dumb_rocketpod), 
-        };
-        magazines[] = {
-            MACRO_AIR_COMMON_MAGS,
-            MACRO_NEW_MAG(LAAT_40mm,600),
-            MACRO_NEW_MAG(Air_Dumb_rocket,24),
+			MACRO_AIR_COMMON_WEAPS,
+			MACRO_NEW_WEAPON(LAAT_40mm), MACRO_NEW_WEAPON(air_dumb_rocketpod),
+		};
+		magazines[] = {
+			MACRO_AIR_COMMON_MAGS,
+			MACRO_NEW_MAG(LAAT_40mm,600),
 			MACRO_NEW_MAG(Air_Dumb_rocket,24),
-        };
-		memoryPointGun[]=
+			MACRO_NEW_MAG(Air_Dumb_rocket,24),
+		};
+		memoryPointGun[] =
 		{
 			"z_gunL_muzzle",
 			"z_gunR_muzzle"
 		};
-		gunBeg[]=
+		gunBeg[] =
 		{
 			"z_gunL_muzzle",
 			"z_gunR_muzzle"
 		};
-		gunEnd[]=
+		gunEnd[] =
 		{
 			"z_gunL_chamber",
 			"z_gunR_chamber"
 		};
-		memoryPointDriverOptics="PilotCamera";
+		memoryPointDriverOptics = "PilotCamera";
 		class pilotCamera
 		{
 			class OpticsIn
 			{
 				class Wide
 				{
-					opticsDisplayName="WFOV";
-					initAngleX=0;
-					minAngleX=0;
-					maxAngleX=0;
-					initAngleY=0;
-					minAngleY=0;
-					maxAngleY=0;
-					initFov="(30 / 120)";
-					minFov="(30 / 120)";
-					maxFov="(30 / 120)";
-					directionStabilized=1;
-					visionMode[]=
+					opticsDisplayName = "WFOV";
+					initAngleX = 0;
+					minAngleX = 0;
+					maxAngleX = 0;
+					initAngleY = 0;
+					minAngleY = 0;
+					maxAngleY = 0;
+					initFov = "(30 / 120)";
+					minFov = "(30 / 120)";
+					maxFov = "(30 / 120)";
+					directionStabilized = 1;
+					visionMode[] =
 					{
 						"Normal",
 						"Ti"
 					};
-					thermalMode[]={0,1};
-					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
-					opticsPPEffects[]=
+					thermalMode[] = { 0,1 };
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[] =
 					{
 						"OpticsCHAbera2",
 						"OpticsBlur2"
 					};
 				};
-				class Medium: Wide
+				class Medium : Wide
 				{
-					opticsDisplayName="MFOV";
-					initFov="(15 / 120)";
-					minFov="(15 / 120)";
-					maxFov="(15 / 120)";
-					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+					opticsDisplayName = "MFOV";
+					initFov = "(15 / 120)";
+					minFov = "(15 / 120)";
+					maxFov = "(15 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
 				};
-				class Narrow: Wide
+				class Narrow : Wide
 				{
-					opticsDisplayName="NFOV";
-					initFov="(3.75 / 120)";
-					minFov="(3.75 / 120)";
-					maxFov="(3.75 / 120)";
-					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+					opticsDisplayName = "NFOV";
+					initFov = "(3.75 / 120)";
+					minFov = "(3.75 / 120)";
+					maxFov = "(3.75 / 120)";
+					gunnerOpticsModel = "\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
 				};
-				showMiniMapInOptics=1;
-				showUAVViewInOptics=0;
-				showSlingLoadManagerInOptics=0;
+				showMiniMapInOptics = 1;
+				showUAVViewInOptics = 0;
+				showSlingLoadManagerInOptics = 0;
 			};
-			minTurn=-120;
-			maxTurn=120;
-			initTurn=0;
-			minElev=-120;
-			maxElev=10;
-			initElev=0;
-			maxXRotSpeed=0.30000001;
-			maxYRotSpeed=0.30000001;
-			pilotOpticsShowCursor=1;
-			controllable=1;
+			minTurn = -120;
+			maxTurn = 120;
+			initTurn = 0;
+			minElev = -120;
+			maxElev = 10;
+			initElev = 0;
+			maxXRotSpeed = 0.30000001;
+			maxYRotSpeed = 0.30000001;
+			pilotOpticsShowCursor = 1;
+			controllable = 1;
 		};
-		maximumLoad=25000;
+		maximumLoad = 25000;
 		class SpeechVariants
 		{
 			class Default
 			{
-				speechplural[]=
+				speechplural[] =
 				{
 					"veh_air_gunship_p"
 				};
-				speechsingular[]=
+				speechsingular[] =
 				{
 					"veh_air_gunship_s"
 				};
 			};
 		};
-		scopeCurator=2;
-		transportsoldier=0;
+		scopeCurator = 2;
+		transportsoldier = 0;
 		class VehicleTransport
 		{
 			class Carrier
 			{
-				cargoBayDimensions[]=
+				cargoBayDimensions[] =
 				{
 					"Limit1",
 					"limit2"
 				};
-				disableHeightLimit=1;
-				maxLoadMass=200000;
-				cargoAlignment[]=
+				disableHeightLimit = 1;
+				maxLoadMass = 200000;
+				cargoAlignment[] =
 				{
 					"center",
 					"front"
 				};
-				cargoSpacing[]={0,0.15000001,0};
-				exits[]=
+				cargoSpacing[] = { 0,0.15000001,0 };
+				exits[] =
 				{
 					"exit"
 				};
-				unloadingInterval=2;
-				loadingDistance=10;
-				loadingAngle=60;
-				parachuteClassDefault="B_Parachute_02_F";
-				parachuteHeightLimitDefault=50;
+				unloadingInterval = 2;
+				loadingDistance = 10;
+				loadingAngle = 60;
+				parachuteClassDefault = "B_Parachute_02_F";
+				parachuteHeightLimitDefault = 50;
 			};
 		};
 	};
