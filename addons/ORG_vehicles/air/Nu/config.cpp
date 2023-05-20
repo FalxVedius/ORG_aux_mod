@@ -136,7 +136,7 @@ class CfgVehicles
 		picture="3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
 		editorpreview="\3AS\3as_Laat\LAATI\data\editorpreview\3as_laat.jpg";
 		faction = "EdCat_ORG";
-        editorSubcategory = "EdSubcat_ORG_HELI";
+        editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 
 		crew = "ORG_aux_infantry_unit_trooper";
 

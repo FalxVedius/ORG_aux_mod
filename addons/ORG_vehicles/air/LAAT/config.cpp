@@ -281,7 +281,7 @@ class CfgVehicles
         scope = 0;
 		crewCrashProtection=1;
         faction = "EdCat_ORG";
-        editorSubcategory = "EdSubcat_ORG_HELI";
+        editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 
 		cargoAction[] = { "passenger_flatground_leanright","passenger_flatground_leanleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright","passenger_boat_holdleft","passenger_boat_holdright" };
 
@@ -3280,7 +3280,7 @@ class CfgVehicles
 		ace_cargo_space = 16;
 
         faction = "EdCat_ORG";
-        editorSubcategory = "EdSubcat_ORG_HELI";
+        editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 		weapons[]=
 				{
 					 MACRO_NEW_WEAPON(air_dumb_rocketpod),

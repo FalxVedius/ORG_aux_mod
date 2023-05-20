@@ -90,7 +90,7 @@ class CfgEditorSubcategories
 		displayName = "Drones";
 		priority = 6;
 	};
-	class EdSubcat_ORG_HELI
+	class EdSubcat_ORG_HELICOPTERS
 	{
 		displayName = "Helicopters";
 		priority = 7;

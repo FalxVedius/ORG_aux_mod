@@ -99,7 +99,6 @@ class CfgVehicles
 	class MACRO_NEW_VEHICLE(air,LAAT,Cargo) : B_Heli_Attack_01_base_F
 	{
 		author = "ORG Aux Team";
-		_generalMacro = "ORG_laat_C";
 		scope = 2;
 
 		ace_cargo_hasCargo = 1;
@@ -151,7 +150,7 @@ class CfgVehicles
 			init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_ORG'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
 		};
 		faction = "EdCat_ORG";
-		editorSubcategory = "EdSubcat_ORG_HELI";
+		editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 		displayName = "LAAT/C Mk1 *Test*";
 		model = "\lsd_vehicles_heli\laatc\lsd_heli_laatc";
 		icon = "lsd_vehicles_heli\laati\data\ui\laat_icon.paa";

@@ -404,7 +404,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_ORGCIS";
-		editorSubcategory = "EdSubcat_ORG_HELI";
+		editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 
 		crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
@@ -539,7 +539,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_ORGCIS";
-		editorSubcategory = "EdSubcat_ORG_HELI";
+		editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 
 		crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
@@ -675,7 +675,7 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		faction = "EdCat_ORGCIS";
-		editorSubcategory = "EdSubcat_ORG_HELI";
+		editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 
 		crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
