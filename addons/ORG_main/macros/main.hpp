@@ -945,202 +945,252 @@
 
 	// ---- Vests ---- 
 
-	#define MACRO_NEW_TROOPER_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(trooper,classname): MACRO_NEW_VEST(trooper,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Trooper Belt ('##displayname##');\
-		};
-	#define MACRO_NEW_TROOPERHOLSTER_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(trooperholster,classname): MACRO_NEW_VEST(trooperholster,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Trooper Holster ('##displayname##');\
-		};
-	#define MACRO_NEW_VET_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(vettrooper,classname): MACRO_NEW_VEST(vettrooper,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
-		};
-	#define MACRO_NEW_VET_VEST_ALT_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(vettrooperalt,classname): MACRO_NEW_VEST(vettrooperalt,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
-		};
-	#define MACRO_NEW_CSP_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(csp,classname): MACRO_NEW_VEST(csp,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Specialist Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {"",MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
-		};
-	#define MACRO_NEW_CORP_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(corp,classname): MACRO_NEW_VEST(corp,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
-		};
-	#define MACRO_NEW_CORP_ALT_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(corpalt,classname): MACRO_NEW_VEST(corpalt,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
-		};
-	#define MACRO_NEW_SERG_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(serg,classname): MACRO_NEW_VEST(serg,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
-		};
-	#define MACRO_NEW_SERG_MAJ_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(sergmaj,classname): MACRO_NEW_VEST(sergmaj,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
-		};
-	#define MACRO_NEW_FLIGHT_SENIOR_ENSIGN_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(seniorensign,classname): MACRO_NEW_VEST(seniorensign,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Flight Vest ('##displayname##');\
-		};
-	#define MACRO_NEW_FLIGHT_OFFICER_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(flightofficer,classname): MACRO_NEW_VEST(flightofficer,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Flight Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
-		};
-	#define MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(flightjrlt,classname): MACRO_NEW_VEST(flightjrlt,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Flight Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
-		};
-	#define MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(reserveofficer,classname): MACRO_NEW_VEST(reserveofficer,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Reserve Officer Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
-		};
-	#define MACRO_NEW_CAPTAIN_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(captain,classname): MACRO_NEW_VEST(captain,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
-		};
-	#define MACRO_NEW_INF_KAMA_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(infantry,classname): MACRO_NEW_VEST(infantry,base)\
-		{\
-			scope = 2;\
-			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Kama ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture};\
-		};
-	#define MACRO_NEW_ARC_VEST_ITEM(classname,displayname,texture)\
+	#define MACRO_NEW_ARC_VEST_ITEM(classname,displayname)\
 		class MACRO_NEW_VEST(arc,classname): MACRO_NEW_VEST(arc,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
 			displayName = [ORG] Arc Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\arc\vests\##texture};\
 		};
-	#define MACRO_NEW_AIRBORNE_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(airborne,classname): MACRO_NEW_VEST(airborne,base)\
+	#define MACRO_NEW_OFFICER_VEST_1_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(officer_1,classname): MACRO_NEW_VEST(officer_1,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Airborne Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
+			displayName = [ORG] Officer Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_AIRBORNE_NCO_VEST_ITEM(classname,displayname,texture)\
-		class MACRO_NEW_VEST(airbornenco,classname): MACRO_NEW_VEST(airbornenco,base)\
+	#define MACRO_NEW_OFFICER_VEST_2_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(officer_2,classname): MACRO_NEW_VEST(officer_2,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Airborne Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,"MRC\JLTS\characters\CloneArmor\data\Clone_vest_heavy_co.paa"};\
+			displayName = [ORG] Officer Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(classname,displayname,texture,texture2)\
-		class MACRO_NEW_VEST(airbornecsp,classname): MACRO_NEW_VEST(airbornecsp,base)\
+	#define MACRO_NEW_OFFICER_VEST_3_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(officer_3,classname): MACRO_NEW_VEST(officer_3,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Airborne Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture2};\
+			displayName = [ORG] Officer Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_MARSHAL_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(marshal,classname): MACRO_NEW_VEST(marshal,base)\
+	#define MACRO_NEW_NCO_VEST_1_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(nco_1,classname): MACRO_NEW_VEST(nco_1,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Infantry Vest ('##displayname##');\
+			displayName = [ORG] NCO Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_PURGE_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(purge,classname): MACRO_NEW_VEST(purge,base)\
+	#define MACRO_NEW_NCO_VEST_2_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(nco_2,classname): MACRO_NEW_VEST(nco_2,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Scenario Vest ('##displayname##');\
+			displayName = [ORG] NCO Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_PURGE_CWO_VEST_ITEM(classname,displayname,texture,texture2)\
-		class MACRO_NEW_VEST(purgecwo,classname): MACRO_NEW_VEST(purgecwo,base)\
+	#define MACRO_NEW_NCO_VEST_3_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(nco_3,classname): MACRO_NEW_VEST(nco_3,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] CWO Vest ('##displayname##');\
-			hiddenSelectionsTextures[] = {MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture,MACRO_VEST_TEXTURES_PATH##\infantry\vests\##texture2};\
+			displayName = [ORG] NCO Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_ASSAULT_DEMO_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(assault_demo,classname): MACRO_NEW_VEST(assault_demo,base)\
+	#define MACRO_NEW_NCO_VEST_4_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(nco_4,classname): MACRO_NEW_VEST(nco_4,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Assault Vest ('##displayname##');\
+			displayName = [ORG] NCO Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_ASSAULT_TECH_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(assault_tech,classname): MACRO_NEW_VEST(assault_tech,base)\
+	#define MACRO_NEW_NCO_VEST_5_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(nco_5,classname): MACRO_NEW_VEST(nco_5,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Assault Vest ('##displayname##');\
+			displayName = [ORG] NCO Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_ASSAULT_NCO_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(assault_nco,classname): MACRO_NEW_VEST(assault_nco,base)\
+	#define MACRO_NEW_NCO_VEST_6_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(nco_6,classname): MACRO_NEW_VEST(nco_6,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Assault Vest ('##displayname##');\
+			displayName = [ORG] NCO Vest ('##displayname##');\
 		};
-	#define MACRO_NEW_ASSAULT_AMMO_VEST_ITEM(classname,displayname)\
-		class MACRO_NEW_VEST(assault_ammo,classname): MACRO_NEW_VEST(assault_ammo,base)\
+	#define MACRO_NEW_NCO_VEST_7_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(nco_7,classname): MACRO_NEW_VEST(nco_7,base)\
 		{\
 			scope = 2;\
 			scopeArsenal = 2;\
-			displayName = [ORG] Assault Vest ('##displayname##');\
+			displayName = [ORG] NCO Vest ('##displayname##');\
 		};
+	#define MACRO_NEW_TROOPER_VEST_1_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_1,classname): MACRO_NEW_VEST(trop_1,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_2_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_2,classname): MACRO_NEW_VEST(trop_2,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_3_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_3,classname): MACRO_NEW_VEST(trop_3,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_4_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_4,classname): MACRO_NEW_VEST(trop_4,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_5_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_5,classname): MACRO_NEW_VEST(trop_5,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_6_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_6,classname): MACRO_NEW_VEST(trop_6,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_7_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_7,classname): MACRO_NEW_VEST(trop_7,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_8_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_8,classname): MACRO_NEW_VEST(trop_8,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_9_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_9,classname): MACRO_NEW_VEST(trop_9,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_10_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_10,classname): MACRO_NEW_VEST(trop_10,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_11_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_11,classname): MACRO_NEW_VEST(trop_11,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_12_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_12,classname): MACRO_NEW_VEST(trop_12,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_13_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_13,classname): MACRO_NEW_VEST(trop_13,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_14_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_14,classname): MACRO_NEW_VEST(trop_14,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_15_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_15,classname): MACRO_NEW_VEST(trop_15,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_16_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_16,classname): MACRO_NEW_VEST(trop_16,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_17_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_17,classname): MACRO_NEW_VEST(trop_17,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_18_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_18,classname): MACRO_NEW_VEST(trop_18,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_19_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_19,classname): MACRO_NEW_VEST(trop_19,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_20_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_20,classname): MACRO_NEW_VEST(trop_20,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_21_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_21,classname): MACRO_NEW_VEST(trop_21,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_22_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_22,classname): MACRO_NEW_VEST(trop_22,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_23_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_23,classname): MACRO_NEW_VEST(trop_23,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+	#define MACRO_NEW_TROOPER_VEST_24_ITEM(classname,displayname)\
+		class MACRO_NEW_VEST(trop_24,classname): MACRO_NEW_VEST(trop_24,base)\
+		{\
+			scope = 2;\
+			scopeArsenal = 2;\
+			displayName = [ORG] Trooper Vest ('##displayname##');\
+		};
+
 
 
 // ============================================================================== Intercom Defines

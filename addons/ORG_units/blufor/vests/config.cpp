@@ -23,126 +23,159 @@ class CfgPatches
 class CfgWeapons
 {
     /// ---- Vests ----
-
     class V_PlateCarrier1_rgr;
-    class 3AS_Katarn_Vest_Demo_Base;
-    class 3AS_Katarn_Vest_Tech_Base;
-    class 3AS_Katarn_Vest_Team_Leader_Base;
-    class 3AS_Katarn_Vest_Sniper_Base;
+    class ls_blueforVest_base;
 
-    class JLTS_CloneVestOfficer : V_PlateCarrier1_rgr
-    {
-        class ItemInfo;
-    };
-    class JLTS_CloneVestOfficer2 : JLTS_CloneVestOfficer
-    {
-        class ItemInfo;
-    };
-    class JLTS_CloneVestHolster : V_PlateCarrier1_rgr
-    {
-        class ItemInfo;
-    };
-    class JLTS_CloneVestARC : V_PlateCarrier1_rgr
-    {
-        class ItemInfo;
-    };
+    //Troopers
     class SWLB_clone_basic_armor : V_PlateCarrier1_rgr
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestRecon : JLTS_CloneVestOfficer
+    class SWLB_clone_airborne_armor : SWLB_clone_basic_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestReconNCO : JLTS_CloneVestOfficer
+    class SWLB_CEE_Airborne_CFR : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestReconOfficer : JLTS_CloneVestOfficer
+    class SWLB_CEE_Airborne_Light : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestSuspender : V_PlateCarrier1_rgr
+    class SWLB_CEE_ARF_Vest : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestKama : JLTS_CloneVestOfficer
+    class SWLB_CEE_Engineer_Vest_NCO : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestAirborne : JLTS_CloneVestOfficer
+    class SWLB_CEE_Engineer_Vest : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestAirborneNCO : JLTS_CloneVestAirborne
+    class SWLB_CEE_Force_Recon_NCO : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestLieutenant : JLTS_CloneVestOfficer
+    class SWLB_CEE_Force_Recon : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class JLTS_CloneVestPurge : V_PlateCarrier1_rgr
+    class SWLB_CEE_Hazard_Vest : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class 3AS_V_Katarn_Vest_Demo : 3AS_Katarn_Vest_Demo_Base
+    class SWLB_CEE_Recon_Survival : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class 3AS_V_Katarn_Vest_Tech : 3AS_Katarn_Vest_Tech_Base
+    class SWLB_CEE_Tactical_Commander : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class 3AS_Katarn_Vest_Team_Leader : 3AS_Katarn_Vest_Team_Leader_Base
+    class SWLB_clone_airborne_nco_armor : SWLB_clone_airborne_armor
     {
         class ItemInfo;
     };
-    class 3AS_Katarn_Vest_Sniper : 3AS_Katarn_Vest_Sniper_Base
+    class SWLB_clone_assault_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_cfr_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_grenadier_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_kama_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_medic_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_recon_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_recon_nco_armor : SWLB_clone_recon_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_specialist_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class ls_gar_heavyAlt_vest : ls_blueforVest_base
+    {
+        class ItemInfo;
+    };
+    class ls_gar_heavy_vest : ls_blueforVest_base
+    {
+        class ItemInfo;
+    };
+    class lsd_gar_clone_vest : ls_blueforVest_base
     {
         class ItemInfo;
     };
 
-    class MACRO_NEW_VEST(infantry,base): JLTS_CloneVestOfficer
+    //NCO
+    class SWLB_CEE_Engineer_Vest_Officer : SWLB_clone_airborne_armor
     {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        class ItemInfo;
+    };
+    class SWLB_CEE_Force_Recon_Officer : SWLB_clone_airborne_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_CEE_Recon_Lieutenant : SWLB_clone_airborne_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_CEE_Officer_Tactical : SWLB_clone_airborne_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_Clone_lieutenant_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_officer_armor : SWLB_clone_basic_armor
+    {
+        class ItemInfo;
+    };
+    class ls_gar_airborneOfficer_vest : ls_blueforVest_base
+    {
+        class ItemInfo;
+    };
 
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply210";
-            vestType = "Rebreather";
+    //Officer
+    class SWLB_clone_commander_armor : SWLB_clone_officer_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_clone_commander_armor_rank : SWLB_clone_commander_armor
+    {
+        class ItemInfo;
+    };
+    class SWLB_CEE_Force_Recon_Commander : SWLB_clone_airborne_armor
+    {
+        class ItemInfo;
+    };
 
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_INF_KAMA_ITEM(ORG_SergMaj_Vest,Sergeant Major,kama\Officer_accessories.paa)
-    MACRO_NEW_INF_KAMA_ITEM(ORG_lt,Lieutenant,kama\1st_lt.paa)
+    //Arc
+    class SWLB_clone_arc_armor : SWLB_clone_officer_armor
+    {
+        class ItemInfo;
+    };
 
-    
-    class MACRO_NEW_VEST(arc,base): JLTS_CloneVestARC
+    //Arc
+    class MACRO_NEW_VEST(arc,base) : SWLB_clone_arc_armor
     {
         scopeArsenal = 0;
         scope = 0;
@@ -177,53 +210,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_ARC_VEST_ITEM(ORG_arc,Squad Arc,arc_vest.paa)
-    MACRO_NEW_ARC_VEST_ITEM(ORG_Marshal,Marshal,Marshal_vest.paa)
 
-
-    class MACRO_NEW_VEST(trooper,base) : SWLB_clone_basic_armor
+    //Officer
+    class MACRO_NEW_VEST(officer_1,base): SWLB_clone_commander_armor
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Trooper Belt ('base')";
-
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply200";
-            vestType = "Rebreather";
-
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_TROOPER_VEST_ITEM(ORG_trooper_belt,ORG)
-
-    class MACRO_NEW_VEST(trooperholster,base) : JLTS_CloneVestHolster
-    {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[ORG] Trooper Holster ('base')";
+        displayName = "[ORG] Officer Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -253,15 +247,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_TROOPERHOLSTER_VEST_ITEM(ORG_trooper_holster,ORG)
 
-
-    class MACRO_NEW_VEST(vettrooper,base) : JLTS_CloneVestRecon
+    
+    class MACRO_NEW_VEST(officer_2,base): SWLB_clone_commander_armor_rank
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] Officer Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -291,15 +284,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_VET_VEST_ITEM(ORG_Veteran_Vest,Veteran)
 
 
-    class MACRO_NEW_VEST(vettrooperalt,base) : JLTS_CloneVestSuspender
+    class MACRO_NEW_VEST(officer_3,base) : SWLB_CEE_Force_Recon_Commander
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] Officer Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -329,15 +321,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_VET_VEST_ALT_ITEM(ORG_Veteran_Suspenders,Veteran alt.)
 
-
-    class MACRO_NEW_VEST(csp,base) : JLTS_CloneVestAirborneNCO
+    //NCO
+    class MACRO_NEW_VEST(nco_1,base) : SWLB_CEE_Engineer_Vest_Officer
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Specialist Vest ('base')";
+        displayName = "[ORG] NCO Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -367,17 +358,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_CSP_VEST_ITEM(ORG_CSP_Vest,Specialist,csp\SpecialistBase_ca.paa)
-    MACRO_NEW_CSP_VEST_ITEM(ORG_CSPRTO_Vest,RTO Specialist,csp\SpecialistRTO_ca.paa)
-    MACRO_NEW_CSP_VEST_ITEM(ORG_CSPMEDIC_Vest,Medic Specialist,csp\SpecialistMedic_ca.paa)
 
 
-    class MACRO_NEW_VEST(corp,base) : JLTS_CloneVestKama
+    class MACRO_NEW_VEST(nco_2,base) : SWLB_CEE_Force_Recon_Officer
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] NCO Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -407,15 +395,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_CORP_VEST_ITEM(ORG_CORP_VEST,Corporal,corp\LeadershipKama_ca.paa)
 
 
-    class MACRO_NEW_VEST(corpalt,base) : JLTS_CloneVestReconNCO
+    class MACRO_NEW_VEST(nco_3,base) : SWLB_CEE_Recon_Lieutenant
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] NCO Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -445,15 +432,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_CORP_ALT_VEST_ITEM(ORG_CORP_alt_Vest,Corporal alt.)
 
 
-    class MACRO_NEW_VEST(serg,base) : JLTS_CloneVestReconOfficer
+    class MACRO_NEW_VEST(nco_4,base) : SWLB_CEE_Officer_Tactical
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] NCO Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -483,15 +469,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_SERG_VEST_ITEM(ORG_Serg_Vest,Sergeant,sgt\LeadershipKama_ca.paa)
 
 
-    class MACRO_NEW_VEST(sergmaj,base) : JLTS_CloneVestOfficer
+    class MACRO_NEW_VEST(nco_5,base) : SWLB_Clone_lieutenant_armor
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] NCO Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -521,15 +506,14 @@ class CfgWeapons
             };
         };
     }
-    //MACRO_NEW_SERG_MAJ_VEST_ITEM(ORG_SergMaj_Vest,Sergeant Major,sgtmaj\LeadershipKama_ca.paa)
 
 
-    class MACRO_NEW_VEST(seniorensign,base) : JLTS_CloneVestSuspender
+    class MACRO_NEW_VEST(nco_6,base) : SWLB_clone_officer_armor
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Flight Vest ('base')";
+        displayName = "[ORG] NCO Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -559,15 +543,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_FLIGHT_SENIOR_ENSIGN_VEST_ITEM(ORG_FlightSeniorEnsign_Vest,Flight Senior Ensign)
 
 
-    class MACRO_NEW_VEST(flightofficer,base) : JLTS_CloneVestKama
+    class MACRO_NEW_VEST(nco_7,base) : ls_gar_airborneOfficer_vest
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Flight Vest ('base')";
+        displayName = "[ORG] NCO Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -597,15 +580,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_FLIGHT_OFFICER_VEST_ITEM(ORG_FlightOfficer_Vest,Flight Officer,flightOfficer\LeadershipKama_ca.paa)
 
-
-    class MACRO_NEW_VEST(flightjrlt,base) : JLTS_CloneVestReconOfficer
+    //Trooper
+    class MACRO_NEW_VEST(trop_1,base) : SWLB_CEE_Airborne_CFR
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Flight Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -635,14 +617,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_FLIGHT_JRLT_VEST_ITEM(ORG_FlightJrLT_Vest,Flight Jr Lieutenant,flightJrLt\LeadershipKama_ca.paa)
 
-    class MACRO_NEW_VEST(reserveofficer,base) : JLTS_CloneVestOfficer2
+
+    class MACRO_NEW_VEST(trop_2,base) : SWLB_CEE_Airborne_Light
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Reserve Officer Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -672,15 +654,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_RESERVE_OFFICER_VEST_ITEM(ORG_ReserveOfficer_Vest,Reserve Officer,reserveOfficer\LeadershipKama_ca.paa)
 
 
-    class MACRO_NEW_VEST(captain,base) : JLTS_CloneVestOfficer2
+    class MACRO_NEW_VEST(trop_3,base) : SWLB_CEE_ARF_Vest
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -710,130 +691,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_CAPTAIN_VEST_ITEM(ORG_Captain_Vest,Captain,kama\1st_lt.paa)
 
-    class MACRO_NEW_VEST(airborne,base) : JLTS_CloneVestAirborne
+
+    class MACRO_NEW_VEST(trop_4,base) : SWLB_CEE_Engineer_Vest_NCO
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Airborne Vest ('base')";
-
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply180";
-            vestType = "Rebreather";
-
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_AIRBORNE_VEST_ITEM(ORG_Airborne_Vest,Trooper,airborne\NonLeadershipKama_ca.paa)
-
-
-    class MACRO_NEW_VEST(airbornenco,base) : JLTS_CloneVestAirborneNCO
-    {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[ORG] Airborne Vest ('base')";
-
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply180";
-            vestType = "Rebreather";
-
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_AIRBORNE_NCO_VEST_ITEM(ORG_Airborne_NCO_Vest,NCO,airborne\LeadershipKama_ca.paa)
-
-
-    class MACRO_NEW_VEST(airbornecsp,base) : JLTS_CloneVestAirborneNCO
-    {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[ORG] Airborne Vest ('base')";
-
-        class ItemInfo : ItemInfo
-        {
-            containerClass = "Supply180";
-            vestType = "Rebreather";
-
-            class HitpointsProtectionInfo
-            {
-                class Chest
-                {
-                    HitpointName = "HitChest";
-                    armor = 0;
-                    PassThrough = 1;
-                };
-                class Legs
-                {
-                    hitpointName = "HitLegs";
-                    armor = 0;
-                    passThrough = 1;
-                };
-                class Arms
-                {
-                    hitpointName = "HitArms";
-                    armor = 0;
-                    passThrough = 1;
-                };
-            };
-        };
-    }
-    MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(ORG_Airborne_CSP_Vest,Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistBase_ca.paa)
-    MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(ORG_Airborne_CSPRTO_Vest,RTO Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistRTO_ca.paa)
-    MACRO_NEW_AIRBORNE_CSP_VEST_ITEM(ORG_Airborne_CSPMEDIC_Vest,Medic Specialist,airborne\NonLeadershipKama_ca.paa,csp\SpecialistMedic_ca.paa)
-
-
-    class MACRO_NEW_VEST(purge,base) : JLTS_CloneVestPurge
-    {
-        scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[ORG] Infantry Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -863,15 +728,13 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_PURGE_VEST_ITEM(ORG_Purge_Vest,Purge)
 
-
-    class MACRO_NEW_VEST(purgecwo,base) : JLTS_CloneVestPurge
+    class MACRO_NEW_VEST(trop_5,base) : SWLB_CEE_Engineer_Vest
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] CWO Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -901,16 +764,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_PURGE_CWO_VEST_ITEM(ORG_CWO5_Vest,CWO-5,cwo\LeadershipKama_ca.paa,cwo\cwo5_vest_upper.paa)
-    MACRO_NEW_PURGE_CWO_VEST_ITEM(ORG_CWO4_Vest,CWO-4,cwo\LeadershipKama_ca.paa,cwo\cwo4_vest_upper.paa)
 
 
-    class MACRO_NEW_VEST(assault_demo,base) : 3as_v_katarn_vest_demo
+    class MACRO_NEW_VEST(trop_6,base) : SWLB_CEE_Force_Recon_NCO
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Assault Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -940,15 +801,13 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_ASSAULT_DEMO_VEST_ITEM(ORG_Assault_Demo_Vest,Demo *WIP*)
 
-
-    class MACRO_NEW_VEST(assault_tech,base) : 3as_v_katarn_vest_tech
+    class MACRO_NEW_VEST(trop_7,base) : SWLB_CEE_Force_Recon
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Assault Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -978,15 +837,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_ASSAULT_TECH_VEST_ITEM(ORG_Assault_Tech_Vest,Tech *WIP*)
 
 
-    class MACRO_NEW_VEST(assault_nco,base) : 3AS_Katarn_Vest_Team_Leader
+    class MACRO_NEW_VEST(trop_8,base) : SWLB_CEE_Hazard_Vest
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Assault Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -1016,15 +874,14 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_ASSAULT_NCO_VEST_ITEM(ORG_Assault_NCO_Vest,NCO *WIP*)
 
 
-    class MACRO_NEW_VEST(assault_ammo,base) : 3AS_Katarn_Vest_Sniper
+    class MACRO_NEW_VEST(trop_9,base) : SWLB_CEE_Recon_Survival
     {
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[ORG] Assault Vest ('base')";
+        displayName = "[ORG] Trooper Vest ('base')";
 
         class ItemInfo : ItemInfo
         {
@@ -1054,7 +911,605 @@ class CfgWeapons
             };
         };
     }
-    MACRO_NEW_ASSAULT_AMMO_VEST_ITEM(ORG_Assault_Ammo_Vest,Bandolier *WIP*)
 
-    /// ---- End
+
+    class MACRO_NEW_VEST(trop_10,base) : SWLB_CEE_Tactical_Commander
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_11,base) : SWLB_clone_airborne_nco_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_12,base) : SWLB_clone_airborne_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_13,base) : SWLB_clone_assault_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_14,base) : SWLB_clone_cfr_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_15,base) : SWLB_clone_grenadier_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_16,base) : SWLB_clone_kama_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_17,base) : SWLB_clone_medic_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_18,base) : SWLB_clone_recon_nco_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_19,base) : SWLB_clone_recon_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_20,base) : SWLB_clone_specialist_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_21,base) : SWLB_clone_basic_armor
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_22,base) : ls_gar_heavyAlt_vest
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_23,base) : ls_gar_heavy_vest
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+
+    class MACRO_NEW_VEST(trop_24,base) : lsd_gar_clone_vest
+    {
+        scopeArsenal = 0;
+        scope = 0;
+        author = MACRO_AUTHOR;
+        displayName = "[ORG] Trooper Vest ('base')";
+
+        class ItemInfo : ItemInfo
+        {
+            containerClass = "Supply210";
+            vestType = "Rebreather";
+
+            class HitpointsProtectionInfo
+            {
+                class Chest
+                {
+                    HitpointName = "HitChest";
+                    armor = 0;
+                    PassThrough = 1;
+                };
+                class Legs
+                {
+                    hitpointName = "HitLegs";
+                    armor = 0;
+                    passThrough = 1;
+                };
+                class Arms
+                {
+                    hitpointName = "HitArms";
+                    armor = 0;
+                    passThrough = 1;
+                };
+            };
+        };
+    }
+
+    /// ---- End Construction of base Classes
+
+    //Arc
+    MACRO_NEW_ARC_VEST_ITEM(arc,Arc)
+
+    //Officer
+    MACRO_NEW_OFFICER_VEST_1_ITEM(officer_1,Officer)
+    MACRO_NEW_OFFICER_VEST_2_ITEM(officer_2,Officer)
+    MACRO_NEW_OFFICER_VEST_3_ITEM(officer_3,Officer)
+
+    //NCO
+    MACRO_NEW_NCO_VEST_1_ITEM(nco_1,NCO)
+    MACRO_NEW_NCO_VEST_2_ITEM(nco_2,NCO)
+    MACRO_NEW_NCO_VEST_3_ITEM(nco_3,NCO)
+    MACRO_NEW_NCO_VEST_4_ITEM(nco_4,NCO)
+    MACRO_NEW_NCO_VEST_5_ITEM(nco_5,NCO)
+    MACRO_NEW_NCO_VEST_6_ITEM(nco_6,NCO)
+    MACRO_NEW_NCO_VEST_7_ITEM(nco_7,NCO)
+
+    //Trooper
+    MACRO_NEW_TROOPER_VEST_1_ITEM(trop_1,Trooper)
+    MACRO_NEW_TROOPER_VEST_2_ITEM(trop_2,Trooper)
+    MACRO_NEW_TROOPER_VEST_3_ITEM(trop_3,Trooper)
+    MACRO_NEW_TROOPER_VEST_4_ITEM(trop_4,Trooper)
+    MACRO_NEW_TROOPER_VEST_5_ITEM(trop_5,Trooper)
+    MACRO_NEW_TROOPER_VEST_6_ITEM(trop_6,Trooper)
+    MACRO_NEW_TROOPER_VEST_7_ITEM(trop_7,Trooper)
+    MACRO_NEW_TROOPER_VEST_8_ITEM(trop_8,Trooper)
+    MACRO_NEW_TROOPER_VEST_9_ITEM(trop_9,Trooper)
+    MACRO_NEW_TROOPER_VEST_10_ITEM(trop_10,Trooper)
+    MACRO_NEW_TROOPER_VEST_11_ITEM(trop_11,Trooper)
+    MACRO_NEW_TROOPER_VEST_12_ITEM(trop_12,Trooper)
+    MACRO_NEW_TROOPER_VEST_13_ITEM(trop_13,Trooper)
+    MACRO_NEW_TROOPER_VEST_14_ITEM(trop_14,Trooper)
+    MACRO_NEW_TROOPER_VEST_15_ITEM(trop_15,Trooper)
+    MACRO_NEW_TROOPER_VEST_16_ITEM(trop_16,Trooper)
+    MACRO_NEW_TROOPER_VEST_17_ITEM(trop_17,Trooper)
+    MACRO_NEW_TROOPER_VEST_18_ITEM(trop_18,Trooper)
+    MACRO_NEW_TROOPER_VEST_19_ITEM(trop_19,Trooper)
+    MACRO_NEW_TROOPER_VEST_20_ITEM(trop_20,Trooper)
+    MACRO_NEW_TROOPER_VEST_21_ITEM(trop_21,Trooper)
+    MACRO_NEW_TROOPER_VEST_22_ITEM(trop_22,Trooper)
+    MACRO_NEW_TROOPER_VEST_23_ITEM(trop_23,Trooper)
+    MACRO_NEW_TROOPER_VEST_24_ITEM(trop_24,Trooper)
+
 }

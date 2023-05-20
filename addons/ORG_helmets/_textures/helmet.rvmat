@@ -13,7 +13,7 @@ VertexShaderID="Super";
 
 class Stage1
 {
-	texture="332nd_helmets\_textures\Helmet_nohq.paa";
+	texture="ORG_helmets\_textures\Helmet_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -49,7 +49,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="332nd_helmets\_textures\Helmet_as.paa";
+	texture="ORG_helmets\_textures\Helmet_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -61,7 +61,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="332nd_helmets\_textures\Helmet_smdi.paa";
+	texture="ORG_helmets\_textures\Helmet_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{
