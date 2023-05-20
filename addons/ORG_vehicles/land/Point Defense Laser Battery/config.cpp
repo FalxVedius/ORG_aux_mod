@@ -27,7 +27,7 @@ class CfgFunctions
 	{
 		class PDLB_Flak
 		{
-			file = "\332nd_vehicles\land\Point Defense Laser Battery";
+			file = "\ORG_vehicles\land\Point Defense Laser Battery";
 			class init_Flak
 			{
 
@@ -49,7 +49,7 @@ class CfgAmmo
 	class SmallSecondary;
 	class OPTRE_B_50mm;
 
-	class Flak_Round_332nd : SmallSecondary
+	class Flak_Round_ORG : SmallSecondary
 	{
 		explosionSoundEffect = "{""\OPTRE_FC_Weapons\Data\sounds\Mortar_Impact2.ogg"",1.4,1,2000}";
 		explosionEffects = "VehicleExplosionEffectsBig";
@@ -127,9 +127,9 @@ class CfgVehicles
         scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class Turrets : Turrets
 		{
@@ -157,9 +157,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class EventHandlers {
 			init = "[_this] spawn Flak_fnc_init_Flak;";
@@ -183,9 +183,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class Turrets : Turrets
 		{
@@ -213,9 +213,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class EventHandlers {
 			init = "[_this] spawn Flak_fnc_init_Flak;";
@@ -239,9 +239,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 
 		class Turrets : Turrets
 		{
@@ -269,9 +269,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 
 		class EventHandlers {
 			init = "[_this] spawn Flak_fnc_init_Flak_blu;";
@@ -295,9 +295,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 
 		class Turrets : Turrets
 		{
@@ -325,9 +325,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 
 		class EventHandlers {
 			init = "[_this] spawn Flak_fnc_init_Flak_blu;";
@@ -351,9 +351,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class Turrets : Turrets
 		{
@@ -370,9 +370,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class EventHandlers {
 			init = "[_this] spawn Flak_fnc_init_Flak_ind;";
@@ -396,9 +396,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class Turrets : Turrets
 		{
@@ -415,9 +415,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_AA";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_AA";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		class EventHandlers {
 			init = "[_this] spawn Flak_fnc_init_Flak_ind;";

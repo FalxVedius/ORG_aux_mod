@@ -156,9 +156,9 @@ class CfgVehicles
         displayName = "RTT Transport";
         scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_CAR";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_CAR";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 
 		armor = 200;
 		armorStructural = 4;
@@ -262,9 +262,9 @@ class CfgVehicles
 		displayName = "RTT Supply";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_CAR";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_CAR";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 
 		armor = 200;
 		armorStructural = 4;

@@ -441,9 +441,9 @@ class CfgVehicles
         displayName = "Light GAT";
         scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_IFV";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_IFV";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 150;
 		armorStructural = 2;
@@ -466,7 +466,7 @@ class CfgVehicles
 			   class Turrets
 			   {
 			   };
-			   gunnerType = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+			   gunnerType = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 		   };
 	   };
 
@@ -1235,9 +1235,9 @@ class CfgVehicles
 		displayName = "Light GAT (Olive)";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_IFV";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_IFV";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 150;
 		armorStructural = 2;
@@ -1259,7 +1259,7 @@ class CfgVehicles
 			   class Turrets
 			   {
 			   };
-			   gunnerType = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+			   gunnerType = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 		   };
 	   };
 
@@ -2028,9 +2028,9 @@ class CfgVehicles
 		displayName = "GAT";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_IFV";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_IFV";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 150;
 		armorStructural = 2;
@@ -2052,7 +2052,7 @@ class CfgVehicles
 			   class Turrets
 			   {
 			   };
-			   gunnerType = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+			   gunnerType = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 		   };
 	   };
 
@@ -2821,9 +2821,9 @@ class CfgVehicles
 		displayName = "GAT (Olive)";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_IFV";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_IFV";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 150;
 		armorStructural = 2;
@@ -2845,7 +2845,7 @@ class CfgVehicles
 			   class Turrets
 			   {
 			   };
-			   gunnerType = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+			   gunnerType = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 		   };
 	   };
 

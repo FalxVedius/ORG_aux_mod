@@ -47,7 +47,7 @@ class CfgWeapons
         scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[332nd] Infantry Helmet ('base')";
+        displayName = "[ORG] Infantry Helmet ('base')";
         subItems[] = {"G_B_Diving"};
 
 		class ItemInfo : ItemInfo
@@ -69,7 +69,7 @@ class CfgWeapons
 		scopeArsenal = 0;
 		scope = 0;
 		author = MACRO_AUTHOR;
-		displayName = "[332nd] Arc Helmet ('base')";
+		displayName = "[ORG] Arc Helmet ('base')";
 		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
@@ -100,7 +100,7 @@ class CfgWeapons
 		scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[332nd] Airborne Helmet ('base')";
+        displayName = "[ORG] Airborne Helmet ('base')";
         subItems[] = {"G_B_Diving"};
 
 		class ItemInfo : ItemInfo
@@ -131,7 +131,7 @@ class CfgWeapons
 		scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[332nd] Aviation Helmet ('base')";
+        displayName = "[ORG] Aviation Helmet ('base')";
         subItems[] = {"Integrated_NVG_TI_1_F"};
 
 		ace_hearing_lowerVolume = 0.60000002;
@@ -167,7 +167,7 @@ class CfgWeapons
 		scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[332nd] ARF Helmet ('base')";
+        displayName = "[ORG] ARF Helmet ('base')";
         subItems[] = {"Integrated_NVG_TI_1_F"};
 
 		ace_hearing_lowerVolume = 0.60000002;
@@ -192,7 +192,7 @@ class CfgWeapons
 		scopeArsenal = 0;
 		scope = 0;
 		author = MACRO_AUTHOR;
-		displayName = "[332nd] ARF Custom Helmet ('base')";
+		displayName = "[ORG] ARF Custom Helmet ('base')";
 		subItems[] = { "Integrated_NVG_TI_1_F" };
 
 		ace_hearing_lowerVolume = 0.60000002;
@@ -225,7 +225,7 @@ class CfgWeapons
 		scopeArsenal = 0;
         scope = 0;
         author = MACRO_AUTHOR;
-        displayName = "[332nd] barc Helmet ('base')";
+        displayName = "[ORG] barc Helmet ('base')";
 
 		ace_hearing_lowerVolume = 0.60000002;
 		ace_hearing_protection = 0.85000002;
@@ -250,7 +250,7 @@ class CfgWeapons
 		scopeArsenal = 0;
 		scope = 0;
 		author = MACRO_AUTHOR;
-		displayName = "[332nd] Engineer Helmet ('base')";
+		displayName = "[ORG] Engineer Helmet ('base')";
 		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
@@ -272,7 +272,7 @@ class CfgWeapons
 		scopeArsenal = 0;
 		scope = 0;
 		author = MACRO_AUTHOR;
-		displayName = "[332nd] Scenario Helmet ('base')";
+		displayName = "[ORG] Scenario Helmet ('base')";
 		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
@@ -301,7 +301,7 @@ class CfgWeapons
 		scopeArsenal = 0;
 		scope = 0;
 		author = MACRO_AUTHOR;
-		displayName = "[332nd] Assault Helmet ('base')";
+		displayName = "[ORG] Assault Helmet ('base')";
 		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo

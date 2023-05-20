@@ -69,9 +69,9 @@ class CfgVehicles
         displayName = "Minotaur Transport";
         scope = 2;
 		side=1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_CAR";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_CAR";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		tas_canBlift = 1;
 		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
@@ -84,8 +84,8 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"332nd_vehicles\_textures\land\TX155\body_co.paa",
-			"332nd_vehicles\_textures\land\TX155\details_co.paa",
+			"ORG_vehicles\_textures\land\TX155\body_co.paa",
+			"ORG_vehicles\_textures\land\TX155\details_co.paa",
 			"\sc_wheeled\data\saurus_apc\textures\camera_co.paa"
 		};
 		
@@ -191,9 +191,9 @@ class CfgVehicles
 		displayName = "Minotaur Supply";
 		scope = 2;
 		side = 1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_CAR";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_CAR";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		tas_canBlift = 1;
 		tas_liftVars = "[[[[0,-4,-6]]], [0.1], [-0.5]]";
@@ -203,8 +203,8 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"332nd_vehicles\_textures\land\TX155\body_co.paa",
-			"332nd_vehicles\_textures\land\TX155\details_co.paa",
+			"ORG_vehicles\_textures\land\TX155\body_co.paa",
+			"ORG_vehicles\_textures\land\TX155\details_co.paa",
 			"\sc_wheeled\data\saurus_apc\textures\camera_co.paa"
 		};
 

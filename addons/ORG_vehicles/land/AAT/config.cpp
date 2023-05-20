@@ -896,9 +896,9 @@ class CfgVehicles
 		displayName = "AAT (CIS)";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 2000;
 		armorStructural = 10;
@@ -951,7 +951,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Woodland
@@ -964,7 +964,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Tropical
@@ -977,7 +977,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Arid
@@ -990,7 +990,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Winter
@@ -1003,7 +1003,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Aqua
@@ -1016,7 +1016,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Geonosis
@@ -1029,7 +1029,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 		};
@@ -1640,9 +1640,9 @@ class CfgVehicles
 		displayName = "AAT (Tan)";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 2000;
 		armorStructural = 10;
@@ -1695,7 +1695,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Woodland
@@ -1708,7 +1708,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Tropical
@@ -1721,7 +1721,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Arid
@@ -1734,7 +1734,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Winter
@@ -1747,7 +1747,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Aqua
@@ -1760,7 +1760,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Geonosis
@@ -1773,7 +1773,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 		};
@@ -2384,13 +2384,13 @@ class CfgVehicles
 		displayName = "Heavy AAT";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		driver = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		driver = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 		typicalCargo[] =
 		{
-			"332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew"
+			"ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew"
 		};
 
 		armor = 5900;

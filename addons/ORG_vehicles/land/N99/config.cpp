@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(N99)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
 		requiredAddons[]=
 		{
@@ -245,9 +245,9 @@ class CfgVehicles
         displayName = "N99 *WIP*";
         scope = 2;
         scopeCurator = 2;
-        faction = "EdCat_332ndCIS";
-        editorSubcategory = "EdSubcat_332nd_TANK";
-        crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+        faction = "EdCat_ORGCIS";
+        editorSubcategory = "EdSubcat_ORG_TANK";
+        crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 2000;
 		armorStructural = 10;

@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(AV7)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
 		requiredAddons[]=
 		{
@@ -96,9 +96,9 @@ class CfgVehicles
 	    displayName = "AV7 *WIP*";
 	    scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_ART";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_ART";
+		crew = "ORG_aux_infantry_unit_trooper";
         forceHideCommander = true;
 
         class Turrets : Turrets

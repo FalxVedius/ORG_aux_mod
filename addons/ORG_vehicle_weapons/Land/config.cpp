@@ -144,7 +144,7 @@ class CfgAmmo
 	indirectHit = 0;
 	indirectHitRange = 0;
 	timetolive=0.5;
-	effectfly="332nd_aux_effects_RPS4_green";
+	effectfly="ORG_aux_effects_RPS4_green";
 	};
 	
 	
@@ -168,7 +168,7 @@ class CfgAmmo
 	{
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
 		cartridge = "FxCartridge_556";
-		effectsMissile = "332nd_aux_effects_RPS4_blue";
+		effectsMissile = "ORG_aux_effects_RPS4_blue";
 		caliber=30;
 		hit=400;
 		indirectHit = 8;
@@ -179,7 +179,7 @@ class CfgAmmo
 	{
 		soundFly[] = { "SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000 };
 		cartridge = "FxCartridge_556";
-		effectsMissile = "332nd_aux_effects_RPS4_blue";
+		effectsMissile = "ORG_aux_effects_RPS4_blue";
 		caliber = 15;
 		hit = 125;
 		indirectHit = 8;
@@ -219,7 +219,7 @@ class CfgAmmo
 	{
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000}; //Volume,Pitch,Distance
 		cartridge = "";
-		effectsMissile = "332nd_aux_effects_RPS4_green";
+		effectsMissile = "ORG_aux_effects_RPS4_green";
 		caliber=6;
 		model = "swlw_main\Effects\laser_green.p3d";
 		effectfly = "SWLW_plasma_green";
@@ -240,7 +240,7 @@ class CfgAmmo
 		};
 		manualcontrol=1;
 		caliber=10;
-		effectsMissile = "332nd_aux_effects_missile_plx_blue";
+		effectsMissile = "ORG_aux_effects_missile_plx_blue";
 		hit=4000;
 		thrusttime = 12;
 		indirectHit = 35;
@@ -484,7 +484,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\Land\sounds\MassDriver.wss",
+					"ORG_vehicle_weapons\Land\sounds\MassDriver.wss",
 					2.5,
 					0.95,
 					10000
@@ -575,7 +575,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\Land\sounds\Hmg20mm.wss",
+					"ORG_vehicle_weapons\Land\sounds\Hmg20mm.wss",
 					0.8,
 					0.9,
 					6000
@@ -646,7 +646,7 @@ class CfgWeapons
         ace_overpressure_damage = 0;  // Damage multiplier
 		muzzles[] = {"this"};
 		magazineWell[] = {};
-		cursoraim="332_DC17";
+		cursoraim="ORG_DC17";
 		magazines[] = {
 			MACRO_NEW_MAG(LaserBeamFull,2000)
 		};
@@ -667,14 +667,14 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\Land\sounds\Laserbeam1.wss",
+					"ORG_vehicle_weapons\Land\sounds\Laserbeam1.wss",
 					0.9,
 					0.9,
 					6000
 				};
 				begin2[]=
 				{
-					"332nd_vehicle_weapons\Land\sounds\Laserbeam2.wss",
+					"ORG_vehicle_weapons\Land\sounds\Laserbeam2.wss",
 					1,
 					1,
 					6000
@@ -762,7 +762,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\Land\sounds\SaberLowPower.wss",
+					"ORG_vehicle_weapons\Land\sounds\SaberLowPower.wss",
 					1,
 					1,
 					6000
@@ -1193,7 +1193,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\LAAT_Nose.wss",
+					"ORG_vehicle_weapons\air\sounds\LAAT_Nose.wss",
 					1,
 					2,
 					6000

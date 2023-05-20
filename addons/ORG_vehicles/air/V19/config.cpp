@@ -78,8 +78,8 @@ class CfgVehicles
 		displayName = "V-19 *Test*";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_PLANE";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_PLANE";
 		draconicTorqueYCoef=-0.1;
 		angleOfIndicence=0;
 		maxSpeed=2000;
@@ -89,18 +89,18 @@ class CfgVehicles
 		{
 			EjectionSeatEnabled = 0;										//enable advanced ejection system								
 		};
-		crew = "332nd_aux_infantry_unit_trooper";
+		crew = "ORG_aux_infantry_unit_trooper";
 		airBrake=80;
 		airBrakeFrictionCoef=60;
 
 		hiddenselectionstextures[] = 
 		{ 
-			"332nd_vehicles\_textures\air\V19\wings_CO_LOGO_PW.paa",
-			"332nd_vehicles\_textures\air\V19\wing_plates_CO_PW.paa",
-			"332nd_vehicles\_textures\air\V19\Hull_CO_PW.paa",
+			"ORG_vehicles\_textures\air\V19\wings_CO_LOGO_PW.paa",
+			"ORG_vehicles\_textures\air\V19\wing_plates_CO_PW.paa",
+			"ORG_vehicles\_textures\air\V19\Hull_CO_PW.paa",
 			"3as\3as_v19\textures\gun gear_co.paa",
 			"a3\air_f_jets\plane_fighter_01\data\fighter_01_glass_01_ca.paa",
-			"332nd_vehicles\_textures\air\V19\Pizzlepit_CO.paa" 
+			"ORG_vehicles\_textures\air\V19\Pizzlepit_CO.paa" 
 		};
 
 		weapons[] =
@@ -131,7 +131,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineExt.wss",
+					"ORG_vehicles\air\sounds\Z95\Z95TurbineExt.wss",
 					1,
 					0.5,
 					1000
@@ -143,7 +143,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighInt.wss",
+					"ORG_vehicles\air\sounds\Z95\Z95TurbineHighInt.wss",
 					0.1,
 					1,
 					2500
@@ -155,7 +155,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineHighExt.wss",
+					"ORG_vehicles\air\sounds\Z95\Z95TurbineHighExt.wss",
 					1,
 					1,
 					4000
@@ -167,7 +167,7 @@ class CfgVehicles
 			{
 				sound[]=
 				{
-					"332nd_vehicles\air\sounds\Z95\Z95TurbineInt.wss",
+					"ORG_vehicles\air\sounds\Z95\Z95TurbineInt.wss",
 					0.1,
 					1,
 					2100
@@ -180,7 +180,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\V19\V19EngineHighInt.wss",
+					"ORG_vehicles\air\sounds\V19\V19EngineHighInt.wss",
 					1,
 					1,
 					2100
@@ -192,7 +192,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\V19\V19EngineHighExt.wss",
+					"ORG_vehicles\air\sounds\V19\V19EngineHighExt.wss",
 					3,
 					0.95,
 					6000
@@ -204,7 +204,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\V19\V19EngineInt.wss",
+					"ORG_vehicles\air\sounds\V19\V19EngineInt.wss",
 					1,
 					1,
 					1200
@@ -216,7 +216,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\V19\V19EngineExt.wss",
+					"ORG_vehicles\air\sounds\V19\V19EngineExt.wss",
 					4,
 					0.9,
 					6000
@@ -229,7 +229,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\V19\ForsageInt.wss",
+					"ORG_vehicles\air\sounds\V19\ForsageInt.wss",
 					1,
 					1
 				};
@@ -242,7 +242,7 @@ class CfgVehicles
 			cone[] = {20,15,3,1};
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\V19\ForsageExt.wss",
+					"ORG_vehicles\air\sounds\V19\ForsageExt.wss",
 					3,
 					1
 				};
@@ -287,32 +287,32 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						attachment="ORG_aux_magazine_Pylon_AA_Med_x3";
 						priority=5;
 						hardpoints[]=
 						{
-							"332_A_Pylon"
+							"ORG_A_Pylon"
 						};
 						turret[]={};
 						UIposition[]={0.059999999,0.40000001};
 					};
 					class PylonLeft2: PylonLeft1
 					{
-						attachment="332nd_aux_magazine_Pylon_Shrieker_x20";  
+						attachment="ORG_aux_magazine_Pylon_Shrieker_x20";  
 						priority=4;
 						hardpoints[]=
 						{
-							"332_C_Pylon"
+							"ORG_C_Pylon"
 						};
 						UIposition[]={0.079999998,0.34999999};
 					};
 					class PylonLeft3: PylonLeft1
 					{
-						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						attachment="ORG_aux_magazine_Pylon_AA_Med_x3";
 						priority=3;
 						hardpoints[]=
 						{
-							"332_A_Pylon"
+							"ORG_A_Pylon"
 						};
 						UIposition[]={0.1,0.30000001};
 					};
@@ -610,7 +610,7 @@ class CfgVehicles
 		class ACE_SelfActions :ACE_SelfActions
 		{
 
-			class 332nd_aux_HUD_Changer
+			class ORG_aux_HUD_Changer
 			{
 				displayName = "Change HUD Color :)";
 				exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -618,7 +618,7 @@ class CfgVehicles
 				showDisabled = 0;
 				priority = 2.5;
 				icon = MACRO_HUD_CHANGER_ICONS\colorWheel.paa;
-				class 332nd_aux_Red_HUD
+				class ORG_aux_Red_HUD
 				{
 					displayName = "Red HUD Color";
 					exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -630,7 +630,7 @@ class CfgVehicles
 					icon = MACRO_HUD_CHANGER_ICONS\red.paa;
 				};
 
-				class 332nd_aux_Orange_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Orange_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Orange HUD Color";
 					statement = [1,.05,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -638,7 +638,7 @@ class CfgVehicles
 
 				};
 
-				class 332nd_aux_Yellow_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Yellow_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Yellow HUD Color";
 					statement = [1,1,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -646,7 +646,7 @@ class CfgVehicles
 
 				};
 
-				class 332nd_aux_Green_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Green_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Green HUD Color";
 				//condition = "true";
@@ -656,7 +656,7 @@ class CfgVehicles
 				// priority = 2.5;
 				};
 
-				class 332nd_aux_Cyan_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Cyan_HUD :ORG_aux_Red_HUD
 				 {
 				displayName = "Cyan HUD Color";
 				statement = [0,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -664,7 +664,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Blue_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Blue_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "Blue HUD Color";
 				statement = [0,0,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -672,7 +672,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Purple_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Purple_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "Purple HUD Color";
 				statement = [.5,0,.5,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -680,7 +680,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_White_HUD :332nd_aux_Red_HUD
+				class ORG_aux_White_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "White HUD Color";
 				statement = [1,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -688,7 +688,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Black_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Black_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "Black HUD Color";
 				statement = [0,0,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -696,7 +696,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Clear_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Clear_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "No HUD Color";
 				statement = [1,1,1,0,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);

@@ -12,8 +12,8 @@ class CfgPatches
 		};
 		requiredVersion = 0.1;
 		units[] = {
-            MACRO_NEW_BACKPACK(blufor,332nd_jt_12),
-            MACRO_NEW_BACKPACK(blufor,332nd_jt_12_LR),
+            MACRO_NEW_BACKPACK(blufor,ORG_jt_12),
+            MACRO_NEW_BACKPACK(blufor,ORG_jt_12_LR),
             };
 		weapons[] = {};
 	};
@@ -21,10 +21,10 @@ class CfgPatches
 
 class CfgVehicles
 {
-    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base);
+    class MACRO_NEW_BACKPACK(blufor,ORG_jt_12_base);
 
     
-	class MACRO_NEW_BACKPACK(blufor,332nd_jt_12): MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
+	class MACRO_NEW_BACKPACK(blufor,ORG_jt_12): MACRO_NEW_BACKPACK(blufor,ORG_jt_12_base)
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Trooper)
         scope = 2;
@@ -63,7 +63,7 @@ class CfgVehicles
         JLTS_isJumppack = 0;
     };
 
-    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_LR) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
+    class MACRO_NEW_BACKPACK(blufor,ORG_jt_12_LR) : MACRO_NEW_BACKPACK(blufor,ORG_jt_12_base)
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Radio Pack)
         scope = 2;
@@ -106,7 +106,7 @@ class CfgVehicles
         JLTS_isJumppack = 0;
     };
 
-    class MACRO_NEW_BACKPACK(blufor,332nd_jt_12_MED) : MACRO_NEW_BACKPACK(blufor,332nd_jt_12_base)
+    class MACRO_NEW_BACKPACK(blufor,ORG_jt_12_MED) : MACRO_NEW_BACKPACK(blufor,ORG_jt_12_base)
     {
         displayName = MACRO_ITEM_DISPLAYNAME(JT-12,Medic Pack)
         scope = 2;

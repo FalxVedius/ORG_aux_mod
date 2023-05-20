@@ -10,7 +10,7 @@ class MACRO_NEW_BINO(basic): SWLB_clone_binocular
     distanceZoomMax = 2300;
     distanceZoomMin = 100;
     visionMode[] = {"Normal","NVG"};
-    author = "332nd Aux Team";
+    author = "ORG Aux Team";
     picture = "\MRC\JLTS\characters\CloneArmor\data\ui\Clone_binocular_ui_ca.paa";
     hiddenSelections[] = {"camo1"};
     hiddenSelectionsTextures[] = {"\SWLB_equipment\binoculars\data\SWLB_clone_binocular_co.paa"};

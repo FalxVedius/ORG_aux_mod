@@ -431,9 +431,9 @@ class CfgVehicles
 	    displayName = "TX-130 Saber";
 	    scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		armor = 500;
 		armorStructural = 6;
@@ -443,8 +443,8 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] = 
 		{ 
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Weapons.paa" 
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_Hull.paa",
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_Weapons.paa" 
 		};
 
 		class Turrets : Turrets
@@ -553,9 +553,9 @@ class CfgVehicles
 		displayName = "TX-130 GL";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		armor = 500;
 		armorStructural = 6;
@@ -565,8 +565,8 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] = 
 		{ 
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Weapons.paa"
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_Hull.paa",
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_Weapons.paa"
 		};
 
 		class Turrets : Turrets
@@ -667,9 +667,9 @@ class CfgVehicles
 		displayName = "TX-130 Recon";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		armor = 500;
 		armorStructural = 6;
@@ -679,8 +679,8 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] = 
 		{ 
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_WeaponsScout.paa"
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_Hull.paa",
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_WeaponsScout.paa"
 		};
 
 		class Turrets : Turrets
@@ -755,9 +755,9 @@ class CfgVehicles
 		displayName = "TX-130 Super";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_infantry_unit_332nd_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_infantry_unit_ORG_trooper";
 
 		armor = 500;
 		armorStructural = 6;
@@ -767,8 +767,8 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] =
 		{
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Hull.paa",
-			"332nd_vehicles\_textures\land\Saber\332nd_Vic_Test_Saber_Weapons.paa"
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_Hull.paa",
+			"ORG_vehicles\_textures\land\Saber\ORG_Vic_Test_Saber_Weapons.paa"
 		};
 
 		class Turrets : Turrets

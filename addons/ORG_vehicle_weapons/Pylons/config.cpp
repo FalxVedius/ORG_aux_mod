@@ -22,25 +22,25 @@ class CfgAmmo
 	{
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket1.wss",
 			1,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			"ORG_weapons\sounds\weapons\flight\RocketEngine.wss",
 			1,
 			1.5,
 			200
 		};
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		model = "\A3\Weapons_F\Ammo\Missile_AT_03_fly_F";
 		manualcontrol=0;
-		effectsMissile = "332nd_aux_effects_missile_Rocket_Blue";
+		effectsMissile = "ORG_aux_effects_missile_Rocket_Blue";
 		proxyShape = "\A3\Weapons_F\Ammo\Missile_AT_03_F";
 		caliber=1;
 		missileLockMaxDistance = 3000;
@@ -60,21 +60,21 @@ class CfgAmmo
 	{
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket1.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket1.wss",
 			1,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			"ORG_weapons\sounds\weapons\flight\RocketEngine.wss",
 			1,
 			1.5,
 			200
 		};
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		maxSpeed = 50;
 		thrust = 50;
@@ -83,7 +83,7 @@ class CfgAmmo
 		thrustTime = 60;
 		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
 		manualcontrol=1;
-		effectsMissile = "332nd_aux_effects_missile_Proton_Purple";
+		effectsMissile = "ORG_aux_effects_missile_Proton_Purple";
 		proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_01_fly_F";
 		caliber=1;
 		explosionEffects = "HelicopterExplosionEffects2";
@@ -104,13 +104,13 @@ class CfgAmmo
 	{
 		soundFly[]=
 		{
-			"332nd_vehicle_weapons\air\sounds\V1.wss",
+			"ORG_vehicle_weapons\air\sounds\V1.wss",
 			2,
 			15,
 			1000
 		};
-		effectfly="332nd_aux_effects_purple_tracer_Bomb";
-		effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
+		effectfly="ORG_aux_effects_purple_tracer_Bomb";
+		effectsMissile = "ORG_aux_effects_purple_tracer_Bomb";
 		maxSpeed = 100;
 		thrust = 50;
 		timeToLive = 60;
@@ -127,7 +127,7 @@ class CfgAmmo
 
 	class MACRO_NEW_AMMO(Plasma_Bomb): Bo_GBU12_LGB
 	{
-		effectsMissile = "332nd_aux_effects_purple_tracer_Bomb";
+		effectsMissile = "ORG_aux_effects_purple_tracer_Bomb";
 		model = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_fly_F";
 		proxyShape = "\a3\Weapons_F_Orange\Ammo\BombCluster_03_F";
 		//thrust = 50;
@@ -148,26 +148,26 @@ class CfgAmmo
 	{
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss",
 			1,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			"ORG_weapons\sounds\weapons\flight\RocketEngine.wss",
 			1,
 			1.5,
 			200
 		};
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		manualcontrol=0;
 		missileLockMaxDistance = 5000;
 		missileLockMinDistance = 0;
-		effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
+		effectsMissile = "ORG_aux_effects_missile_Rocket_Red";
 		caliber=1;
 		weaponLockSystem = "1 + 2 + 16";
 		missileKeepLockedCone = 270;
@@ -180,26 +180,26 @@ class CfgAmmo
 	{
 		soundengine[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\homingrocket2.wss",
+			"ORG_weapons\sounds\weapons\flight\homingrocket2.wss",
 			1,
 			1,
 			750
 		};
 		soundfly[]=
 		{
-			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			"ORG_weapons\sounds\weapons\flight\RocketEngine.wss",
 			1,
 			1.5,
 			200
 		};
 		soundsetsoniccrack[]=
 		{
-			"332nd_genericrocket_flyby_soundset"
+			"ORG_genericrocket_flyby_soundset"
 		};
 		manualcontrol=0;
 		missileLockMaxDistance = 1500;
 		missileLockMinDistance = 0;
-		effectsMissile = "332nd_aux_effects_missile_Rocket_Red";
+		effectsMissile = "ORG_aux_effects_missile_Rocket_Red";
 		caliber=1;
 		weaponLockSystem = "1 + 2 + 16";
 		missileKeepLockedCone = 270;
@@ -214,25 +214,25 @@ class CfgAmmo
 
 class CfgMagazines
 {
-	class PylonRack_3Rnd_LG_scalpel; //332nd_aux_magazine_Pylon_AGM_Med_x3
+	class PylonRack_3Rnd_LG_scalpel; //ORG_aux_magazine_Pylon_AGM_Med_x3
 	class MACRO_NEW_MAG(Pylon_AGM_Med,3): PylonRack_3Rnd_LG_scalpel
 	{
-	    hardpoints[]	= {"332_C_Pylon","332_B_Pylon"};
+	    hardpoints[]	= {"ORG_C_Pylon","ORG_B_Pylon"};
 		displayName="Shrike AGM";
 		descriptionshort="Concussion Missiles";
 		model = "\A3\Weapons_F\DynamicLoadout\PylonPod_3x_Missile_LG_scalpel_F.p3d";
-		pylonWeapon = "332nd_aux_weapon_AGM_Pylon";
+		pylonWeapon = "ORG_aux_weapon_AGM_Pylon";
 		autoSeekTarget = 1;
 		displayNameShort="Shrike AGM";
 		ammo=MACRO_NEW_AMMO(AGM_Med)
 	};
 	class MACRO_NEW_MAG(Pylon_AA_Med,3): PylonRack_3Rnd_LG_scalpel
 	{
-	    hardpoints[]	= {"332_C_Pylon","332_A_Pylon"};
+	    hardpoints[]	= {"ORG_C_Pylon","ORG_A_Pylon"};
 		displayName="Concussion Missile AA";
 
 		descriptionshort="Air to Air Concussion Missile";
-		pylonWeapon = "332nd_aux_weapon_AA_Pylon";
+		pylonWeapon = "ORG_aux_weapon_AA_Pylon";
 		displayNameShort="A2A Concussion Missiles";
 		ammo=MACRO_NEW_AMMO(AA_Med)
 	};
@@ -240,7 +240,7 @@ class CfgMagazines
 	class PylonRack_12Rnd_missiles;
     class MACRO_NEW_MAG(Pylon_AA_low,12): PylonRack_12Rnd_missiles
 	{
-	    hardpoints[]	= {"332_A_Pylon"};
+	    hardpoints[]	= {"ORG_A_Pylon"};
 		displayName="Micro Concussion Missile AA";
 		count=12;
 		descriptionshort="Air to Air micro Concussion Missile";
@@ -252,10 +252,10 @@ class CfgMagazines
 	class PylonRack_20Rnd_Rocket_03_HE_F;
 	class MACRO_NEW_MAG(Pylon_Shrieker,20): PylonRack_20Rnd_Rocket_03_HE_F
 	{
-	    hardpoints[]	= {"332_C_Pylon","332_B_Pylon"};
+	    hardpoints[]	= {"ORG_C_Pylon","ORG_B_Pylon"};
 		displayName="Shrieker 20rnd Rocket Pod";
 		descriptionshort="Rocket Pod";
-		pylonWeapon = "332nd_aux_weapon_RocketPod_Pylon";
+		pylonWeapon = "ORG_aux_weapon_RocketPod_Pylon";
 		displayNameShort="Rocket Pod";
 		count = 20;
 		ammo=MACRO_NEW_AMMO(Shrieker_Rocket)
@@ -263,10 +263,10 @@ class CfgMagazines
 	class PylonWeapon_300Rnd_20mm_shells;
 	class MACRO_NEW_MAG(Pylon_20mm,600): PylonWeapon_300Rnd_20mm_shells
 	{
-	    hardpoints[]	= {"332_C_Pylon","332_A_Pylon"};
+	    hardpoints[]	= {"ORG_C_Pylon","ORG_A_Pylon"};
 		displayName="20mm Cannon";
 		descriptionshort="20mm Cannon";
-		pylonWeapon = "332nd_aux_weapon_20mm_Pylon";
+		pylonWeapon = "ORG_aux_weapon_20mm_Pylon";
 		displayNameShort="20mm Cannon";
 		tracersEvery=1;
 		count = 600;
@@ -275,11 +275,11 @@ class CfgMagazines
 	
 	class MACRO_NEW_MAG(Pylon_ProtonTorpedo,1): PylonWeapon_300Rnd_20mm_shells
 	{
-	    hardpoints[]	= {"332_B_Pylon"};
+	    hardpoints[]	= {"ORG_B_Pylon"};
 		displayName="Proton Torpedo";
 		model = "\a3\Weapons_F_Orange\DynamicLoadout\PylonMissile_1x_BombCluster_01_F.p3d";
 		descriptionshort="Proton Torpedo";
-		pylonWeapon = "332nd_aux_weapon_ProtonTorpedo_Pylon";
+		pylonWeapon = "ORG_aux_weapon_ProtonTorpedo_Pylon";
 		displayNameShort="Proton Torpedo";
 		tracersEvery=1;
 		initspeed=50;
@@ -289,10 +289,10 @@ class CfgMagazines
 	class PylonMissile_1Rnd_BombCluster_03_F;
 	class MACRO_NEW_MAG(Pylon_ProtonBomb,1): PylonMissile_1Rnd_BombCluster_03_F
 	{
-	    hardpoints[]= {"332_B_Pylon"};
+	    hardpoints[]= {"ORG_B_Pylon"};
 		displayName="Proton Bomb";
 		descriptionshort="Proton Bomb";
-		pylonWeapon = "332nd_aux_weapon_ProtonBomb_Pylon";
+		pylonWeapon = "ORG_aux_weapon_ProtonBomb_Pylon";
 		displayNameShort="Proton Bomb";
 		tracersEvery=1;
 		initspeed=0;
@@ -300,10 +300,10 @@ class CfgMagazines
 	};
 	class MACRO_NEW_MAG(Pylon_PlasmaBomb,1): PylonMissile_1Rnd_BombCluster_03_F
 	{
-	    hardpoints[]= {"332_B_Pylon"};
+	    hardpoints[]= {"ORG_B_Pylon"};
 		displayName="Plasma Bomb";
 		descriptionshort="Plasma Bomb";
-		pylonWeapon = "332nd_aux_weapon_PlasmaBomb_Pylon";
+		pylonWeapon = "ORG_aux_weapon_PlasmaBomb_Pylon";
 		displayNameShort="Plasma Bomb";
 		tracersEvery=1;
 		initspeed=0;

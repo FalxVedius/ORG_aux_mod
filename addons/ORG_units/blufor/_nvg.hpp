@@ -13,7 +13,7 @@ class MACRO_NEW_NVG(Leadership_MCNVG) :JLTS_CloneNVGMC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Commander Visor";
+    displayName = "[ORG] Commander Visor";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
     author = "Halligan, Namenai,Falx ";
@@ -29,7 +29,7 @@ class MACRO_NEW_NVG(Rangefinder) :JLTS_CloneNVGRange
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Rangefinder (White)";
+    displayName = "[ORG] Rangefinder (White)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -46,7 +46,7 @@ class MACRO_NEW_NVG(Rangefinder_Black) :JLTS_CloneNVGRange_black
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Rangefinder (Black)";
+    displayName = "[ORG] Rangefinder (Black)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -62,10 +62,10 @@ class MACRO_NEW_NVG(Rangefinder_Black) :JLTS_CloneNVGRange_black
 class MACRO_NEW_NVG(Specialist_Visor):JLTS_CloneNVG
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\White_nvg.paa" };
+    hiddenSelectionsTextures[] = { "\ORG_units\_textures\nvgs\White_nvg.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Visor";
+    displayName = "[ORG] Visor";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -81,10 +81,10 @@ class MACRO_NEW_NVG(Specialist_Visor):JLTS_CloneNVG
 class MACRO_NEW_NVG(Specialist_Visor_orange) :JLTS_CloneNVG
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Orange_nvg.paa" };
+    hiddenSelectionsTextures[] = { "\ORG_units\_textures\nvgs\Orange_nvg.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Visor (Orange)";
+    displayName = "[ORG] Visor (Orange)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -100,10 +100,10 @@ class MACRO_NEW_NVG(Specialist_Visor_orange) :JLTS_CloneNVG
 class MACRO_NEW_NVG(Specialist_Visor_grey):JLTS_CloneNVG_black
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Grey_nvg.paa" };
+    hiddenSelectionsTextures[] = { "\ORG_units\_textures\nvgs\Grey_nvg.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Visor (Black)";
+    displayName = "[ORG] Visor (Black)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -120,7 +120,7 @@ class MACRO_NEW_NVG(Commander_visor_NVG):JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Sun Visor";
+    displayName = "[ORG] Sun Visor";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -137,7 +137,7 @@ class MACRO_NEW_NVG(Sniper_Attachment) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Sniper Attachment";
+    displayName = "[ORG] Sniper Attachment";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_clones_spec\SWLB_clone_commando_sniper_armor.p3d";
     hiddenSelections[] = { "illum","camo1" };
@@ -167,7 +167,7 @@ class MACRO_NEW_NVG(Shoulder_Attachment) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Shoulder Attachment";
+    displayName = "[ORG] Shoulder Attachment";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_clones_spec\SWLB_clone_commando_tech_armor.p3d";
     hiddenSelections[] = { "camo1" };
@@ -196,7 +196,7 @@ class MACRO_NEW_NVG(EOD_Bag) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] EOD Bag";
+    displayName = "[ORG] EOD Bag";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_clones_spec\SWLB_clone_commando_eod_armor.p3d";
     hiddenSelections[] = {};
@@ -225,7 +225,7 @@ class MACRO_NEW_NVG(Low_Profile) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Low Profile";
+    displayName = "[ORG] Low Profile";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\A3\characters_f_beta\heads\glasses\g_lowprofile";
     hiddenSelections[] = { "camo" };
@@ -254,7 +254,7 @@ class MACRO_NEW_NVG(Scarf) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Scarf";
+    displayName = "[ORG] Scarf";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
     hiddenSelections[] = { "camo1" };
@@ -283,7 +283,7 @@ class MACRO_NEW_NVG(Scarf_blue) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Scarf (Blue)";
+    displayName = "[ORG] Scarf (Blue)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
     hiddenSelections[] = { "camo1" };
@@ -312,7 +312,7 @@ class MACRO_NEW_NVG(Scarf_green) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Scarf (Green)";
+    displayName = "[ORG] Scarf (Green)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
     hiddenSelections[] = { "camo1" };
@@ -341,7 +341,7 @@ class MACRO_NEW_NVG(Scarf_orange) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Scarf (Orange)";
+    displayName = "[ORG] Scarf (Orange)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
     hiddenSelections[] = { "camo1" };
@@ -370,7 +370,7 @@ class MACRO_NEW_NVG(Scarf_red) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Scarf (Red)";
+    displayName = "[ORG] Scarf (Red)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
     hiddenSelections[] = { "camo1" };
@@ -399,7 +399,7 @@ class MACRO_NEW_NVG(Scarf_white) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Scarf (White)";
+    displayName = "[ORG] Scarf (White)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_CEE\data\SWLB_CEE_Clone_Scarf.p3d";
     hiddenSelections[] = { "camo1" };
@@ -428,7 +428,7 @@ class MACRO_NEW_NVG(Rangefinder_ls) :lsd_gar_rangefinder_nvg
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Rangefinder (Legions)";
+    displayName = "[ORG] Rangefinder (Legions)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -445,11 +445,11 @@ class MACRO_NEW_NVG(assault_Ant) :JLTS_CloneNVGCC
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Antenna";
+    displayName = "[ORG] Antenna";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
     model = "\SWLB_clones_spec\SWLB_clone_commando_nvg_antenna.p3d";
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\Facewear\data\Antenna" };
+    hiddenSelectionsTextures[] = { "\ORG_units\Facewear\data\Antenna" };
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
     author = "Halligan, Namenai,Falx ";
@@ -474,7 +474,7 @@ class MACRO_NEW_NVG(mando_rangefinder) :ls_mandalorian_rangefinder_nvg
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Mando Rangefinder";
+    displayName = "[ORG] Mando Rangefinder";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -491,7 +491,7 @@ class MACRO_NEW_NVG(Trooper_NVG):JLTS_NVG_droid_chip_1
 {
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Trooper NVG chip";
+    displayName = "[ORG] Trooper NVG chip";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -508,10 +508,10 @@ class MACRO_NEW_NVG(Trooper_NVG):JLTS_NVG_droid_chip_1
 class MACRO_NEW_NVG(Leadership_Visor):JLTS_CloneNVG
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\White_nvg.paa" };
+    hiddenSelectionsTextures[] = { "\ORG_units\_textures\nvgs\White_nvg.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Leadership/Marksman Visor";
+    displayName = "[ORG] Leadership/Marksman Visor";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -527,10 +527,10 @@ class MACRO_NEW_NVG(Leadership_Visor):JLTS_CloneNVG
 class MACRO_NEW_NVG(Leadership_Visor_Orange) :JLTS_CloneNVG
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Orange_nvg.paa" };
+    hiddenSelectionsTextures[] = { "\ORG_units\_textures\nvgs\Orange_nvg.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Leadership/Marksman Visor (Orange)";
+    displayName = "[ORG] Leadership/Marksman Visor (Orange)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";
@@ -546,10 +546,10 @@ class MACRO_NEW_NVG(Leadership_Visor_Orange) :JLTS_CloneNVG
 class MACRO_NEW_NVG(Leadership_Visor_grey):JLTS_CloneNVG_black
 {
     hiddenSelections[] = { "camo1" };
-    hiddenSelectionsTextures[] = { "\332nd_units\_textures\nvgs\Grey_nvg.paa" };
+    hiddenSelectionsTextures[] = { "\ORG_units\_textures\nvgs\Grey_nvg.paa" };
     descriptionShort = "Night Vision Goggles";
     descriptionUse = "<t color='#9cf953'>Use: </t>Toggle Night Vision";
-    displayName = "[332nd] Leadership/Marksman Visor (Black)";
+    displayName = "[ORG] Leadership/Marksman Visor (Black)";
     modelOptics = "\MRC\JLTS\Core_mod\nvg_optic_dummy.p3d";
 
     //ace_nightvision_border = "\z\ace\addons\nightvision\data\nvg_mask_binos_4096.paa";

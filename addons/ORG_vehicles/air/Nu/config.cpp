@@ -135,10 +135,10 @@ class CfgVehicles
 		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
 		picture="3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
 		editorpreview="\3AS\3as_Laat\LAATI\data\editorpreview\3as_laat.jpg";
-		faction = "EdCat_332nd";
-        editorSubcategory = "EdSubcat_332nd_HELI";
+		faction = "EdCat_ORG";
+        editorSubcategory = "EdSubcat_ORG_HELI";
 
-		crew = "332nd_aux_infantry_unit_trooper";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		memoryPointSupply="doplnovani";
 		memoryPointTaskMarker="TaskMarker_1_pos";
@@ -625,7 +625,7 @@ class CfgVehicles
 			defaultCollective=0.60500002;
 			retreatBladeStallWarningSpeed=92.583;
 			maxTorque=5048;
-			stressDamagePerSec=0.0033333332;
+			stressDamagePerSec=0.0033333ORG;
 			maxHorizontalStabilizerLeftStress=10000;
 			maxHorizontalStabilizerRightStress=10000;
 			maxVerticalStabilizerStress=10000;
@@ -1774,22 +1774,22 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment = "332nd_aux_magazine_Pylon_AGM_Med_x3";
+						attachment = "ORG_aux_magazine_Pylon_AGM_Med_x3";
 						priority = 5;
 						hardpoints[] =
 						{
-							"332_B_Pylon"
+							"ORG_B_Pylon"
 						};
 						turret[] = {};
 						UIposition[] = { 0.059999999,0.40000001 };
 					};
 					class PylonLeft2 : PylonLeft1
 					{
-						attachment = "332nd_aux_magazine_Pylon_AGM_Med_x3";
+						attachment = "ORG_aux_magazine_Pylon_AGM_Med_x3";
 						priority = 4;
 						hardpoints[] =
 						{
-							"332_B_Pylon"
+							"ORG_B_Pylon"
 						};
 						UIposition[] = { 0.079999998,0.34999999 };
 					};
@@ -20882,7 +20882,7 @@ class CfgVehicles
 				insertChildren="_this call ace_interaction_fnc_addPassengersActions";
 				statement="";
 			};
-			class 332nd_aux_HUD_Changer
+			class ORG_aux_HUD_Changer
 			{
 				displayName = "Change HUD Color :)";
 				exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -20890,7 +20890,7 @@ class CfgVehicles
 				showDisabled = 0;
 				priority = 2.5;
 				icon = MACRO_HUD_CHANGER_ICONS\colorWheel.paa;
-				class 332nd_aux_Red_HUD
+				class ORG_aux_Red_HUD
 				{
 					displayName = "Red HUD Color";
 					exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -20902,7 +20902,7 @@ class CfgVehicles
 					icon = MACRO_HUD_CHANGER_ICONS\red.paa;
 				};
 
-				class 332nd_aux_Orange_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Orange_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Orange HUD Color";
 					statement = [1,.05,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -20910,7 +20910,7 @@ class CfgVehicles
 
 				};
 
-				class 332nd_aux_Yellow_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Yellow_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Yellow HUD Color";
 					statement = [1,1,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -20918,7 +20918,7 @@ class CfgVehicles
 
 				};
 
-				class 332nd_aux_Green_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Green_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Green HUD Color";
 				//condition = "true";
@@ -20928,42 +20928,42 @@ class CfgVehicles
 				// priority = 2.5;
 				};
 
-			    class 332nd_aux_Cyan_HUD :332nd_aux_Red_HUD
+			    class ORG_aux_Cyan_HUD :ORG_aux_Red_HUD
 			    {
 					displayName = "Cyan HUD Color";
 					statement = [0,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 					icon = MACRO_HUD_CHANGER_ICONS\cyan.paa;
 				};
 
-				class 332nd_aux_Blue_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Blue_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Blue HUD Color";
 					statement = [0,0,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 					icon = MACRO_HUD_CHANGER_ICONS\blue.paa;
 				};
 
-				class 332nd_aux_Purple_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Purple_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Purple HUD Color";
 					statement = [.5,0,.5,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 					icon = MACRO_HUD_CHANGER_ICONS\purple.paa;
 				};
 
-				class 332nd_aux_White_HUD :332nd_aux_Red_HUD
+				class ORG_aux_White_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "White HUD Color";
 					statement = [1,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 					icon = MACRO_HUD_CHANGER_ICONS\white.paa;
 				};
 
-				class 332nd_aux_Black_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Black_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Black HUD Color";
 					statement = [0,0,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
 					icon = MACRO_HUD_CHANGER_ICONS\black.paa
 				};
 
-			   class 332nd_aux_Clear_HUD :332nd_aux_Red_HUD
+			   class ORG_aux_Clear_HUD :ORG_aux_Red_HUD
 			   {
 					displayName = "No HUD Color";
 					statement = [1,1,1,0,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -20978,573 +20978,573 @@ class CfgVehicles
 		class TransportItems
 		{
 
-			class BactaSprayx25_332nd
+			class BactaSprayx25_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray_x25";
+				name = "ORG_aux_medical_BactaSpray_x25";
 				count = 4;
 			};
 
-			class PlastiBandagex25_332nd
+			class PlastiBandagex25_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage_x25";
+				name = "ORG_aux_medical_PlastiBandage_x25";
 				count = 4;
 			};
 
-			class MedPatchx25_332nd
+			class MedPatchx25_ORG
 			{
-				name = "332nd_aux_medical_MedPatch_x25";
+				name = "ORG_aux_medical_MedPatch_x25";
 				count = 4;
 			};
 
-			class BactaSprayx10_332nd
+			class BactaSprayx10_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray_x10";
+				name = "ORG_aux_medical_BactaSpray_x10";
 				count = 10;
 			};
 
-			class PlastiBandagex10_332nd
+			class PlastiBandagex10_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage_x10";
+				name = "ORG_aux_medical_PlastiBandage_x10";
 				count = 10;
 			};
 
-			class MedPatchx10_332nd
+			class MedPatchx10_ORG
 			{
-				name = "332nd_aux_medical_MedPatch_x10";
+				name = "ORG_aux_medical_MedPatch_x10";
 				count = 10;
 			};
 
-			class BactaSprayx5_332nd
+			class BactaSprayx5_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray_x5";
+				name = "ORG_aux_medical_BactaSpray_x5";
 				count = 10;
 			};
 
-			class PlastiBandagex5_332nd
+			class PlastiBandagex5_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage_x5";
+				name = "ORG_aux_medical_PlastiBandage_x5";
 				count = 10;
 			};
 
-			class MedPatchx5_332nd
+			class MedPatchx5_ORG
 			{
-				name = "332nd_aux_medical_MedPatch_x5";
+				name = "ORG_aux_medical_MedPatch_x5";
 				count = 10;
 			};
 
-			class MediKit_332nd
+			class MediKit_ORG
 			{
-				name = "332nd_aux_medical_MediKit";
+				name = "ORG_aux_medical_MediKit";
 				count = 10;
 			};
 
-			class BactaSpray_332nd
+			class BactaSpray_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray";
+				name = "ORG_aux_medical_BactaSpray";
 				count = 50;
 			};
 
-			class PlastiBandage_332nd
+			class PlastiBandage_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage";
+				name = "ORG_aux_medical_PlastiBandage";
 				count = 50;
 			};
 
-			class MedPatch_332nd
+			class MedPatch_ORG
 			{
-				name = "332nd_aux_medical_MedPatch";
+				name = "ORG_aux_medical_MedPatch";
 				count = 50;
 			};
 
-			class Painkillers_332nd
+			class Painkillers_ORG
 			{
-				name = "332nd_aux_medical_PainKiller";
+				name = "ORG_aux_medical_PainKiller";
 				count = 40;
 			};
 
-			class CombatStim_332nd
+			class CombatStim_ORG
 			{
-				name = "332nd_aux_medical_Combat";
+				name = "ORG_aux_medical_Combat";
 				count = 40;
 			};
 
-			class Adrenaline_332nd
+			class Adrenaline_ORG
 			{
-				name = "332nd_aux_medical_Adrenaline";
+				name = "ORG_aux_medical_Adrenaline";
 				count = 40;
 			};
 
-			class Blood_332nd
+			class Blood_ORG
 			{
-				name = "332nd_aux_medical_Blood";
+				name = "ORG_aux_medical_Blood";
 				count = 75;
 			};
 
-			class Bacta_332nd
+			class Bacta_ORG
 			{
-				name = "332nd_aux_medical_Bacta";
+				name = "ORG_aux_medical_Bacta";
 				count = 25;
 			};
 
-			class Kolto_332nd
+			class Kolto_ORG
 			{
-				name = "332nd_aux_medical_Kolto";
+				name = "ORG_aux_medical_Kolto";
 				count = 25;
 			};
 
-			class BactaInj_332nd
+			class BactaInj_ORG
 			{
-				name = "332nd_aux_medical_Bacta_Inj";
+				name = "ORG_aux_medical_Bacta_Inj";
 				count = 25;
 			};
 
-			class KoltoInj_332nd
+			class KoltoInj_ORG
 			{
-				name = "332nd_aux_medical_Kolto_Inj";
+				name = "ORG_aux_medical_Kolto_Inj";
 				count = 25;
 			};
 
-			class DefibStrips_332nd
+			class DefibStrips_ORG
 			{
-				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				name = "ORG_aux_medical_AdhesiveDefibStrip";
 				count = 100;
 			};
 
-			class PressureCuff_332nd
+			class PressureCuff_ORG
 			{
-				name = "332nd_aux_medical_PressureCuff";
+				name = "ORG_aux_medical_PressureCuff";
 				count = 30;
 			};
 
-			class Geltab_332nd
+			class Geltab_ORG
 			{
-				name = "332nd_aux_medical_Geltabs";
+				name = "ORG_aux_medical_Geltabs";
 				count = 5;
 			};
 		};
 
 		class TransportWeapons
 		{
-			class DC15A_Weps_332nd
+			class DC15A_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15a";
+				weapon = "ORG_aux_weapon_DC_15a";
 				count = 10;
 			};
 
-			class DC15S_Weps_332nd
+			class DC15S_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15s";
+				weapon = "ORG_aux_weapon_DC_15s";
 				count = 10;
 			};
 
-			class DC15C_Weps_332nd
+			class DC15C_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15c";
+				weapon = "ORG_aux_weapon_DC_15c";
 				count = 10;
 			};
 
-			class DP23_Weps_332nd
+			class DP23_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DP_23";
+				weapon = "ORG_aux_weapon_DP_23";
 				count = 10;
 			};
 
-			class DW32S_Weps_332nd
+			class DW32S_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DW_32S";
+				weapon = "ORG_aux_weapon_DW_32S";
 				count = 10;
 			};
 
-			class Valken38x_Weps_332nd
+			class Valken38x_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_Valken38x";
+				weapon = "ORG_aux_weapon_Valken38x";
 				count = 10;
 			};
 
-			class Z6_Weps_332nd
+			class Z6_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_Z6";
+				weapon = "ORG_aux_weapon_Z6";
 				count = 10;
 			};
 
-			class DC15B_Weps_332nd
+			class DC15B_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15b";
+				weapon = "ORG_aux_weapon_DC_15b";
 				count = 10;
 			};
 
-			class RPS1_Weps_332nd
+			class RPS1_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_RPS_1";
+				weapon = "ORG_aux_weapon_RPS_1";
 				count = 5;
 			};
 		};
 
 		class TransportMagazines
 		{
-			class DC15A_low_332nd
+			class DC15A_low_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
+				magazine = "ORG_aux_magazine_DC_15a_Low_x60";
 				count = 300;
 			};
 
-			class DC15A_medium_332nd
+			class DC15A_medium_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
+				magazine = "ORG_aux_magazine_DC_15a_Medium_x30";
 				count = 300;
 			};
 
-			class DC15A_High_332nd
+			class DC15A_High_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15a_High_x10";
+				magazine = "ORG_aux_magazine_DC_15a_High_x10";
 				count = 50;
 			};
 
-			class 332_Stun_332nd
+			class ORG_Stun_ORG
 			{
-				magazine = "332nd_aux_magazine_Stun_x10";
+				magazine = "ORG_aux_magazine_Stun_x10";
 				count = 100;
 			};
 
-			class DC15A_UGLAP_332nd
+			class DC15A_UGLAP_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
+				magazine = "ORG_aux_magazine_DC_15_UGL_AP_x2";
 				count = 50;
 			};
 
-			class DC15A_UGLHE_332nd
+			class DC15A_UGLHE_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
+				magazine = "ORG_aux_magazine_DC_15_UGL_HE_x4";
 				count = 50;
 			};
 
-			class DC15s_332nd
+			class DC15s_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
+				magazine = "ORG_aux_magazine_DC_15s_x60";
 				count = 300;
 			};
 
-			class DC15c_332nd
+			class DC15c_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
+				magazine = "ORG_aux_magazine_DC_15c_Medium_x45";
 				count = 300;
 			};
 
-			class DC15b_332nd
+			class DC15b_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
+				magazine = "ORG_aux_magazine_DC_15b_x60";
 				count = 200;
 			};
 
-			class DC17_332nd
+			class DC17_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17_x15";
+				magazine = "ORG_aux_magazine_DC_17_x15";
 				count = 50;
 			};
 
-			class SA35_332nd
+			class SA35_ORG
 			{
-				magazine = "332nd_aux_magazine_35sa_low_x30";
+				magazine = "ORG_aux_magazine_35sa_low_x30";
 				count = 50;
 			};
 
-			class DC15L_332nd
+			class DC15L_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15L_x200";
+				magazine = "ORG_aux_magazine_DC_15L_x200";
 				count = 100;
 			};
 
-			class DC15L_T_332nd
+			class DC15L_T_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				magazine = "ORG_aux_magazine_DC_15L_T_x200";
 				count = 100;
 			};
 
-			class DC17M_Rifle_332nd
+			class DC17M_Rifle_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17m_rifle_x42";
+				magazine = "ORG_aux_magazine_DC_17m_rifle_x42";
 				count = 300;
 			};
 
-			class DC17M_Marks_332nd
+			class DC17M_Marks_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17m_marks_x10";
+				magazine = "ORG_aux_magazine_DC_17m_marks_x10";
 				count = 300;
 			};
 
-			class DC17M_Grend_332nd
+			class DC17M_Grend_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17m_grend_x1";
+				magazine = "ORG_aux_magazine_DC_17m_grend_x1";
 				count = 50;
 			};
 
-			class DC_44h_332nd
+			class DC_44h_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_44h_x6";
+				magazine = "ORG_aux_magazine_DC_44h_x6";
 				count = 300;
 			};
 
-			class DC_15k_332nd
+			class DC_15k_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15k_x15";
+				magazine = "ORG_aux_magazine_DC_15k_x15";
 				count = 300;
 			};
 
-			class MPS_HE_332nd
+			class MPS_HE_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				magazine = "ORG_aux_magazine_MPS_HE_x1";
 				count = 15;
 			};
 
-			class MPS_Smoke_332nd
+			class MPS_Smoke_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				magazine = "ORG_aux_magazine_MPS_Smoke_x1";
 				count = 15;
 			};
 
-			class MPS_Smoke_Red_332nd
+			class MPS_Smoke_Red_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				magazine = "ORG_aux_magazine_MPS_Smoke_Red_x1";
 				count = 15;
 			};
 
-			class MPS_Flare_332nd
+			class MPS_Flare_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				magazine = "ORG_aux_magazine_MPS_Flare_x1";
 				count = 15;
 			};
 
-			class DP_23_332nd
+			class DP_23_ORG
 			{
-				magazine = "332nd_aux_magazine_DP23_x12";
+				magazine = "ORG_aux_magazine_DP23_x12";
 				count = 100;
 			};
 
-			class DP_23Wide_332nd
+			class DP_23Wide_ORG
 			{
-				magazine = "332nd_aux_magazine_DP23_x12Wide";
+				magazine = "ORG_aux_magazine_DP23_x12Wide";
 				count = 100;
 			};
 
-			class DW_32_HIGH_332nd
+			class DW_32_HIGH_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_High_x5";
+				magazine = "ORG_aux_magazine_DW32_High_x5";
 				count = 50;
 			};
 
-			class DW_32_HIGH_T_332nd
+			class DW_32_HIGH_T_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_High_T_x5";
+				magazine = "ORG_aux_magazine_DW32_High_T_x5";
 				count = 50;
 			};
 
-			class DW_32_CONCMED_332nd
+			class DW_32_CONCMED_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				magazine = "ORG_aux_magazine_DW32_Med_x20";
 				count = 100;
 			};
 
-			class DW_32_CONCMED_T_332nd
+			class DW_32_CONCMED_T_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
+				magazine = "ORG_aux_magazine_DW32_Med_T_x20";
 				count = 100;
 			};
 
-			class Valken_38x_REFMED_332nd
+			class Valken_38x_REFMED_ORG
 			{
-				magazine = "332nd_aux_magazine_Valken38x_x15";
+				magazine = "ORG_aux_magazine_Valken38x_x15";
 				count = 100;
 			};
 
-			class Valken_38x_REFMED_T_332nd
+			class Valken_38x_REFMED_T_ORG
 			{
-				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				magazine = "ORG_aux_magazine_Valken38x_T_x15";
 				count = 100;
 			};
 
-			class Valken_38x_REFMED_T_332nd
+			class Valken_38x_REFMED_T_ORG
 			{
-				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				magazine = "ORG_aux_magazine_Valken38x_T_x15";
 				count = 100;
 			};
 
-			class Firepuncher_high_T_332nd
+			class Firepuncher_high_T_ORG
 			{
-				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
+				magazine = "ORG_aux_magazine_Firepuncher_T_x8";
 				count = 100;
 			};
 
-			class Firepuncher_high_332nd
+			class Firepuncher_high_ORG
 			{
-				magazine = "332nd_aux_magazine_Firepuncher_x8";
+				magazine = "ORG_aux_magazine_Firepuncher_x8";
 				count = 100;
 			};
 
 			class Westar_m5_40rnd
 			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
+				magazine = "ORG_aux_magazine_Westar_M5_x40";
 				count = 300;
 			};
 
-			class Z6_332nd
+			class Z6_ORG
 			{
-				magazine = "332nd_aux_magazine_Z6_x200";
+				magazine = "ORG_aux_magazine_Z6_x200";
 				count = 200;
 			};
 
-			class Z6_Super_332nd
+			class Z6_Super_ORG
 			{
-				magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+				magazine = "ORG_aux_magazine_Z6_Supercharge_x1";
 				count = 250;
 			};
 
-			class Z6_ALT_332nd
+			class Z6_ALT_ORG
 			{
-				magazine = "332nd_aux_magazine_Z6_x125";
+				magazine = "ORG_aux_magazine_Z6_x125";
 				count = 200;
 			};
 
-			class Flash_332nd
+			class Flash_ORG
 			{
-				magazine = "332nd_aux_magazine_332_FLASH_x1";
+				magazine = "ORG_aux_magazine_ORG_FLASH_x1";
 				count = 30;
 			};
 
-			class ATCharge_332nd
+			class ATCharge_ORG
 			{
-				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
+				magazine = "ORG_aux_magazine_ORG_INCENDIARY_x1";
 				count = 30;
 			};
 
-			class HEDPImpact_332nd
+			class HEDPImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_HEDP_x1";
+				magazine = "ORG_aux_magazine_ORG_HEDP_x1";
 				count = 30;
 			};
 
-			class WhiteImpact_332nd
+			class WhiteImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_WHITE_x1";
 				count = 30;
 			};
 
-			class BlueImpact_332nd
+			class BlueImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_BLUE_x1";
 				count = 30;
 			};
 
-			class GreenImpact_332nd
+			class GreenImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_GREEN_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_GREEN_x1";
 				count = 30;
 			};
 
-			class RedImpact_332nd
+			class RedImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_RED_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_RED_x1";
 				count = 30;
 			};
 
-			class PurpleImpact_332nd
+			class PurpleImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_PURPLE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_PURPLE_x1";
 				count = 30;
 			};
 
-			class YellowImpact_332nd
+			class YellowImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_YELLOW_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_YELLOW_x1";
 				count = 30;
 			};
 
-			class OrangeImpact_332nd
+			class OrangeImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_ORANGE_x1";
 				count = 30;
 			};
 
-			class SquadShield_332nd
+			class SquadShield_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SquadShield_x1";
+				magazine = "ORG_aux_magazine_ORG_SquadShield_x1";
 				count = 5;
 			};
 
-			class ThermalDet_332nd
+			class ThermalDet_ORG
 			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				magazine = "ORG_aux_magazine_ORG_FRAG_x1";
 				count = 30;
 			};
 
-			class PLXAA_332nd
+			class PLXAA_ORG
 			{
-				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
+				magazine = "ORG_aux_magazine_PLX1_AAMag_x2";
 				count = 10;
 			};
 
-			class PLXAT_332nd
+			class PLXAT_ORG
 			{
-				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
+				magazine = "ORG_aux_magazine_PLX1_ATMag_x2";
 				count = 10;
 			};
 
-			class PLXHE_332nd
+			class PLXHE_ORG
 			{
-				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
+				magazine = "ORG_aux_magazine_PLX1_HEMag_x2";
 				count = 10;
 			};
 
-			class RPS6AT_332nd
+			class RPS6AT_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				magazine = "ORG_aux_magazine_RPS6_ATMag_x1";
 				count = 20;
 			};
 
-			class RPS6AA_332nd
+			class RPS6AA_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
+				magazine = "ORG_aux_magazine_RPS6_AAMag_x1";
 				count = 20;
 			};
 
-			class RPS4AT_332nd
+			class RPS4AT_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS4_AT_x1";
+				magazine = "ORG_aux_magazine_RPS4_AT_x1";
 				count = 20;
 			};
 
-			class RPS4HE_332nd
+			class RPS4HE_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				magazine = "ORG_aux_magazine_RPS4_HE_x1";
 				count = 20;
 			};
 
-			class DC15xATR_332nd
+			class DC15xATR_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
+				magazine = "ORG_aux_magazine_DC_15x_x2";
 				count = 20;
 			};
 
-			class Dm17HeartStarter_332nd
+			class Dm17HeartStarter_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				magazine = "ORG_aux_magazine_DM_17_HeartStarter_x1";
 				count = 50;
 			};
 
-			class Dm17Bacta_332nd
+			class Dm17Bacta_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				magazine = "ORG_aux_magazine_DM_17_Bacta_x1";
 				count = 25;
 			};
 
-			class Dm17Kolto_332nd
+			class Dm17Kolto_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				magazine = "ORG_aux_magazine_DM_17_Kolto_x1";
 				count = 25;
 			};
 
-			class Dm17CombatStim_332nd
+			class Dm17CombatStim_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				magazine = "ORG_aux_magazine_DM_17_CombatStim_x1";
 				count = 50;
 			};
 		};

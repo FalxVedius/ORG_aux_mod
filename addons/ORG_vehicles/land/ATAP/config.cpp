@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(ATAP)
 	{
-		author = "332nd Aux Team";
+		author = "ORG Aux Team";
         addonRootClass = MACRO_PATCH_NAME(land_vehicles);
 		requiredAddons[]=
 		{
@@ -96,9 +96,9 @@ class CfgVehicles
 	    displayName = "AT-AP *WIP*";
 	    scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		hiddenSelectionsTextures[] = 
 		{ 

@@ -1,7 +1,7 @@
 #include "../../../ORG_main/macros/main.hpp" // my config macro lib
 class CfgPatches
 {
-	class 332nd_LAAT_Cargo
+	class ORG_LAAT_Cargo
 	{
 		requiredAddons[]=
 		{
@@ -60,7 +60,7 @@ class CfgFunctions
 		{
 			class AddVicCratesToInventory
 			{
-				file = "332nd_vehicles\air\LAATC\fnc_spawnVicResupplyCrates.sqf";
+				file = "ORG_vehicles\air\LAATC\fnc_spawnVicResupplyCrates.sqf";
 			};
 		};
 	};
@@ -98,8 +98,8 @@ class CfgVehicles
 
 	class MACRO_NEW_VEHICLE(air,LAAT,Cargo): B_Heli_Attack_01_base_F
 	{
-		author="332nd Aux Team";
-		_generalMacro="332_laat_C";
+		author="ORG Aux Team";
+		_generalMacro="ORG_laat_C";
 		scope=2;
 
 		ace_cargo_hasCargo = 1;
@@ -121,11 +121,11 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] = 
 		{ 
-			"332nd_vehicles\_textures\air\LAATC\Camo_0_CO_PW.paa",
-			"332nd_vehicles\_textures\air\LAATC\Camo_1_CO_PW.paa" 
+			"ORG_vehicles\_textures\air\LAATC\Camo_0_CO_PW.paa",
+			"ORG_vehicles\_textures\air\LAATC\Camo_1_CO_PW.paa" 
 		};
 
-		crew = "332nd_aux_infantry_unit_trooper";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		availableforsupporttypes[]=
 		{
@@ -142,10 +142,10 @@ class CfgVehicles
 		armor = 500 * 0.5;
 		class EventHandlers : EventHandlers
         {
-	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_332nd'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
+	        init = "(_this select 0) spawn ls_vehicle_fnc_impulseMonitor; [_this, 'VehicleBox_ORG'] spawn ResupplyAirVic_fnc_AddVicCratesToInventory;";
         };
-		faction = "EdCat_332nd";
-        editorSubcategory = "EdSubcat_332nd_HELI";
+		faction = "EdCat_ORG";
+        editorSubcategory = "EdSubcat_ORG_HELI";
 		displayName="LAAT/C Mk1 *Test*";
 		model="3AS\3AS_LAATC\3AS_LAAT_C.p3d";
 		icon="\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
@@ -226,26 +226,26 @@ class CfgVehicles
 		epeImpulseDamageCoef=0;
 		soundengineonint[] =
 		{
-			"332nd_weapons\sounds\vehicles\LAAT\int_start.wss",
+			"ORG_weapons\sounds\vehicles\LAAT\int_start.wss",
 			1,
 			1
 		};
 		soundengineonext[] =
 		{
-			"332nd_weapons\sounds\vehicles\LAAT\ext_start.wss",
+			"ORG_weapons\sounds\vehicles\LAAT\ext_start.wss",
 			1,
 			1,
 			300
 		};
 		soundengineoffint[] =
 		{
-			"\332nd_weapons\sounds\vehicles\LAAT\Int_Off.wss",
+			"\ORG_weapons\sounds\vehicles\LAAT\Int_Off.wss",
 			1,
 			1
 		};
 		soundengineoffext[] =
 		{
-			"\332nd_weapons\sounds\vehicles\LAAT\Ext_Off.wss",
+			"\ORG_weapons\sounds\vehicles\LAAT\Ext_Off.wss",
 			1,
 			1,
 			300
@@ -258,7 +258,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
 					1.5,
 					1,
 					300
@@ -270,7 +270,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Rotor_close.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Rotor_close.wss",
 					1.6,
 					1,
 					300
@@ -282,7 +282,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
 					1,
 					1,
 					400
@@ -294,7 +294,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Int_main.wss",
 					1,
 					1
 				};
@@ -305,7 +305,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Int_rotor.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Int_rotor.wss",
 					1,
 					1
 				};
@@ -316,7 +316,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
 					0.75,
 					1
 				};
@@ -328,7 +328,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
 					0.75,
 					1
 				};
@@ -339,7 +339,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
 					0.5,
 					1,
 					200
@@ -352,7 +352,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
 					1,
 					1,
 					1500
@@ -364,7 +364,7 @@ class CfgVehicles
 			{
 				sound[] =
 				{
-					"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+					"ORG_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
 					1.25,
 					1,
 					8000
@@ -428,7 +428,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Engine_Close.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Engine_Close.wss",
 						1.5,
 						1,
 						300
@@ -440,7 +440,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
 						1.6,
 						1,
 						300
@@ -452,7 +452,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\tail_rotor.wss",
 						1,
 						1,
 						200
@@ -464,7 +464,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Int_main.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Int_main.wss",
 						1,
 						1
 					};
@@ -475,7 +475,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Int_Rotor.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Int_Rotor.wss",
 						1,
 						1
 					};
@@ -486,7 +486,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
 						0.75,
 						1
 					};
@@ -498,7 +498,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
 						0.75,
 						1
 					};
@@ -510,7 +510,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Rotor_Close.wss",
 						0.5,
 						1,
 						200
@@ -523,7 +523,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Engine_Far.wss",
 						1,
 						1,
 						2500
@@ -535,7 +535,7 @@ class CfgVehicles
 				{
 					sound[] =
 					{
-						"332nd_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
+						"ORG_weapons\sounds\vehicles\LAAT\Rotor_Far.wss",
 						1.25,
 						1,
 						8000
@@ -594,7 +594,7 @@ class CfgVehicles
 		class ACE_SelfActions :ACE_SelfActions
 		{
 
-			class 332nd_aux_HUD_Changer
+			class ORG_aux_HUD_Changer
 			{
 				displayName = "Change HUD Color :)";
 				exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -602,7 +602,7 @@ class CfgVehicles
 				showDisabled = 0;
 				priority = 2.5;
 				icon = MACRO_HUD_CHANGER_ICONS\colorWheel.paa;
-				class 332nd_aux_Red_HUD
+				class ORG_aux_Red_HUD
 				{
 					displayName = "Red HUD Color";
 					exceptions[] = {"isNotInside","isNotSwimming","isNotSitting"};
@@ -614,7 +614,7 @@ class CfgVehicles
 					icon = MACRO_HUD_CHANGER_ICONS\red.paa;
 				};
 
-				class 332nd_aux_Orange_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Orange_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Orange HUD Color";
 					statement = [1,.05,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -622,7 +622,7 @@ class CfgVehicles
 
 				};
 
-				class 332nd_aux_Yellow_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Yellow_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Yellow HUD Color";
 					statement = [1,1,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -630,7 +630,7 @@ class CfgVehicles
 
 				};
 
-				class 332nd_aux_Green_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Green_HUD :ORG_aux_Red_HUD
 				{
 					displayName = "Green HUD Color";
 				//condition = "true";
@@ -640,7 +640,7 @@ class CfgVehicles
 				// priority = 2.5;
 				};
 
-				class 332nd_aux_Cyan_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Cyan_HUD :ORG_aux_Red_HUD
 				 {
 				displayName = "Cyan HUD Color";
 				statement = [0,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -648,7 +648,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Blue_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Blue_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "Blue HUD Color";
 				statement = [0,0,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -656,7 +656,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Purple_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Purple_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "Purple HUD Color";
 				statement = [.5,0,.5,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -664,7 +664,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_White_HUD :332nd_aux_Red_HUD
+				class ORG_aux_White_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "White HUD Color";
 				statement = [1,1,1,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -672,7 +672,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Black_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Black_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "Black HUD Color";
 				statement = [0,0,0,1,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -680,7 +680,7 @@ class CfgVehicles
 
 			};
 
-				class 332nd_aux_Clear_HUD :332nd_aux_Red_HUD
+				class ORG_aux_Clear_HUD :ORG_aux_Red_HUD
 				{
 				displayName = "No HUD Color";
 				statement = [1,1,1,0,vehicle player] spawn MACRO_FNC_NAME(change_hud_color);
@@ -791,32 +791,32 @@ class CfgVehicles
 				{
 					class PylonLeft1
 					{
-						attachment="332nd_aux_magazine_Pylon_AA_Med_x3";
+						attachment="ORG_aux_magazine_Pylon_AA_Med_x3";
 						priority=5;
 						hardpoints[]=
 						{
-							"332_A_Pylon"
+							"ORG_A_Pylon"
 						};
 						turret[]={};
 						UIposition[]={0.059999999,0.40000001};
 					};
 					class PylonLeft2: PylonLeft1
 					{
-						attachment="332nd_aux_magazine_Pylon_Shrieker_x20";  
+						attachment="ORG_aux_magazine_Pylon_Shrieker_x20";  
 						priority=4;
 						hardpoints[]=
 						{
-							"332_C_Pylon"
+							"ORG_C_Pylon"
 						};
 						UIposition[]={0.079999998,0.34999999};
 					};
 					class PylonLeft3: PylonLeft1
 					{
-						attachment="332nd_aux_magazine_Pylon_AGM_Med_x3";
+						attachment="ORG_aux_magazine_Pylon_AGM_Med_x3";
 						priority=3;
 						hardpoints[]=
 						{
-							"332_B_Pylon"
+							"ORG_B_Pylon"
 						};
 						UIposition[]={0.1,0.30000001};
 					};

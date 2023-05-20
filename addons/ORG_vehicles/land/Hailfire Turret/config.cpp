@@ -82,8 +82,8 @@ class CfgVehicles
         scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TURR";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TURR";
 
 
 		class Turrets : Turrets

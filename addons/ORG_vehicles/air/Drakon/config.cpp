@@ -38,8 +38,8 @@ class CfgVehicles
 		displayName = "Drakon *WIP*";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_PLANE";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_PLANE";
 
 
 	};

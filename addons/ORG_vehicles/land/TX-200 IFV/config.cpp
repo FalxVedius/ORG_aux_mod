@@ -66,9 +66,9 @@ class CfgVehicles
         displayName = "TX-200 - 'Verax'";
         scope = 2;
 		side=1;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_APCS";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_APCS";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		tas_canBlift = 1;
 		tas_liftVars = "[[[[0.1,-4,-4]]], [0.1], [-0.5]]";
@@ -78,13 +78,13 @@ class CfgVehicles
 
 		hiddenSelectionsTextures[] = 
 		{ 
-			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Armour.paa",
-			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Main.paa",
+			"ORG_vehicles\_textures\land\TX200\ORG_Vic_Test_Oryx_Armour.paa",
+			"ORG_vehicles\_textures\land\TX200\ORG_Vic_Test_Oryx_Main.paa",
 			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
 			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
 			"\OPTRE_Vehicles\Oryx\data\texture\oryx_net_ca.paa",
-			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Turret.paa",
-			"332nd_vehicles\_textures\land\TX200\332nd_Vic_Test_Oryx_Mg.paa",
+			"ORG_vehicles\_textures\land\TX200\ORG_Vic_Test_Oryx_Turret.paa",
+			"ORG_vehicles\_textures\land\TX200\ORG_Vic_Test_Oryx_Mg.paa",
 			"" 
 		};
 		

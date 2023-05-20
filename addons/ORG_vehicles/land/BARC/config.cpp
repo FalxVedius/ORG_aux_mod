@@ -86,13 +86,13 @@ class CfgVehicles
         displayName = "BARC Speeder *WIP*";
         scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_CAR";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_CAR";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		hiddenSelectionsTextures[] =
 		{
-			"332nd_vehicles\_textures\land\BARC\Barc_Body_co.paa"
+			"ORG_vehicles\_textures\land\BARC\Barc_Body_co.paa"
 		};
 
 		weapons[] =
@@ -110,14 +110,14 @@ class CfgVehicles
 		displayName = "BARC Speeder w/ Sidecar *WIP*";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_CAR";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_CAR";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		hiddenSelectionsTextures[] =
 		{
-			"332nd_vehicles\_textures\land\BARC\Barc_Body_co.paa",
-			"332nd_vehicles\_textures\land\BARC\Barc_Sidercar_Body_co.paa"
+			"ORG_vehicles\_textures\land\BARC\Barc_Body_co.paa",
+			"ORG_vehicles\_textures\land\BARC\Barc_Sidercar_Body_co.paa"
 		};
 
 		weapons[] =

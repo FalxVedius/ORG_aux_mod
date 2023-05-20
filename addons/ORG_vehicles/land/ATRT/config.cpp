@@ -39,8 +39,8 @@ class CfgVehicles
         displayName = "AT-RT *Test*";
         scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TANK";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TANK";
 		weapons[] =
 			{
 				MACRO_NEW_WEAPON(ATRT_cannon)

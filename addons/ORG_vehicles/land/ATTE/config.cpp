@@ -93,10 +93,10 @@ class CfgVehicles
         displayName = "AT-TE *WIP*";
         scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
+		faction = "EdCat_ORG";
 		crewCrashProtection = 0.01;
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_infantry_unit_trooper";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_infantry_unit_trooper";
 		armor = 1500;
 
 		TFAR_hasIntercom = 1;
@@ -135,10 +135,10 @@ class CfgVehicles
 
 		hiddenselectionstextures[] = 
 		{ 
-			"332nd_vehicles\_textures\land\ATTE\332nd_Vic_Test_AATE_Hull.paa",
+			"ORG_vehicles\_textures\land\ATTE\ORG_Vic_Test_AATE_Hull.paa",
 			"3as\3as_atte\data\atte_chasis_co.paa",
-			"332nd_vehicles\_textures\land\ATTE\332nd_Vic_Test_AATE_Cockpit.paa",
-			"332nd_vehicles\_textures\land\ATTE\332nd_Vic_Test_AATE_Turret.paa",
+			"ORG_vehicles\_textures\land\ATTE\ORG_Vic_Test_AATE_Cockpit.paa",
+			"ORG_vehicles\_textures\land\ATTE\ORG_Vic_Test_AATE_Turret.paa",
 			"3as\3as_atte\data\atte_underpiping_co.paa",
 			"3as\3as_atte\data\atte_middleleg_co.paa"
 		};

@@ -21,7 +21,7 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(ARCLow): ls_50mm_laat_he
 	{
 		model="SWLW_main\Effects\laser_green.p3d";
-		effectfly="332nd_aux_effects_green_tracer_AVI";
+		effectfly="ORG_aux_effects_green_tracer_AVI";
 		 soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,1000};
 		flaresize=10;
 		caliber=8;
@@ -37,7 +37,7 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(LAAT_40mm): ls_50mm_laat_apfsds
 	{
 		model="SWLW_main\Effects\laser_green.p3d";
-		effectfly="332nd_aux_effects_green_tracer_AVI";
+		effectfly="ORG_aux_effects_green_tracer_AVI";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",5,2,500};
 		flaresize=10;
 		caliber=8;
@@ -94,7 +94,7 @@ class CfgAmmo
 			};
 		manualcontrol=1;
 		caliber=5;
-		effectsMissile = "332nd_aux_effects_missile_plx_blue";
+		effectsMissile = "ORG_aux_effects_missile_plx_blue";
 		hit=200;
 		thrusttime = 12;
 		indirectHit = 35;
@@ -106,7 +106,7 @@ class CfgAmmo
 		model="SWLW_main\Effects\laser_blue.p3d";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 		flaresize=4;
-		effectfly="332nd_aux_effects_blue_tracer_AVI";
+		effectfly="ORG_aux_effects_blue_tracer_AVI";
 		caliber=3;
 		tracersEvery = 1;
 		hit=230;
@@ -121,7 +121,7 @@ class CfgAmmo
 		model="SWLW_main\Effects\laser_blue.p3d";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 		flaresize=4;
-		effectfly="332nd_aux_effects_blue_tracer_AVI";
+		effectfly="ORG_aux_effects_blue_tracer_AVI";
 		caliber=8;
 		tracersEvery = 1;
 		hit=275;
@@ -153,7 +153,7 @@ class CfgAmmo
 		model="SWLW_main\Effects\laser_green.p3d";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 		flaresize=4;
-		effectfly="332nd_aux_effects_green_tracer_AVI";
+		effectfly="ORG_aux_effects_green_tracer_AVI";
 		caliber=5;
 		tracersEvery = 1;
 		hit=750;
@@ -168,7 +168,7 @@ class CfgAmmo
 		model="SWLW_main\Effects\laser_blue.p3d";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",0,1,1};
 		flaresize=4;
-		effectfly="332nd_aux_effects_blue_tracer_AVI";
+		effectfly="ORG_aux_effects_blue_tracer_AVI";
 		caliber=8;
 		tracersEvery = 1;
 		hit=650;
@@ -195,7 +195,7 @@ class CfgAmmo
 	class MACRO_NEW_AMMO(Nu_75mm_he): ls_50mm_laat_he
 	{
 		model="SWLW_main\Effects\laser_green.p3d";
-		effectfly="332nd_aux_effects_RPS4_green";
+		effectfly="ORG_aux_effects_RPS4_green";
 		soundFly[] = {"SWLB_core\data\sounds\vehicles\mortar\weapon\mortar_fly.wss",2,1,500};
 		flaresize=10;
 		caliber = 10;
@@ -219,13 +219,13 @@ class CfgAmmo
 		thrustTime = 5;
 		soundfly[]=
 		{	
-			"332nd_weapons\sounds\weapons\flight\RocketEngine.wss",
+			"ORG_weapons\sounds\weapons\flight\RocketEngine.wss",
 			1,
 			1.5,
 			200
 		};
 		manualcontrol=0;
-		effectsMissile = "332nd_aux_effects_missile_Rocket_Purple";
+		effectsMissile = "ORG_aux_effects_missile_Rocket_Purple";
     };
 	class CMflareAmmo;
 	class MACRO_NEW_AMMO(CM_FLARE): CMflareAmmo
@@ -371,7 +371,7 @@ class CfgMagazines
 	class MACRO_NEW_MAG(Air_Dumb_rocket,24): 24Rnd_missiles
 	{
 		displayName=MACRO_AMMO_DISPLAYNAME(Shrieker 24rnd);
-		ammo="332nd_aux_ammo_Shrieker_Rocket";
+		ammo="ORG_aux_ammo_Shrieker_Rocket";
 		descriptionshort="Shrieker";
 		displayNameShort="Shrieker";
 		scope=1;
@@ -388,7 +388,7 @@ class CfgMagazines
 		count=20;
 	};
 	class 120Rnd_CMFlare_Chaff_Magazine;
-	class MACRO_NEW_MAG(332_CM_Flare,120): 120Rnd_CMFlare_Chaff_Magazine
+	class MACRO_NEW_MAG(ORG_CM_Flare,120): 120Rnd_CMFlare_Chaff_Magazine
 	{
 		ammo=MACRO_NEW_AMMO(CM_FLARE)
 		scope=1;
@@ -400,7 +400,7 @@ class CfgMagazines
 	{
 		ammo = MACRO_NEW_AMMO(Vulture_Rocket)
 		scope = 1;
-		pylonWeapon = "332nd_aux_weapon_Vulture_Rocket";
+		pylonWeapon = "ORG_aux_weapon_Vulture_Rocket";
 	};
 	class MACRO_NEW_MAG(Vulture_Rocket,12) : 3AS_PylonRack_Vulture_12Rnd_Rocket_HEAP
 	{
@@ -526,7 +526,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\LAAT_Nose.wss",
+					"ORG_vehicle_weapons\air\sounds\LAAT_Nose.wss",
 					1,
 					1,
 					3000
@@ -556,7 +556,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\LAAT_Nose.wss",
+					"ORG_vehicle_weapons\air\sounds\LAAT_Nose.wss",
 					1,
 					1,
 					3000
@@ -722,7 +722,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
+					"ORG_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
 					1.5,
 					1,
 					6000
@@ -798,7 +798,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Vulture_Cannon.wss",
+					"ORG_vehicle_weapons\air\sounds\Vulture_Cannon.wss",
 					1.5,
 					0.95,
 					6000
@@ -880,7 +880,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\30mm.wss",
+					"ORG_vehicle_weapons\air\sounds\30mm.wss",
 					1,
 					1,
 					3000
@@ -956,7 +956,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
+					"ORG_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
 					2,
 					0.95,
 					6000
@@ -1032,7 +1032,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
+					"ORG_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
 					2,
 					0.7,
 					6000
@@ -1108,7 +1108,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
+					"ORG_vehicle_weapons\air\sounds\Z-95_Cannon.wss",
 					2,
 					0.95,
 					6000
@@ -1186,7 +1186,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\ARC_170Cannon.wss",
+					"ORG_vehicle_weapons\air\sounds\ARC_170Cannon.wss",
 					2,
 					1,
 					3000
@@ -1265,7 +1265,7 @@ class CfgWeapons
 			{
 				begin1[]=
 				{
-					"332nd_vehicle_weapons\air\sounds\Dumb_Rocket.wss",
+					"ORG_vehicle_weapons\air\sounds\Dumb_Rocket.wss",
 					2,
 					1,
 					4000
@@ -1283,7 +1283,7 @@ class CfgWeapons
 	{
 		magazineWell[] = {};
 		magazines[] = {
-			MACRO_NEW_MAG(332_CM_Flare,120)
+			MACRO_NEW_MAG(ORG_CM_Flare,120)
 		};
 		displayName = "CM Flares";
 	};

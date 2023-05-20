@@ -12,53 +12,53 @@ class CfgPatches
         };
         requiredVersion = 0.1;
         units[] = {
-            MACRO_NEW_UNIT(cisb1,332nd_CIS_B1),
-            MACRO_NEW_UNIT(cisb1jumppack,332nd_CIS_B1_Jumppack),
-            MACRO_NEW_UNIT(cisb1breach,332nd_CIS_B1_Breacher),
-            MACRO_NEW_UNIT(cisb1ar,332nd_CIS_B1_Support),
-            MACRO_NEW_UNIT(cisb1at,332nd_CIS_B1_AT),
-			MACRO_NEW_UNIT(cisb1aa,332nd_CIS_B1_AA),
-            MACRO_NEW_UNIT(cisb1sniper,332nd_CIS_B1_Sniper),
-            MACRO_NEW_UNIT(cisb1crew,332nd_CIS_B1_Crew),
-            MACRO_NEW_UNIT(cisb1comm,332nd_CIS_B1_Commander),
-            MACRO_NEW_UNIT(cisb1marine,332nd_CIS_B1_Marine),
-            MACRO_NEW_UNIT(cisb1sec,332nd_CIS_B1_Security),
-            MACRO_NEW_UNIT(cisb1pilot,332nd_CIS_B1_Pilot),
+            MACRO_NEW_UNIT(cisb1,ORG_CIS_B1),
+            MACRO_NEW_UNIT(cisb1jumppack,ORG_CIS_B1_Jumppack),
+            MACRO_NEW_UNIT(cisb1breach,ORG_CIS_B1_Breacher),
+            MACRO_NEW_UNIT(cisb1ar,ORG_CIS_B1_Support),
+            MACRO_NEW_UNIT(cisb1at,ORG_CIS_B1_AT),
+			MACRO_NEW_UNIT(cisb1aa,ORG_CIS_B1_AA),
+            MACRO_NEW_UNIT(cisb1sniper,ORG_CIS_B1_Sniper),
+            MACRO_NEW_UNIT(cisb1crew,ORG_CIS_B1_Crew),
+            MACRO_NEW_UNIT(cisb1comm,ORG_CIS_B1_Commander),
+            MACRO_NEW_UNIT(cisb1marine,ORG_CIS_B1_Marine),
+            MACRO_NEW_UNIT(cisb1sec,ORG_CIS_B1_Security),
+            MACRO_NEW_UNIT(cisb1pilot,ORG_CIS_B1_Pilot),
 
-			MACRO_NEW_UNIT(cisbx,332nd_CIS_BX),
-			MACRO_NEW_UNIT(cisbxcapt,332nd_CIS_BX_Captain),
-			MACRO_NEW_UNIT(cisbxsec,332nd_CIS_BX_Security),
-			MACRO_NEW_UNIT(cisbxdiplo,332nd_CIS_BX_Diplomat),
-			MACRO_NEW_UNIT(cisbxassassin,332nd_CIS_BX_Assassin),
-			MACRO_NEW_UNIT(cisbxmelee,332nd_CIS_BX_Melee),
-			MACRO_NEW_UNIT(cisbxmeleerush,332nd_CIS_BX_MeleeRush),
-			MACRO_NEW_UNIT(cisbxar,332nd_CIS_BX_Support),
-			MACRO_NEW_UNIT(cisbxat,332nd_CIS_BX_AT),
-			MACRO_NEW_UNIT(cisbxbreach,332nd_CIS_BX_BREACHER),
-			MACRO_NEW_UNIT(cisbxhybridcomm,332nd_CIS_BX_Hybrid_Commander),
-			MACRO_NEW_UNIT(cisbxhybrid,332nd_CIS_BX_Hybrid),
+			MACRO_NEW_UNIT(cisbx,ORG_CIS_BX),
+			MACRO_NEW_UNIT(cisbxcapt,ORG_CIS_BX_Captain),
+			MACRO_NEW_UNIT(cisbxsec,ORG_CIS_BX_Security),
+			MACRO_NEW_UNIT(cisbxdiplo,ORG_CIS_BX_Diplomat),
+			MACRO_NEW_UNIT(cisbxassassin,ORG_CIS_BX_Assassin),
+			MACRO_NEW_UNIT(cisbxmelee,ORG_CIS_BX_Melee),
+			MACRO_NEW_UNIT(cisbxmeleerush,ORG_CIS_BX_MeleeRush),
+			MACRO_NEW_UNIT(cisbxar,ORG_CIS_BX_Support),
+			MACRO_NEW_UNIT(cisbxat,ORG_CIS_BX_AT),
+			MACRO_NEW_UNIT(cisbxbreach,ORG_CIS_BX_BREACHER),
+			MACRO_NEW_UNIT(cisbxhybridcomm,ORG_CIS_BX_Hybrid_Commander),
+			MACRO_NEW_UNIT(cisbxhybrid,ORG_CIS_BX_Hybrid),
 
-			MACRO_NEW_UNIT(cisdroideka,332nd_CIS_HEAVY_Droideka),
-			MACRO_NEW_UNIT(cisdroidekamoveable,332nd_CIS_HEAVY_Droideka_Moveable),
-			MACRO_NEW_UNIT(cissniperdroideka,332nd_CIS_HEAVY_Sniper_Droideka),
-			MACRO_NEW_UNIT(cissniperdroidekamoveable,332nd_CIS_HEAVY_Sniper_Droideka_Moveable),
-			MACRO_NEW_UNIT(cisb2,332nd_CIS_B2),
+			MACRO_NEW_UNIT(cisdroideka,ORG_CIS_HEAVY_Droideka),
+			MACRO_NEW_UNIT(cisdroidekamoveable,ORG_CIS_HEAVY_Droideka_Moveable),
+			MACRO_NEW_UNIT(cissniperdroideka,ORG_CIS_HEAVY_Sniper_Droideka),
+			MACRO_NEW_UNIT(cissniperdroidekamoveable,ORG_CIS_HEAVY_Sniper_Droideka_Moveable),
+			MACRO_NEW_UNIT(cisb2,ORG_CIS_B2),
         };
         weapons[] = {
-            MACRO_NEW_UNIFORM(cisb1,332nd_CIS_B1),
-            MACRO_NEW_UNIFORM(cisb1jumppack,332nd_CIS_B1_Jumppack),
-            MACRO_NEW_UNIFORM(cisb1crew,332nd_CIS_B1_Crew),
-            MACRO_NEW_UNIFORM(cisb1comm,332nd_CIS_B1_Commander),
-            MACRO_NEW_UNIFORM(cisb1marine,332nd_CIS_B1_Marine),
-            MACRO_NEW_UNIFORM(cisb1sec,332nd_CIS_B1_Security),
-            MACRO_NEW_UNIFORM(cisb1pilot,332nd_CIS_B1_Pilot),
+            MACRO_NEW_UNIFORM(cisb1,ORG_CIS_B1),
+            MACRO_NEW_UNIFORM(cisb1jumppack,ORG_CIS_B1_Jumppack),
+            MACRO_NEW_UNIFORM(cisb1crew,ORG_CIS_B1_Crew),
+            MACRO_NEW_UNIFORM(cisb1comm,ORG_CIS_B1_Commander),
+            MACRO_NEW_UNIFORM(cisb1marine,ORG_CIS_B1_Marine),
+            MACRO_NEW_UNIFORM(cisb1sec,ORG_CIS_B1_Security),
+            MACRO_NEW_UNIFORM(cisb1pilot,ORG_CIS_B1_Pilot),
 
-			MACRO_NEW_UNIFORM(cisbx,332nd_CIS_BX),
-			MACRO_NEW_UNIFORM(cisbxcapt,332nd_CIS_BX_Captain),
-			MACRO_NEW_UNIFORM(cisbxsec,332nd_CIS_BX_Security),
-			MACRO_NEW_UNIFORM(cisbxdiplo,332nd_CIS_BX_Diplomat),
+			MACRO_NEW_UNIFORM(cisbx,ORG_CIS_BX),
+			MACRO_NEW_UNIFORM(cisbxcapt,ORG_CIS_BX_Captain),
+			MACRO_NEW_UNIFORM(cisbxsec,ORG_CIS_BX_Security),
+			MACRO_NEW_UNIFORM(cisbxdiplo,ORG_CIS_BX_Diplomat),
 
-			MACRO_NEW_UNIFORM(cisb2,332nd_CIS_B2),
+			MACRO_NEW_UNIFORM(cisb2,ORG_CIS_B2),
         };
     };
 };
@@ -133,22 +133,22 @@ class CfgWeapons
 	};
 
     //CISB1
-    MACRO_NEW_CISB1_UNIFORM_ITEM(332nd_CIS_B1,B1,332nd_CIS_B1)
-    MACRO_NEW_CISB1JUMPPACK_UNIFORM_ITEM(332nd_CIS_B1_Jumppack,Jumppack B1,332nd_CIS_B1_Jumppack)
-    MACRO_NEW_CISB1CREW_UNIFORM_ITEM(332nd_CIS_B1_Crew,Crew B1,332nd_CIS_B1_Crew)
-    MACRO_NEW_CISB1COMM_UNIFORM_ITEM(332nd_CIS_B1_Commander,Commander B1,332nd_CIS_B1_Commander)
-    MACRO_NEW_CISB1MARINE_UNIFORM_ITEM(332nd_CIS_B1_Marine,Marine B1,332nd_CIS_B1_Marine)
-    MACRO_NEW_CISB1SEC_UNIFORM_ITEM(332nd_CIS_B1_Security,Security B1,332nd_CIS_B1_Security)
-    MACRO_NEW_CISB1PILOT_UNIFORM_ITEM(332nd_CIS_B1_Pilot,Pilot B1,332nd_CIS_B1_Pilot)
+    MACRO_NEW_CISB1_UNIFORM_ITEM(ORG_CIS_B1,B1,ORG_CIS_B1)
+    MACRO_NEW_CISB1JUMPPACK_UNIFORM_ITEM(ORG_CIS_B1_Jumppack,Jumppack B1,ORG_CIS_B1_Jumppack)
+    MACRO_NEW_CISB1CREW_UNIFORM_ITEM(ORG_CIS_B1_Crew,Crew B1,ORG_CIS_B1_Crew)
+    MACRO_NEW_CISB1COMM_UNIFORM_ITEM(ORG_CIS_B1_Commander,Commander B1,ORG_CIS_B1_Commander)
+    MACRO_NEW_CISB1MARINE_UNIFORM_ITEM(ORG_CIS_B1_Marine,Marine B1,ORG_CIS_B1_Marine)
+    MACRO_NEW_CISB1SEC_UNIFORM_ITEM(ORG_CIS_B1_Security,Security B1,ORG_CIS_B1_Security)
+    MACRO_NEW_CISB1PILOT_UNIFORM_ITEM(ORG_CIS_B1_Pilot,Pilot B1,ORG_CIS_B1_Pilot)
 
 	//CISBX
-	MACRO_NEW_CISBX_UNIFORM_ITEM(332nd_CIS_BX,BX,332nd_CIS_BX)
-	MACRO_NEW_CISBXCAPT_UNIFORM_ITEM(332nd_CIS_BX_Captain,BX Captain,332nd_CIS_BX_Captain)
-	MACRO_NEW_CISBXSEC_UNIFORM_ITEM(332nd_CIS_BX_Security,BX Security,332nd_CIS_BX_Security)
-	MACRO_NEW_CISBXDIPLO_UNIFORM_ITEM(332nd_CIS_BX_Diplomat,BX Diplomat,332nd_CIS_BX_Diplomat)
+	MACRO_NEW_CISBX_UNIFORM_ITEM(ORG_CIS_BX,BX,ORG_CIS_BX)
+	MACRO_NEW_CISBXCAPT_UNIFORM_ITEM(ORG_CIS_BX_Captain,BX Captain,ORG_CIS_BX_Captain)
+	MACRO_NEW_CISBXSEC_UNIFORM_ITEM(ORG_CIS_BX_Security,BX Security,ORG_CIS_BX_Security)
+	MACRO_NEW_CISBXDIPLO_UNIFORM_ITEM(ORG_CIS_BX_Diplomat,BX Diplomat,ORG_CIS_BX_Diplomat)
 
 	//CISB2
-	MACRO_NEW_CISB2_UNIFORM_ITEM(332nd_CIS_B2,B2,332nd_CIS_B2)
+	MACRO_NEW_CISB2_UNIFORM_ITEM(ORG_CIS_B2,B2,ORG_CIS_B2)
 };
 
 class CfgVehicles
@@ -186,175 +186,175 @@ class CfgVehicles
 	class MACRO_NEW_UNIT(cisb2,base);
 
     //B1
-    MACRO_NEW_CISB1_UNIT(332nd_CIS_B1,B1 Battle Droid,332nd_CIS_B1)
-    MACRO_NEW_CISB1JUMPPACK_UNIT(332nd_CIS_B1_Jumppack,B1 Jumppack Battle Droid,332nd_CIS_B1_Jumppack)
-    MACRO_NEW_CISB1BREACHER_UNIT(332nd_CIS_B1_Breacher,B1 Breacher Battle Droid,332nd_CIS_B1)
-    MACRO_NEW_CISB1SUPPORT_UNIT(332nd_CIS_B1_Support,B1 Support Battle Droid,332nd_CIS_B1)
-    MACRO_NEW_CISB1AT_UNIT(332nd_CIS_B1_AT,B1 Anti-Tank Battle Droid,332nd_CIS_B1)
-	MACRO_NEW_CISB1AA_UNIT(332nd_CIS_B1_AA,B1 Anti - Air Battle Droid,332nd_CIS_B1)
-    MACRO_NEW_CISB1SNIPER_UNIT(332nd_CIS_B1_Sniper,B1 Sniper Battle Droid,332nd_CIS_B1)
-    MACRO_NEW_CISB1CREW_UNIT(332nd_CIS_B1_Crew,B1 Crew Battle Droid,332nd_CIS_B1_Crew)
-    MACRO_NEW_CISB1COMM_UNIT(332nd_CIS_B1_Commander,B1 Commander Battle Droid,332nd_CIS_B1_Commander)
-    MACRO_NEW_CISB1MARINE_UNIT(332nd_CIS_B1_Marine,B1 Marine Battle Droid,332nd_CIS_B1_Marine)
-    MACRO_NEW_CISB1SEC_UNIT(332nd_CIS_B1_Security,B1 Security Battle Droid,332nd_CIS_B1_Security)
-    MACRO_NEW_CISB1PILOT_UNIT(332nd_CIS_B1_Pilot,B1 Pilot Battle Droid,332nd_CIS_B1_Pilot)
+    MACRO_NEW_CISB1_UNIT(ORG_CIS_B1,B1 Battle Droid,ORG_CIS_B1)
+    MACRO_NEW_CISB1JUMPPACK_UNIT(ORG_CIS_B1_Jumppack,B1 Jumppack Battle Droid,ORG_CIS_B1_Jumppack)
+    MACRO_NEW_CISB1BREACHER_UNIT(ORG_CIS_B1_Breacher,B1 Breacher Battle Droid,ORG_CIS_B1)
+    MACRO_NEW_CISB1SUPPORT_UNIT(ORG_CIS_B1_Support,B1 Support Battle Droid,ORG_CIS_B1)
+    MACRO_NEW_CISB1AT_UNIT(ORG_CIS_B1_AT,B1 Anti-Tank Battle Droid,ORG_CIS_B1)
+	MACRO_NEW_CISB1AA_UNIT(ORG_CIS_B1_AA,B1 Anti - Air Battle Droid,ORG_CIS_B1)
+    MACRO_NEW_CISB1SNIPER_UNIT(ORG_CIS_B1_Sniper,B1 Sniper Battle Droid,ORG_CIS_B1)
+    MACRO_NEW_CISB1CREW_UNIT(ORG_CIS_B1_Crew,B1 Crew Battle Droid,ORG_CIS_B1_Crew)
+    MACRO_NEW_CISB1COMM_UNIT(ORG_CIS_B1_Commander,B1 Commander Battle Droid,ORG_CIS_B1_Commander)
+    MACRO_NEW_CISB1MARINE_UNIT(ORG_CIS_B1_Marine,B1 Marine Battle Droid,ORG_CIS_B1_Marine)
+    MACRO_NEW_CISB1SEC_UNIT(ORG_CIS_B1_Security,B1 Security Battle Droid,ORG_CIS_B1_Security)
+    MACRO_NEW_CISB1PILOT_UNIT(ORG_CIS_B1_Pilot,B1 Pilot Battle Droid,ORG_CIS_B1_Pilot)
 
 	//BX
-	MACRO_NEW_CISBX_UNIT(332nd_CIS_BX,BX Battle Droid,332nd_CIS_BX)
-	MACRO_NEW_CISBXCAPT_UNIT(332nd_CIS_BX_Captain,BX Captain Battle Droid,332nd_CIS_BX_Captain)
-	MACRO_NEW_CISBXSEC_UNIT(332nd_CIS_BX_Security,BX Security Battle Droid,332nd_CIS_BX_Security)
-	MACRO_NEW_CISBXDIPLO_UNIT(332nd_CIS_BX_Diplomat,BX Diplomat Battle Droid,332nd_CIS_BX_Diplomat)
-	MACRO_NEW_CISBXASSASSIN_UNIT(332nd_CIS_BX_Assassin,BX Assassin Battle Droid,332nd_CIS_BX)
-	MACRO_NEW_CISBXMELEE_UNIT(332nd_CIS_BX_Melee,BX Melee Battle Droid,332nd_CIS_BX)
-	MACRO_NEW_CISBXMELEERUSH_UNIT(332nd_CIS_BX_MeleeRush,BX Melee Rush Battle Droid,332nd_CIS_BX)
-	MACRO_NEW_CISBXSUPPORT_UNIT(332nd_CIS_BX_Support,BX Support Battle Droid,332nd_CIS_BX)
-	MACRO_NEW_CISBXAT_UNIT(332nd_CIS_BX_AT,BX Anti-Tank Battle Droid,332nd_CIS_BX)
-	MACRO_NEW_CISBXBREACH_UNIT(332nd_CIS_BX_Breacher,BX Breacher Battle Droid,332nd_CIS_BX)
-	MACRO_NEW_CISBXHYBRIDCOMM_UNIT(332nd_CIS_BX_Hybrid_Commander,BX Commander Hybrid Battle Droid,332nd_CIS_BX_Captain)
-	MACRO_NEW_CISBXHYBRID_UNIT(332nd_CIS_BX_Hybrid,BX Hybrid Battle Droid,332nd_CIS_BX)
+	MACRO_NEW_CISBX_UNIT(ORG_CIS_BX,BX Battle Droid,ORG_CIS_BX)
+	MACRO_NEW_CISBXCAPT_UNIT(ORG_CIS_BX_Captain,BX Captain Battle Droid,ORG_CIS_BX_Captain)
+	MACRO_NEW_CISBXSEC_UNIT(ORG_CIS_BX_Security,BX Security Battle Droid,ORG_CIS_BX_Security)
+	MACRO_NEW_CISBXDIPLO_UNIT(ORG_CIS_BX_Diplomat,BX Diplomat Battle Droid,ORG_CIS_BX_Diplomat)
+	MACRO_NEW_CISBXASSASSIN_UNIT(ORG_CIS_BX_Assassin,BX Assassin Battle Droid,ORG_CIS_BX)
+	MACRO_NEW_CISBXMELEE_UNIT(ORG_CIS_BX_Melee,BX Melee Battle Droid,ORG_CIS_BX)
+	MACRO_NEW_CISBXMELEERUSH_UNIT(ORG_CIS_BX_MeleeRush,BX Melee Rush Battle Droid,ORG_CIS_BX)
+	MACRO_NEW_CISBXSUPPORT_UNIT(ORG_CIS_BX_Support,BX Support Battle Droid,ORG_CIS_BX)
+	MACRO_NEW_CISBXAT_UNIT(ORG_CIS_BX_AT,BX Anti-Tank Battle Droid,ORG_CIS_BX)
+	MACRO_NEW_CISBXBREACH_UNIT(ORG_CIS_BX_Breacher,BX Breacher Battle Droid,ORG_CIS_BX)
+	MACRO_NEW_CISBXHYBRIDCOMM_UNIT(ORG_CIS_BX_Hybrid_Commander,BX Commander Hybrid Battle Droid,ORG_CIS_BX_Captain)
+	MACRO_NEW_CISBXHYBRID_UNIT(ORG_CIS_BX_Hybrid,BX Hybrid Battle Droid,ORG_CIS_BX)
 
 	//Heavy Droids
-	MACRO_NEW_CISDROIDEKA_UNIT(332nd_CIS_HEAVY_Droideka,Droideka (Static))
-	MACRO_NEW_CISDROIDEKA_MOVE_UNIT(332nd_CIS_HEAVY_Droideka_Moveable,Droideka (Moveable))
-	MACRO_NEW_CIS_SNIPER_DROIDEKA_UNIT(332nd_CIS_HEAVY_Sniper_Droideka,Sniper Droideka(Static))
-	MACRO_NEW_CIS_SNIPER_DROIDEKA_MOVE_UNIT(332nd_CIS_HEAVY_Sniper_Droideka_Moveable,Sniper Droideka(Moveable))
-	MACRO_NEW_CISB2_UNIT(332nd_CIS_B2,B2 Battle Droid,332nd_CIS_B2)
+	MACRO_NEW_CISDROIDEKA_UNIT(ORG_CIS_HEAVY_Droideka,Droideka (Static))
+	MACRO_NEW_CISDROIDEKA_MOVE_UNIT(ORG_CIS_HEAVY_Droideka_Moveable,Droideka (Moveable))
+	MACRO_NEW_CIS_SNIPER_DROIDEKA_UNIT(ORG_CIS_HEAVY_Sniper_Droideka,Sniper Droideka(Static))
+	MACRO_NEW_CIS_SNIPER_DROIDEKA_MOVE_UNIT(ORG_CIS_HEAVY_Sniper_Droideka_Moveable,Sniper Droideka(Moveable))
+	MACRO_NEW_CISB2_UNIT(ORG_CIS_B2,B2 Battle Droid,ORG_CIS_B2)
 };
 
 class CfgGroups
 {
 	class East
 	{
-		class EdCat_332ndCIS
+		class EdCat_ORGCIS
 		{
-			name = "332nd CIS";
+			name = "ORG CIS";
 			class B1Infantry
 			{
 				name = "B1 - Specialized Teams";
-				class CIS_332nd_B1InfCommand
+				class CIS_ORG_B1InfCommand
 				{
 					name = "Command Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1comm_unit_332nd_CIS_B1_Commander";
+						vehicle = "ORG_aux_cisb1comm_unit_ORG_CIS_B1_Commander";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
+						vehicle = "ORG_aux_cisb1sec_unit_ORG_CIS_B1_Security";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
+						vehicle = "ORG_aux_cisb1sec_unit_ORG_CIS_B1_Security";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sec_unit_332nd_CIS_B1_Security";
+						vehicle = "ORG_aux_cisb1sec_unit_ORG_CIS_B1_Security";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_B1InfSentry
+				class CIS_ORG_B1InfSentry
 				{
 					name = "Sentry Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
-				class CIS_332nd_B1InfSnipers
+				class CIS_ORG_B1InfSnipers
 				{
 					name = "Sniper Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper";
+						vehicle = "ORG_aux_cisb1sniper_unit_ORG_CIS_B1_Sniper";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1sniper_unit_332nd_CIS_B1_Sniper";
+						vehicle = "ORG_aux_cisb1sniper_unit_ORG_CIS_B1_Sniper";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
-				class CIS_332nd_B1InfPilotCrew
+				class CIS_ORG_B1InfPilotCrew
 				{
 					name = "Pilot Crew";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+						vehicle = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+						vehicle = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
-				class CIS_332nd_B1InfVehicleCrew
+				class CIS_ORG_B1InfVehicleCrew
 				{
 					name = "Vehicle Crew";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+						vehicle = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+						vehicle = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+						vehicle = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+						vehicle = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
@@ -364,138 +364,138 @@ class CfgGroups
 			class B1FireTeams
 			{
 				name = "B1 - Fire Teams";
-				class CIS_332nd_B1InfRifle_Teams
+				class CIS_ORG_B1InfRifle_Teams
 				{
 					name = "Rifle Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_B1InfAssault_Teams
+				class CIS_ORG_B1InfAssault_Teams
 				{
 					name = "Assault Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "SERGEANT";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "SERGEANT";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_B1InfWeapons_Teams
+				class CIS_ORG_B1InfWeapons_Teams
 				{
 					name = "Weapons Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "SERGEANT";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "SERGEANT";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "SERGEANT";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_B1InfAA_Teams
+				class CIS_ORG_B1InfAA_Teams
 				{
 					name = "Anti-Air Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "SERGEANT";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1aa_unit_332nd_CIS_B1_AA";
+						vehicle = "ORG_aux_cisb1aa_unit_ORG_CIS_B1_AA";
 						rank = "SERGEANT";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1aa_unit_332nd_CIS_B1_AA";
+						vehicle = "ORG_aux_cisb1aa_unit_ORG_CIS_B1_AA";
 						rank = "SERGEANT";
 						position[] = { 0,-1,0 };
 					};
@@ -505,188 +505,188 @@ class CfgGroups
 			class B1Squads
 			{
 				name = "B1 - Squads";
-				class CIS_332nd_B1InfRifle_Squads
+				class CIS_ORG_B1InfRifle_Squads
 				{
 					name = "Rifle Squad";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 				};
-				class CIS_332nd_B1InfAssault_Squads
+				class CIS_ORG_B1InfAssault_Squads
 				{
 					name = "Assault Squad";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 				};
-				class CIS_332nd_B1InfWeapons_Squads
+				class CIS_ORG_B1InfWeapons_Squads
 				{
 					name = "Weapons Squad";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
@@ -696,272 +696,272 @@ class CfgGroups
 			class B1Sections
 			{
 				name = "B1 - Sections";
-				class CIS_332nd_B1InfRifle_Sections
+				class CIS_ORG_B1InfRifle_Sections
 				{
 					name = "Rifle Section";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_B1InfAssault_Sections
+				class CIS_ORG_B1InfAssault_Sections
 				{
 					name = "Assault Section";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_B1InfWeapons_Sections
+				class CIS_ORG_B1InfWeapons_Sections
 				{
 					name = "Weapons Section";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
@@ -972,184 +972,184 @@ class CfgGroups
 			class BXInfantry
 			{
 				name = "BX - Specialized Teams";
-				class CIS_332nd_BXInfCommand
+				class CIS_ORG_BXInfCommand
 				{
 					name = "Command Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxcapt_unit_332nd_CIS_BX_Captain";
+						vehicle = "ORG_aux_cisbxcapt_unit_ORG_CIS_BX_Captain";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_BXInfSentry
+				class CIS_ORG_BXInfSentry
 				{
 					name = "Sentry Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
-				class CIS_332nd_BXInfSnipers
+				class CIS_ORG_BXInfSnipers
 				{
 					name = "Sniper Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxassassin_unit_332nd_CIS_BX_Assassin";
+						vehicle = "ORG_aux_cisbxassassin_unit_ORG_CIS_BX_Assassin";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxassassin_unit_332nd_CIS_BX_Assassin";
+						vehicle = "ORG_aux_cisbxassassin_unit_ORG_CIS_BX_Assassin";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
-				class CIS_332nd_BXInfMelee
+				class CIS_ORG_BXInfMelee
 				{
 					name = "Melee Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxmelee_unit_332nd_CIS_BX_Melee";
+						vehicle = "ORG_aux_cisbxmelee_unit_ORG_CIS_BX_Melee";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxmelee_unit_332nd_CIS_BX_Melee";
+						vehicle = "ORG_aux_cisbxmelee_unit_ORG_CIS_BX_Melee";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
-				class CIS_332nd_BXInfMeleeRUSH
+				class CIS_ORG_BXInfMeleeRUSH
 				{
 					name = "Rush Melee Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxmeleerush_unit_332nd_CIS_BX_MeleeRush";
+						vehicle = "ORG_aux_cisbxmeleerush_unit_ORG_CIS_BX_MeleeRush";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxmeleerush_unit_332nd_CIS_BX_MeleeRush";
+						vehicle = "ORG_aux_cisbxmeleerush_unit_ORG_CIS_BX_MeleeRush";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 				};
-				class CIS_332nd_BXInfDiplomats
+				class CIS_ORG_BXInfDiplomats
 				{
 					name = "Diplomat Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxcapt_unit_332nd_CIS_BX_Captain";
+						vehicle = "ORG_aux_cisbxcapt_unit_ORG_CIS_BX_Captain";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxdiplo_unit_332nd_CIS_BX_Diplomat";
+						vehicle = "ORG_aux_cisbxdiplo_unit_ORG_CIS_BX_Diplomat";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxdiplo_unit_332nd_CIS_BX_Diplomat";
+						vehicle = "ORG_aux_cisbxdiplo_unit_ORG_CIS_BX_Diplomat";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxdiplo_unit_332nd_CIS_BX_Diplomat";
+						vehicle = "ORG_aux_cisbxdiplo_unit_ORG_CIS_BX_Diplomat";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_BXInfSecurity
+				class CIS_ORG_BXInfSecurity
 				{
 					name = "Security Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxcapt_unit_332nd_CIS_BX_Captain";
+						vehicle = "ORG_aux_cisbxcapt_unit_ORG_CIS_BX_Captain";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxsec_unit_332nd_CIS_BX_Security";
+						vehicle = "ORG_aux_cisbxsec_unit_ORG_CIS_BX_Security";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxsec_unit_332nd_CIS_BX_Security";
+						vehicle = "ORG_aux_cisbxsec_unit_ORG_CIS_BX_Security";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxsec_unit_332nd_CIS_BX_Security";
+						vehicle = "ORG_aux_cisbxsec_unit_ORG_CIS_BX_Security";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
@@ -1159,104 +1159,104 @@ class CfgGroups
 			class BXFireTeams
 			{
 				name = "BX - Fire Teams";
-				class CIS_332nd_BXInfRifle_Teams
+				class CIS_ORG_BXInfRifle_Teams
 				{
 					name = "Rifle Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_BXInfAssault_Teams
+				class CIS_ORG_BXInfAssault_Teams
 				{
 					name = "Assault Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "SERGEANT";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "SERGEANT";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 				};
-				class CIS_332nd_BXInfWeapons_Teams
+				class CIS_ORG_BXInfWeapons_Teams
 				{
 					name = "Weapons Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "SERGEANT";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "SERGEANT";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "SERGEANT";
 						position[] = { 0,-1,0 };
 					};
@@ -1266,188 +1266,188 @@ class CfgGroups
 			class BXSquads
 			{
 				name = "BX - Squads";
-				class CIS_332nd_BXInfRifle_Squads
+				class CIS_ORG_BXInfRifle_Squads
 				{
 					name = "Rifle Squad";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 				};
-				class CIS_332nd_BXInfAssault_Squads
+				class CIS_ORG_BXInfAssault_Squads
 				{
 					name = "Assault Squad";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 				};
-				class CIS_332nd_BXInfWeapons_Squads
+				class CIS_ORG_BXInfWeapons_Squads
 				{
 					name = "Weapons Squad";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
@@ -1457,272 +1457,272 @@ class CfgGroups
 			class BXSections
 			{
 				name = "BX - Sections";
-				class CIS_332nd_BXInfRifle_Sections
+				class CIS_ORG_BXInfRifle_Sections
 				{
 					name = "Rifle Section";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_BXInfAssault_Sections
+				class CIS_ORG_BXInfAssault_Sections
 				{
 					name = "Assault Section";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_BXInfWeapons_Sections
+				class CIS_ORG_BXInfWeapons_Sections
 				{
 					name = "Weapons Section";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
@@ -1732,583 +1732,583 @@ class CfgGroups
 			class MixedInfantry
 			{
 				name = "Mixed Droids - Sections";
-				class CIS_332nd_MixedInfB2B1RifleSection
+				class CIS_ORG_MixedInfB2B1RifleSection
 				{
 					name = "B2 & B1 - Rifle";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_MixedInfB2B1AssaultSection
+				class CIS_ORG_MixedInfB2B1AssaultSection
 				{
 					name = "B2 & B1 - Assault";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1breach_unit_332nd_CIS_B1_Breacher";
+						vehicle = "ORG_aux_cisb1breach_unit_ORG_CIS_B1_Breacher";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_MixedInfB2B1SupportSection
+				class CIS_ORG_MixedInfB2B1SupportSection
 				{
 					name = "B2 & B1 - Weapons";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1ar_unit_332nd_CIS_B1_Support";
+						vehicle = "ORG_aux_cisb1ar_unit_ORG_CIS_B1_Support";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1at_unit_332nd_CIS_B1_AT";
+						vehicle = "ORG_aux_cisb1at_unit_ORG_CIS_B1_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_MixedInfB2Team
+				class CIS_ORG_MixedInfB2Team
 				{
 					name = "B2 Team";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb2_unit_332nd_CIS_B2";
+						vehicle = "ORG_aux_cisb2_unit_ORG_CIS_B2";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 				};
-				class CIS_332nd_MixedInfBXB1RifleSection
+				class CIS_ORG_MixedInfBXB1RifleSection
 				{
 					name = "BX & B1 - Rifle";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_MixedInfBXB1AssaultSection
+				class CIS_ORG_MixedInfBXB1AssaultSection
 				{
 					name = "BX & B1 - Assault";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxbreach_unit_332nd_CIS_BX_Breacher";
+						vehicle = "ORG_aux_cisbxbreach_unit_ORG_CIS_BX_Breacher";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
 				};
-				class CIS_332nd_MixedInfBXB1SupportSection
+				class CIS_ORG_MixedInfBXB1SupportSection
 				{
 					name = "BX & B1 - Weapons";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbx_unit_332nd_CIS_BX";
+						vehicle = "ORG_aux_cisbx_unit_ORG_CIS_BX";
 						rank = "CORPORAL";
 						position[] = { 0,0,0 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { 0,1,0 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,0,0 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-1,0 };
 					};
 					class Unit4
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "CORPORAL";
 						position[] = { -1,0,0 };
 					};
 					class Unit5
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 1,1,0 };
 					};
 					class Unit6
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -1,-1,0 };
 					};
 					class Unit7
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 0,-2,0 };
 					};
 					class Unit8
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "CORPORAL";
 						position[] = { -2,0,0 };
 					};
 					class Unit9
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+						vehicle = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 						rank = "PRIVATE";
 						position[] = { 2,2,0 };
 					};
 					class Unit10
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxar_unit_332nd_CIS_BX_Support";
+						vehicle = "ORG_aux_cisbxar_unit_ORG_CIS_BX_Support";
 						rank = "PRIVATE";
 						position[] = { -2,-2,0 };
 					};
 					class Unit11
 					{
 						side = 0;
-						vehicle = "332nd_aux_cisbxat_unit_332nd_CIS_BX_AT";
+						vehicle = "ORG_aux_cisbxat_unit_ORG_CIS_BX_AT";
 						rank = "PRIVATE";
 						position[] = { 0,-3,0 };
 					};
@@ -2318,131 +2318,131 @@ class CfgGroups
 			class VultureTeams
 			{
 				name = "Vulture Elements";
-				class CIS_332nd_Vulture_CAP
+				class CIS_ORG_Vulture_CAP
 				{
 					name = "CAP Vulture Element";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAP";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_CAP";
 						rank = "CORPORAL";
 						position[] = { 0,0,50 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 0,20,50 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 20,0,50 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 0,-20,50 };
 					};
 				};
-				class CIS_332nd_Vulture_CAS
+				class CIS_ORG_Vulture_CAS
 				{
 					name = "CAS Vulture Element";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAS";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_CAS";
 						rank = "CORPORAL";
 						position[] = { 0,0,50 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAS";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_CAS";
 						rank = "PRIVATE";
 						position[] = { 0,20,50 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 20,0,50 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 0,-20,50 };
 					};
 				};
-				class CIS_332nd_Vulture_GUN
+				class CIS_ORG_Vulture_GUN
 				{
 					name = "Gun Vulture Element";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "CORPORAL";
 						position[] = { 0,0,50 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 0,20,50 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 20,0,50 };
 					};
 					class Unit3
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_GUN";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_GUN";
 						rank = "PRIVATE";
 						position[] = { 0,-20,50 };
 					};
 				};
-				class CIS_332nd_Vulture_CAP
+				class CIS_ORG_Vulture_CAP
 				{
 					name = "CAP Vulture Squad";
 					side = 0;
-					faction = "EdCat_332ndCIS";
+					faction = "EdCat_ORGCIS";
 					class Unit0
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAP";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_CAP";
 						rank = "CORPORAL";
 						position[] = { 0,0,50 };
 					};
 					class Unit1
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAP";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_CAP";
 						rank = "PRIVATE";
 						position[] = { 0,20,50 };
 					};
 					class Unit2
 					{
 						side = 0;
-						vehicle = "332nd_aux_vehicle_air_CIS_Vulture_CAP";
+						vehicle = "ORG_aux_vehicle_air_CIS_Vulture_CAP";
 						rank = "PRIVATE";
 						position[] = { 20,0,50 };
 					};

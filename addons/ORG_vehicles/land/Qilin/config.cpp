@@ -182,17 +182,17 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(Land,Qilin,Gun): LSV_02_armed_base_F
     {
-        author="332nd";
+        author="ORG";
         displayName="Qilin [Gun]";
         scope = 2;
         scopeCurator = 2;
         side = 1;
-        faction="EdCat_332nd";
-        editorSubcategory = "EdSubcat_332nd_CAR";
-		crew="332nd_aux_infantry_unit_trooper";
+        faction="EdCat_ORG";
+        editorSubcategory = "EdSubcat_ORG_CAR";
+		crew="ORG_aux_infantry_unit_trooper";
         typicalCargo[]=
 		{
-			"332nd_aux_infantry_unit_trooper"
+			"ORG_aux_infantry_unit_trooper"
 		};
         textureList[]=
 		{
@@ -311,18 +311,18 @@ class CfgVehicles
 
     class MACRO_NEW_VEHICLE(Land,Qilin,AT): LSV_02_AT_base_F
     {
-        author="332nd";
+        author="ORG";
         displayName="Qilin [AT]";
         scope = 2;
         scopeCurator = 2;
         side = 1;
 
-        faction="EdCat_332nd";
-        editorSubcategory = "EdSubcat_332nd_CAR";
-		crew="332nd_aux_infantry_unit_trooper";
+        faction="EdCat_ORG";
+        editorSubcategory = "EdSubcat_ORG_CAR";
+		crew="ORG_aux_infantry_unit_trooper";
         typicalCargo[]=
 		{
-			"332nd_aux_infantry_unit_trooper"
+			"ORG_aux_infantry_unit_trooper"
 		};
         textureList[]=
 		{

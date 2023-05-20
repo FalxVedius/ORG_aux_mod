@@ -258,9 +258,9 @@ class CfgVehicles
         displayName = "ADSD *Test*";
         scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TANK";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TANK";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
 
 		armor = 1500;
 		armorStructural = 6;
@@ -1052,11 +1052,11 @@ class CfgVehicles
 
 class CfgFunctions
 {
-	class Aux332nd_ADSD
+	class AuxORG_ADSD
 	{
 		class ADSD_Death
 		{
-			file = "\332nd_vehicles\land\ADSD";
+			file = "\ORG_vehicles\land\ADSD";
 			class Killed
 			{
 			};
@@ -1068,6 +1068,6 @@ class Extended_Killed_EventHandlers
 {
 	class MACRO_NEW_VEHICLE(Land,CIS,ADSD)
 	{
-		Aux332nd_NoSim = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_ADSD_fnc_Killed;";
+		AuxORG_NoSim = "[_this select 0, _this select 1, _this select 2, _this select 3] call AuxORG_ADSD_fnc_Killed;";
 	};
 };

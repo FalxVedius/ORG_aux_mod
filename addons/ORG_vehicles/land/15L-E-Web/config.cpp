@@ -75,9 +75,9 @@ class CfgVehicles
 		displayName = "E-Web (No Shield)";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TURR";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TURR";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		class Turrets : Turrets
 		{
@@ -124,9 +124,9 @@ class CfgVehicles
 		displayName = "E-Web (Shielded)";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_TURR";
-		crew = "332nd_aux_infantry_unit_trooper";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_TURR";
+		crew = "ORG_aux_infantry_unit_trooper";
 
 		class Turrets : Turrets
 		{

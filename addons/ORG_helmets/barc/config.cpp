@@ -4,7 +4,7 @@ class CfgPatches
 {
 	class MACRO_PATCH_NAME(barc_helmets)
 	{
-		author = "332nd Aux Mod team";
+		author = "ORG Aux Mod team";
 		addonRootClass = MACRO_PATCH_NAME(helmets);
 		requiredAddons[]=
 		{

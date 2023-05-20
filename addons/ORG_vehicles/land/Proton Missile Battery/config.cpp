@@ -30,7 +30,7 @@ class CfgAmmo
 			1.5,
 			1000
 		};
-		effectsMissile = "332nd_aux_effects_missile_plx_red";
+		effectsMissile = "ORG_aux_effects_missile_plx_red";
 	};
 };
 
@@ -83,8 +83,8 @@ class CfgVehicles
         scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TURR";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TURR";
 
 
 		class Turrets : Turrets

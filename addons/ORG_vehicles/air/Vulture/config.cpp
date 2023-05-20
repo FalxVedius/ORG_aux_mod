@@ -82,10 +82,10 @@ class CfgVehicles
 		  displayName = "CAP Vulture Droid";
 		  scope = 2;
 		  scopeCurator = 2;
-		  faction = "EdCat_332ndCIS";
-		  editorSubcategory = "EdSubcat_332nd_PLANE";
+		  faction = "EdCat_ORGCIS";
+		  editorSubcategory = "EdSubcat_ORG_PLANE";
 		  armor = 75;
-		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+		  crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 		  driverCanEject = 0;
 		  weapons[] = 
 		  {
@@ -112,7 +112,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineHighInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineHighInt.wss",
 					1,
 					1,
 					2100
@@ -124,7 +124,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineHighExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineHighExt.wss",
 					2,
 					1,
 					4000
@@ -136,7 +136,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineInt.wss",
 					1,
 					2,
 					1200
@@ -148,7 +148,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineExt.wss",
 					4,
 					1,
 					1000
@@ -161,7 +161,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureForsageInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureForsageInt.wss",
 					0.5,
 					1,
 					2000
@@ -175,7 +175,7 @@ class CfgVehicles
 			cone[] = {20,15,5,3};
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureForsageExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureForsageExt.wss",
 					3.5,
 					0.95,
 				};
@@ -309,10 +309,10 @@ class CfgVehicles
 		  scope = 2;
 		  armor = 75;
 		  scopeCurator = 2;
-		  faction = "EdCat_332ndCIS";
-		  editorSubcategory = "EdSubcat_332nd_PLANE";
+		  faction = "EdCat_ORGCIS";
+		  editorSubcategory = "EdSubcat_ORG_PLANE";
 		  driverCanEject = 0;
-		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+		  crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 		  weapons[] =
 		  {
@@ -338,7 +338,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineHighInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineHighInt.wss",
 					2,
 					1,
 					2100
@@ -350,7 +350,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineHighExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineHighExt.wss",
 					4,
 					1,
 					4000
@@ -362,7 +362,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineInt.wss",
 					1,
 					2,
 					1200
@@ -374,7 +374,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineExt.wss",
 					2,
 					1,
 					1000
@@ -387,7 +387,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureForsageInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureForsageInt.wss",
 					0.5,
 					1,
 					2000
@@ -401,7 +401,7 @@ class CfgVehicles
 			cone[] = {20,15,5,3};
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureForsageExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureForsageExt.wss",
 					3.5,
 					0.95,
 				};
@@ -446,7 +446,7 @@ class CfgVehicles
 				  {
 					  class pylons1 : pylons1
 					  {
-						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  attachment = "ORG_aux_magazine_Vulture_Rocket_Pylon_x12";
 						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
 						  maxweight = 300;
 						  name = "3AS_Vulture_MFD";
@@ -455,7 +455,7 @@ class CfgVehicles
 					  };
 					  class pylons2 : pylons2
 					  {
-						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  attachment = "ORG_aux_magazine_Vulture_Rocket_Pylon_x12";
 						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
 						  maxweight = 300;
 						  mirroredMissilePos = 1;
@@ -465,7 +465,7 @@ class CfgVehicles
 					  };
 					  class pylons3 : pylons3
 					  {
-						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  attachment = "ORG_aux_magazine_Vulture_Rocket_Pylon_x12";
 						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
 						  maxweight = 1050;
 						  name = "3AS_Vulture_MFD";
@@ -474,7 +474,7 @@ class CfgVehicles
 					  };
 					  class pylons4 : pylons4
 					  {
-						  attachment = "332nd_aux_magazine_Vulture_Rocket_Pylon_x12";
+						  attachment = "ORG_aux_magazine_Vulture_Rocket_Pylon_x12";
 						  hardpoints[] = {"3AS_CIS_Vulture_HEAP" };
 						  maxweight = 1050;
 						  mirroredMissilePos = 3;
@@ -509,11 +509,11 @@ class CfgVehicles
 		  displayName = "Vulture Droid";
 		  scope = 2;
 		  scopeCurator = 2;
-		  faction = "EdCat_332ndCIS";
-		  editorSubcategory = "EdSubcat_332nd_PLANE";
+		  faction = "EdCat_ORGCIS";
+		  editorSubcategory = "EdSubcat_ORG_PLANE";
 		  driverCanEject = 0;
 		  armor = 75;
-		  crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+		  crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 		    class EjectionSystem
 		{
 			EjectionSeatEnabled = 0;										//enable advanced ejection system								
@@ -539,7 +539,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineHighInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineHighInt.wss",
 					2,
 					1,
 					2100
@@ -551,7 +551,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineHighExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineHighExt.wss",
 					4,
 					1,
 					4000
@@ -563,7 +563,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineInt.wss",
 					1,
 					2,
 					1200
@@ -575,7 +575,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureEngineExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureEngineExt.wss",
 					2,
 					1,
 					1000
@@ -588,7 +588,7 @@ class CfgVehicles
 			{
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureForsageInt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureForsageInt.wss",
 					0.5,
 					1,
 					2000
@@ -602,7 +602,7 @@ class CfgVehicles
 			cone[] = {20,15,5,3};
 			sound[]=
 				{
-					"332nd_vehicles\air\sounds\Vulture\VultureForsageExt.wss",
+					"ORG_vehicles\air\sounds\Vulture\VultureForsageExt.wss",
 					3.5,
 					0.95,
 				};

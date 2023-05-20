@@ -155,9 +155,9 @@ class CfgVehicles
 		displayname="BAWS Artillery";
         icon="\A3\armor_f_gamma\MBT_02\Data\UI\map_MBT_02_ca.paa";
 		side=0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_ART";
-		crew = "332nd_aux_cisb1crew_unit_332nd_CIS_B1_Crew";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_ART";
+		crew = "ORG_aux_cisb1crew_unit_ORG_CIS_B1_Crew";
         availableForSupportTypes[]=
 		{
 			"Artillery"
@@ -343,7 +343,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 			class Tan
@@ -356,7 +356,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"EdCat_332ndCIS"
+					"EdCat_ORGCIS"
 				};
 			};
 		};

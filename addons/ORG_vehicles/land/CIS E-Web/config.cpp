@@ -75,9 +75,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TURR";
-		crew = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TURR";
+		crew = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 
 		class Turrets : Turrets
 		{
@@ -125,9 +125,9 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 		side = 0;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_TURR";
-		crew = "332nd_aux_cisb1_unit_332nd_CIS_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_TURR";
+		crew = "ORG_aux_cisb1_unit_ORG_CIS_B1";
 
 		class Turrets : Turrets
 		{

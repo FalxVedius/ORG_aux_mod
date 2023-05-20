@@ -403,16 +403,16 @@ class CfgVehicles
 		displayName = "CAS HMP";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HELI";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HELI";
 
-		crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+		crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -428,7 +428,7 @@ class CfgVehicles
 			};
 			class MainTurret2 : MainTurret2
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -443,7 +443,7 @@ class CfgVehicles
 			};
 			class MainTurret3 : MainTurret3
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -538,16 +538,16 @@ class CfgVehicles
 		displayName = "AA HMP";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HELI";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HELI";
 
-		crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+		crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -563,7 +563,7 @@ class CfgVehicles
 			};
 			class MainTurret2 : MainTurret2
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -578,7 +578,7 @@ class CfgVehicles
 			};
 			class MainTurret3 : MainTurret3
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -674,16 +674,16 @@ class CfgVehicles
 		displayName = "HMP Transport";
 		scope = 2;
 		scopeCurator = 2;
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HELI";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HELI";
 
-		crew = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+		crew = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 		class Turrets : Turrets
 		{
 			class MainTurret : MainTurret
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -699,7 +699,7 @@ class CfgVehicles
 			};
 			class MainTurret2 : MainTurret2
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{
@@ -714,7 +714,7 @@ class CfgVehicles
 			};
 			class MainTurret3 : MainTurret3
 			{
-				gunnerType = "332nd_aux_cisb1pilot_unit_332nd_CIS_B1_Pilot";
+				gunnerType = "ORG_aux_cisb1pilot_unit_ORG_CIS_B1_Pilot";
 
 				weapons[] =
 				{

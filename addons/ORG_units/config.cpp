@@ -19,9 +19,9 @@ class CfgPatches
 		units[] = {
 			MACRO_NEW_UNIT(infantry,base),
 			MACRO_NEW_UNIT(aviation,base),
-			"EmptyBox_332nd",
-			"MedicalBox_332nd",
-			"AmmoBox_332nd",
+			"EmptyBox_ORG",
+			"MedicalBox_ORG",
+			"AmmoBox_ORG",
 
 		};
 		weapons[] = {
@@ -32,122 +32,115 @@ class CfgPatches
 };
 class CfgFactionClasses
 {
-	class EdCat_332nd
+	class EdCat_ORG
 	{
-		displayName = "332nd Legion";
+		displayName = "Outer Rim Garrison";
 		side = 1;
 		priority = 2;
 	};
 
-	class EdCat_332ndCIS
+	class EdCat_ORGCIS
 	{
-		displayName = "332nd CIS";
+		displayName = "ORG CIS";
 		side = 0;
-		priority = 2;
-	};
-
-	class EdCat_332nd_Haxion
-	{
-		displayName = "332nd Haxion Cartel";
-		side = 2;
 		priority = 2;
 	};
 };
 class CfgEditorCategories
 {
-	class EdCat_332nd_Props
+	class EdCat_ORG_Props
 	{
-		displayName = "332nd Legion Supplies";
+		displayName = "Outer Rim Garrison Supplies";
 	};
 };
 class CfgEditorSubcategories
 {
-	class EdSubcat_332nd_AA
+	class EdSubcat_ORG_AA
 	{
 		displayName = "Anti-Air";
 		priority = 1;
 	};
-	class EdSubcat_332nd_APCS
+	class EdSubcat_ORG_APCS
 	{
 		displayName = "APCs";
 		priority = 2;
 	};
-	class EdSubcat_332nd_ART
+	class EdSubcat_ORG_ART
 	{
 		displayName = "Artillery";
 		priority = 3;
 	};
-	class EdSubcat_332nd_PACKS
+	class EdSubcat_ORG_PACKS
 	{
 		displayName = "Backpacks";
 		priority = 4;
 	};
-	class EdSubcat_332nd_BOAT
+	class EdSubcat_ORG_BOAT
 	{
 		displayName = "Boats";
 		priority = 4;
 	};
-	class EdSubcat_332nd_CAR
+	class EdSubcat_ORG_CAR
 	{
 		displayName = "Cars";
 		priority = 5;
 	};
-	class EdSubcat_332nd_DRONE
+	class EdSubcat_ORG_DRONE
 	{
 		displayName = "Drones";
 		priority = 6;
 	};
-	class EdSubcat_332nd_HELI
+	class EdSubcat_ORG_HELI
 	{
 		displayName = "Helicopters";
 		priority = 7;
 	};
-	class EdSubcat_332nd_MEN
+	class EdSubcat_ORG_MEN
 	{
 		displayName = "Men";
 		priority = 8;
 	};
-	class EdSubcat_332nd_B1
+	class EdSubcat_ORG_B1
 	{
 		displayName = "B1";
 		priority = 8;
 	};
-	class EdSubcat_332nd_BX
+	class EdSubcat_ORG_BX
 	{
 		displayName = "BX";
 		priority = 9;
 	};
-	class EdSubcat_332nd_HEAVY
+	class EdSubcat_ORG_HEAVY
 	{
 		displayName = "Heavy Droids";
 		priority = 10;
 	};
-	class EdSubcat_332nd_IFV
+	class EdSubcat_ORG_IFV
 	{
 		displayName = "IFVs";
 		priority = 11;
 	};
-	class EdSubcat_332nd_PLANE
+	class EdSubcat_ORG_PLANE
 	{
 		displayName = "Planes";
 		priority = 12;
 	};
-	class EdSubcat_332nd_RESUPPLY
+	class EdSubcat_ORG_RESUPPLY
 	{
 		displayName = "Resupply";
 		priority = 1;
 	};
-	class EdSubcat_332nd_TANK
+	class EdSubcat_ORG_TANK
 	{
 		displayName = "Tanks";
 		priority = 14;
 	};
-	class EdSubcat_332nd_TRUCK
+	class EdSubcat_ORG_TRUCK
 	{
 		displayName = "Trucks";
 		priority = 15;
 	};
-	class EdSubcat_332nd_TURR
+	class EdSubcat_ORG_TURR
 	{
 		displayName = "Turrets";
 		priority = 16;
@@ -156,9 +149,9 @@ class CfgEditorSubcategories
 class CfgMarkers
 {
 	class mil_dot;
-	class Marker_332nd : mil_dot {
-		name = "332nd";
-		icon = "332nd_units\images\332nd_Logo.paa";
+	class Marker_ORG : mil_dot {
+		name = "ORG";
+		icon = "ORG_units\images\ORG_Logo.paa";
 		shadow = false;
 		scope = 2;
 		color[] = { 1, 1, 1, 1 };
@@ -186,7 +179,7 @@ class CfgWeapons
 	//Recruit
 	class MACRO_NEW_UNIFORM(recruit,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Recruit Uniform ('base')";
+		displayName = "[ORG] Recruit Uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -199,7 +192,7 @@ class CfgWeapons
 	//Infantry
     class MACRO_NEW_UNIFORM(infantry,base): ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Infantry Uniform ('base')";
+		displayName = "[ORG] Infantry Uniform ('base')";
         scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo: ItemInfo
 		{
@@ -211,7 +204,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(airborne,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Airborne Uniform ('base')";
+		displayName = "[ORG] Airborne Uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -224,7 +217,7 @@ class CfgWeapons
 	//RTO
     class MACRO_NEW_UNIFORM(rto,base): ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] RTO Uniform ('base')";
+		displayName = "[ORG] RTO Uniform ('base')";
         scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo: ItemInfo
 		{
@@ -237,7 +230,7 @@ class CfgWeapons
 	//Medic
     class MACRO_NEW_UNIFORM(medic,base): ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Medic Uniform ('base')";
+		displayName = "[ORG] Medic Uniform ('base')";
         scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo: ItemInfo
 		{
@@ -249,7 +242,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(aviation,base): ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Aviation Uniform ('base')";
+		displayName = "[ORG] Aviation Uniform ('base')";
         scope = 0;							
 		class ItemInfo: ItemInfo
 		{
@@ -261,7 +254,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(cwo,base): ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Clone Warrant Officer Uniform ('base')";
+		displayName = "[ORG] Clone Warrant Officer Uniform ('base')";
         scope = 0;							
 		class ItemInfo: ItemInfo
 		{
@@ -273,7 +266,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(arfbase,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] ARF Base Uniform ('base')";
+		displayName = "[ORG] ARF Base Uniform ('base')";
 		scope = 0;
 		class ItemInfo : ItemInfo
 		{
@@ -285,7 +278,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(arfdes,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] ARF Desert Uniform ('base')";
+		displayName = "[ORG] ARF Desert Uniform ('base')";
 		scope = 0;
 		class ItemInfo : ItemInfo
 		{
@@ -297,7 +290,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(arfjung,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] ARF Jungle Uniform ('base')";
+		displayName = "[ORG] ARF Jungle Uniform ('base')";
 		scope = 0;
 		class ItemInfo : ItemInfo
 		{
@@ -309,7 +302,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(arfsnow,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] ARF Snow Uniform ('base')";
+		displayName = "[ORG] ARF Snow Uniform ('base')";
 		scope = 0;
 		class ItemInfo : ItemInfo
 		{
@@ -321,7 +314,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(arfurb,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] ARF Urban Uniform ('base')";
+		displayName = "[ORG] ARF Urban Uniform ('base')";
 		scope = 0;
 		class ItemInfo : ItemInfo
 		{
@@ -333,7 +326,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(arfwood,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] ARF Woodland Uniform ('base')";
+		displayName = "[ORG] ARF Woodland Uniform ('base')";
 		scope = 0;
 		class ItemInfo : ItemInfo
 		{
@@ -345,7 +338,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(mech,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Mechanized Uniform ('base')";
+		displayName = "[ORG] Mechanized Uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -357,7 +350,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(scenario,base) : ls_gar_phase2_uniform
 	{
-		displayName = "[332nd] Scenario Uniform ('base')";
+		displayName = "[ORG] Scenario Uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -369,7 +362,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(captain,base) : JLTS_CloneArmorMC
 	{
-		displayName = "[332nd] Captain Uniform ('base')";
+		displayName = "[ORG] Captain Uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
 		class ItemInfo : ItemInfo
@@ -382,7 +375,7 @@ class CfgWeapons
 
 	class MACRO_NEW_UNIFORM(assault,base) : 3AS_U_Rep_Katarn_Armor
 	{
-		displayName = "[332nd] Assault Uniform ('base')";
+		displayName = "[ORG] Assault Uniform ('base')";
 		scope = 0;							
 		class ItemInfo : ItemInfo
 		{
@@ -456,7 +449,7 @@ class CfgWeapons
 	//CIS B-1
 	class MACRO_NEW_UNIFORM(cisb1,base) : JLTS_DroidB1
 	{
-		displayName = "[332nd] Battle droid uniform ('base')";
+		displayName = "[ORG] Battle droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -466,7 +459,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisb1jumppack,base) : JLTS_DroidB1_Rocket
 	{
-		displayName = "[332nd] Jumppack Battle droid uniform ('base')";
+		displayName = "[ORG] Jumppack Battle droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -476,7 +469,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisb1crew,base) : JLTS_DroidB1_Crew
 	{
-		displayName = "[332nd] Crew Battle droid uniform ('base')";
+		displayName = "[ORG] Crew Battle droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -486,7 +479,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisb1comm,base) : JLTS_DroidB1_Commander
 	{
-		displayName = "[332nd] Commander Battle droid uniform ('base')";
+		displayName = "[ORG] Commander Battle droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -496,7 +489,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisb1marine,base) : JLTS_DroidB1_Marine
 	{
-		displayName = "[332nd] Marine Battle droid uniform ('base')";
+		displayName = "[ORG] Marine Battle droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -506,7 +499,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisb1sec,base) : JLTS_DroidB1_Security
 	{
-		displayName = "[332nd] Security Battle droid uniform ('base')";
+		displayName = "[ORG] Security Battle droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -516,7 +509,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisb1pilot,base) : JLTS_DroidB1_Pilot
 	{
-		displayName = "[332nd] Pilot Battle droid uniform ('base')";
+		displayName = "[ORG] Pilot Battle droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -528,7 +521,7 @@ class CfgWeapons
 	//CIS BX
 	class MACRO_NEW_UNIFORM(cisbx,base) : lsd_cis_bxDroid_uniform
 	{
-		displayName = "[332nd] BX droid uniform ('base')";
+		displayName = "[ORG] BX droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -538,7 +531,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisbxsec,base) : lsd_cis_bxSecurityDroid_uniform
 	{
-		displayName = "[332nd] BX Security droid uniform ('base')";
+		displayName = "[ORG] BX Security droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -548,7 +541,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisbxdiplo,base) : lsd_cis_bxDiplomatDroid_uniform
 	{
-		displayName = "[332nd] BX Diplomat droid uniform ('base')";
+		displayName = "[ORG] BX Diplomat droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -558,7 +551,7 @@ class CfgWeapons
 	};
 	class MACRO_NEW_UNIFORM(cisbxcapt,base) : lsd_cis_bxCaptainDroid_uniform
 	{
-		displayName = "[332nd] BX Captain droid uniform ('base')";
+		displayName = "[ORG] BX Captain droid uniform ('base')";
 		scope = 0;							// 2 = class is available in the editor; 1 = class is unavailable in the editor, but can be accessed via a macro; 0 = class is unavailable (and used for inheritance only).
 		class ItemInfo : ItemInfo
 		{
@@ -570,7 +563,7 @@ class CfgWeapons
 	//CIS B2
 	class MACRO_NEW_UNIFORM(cisb2,base) : lsd_cis_b2Droid_uniform
 	{
-		displayName = "[332nd] B2 droid uniform ('base')";
+		displayName = "[ORG] B2 droid uniform ('base')";
 		scope = 0;					
 
 		class ItemInfo : ItemInfo
@@ -726,202 +719,202 @@ class CfgSounds
 
 	
 	//Redefine Webknights Sounds to be louder
-	class B1_shooting_1_332nd
+	class B1_shooting_1_ORG
 	{
-		name = "B1_shooting_1_332nd";
+		name = "B1_shooting_1_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_1.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_shooting_2_332nd
+	class B1_shooting_2_ORG
 	{
-		name = "B1_shooting_2_332nd";
+		name = "B1_shooting_2_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_2.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_shooting_3_332nd
+	class B1_shooting_3_ORG
 	{
-		name = "B1_shooting_3_332nd";
+		name = "B1_shooting_3_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_3.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_shooting_4_332nd
+	class B1_shooting_4_ORG
 	{
-		name = "B1_shooting_4_332nd";
+		name = "B1_shooting_4_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_shooting_4.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_EnemyKilled_1_332nd
+	class B1_EnemyKilled_1_ORG
 	{
-		name = "B1_EnemyKilled_1_332nd";
+		name = "B1_EnemyKilled_1_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_1.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_EnemyKilled_2_332nd
+	class B1_EnemyKilled_2_ORG
 	{
-		name = "B1_EnemyKilled_2_332nd";
+		name = "B1_EnemyKilled_2_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_EnemyKilled_2.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_incGrenade_1_332nd
+	class B1_incGrenade_1_ORG
 	{
-		name = "B1_incGrenade_1_332nd";
+		name = "B1_incGrenade_1_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_1.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_incGrenade_2_332nd
+	class B1_incGrenade_2_ORG
 	{
-		name = "B1_incGrenade_2_332nd";
+		name = "B1_incGrenade_2_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_2.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_incGrenade_3_332nd
+	class B1_incGrenade_3_ORG
 	{
-		name = "B1_incGrenade_3_332nd";
+		name = "B1_incGrenade_3_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_3.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class B1_incGrenade_4_332nd
+	class B1_incGrenade_4_ORG
 	{
-		name = "B1_incGrenade_4_332nd";
+		name = "B1_incGrenade_4_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\B1_incGrenade_4.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_dying_332nd
+	class WBK_b2_dying_ORG
 	{
-		name = "WBK_b2_dying_332nd";
+		name = "WBK_b2_dying_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_dying_2.ogg",  10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_firing_1_332nd
+	class WBK_b2_firing_1_ORG
 	{
-		name = "WBK_b2_firing_1_332nd";
+		name = "WBK_b2_firing_1_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_1.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_firing_2_332nd
+	class WBK_b2_firing_2_ORG
 	{
-		name = "WBK_b2_firing_2_332nd";
+		name = "WBK_b2_firing_2_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_2.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_firing_3_332nd
+	class WBK_b2_firing_3_ORG
 	{
-		name = "WBK_b2_firing_3_332nd";
+		name = "WBK_b2_firing_3_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_3.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_firing_4_332nd
+	class WBK_b2_firing_4_ORG
 	{
-		name = "WBK_b2_firing_4_332nd";
+		name = "WBK_b2_firing_4_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_4.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_firing_5_332nd
+	class WBK_b2_firing_5_ORG
 	{
-		name = "WBK_b2_firing_5_332nd";
+		name = "WBK_b2_firing_5_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_firing_5.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_incGrenade_1_332nd
+	class WBK_b2_incGrenade_1_ORG
 	{
-		name = "WBK_b2_incGrenade_1_332nd";
+		name = "WBK_b2_incGrenade_1_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_1.ogg", 10, 1, 150 };
 		titles[] = {};
 	};
-	class WBK_b2_incGrenade_2_332nd
+	class WBK_b2_incGrenade_2_ORG
 	{
-		name = "WBK_b2_incGrenade_2_332nd";
+		name = "WBK_b2_incGrenade_2_ORG";
 		sound[] = { "WebKnightsRobotics\sounds\WBK_b2_incGrenade_2.ogg",  10, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyDown_1_332nd
+	class BX_EnemyDown_1_ORG
 	{
-		name = "EnemyDown_1_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_02.ogg",  db + 250, 1, 150 };
+		name = "EnemyDown_1_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyDown_02.ogg",  db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyDown_2_332nd
+	class BX_EnemyDown_2_ORG
 	{
-		name = "EnemyDown_2_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_08.ogg", db + 250, 1, 150 };
+		name = "EnemyDown_2_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyDown_08.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyDown_3_332nd
+	class BX_EnemyDown_3_ORG
 	{
-		name = "EnemyDown_3_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_09.ogg", db + 250, 1, 150 };
+		name = "EnemyDown_3_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyDown_09.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyDown_4_332nd
+	class BX_EnemyDown_4_ORG
 	{
-		name = "EnemyDown_4_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyDown_25.ogg", db + 250, 1, 150 };
+		name = "EnemyDown_4_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyDown_25.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyHit_1_332nd
+	class BX_EnemyHit_1_ORG
 	{
-		name = "EnemyDown_4_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_02.ogg",  db + 250, 1, 150 };
+		name = "EnemyDown_4_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyHit_02.ogg",  db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyHit_2_332nd
+	class BX_EnemyHit_2_ORG
 	{
-		name = "EnemyDown_4_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_03.ogg", db + 250, 1, 150 };
+		name = "EnemyDown_4_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyHit_03.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyHit_3_332nd
+	class BX_EnemyHit_3_ORG
 	{
-		name = "EnemyDown_4_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_20.ogg",  db + 250, 1, 150 };
+		name = "EnemyDown_4_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyHit_20.ogg",  db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_EnemyHit_4_332nd
+	class BX_EnemyHit_4_ORG
 	{
-		name = "EnemyDown_4_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\EnemyHit_24.ogg",  db + 250, 1, 150 };
+		name = "EnemyDown_4_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\EnemyHit_24.ogg",  db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_FriendlyDown_1_332nd
+	class BX_FriendlyDown_1_ORG
 	{
-		name = "BX_FriendlyDown_1_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_03.ogg", db + 250, 1, 150 };
+		name = "BX_FriendlyDown_1_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\FriendlyDown_03.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_FriendlyDown_2_332nd
+	class BX_FriendlyDown_2_ORG
 	{
-		name = "BX_FriendlyDown_2_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_05.ogg",  db + 250, 1, 150 };
+		name = "BX_FriendlyDown_2_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\FriendlyDown_05.ogg",  db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_FriendlyDown_3_332nd
+	class BX_FriendlyDown_3_ORG
 	{
-		name = "BX_FriendlyDown_3_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_06.ogg", db + 250, 1, 150 };
+		name = "BX_FriendlyDown_3_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\FriendlyDown_06.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_FriendlyDown_4_332nd
+	class BX_FriendlyDown_4_ORG
 	{
-		name = "BX_FriendlyDown_4_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\FriendlyDown_21.ogg",  db + 250, 1, 150 };
+		name = "BX_FriendlyDown_4_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\FriendlyDown_21.ogg",  db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_ThrowingGrenade_1_332nd
+	class BX_ThrowingGrenade_1_ORG
 	{
-		name = "BX_ThrowingGrenade_1_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_03.ogg", db + 250, 1, 150 };
+		name = "BX_ThrowingGrenade_1_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\ThrowingGrenade_03.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_ThrowingGrenade_2_332nd
+	class BX_ThrowingGrenade_2_ORG
 	{
-		name = "BX_ThrowingGrenade_2_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_05.ogg", db + 250, 1, 150 };
+		name = "BX_ThrowingGrenade_2_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\ThrowingGrenade_05.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
-	class BX_ThrowingGrenade_3_332nd
+	class BX_ThrowingGrenade_3_ORG
 	{
-		name = "BX_ThrowingGrenade_3_332nd";
-		sound[] = { "\332nd_units\opfor\VoiceSounds\ThrowingGrenade_06.ogg", db + 250, 1, 150 };
+		name = "BX_ThrowingGrenade_3_ORG";
+		sound[] = { "\ORG_units\opfor\VoiceSounds\ThrowingGrenade_06.ogg", db + 250, 1, 150 };
 		titles[] = {};
 	};
 };
@@ -933,16 +926,16 @@ class CfgFunctions
 		{
 			class SetCratesToCarryable
 			{
-				file = "332nd_units\fnc_carryResupplyCrates.sqf";
+				file = "ORG_units\fnc_carryResupplyCrates.sqf";
 			};
 		};
 	};
 
-	class Aux332nd
+	class AuxORG
 	{
 		class DeathSounds
 		{
-			file = "\332nd_units\opfor";
+			file = "\ORG_units\opfor";
 			class Killed
 			{
 			};
@@ -959,7 +952,7 @@ class CfgFunctions
 
 		class FiredSounds
 		{
-			file = "\332nd_units\opfor";
+			file = "\ORG_units\opfor";
 			class Fired_B2
 			{
 			};
@@ -969,13 +962,13 @@ class CfgFunctions
 		{
 			class Jumppack
 			{
-				file = "\332nd_units\opfor\fn_Jumppack.sqf";
+				file = "\ORG_units\opfor\fn_Jumppack.sqf";
 			};
 		};
 
 		class Droideka
 		{
-			file = "\332nd_units\opfor";
+			file = "\ORG_units\opfor";
 			class initDroideka_Move
 			{
 			};
@@ -998,7 +991,7 @@ class CfgFunctions
 
 		class Inits
 		{
-			file = "\332nd_units\opfor";
+			file = "\ORG_units\opfor";
 			class init_B1
 			{
 			};
@@ -1012,7 +1005,7 @@ class CfgFunctions
 
 		class MuzSwap
 		{
-			file = "\332nd_units";
+			file = "\ORG_units";
 			class init_MuzSwap
 			{
 			};
@@ -1028,16 +1021,16 @@ class CfgVehicles
 	class JLTS_Ammobox_weapons_GAR;
 	class JLTS_Ammobox_grenades_GAR;
 
-	class EmptyBox_332nd : JLTS_Ammobox_weapons_GAR
+	class EmptyBox_ORG : JLTS_Ammobox_weapons_GAR
 	{
 		author = MACRO_AUTHOR;
 		scope = 2;
 		scopeCurator = 2;
-		displayName = "[332nd] Empty Ammo Box";
+		displayName = "[ORG] Empty Ammo Box";
 		maximumLoad = 5000;
 
-		editorCategory = "EdCat_332nd_Props";
-		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
+		editorCategory = "EdCat_ORG_Props";
+		editorSubcategory = "EdSubcat_ORG_RESUPPLY";
 
 		class TransportWeapons
 		{
@@ -1045,161 +1038,161 @@ class CfgVehicles
 		};
 	};
 
-	class MedicalBox_332nd : JLTS_Ammobox_support_GAR
+	class MedicalBox_ORG : JLTS_Ammobox_support_GAR
 	{
 		author = MACRO_AUTHOR;
 		scope = 2;
 		scopeCurator = 2;
-		displayName = "[332nd] Medical Resupply Box";
+		displayName = "[ORG] Medical Resupply Box";
 		maximumLoad = 5000;
 
-		editorCategory = "EdCat_332nd_Props";
-		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
+		editorCategory = "EdCat_ORG_Props";
+		editorSubcategory = "EdSubcat_ORG_RESUPPLY";
 
 		class TransportItems
 		{
 			
-			class BactaSprayx25_332nd
+			class BactaSprayx25_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray_x25";
+				name = "ORG_aux_medical_BactaSpray_x25";
 				count = 4;
 			};
 
-			class PlastiBandagex25_332nd
+			class PlastiBandagex25_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage_x25";
+				name = "ORG_aux_medical_PlastiBandage_x25";
 				count = 4;
 			};
 
-			class MedPatchx25_332nd
+			class MedPatchx25_ORG
 			{
-				name = "332nd_aux_medical_MedPatch_x25";
+				name = "ORG_aux_medical_MedPatch_x25";
 				count = 4;
 			};
 
-			class BactaSprayx10_332nd
+			class BactaSprayx10_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray_x10";
+				name = "ORG_aux_medical_BactaSpray_x10";
 				count = 10;
 			};
 
-			class PlastiBandagex10_332nd
+			class PlastiBandagex10_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage_x10";
+				name = "ORG_aux_medical_PlastiBandage_x10";
 				count = 10;
 			};
 
-			class MedPatchx10_332nd
+			class MedPatchx10_ORG
 			{
-				name = "332nd_aux_medical_MedPatch_x10";
+				name = "ORG_aux_medical_MedPatch_x10";
 				count = 10;
 			};
 
-			class BactaSprayx5_332nd
+			class BactaSprayx5_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray_x5";
+				name = "ORG_aux_medical_BactaSpray_x5";
 				count = 10;
 			};
 
-			class PlastiBandagex5_332nd
+			class PlastiBandagex5_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage_x5";
+				name = "ORG_aux_medical_PlastiBandage_x5";
 				count = 10;
 			};
 
-			class MedPatchx5_332nd
+			class MedPatchx5_ORG
 			{
-				name = "332nd_aux_medical_MedPatch_x5";
+				name = "ORG_aux_medical_MedPatch_x5";
 				count = 10;
 			};
 
-			class MediKit_332nd
+			class MediKit_ORG
 			{
-				name = "332nd_aux_medical_MediKit";
+				name = "ORG_aux_medical_MediKit";
 				count = 10;
 			};
 
-			class BactaSpray_332nd
+			class BactaSpray_ORG
 			{
-				name = "332nd_aux_medical_BactaSpray";
+				name = "ORG_aux_medical_BactaSpray";
 				count = 50;
 			};
 
-			class PlastiBandage_332nd
+			class PlastiBandage_ORG
 			{
-				name = "332nd_aux_medical_PlastiBandage";
+				name = "ORG_aux_medical_PlastiBandage";
 				count = 50;
 			};
 
-			class MedPatch_332nd
+			class MedPatch_ORG
 			{
-				name = "332nd_aux_medical_MedPatch";
+				name = "ORG_aux_medical_MedPatch";
 				count = 50;
 			};
 
-			class Painkillers_332nd
+			class Painkillers_ORG
 			{
-				name = "332nd_aux_medical_PainKiller";
+				name = "ORG_aux_medical_PainKiller";
 				count = 40;
 			};
 
-			class Adrenaline_332nd
+			class Adrenaline_ORG
 			{
-				name = "332nd_aux_medical_Adrenaline";
+				name = "ORG_aux_medical_Adrenaline";
 				count = 40;
 			};
 
-			class CombatStim_332nd
+			class CombatStim_ORG
 			{
-				name = "332nd_aux_medical_Combat";
+				name = "ORG_aux_medical_Combat";
 				count = 40;
 			};
 
-			class Blood_332nd
+			class Blood_ORG
 			{
-				name = "332nd_aux_medical_Blood";
+				name = "ORG_aux_medical_Blood";
 				count = 75;
 			};
 
-			class Bacta_332nd
+			class Bacta_ORG
 			{
-				name = "332nd_aux_medical_Bacta";
+				name = "ORG_aux_medical_Bacta";
 				count = 25;
 			};
 
-			class Kolto_332nd
+			class Kolto_ORG
 			{
-				name = "332nd_aux_medical_Kolto";
+				name = "ORG_aux_medical_Kolto";
 				count = 25;
 			};
 
-			class BactaInj_332nd
+			class BactaInj_ORG
 			{
-				name = "332nd_aux_medical_Bacta_Inj";
+				name = "ORG_aux_medical_Bacta_Inj";
 				count = 25;
 			};
 
-			class KoltoInj_332nd
+			class KoltoInj_ORG
 			{
-				name = "332nd_aux_medical_Kolto_Inj";
+				name = "ORG_aux_medical_Kolto_Inj";
 				count = 25;
 			};
 
-			class DefibStrips_332nd
+			class DefibStrips_ORG
 			{
-				name = "332nd_aux_medical_AdhesiveDefibStrip";
+				name = "ORG_aux_medical_AdhesiveDefibStrip";
 				count = 100;
 			};
 
-			class PressureCuff_332nd
+			class PressureCuff_ORG
 			{
-				name = "332nd_aux_medical_PressureCuff";
+				name = "ORG_aux_medical_PressureCuff";
 				count = 30;
 			};
 
-			class Geltab_332nd
+			class Geltab_ORG
 			{
-				name = "332nd_aux_medical_Geltabs";
+				name = "ORG_aux_medical_Geltabs";
 				count = 5;
 			};
 		};
@@ -1212,27 +1205,27 @@ class CfgVehicles
 		class TransportMagazines 
 		{
 
-			class Dm17HeartStarter_332nd
+			class Dm17HeartStarter_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_HeartStarter_x1";
+				magazine = "ORG_aux_magazine_DM_17_HeartStarter_x1";
 				count = 50;
 			};
 
-			class Dm17Bacta_332nd
+			class Dm17Bacta_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_Bacta_x1";
+				magazine = "ORG_aux_magazine_DM_17_Bacta_x1";
 				count = 25;
 			};
 
-			class Dm17Kolto_332nd
+			class Dm17Kolto_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_Kolto_x1";
+				magazine = "ORG_aux_magazine_DM_17_Kolto_x1";
 				count = 25;
 			};
 			
-			class Dm17CombatStim_332nd
+			class Dm17CombatStim_ORG
 			{
-				magazine = "332nd_aux_magazine_DM_17_CombatStim_x1";
+				magazine = "ORG_aux_magazine_DM_17_CombatStim_x1";
 				count = 50;
 			};
 		};
@@ -1243,410 +1236,410 @@ class CfgVehicles
 		};
 	};
 
-	class AmmoBox_332nd : JLTS_Ammobox_weapons_GAR
+	class AmmoBox_ORG : JLTS_Ammobox_weapons_GAR
 	{
 		author = MACRO_AUTHOR;
 		scope = 2;
 		scopeCurator = 2;
-		displayName = "[332nd] Ammo Resupply Box";
+		displayName = "[ORG] Ammo Resupply Box";
 		maximumLoad = 5000;
 
-		editorCategory = "EdCat_332nd_Props";
-		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
+		editorCategory = "EdCat_ORG_Props";
+		editorSubcategory = "EdSubcat_ORG_RESUPPLY";
 
 
 		class TransportWeapons
 		{
-			class DC15A_Weps_332nd
+			class DC15A_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15a";
+				weapon = "ORG_aux_weapon_DC_15a";
 				count = 10;
 			};
 
-			class DC15S_Weps_332nd
+			class DC15S_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15s";
+				weapon = "ORG_aux_weapon_DC_15s";
 				count = 10;
 			};
 
-			class DC15C_Weps_332nd
+			class DC15C_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15c";
+				weapon = "ORG_aux_weapon_DC_15c";
 				count = 10;
 			};
 
-			class DP23_Weps_332nd
+			class DP23_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DP_23";
+				weapon = "ORG_aux_weapon_DP_23";
 				count = 10;
 			};
 
-			class DW32S_Weps_332nd
+			class DW32S_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DW_32S";
+				weapon = "ORG_aux_weapon_DW_32S";
 				count = 10;
 			};
 
-			class Valken38x_Weps_332nd
+			class Valken38x_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_Valken38x";
+				weapon = "ORG_aux_weapon_Valken38x";
 				count = 10;
 			};
 
-			class Z6_Weps_332nd
+			class Z6_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_Z6";
+				weapon = "ORG_aux_weapon_Z6";
 				count = 10;
 			};
 
-			class DC15B_Weps_332nd
+			class DC15B_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_DC_15b";
+				weapon = "ORG_aux_weapon_DC_15b";
 				count = 10;
 			};
 
-			class RPS1_Weps_332nd
+			class RPS1_Weps_ORG
 			{
-				weapon = "332nd_aux_weapon_RPS_1";
+				weapon = "ORG_aux_weapon_RPS_1";
 				count = 5;
 			};
 		};
 
 		class TransportMagazines
 		{
-			class DC15A_low_332nd
+			class DC15A_low_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15a_Low_x60";
+				magazine = "ORG_aux_magazine_DC_15a_Low_x60";
 				count = 300;
 			};
 
-			class DC15A_medium_332nd
+			class DC15A_medium_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15a_Medium_x30";
+				magazine = "ORG_aux_magazine_DC_15a_Medium_x30";
 				count = 300;
 			};
 
-			class DC15A_High_332nd
+			class DC15A_High_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15a_High_x10";
+				magazine = "ORG_aux_magazine_DC_15a_High_x10";
 				count = 50;
 			};
 
-			class 332_Stun_332nd
+			class ORG_Stun_ORG
 			{
-				magazine = "332nd_aux_magazine_Stun_x10";
+				magazine = "ORG_aux_magazine_Stun_x10";
 				count = 100;
 			};
 
-			class DC15A_UGLAP_332nd
+			class DC15A_UGLAP_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_AP_x2";
+				magazine = "ORG_aux_magazine_DC_15_UGL_AP_x2";
 				count = 50;
 			};
 
-			class DC15A_UGLHE_332nd
+			class DC15A_UGLHE_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15_UGL_HE_x4";
+				magazine = "ORG_aux_magazine_DC_15_UGL_HE_x4";
 				count = 50;
 			};
 
-			class DC15s_332nd
+			class DC15s_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15s_x60";
+				magazine = "ORG_aux_magazine_DC_15s_x60";
 				count = 300;
 			};
 
-			class DC15c_332nd
+			class DC15c_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15c_Medium_x45";
+				magazine = "ORG_aux_magazine_DC_15c_Medium_x45";
 				count = 300;
 			};
 
-			class DC15b_332nd
+			class DC15b_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15b_x60";
+				magazine = "ORG_aux_magazine_DC_15b_x60";
 				count = 200;
 			};
 
-			class DC17_332nd
+			class DC17_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17_x15";
+				magazine = "ORG_aux_magazine_DC_17_x15";
 				count = 50;
 			};
 
-			class SA35_332nd
+			class SA35_ORG
 			{
-				magazine = "332nd_aux_magazine_35sa_low_x30";
+				magazine = "ORG_aux_magazine_35sa_low_x30";
 				count = 50;
 			};
 
-			class DC15L_332nd
+			class DC15L_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15L_x200";
+				magazine = "ORG_aux_magazine_DC_15L_x200";
 				count = 100;
 			};
 
-			class DC15L_T_332nd
+			class DC15L_T_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15L_T_x200";
+				magazine = "ORG_aux_magazine_DC_15L_T_x200";
 				count = 100;
 			};
 
-			class DC17M_Rifle_332nd
+			class DC17M_Rifle_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17m_rifle_x42";
+				magazine = "ORG_aux_magazine_DC_17m_rifle_x42";
 				count = 300;
 			};
 
-			class DC17M_Marks_332nd
+			class DC17M_Marks_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17m_marks_x10";
+				magazine = "ORG_aux_magazine_DC_17m_marks_x10";
 				count = 300;
 			};
 
-			class DC17M_Grend_332nd
+			class DC17M_Grend_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_17m_grend_x1";
+				magazine = "ORG_aux_magazine_DC_17m_grend_x1";
 				count = 50;
 			};
 
-			class DC_44h_332nd
+			class DC_44h_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_44h_x6";
+				magazine = "ORG_aux_magazine_DC_44h_x6";
 				count = 300;
 			};
 
-			class DC_15k_332nd
+			class DC_15k_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15k_x15";
+				magazine = "ORG_aux_magazine_DC_15k_x15";
 				count = 300;
 			};
 
-			class MPS_HE_332nd
+			class MPS_HE_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_HE_x1";
+				magazine = "ORG_aux_magazine_MPS_HE_x1";
 				count = 15;
 			};
 
-			class MPS_Smoke_332nd
+			class MPS_Smoke_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_Smoke_x1";
+				magazine = "ORG_aux_magazine_MPS_Smoke_x1";
 				count = 15;
 			};
 
-			class MPS_Smoke_Red_332nd
+			class MPS_Smoke_Red_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_Smoke_Red_x1";
+				magazine = "ORG_aux_magazine_MPS_Smoke_Red_x1";
 				count = 15;
 			};
 
-			class MPS_Flare_332nd
+			class MPS_Flare_ORG
 			{
-				magazine = "332nd_aux_magazine_MPS_Flare_x1";
+				magazine = "ORG_aux_magazine_MPS_Flare_x1";
 				count = 15;
 			};
 
-			class DP_23_332nd
+			class DP_23_ORG
 			{
-				magazine = "332nd_aux_magazine_DP23_x12";
+				magazine = "ORG_aux_magazine_DP23_x12";
 				count = 100;
 			};
 
-			class DP_23Wide_332nd
+			class DP_23Wide_ORG
 			{
-				magazine = "332nd_aux_magazine_DP23_x12Wide";
+				magazine = "ORG_aux_magazine_DP23_x12Wide";
 				count = 100;
 			};
 			
-			class DW_32_HIGH_332nd
+			class DW_32_HIGH_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_High_x5";
+				magazine = "ORG_aux_magazine_DW32_High_x5";
 				count = 50;
 			};
 
-			class DW_32_HIGH_T_332nd
+			class DW_32_HIGH_T_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_High_T_x5";
+				magazine = "ORG_aux_magazine_DW32_High_T_x5";
 				count = 50;
 			};
 			
-			class DW_32_CONCMED_332nd
+			class DW_32_CONCMED_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_Med_x20";
+				magazine = "ORG_aux_magazine_DW32_Med_x20";
 				count = 100;
 			};
 
-			class DW_32_CONCMED_T_332nd
+			class DW_32_CONCMED_T_ORG
 			{
-				magazine = "332nd_aux_magazine_DW32_Med_T_x20";
+				magazine = "ORG_aux_magazine_DW32_Med_T_x20";
 				count = 100;
 			};
 
-			class Valken_38x_REFMED_332nd
+			class Valken_38x_REFMED_ORG
 			{
-				magazine = "332nd_aux_magazine_Valken38x_x15";
+				magazine = "ORG_aux_magazine_Valken38x_x15";
 				count = 100;
 			};
 
-			class Valken_38x_REFMED_T_332nd
+			class Valken_38x_REFMED_T_ORG
 			{
-				magazine = "332nd_aux_magazine_Valken38x_T_x15";
+				magazine = "ORG_aux_magazine_Valken38x_T_x15";
 				count = 100;
 			};
 			 
-			class Firepuncher_high_T_332nd
+			class Firepuncher_high_T_ORG
 			{
-				magazine = "332nd_aux_magazine_Firepuncher_T_x8";
+				magazine = "ORG_aux_magazine_Firepuncher_T_x8";
 				count = 100;
 			};
 
-			class Firepuncher_high_332nd
+			class Firepuncher_high_ORG
 			{
-				magazine = "332nd_aux_magazine_Firepuncher_x8";
+				magazine = "ORG_aux_magazine_Firepuncher_x8";
 				count = 100;
 			};
 			
 			class Westar_m5_40rnd
 			{
-				magazine = "332nd_aux_magazine_Westar_M5_x40";
+				magazine = "ORG_aux_magazine_Westar_M5_x40";
 				count = 300;
 			};
 
-			class Z6_332nd
+			class Z6_ORG
 			{
-				magazine = "332nd_aux_magazine_Z6_x200";
+				magazine = "ORG_aux_magazine_Z6_x200";
 				count = 200;
 			};
 
-			class Z6_Super_332nd
+			class Z6_Super_ORG
             {
-                magazine = "332nd_aux_magazine_Z6_Supercharge_x1";
+                magazine = "ORG_aux_magazine_Z6_Supercharge_x1";
                 count = 250;
             };
 
-			class Z6_ALT_332nd
+			class Z6_ALT_ORG
 			{
-				magazine = "332nd_aux_magazine_Z6_x125";
+				magazine = "ORG_aux_magazine_Z6_x125";
 				count = 200;
 			};
 
-			class Flash_332nd
+			class Flash_ORG
 			{
-				magazine = "332nd_aux_magazine_332_FLASH_x1";
+				magazine = "ORG_aux_magazine_ORG_FLASH_x1";
 				count = 30;
 			};
 
-			class ATCharge_332nd
+			class ATCharge_ORG
 			{
-				magazine = "332nd_aux_magazine_332_INCENDIARY_x1";
+				magazine = "ORG_aux_magazine_ORG_INCENDIARY_x1";
 				count = 30;
 			};
 
-			class HEDPImpact_332nd
+			class HEDPImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_HEDP_x1";
+				magazine = "ORG_aux_magazine_ORG_HEDP_x1";
 				count = 30;
 			};
 
-			class WhiteImpact_332nd
+			class WhiteImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_WHITE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_WHITE_x1";
 				count = 30;
 			};
 
-			class BlueImpact_332nd
+			class BlueImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_BLUE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_BLUE_x1";
 				count = 30;
 			};
 
-			class GreenImpact_332nd
+			class GreenImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_GREEN_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_GREEN_x1";
 				count = 30;
 			};
 
-			class RedImpact_332nd
+			class RedImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_RED_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_RED_x1";
 				count = 30;
 			};
 
-			class PurpleImpact_332nd
+			class PurpleImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_PURPLE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_PURPLE_x1";
 				count = 30;
 			};
 
-			class YellowImpact_332nd
+			class YellowImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_YELLOW_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_YELLOW_x1";
 				count = 30;
 			};
 
-			class OrangeImpact_332nd
+			class OrangeImpact_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SMOKE_IMPACT_ORANGE_x1";
+				magazine = "ORG_aux_magazine_ORG_SMOKE_IMPACT_ORANGE_x1";
 				count = 30;
 			};
 
-			class SquadShield_332nd
+			class SquadShield_ORG
 			{
-				magazine = "332nd_aux_magazine_332_SquadShield_x1";
+				magazine = "ORG_aux_magazine_ORG_SquadShield_x1";
 				count = 5;
 			};
 
-			class ThermalDet_332nd
+			class ThermalDet_ORG
 			{
-				magazine = "332nd_aux_magazine_332_FRAG_x1";
+				magazine = "ORG_aux_magazine_ORG_FRAG_x1";
 				count = 30;
 			};
 
-			class PLXAA_332nd
+			class PLXAA_ORG
 			{
-				magazine = "332nd_aux_magazine_PLX1_AAMag_x2";
+				magazine = "ORG_aux_magazine_PLX1_AAMag_x2";
 				count = 10;
 			};
 
-			class PLXAT_332nd
+			class PLXAT_ORG
 			{
-				magazine = "332nd_aux_magazine_PLX1_ATMag_x2";
+				magazine = "ORG_aux_magazine_PLX1_ATMag_x2";
 				count = 10;
 			};
 
-			class PLXHE_332nd
+			class PLXHE_ORG
 			{
-				magazine = "332nd_aux_magazine_PLX1_HEMag_x2";
+				magazine = "ORG_aux_magazine_PLX1_HEMag_x2";
 				count = 10;
 			};
 
-			class RPS6AT_332nd
+			class RPS6AT_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS6_ATMag_x1";
+				magazine = "ORG_aux_magazine_RPS6_ATMag_x1";
 				count = 20;
 			};
 
-			class RPS6AA_332nd
+			class RPS6AA_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS6_AAMag_x1";
+				magazine = "ORG_aux_magazine_RPS6_AAMag_x1";
 				count = 20;
 			};
 
-			class RPS4AT_332nd
+			class RPS4AT_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS4_AT_x1";
+				magazine = "ORG_aux_magazine_RPS4_AT_x1";
 				count = 20;
 			};
 
-			class RPS4HE_332nd
+			class RPS4HE_ORG
 			{
-				magazine = "332nd_aux_magazine_RPS4_HE_x1";
+				magazine = "ORG_aux_magazine_RPS4_HE_x1";
 				count = 20;
 			};
 
-			class DC15xATR_332nd
+			class DC15xATR_ORG
 			{
-				magazine = "332nd_aux_magazine_DC_15x_x2";
+				magazine = "ORG_aux_magazine_DC_15x_x2";
 				count = 20;
 			};
 		};
@@ -1657,16 +1650,16 @@ class CfgVehicles
 		};
 	};
 
-	class VehicleBox_332nd : JLTS_Ammobox_grenades_GAR
+	class VehicleBox_ORG : JLTS_Ammobox_grenades_GAR
 	{
 		author = MACRO_AUTHOR;
 		scope = 2;
 		scopeCurator = 2;
-		displayName = "[332nd] Vehicle Resupply Box";
+		displayName = "[ORG] Vehicle Resupply Box";
 		maximumLoad = 5000;
 
-		editorCategory = "EdCat_332nd_Props";
-		editorSubcategory = "EdSubcat_332nd_RESUPPLY";
+		editorCategory = "EdCat_ORG_Props";
+		editorSubcategory = "EdSubcat_ORG_RESUPPLY";
 
 		ace_cargo_size = 5;
 
@@ -1708,32 +1701,32 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone Base";
+		displayName = "[ORG] Clone Base";
 
 		uniformClass = MACRO_NEW_UNIFORM(recruit,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
-		linkedItems[] = {"332nd_aux_infantry_helmet_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
-		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_recruit","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = {"ORG_aux_infantry_helmet_recruit","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG"};
+		respawnLinkedItems[] = {"ORG_aux_infantry_helmet_recruit","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -1777,32 +1770,32 @@ class CfgVehicles
     {
         author = MACRO_AUTHOR;
         scope = 0;
-        displayName = "[332nd] Clone Base";
+        displayName = "[ORG] Clone Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
         uniformClass = MACRO_NEW_UNIFORM(infantry,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-        linkedItems[] = {"332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
-		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG"};
-		weapons[] = {"332nd_aux_weapon_DC_15a","Throw","Put"};
-		respawnWeapons[] = {"332nd_aux_weapon_DC_15a","Throw","Put"};
+        linkedItems[] = {"ORG_aux_infantry_helmet_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG"};
+		respawnLinkedItems[] = {"ORG_aux_infantry_helmet_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG"};
+		weapons[] = {"ORG_aux_weapon_DC_15a","Throw","Put"};
+		respawnWeapons[] = {"ORG_aux_weapon_DC_15a","Throw","Put"};
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -1846,35 +1839,35 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Airborne Clone Base";
+		displayName = "[ORG] Airborne Clone Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(airborne,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		items[] =
 		{
@@ -1916,34 +1909,34 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone ARF Base";
+		displayName = "[ORG] Clone ARF Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(arfbase,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
 		camouflage = 0.6;
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -1986,34 +1979,34 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone ARF Desert Base";
+		displayName = "[ORG] Clone ARF Desert Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(arfdes,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
 		camouflage = 0.6;
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2056,34 +2049,34 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone ARF Jungle Base";
+		displayName = "[ORG] Clone ARF Jungle Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(arfjung,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
 		camouflage = 0.6;
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2126,34 +2119,34 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone ARF Snow Base";
+		displayName = "[ORG] Clone ARF Snow Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(arfsnow,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
 		camouflage = 0.6;
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2196,34 +2189,34 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone ARF Urban Base";
+		displayName = "[ORG] Clone ARF Urban Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(arfurb,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
 		camouflage = 0.6;
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2266,34 +2259,34 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone ARF Woodland Base";
+		displayName = "[ORG] Clone ARF Woodland Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(arfwood,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
 		camouflage = 0.6;
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2336,32 +2329,32 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone Mechanized Base";
+		displayName = "[ORG] Clone Mechanized Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(mech,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2402,50 +2395,50 @@ class CfgVehicles
 
 	class MACRO_NEW_UNIT(rto,base) : MACRO_NEW_UNIT(infantry,base)
 	{
-		displayName = "[332nd] Clone RTO Base";
+		displayName = "[ORG] Clone RTO Base";
 
 		uniformClass = MACRO_NEW_UNIFORM(rto, base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		backpack = "332nd_aux_blufor_backpack_332nd_RTO_base";
+		backpack = "ORG_aux_blufor_backpack_ORG_RTO_base";
 	};
 
 	class MACRO_NEW_UNIT(medic,base) : MACRO_NEW_UNIT(infantry,base)
 	{
-		displayName = "[332nd] Clone Medic Base";
+		displayName = "[ORG] Clone Medic Base";
 
 		uniformClass = MACRO_NEW_UNIFORM(medic, base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		backpack = "332nd_aux_blufor_backpack_332nd_medic";
+		backpack = "ORG_aux_blufor_backpack_ORG_medic";
 	};
 
 	class MACRO_NEW_UNIT(aviation,base): lsd_gar_phase2_base
     {
         author = MACRO_AUTHOR;
         scope = 0;
-        displayName = "[332nd] Clone Aviation Base";
+        displayName = "[ORG] Clone Aviation Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
         uniformClass = MACRO_NEW_UNIFORM(aviation,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-		linkedItems[] = {"332nd_aux_seniorensign_vest_332nd_FlightSeniorEnsign_Vest", "332nd_aux_aviation_helmet_332nd_pilot","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
-		respawnLinkedItems[] = { "332nd_aux_seniorensign_vest_332nd_FlightSeniorEnsign_Vest", "332nd_aux_aviation_helmet_332nd_pilot","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
-		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		linkedItems[] = {"ORG_aux_seniorensign_vest_ORG_FlightSeniorEnsign_Vest", "ORG_aux_aviation_helmet_ORG_pilot","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
+		respawnLinkedItems[] = { "ORG_aux_seniorensign_vest_ORG_FlightSeniorEnsign_Vest", "ORG_aux_aviation_helmet_ORG_pilot","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch"};
+		weapons[] = { "ORG_aux_weapon_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15s","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_Pilot_Pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_Pilot_Pack";
 		magazines[] =
 		{
-			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_15(ORG_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_15(ORG_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2488,28 +2481,28 @@ class CfgVehicles
     {
         author = MACRO_AUTHOR;
         scope = 0;
-        displayName = "[332nd] Clone Warrant Officer Base";
+        displayName = "[ORG] Clone Warrant Officer Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
         uniformClass = MACRO_NEW_UNIFORM(cwo,base);
         hiddenSelections[] = {"camo1","camo2","insignia"};
        
-		linkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_infantry_vest_332nd_officer","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = {"332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_infantry_vest_332nd_officer","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15s","Throw","Put" };
+		linkedItems[] = {"ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_infantry_vest_ORG_officer","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = {"ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_infantry_vest_ORG_officer","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15s","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15s","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_Leadership";
+		backpack = "ORG_aux_blufor_backpack_ORG_Leadership";
 		magazines[] =
 		{
-			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_15(ORG_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long)
 		};
 		respawnMagazines[] =
 		{
-			mag_15(332nd_aux_magazine_DC_15s_x60),
+			mag_15(ORG_aux_magazine_DC_15s_x60),
 			mag_2(JLTS_stun_mag_long)
 		};
 		items[] =
@@ -2549,35 +2542,35 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone Scenario Base";
+		displayName = "[ORG] Clone Scenario Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(scenario,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		items[] =
 		{
@@ -2616,35 +2609,35 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Clone Captain Base";
+		displayName = "[ORG] Clone Captain Base";
 		model="\MRC\JLTS\characters\CloneArmor\CloneArmorMC.p3d";
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(captain,base);
 		hiddenSelections[] = { "camo1","camo2","insignia" };
 
-		linkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		respawnLinkedItems[] = { "332nd_aux_infantry_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","332nd_aux_nvg_Trooper_NVG" };
-		weapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_15a","Throw","Put" };
+		linkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		respawnLinkedItems[] = { "ORG_aux_infantry_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch","ORG_aux_nvg_Trooper_NVG" };
+		weapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_15a","Throw","Put" };
 		nakedUniform = "U_BasicBody";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_15a_Low_x60),
-			mag_5(332nd_aux_magazine_DC_15a_Medium_x30),
-			mag_2(332nd_aux_magazine_DC_15a_High_x10),
+			mag_8(ORG_aux_magazine_DC_15a_Low_x60),
+			mag_5(ORG_aux_magazine_DC_15a_Medium_x30),
+			mag_2(ORG_aux_magazine_DC_15a_High_x10),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		items[] =
 		{
@@ -2683,30 +2676,30 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Assault Clone Base";
+		displayName = "[ORG] Assault Clone Base";
 
-		faction = "EdCat_332nd";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 
 		uniformClass = MACRO_NEW_UNIFORM(assault,base);
 
-		linkedItems[] = { "332nd_aux_assault_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch" };
-		respawnLinkedItems[] = { "332nd_aux_assault_helmet_332nd_trooper","332nd_aux_trooper_vest_332nd_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch" };
-		weapons[] = { "332nd_aux_weapon_DC_17m","Throw","Put" };
-		respawnWeapons[] = { "332nd_aux_weapon_DC_17m","Throw","Put" };
+		linkedItems[] = { "ORG_aux_assault_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch" };
+		respawnLinkedItems[] = { "ORG_aux_assault_helmet_ORG_trooper","ORG_aux_trooper_vest_ORG_trooper_belt","ItemMap","JLTS_clone_comlink","ItemCompass","ItemWatch" };
+		weapons[] = { "ORG_aux_weapon_DC_17m","Throw","Put" };
+		respawnWeapons[] = { "ORG_aux_weapon_DC_17m","Throw","Put" };
 		nakedUniform = "JLTS_CloneNaked_uniform";
-		backpack = "332nd_aux_blufor_backpack_332nd_rifleman_pack";
+		backpack = "ORG_aux_blufor_backpack_ORG_rifleman_pack";
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_17m_rifle_x42),
+			mag_8(ORG_aux_magazine_DC_17m_rifle_x42),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_DC_17m_rifle_x42),
+			mag_8(ORG_aux_magazine_DC_17m_rifle_x42),
 			mag_2(JLTS_stun_mag_long),
-			mag_2(332nd_aux_magazine_332_FRAG_x1)
+			mag_2(ORG_aux_magazine_ORG_FRAG_x1)
 		};
 		items[] =
 		{
@@ -2844,10 +2837,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Battle Droid Base";
+		displayName = "[ORG] B1 Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -2857,14 +2850,14 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -2950,10 +2943,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Jumppack Battle Droid Base";
+		displayName = "[ORG] B1 Jumppack Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1jumppack,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -2963,14 +2956,14 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -2980,7 +2973,7 @@ class CfgVehicles
 
 		class Eventhandlers
 		{
-			init = "[_this] spawn Aux332nd_fnc_Jumppack";
+			init = "[_this] spawn AuxORG_fnc_Jumppack";
 		};
 
 		impactEffectsBlood = "ImpactMetal";
@@ -3061,10 +3054,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Breacher Battle Droid Base";
+		displayName = "[ORG] B1 Breacher Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -3073,7 +3066,7 @@ class CfgVehicles
 		{
 			mag_10(JLTS_SBB3_mag),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -3081,7 +3074,7 @@ class CfgVehicles
 		{
 			mag_10(JLTS_SBB3_mag),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -3167,10 +3160,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Support Battle Droid Base";
+		displayName = "[ORG] B1 Support Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -3180,17 +3173,17 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5cLow_x300),
+			mag_10(ORG_aux_magazine_E5cLow_x300),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5cLow_x300),
+			mag_10(ORG_aux_magazine_E5cLow_x300),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -3275,36 +3268,36 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Anti-Tank Battle Droid Base";
+		displayName = "[ORG] B1 Anti-Tank Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
 
-		backpack = MACRO_NEW_BACKPACK(opfor,332nd_b1_at_bp);
+		backpack = MACRO_NEW_BACKPACK(opfor,ORG_b1_at_bp);
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D","JLTS_RPS6","Throw","Put" };
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"JLTS_RPS6_mag",
 			"JLTS_RPS6_mag",
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"JLTS_RPS6_mag",
 			"JLTS_RPS6_mag",
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -3389,34 +3382,34 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Anti-Tank Battle Droid Base";
+		displayName = "[ORG] B1 Anti-Tank Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1, base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
 
-		backpack = MACRO_NEW_BACKPACK(opfor,332nd_b1_aa_bp);
+		backpack = MACRO_NEW_BACKPACK(opfor,ORG_b1_aa_bp);
 
 		weapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AA),"Throw","Put" };
 		respawnWeapons[] = { MACRO_NEW_WEAPON(E5_B1),"JLTS_RG4D",MACRO_NEW_WEAPON(E60R_AA),"Throw","Put" };
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_E60R_AAMag_x1",
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_E60R_AAMag_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_E60R_AAMag_x1",
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_E60R_AAMag_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -3501,10 +3494,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Sniper Battle Droid Base";
+		displayName = "[ORG] B1 Sniper Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -3514,12 +3507,12 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_10(ORG_aux_magazine_E5S_Mag_x5),
 			mag_2(JLTS_RG4D_mag),
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_10(ORG_aux_magazine_E5S_Mag_x5),
 			mag_2(JLTS_RG4D_mag),
 		};
 
@@ -3603,10 +3596,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Crew Battle Droid Base";
+		displayName = "[ORG] B1 Crew Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1crew,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -3616,14 +3609,14 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -3709,10 +3702,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Commander Battle Droid Base";
+		displayName = "[ORG] B1 Commander Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1comm,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -3722,14 +3715,14 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -3815,10 +3808,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Marine Battle Droid Base";
+		displayName = "[ORG] B1 Marine Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1marine,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -3828,17 +3821,17 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -3923,10 +3916,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Security Battle Droid Base";
+		displayName = "[ORG] B1 Security Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1sec,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -3936,17 +3929,17 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -4031,10 +4024,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] B1 Pilot Battle Droid Base";
+		displayName = "[ORG] B1 Pilot Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_B1";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_B1";
 		uniformClass = MACRO_NEW_UNIFORM(cisb1pilot,base);
 
 		identityTypes[] = { "lsd_voice_b1Droid" };
@@ -4044,14 +4037,14 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -4139,10 +4132,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Battle Droid Base";
+		displayName = "[ORG] BX Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
@@ -4152,11 +4145,11 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 
 		BX_Hitpoints
@@ -4239,10 +4232,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Support Battle Droid Base";
+		displayName = "[ORG] BX Support Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
@@ -4252,17 +4245,17 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5cLow_x300),
+			mag_10(ORG_aux_magazine_E5cLow_x300),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5cLow_x300),
+			mag_10(ORG_aux_magazine_E5cLow_x300),
 			mag_2(JLTS_RG4D_mag),
-			"332nd_aux_magazine_332_FRAG_x1",
+			"ORG_aux_magazine_ORG_FRAG_x1",
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
@@ -4347,10 +4340,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Anti-Tank Battle Droid Base";
+		displayName = "[ORG] BX Anti-Tank Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		backpack = "JLTS_B1_backpack_at_predef";
 
@@ -4361,13 +4354,13 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 			"JLTS_RPS6_mag",
 			"JLTS_RPS6_mag"
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 			"JLTS_RPS6_mag",
 			"JLTS_RPS6_mag"
 		};
@@ -4452,10 +4445,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Breacher Battle Droid Base";
+		displayName = "[ORG] BX Breacher Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
@@ -4552,10 +4545,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Captain Battle Droid Base";
+		displayName = "[ORG] BX Captain Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,base);
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
@@ -4565,11 +4558,11 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 
 		BX_Hitpoints
@@ -4652,10 +4645,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Security Battle Droid Base";
+		displayName = "[ORG] BX Security Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxsec,base);
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
@@ -4665,11 +4658,11 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 
 		BX_Hitpoints
@@ -4752,10 +4745,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Security Battle Droid Base";
+		displayName = "[ORG] BX Security Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxdiplo,base);
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
@@ -4765,11 +4758,11 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 		};
 
 		BX_Hitpoints
@@ -4852,10 +4845,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Assassin Battle Droid Base";
+		displayName = "[ORG] BX Assassin Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 
 		identityTypes[] = { "LanguageENG_F","Head_NATO" };
@@ -4865,12 +4858,12 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_10(ORG_aux_magazine_E5S_Mag_x5),
 			mag_2(JLTS_RG4D_mag),
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5S_Mag_x5),
+			mag_10(ORG_aux_magazine_E5S_Mag_x5),
 			mag_2(JLTS_RG4D_mag),
 		};
 
@@ -4954,10 +4947,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Melee Battle Droid Base";
+		displayName = "[ORG] BX Melee Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
@@ -5048,10 +5041,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Melee Rush Battle Droid Base";
+		displayName = "[ORG] BX Melee Rush Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
@@ -5142,10 +5135,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Melee Rush Battle Droid Base";
+		displayName = "[ORG] BX Melee Rush Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbxcapt,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
@@ -5158,12 +5151,12 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 
@@ -5247,10 +5240,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] BX Melee Rush Battle Droid Base";
+		displayName = "[ORG] BX Melee Rush Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_BX";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_BX";
 		uniformClass = MACRO_NEW_UNIFORM(cisbx,base);
 		nakedUniform = "lsd_cis_bxDroid_uniform";
 
@@ -5263,12 +5256,12 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_E5X_Mag_x51),
+			mag_8(ORG_aux_magazine_E5X_Mag_x51),
 			"WBK_Cybercrystal",
 		};
 
@@ -5354,7 +5347,7 @@ class CfgVehicles
 
 	class Droideka_Shield : Full_Shield
 	{
-		displayName = "332nd Droideka Shield";
+		displayName = "ORG Droideka Shield";
 
 		scope = 1;
 		scopecurator = 1;
@@ -5364,13 +5357,13 @@ class CfgVehicles
 		armorStructural = 1;
 
 		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_DroidekaShield;";
+			init = "[_this] spawn AuxORG_fnc_init_DroidekaShield;";
 		};
 	};
 
 	class Droideka_Sniper_Shield : Full_Shield
 	{
-		displayName = "332nd Droideka Sniper Shield";
+		displayName = "ORG Droideka Sniper Shield";
 
 		scope = 1;
 		scopecurator = 1;
@@ -5380,7 +5373,7 @@ class CfgVehicles
 		armorStructural = 1;
 
 		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_init_SniperDroidekaShield;";
+			init = "[_this] spawn AuxORG_fnc_init_SniperDroidekaShield;";
 		};
 	};
 
@@ -5417,17 +5410,17 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Droideka Base";
+		displayName = "[ORG] Droideka Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HEAVY";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HEAVY";
 
 		armor = 275;
 
 		damageEffect = "";
 
 		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_initDroideka;";
+			init = "[_this] spawn AuxORG_fnc_initDroideka;";
 		};
 
 		class Turrets : Turrets
@@ -5484,16 +5477,16 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Sniper Droideka Base";
+		displayName = "[ORG] Sniper Droideka Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HEAVY";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HEAVY";
 
 		armor = 150;
 		armorStructural = 1;
 
 		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_initSniperDroideka;";
+			init = "[_this] spawn AuxORG_fnc_initSniperDroideka;";
 		};
 
 		class HitPoints
@@ -5567,17 +5560,17 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Droideka Moveable Base";
+		displayName = "[ORG] Droideka Moveable Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HEAVY";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HEAVY";
 
 		armor = 275;
 
 		damageEffect = "";
 
 		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_initDroideka_Move;";
+			init = "[_this] spawn AuxORG_fnc_initDroideka_Move;";
 		};
 
 		class Turrets : Turrets
@@ -5634,16 +5627,16 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Sniper Droideka Moveable Base";
+		displayName = "[ORG] Sniper Droideka Moveable Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HEAVY";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HEAVY";
 
 		armor = 150;
 		armorStructural = 1;
 
 		class EventHandlers {
-			init = "[_this] spawn Aux332nd_fnc_initSniperDroideka_Move;";
+			init = "[_this] spawn AuxORG_fnc_initSniperDroideka_Move;";
 		};
 
 		class HitPoints
@@ -5717,10 +5710,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] *WIP* B2 Battle Droid Base";
+		displayName = "[ORG] *WIP* B2 Battle Droid Base";
 
-		faction = "EdCat_332ndCIS";
-		editorSubcategory = "EdSubcat_332nd_HEAVY";
+		faction = "EdCat_ORGCIS";
+		editorSubcategory = "EdSubcat_ORG_HEAVY";
 		uniformClass = MACRO_NEW_UNIFORM(cisb2,base);
 		nakedUniform = "lsd_cis_b2_standard";
 
@@ -5733,11 +5726,11 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_8(332nd_aux_magazine_B2Low_x1000),
+			mag_8(ORG_aux_magazine_B2Low_x1000),
 		};
 		respawnMagazines[] =
 		{
-			mag_8(332nd_aux_magazine_B2Low_x1000),
+			mag_8(ORG_aux_magazine_B2Low_x1000),
 		};
 
 		class HitPoints : HitPoints
@@ -5978,10 +5971,10 @@ class CfgVehicles
 	{
 		author = MACRO_AUTHOR;
 		scope = 0;
-		displayName = "[332nd] Haxion Squad Leader Base";
+		displayName = "[ORG] Haxion Squad Leader Base";
 
-		faction = "EdCat_332nd_Haxion";
-		editorSubcategory = "EdSubcat_332nd_MEN";
+		faction = "EdCat_ORG_Haxion";
+		editorSubcategory = "EdSubcat_ORG_MEN";
 		uniformClass = MACRO_NEW_UNIFORM(Haxion_SL,base);
 
 		identityTypes[] = { "ls_zabrak_male1t2_base", "Male03PER"};
@@ -5994,14 +5987,14 @@ class CfgVehicles
 
 		magazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
 		};
 		respawnMagazines[] =
 		{
-			mag_10(332nd_aux_magazine_E5Low_x50),
+			mag_10(ORG_aux_magazine_E5Low_x50),
 			mag_2(JLTS_RG4D_mag),
 			"SmokeShellGreen",
 			"SmokeShell"
@@ -6014,7 +6007,7 @@ class Extended_Reloaded_EventHandlers
 	//DM-17M
 	class CAManBase
 	{
-		Aux332nd_DC17M_MuzSwap = "if((_this select 1) == '332nd_aux_weapon_DC_17m') then{[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4] call Aux332nd_fnc_init_MuzSwap;};";
+		AuxORG_DC17M_MuzSwap = "if((_this select 1) == 'ORG_aux_weapon_DC_17m') then{[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4] call AuxORG_fnc_init_MuzSwap;};";
 	};
 };
 
@@ -6023,15 +6016,15 @@ class Extended_Killed_EventHandlers
 	//Heavy Droids
 	class MACRO_NEW_UNIT(cisdroideka,base)
 	{
-		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy;";
+		AuxORG_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call AuxORG_fnc_Killed_Heavy;";
 	};
 	class MACRO_NEW_UNIT(cisdroidekamoveable,base)
 	{
-		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy;";
+		AuxORG_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call AuxORG_fnc_Killed_Heavy;";
 	};
 	class MACRO_NEW_UNIT(cisb2,base)
 	{
-		Aux332nd_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call Aux332nd_fnc_Killed_Heavy_B2;";
+		AuxORG_DeathSound = "[_this select 0, _this select 1, _this select 2, _this select 3] call AuxORG_fnc_Killed_Heavy_B2;";
 	};
 };
 class Extended_Init_EventHandlers
@@ -6039,104 +6032,104 @@ class Extended_Init_EventHandlers
 	//B1s
 	class MACRO_NEW_UNIT(cisb1,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1jumppack,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1breach,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1ar,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1at,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1sniper,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1crew,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1comm,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1marine,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1sec,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 	class MACRO_NEW_UNIT(cisb1pilot,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B1;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B1;";
 	};
 
 
 	//BXs
 	class MACRO_NEW_UNIT(cisbx,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxcapt,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxsec,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxdiplo,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxassassin,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmelee,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxmeleerush,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxar,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxat,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxbreach,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybridcomm,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 	class MACRO_NEW_UNIT(cisbxhybrid,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_BX;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_BX;";
 	};
 
 	//Heavy Droids
 	class MACRO_NEW_UNIT(cisb2,base)
 	{
-		Aux332nd_InitSound = "[_this] spawn Aux332nd_fnc_init_B2;";
+		AuxORG_InitSound = "[_this] spawn AuxORG_fnc_init_B2;";
 	};
 };
 class Extended_Fired_EventHandlers
@@ -6144,6 +6137,6 @@ class Extended_Fired_EventHandlers
 	//Heavy Droids
 	class MACRO_NEW_UNIT(cisb2,base)
 	{
-		Aux332nd_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call Aux332nd_fnc_Fired_B2;";
+		AuxORG_FiredSound = "[_this select 0, _this select 1, _this select 2, _this select 3, _this select 4, _this select 5, _this select 6, _this select 7] call AuxORG_fnc_Fired_B2;";
 	};
 };
