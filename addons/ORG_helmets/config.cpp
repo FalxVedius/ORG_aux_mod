@@ -21,6 +21,7 @@ class CfgWeapons
 
 	class JLTS_CloneHelmetP2;
     class ls_gar_phase1_helmet;
+	class ls_gar_phase2_helmet;
 	class JLTS_CloneHelmetARC;
 
 	class CloneHelmetScenario_Base : JLTS_CloneHelmetP2
@@ -30,6 +31,12 @@ class CfgWeapons
 	};
 
 	class CloneHelmetP1_Base : ls_gar_phase1_helmet
+	{
+		scopeArsenal = 0;
+		class ItemInfo;
+	};
+
+	class CloneHelmetP2_Base : ls_gar_phase2_helmet
 	{
 		scopeArsenal = 0;
 		class ItemInfo;
@@ -64,12 +71,12 @@ class CfgWeapons
 		};
     }
 
-	class MACRO_NEW_HELMET(arc,base) : CloneHelmetARC_Base
+	class MACRO_NEW_HELMET(infantry_P2,base) : CloneHelmetP2_Base
 	{
 		scopeArsenal = 0;
 		scope = 0;
 		author = MACRO_AUTHOR;
-		displayName = "[ORG] Arc Helmet ('base')";
+		displayName = "[ORG] Infantry Helmet ('base')";
 		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
@@ -86,22 +93,58 @@ class CfgWeapons
 		};
 	}
 
-	class JLTS_CloneHelmetAB;
-
-	class CloneHelmetAB_Base : JLTS_CloneHelmetAB
+	//Base Airborne Helmet
+	class MACRO_NEW_HELMET(airborne,base) : CloneHelmetP1_Base
 	{
 		scopeArsenal = 0;
-		class ItemInfo;
-	};
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[ORG] Airborne Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
 
-	//Base airborne helmet
-	class MACRO_NEW_HELMET(airborne,base): CloneHelmetAB_Base
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
+	}
+
+	class MACRO_NEW_HELMET(airborne_P2,base) : CloneHelmetP2_Base
 	{
 		scopeArsenal = 0;
-        scope = 0;
-        author = MACRO_AUTHOR;
-        displayName = "[ORG] Airborne Helmet ('base')";
-        subItems[] = {"G_B_Diving"};
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[ORG] Airborne Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
+
+		class ItemInfo : ItemInfo
+		{
+			class HitpointsProtectionInfo
+			{
+				class Head
+				{
+					hitpointName = "HitHead";
+					armor = 16;
+					passThrough = 0.5;
+				};
+			};
+		};
+	}
+
+	class MACRO_NEW_HELMET(arc,base) : CloneHelmetARC_Base
+	{
+		scopeArsenal = 0;
+		scope = 0;
+		author = MACRO_AUTHOR;
+		displayName = "[ORG] Arc Helmet ('base')";
+		subItems[] = { "G_B_Diving" };
 
 		class ItemInfo : ItemInfo
 		{

@@ -20,20 +20,10 @@ class CfgPatches
             MACRO_NEW_UNIT(infantry,nco),
             //MACRO_NEW_UNIT(infantry,officer),
 
-            //MACRO_NEW_UNIT(airborne,trooper),
-            //MACRO_NEW_UNIT(airborne,senior_trooper),
-            //MACRO_NEW_UNIT(airborne,veteran_trooper),
-            //MACRO_NEW_UNIT(airborne,specialist),
-            //MACRO_NEW_UNIT(airborne,corporal),
-            //MACRO_NEW_UNIT(airborne,sergeant),
-
-            //MACRO_NEW_UNIT(cwo,ORG_warrant_officer),
-            //MACRO_NEW_UNIT(cwo,ORG_warrant_officer_1),
-            //MACRO_NEW_UNIT(cwo,ORG_warrant_officer_2),
-            //MACRO_NEW_UNIT(cwo,ORG_warrant_officer_3),
-            //MACRO_NEW_UNIT(cwo,ORG_warrant_officer_4),
-            //MACRO_NEW_UNIT(cwo,ORG_warrant_officer_5),
-            //MACRO_NEW_UNIT(cwo,ORG_warrant_officer_6),
+            MACRO_NEW_UNIT(airborne,trooper),
+            MACRO_NEW_UNIT(airborne,veteran),
+            MACRO_NEW_UNIT(airborne,specialist),
+            MACRO_NEW_UNIT(airborne,nco),
 
             //MACRO_NEW_UNIT(aviation,ORG_flight_cadet),
             //MACRO_NEW_UNIT(aviation,ORG_flight_ensign),
@@ -131,20 +121,10 @@ class CfgPatches
             MACRO_NEW_UNIFORM(infantry,nco),
             //MACRO_NEW_UNIFORM(infantry,officer),
 
-            //MACRO_NEW_UNIFORM(airborne,trooper),
-            //MACRO_NEW_UNIFORM(airborne,senior_trooper),
-            //MACRO_NEW_UNIFORM(airborne,veteran_trooper),
-            //MACRO_NEW_UNIFORM(airborne,specialist),
-            //MACRO_NEW_UNIFORM(airborne,corporal),
-            //MACRO_NEW_UNIFORM(airborne,sergeant),
-
-            //MACRO_NEW_UNIFORM(cwo,ORG_warrant_officer),
-            //MACRO_NEW_UNIFORM(cwo,ORG_warrant_officer_1),
-            //MACRO_NEW_UNIFORM(cwo,ORG_warrant_officer_2),
-            //MACRO_NEW_UNIFORM(cwo,ORG_warrant_officer_3),
-            //MACRO_NEW_UNIFORM(cwo,ORG_warrant_officer_4),
-            //MACRO_NEW_UNIFORM(cwo,ORG_warrant_officer_5),
-            //MACRO_NEW_UNIFORM(cwo,ORG_warrant_officer_6),
+            MACRO_NEW_UNIFORM(airborne,trooper),
+            MACRO_NEW_UNIFORM(airborne,veteran),
+            MACRO_NEW_UNIFORM(airborne,specialist),
+            MACRO_NEW_UNIFORM(airborne,nco),
 
             //MACRO_NEW_UNIFORM(aviation,ORG_flight_cadet),
             //MACRO_NEW_UNIFORM(aviation,ORG_flight_ensign),
@@ -203,22 +183,22 @@ class CfgPatches
             //MACRO_NEW_UNIFORM(arfwood,ORG_arfwood_corp),
             //MACRO_NEW_UNIFORM(arfwood,ORG_arfwood_serg),
 
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_104th),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_187th),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_212th),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_327th),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_41st),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_442nd),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_501st),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_5th),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_91st),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_CG),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_DC),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_HC),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_KC),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_OS),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_Purge),
-            //MACRO_NEW_UNIFORM(scenario,ORG_scenario_Shadow),
+            MACRO_NEW_UNIFORM(scenario,scenario_104th),
+            MACRO_NEW_UNIFORM(scenario,scenario_187th),
+            MACRO_NEW_UNIFORM(scenario,scenario_212th),
+            MACRO_NEW_UNIFORM(scenario,scenario_327th),
+            MACRO_NEW_UNIFORM(scenario,scenario_41st),
+            MACRO_NEW_UNIFORM(scenario,scenario_442nd),
+            MACRO_NEW_UNIFORM(scenario,scenario_501st),
+            MACRO_NEW_UNIFORM(scenario,scenario_5th),
+            MACRO_NEW_UNIFORM(scenario,scenario_91st),
+            MACRO_NEW_UNIFORM(scenario,scenario_CG),
+            MACRO_NEW_UNIFORM(scenario,scenario_DC),
+            MACRO_NEW_UNIFORM(scenario,scenario_HC),
+            MACRO_NEW_UNIFORM(scenario,scenario_KC),
+            MACRO_NEW_UNIFORM(scenario,scenario_OS),
+            MACRO_NEW_UNIFORM(scenario,scenario_Purge),
+            MACRO_NEW_UNIFORM(scenario,scenario_Shadow),
 
             //MACRO_NEW_UNIFORM(captain,ORG_captain),
 
@@ -332,13 +312,11 @@ class CfgWeapons
     MACRO_NEW_INF_UNIFORM_ITEM(nco,NCO,nco)
     //MACRO_NEW_INF_UNIFORM_ITEM(officer,Officer,officer)
 
-    ////Airborne
-    //MACRO_NEW_AIRBORNE_UNIFORM_ITEM(trooper,Trooper,trooper)
-    //MACRO_NEW_AIRBORNE_UNIFORM_ITEM(senior_trooper,Senior,senior_trooper)
-    //MACRO_NEW_AIRBORNE_UNIFORM_ITEM(veteran_trooper,Veteran,veteran_trooper)
-    //MACRO_NEW_AIRBORNE_UNIFORM_ITEM(specialist,Specialist,specialist)
-    //MACRO_NEW_AIRBORNE_UNIFORM_ITEM(corporal,Corporal,corporal)
-    //MACRO_NEW_AIRBORNE_UNIFORM_ITEM(sergeant,Sergeant,sergeant)
+    //Airborne
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(trooper,Trooper,trooper)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(veteran,Veteran,veteran)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(specialist,Specialist,specialist)
+    MACRO_NEW_AIRBORNE_UNIFORM_ITEM(nco,NCO,nco)
 
     ////Warrant Officer
     //MACRO_NEW_CWO_UNIFORM_ITEM(ORG_warrant_officer,CW,ORG_warrant_officer)
@@ -482,13 +460,11 @@ class CfgVehicles
     MACRO_NEW_INF_UNIT(nco,Clone NCO,nco,nco\Nco_Upper.paa,nco\Nco_Lower.paa)
     //MACRO_NEW_INF_UNIT(officer,Clone Officer,officer,officer\Officer_Upper.paa,officer\Officer_Lower.paa)
 
-    ////Airborne
-    //MACRO_NEW_AIRBORNE_UNIT(trooper,Clone Trooper,trooper,trooper\Trooper_Upper.paa,trooper\Trooper_Lower.paa)
-    //MACRO_NEW_AIRBORNE_UNIT(senior_trooper,Clone Senior Trooper,senior_trooper,senior_trooper\Senior_Trooper_Upper.paa,senior_trooper\Senior_Trooper_Lower.paa)
-    //MACRO_NEW_AIRBORNE_UNIT(veteran_trooper,Clone Veteran Trooper,veteran_trooper,veteran_trooper\Veteran_Trooper_Upper.paa,veteran_trooper\Veteran_Trooper_Lower.paa)
-    //MACRO_NEW_AIRBORNE_UNIT(specialist,Clone Specialist,specialist,specialist\csp1_Upper.paa,specialist\csp1_Lower.paa)
-    //MACRO_NEW_AIRBORNE_UNIT(corporal,Clone Corporal,corporal,corporal\Corporal_Upper.paa,corporal\Corporal_Lower.paa)
-    //MACRO_NEW_AIRBORNE_UNIT(sergeant,Clone Sergeant,sergeant,sergeant\Sergeant_Upper.paa,sergeant\Sergeant_Lower.paa)
+    //Airborne
+    MACRO_NEW_AIRBORNE_UNIT(trooper,Clone Trooper,trooper,trooper\Trooper_Upper.paa,trooper\Trooper_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(veteran,Clone Veteran Trooper,veteran,veteran\Veteran_Upper.paa,veteran\Veteran_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(specialist,Clone Specialist,specialist,specialist\Specialist_Upper.paa,specialist\Specialist_Lower.paa)
+    MACRO_NEW_AIRBORNE_UNIT(nco,Clone NCO,nco,nco\Nco_Upper.paa,nco\Nco_Lower.paa)
 
     ////Warrant Officer
     //MACRO_NEW_CWO_UNIT(ORG_warrant_officer,CW,ORG_warrant_officer,warrant_officer\cw_upper.paa,warrant_officer\cw_lower.paa)
