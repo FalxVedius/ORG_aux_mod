@@ -1,0 +1,10 @@
+Authority:  ORG_aux
+Creation:   5/20/2023 11:38:14 AM (by Falx)
+
+== PRIVATE KEY ==
+File: E:\Steam\steamapps\common\Arma 3 Tools\DSSignFile\ORG_aux.biprivatekey
+MD5: 3a87b1e9031050d15b631c1d8d37128a
+== PUBLIC KEY ==
+File: E:\Steam\steamapps\common\Arma 3 Tools\DSSignFile\ORG_aux.bikey
+MD5: c0b671cf6e4153152eda272fc9c31e03
+
