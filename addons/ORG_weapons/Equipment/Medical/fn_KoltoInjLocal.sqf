@@ -32,8 +32,8 @@ _handle = [_counter, _patient, _medic, _bodyPart] spawn {
 			
 			if (_bandagedWounds isEqualTo [] && _wounds isEqualTo []) then { breakOut "KoltoInjLoop_Local"; };
 		
-			["Aux332nd_evh_BandageLocal", [_medic, _patient, _bodyPart, "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
-			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_BandageLocal", [_medic, _patient, _bodyPart, "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
 			sleep 42;
 			

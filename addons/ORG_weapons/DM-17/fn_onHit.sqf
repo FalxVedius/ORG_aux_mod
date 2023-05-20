@@ -6,10 +6,10 @@ if (!alive _target) exitWith {};
 
 private _ammoUsed = _ammo select 4;
 
-if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "Aux332nd_IsMedicRound") == 1) then {[_target,_shooter,_ammoUsed] call Aux332nd_fnc_onHitMedic};
+if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "AuxORG_IsMedicRound") == 1) then {[_target,_shooter,_ammoUsed] call AuxORG_fnc_onHitMedic};
 
-if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "Aux332nd_IsCombatStimRound") == 1) then {[_shooter, _target, "RightArm", _ammoUsed, "", _ammoUsed] call Aux332nd_fnc_StopBleeding};
+if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "AuxORG_IsCombatStimRound") == 1) then {[_shooter, _target, "RightArm", _ammoUsed, "", _ammoUsed] call AuxORG_fnc_StopBleeding};
 
-if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "Aux332nd_IsBactaRound") == 1) then {[_shooter, _target, "RightArm", _ammoUsed, "", _ammoUsed] call Aux332nd_fnc_Bacta};
+if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "AuxORG_IsBactaRound") == 1) then {[_shooter, _target, "RightArm", _ammoUsed, "", _ammoUsed] call AuxORG_fnc_Bacta};
 
-if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "Aux332nd_IsKoltoRound") == 1) then {[_shooter, _target, "RightArm", _ammoUsed, "", _ammoUsed] call Aux332nd_fnc_Kolto};
+if (getNumber(configFile >> "CfgAmmo" >> _ammoUsed >> "AuxORG_IsKoltoRound") == 1) then {[_shooter, _target, "RightArm", _ammoUsed, "", _ammoUsed] call AuxORG_fnc_Kolto};

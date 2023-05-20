@@ -32,33 +32,33 @@ _handle = [_counter, _patient, _medic] spawn {
 			
 			if (_bandagedWounds isEqualTo [] && _wounds isEqualTo []) then { breakOut "KoltoLoop_Local"; };
 		
-			["Aux332nd_evh_BandageLocal", [_medic, _patient, "head", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
-			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_BandageLocal", [_medic, _patient, "head", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
 			sleep 6;
 			
-			["Aux332nd_evh_BandageLocal", [_medic, _patient, "body", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
-			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_BandageLocal", [_medic, _patient, "body", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
 			sleep 6;
 			
-			["Aux332nd_evh_BandageLocal", [_medic, _patient, "leftarm", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
-			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_BandageLocal", [_medic, _patient, "leftarm", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
 			sleep 6;
 			
-			["Aux332nd_evh_BandageLocal", [_medic, _patient, "rightarm", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
-			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_BandageLocal", [_medic, _patient, "rightarm", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
 			sleep 6;
 			
-			["Aux332nd_evh_BandageLocal", [_medic, _patient, "leftleg", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
-			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_BandageLocal", [_medic, _patient, "leftleg", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
 			sleep 6;
 			
-			["Aux332nd_evh_BandageLocal", [_medic, _patient, "rightleg", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
-			["Aux332nd_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_BandageLocal", [_medic, _patient, "rightleg", "ElasticBandage"], _patient] call CBA_fnc_targetEvent;
+			["AuxORG_evh_StitchLocal", [[objNull, _patient], 12, 10], _patient] call CBA_fnc_targetEvent;
 			
 			sleep 6;
 			

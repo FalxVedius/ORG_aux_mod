@@ -12,7 +12,7 @@ private _uspech =
 {
 	// adding drone to inventory
 	(_this select 0) params ["_dron", "_unit"];
-	[_unit, "332nd_aux_weapon_CRD_4_Emara"] call ace_common_fnc_addToInventory;
+	[_unit, "ORG_aux_weapon_CRD_4_Emara"] call ace_common_fnc_addToInventory;
 	
 	// removing drone
 	(_this select 0) params ["_dron", "_unit"];

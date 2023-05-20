@@ -99,6 +99,7 @@ class CfgVehicles
 	class MACRO_NEW_VEHICLE(air,LAAT,Cargo) : B_Heli_Attack_01_base_F
 	{
 		author = "ORG Aux Team";
+		_generalMacro = "ORG_laat_C";
 		scope = 2;
 
 		ace_cargo_hasCargo = 1;
@@ -112,22 +113,16 @@ class CfgVehicles
 		ace_refuel_canReceive = 1;
 
 
-		hiddenselections[] =
+		hiddenSelections[] =
 		{
-			"_auxiliary",
-			"_cockpit",
-			"_glass",
-			"_hull",
-			"_wings"
+			"camo",
+			"camo1"
 		};
 
 		hiddenSelectionsTextures[] =
 		{
-			"\lsd_vehicles_heli\laatc\data\auxiliary_co.paa",
-			"\lsd_vehicles_heli\laatc\data\standard\cockpit_co.paa",
-			"\lsd_vehicles_heli\laatc\data\glass_ca.paa",
-			"\lsd_vehicles_heli\laatc\data\standard\hull_co.paa",
-			"\lsd_vehicles_heli\laatc\data\standard\wings_co.paa"
+			"ORG_vehicles\_textures\air\LAATC\Camo_0_CO_PW.paa",
+			"ORG_vehicles\_textures\air\LAATC\Camo_1_CO_PW.paa"
 		};
 
 		crew = "ORG_aux_infantry_unit_trooper";
@@ -152,10 +147,10 @@ class CfgVehicles
 		faction = "EdCat_ORG";
 		editorSubcategory = "EdSubcat_ORG_HELICOPTERS";
 		displayName = "LAAT/C Mk1 *Test*";
-		model = "\lsd_vehicles_heli\laatc\lsd_heli_laatc";
-		icon = "lsd_vehicles_heli\laati\data\ui\laat_icon.paa";
-		picture = "";
-		editorpreview = "lsd_vehicles_heli\laati\data\ui\laat_preview.jpg";
+		model = "3AS\3AS_LAATC\3AS_LAAT_C.p3d";
+		icon = "\3AS\3as_Laat\LAATI\data\ui\Map_laat_CA.paa";
+		picture = "\3AS\3as_Laat\LAATI\data\ui\LAAT_Profile_ca.paa";
+		editorpreview = "\3AS\3as_Laat\LAATI\data\editorpreview\3as_laat.jpg";
 		memoryPointTaskMarker = "TaskMarker_1_pos";
 		cargoaction[] =
 		{
@@ -905,9 +900,8 @@ class CfgVehicles
 		radarType = 8;
 		preciseGetInOut = 0;
 		cargoPreciseGetInOut[] = { 0 };
-		driverAction = "pilot_Heli_Light_02";
-		driverInAction = "pilot_Heli_Light_02";
-		getInAction = "GetInLow";
+		driverAction = "LAAT_Pilot";
+		getInAction = "ChopperLight_L_In_H";
 		getOutAction = "GetOutLow";
 		memoryPointsGetInCargo[] =
 		{

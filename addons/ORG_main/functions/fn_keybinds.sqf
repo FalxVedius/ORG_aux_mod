@@ -3,32 +3,32 @@
 
 // Reset Animation
 [
-	["332nd Aux", "Animations"], 											// mod name (modify to whatevs)
-	"ResetAnimation_332nd_key", 											// action ID
+	["ORG Aux", "Animations"], 											// mod name (modify to whatevs)
+	"ResetAnimation_ORG_key", 											// action ID
 	["Reset Animation", "Resets the current animation of the player"], 	// Action name
-	{ false call aux_332nd_fnc_resetAnimation }, 									// For keypressdown
+	{ false call aux_ORG_fnc_resetAnimation }, 									// For keypressdown
 	""													// for keypressup
 ] call CBA_fnc_addKeybind;
 
 // Place Map Marker
 [
-	["332nd Aux", "Map Markers"], 											// mod name (modify to whatevs)
-	"PlaceMarker_332nd_key", 											// action ID
+	["ORG Aux", "Map Markers"], 											// mod name (modify to whatevs)
+	"PlaceMarker_ORG_key", 											// action ID
 	["Place Dot Marker", "Places a black dot on your location"], 	// Action name
-	{ false call aux_332nd_fnc_placeMarker }, 									// For keypressdown
+	{ false call aux_ORG_fnc_placeMarker }, 									// For keypressdown
 	""													// for keypressup
 ] call CBA_fnc_addKeybind;
 
 
 GVAR(nextReload) = QGVAR(HE);
 // Add keybinds
-["332nd Aux", "Weapons", "Reload MPS-5",
+["ORG Aux", "Weapons", "Reload MPS-5",
 {
     private _mortarVeh = vehicle ACE_player;
-    if ((_mortarVeh == ACE_player) || {!(_mortarVeh isKindOf "332nd_aux_MPS_5_unit_Deployed")}) exitWith {false};
+    if ((_mortarVeh == ACE_player) || {!(_mortarVeh isKindOf "ORG_aux_MPS_5_unit_Deployed")}) exitWith {false};
     if !([ACE_player, _mortarVeh, []] call ACEFUNC(common,canInteractWith)) exitWith {false};
     
-    [_mortarVeh, ACE_player] call Aux332nd_MPS_fnc_doReload;
+    [_mortarVeh, ACE_player] call AuxORG_MPS_fnc_doReload;
 
     true
 },

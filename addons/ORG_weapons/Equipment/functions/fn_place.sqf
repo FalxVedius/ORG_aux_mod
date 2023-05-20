@@ -43,7 +43,7 @@ private _uspech =
 	{
 		case WEST: 
 		{
-			_dron = "332nd_aux_vehicle_Air_CRD_4_Emara" createVehicle[0, 0, 0];
+			_dron = "ORG_aux_vehicle_Air_CRD_4_Emara" createVehicle[0, 0, 0];
 			createVehicleCrew _dron;
 			_dron setDir _direction;
 			_dron setPosASL _position;

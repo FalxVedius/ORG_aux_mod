@@ -17,7 +17,7 @@ _obj attachTo [_unit,[0,0,1.5]];
 
 sleep 1.4;
 
-playSound3D ["332nd_weapons\DC\15x\sounds\DC-15xBolt.ogg", _obj, false, getPosASL _obj, 3, 1, 30];
+playSound3D ["ORG_weapons\DC\15x\sounds\DC-15xBolt.ogg", _obj, false, getPosASL _obj, 3, 1, 30];
 			
 sleep 2;
 
